@@ -19,3 +19,5 @@ Minimalne obiekty domenowe: `OPERATOR`, `SOURCE`, `SOURCE_SNAPSHOT`, `OBSERVATIO
 | Wynik analizy | Snapshot, parametry projektu, wersja metody, konfiguracja, czas analizy, źródła wejściowe i wyjaśnienie; score i confidence odrębne |
 
 Szczegółowy projekt SQL/API oraz walidacja kontraktów należą do etapu 2. Katalog źródeł w etapie 1 nie jest zamiennikiem modelu obserwacji technicznych.
+
+Wymaganie widoku [pipeline GPZ](gpz_pipeline.md) dodaje odrębny `CONNECTION_APPLICATION` z własnym identyfikatorem i historią statusów, związany z projektem oraz wskazanym punktem przyłączenia. Status wykonania przyłączenia, eksploatacji i procedury wniosku należy przechowywać oddzielnie. Brak odpowiedzi w źródle jest UNKNOWN; nie oznacza automatycznie potwierdzonego oczekiwania na odpowiedź.

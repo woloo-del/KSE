@@ -9,6 +9,7 @@ Stan na **10.09.2026**: zakończony pierwszy przegląd źródeł i prób dostęp
 - [Raport badawczy i executive summary](docs/01_data_research.md)
 - [Katalog źródeł](docs/data_sources.md) oraz [wersja JSON](data/catalog/data_sources.json)
 - [Wstępna macierz wykonalności](docs/02_feasibility_matrix.md)
+- [Wymaganie: projekty i pipeline wybranego GPZ](docs/gpz_pipeline.md)
 - [Kierunek architektury — do etapu 2](docs/03_system_architecture.md)
 - [Wymagania dla modelu danych](docs/04_data_model.md)
 - [Granice metody oceny mocy](docs/05_grid_capacity_methodology.md)
@@ -38,3 +39,5 @@ Pierwszy skrypt generuje katalog i jego widok Markdown z jawnych notatek `data/c
 `scripts/probe_research_sources.ps1` wykonuje jednorazowe próby wskazane w `config/research_probes*.json`. Nie uruchamiaj ich ponownie bez nowej daty i nazw snapshotów: zachowane pliki nie są nadpisywane. HTTP 200 nie oznacza poprawnych danych; w próbie PGE oznaczał stronę blokady. Skrypt nie jest cyklicznym scraperem ani obejściem zabezpieczeń.
 
 Próbki źródłowe są lokalnym materiałem audytowym i nie są przeznaczone do publikacji w Git. Dostęp techniczny nie stanowi potwierdzenia praw do komercyjnego ponownego wykorzystania. Nie wybrano jeszcze ostatecznej architektury, regionu pilotażowego ani wag scoringu.
+
+Folder `_secrets/` jest lokalny i wykluczony z Git, także w podkatalogach. Nie dodawać go przez `git add -f` ani do archiwów źródeł; poświadczenia nie są danymi badawczymi.

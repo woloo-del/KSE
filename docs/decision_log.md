@@ -65,3 +65,21 @@
 **Reason:** Same URL nie zachowują zmieniających się dokumentów; duże źródła i ich prawa wymagają odrębnego traktowania.  
 **Trade-offs:** Do pełnego odtworzenia potrzebny jest także zachowany ZIP; nie skonfigurowano zewnętrznego magazynu danych.  
 **Consequences:** Autor z adresem GitHub noreply, lokalne commity po sprawdzeniu, push odrębny od zapisu lokalnego; zależności badawcze przypięte do wersji.
+
+## 2026-09-10 — Lokalne sekrety i widok pipeline GPZ
+
+**Date:** 2026-09-10
+
+**Decision:** Wykluczyć `_secrets/` z Git i opisać trzy grupy projektów wybranego GPZ.
+
+**Context:** Użytkownik dodał lokalne poświadczenie ENTSO-E oraz wskazał potrzebę rozróżnienia projektów przyłączonych, planowanych i wniosków bez odpowiedzi.
+
+**Options considered:** Sam status projektu; odrębne wykonanie przyłączenia, eksploatacja i procedury wniosków. Interpretowanie pustej daty odpowiedzi jako oczekiwania albo jawne UNKNOWN.
+
+**Selected option:** Specyfikacja `gpz_pipeline.md`, odrębne wnioski i dowody statusu; brak potwierdzenia odpowiedzi nie jest potwierdzonym oczekiwaniem. Folder sekretów ignorowany rekurencyjnie, bez odczytu zawartości.
+
+**Reason:** Użyteczność raportu GPZ przy zachowaniu poprawnych statusów, deduplikacji i ochrony poświadczeń.
+
+**Trade-offs:** Nie każdy publiczny rekord pozwala wypełnić jedną z trzech grup; potrzebna kategoria nieznana/konfliktowa.
+
+**Consequences:** Rozszerzono wymagania pilota i modelu danych; nie wdrożono jeszcze funkcji ani nie użyto klucza API.

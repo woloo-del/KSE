@@ -12,3 +12,5 @@
 Najbliższy proponowany krok: etap 2, czyli zamknięcie zakresu pierwszego raportu, wybór źródeł z podstawą wykorzystania, model danych i wybór regionu pilotażowego. Nie wybierać GPZ wyłącznie na podstawie liczby obiektów OSM. PSE jako pierwszy kanał strukturalny i obszar Energi/ENEA jako kandydat lokalny wymagają sprawdzenia konkretnego zestawu dowodów.
 
 Rozbudowa UI następuje po wiarygodnym raporcie danych. Ogólnopolskie pokrycie nie jest warunkiem sukcesu pilota. Brak lokalnych danych elektrycznych może pozostać trwałą granicą produktu opartego wyłącznie na danych publicznych.
+
+Uzupełnienie zakresu pilota na prośbę użytkownika: [widok projektów dla wybranego GPZ](gpz_pipeline.md) — przyłączone, planowane do przyłączenia oraz wnioski oczekujące. Najpierw należy sprawdzić możliwość odtworzenia tych grup z rzeczywistych dokumentów, wraz z osobnym oznaczeniem statusów nieznanych. To wymaganie produktowe, nie zgoda na pominięcie walidacji danych i natychmiastową budowę dashboardu.

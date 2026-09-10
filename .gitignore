@@ -1,4 +1,5 @@
 .env
+_secrets/
 .env.*
 !.env.example
 __pycache__/
