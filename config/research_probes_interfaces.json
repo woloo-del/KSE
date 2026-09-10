@@ -1,0 +1,9 @@
+[
+ {"source_id":"PSE_API_JS","url":"https://api.raporty.pse.pl/assets/index-D9OvjZ5P.js","save_as":"pse_api_frontend.js"},
+ {"source_id":"ENERGY_CHARTS_OPENAPI","url":"https://api.energy-charts.info/openapi.json","save_as":"energy_charts_openapi.json"},
+ {"source_id":"TAURON_PIPELINE_PDF","url":"https://www.tauron-dystrybucja.pl/-/media/offer-documents/dystrybucja/przylaczenie/dostepne-moce/informacja-o-przylaczanych-obiektach-i-wydanych-odmowach.ashx","save_as":"tauron_pipeline_retrieved_2026-09-10.pdf"},
+ {"source_id":"STOEN_NETWORK_HTML","url":"https://www.stoen.pl/pl/strona/siec","save_as":"stoen_network_landing.html"},
+ {"source_id":"ENEA_PIPELINE_HTML","url":"https://www.operator.enea.pl/przylaczenie-do-sieci/informacje-o-przylaczeniach","save_as":"enea_pipeline_landing.html"},
+ {"source_id":"ENEA_MAP_HTML","url":"https://www.operator.enea.pl/oze/przylaczone-i-dostepne-moce-oze","save_as":"enea_map_landing.html"},
+ {"source_id":"PSE_PIPELINE_HTML","url":"https://www.pse.pl/obszary-dzialalnosci/wymiana-miedzysystemowa/informacje-ogolne/-/asset_publisher/L3RZBt9EkXoj/content/wykaz-podmiotow-ubiegajacych-sie-o-przylaczenie-do-krajowej-sieci-przesylowej/pop_up","save_as":"pse_pipeline_landing.html"}
+]

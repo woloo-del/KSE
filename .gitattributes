@@ -1,0 +1,13 @@
+* text=auto
+.gitattributes text eol=lf
+.gitignore text eol=lf
+*.md text eol=lf whitespace=-blank-at-eol
+*.json text eol=lf
+*.py text eol=lf
+*.ps1 text eol=lf
+*.txt text eol=lf
+*.pdf binary
+*.xlsx binary
+*.png binary
+*.zip binary
+data/catalog/probe_results_*.json -text whitespace=cr-at-eol

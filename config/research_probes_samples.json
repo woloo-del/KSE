@@ -1,0 +1,9 @@
+[
+ {"source_id":"PSE_OPENAPI","url":"https://api.raporty.pse.pl/api/openapi","save_as":"pse_openapi.json"},
+ {"source_id":"PSE_PIPELINE_XLSX","url":"https://www.pse.pl/documents/20182/51490/Informacje_publikowane_zgodnie_z_Art_7_ust_8l_ustawy_PE_stan_na_31_07_2026.xlsx","save_as":"pse_pipeline_url_2026-07-31.xlsx"},
+ {"source_id":"ENEA_MAP","url":"https://www.operator.enea.pl/przylaczone-i-dostepne-moce-oze","save_as":"enea_maps.html"},
+ {"source_id":"ENEA_PLAN","url":"https://www.operator.enea.pl/plan-rozwoju-enea-operator-na-lata-2026-2031","save_as":"enea_plan_landing.html"},
+ {"source_id":"STOEN_EXPORT","url":"https://www.stoen.pl/files/2026-07/wielkosc-dostepnej-mocy-przylaczeniowej-zrodel-w-sieci-stoen-operator-iii-kw-2026.pdf","save_as":"stoen_export_2026_q3.pdf"},
+ {"source_id":"STOEN_IMPORT","url":"https://www.stoen.pl/files/2026-09/wielkosc-dostepnej-mocy-przylaczeniowej-dla-odbiorcow-w-sieci-stoen-operator-31.08.2026r.pdf","save_as":"stoen_import_2026-08-31.pdf"},
+ {"source_id":"LAW_2026_516","url":"https://dziennikustaw.gov.pl/D2026000051601.pdf","save_as":"prawo_energetyczne_zmiana_2026_516.pdf"}
+]

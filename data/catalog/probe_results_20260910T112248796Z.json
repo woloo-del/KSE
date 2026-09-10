@@ -1,0 +1,46 @@
+[
+  {
+    "source_id": "PSE_NODES_SAMPLE",
+    "url": "https://api.raporty.pse.pl/api/specwezlow?$first=2",
+    "retrieval_date": "2026-09-10T11:22:46.5004479Z",
+    "http_status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 1092,
+    "sha256": "a8d1ce15b02c785c0b47c3ed7afeb7f6dde7ba180f7c12998f12040264b2394e",
+    "local_path": "data/raw/research/2026-09-10/pse_nodes_sample.json",
+    "error": null
+  },
+  {
+    "source_id": "PSE_REDISPATCH_SAMPLE",
+    "url": "https://api.raporty.pse.pl/api/poze-redoze?$first=2",
+    "retrieval_date": "2026-09-10T11:22:47.0745732Z",
+    "http_status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 986,
+    "sha256": "f74d4223bd57fe8a9befee39efcafc00602b40f22a8bc5099bcf7938792316cb",
+    "local_path": "data/raw/research/2026-09-10/pse_redispatch_sample.json",
+    "error": null
+  },
+  {
+    "source_id": "PSE_FLOWS_SAMPLE",
+    "url": "https://api.raporty.pse.pl/api/przeplywy-mocy?$first=2",
+    "retrieval_date": "2026-09-10T11:22:47.3529270Z",
+    "http_status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 916,
+    "sha256": "4540d4283a6453b03d7630b049044bb758052d4b8367e33e9bec4f37696dfca3",
+    "local_path": "data/raw/research/2026-09-10/pse_flows_sample.json",
+    "error": null
+  },
+  {
+    "source_id": "ENERGY_CHARTS_SAMPLE",
+    "url": "https://api.energy-charts.info/v2/public_power?country=pl&start=2026-09-01&end=2026-09-01",
+    "retrieval_date": "2026-09-10T11:22:48.5049578Z",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 56287,
+    "sha256": "bf5398ea8f93d1f5c775ca1e4ada71e69305b8d65d6fec643a4e477da3d73b3d",
+    "local_path": "data/raw/research/2026-09-10/energy_charts_pl_sample.json",
+    "error": null
+  }
+]

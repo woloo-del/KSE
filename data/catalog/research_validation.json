@@ -1,0 +1,2874 @@
+{
+  "checked_at_utc": "2026-09-10T15:46:28.726160+00:00",
+  "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
+  "status": "PASS_WITH_SOURCE_WARNINGS",
+  "source_count": 56,
+  "source_status_counts": {
+    "SAMPLE_VERIFIED": 13,
+    "CONTENT_REVIEWED": 24,
+    "DISCOVERED": 5,
+    "BLOCKED": 3,
+    "DOCUMENTATION_REVIEWED": 11
+  },
+  "probe_count": 29,
+  "http_status_counts": {
+    "200": 28,
+    "404": 1
+  },
+  "raw_file_count": 28,
+  "format_counts": {
+    ".html": 10,
+    ".pdf": 8,
+    ".json": 6,
+    ".xml": 2,
+    ".js": 1,
+    ".xlsx": 1
+  },
+  "pdf_details": [
+    {
+      "file": "data/raw/research/2026-09-10/energa_export_2026-08-31.pdf",
+      "pages": 19,
+      "first_page_text_chars": 282
+    },
+    {
+      "file": "data/raw/research/2026-09-10/energa_import_2026-08-31.pdf",
+      "pages": 16,
+      "first_page_text_chars": 282
+    },
+    {
+      "file": "data/raw/research/2026-09-10/energa_pipeline_2026-08-31.pdf",
+      "pages": 37,
+      "first_page_text_chars": 25614
+    },
+    {
+      "file": "data/raw/research/2026-09-10/prawo_energetyczne_zmiana_2026_516.pdf",
+      "pages": 36,
+      "first_page_text_chars": 3650
+    },
+    {
+      "file": "data/raw/research/2026-09-10/pse_capacity_retrieved_2026-09-10.pdf",
+      "pages": 13,
+      "first_page_text_chars": 220
+    },
+    {
+      "file": "data/raw/research/2026-09-10/stoen_export_2026_q3.pdf",
+      "pages": 7,
+      "first_page_text_chars": 204
+    },
+    {
+      "file": "data/raw/research/2026-09-10/stoen_import_2026-08-31.pdf",
+      "pages": 4,
+      "first_page_text_chars": 160
+    },
+    {
+      "file": "data/raw/research/2026-09-10/tauron_pipeline_retrieved_2026-09-10.pdf",
+      "pages": 99,
+      "first_page_text_chars": 16819
+    }
+  ],
+  "local_links_checked": 25,
+  "dependencies": {
+    "python": "3.12.14",
+    "pypdf": "6.10.0",
+    "openpyxl": "3.1.5"
+  },
+  "checks_passed": 554,
+  "checks_failed": 0,
+  "errors": [],
+  "source_warnings": [
+    {
+      "source_id": "ENEA_MAP_HTML",
+      "code": "FETCH_ERROR",
+      "http_status": 404,
+      "message": "Nie pobrano pliku; zachowano nieudaną próbę."
+    },
+    {
+      "source_id": "PGE_LANDING",
+      "code": "SOURCE_ACCESS_BLOCKED",
+      "http_status": 200,
+      "message": "Odpowiedź HTTP 200 jest stroną odrzucenia, nie danymi operatora."
+    },
+    {
+      "source_id": "ENERGA_PIPELINE",
+      "code": "TEMPORAL_CONFLICT",
+      "message": "Nazwa pliku 31.08.2026; pierwsza strona 30.06.2026. Nie rozstrzygnięto daty stanu."
+    },
+    {
+      "source_id": "PSE_API",
+      "code": "SAMPLE_NOT_CURRENT_SNAPSHOT",
+      "message": "Zapytania first=2 służą kontroli interfejsu; zwróciły starsze daty. Braki redysponowania nie są zerami."
+    }
+  ],
+  "checks": [
+    {
+      "name": "catalog_unique_ids",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PSE_API",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PSE_API",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PSE_API",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PSE_API",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PSE_API",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:PSE_API",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PSE_PIPELINE",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PSE_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PSE_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PSE_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PSE_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:PSE_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PSE_CAPACITY",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PSE_CAPACITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PSE_CAPACITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PSE_CAPACITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PSE_CAPACITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:PSE_CAPACITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PSE_PLAN",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PSE_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PSE_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PSE_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PSE_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PSE_STRUCT_B2B",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PSE_STRUCT_B2B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PSE_STRUCT_B2B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PSE_STRUCT_B2B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PSE_STRUCT_B2B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unverified_not_successful:PSE_STRUCT_B2B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:ENERGA_LANDING",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:ENERGA_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:ENERGA_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:ENERGA_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:ENERGA_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:ENERGA_EXPORT",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:ENERGA_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:ENERGA_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:ENERGA_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:ENERGA_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:ENERGA_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:ENERGA_IMPORT",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:ENERGA_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:ENERGA_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:ENERGA_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:ENERGA_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:ENERGA_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:ENERGA_PIPELINE",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:ENERGA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:ENERGA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:ENERGA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:ENERGA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:ENERGA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:ENERGA_PLAN",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:ENERGA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:ENERGA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:ENERGA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:ENERGA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:ENEA_PIPELINE",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:ENEA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:ENEA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:ENEA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:ENEA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:ENEA_MAP",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:ENEA_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:ENEA_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:ENEA_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:ENEA_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:ENEA_PLAN",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:ENEA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:ENEA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:ENEA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:ENEA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:TAURON_PIPELINE",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:TAURON_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:TAURON_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:TAURON_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:TAURON_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:TAURON_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:TAURON_MAP",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:TAURON_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:TAURON_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:TAURON_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:TAURON_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:TAURON_PLAN",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:TAURON_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:TAURON_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:TAURON_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:TAURON_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:STOEN_LANDING",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:STOEN_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:STOEN_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:STOEN_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:STOEN_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:STOEN_EXPORT",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:STOEN_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:STOEN_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:STOEN_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:STOEN_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:STOEN_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:STOEN_IMPORT",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:STOEN_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:STOEN_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:STOEN_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:STOEN_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:STOEN_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:STOEN_PIPELINE",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:STOEN_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:STOEN_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:STOEN_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:STOEN_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unverified_not_successful:STOEN_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:STOEN_STORAGE",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:STOEN_STORAGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:STOEN_STORAGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:STOEN_STORAGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:STOEN_STORAGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unverified_not_successful:STOEN_STORAGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:STOEN_PLAN",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:STOEN_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:STOEN_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:STOEN_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:STOEN_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unverified_not_successful:STOEN_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PGE_LANDING",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PGE_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PGE_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PGE_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PGE_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unverified_not_successful:PGE_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PGE_EXPORT_DISCOVERY",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PGE_EXPORT_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PGE_EXPORT_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PGE_EXPORT_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PGE_EXPORT_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unverified_not_successful:PGE_EXPORT_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PGE_PLAN_DISCOVERY",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PGE_PLAN_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PGE_PLAN_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PGE_PLAN_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PGE_PLAN_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unverified_not_successful:PGE_PLAN_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:KGHM_OSD",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:KGHM_OSD",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:KGHM_OSD",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:KGHM_OSD",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:KGHM_OSD",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:URE_REGISTERS",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:URE_REGISTERS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:URE_REGISTERS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:URE_REGISTERS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:URE_REGISTERS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:ENERGY_LAW_516",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:ENERGY_LAW_516",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:ENERGY_LAW_516",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:ENERGY_LAW_516",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:ENERGY_LAW_516",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:ENERGY_LAW_516",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:BIP_ENV_DISCOVERY",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:BIP_ENV_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:BIP_ENV_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:BIP_ENV_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:BIP_ENV_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unverified_not_successful:BIP_ENV_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:KRS_API_DOCS",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:KRS_API_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:KRS_API_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:KRS_API_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:KRS_API_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:GUGIK_EGIB",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GUGIK_EGIB",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GUGIK_EGIB",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GUGIK_EGIB",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GUGIK_EGIB",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:GUGIK_EGIB",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:GUGIK_BDOT",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GUGIK_BDOT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GUGIK_BDOT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GUGIK_BDOT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GUGIK_BDOT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:GUGIK_BDOT_PARQUET",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GUGIK_BDOT_PARQUET",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GUGIK_BDOT_PARQUET",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GUGIK_BDOT_PARQUET",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GUGIK_BDOT_PARQUET",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:GUGIK_ORTHO",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GUGIK_ORTHO",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GUGIK_ORTHO",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GUGIK_ORTHO",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GUGIK_ORTHO",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:GUGIK_NMT",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GUGIK_NMT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GUGIK_NMT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GUGIK_NMT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GUGIK_NMT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:GUGIK_MPZP",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GUGIK_MPZP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GUGIK_MPZP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GUGIK_MPZP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GUGIK_MPZP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:URBAN_REGISTER",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:URBAN_REGISTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:URBAN_REGISTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:URBAN_REGISTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:URBAN_REGISTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:GDOS_GIS",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GDOS_GIS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GDOS_GIS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GDOS_GIS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GDOS_GIS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:GDOS_GIS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:WODY_SIGW",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:WODY_SIGW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:WODY_SIGW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:WODY_SIGW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:WODY_SIGW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:BDL_GIS",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:BDL_GIS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:BDL_GIS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:BDL_GIS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:BDL_GIS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:ENTSOE_TP",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:ENTSOE_TP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:ENTSOE_TP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:ENTSOE_TP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:ENTSOE_TP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:ENTSOE_MAP",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:ENTSOE_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:ENTSOE_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:ENTSOE_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:ENTSOE_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:OSM_LICENSE",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:OSM_LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:OSM_LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:OSM_LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:OSM_LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:GEOFABRIK_PL",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GEOFABRIK_PL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GEOFABRIK_PL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GEOFABRIK_PL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GEOFABRIK_PL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:OPENINFRAMAP",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:OPENINFRAMAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:OPENINFRAMAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:OPENINFRAMAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:OPENINFRAMAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PYPSA_EUR",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PYPSA_EUR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PYPSA_EUR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PYPSA_EUR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PYPSA_EUR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:MATPOWER_POLAND",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:MATPOWER_POLAND",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:MATPOWER_POLAND",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:MATPOWER_POLAND",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:MATPOWER_POLAND",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PANDAPOWER",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PANDAPOWER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PANDAPOWER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PANDAPOWER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PANDAPOWER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:VERAGRID",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:VERAGRID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:VERAGRID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:VERAGRID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:VERAGRID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:MATPOWER_LIBRARY",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:MATPOWER_LIBRARY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:MATPOWER_LIBRARY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:MATPOWER_LIBRARY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:MATPOWER_LIBRARY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:POWERMODELS",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:POWERMODELS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:POWERMODELS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:POWERMODELS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:POWERMODELS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:OPSD_TIMESERIES",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:OPSD_TIMESERIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:OPSD_TIMESERIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:OPSD_TIMESERIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:OPSD_TIMESERIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:ENERGY_CHARTS",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:ENERGY_CHARTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:ENERGY_CHARTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:ENERGY_CHARTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:ENERGY_CHARTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:ENERGY_CHARTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:EMBER_API",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:EMBER_API",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:EMBER_API",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:EMBER_API",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:EMBER_API",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:JRC_IDEES",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:JRC_IDEES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:JRC_IDEES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:JRC_IDEES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:JRC_IDEES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:COPERNICUS",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:COPERNICUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:COPERNICUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:COPERNICUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:COPERNICUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_ids_unique",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PSE_API",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PSE_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PSE_CAPACITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PSE_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PSE_STRUCT_B2B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:ENERGA_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:ENERGA_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:ENERGA_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:ENERGA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:ENERGA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:ENEA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:ENEA_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:ENEA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:TAURON_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:TAURON_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:TAURON_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:STOEN_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:STOEN_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:STOEN_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:STOEN_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:STOEN_STORAGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:STOEN_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PGE_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PGE_EXPORT_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PGE_PLAN_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:KGHM_OSD",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:URE_REGISTERS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:ENERGY_LAW_516",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:BIP_ENV_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:KRS_API_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GUGIK_EGIB",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GUGIK_BDOT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GUGIK_BDOT_PARQUET",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GUGIK_ORTHO",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GUGIK_NMT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GUGIK_MPZP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:URBAN_REGISTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GDOS_GIS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:WODY_SIGW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:BDL_GIS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:ENTSOE_TP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:ENTSOE_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:OSM_LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GEOFABRIK_PL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:OPENINFRAMAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PYPSA_EUR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:MATPOWER_POLAND",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PANDAPOWER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:VERAGRID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:MATPOWER_LIBRARY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:POWERMODELS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:OPSD_TIMESERIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:ENERGY_CHARTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:EMBER_API",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:JRC_IDEES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:COPERNICUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_API_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_API_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_API_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_API_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_CAPACITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_CAPACITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_CAPACITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_CAPACITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:ENERGA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:ENERGA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:ENERGA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:ENERGA_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:ENERGA_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:ENERGA_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:ENERGA_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:ENERGA_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:ENERGA_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:ENERGA_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:ENERGA_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:ENERGA_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PGE_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PGE_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PGE_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PGE_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:TAURON_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:TAURON_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:TAURON_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:TAURON_PIPELINE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:ENERGA_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:ENERGA_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:ENERGA_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:ENERGA_LANDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GUGIK_EGIB_CAPABILITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_EGIB_CAPABILITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_EGIB_CAPABILITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_EGIB_CAPABILITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GDOS_CAPABILITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GDOS_CAPABILITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GDOS_CAPABILITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GDOS_CAPABILITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:ENERGY_CHARTS_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:ENERGY_CHARTS_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:ENERGY_CHARTS_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:ENERGY_CHARTS_DOCS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_API_JS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_API_JS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_API_JS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_API_JS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:ENERGY_CHARTS_OPENAPI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:ENERGY_CHARTS_OPENAPI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:ENERGY_CHARTS_OPENAPI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:ENERGY_CHARTS_OPENAPI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:TAURON_PIPELINE_PDF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:TAURON_PIPELINE_PDF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:TAURON_PIPELINE_PDF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:TAURON_PIPELINE_PDF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:STOEN_NETWORK_HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:STOEN_NETWORK_HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:STOEN_NETWORK_HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:STOEN_NETWORK_HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:ENEA_PIPELINE_HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:ENEA_PIPELINE_HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:ENEA_PIPELINE_HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:ENEA_PIPELINE_HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_PIPELINE_HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_PIPELINE_HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_PIPELINE_HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_PIPELINE_HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_OPENAPI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_OPENAPI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_OPENAPI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_OPENAPI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_PIPELINE_XLSX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_PIPELINE_XLSX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_PIPELINE_XLSX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_PIPELINE_XLSX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:ENEA_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:ENEA_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:ENEA_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:ENEA_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:ENEA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:ENEA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:ENEA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:ENEA_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:STOEN_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:STOEN_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:STOEN_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:STOEN_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:STOEN_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:STOEN_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:STOEN_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:STOEN_IMPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:LAW_2026_516",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:LAW_2026_516",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:LAW_2026_516",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:LAW_2026_516",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_NODES_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_NODES_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_NODES_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_NODES_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_REDISPATCH_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_REDISPATCH_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_REDISPATCH_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_REDISPATCH_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_FLOWS_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_FLOWS_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_FLOWS_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_FLOWS_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:ENERGY_CHARTS_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:ENERGY_CHARTS_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:ENERGY_CHARTS_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:ENERGY_CHARTS_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_raw_files_have_manifests",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:enea_maps.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:enea_pipeline_landing.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:enea_plan_landing.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:energa_export_2026-08-31.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:energa_export_2026-08-31.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:energa_import_2026-08-31.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:energa_import_2026-08-31.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:energa_landing.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:energa_pipeline_2026-08-31.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:energa_pipeline_2026-08-31.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:energy_charts_index.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:energy_charts_openapi.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:energy_charts_pl_sample.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_capabilities:gdos_capabilities.xml",
+      "passed": true,
+      "detail": "2.0.0"
+    },
+    {
+      "name": "format_readable:gdos_capabilities.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_capabilities:gugik_egib_capabilities.xml",
+      "passed": true,
+      "detail": "2.0.0"
+    },
+    {
+      "name": "format_readable:gugik_egib_capabilities.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pge_capacity_landing.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:prawo_energetyczne_zmiana_2026_516.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:prawo_energetyczne_zmiana_2026_516.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_api_frontend.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_api_index.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:pse_capacity_retrieved_2026-09-10.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_capacity_retrieved_2026-09-10.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_flows_sample.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_nodes_sample.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_openapi.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_pipeline_landing.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pse_xlsx_expected_sheet",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pse_xlsx_snapshot_date",
+      "passed": true,
+      "detail": "Header date, not retrieval date"
+    },
+    {
+      "name": "pse_xlsx_direction_fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_pipeline_url_2026-07-31.xlsx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_redispatch_sample.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:stoen_export_2026_q3.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:stoen_export_2026_q3.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:stoen_import_2026-08-31.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:stoen_import_2026-08-31.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:stoen_network_landing.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:tauron_pipeline_landing.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:tauron_pipeline_retrieved_2026-09-10.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:tauron_pipeline_retrieved_2026-09-10.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pge_block_body_identified",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pge_catalog_not_data_success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energa_header_june_date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energa_conflict_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pse_nodes_shape",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pse_nodes_pagination",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pse_redispatch_causes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pse_redispatch_null_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pse_flows_sections",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_charts_v2_timeseries_shape",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_charts_v2_series_keys",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_charts_v2_country_unit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_charts_v2_license_metadata",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "openapi_contract:pse_openapi.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "openapi_contract:energy_charts_openapi.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/01_data_research.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/data_sources.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:data/catalog/data_sources.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/02_feasibility_matrix.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/03_system_architecture.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/04_data_model.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/05_grid_capacity_methodology.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/06_scoring_methodology.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/07_data_quality.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/08_roadmap.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/decision_log.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/git_workflow.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/reproducibility.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:01_data_research.md:data_sources.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:01_data_research.md:02_feasibility_matrix.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:02_feasibility_matrix.md:01_data_research.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:02_feasibility_matrix.md:data_sources.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:05_grid_capacity_methodology.md:01_data_research.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:data_sources.md:01_data_research.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:discovery_log.md:01_data_research.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:discovery_log.md:data_sources.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:git_workflow.md:reproducibility.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:reproducibility.md:../data/catalog/archive_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:build_research_catalog.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:research_archive.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:validate_research.py",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}

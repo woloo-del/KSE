@@ -1,0 +1,179 @@
+{
+  "snapshot_date": "2026-09-10",
+  "archive_path": "data/archives/research_2026-09-10_d143d3c637bc7af3.zip",
+  "archive_sha256": "c2f340cadecf51260edc41df88d66f89916c891dcd88b92e6db7557a0cd3265c",
+  "archive_bytes": 77890468,
+  "files": [
+    {
+      "path": "data/catalog/probe_results_20260910T111813793Z.json",
+      "sha256": "32f4fd0677c3e038ee7fb98144154ce5f5cb2bdf2cc6eff9472c03bd372b0214",
+      "bytes": 5277
+    },
+    {
+      "path": "data/catalog/probe_results_20260910T111959000Z.json",
+      "sha256": "1ede31e63bfd0ee6f3dd802f085bb8fbdc7dddda88839f0b0a188b3857a98ef0",
+      "bytes": 3283
+    },
+    {
+      "path": "data/catalog/probe_results_20260910T112104907Z.json",
+      "sha256": "a44bbe7b006382d6dd547cdb19b53984d5f4c28c43c44a3f411eee58ec700746",
+      "bytes": 3358
+    },
+    {
+      "path": "data/catalog/probe_results_20260910T112248796Z.json",
+      "sha256": "aedb21e31d81031289dafe794ae035c04fcbdc16d6fbd62b6c11e98d9d81e3ba",
+      "bytes": 1838
+    },
+    {
+      "path": "data/raw/research/2026-09-10/enea_maps.html",
+      "sha256": "0bb3e9e725d4f060cb6107c5996d0fd78e37eca94d089f42fa815f287461370c",
+      "bytes": 298632
+    },
+    {
+      "path": "data/raw/research/2026-09-10/enea_pipeline_landing.html",
+      "sha256": "fc4376106902eeda779096cf56b2abad023f6180be77bb49777bcd8526da6247",
+      "bytes": 369250
+    },
+    {
+      "path": "data/raw/research/2026-09-10/enea_plan_landing.html",
+      "sha256": "63205797c3b2033038582048e836a879af9ced663fd7870296f2cd3b37e4ef5c",
+      "bytes": 282539
+    },
+    {
+      "path": "data/raw/research/2026-09-10/energa_export_2026-08-31.pdf",
+      "sha256": "801ee2fc0a788dbac6b0453794a4dc5c2d13f0c6934a8bc47b6ddb0c3e051622",
+      "bytes": 2436908
+    },
+    {
+      "path": "data/raw/research/2026-09-10/energa_import_2026-08-31.pdf",
+      "sha256": "43abdeed101270cb7c66bb919f17fe7e6ab8a22632e3186fd611bd24cf903324",
+      "bytes": 2414777
+    },
+    {
+      "path": "data/raw/research/2026-09-10/energa_landing.html",
+      "sha256": "04474a16446a504cacb6af22e2e4df2e78bd3d7ad03dbb4b47c6196ee3df0bc1",
+      "bytes": 28320
+    },
+    {
+      "path": "data/raw/research/2026-09-10/energa_pipeline_2026-08-31.pdf",
+      "sha256": "4d66bfc4df8a9da1489b179395aff49f889bc6fd10c5551e3eacd3031ca8b44b",
+      "bytes": 1419597
+    },
+    {
+      "path": "data/raw/research/2026-09-10/energy_charts_index.html",
+      "sha256": "3540ad41eba89d2cd8f6f3c2e56ea1c740faeea2bf1eddc5e1c99ecb23ee143d",
+      "bytes": 1280
+    },
+    {
+      "path": "data/raw/research/2026-09-10/energy_charts_openapi.json",
+      "sha256": "523d3ec0fd82a7f148a94c02ffc08e8251c231d74e74b6019978af1e64b610d4",
+      "bytes": 83840
+    },
+    {
+      "path": "data/raw/research/2026-09-10/energy_charts_pl_sample.json",
+      "sha256": "bf5398ea8f93d1f5c775ca1e4ada71e69305b8d65d6fec643a4e477da3d73b3d",
+      "bytes": 56287
+    },
+    {
+      "path": "data/raw/research/2026-09-10/gdos_capabilities.xml",
+      "sha256": "3fc2a3b52d3a08d2ded4bffcd6f33296058772daa79f9a30442330cbb83002d0",
+      "bytes": 85917
+    },
+    {
+      "path": "data/raw/research/2026-09-10/gugik_egib_capabilities.xml",
+      "sha256": "6609c18f6e3a268e383a9180037bd8bd8bfcf6ae190cae3be6f87e57a6c3b08c",
+      "bytes": 17111
+    },
+    {
+      "path": "data/raw/research/2026-09-10/pge_capacity_landing.html",
+      "sha256": "c73441b7a02ccd821ccc51e2f95f22195dd028faface80fb40ac21f5151db4df",
+      "bytes": 346
+    },
+    {
+      "path": "data/raw/research/2026-09-10/prawo_energetyczne_zmiana_2026_516.pdf",
+      "sha256": "18b9bc85f174eee474247d18761fcd9b99812fc9a5fe8fd98485fa192d0ef646",
+      "bytes": 857111
+    },
+    {
+      "path": "data/raw/research/2026-09-10/pse_api_frontend.js",
+      "sha256": "7cd13eebfc5f072ca12b7eba2dd8eff4dd067824aa4bb474ad3399d0d5e7eb48",
+      "bytes": 5184015
+    },
+    {
+      "path": "data/raw/research/2026-09-10/pse_api_index.html",
+      "sha256": "e7474cc8b3ae9c59b5193673e46e6bebcc005e611a5b29f9367849e4333c9abd",
+      "bytes": 487
+    },
+    {
+      "path": "data/raw/research/2026-09-10/pse_capacity_retrieved_2026-09-10.pdf",
+      "sha256": "d51fa2cd778b6a358a2f9e45894f695a6d118ff0bb767e3466a6be48f54cf04a",
+      "bytes": 1113716
+    },
+    {
+      "path": "data/raw/research/2026-09-10/pse_flows_sample.json",
+      "sha256": "4540d4283a6453b03d7630b049044bb758052d4b8367e33e9bec4f37696dfca3",
+      "bytes": 916
+    },
+    {
+      "path": "data/raw/research/2026-09-10/pse_nodes_sample.json",
+      "sha256": "a8d1ce15b02c785c0b47c3ed7afeb7f6dde7ba180f7c12998f12040264b2394e",
+      "bytes": 1092
+    },
+    {
+      "path": "data/raw/research/2026-09-10/pse_openapi.json",
+      "sha256": "e01af846f5ebfbf300a5ceae46d49a7651e81d8533b07939634e8222ea66cd39",
+      "bytes": 665204
+    },
+    {
+      "path": "data/raw/research/2026-09-10/pse_pipeline_landing.html",
+      "sha256": "edfd3543e74cd6ed935135b8691cd5142a2f1e80ddcc6a6f9cf89094bbabdfa3",
+      "bytes": 19890
+    },
+    {
+      "path": "data/raw/research/2026-09-10/pse_pipeline_url_2026-07-31.xlsx",
+      "sha256": "21dff45875f6fe7d943fd3df98a2290c1e3f04e999389538bdc1c00fe54b86dc",
+      "bytes": 174263
+    },
+    {
+      "path": "data/raw/research/2026-09-10/pse_redispatch_sample.json",
+      "sha256": "f74d4223bd57fe8a9befee39efcafc00602b40f22a8bc5099bcf7938792316cb",
+      "bytes": 986
+    },
+    {
+      "path": "data/raw/research/2026-09-10/stoen_export_2026_q3.pdf",
+      "sha256": "3e9f7d748ca1504c8590ea0c4340c5ab3316285cdc27297a6c84e33205b3d095",
+      "bytes": 130676
+    },
+    {
+      "path": "data/raw/research/2026-09-10/stoen_import_2026-08-31.pdf",
+      "sha256": "c1f9d308f682b2012eecdcc7a8e68b2436ea3f382d3e4bf738f00f93c8b2fb0f",
+      "bytes": 129010
+    },
+    {
+      "path": "data/raw/research/2026-09-10/stoen_network_landing.html",
+      "sha256": "a59c8fc6af294ba32cc745b8ddc75fa06d56262c36fb33c4ac6c840cd327a1f5",
+      "bytes": 315452
+    },
+    {
+      "path": "data/raw/research/2026-09-10/tauron_pipeline_landing.html",
+      "sha256": "f99110f8a0b5c9eba98c160beb0c97405e33e5b36ca5e7d18b6c5af829b39f2e",
+      "bytes": 97324
+    },
+    {
+      "path": "data/raw/research/2026-09-10/tauron_pipeline_retrieved_2026-09-10.pdf",
+      "sha256": "ce11455a2575454588fef46f711700b476ead67f4cd0b9a829b96e6698bc83b8",
+      "bytes": 61058229
+    },
+    {
+      "path": "data/staging/research/energa_pipeline_2026-08-31.png",
+      "sha256": "38b911506e0c8ad72bdcb51b0484deee6a386f9c7fef2228fac25a33132bc30c",
+      "bytes": 384858
+    },
+    {
+      "path": "data/staging/research/pse_capacity_retrieved_2026-09-10.png",
+      "sha256": "dae7648eccf1beb530c2180ee1e12b168b6fd62d3e00ac8449e017cda1c2996d",
+      "bytes": 242387
+    }
+  ],
+  "note": "Local audit archive, excluded from Git. Copy to a separate private backup location; URL alone cannot restore changed source bytes."
+}

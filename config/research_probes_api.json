@@ -1,0 +1,6 @@
+[
+ {"source_id":"PSE_NODES_SAMPLE","url":"https://api.raporty.pse.pl/api/specwezlow?$first=2","save_as":"pse_nodes_sample.json"},
+ {"source_id":"PSE_REDISPATCH_SAMPLE","url":"https://api.raporty.pse.pl/api/poze-redoze?$first=2","save_as":"pse_redispatch_sample.json"},
+ {"source_id":"PSE_FLOWS_SAMPLE","url":"https://api.raporty.pse.pl/api/przeplywy-mocy?$first=2","save_as":"pse_flows_sample.json"},
+ {"source_id":"ENERGY_CHARTS_SAMPLE","url":"https://api.energy-charts.info/v2/public_power?country=pl&start=2026-09-01&end=2026-09-01","save_as":"energy_charts_pl_sample.json"}
+]

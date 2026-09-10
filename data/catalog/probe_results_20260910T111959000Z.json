@@ -1,0 +1,79 @@
+[
+  {
+    "source_id": "PSE_API_JS",
+    "url": "https://api.raporty.pse.pl/assets/index-D9OvjZ5P.js",
+    "retrieval_date": "2026-09-10T11:19:33.2503384Z",
+    "http_status": 200,
+    "content_type": "application/javascript",
+    "bytes": 5184015,
+    "sha256": "7cd13eebfc5f072ca12b7eba2dd8eff4dd067824aa4bb474ad3399d0d5e7eb48",
+    "local_path": "data/raw/research/2026-09-10/pse_api_frontend.js",
+    "error": null
+  },
+  {
+    "source_id": "ENERGY_CHARTS_OPENAPI",
+    "url": "https://api.energy-charts.info/openapi.json",
+    "retrieval_date": "2026-09-10T11:19:35.4032129Z",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 83840,
+    "sha256": "523d3ec0fd82a7f148a94c02ffc08e8251c231d74e74b6019978af1e64b610d4",
+    "local_path": "data/raw/research/2026-09-10/energy_charts_openapi.json",
+    "error": null
+  },
+  {
+    "source_id": "TAURON_PIPELINE_PDF",
+    "url": "https://www.tauron-dystrybucja.pl/-/media/offer-documents/dystrybucja/przylaczenie/dostepne-moce/informacja-o-przylaczanych-obiektach-i-wydanych-odmowach.ashx",
+    "retrieval_date": "2026-09-10T11:19:38.2544804Z",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "bytes": 61058229,
+    "sha256": "ce11455a2575454588fef46f711700b476ead67f4cd0b9a829b96e6698bc83b8",
+    "local_path": "data/raw/research/2026-09-10/tauron_pipeline_retrieved_2026-09-10.pdf",
+    "error": null
+  },
+  {
+    "source_id": "STOEN_NETWORK_HTML",
+    "url": "https://www.stoen.pl/pl/strona/siec",
+    "retrieval_date": "2026-09-10T11:19:57.4147344Z",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 315452,
+    "sha256": "a59c8fc6af294ba32cc745b8ddc75fa06d56262c36fb33c4ac6c840cd327a1f5",
+    "local_path": "data/raw/research/2026-09-10/stoen_network_landing.html",
+    "error": null
+  },
+  {
+    "source_id": "ENEA_PIPELINE_HTML",
+    "url": "https://www.operator.enea.pl/przylaczenie-do-sieci/informacje-o-przylaczeniach",
+    "retrieval_date": "2026-09-10T11:19:57.8537807Z",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 369250,
+    "sha256": "fc4376106902eeda779096cf56b2abad023f6180be77bb49777bcd8526da6247",
+    "local_path": "data/raw/research/2026-09-10/enea_pipeline_landing.html",
+    "error": null
+  },
+  {
+    "source_id": "ENEA_MAP_HTML",
+    "url": "https://www.operator.enea.pl/oze/przylaczone-i-dostepne-moce-oze",
+    "retrieval_date": "2026-09-10T11:19:58.0978783Z",
+    "http_status": 404,
+    "content_type": null,
+    "bytes": null,
+    "sha256": null,
+    "local_path": null,
+    "error": "HttpResponseException"
+  },
+  {
+    "source_id": "PSE_PIPELINE_HTML",
+    "url": "https://www.pse.pl/obszary-dzialalnosci/wymiana-miedzysystemowa/informacje-ogolne/-/asset_publisher/L3RZBt9EkXoj/content/wykaz-podmiotow-ubiegajacych-sie-o-przylaczenie-do-krajowej-sieci-przesylowej/pop_up",
+    "retrieval_date": "2026-09-10T11:19:58.6490746Z",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 19890,
+    "sha256": "edfd3543e74cd6ed935135b8691cd5142a2f1e80ddcc6a6f9cf89094bbabdfa3",
+    "local_path": "data/raw/research/2026-09-10/pse_pipeline_landing.html",
+    "error": null
+  }
+]

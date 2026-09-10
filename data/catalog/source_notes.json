@@ -1,0 +1,1766 @@
+{
+  "schema_version": "research_catalog_v1",
+  "verification_date": "2026-09-10",
+  "sources": [
+    {
+      "source_id": "PSE_API",
+      "operator": "PSE",
+      "source_name": "API raportów PSE — OpenAPI",
+      "url": "https://api.raporty.pse.pl/api/openapi",
+      "data_owner": "PSE S.A.",
+      "data_category": "system_data_and_node_dictionary",
+      "grid_voltage": [
+        "SN",
+        "110 kV",
+        "220 kV",
+        "400 kV"
+      ],
+      "data_format": [
+        "REST",
+        "JSON",
+        "OpenAPI"
+      ],
+      "api_available": "YES",
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "A",
+      "update_frequency": "Zależna od raportu i pola czasu; niejednolita.",
+      "historical_data": "YES; próbki obejmują wcześniejsze obserwacje.",
+      "authentication": "Anonimowe próby działały; brak gwarancji dla każdego endpointu.",
+      "key_fields": [
+        "business_date",
+        "publication_ts",
+        "station_name",
+        "switching_station_voltage",
+        "busbar_code",
+        "pv_red_balance",
+        "pv_red_network"
+      ],
+      "potential_application": "Słownik węzłów i kontekst systemowy; rozdzielenie przyczyn redysponowania.",
+      "known_limitations": [
+        "Nie jest pełnym grafem operacyjnym.",
+        "Próba przepływów dotyczy przekrojów transgranicznych.",
+        "Pierwsze rekordy bez filtra czasu nie są najnowszym stanem; null nie oznacza zera."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "PSE_API_DOCS",
+        "PSE_API_JS",
+        "PSE_OPENAPI",
+        "PSE_NODES_SAMPLE",
+        "PSE_REDISPATCH_SAMPLE",
+        "PSE_FLOWS_SAMPLE"
+      ],
+      "automation_notes": "Filtrować czas, stronicować po nextLink; $first, $after, $filter, $select, $orderby. Nie ustalono gwarantowanego limitu żądań.",
+      "license": "UNKNOWN — nie potwierdzono ogólnej licencji ponownego wykorzystania wszystkich serii.",
+      "source_version": "OpenAPI info.version 2.0.9"
+    },
+    {
+      "source_id": "PSE_PIPELINE",
+      "operator": "PSE",
+      "source_name": "Podmioty ubiegające się o przyłączenie — XLSX",
+      "url": "https://www.pse.pl/documents/20182/51490/Informacje_publikowane_zgodnie_z_Art_7_ust_8l_ustawy_PE_stan_na_31_07_2026.xlsx",
+      "data_owner": "PSE S.A.",
+      "data_category": "connection_pipeline",
+      "grid_voltage": [
+        "110 kV",
+        "220 kV",
+        "400 kV"
+      ],
+      "data_format": [
+        "XLSX"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "B",
+      "machine_readable": "YES",
+      "scraping_required": "HTML_LINK_DISCOVERY_ONLY",
+      "update_frequency": "Wykaz aktualizowany okresowo; częstotliwość minimalna OSP miesięczna według badanej nowelizacji.",
+      "historical_data": "PARTIAL — wymagane własne snapshoty.",
+      "key_fields": [
+        "ID Obiektu",
+        "wnioskodawca",
+        "miejsce przyłączenia",
+        "napięcie",
+        "export_MW",
+        "import_MW",
+        "technologia",
+        "etap",
+        "daty procedury"
+      ],
+      "potential_application": "Pierwszy kandydat do parsera pipeline i relacji projekt–punkt przyłączenia.",
+      "known_limitations": [
+        "Braki identyfikatorów i wartości; wielopoziomowy nagłówek.",
+        "Nie potwierdzono pola MWh.",
+        "Rozmiar arkusza nie jest liczbą unikalnych projektów."
+      ],
+      "source_date": "2026-07-31",
+      "publication_date": null,
+      "priority": "P1",
+      "probe_ids": [
+        "PSE_PIPELINE_XLSX"
+      ],
+      "related_urls": [
+        "https://www.pse.pl/obszary-dzialalnosci/wymiana-miedzysystemowa/informacje-ogolne/-/asset_publisher/L3RZBt9EkXoj/content/wykaz-podmiotow-ubiegajacych-sie-o-przylaczenie-do-krajowej-sieci-przesylowej/pop_up"
+      ],
+      "date_notes": "Strona wskazywała aktualizację 01.09.2026; nagłówek arkusza 31.07.2026. Zachować osobno."
+    },
+    {
+      "source_id": "PSE_CAPACITY",
+      "operator": "PSE",
+      "source_name": "Dostępność mocy przyłączeniowej do sieci przesyłowej",
+      "url": "https://www.pse.pl/documents/20182/51490/informacja_o_dostepnosci_mocy_przylaczeniowej_do_sieci_przesylowej.pdf/81835e70-c6bb-4ed1-8154-1959a45b44f1",
+      "data_owner": "PSE S.A.",
+      "data_category": "reported_connection_capacity",
+      "grid_voltage": [
+        "110 kV",
+        "220 kV",
+        "400 kV"
+      ],
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "B",
+      "machine_readable": "PARTIAL",
+      "source_date": "2026-08-31",
+      "key_fields": [
+        "stacja lub obszar",
+        "horyzont",
+        "wariant WP OSD",
+        "dostępna moc MW",
+        "założenia"
+      ],
+      "potential_application": "Odczyt dostępności operatora z warunkami i scenariuszem.",
+      "known_limitations": [
+        "Nie sumować współdzielonych grup ani powtórnie odejmować uwzględnionego pipeline.",
+        "Tabela importowa s.12 dotyczy nowych planowanych stacji; nie obecnej rezerwy wszystkich stacji."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "PSE_CAPACITY"
+      ],
+      "source_page": "3–4, 12–13",
+      "current_future_scope": "Mieszany; każda tabela wymaga własnego horyzontu."
+    },
+    {
+      "source_id": "PSE_PLAN",
+      "operator": "PSE",
+      "source_name": "PRSP 2027–2036 — projekt po konsultacjach",
+      "url": "https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f",
+      "data_owner": "PSE S.A.",
+      "data_category": "grid_investments",
+      "grid_voltage": [
+        "110 kV",
+        "220 kV",
+        "400 kV"
+      ],
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "machine_readable": "PARTIAL",
+      "update_frequency": "Cykl planowania i rewizje; nie dane bieżące.",
+      "key_fields": [
+        "inwestycja",
+        "stacja",
+        "linia",
+        "horyzont",
+        "status dokumentu"
+      ],
+      "potential_application": "Przyszła sieć i rejestr inwestycji.",
+      "known_limitations": [
+        "Projekt po konsultacjach; nie utożsamiać z uzgodnieniem i oddaniem do ruchu."
+      ],
+      "priority": "P1",
+      "current_future_scope": "FUTURE_GRID"
+    },
+    {
+      "source_id": "PSE_STRUCT_B2B",
+      "operator": "PSE",
+      "source_name": "Dokumentacja grid-struct-api",
+      "url": "https://polskie-sieci-elektroenergetyczne.github.io/grid-struct-api/",
+      "data_owner": "PSE S.A.",
+      "data_category": "topology_interface_documentation",
+      "data_format": [
+        "HTML",
+        "API documentation"
+      ],
+      "verification_status": "DISCOVERED",
+      "reliability": "B",
+      "key_fields": [
+        "schemat wymiany strukturalnej"
+      ],
+      "potential_application": "Ustalenie przyszłego dostępu partnerskiego do danych strukturalnych.",
+      "known_limitations": [
+        "Nie potwierdzono anonimowego dostępu do danych; dokumentacja B2B nie oznacza otwartego API topologii.",
+        "Bezpośredni odczyt dokumentacji nie powiódł się."
+      ],
+      "priority": "P3",
+      "authentication": "UNKNOWN — kanał B2B wymaga odrębnej weryfikacji uprawnień."
+    },
+    {
+      "source_id": "ENERGA_LANDING",
+      "operator": "Energa-Operator",
+      "source_name": "Informacje o stanie przyłączeń",
+      "url": "https://energa-operator.pl/przylaczenie-do-sieci/informacje-o-stanie-przylaczen",
+      "data_owner": "Energa-Operator S.A.",
+      "data_category": "source_index",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "HTML",
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "scraping_required": "HTML_LINK_DISCOVERY_ONLY",
+      "key_fields": [
+        "link",
+        "tytuł",
+        "data"
+      ],
+      "potential_application": "Odkrywanie nowych wersji publikacji.",
+      "known_limitations": [
+        "Nie potwierdzono publicznego API ani operacyjnego GIS."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "ENERGA_LANDING"
+      ]
+    },
+    {
+      "source_id": "ENERGA_EXPORT",
+      "operator": "Energa-Operator",
+      "source_name": "Dostępna moc wytwórcza — 31.08.2026",
+      "url": "https://cdn-netpr.pl/file/mediakit/3063621/4a/informacja_o_wartosci_lacznej_dostepnej_wytworczej_mocy_przylaczeniowej_31_08_2026.pdf",
+      "data_owner": "Energa-Operator S.A.",
+      "data_category": "reported_export_capacity",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "B",
+      "machine_readable": "PARTIAL",
+      "source_date": "2026-08-31",
+      "key_fields": [
+        "jednostka raportowania",
+        "moc MW",
+        "okres",
+        "warunki"
+      ],
+      "potential_application": "Screening eksportu, z zachowaniem poziomu agregacji.",
+      "known_limitations": [
+        "Nie jest telemetrią lokalnych elementów; konieczna interpretacja tabel i założeń."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "ENERGA_EXPORT"
+      ]
+    },
+    {
+      "source_id": "ENERGA_IMPORT",
+      "operator": "Energa-Operator",
+      "source_name": "Dostępna moc odbiorcza — 31.08.2026",
+      "url": "https://cdn-netpr.pl/file/mediakit/3063619/5c/informacja_o_wartosci_lacznej_dostepnej_odbiorczej_mocy_przylaczeniowej_31_08_2026.pdf",
+      "data_owner": "Energa-Operator S.A.",
+      "data_category": "reported_import_capacity",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "B",
+      "machine_readable": "PARTIAL",
+      "source_date": "2026-08-31",
+      "key_fields": [
+        "jednostka raportowania",
+        "moc odbiorcza MW",
+        "okres"
+      ],
+      "potential_application": "Osobna analiza ładowania BESS i dużego poboru.",
+      "known_limitations": [
+        "Nie przenosić wartości eksportowych na importowe; brak walidacji wszystkich wierszy."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "ENERGA_IMPORT"
+      ]
+    },
+    {
+      "source_id": "ENERGA_PIPELINE",
+      "operator": "Energa-Operator",
+      "source_name": "Wnioski i odmowy — konflikt dat dokumentu",
+      "url": "https://cdn-netpr.pl/file/mediakit/3063617/fa/2026_08_31_pusop_wnioski_i_odmowy_eop.pdf",
+      "data_owner": "Energa-Operator S.A.",
+      "data_category": "connection_pipeline",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "B",
+      "machine_readable": "PARTIAL",
+      "source_date": null,
+      "key_fields": [
+        "projekt",
+        "miejsce przyłączenia",
+        "moc",
+        "etap",
+        "data"
+      ],
+      "potential_application": "Pipeline z ograniczeniem czasowym i ostrzeżeniem o konflikcie.",
+      "known_limitations": [
+        "Nazwa pliku 31.08.2026, nagłówek strony 1 i metadane 30.06.2026; nie uznano za pewny stan sierpniowy."
+      ],
+      "date_conflict": {
+        "filename_date": "2026-08-31",
+        "document_header_date": "2026-06-30",
+        "resolution": "UNRESOLVED"
+      },
+      "source_page": "1",
+      "priority": "P1",
+      "probe_ids": [
+        "ENERGA_PIPELINE"
+      ]
+    },
+    {
+      "source_id": "ENERGA_PLAN",
+      "operator": "Energa-Operator",
+      "source_name": "Uzgodniony plan rozwoju 2026–2031",
+      "url": "https://energa-operator.pl/raporty-i-liczby/plan-rozwoju",
+      "data_owner": "Energa-Operator S.A.",
+      "data_category": "grid_investments",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "HTML",
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "inwestycja",
+        "horyzont",
+        "status planu"
+      ],
+      "potential_application": "Rejestr przyszłych wzmocnień.",
+      "known_limitations": [
+        "Plan nie potwierdza wykonania inwestycji."
+      ],
+      "priority": "P1",
+      "current_future_scope": "FUTURE_GRID",
+      "related_urls": [
+        "https://cdn-netpr.pl/file/mediakit/2972639/30/uzgodniony_plan_rozwoju_2026_2031_energa_operator_sa.pdf"
+      ]
+    },
+    {
+      "source_id": "ENEA_PIPELINE",
+      "operator": "ENEA Operator",
+      "source_name": "Informacje o przyłączeniach i kryteria SN",
+      "url": "https://www.operator.enea.pl/przylaczenie-do-sieci/informacje-o-przylaczeniach",
+      "data_owner": "ENEA Operator sp. z o.o.",
+      "data_category": "connection_pipeline_and_criteria",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "HTML",
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "scraping_required": "HTML_LINK_DISCOVERY_ONLY",
+      "key_fields": [
+        "wykazy podmiotów",
+        "kryteria SN",
+        "wybrane GPZ",
+        "daty publikacji"
+      ],
+      "potential_application": "Pipeline i lokalne techniczne ograniczenia SN.",
+      "known_limitations": [
+        "Nie przeprowadzono pełnego odczytu wierszy najnowszych załączników.",
+        "Kryteria dotyczące wybranych GPZ nie są uniwersalne."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "ENEA_PIPELINE_HTML"
+      ]
+    },
+    {
+      "source_id": "ENEA_MAP",
+      "operator": "ENEA Operator",
+      "source_name": "Mapy przyłączonych i dostępnych mocy OZE",
+      "url": "https://www.operator.enea.pl/przylaczone-i-dostepne-moce-oze",
+      "data_owner": "ENEA Operator sp. z o.o.",
+      "data_category": "connection_capacity_map",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "HTML",
+        "Power BI"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "gis_available": "VIEWER_ONLY",
+      "machine_readable": "UNKNOWN",
+      "update_frequency": "Operator deklaruje codzienną aktualizację w komunikacie z 16.01.2026.",
+      "key_fields": [
+        "lokalizacja",
+        "obszar",
+        "moce OZE"
+      ],
+      "potential_application": "Eksploracja i weryfikacja lokalnych kandydatów.",
+      "known_limitations": [
+        "Pięć osadzeń Power BI w HTML; nie potwierdzono publicznego API, WFS lub dozwolonego eksportu całej bazy.",
+        "Poprzednio sprawdzana ścieżka /oze/ zwróciła 404."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "ENEA_MAP"
+      ],
+      "related_urls": [
+        "https://media.enea.pl/pr/863306/enea-operator-codziennie-publikuje-aktualne-dane-dotyczace-oze-dla-inwestorow"
+      ]
+    },
+    {
+      "source_id": "ENEA_PLAN",
+      "operator": "ENEA Operator",
+      "source_name": "Plan rozwoju 2026–2031",
+      "url": "https://www.operator.enea.pl/plan-rozwoju-enea-operator-na-lata-2026-2031",
+      "data_owner": "ENEA Operator sp. z o.o.",
+      "data_category": "grid_investments",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "HTML",
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "inwestycja",
+        "okres",
+        "status uzgodnienia"
+      ],
+      "potential_application": "Planowane wzmocnienia.",
+      "known_limitations": [
+        "Nie potwierdza oddania do ruchu."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "ENEA_PLAN"
+      ],
+      "current_future_scope": "FUTURE_GRID",
+      "related_urls": [
+        "https://www.operator.enea.pl/media/4501/inwestycje/plan-rozwoju-enea-operator-na-lata-2026-2031pdf.pdf"
+      ]
+    },
+    {
+      "source_id": "TAURON_PIPELINE",
+      "operator": "TAURON Dystrybucja",
+      "source_name": "Przyłączane obiekty i wydane odmowy",
+      "url": "https://www.tauron-dystrybucja.pl/-/media/offer-documents/dystrybucja/przylaczenie/dostepne-moce/informacja-o-przylaczanych-obiektach-i-wydanych-odmowach.ashx",
+      "data_owner": "TAURON Dystrybucja S.A.",
+      "data_category": "connection_pipeline",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "B",
+      "machine_readable": "PARTIAL",
+      "key_fields": [
+        "wnioskodawca",
+        "obiekt",
+        "miejsce przyłączenia",
+        "moc",
+        "status",
+        "daty"
+      ],
+      "potential_application": "Pipeline i odmowy; kontrola zmian.",
+      "known_limitations": [
+        "99 stron; nie zwalidowano wszystkich rekordów.",
+        "W próbce anonimizacja podmiotów i nieokreślone miejsca przyłączeń."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "TAURON_PIPELINE_PDF",
+        "TAURON_PIPELINE"
+      ],
+      "publication_date": "2026-08-31",
+      "date_notes": "Data opisu publikacji na stronie; nie przypisywać automatycznie wszystkim rekordom.",
+      "related_urls": [
+        "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/podmioty-ubiegajace-sie"
+      ]
+    },
+    {
+      "source_id": "TAURON_MAP",
+      "operator": "TAURON Dystrybucja",
+      "source_name": "Portal dostępnych mocy",
+      "url": "https://dostepnemoce.tauron-dystrybucja.pl/",
+      "data_owner": "TAURON Dystrybucja S.A.",
+      "data_category": "connection_capacity_map",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "HTML",
+        "web application"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "gis_available": "VIEWER_ONLY",
+      "key_fields": [
+        "obszar",
+        "dostępna moc",
+        "inwestycje",
+        "wariant"
+      ],
+      "potential_application": "Eksploracja opublikowanych możliwości.",
+      "known_limitations": [
+        "Nie potwierdzono stabilnego otwartego API eksportu; dane wymagają interpretacji scenariusza."
+      ],
+      "priority": "P2"
+    },
+    {
+      "source_id": "TAURON_PLAN",
+      "operator": "TAURON Dystrybucja",
+      "source_name": "Plan rozwoju — indeks operatora",
+      "url": "https://www.tauron-dystrybucja.pl/plan-rozwoju",
+      "data_owner": "TAURON Dystrybucja S.A.",
+      "data_category": "grid_investments",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "HTML",
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "dokument",
+        "horyzont",
+        "inwestycja"
+      ],
+      "potential_application": "Odkrywanie planów sieci.",
+      "known_limitations": [
+        "Nie zwalidowano pełnego wykazu inwestycji ani wszystkich dat realizacji."
+      ],
+      "priority": "P2",
+      "current_future_scope": "FUTURE_GRID"
+    },
+    {
+      "source_id": "STOEN_LANDING",
+      "operator": "Stoen Operator",
+      "source_name": "Sieć — indeks dokumentów",
+      "url": "https://www.stoen.pl/pl/strona/siec",
+      "data_owner": "Stoen Operator sp. z o.o.",
+      "data_category": "source_index",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "HTML",
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "moce",
+        "wykazy",
+        "rejestr magazynów",
+        "plan"
+      ],
+      "potential_application": "Odkrywanie aktualizacji publikacji.",
+      "known_limitations": [
+        "Nie wszystkie załączniki odczytano; warunki komercyjne wymagają wyjaśnienia."
+      ],
+      "priority": "P2",
+      "probe_ids": [
+        "STOEN_NETWORK_HTML"
+      ],
+      "commercial_use": "REQUIRES_PERMISSION_REVIEW",
+      "license": "Regulamin §6: zastrzeżenia komercyjnego użycia i wyjątki; zastosowanie do zbiorów wymaga wyjaśnienia.",
+      "license_url": "https://www.stoen.pl/strona/regulamin"
+    },
+    {
+      "source_id": "STOEN_EXPORT",
+      "operator": "Stoen Operator",
+      "source_name": "Dostępna moc źródeł — III kwartał 2026",
+      "url": "https://www.stoen.pl/files/2026-07/wielkosc-dostepnej-mocy-przylaczeniowej-zrodel-w-sieci-stoen-operator-iii-kw-2026.pdf",
+      "data_owner": "Stoen Operator sp. z o.o.",
+      "data_category": "reported_export_capacity",
+      "grid_voltage": [
+        "15 kV",
+        "110 kV"
+      ],
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "B",
+      "machine_readable": "PARTIAL",
+      "update_frequency": "Publikacja kwartalna.",
+      "key_fields": [
+        "dzielnica/grupa stacji",
+        "napięcie",
+        "moc MW",
+        "założenia"
+      ],
+      "potential_application": "Screening eksportu w jednostce raportowania operatora.",
+      "known_limitations": [
+        "Grupy nie są niezależnymi rezerwami wszystkich GPZ.",
+        "Część danych wejściowych o małych źródłach z IV kw.2025."
+      ],
+      "priority": "P2",
+      "probe_ids": [
+        "STOEN_EXPORT"
+      ],
+      "source_page": "3–5",
+      "commercial_use": "REQUIRES_PERMISSION_REVIEW",
+      "license_url": "https://www.stoen.pl/strona/regulamin",
+      "source_version": "III kwartał 2026"
+    },
+    {
+      "source_id": "STOEN_IMPORT",
+      "operator": "Stoen Operator",
+      "source_name": "Dostępna moc odbiorców — 31.08.2026",
+      "url": "https://www.stoen.pl/files/2026-09/wielkosc-dostepnej-mocy-przylaczeniowej-dla-odbiorcow-w-sieci-stoen-operator-31.08.2026r.pdf",
+      "data_owner": "Stoen Operator sp. z o.o.",
+      "data_category": "reported_import_capacity",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "B",
+      "machine_readable": "PARTIAL",
+      "source_date": "2026-08-31",
+      "key_fields": [
+        "moc odbiorcza",
+        "jednostka raportowania",
+        "data"
+      ],
+      "potential_application": "Scenariusz poboru i ładowania BESS.",
+      "known_limitations": [
+        "Potwierdzono format i nagłówek, nie pełną poprawność wszystkich tabel."
+      ],
+      "priority": "P2",
+      "probe_ids": [
+        "STOEN_IMPORT"
+      ],
+      "commercial_use": "REQUIRES_PERMISSION_REVIEW",
+      "license_url": "https://www.stoen.pl/strona/regulamin"
+    },
+    {
+      "source_id": "STOEN_PIPELINE",
+      "operator": "Stoen Operator",
+      "source_name": "Wykaz podmiotów powyżej 1 kV — link do PDF",
+      "url": "https://www.stoen.pl/files/2026-08/1788176873_zestawienie-informacji-dot.-podmiotow-ubiegajacych-sie-o-przylaczenie-pow.-1kv-stan-na-30.06.2026-r.pdf",
+      "data_owner": "Stoen Operator sp. z o.o.",
+      "data_category": "connection_pipeline",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "DISCOVERED",
+      "reliability": "B",
+      "key_fields": [
+        "UNKNOWN — nie odczytano tabel"
+      ],
+      "potential_application": "Uzupełnienie lokalnego pipeline po walidacji.",
+      "known_limitations": [
+        "Link znaleziony na oficjalnej stronie; data 30.06.2026 z nazwy, bez walidacji treści."
+      ],
+      "priority": "P2",
+      "commercial_use": "REQUIRES_PERMISSION_REVIEW",
+      "license_url": "https://www.stoen.pl/strona/regulamin"
+    },
+    {
+      "source_id": "STOEN_STORAGE",
+      "operator": "Stoen Operator",
+      "source_name": "Rejestr magazynów — link do PDF",
+      "url": "https://www.stoen.pl/files/2026-01/rejestr-magazynow-energii-stoen-operator-sp.-z-o.o.pdf",
+      "data_owner": "Stoen Operator sp. z o.o.",
+      "data_category": "storage_register",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "DISCOVERED",
+      "reliability": "B",
+      "key_fields": [
+        "UNKNOWN — nie odczytano tabel"
+      ],
+      "potential_application": "Weryfikacja istniejących BESS po sprawdzeniu zakresu rejestru.",
+      "known_limitations": [
+        "Nie ustalono pól, progów wpisu ani aktualnej daty stanu."
+      ],
+      "priority": "P2",
+      "commercial_use": "REQUIRES_PERMISSION_REVIEW",
+      "license_url": "https://www.stoen.pl/strona/regulamin"
+    },
+    {
+      "source_id": "STOEN_PLAN",
+      "operator": "Stoen Operator",
+      "source_name": "Plan rozwoju 2026–2031",
+      "url": "https://stoen.pl/strona/plan-rozwoju-w-zakresie-zaspokojenia-obecnego-i-przyszlego-zapotrzebowania-na-energie-elektryczna-na-lata-2026-2031",
+      "data_owner": "Stoen Operator sp. z o.o.",
+      "data_category": "grid_investments",
+      "data_format": [
+        "HTML",
+        "PDF"
+      ],
+      "verification_status": "DISCOVERED",
+      "reliability": "B",
+      "key_fields": [
+        "dokument planu"
+      ],
+      "potential_application": "Przyszłe inwestycje po odczycie załącznika.",
+      "known_limitations": [
+        "Indeks sieci opisuje plan jako uzgodniony; pełny dokument nie został zwalidowany."
+      ],
+      "priority": "P2",
+      "current_future_scope": "FUTURE_GRID",
+      "commercial_use": "REQUIRES_PERMISSION_REVIEW",
+      "license_url": "https://www.stoen.pl/strona/regulamin"
+    },
+    {
+      "source_id": "PGE_LANDING",
+      "operator": "PGE Dystrybucja",
+      "source_name": "Dostępne moce dla źródeł wytwórczych",
+      "url": "https://pgedystrybucja.pl/przylaczenia/procedury-przylaczeniowe/dostepne-moce-dla-zrodel-wytworczych",
+      "data_owner": "PGE Dystrybucja S.A.",
+      "data_category": "connection_capacity",
+      "data_format": [
+        "HTML"
+      ],
+      "verification_status": "BLOCKED",
+      "reliability": "B",
+      "key_fields": [
+        "UNKNOWN"
+      ],
+      "potential_application": "Ważne pokrycie OSD po rozwiązaniu dostępu.",
+      "known_limitations": [
+        "HTTP 200 zawierał 346-bajtową stronę odrzucenia, nie dane.",
+        "Nie wnioskować o jakości datasetu z samej blokady."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "PGE_LANDING"
+      ],
+      "automation_notes": "Nie obchodzić WAF; potwierdzić zwykły dostęp lub oficjalny kanał."
+    },
+    {
+      "source_id": "PGE_EXPORT_DISCOVERY",
+      "operator": "PGE Dystrybucja",
+      "source_name": "Dostępne moce I kwartał 2026 — wskazanie wyszukiwarki",
+      "url": "https://pgedystrybucja.pl/content/download/71691b9fb622cdf89306ec0dc0c1ac3d/file/dostepne-moce-pge-i-kw-2026.pdf?contentId=2208&inLanguage=pol-PL&version=6",
+      "data_owner": "PGE Dystrybucja S.A.",
+      "data_category": "reported_export_capacity",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "DISCOVERED",
+      "reliability": "B",
+      "key_fields": [
+        "UNKNOWN"
+      ],
+      "potential_application": "Sprawdzenie po uzyskaniu dostępu.",
+      "known_limitations": [
+        "Treść i aktualność niepotwierdzone; nazwa sugeruje historyczny kwartał."
+      ],
+      "priority": "P2"
+    },
+    {
+      "source_id": "PGE_PLAN_DISCOVERY",
+      "operator": "PGE Dystrybucja",
+      "source_name": "Konsultacje planu rozwoju — wskazanie strony",
+      "url": "https://pgedystrybucja.pl/o-spolce/dzialalnosc/konsultacje-spoleczne-projektu-planu-rozwoju",
+      "data_owner": "PGE Dystrybucja S.A.",
+      "data_category": "grid_investments",
+      "data_format": [
+        "HTML",
+        "PDF"
+      ],
+      "verification_status": "BLOCKED",
+      "reliability": "B",
+      "key_fields": [
+        "UNKNOWN"
+      ],
+      "potential_application": "Przyszłe inwestycje po zweryfikowaniu treści.",
+      "known_limitations": [
+        "Nie potwierdzono pełnego tekstu ani aktualnego statusu uzgodnienia."
+      ],
+      "priority": "P2",
+      "current_future_scope": "FUTURE_GRID"
+    },
+    {
+      "source_id": "KGHM_OSD",
+      "operator": "KGHM",
+      "source_name": "OSD dla systemu elektroenergetycznego",
+      "url": "https://kghm.com/pl/biznes/strefa-energetyczna/osd-dla-systemu-elektroenergetycznego",
+      "data_owner": "KGHM Polska Miedź S.A.",
+      "data_category": "local_operator_publications",
+      "geographical_scope": "Obszar sieci przemysłowej KGHM",
+      "data_format": [
+        "HTML",
+        "PDF",
+        "XLS"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "moce",
+        "przyłączenia",
+        "odmowy",
+        "rejestr magazynów",
+        "plany"
+      ],
+      "potential_application": "Pokrycie OSDn i dużych odbiorów przemysłowych.",
+      "known_limitations": [
+        "Nie jest źródłem ogólnopolskim; nie znormalizowano załączników."
+      ],
+      "priority": "P2"
+    },
+    {
+      "source_id": "URE_REGISTERS",
+      "operator": null,
+      "source_name": "BIP URE — rejestry i bazy",
+      "url": "https://bip.ure.gov.pl/bip/rejestry-i-bazy",
+      "data_owner": "Urząd Regulacji Energetyki",
+      "data_category": "regulatory_registers",
+      "data_format": [
+        "HTML",
+        "linked registers"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "key_fields": [
+        "podmiot",
+        "zakres rejestru",
+        "status regulacyjny"
+      ],
+      "potential_application": "Kontrola podmiotów i wybranych aktywów OZE.",
+      "known_limitations": [
+        "Progi i zakresy różnią się; brak kompletnego mapowania projekt–GPZ."
+      ],
+      "priority": "P1"
+    },
+    {
+      "source_id": "ENERGY_LAW_516",
+      "operator": null,
+      "source_name": "Dz.U. 2026 poz. 516 — zmiana Prawa energetycznego",
+      "url": "https://dziennikustaw.gov.pl/D2026000051601.pdf",
+      "data_owner": "Dziennik Ustaw / RCL",
+      "data_category": "legal_publication_requirements",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "C",
+      "source_date": "2026-03-13",
+      "publication_date": "2026-04-15",
+      "key_fields": [
+        "zakres publikacji",
+        "częstotliwość aktualizacji",
+        "przepisy przejściowe"
+      ],
+      "potential_application": "Interpretacja cykli publikacji OSP/OSD.",
+      "known_limitations": [
+        "Przegląd wybranych przepisów, nie pełny audyt prawny wszystkich obowiązków i praw ponownego użycia."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "LAW_2026_516"
+      ],
+      "source_page": "15",
+      "license": "Oficjalny akt normatywny; nie stanowi licencji na dane operatorów."
+    },
+    {
+      "source_id": "BIP_ENV_DISCOVERY",
+      "operator": null,
+      "source_name": "Ekoportal — punkt wejścia do informacji środowiskowej",
+      "url": "https://ekoportal.gov.pl/",
+      "data_owner": "Administracja środowiskowa",
+      "data_category": "administrative_project_discovery",
+      "data_format": [
+        "HTML",
+        "BIP",
+        "PDF"
+      ],
+      "verification_status": "BLOCKED",
+      "reliability": "C",
+      "key_fields": [
+        "UNKNOWN — potrzebna weryfikacja aktualnego systemu"
+      ],
+      "potential_application": "Odkrywanie postępowań środowiskowych; preferować aktualne BIP właściwych organów.",
+      "known_limitations": [
+        "Odczyt nie powiódł się; wskazania migracji wymagają sprawdzenia.",
+        "Nie potwierdzono aktualnego krajowego API ani kompletności pipeline."
+      ],
+      "priority": "P2"
+    },
+    {
+      "source_id": "KRS_API_DOCS",
+      "operator": null,
+      "source_name": "Portal Rejestrów Sądowych — OpenAPI",
+      "url": "https://prs.ms.gov.pl/krs/openApi",
+      "data_owner": "Ministerstwo Sprawiedliwości",
+      "data_category": "company_identification",
+      "data_format": [
+        "HTML",
+        "API documentation"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "reliability": "C",
+      "api_available": "DOCUMENTED_NOT_TESTED",
+      "key_fields": [
+        "identyfikatory spółki — do sprawdzenia w schemacie"
+      ],
+      "potential_application": "Weryfikacja SPV po znalezieniu udokumentowanego związku z projektem.",
+      "known_limitations": [
+        "Odczyt strony ograniczony przez aplikację JS; bez zapytań o podmioty.",
+        "KRS nie potwierdza sam związku spółki z punktem przyłączenia."
+      ],
+      "priority": "P2"
+    },
+    {
+      "source_id": "GUGIK_EGIB",
+      "operator": null,
+      "source_name": "GUGiK — zbiorcza usługa WFS EGiB",
+      "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&REQUEST=GetCapabilities",
+      "data_owner": "GUGiK / właściwe organy EGiB",
+      "data_category": "cadastral_geometry",
+      "geographical_scope": "Polska; pokrycie usług zależne od dostawców",
+      "data_format": [
+        "WFS",
+        "XML"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "C",
+      "api_available": "YES",
+      "gis_available": "WFS_CAPABILITIES_VERIFIED",
+      "machine_readable": "YES",
+      "key_fields": [
+        "typy obiektów",
+        "CRS",
+        "operacje usługi"
+      ],
+      "potential_application": "Działki i budynki jako warstwa przestrzenna.",
+      "known_limitations": [
+        "Sprawdzono GetCapabilities, nie pobranie i kompletność wszystkich obiektów.",
+        "Nie daje prawa własności ani pełnego zakresu ewidencji."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "GUGIK_EGIB_CAPABILITIES"
+      ]
+    },
+    {
+      "source_id": "GUGIK_BDOT",
+      "operator": null,
+      "source_name": "BDOT10k — dane topograficzne",
+      "url": "https://www.geoportal.gov.pl/pl/dane/baza-danych-obiektow-topograficznych-bdot10k/",
+      "data_owner": "GUGiK / PZGiK",
+      "data_category": "topography_transport_infrastructure",
+      "data_format": [
+        "GML",
+        "WMS",
+        "downloads"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "reliability": "C",
+      "gis_available": "DOCUMENTED_NOT_TESTED",
+      "machine_readable": "YES",
+      "key_fields": [
+        "klasa obiektu",
+        "geometria",
+        "atrybuty topograficzne"
+      ],
+      "potential_application": "Drogi, kolej, obiekty i bariery trasowe.",
+      "known_limitations": [
+        "Nie jest modelem elektrycznym ani świadectwem legalnego dostępu do gruntu."
+      ],
+      "priority": "P1",
+      "related_urls": [
+        "https://mapy.geoportal.gov.pl/wss/service/PZGIK/BDOT/WMS/PobieranieBDOT10k"
+      ]
+    },
+    {
+      "source_id": "GUGIK_BDOT_PARQUET",
+      "operator": null,
+      "source_name": "Nowe udostępnianie BDOT10k jako GeoParquet",
+      "url": "https://www.geoportal.gov.pl/aktualnosci/nowy-sposob-udostepniania-danych-bdot10k-w-geoportalu/",
+      "data_owner": "GUGiK",
+      "data_category": "structured_topography_download",
+      "data_format": [
+        "GeoParquet"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "reliability": "C",
+      "machine_readable": "YES",
+      "publication_date": "2026-04-16",
+      "key_fields": [
+        "klasa obiektu",
+        "geometria",
+        "schemat2021"
+      ],
+      "potential_application": "Wydajne pobieranie klas zamiast parsowania mapy.",
+      "known_limitations": [
+        "Nie pobierano i nie walidowano krajowych paczek."
+      ],
+      "priority": "P1"
+    },
+    {
+      "source_id": "GUGIK_ORTHO",
+      "operator": null,
+      "source_name": "Ortofotomapa GUGiK",
+      "url": "https://www.geoportal.gov.pl/pl/dane/ortofotomapa-orto/",
+      "data_owner": "GUGiK / PZGiK",
+      "data_category": "orthophoto",
+      "data_format": [
+        "raster",
+        "WMS",
+        "WMTS"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "reliability": "C",
+      "gis_available": "DOCUMENTED_NOT_TESTED",
+      "key_fields": [
+        "data zdjęcia",
+        "rozdzielczość",
+        "CRS"
+      ],
+      "potential_application": "Kontrola przestrzenna obiektów i korytarzy.",
+      "known_limitations": [
+        "Obraz nie potwierdza parametrów elektrycznych ani połączenia."
+      ],
+      "priority": "P2",
+      "license": "Oficjalna strona opisuje bezpłatne pobieranie i dowolne wykorzystanie ortofotomapy.",
+      "commercial_use": "PERMITTED_AS_DESCRIBED",
+      "license_url": "https://www.geoportal.gov.pl/pl/dane/ortofotomapa-orto/",
+      "related_urls": [
+        "https://mapy.geoportal.gov.pl/wss/service/PZGIK/ORTO/WMS/StandardResolution",
+        "https://mapy.geoportal.gov.pl/wss/service/PZGIK/ORTO/WMTS/StandardResolution"
+      ]
+    },
+    {
+      "source_id": "GUGIK_NMT",
+      "operator": null,
+      "source_name": "Numeryczny model terenu",
+      "url": "https://www.geoportal.gov.pl/pl/dane/numeryczny-model-terenu-nmt/",
+      "data_owner": "GUGiK / PZGiK",
+      "data_category": "terrain",
+      "data_format": [
+        "raster",
+        "downloads",
+        "WCS documentation"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "reliability": "C",
+      "gis_available": "DOCUMENTED_NOT_TESTED",
+      "key_fields": [
+        "wysokość",
+        "rozdzielczość",
+        "CRS poziomy i pionowy"
+      ],
+      "potential_application": "Nachylenie i wstępna analiza trasy.",
+      "known_limitations": [
+        "Nie jest geotechniką ani dokumentacją projektową."
+      ],
+      "priority": "P2"
+    },
+    {
+      "source_id": "GUGIK_MPZP",
+      "operator": null,
+      "source_name": "Krajowa Integracja MPZP",
+      "url": "https://mapy.geoportal.gov.pl/wss/ext/KrajowaIntegracjaMiejscowychPlanowZagospodarowaniaPrzestrzennego?lang=pol",
+      "data_owner": "GUGiK / gminy",
+      "data_category": "spatial_planning",
+      "data_format": [
+        "HTML",
+        "WMS integration"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "gis_available": "VIEWER_ONLY",
+      "key_fields": [
+        "obszar planu",
+        "prezentacja ustaleń",
+        "odsyłacze"
+      ],
+      "potential_application": "Lokalizacja obowiązujących planów do dalszej weryfikacji.",
+      "known_limitations": [
+        "Potrzebne teksty uchwał i aktualność; mapowy obraz nie zastępuje reguł prawnych."
+      ],
+      "priority": "P2"
+    },
+    {
+      "source_id": "URBAN_REGISTER",
+      "operator": null,
+      "source_name": "Rejestr Urbanistyczny — publikacje",
+      "url": "https://rejestr-urbanistyczny.gov.pl/published",
+      "data_owner": "Administracja publiczna — Rejestr Urbanistyczny",
+      "data_category": "spatial_planning_register",
+      "data_format": [
+        "HTML",
+        "web application"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "key_fields": [
+        "UNKNOWN — nie zweryfikowano eksportu danych"
+      ],
+      "potential_application": "Plany ogólne i dokumenty planistyczne po ocenie pokrycia.",
+      "known_limitations": [
+        "Otworzył się interfejs JS; brak testu kompletności i publicznego API."
+      ],
+      "priority": "P2"
+    },
+    {
+      "source_id": "GDOS_GIS",
+      "operator": null,
+      "source_name": "GDOŚ — WFS form ochrony przyrody",
+      "url": "https://sdi.gdos.gov.pl/wfs?SERVICE=WFS&REQUEST=GetCapabilities",
+      "data_owner": "Generalna Dyrekcja Ochrony Środowiska",
+      "data_category": "protected_areas_natura2000",
+      "data_format": [
+        "WFS",
+        "WMS",
+        "XML"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "C",
+      "api_available": "YES",
+      "gis_available": "WFS_CAPABILITIES_VERIFIED",
+      "machine_readable": "YES",
+      "key_fields": [
+        "typy warstw",
+        "CRS",
+        "operacje"
+      ],
+      "potential_application": "Przecięcia kandydackich tras z obszarami ochrony.",
+      "known_limitations": [
+        "Sprawdzono capabilities, nie wszystkie geometrie; akty ustanawiające ochronę są rozstrzygające."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "GDOS_CAPABILITIES"
+      ],
+      "related_urls": [
+        "https://www.gov.pl/web/gdos/dostep-do-danych-geoprzestrzennych",
+        "https://sdi.gdos.gov.pl/wms"
+      ]
+    },
+    {
+      "source_id": "WODY_SIGW",
+      "operator": null,
+      "source_name": "SIGW — udostępnianie danych Wód Polskich",
+      "url": "https://www.gov.pl/web/wody-polskie/udostepnianie-danych-z-systemu-informacyjnego-gospodarowania-wodami",
+      "data_owner": "Państwowe Gospodarstwo Wodne Wody Polskie",
+      "data_category": "flood_and_water_constraints",
+      "data_format": [
+        "WMS",
+        "downloads_on_request"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "reliability": "C",
+      "gis_available": "DOCUMENTED_NOT_TESTED",
+      "key_fields": [
+        "zagrożenie",
+        "zasięg",
+        "produkt",
+        "scenariusz"
+      ],
+      "potential_application": "Ograniczenia powodziowe i wodne.",
+      "known_limitations": [
+        "Przeglądanie nie równa się dowolnemu pobraniu; możliwe opłaty i tryb wnioskowy zależnie od produktu."
+      ],
+      "priority": "P2",
+      "commercial_use": "PRODUCT_SPECIFIC",
+      "license": "Zasady zależą od danych i sposobu udostępnienia; do sprawdzenia dla wybranej warstwy."
+    },
+    {
+      "source_id": "BDL_GIS",
+      "operator": null,
+      "source_name": "Bank Danych o Lasach — usługi OGC",
+      "url": "https://www9.bdl.lasy.gov.pl/portal/uslugi-ogc?v=1",
+      "data_owner": "Bank Danych o Lasach / Lasy Państwowe",
+      "data_category": "forest_constraints",
+      "data_format": [
+        "WFS",
+        "WMS",
+        "WMTS",
+        "ArcGIS service URLs"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "reliability": "C",
+      "gis_available": "DOCUMENTED_NOT_TESTED",
+      "api_available": "DOCUMENTED_NOT_TESTED",
+      "key_fields": [
+        "wydzielenia",
+        "granice",
+        "atrybuty leśne"
+      ],
+      "potential_application": "Warstwa ograniczeń leśnych i korytarzy.",
+      "known_limitations": [
+        "Nie potwierdzono pobierania masowego ani praw dla wszystkich warstw; nie ustala prawa własności."
+      ],
+      "priority": "P2",
+      "related_urls": [
+        "https://wfs.bdl.lasy.gov.pl/geoserver/BDL/ows",
+        "https://mapserver.bdl.lasy.gov.pl/arcgis/services/WMS_BDL_mapa_drzewostanow/MapServer/WMSServer"
+      ]
+    },
+    {
+      "source_id": "ENTSOE_TP",
+      "operator": "ENTSO-E",
+      "source_name": "Transparency Platform",
+      "url": "https://www.entsoe.eu/data/transparency-platform/",
+      "data_owner": "ENTSO-E / dostawcy danych",
+      "country": "EUROPE",
+      "geographical_scope": "Kraje, strefy rynkowe, przekroje; zakres zależny od serii",
+      "data_category": "system_timeseries",
+      "data_format": [
+        "REST",
+        "XML",
+        "web portal"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "reliability": "A",
+      "api_available": "DOCUMENTED_NOT_TESTED",
+      "authentication": "Konto i token; nie użyto tokenu.",
+      "historical_data": "YES; zależne od serii.",
+      "update_frequency": "Zależna od produktu i korekt.",
+      "key_fields": [
+        "time",
+        "area",
+        "generation",
+        "load",
+        "cross_border_flows",
+        "outages"
+      ],
+      "potential_application": "Kontekst systemowy i weryfikacja szeregów.",
+      "known_limitations": [
+        "Nie dostarcza pełnej lokalnej telemetrii GPZ.",
+        "Nie wykonano uwierzytelnionego zapytania."
+      ],
+      "priority": "P2",
+      "commercial_use": "DATASET_SPECIFIC",
+      "license": "Lista danych i wyjątków ponownego wykorzystania; nie cała platforma automatycznie na jednej licencji.",
+      "license_url": "https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions",
+      "automation_notes": "Dokumentacja 20.04.2026 opisuje 400 żądań/min na token; stosować cache, limity i stronicowanie.",
+      "related_urls": [
+        "https://transparencyplatform.zendesk.com/hc/en-us/articles/12845911031188-How-to-get-security-token",
+        "https://transparencyplatform.zendesk.com/hc/en-us/articles/12783148966036-API-Rate-Limit-Part-1",
+        "https://transparencyplatform.zendesk.com/hc/en-us/articles/15692855254548-Sitemap-for-Restful-API-Integration"
+      ]
+    },
+    {
+      "source_id": "ENTSOE_MAP",
+      "operator": "ENTSO-E",
+      "source_name": "Grid Map — downloads",
+      "url": "https://www.entsoe.eu/data/map/downloads/",
+      "data_owner": "ENTSO-E",
+      "country": "EUROPE",
+      "geographical_scope": "Europa",
+      "data_category": "transmission_overview_map",
+      "grid_voltage": [
+        "WN/NN według legendy mapy"
+      ],
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "stacje",
+        "linie",
+        "legenda"
+      ],
+      "potential_application": "Weryfikacja orientacyjnego przebiegu sieci przesyłowej.",
+      "known_limitations": [
+        "Wydanie opisane jako aktualizowane w 2024 r.; nie model operacyjny 2026.",
+        "Licencji TP nie przenosić na mapę."
+      ],
+      "priority": "P2"
+    },
+    {
+      "source_id": "OSM_LICENSE",
+      "operator": null,
+      "source_name": "OpenStreetMap — dane i warunki ODbL",
+      "url": "https://www.openstreetmap.org/copyright",
+      "data_owner": "OpenStreetMap contributors",
+      "country": "GLOBAL",
+      "geographical_scope": "Globalna, zmienne pokrycie",
+      "data_category": "community_grid_geometry",
+      "data_format": [
+        "OSM PBF",
+        "XML",
+        "community tags"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "reliability": "G",
+      "machine_readable": "YES",
+      "key_fields": [
+        "osm_id",
+        "geometry",
+        "power tags",
+        "voltage",
+        "name",
+        "operator"
+      ],
+      "potential_application": "Geometria pomocnicza i hipotezy relacji.",
+      "known_limitations": [
+        "Brak gwarancji kompletności i aktualności; nie są to potwierdzone dane operatora."
+      ],
+      "priority": "P2",
+      "commercial_use": "CONDITIONAL",
+      "license": "ODbL; atrybucja i warunki dla baz pochodnych.",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "value_classification_default": "INFERRED"
+    },
+    {
+      "source_id": "GEOFABRIK_PL",
+      "operator": null,
+      "source_name": "Geofabrik — Poland OSM extract",
+      "url": "https://download.geofabrik.de/europe/poland.html",
+      "data_owner": "OpenStreetMap contributors; extract Geofabrik",
+      "data_category": "community_geometry_download",
+      "data_format": [
+        "OSM PBF",
+        "downloads"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "G",
+      "machine_readable": "YES",
+      "update_frequency": "Regularne, zwykle codzienne ekstrakty; odczytać datę konkretnego pliku.",
+      "key_fields": [
+        "OSM objects",
+        "tags",
+        "version"
+      ],
+      "potential_application": "Regionalne pobieranie geometrii bez masowych zapytań Overpass.",
+      "known_limitations": [
+        "Nie pobrano całego kraju w tym etapie; dziedziczy ograniczenia OSM."
+      ],
+      "priority": "P2",
+      "commercial_use": "CONDITIONAL",
+      "license": "ODbL dla danych OSM.",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "value_classification_default": "INFERRED"
+    },
+    {
+      "source_id": "OPENINFRAMAP",
+      "operator": null,
+      "source_name": "OpenInfraMap — opis źródła",
+      "url": "https://openinframap.org/about",
+      "data_owner": "Autorzy OpenInfraMap / OpenStreetMap contributors",
+      "country": "GLOBAL",
+      "geographical_scope": "Globalna",
+      "data_category": "infrastructure_visualization",
+      "data_format": [
+        "web map"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "G",
+      "gis_available": "VIEWER_ONLY",
+      "key_fields": [
+        "infrastruktura z OSM"
+      ],
+      "potential_application": "Wizualna inspekcja danych OSM.",
+      "known_limitations": [
+        "Nie jest niezależnym źródłem potwierdzającym OSM ani operatorem."
+      ],
+      "priority": "P2",
+      "commercial_use": "CONDITIONAL",
+      "license": "Dane OSM: ODbL; interfejs to osobny produkt.",
+      "value_classification_default": "INFERRED"
+    },
+    {
+      "source_id": "PYPSA_EUR",
+      "operator": null,
+      "source_name": "PyPSA-Eur",
+      "url": "https://github.com/PyPSA/pypsa-eur",
+      "data_owner": "Autorzy PyPSA-Eur i właściciele danych wejściowych",
+      "country": "EUROPE",
+      "geographical_scope": "Europa, konfiguracja modelu",
+      "data_category": "open_grid_model_workflow",
+      "data_format": [
+        "Python",
+        "workflow",
+        "model datasets"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "H",
+      "machine_readable": "YES",
+      "key_fields": [
+        "buses",
+        "lines",
+        "transformers",
+        "generation",
+        "load",
+        "assumptions"
+      ],
+      "potential_application": "Wzorzec budowy modelu referencyjnego i scenariuszy.",
+      "known_limitations": [
+        "Modelowe i inferowane parametry nie są aktualnymi danymi operatora.",
+        "Licencje wejść odrębne od kodu; nie uruchomiono modelu."
+      ],
+      "priority": "P2",
+      "license": "Repozytorium kodu MIT; prawa wejściowych danych sprawdzać oddzielnie.",
+      "commercial_use": "CONDITIONAL",
+      "value_classification_default": "ESTIMATED",
+      "related_urls": [
+        "https://arxiv.org/abs/2408.17178"
+      ]
+    },
+    {
+      "source_id": "MATPOWER_POLAND",
+      "operator": null,
+      "source_name": "MATPOWER case2383wp — historyczny przypadek Polski",
+      "url": "https://github.com/MATPOWER/matpower/blob/master/data/case2383wp.m",
+      "data_owner": "Autor przypadku / autorzy MATPOWER",
+      "data_category": "historical_grid_benchmark",
+      "grid_voltage": [
+        "110 kV",
+        "220 kV",
+        "400 kV"
+      ],
+      "data_format": [
+        "MATPOWER .m"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "H",
+      "machine_readable": "YES",
+      "source_version": "Zima 1999/2000 według opisu pliku",
+      "key_fields": [
+        "bus",
+        "branch",
+        "gen"
+      ],
+      "potential_application": "Test algorytmu i importu formatów.",
+      "known_limitations": [
+        "Historyczny przypadek z uproszczeniami; nie aktualna sieć Polski ani geograficzna baza projektów."
+      ],
+      "priority": "P3",
+      "license": "Sprawdzić warunki konkretnego przypadku i wersji niezależnie od biblioteki.",
+      "value_classification_default": "ESTIMATED"
+    },
+    {
+      "source_id": "PANDAPOWER",
+      "operator": null,
+      "source_name": "pandapower",
+      "url": "https://github.com/e2nIEE/pandapower",
+      "data_owner": "Autorzy pandapower",
+      "country": "GLOBAL",
+      "geographical_scope": "Narzędzie niezależne od kraju",
+      "data_category": "powerflow_library",
+      "data_format": [
+        "Python"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "H",
+      "key_fields": [
+        "model buses/lines/transformers",
+        "powerflow results"
+      ],
+      "potential_application": "Przyszłe obliczenia przy kompletnych wejściach.",
+      "known_limitations": [
+        "Biblioteka nie dostarcza rzeczywistych brakujących danych KSE; nie zainstalowano i nie porównano solverów."
+      ],
+      "priority": "P3",
+      "license": "Wymagana kontrola pliku LICENSE przypiętej wersji przed wdrożeniem.",
+      "value_classification_default": "CALCULATED"
+    },
+    {
+      "source_id": "VERAGRID",
+      "operator": null,
+      "source_name": "GridCal / VeraGrid",
+      "url": "https://github.com/SanPen/VeraGrid",
+      "data_owner": "Autorzy VeraGrid",
+      "country": "GLOBAL",
+      "geographical_scope": "Narzędzie niezależne od kraju",
+      "data_category": "powerflow_library",
+      "data_format": [
+        "Python"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "H",
+      "key_fields": [
+        "network model",
+        "simulation results"
+      ],
+      "potential_application": "Alternatywny solver do późniejszego porównania.",
+      "known_limitations": [
+        "Nie źródło współczesnej sieci Polski; zmiana nazwy repozytorium wymaga uwzględnienia w dokumentacji."
+      ],
+      "priority": "P3",
+      "license": "MPL-2.0 według bieżącego repozytorium; przed wdrożeniem przypiąć wersję.",
+      "commercial_use": "CONDITIONAL",
+      "value_classification_default": "CALCULATED"
+    },
+    {
+      "source_id": "MATPOWER_LIBRARY",
+      "operator": null,
+      "source_name": "MATPOWER",
+      "url": "https://github.com/MATPOWER/matpower",
+      "data_owner": "Autorzy MATPOWER",
+      "country": "GLOBAL",
+      "geographical_scope": "Narzędzie niezależne od kraju",
+      "data_category": "powerflow_library",
+      "data_format": [
+        "MATLAB",
+        "Octave"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "H",
+      "key_fields": [
+        "bus",
+        "branch",
+        "gen",
+        "results"
+      ],
+      "potential_application": "Referencyjne obliczenia i testy.",
+      "known_limitations": [
+        "Nie utożsamiać licencji kodu z prawami wszystkich przypadków testowych."
+      ],
+      "priority": "P3",
+      "license": "Kontrola licencji konkretnej wersji i danych wymagana przed użyciem.",
+      "value_classification_default": "CALCULATED"
+    },
+    {
+      "source_id": "POWERMODELS",
+      "operator": null,
+      "source_name": "PowerModels.jl",
+      "url": "https://github.com/lanl-ansi/PowerModels.jl",
+      "data_owner": "LANL-ANSI / autorzy PowerModels",
+      "country": "GLOBAL",
+      "geographical_scope": "Narzędzie niezależne od kraju",
+      "data_category": "optimization_library",
+      "data_format": [
+        "Julia"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "H",
+      "key_fields": [
+        "network model",
+        "optimization formulation"
+      ],
+      "potential_application": "Późniejsze porównanie optymalizacji sieci.",
+      "known_limitations": [
+        "Dodatkowy stos wykonawczy; nieuzasadniony na etapie researchu."
+      ],
+      "priority": "P3",
+      "license": "Kontrola LICENSE przypiętej wersji przed wdrożeniem.",
+      "value_classification_default": "CALCULATED"
+    },
+    {
+      "source_id": "OPSD_TIMESERIES",
+      "operator": null,
+      "source_name": "Open Power System Data — time series",
+      "url": "https://data.open-power-system-data.org/time_series/",
+      "data_owner": "OPSD / pierwotni dostawcy szeregów",
+      "country": "EUROPE",
+      "geographical_scope": "Europa, zakres zależny od serii",
+      "data_category": "historical_system_timeseries",
+      "data_format": [
+        "CSV",
+        "XLSX",
+        "data packages"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "E",
+      "machine_readable": "YES",
+      "historical_data": "YES",
+      "source_version": "2020-10-06 — przejrzane wydanie",
+      "key_fields": [
+        "timestamp",
+        "country",
+        "load",
+        "generation",
+        "price"
+      ],
+      "potential_application": "Historyczne testy i porównania.",
+      "known_limitations": [
+        "Nie źródło bieżących danych 2026; prawa pierwotnych danych odrębne od skryptów."
+      ],
+      "priority": "P3",
+      "commercial_use": "DATASET_SPECIFIC"
+    },
+    {
+      "source_id": "ENERGY_CHARTS",
+      "operator": null,
+      "source_name": "Energy-Charts API",
+      "url": "https://api.energy-charts.info/openapi.json",
+      "data_owner": "Fraunhofer ISE / dostawcy serii",
+      "country": "EUROPE",
+      "geographical_scope": "Polska potwierdzona dla próbki public_power",
+      "data_category": "system_timeseries",
+      "data_format": [
+        "REST",
+        "JSON",
+        "OpenAPI"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "E",
+      "api_available": "YES",
+      "machine_readable": "YES",
+      "authentication": "Anonimowa próbka public_power działała.",
+      "key_fields": [
+        "schema_version",
+        "series.id",
+        "data.timestamp",
+        "data.values",
+        "unit",
+        "license"
+      ],
+      "potential_application": "Kontekst generacji krajowej i porównania.",
+      "known_limitations": [
+        "Nie są to lokalne obciążenia GPZ.",
+        "Schemat v2: series + data.timestamp/values; nie starszy format unix_seconds/production_types.",
+        "Metadane licencji potwierdzono w odpowiedzi API; warunki pozostałych produktów wymagają odrębnej weryfikacji."
+      ],
+      "priority": "P2",
+      "probe_ids": [
+        "ENERGY_CHARTS_DOCS",
+        "ENERGY_CHARTS_OPENAPI",
+        "ENERGY_CHARTS_SAMPLE"
+      ],
+      "source_version": "API info.version 2.0",
+      "related_urls": [
+        "https://api.energy-charts.info/v2/public_power?country=pl&start=2026-09-01&end=2026-09-01",
+        "https://energy-charts.info/publishing-notes.html"
+      ],
+      "license": "Próbka v2/public_power zawiera CC BY 4.0 i atrybucję energy-charts.info; nie rozszerzać automatycznie na inne serie/endpoints.",
+      "commercial_use": "CONDITIONAL_FOR_VERIFIED_SAMPLE"
+    },
+    {
+      "source_id": "EMBER_API",
+      "operator": null,
+      "source_name": "Ember Energy API — dokumentacja",
+      "url": "https://api.ember-energy.org/v1/docs",
+      "data_owner": "Ember",
+      "country": "GLOBAL",
+      "geographical_scope": "Krajowe szeregi według produktu",
+      "data_category": "system_energy_data",
+      "data_format": [
+        "API documentation"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "reliability": "E",
+      "api_available": "DOCUMENTED_NOT_TESTED",
+      "authentication": "Rejestracja/klucz według interfejsu; nie wykonano zapytania z kluczem.",
+      "key_fields": [
+        "UNKNOWN — szczegóły schematu do weryfikacji"
+      ],
+      "potential_application": "Porównania krajowe i historyczne.",
+      "known_limitations": [
+        "Otwarta strona dokumentacji nie jest testem datasetu; brak danych lokalnej sieci."
+      ],
+      "priority": "P3",
+      "license": "UNKNOWN — sprawdzić regulamin konkretnego produktu API.",
+      "related_urls": [
+        "https://api.ember-energy.org/signup"
+      ]
+    },
+    {
+      "source_id": "JRC_IDEES",
+      "operator": null,
+      "source_name": "JRC IDEES-2023",
+      "url": "https://data.jrc.ec.europa.eu/dataset/1f0b480c-6d21-4d95-897d-20c7ca33df6f",
+      "data_owner": "European Commission Joint Research Centre",
+      "country": "EUROPE",
+      "geographical_scope": "Państwa UE w zakresie datasetu",
+      "data_category": "historical_energy_demand_structure",
+      "data_format": [
+        "dataset downloads",
+        "metadata"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "historical_data": "YES — okres 2000–2023 według opisu.",
+      "key_fields": [
+        "kraj",
+        "sektor",
+        "rok",
+        "zużycie energii"
+      ],
+      "potential_application": "Założenia scenariuszy popytu na poziomie agregatów.",
+      "known_limitations": [
+        "Aktualizacja metadanych w 2026 nie oznacza obserwacji sieci 2026; brak stacji i feederów."
+      ],
+      "priority": "P3",
+      "source_version": "IDEES-2023",
+      "license": "Do sprawdzenia warunki konkretnej paczki; nie przenosić licencji publikacji na wszystkie wejścia."
+    },
+    {
+      "source_id": "COPERNICUS",
+      "operator": null,
+      "source_name": "Copernicus Data Space — OData i produkty",
+      "url": "https://documentation.dataspace.copernicus.eu/APIs/OData.html",
+      "data_owner": "Copernicus / ESA / operatorzy CDSE zależnie od produktu",
+      "country": "GLOBAL",
+      "geographical_scope": "Zależna od produktu satelitarnego",
+      "data_category": "earth_observation",
+      "data_format": [
+        "OData",
+        "JSON",
+        "raster",
+        "STAC documentation"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "reliability": "C",
+      "api_available": "DOCUMENTED_NOT_TESTED",
+      "gis_available": "DOCUMENTED_NOT_TESTED",
+      "authentication": "Zależna od operacji; pobrania mogą wymagać tokenu.",
+      "key_fields": [
+        "product_id",
+        "footprint",
+        "acquisition_date",
+        "cloud_cover",
+        "product_type"
+      ],
+      "potential_application": "Pokrycie terenu i materiały do przyszłych modeli przestrzennych.",
+      "known_limitations": [
+        "Nie źródło parametrów sieci; brak pobrania próbki produktu.",
+        "Sentinel, DEM, portal i usługi mają różne warunki."
+      ],
+      "priority": "P3",
+      "commercial_use": "PRODUCT_SPECIFIC",
+      "license": "Otwarte zasady danych Sentinel nie obejmują automatycznie wszystkich produktów i treści portalu.",
+      "license_url": "https://dataspace.copernicus.eu/terms-and-conditions",
+      "related_urls": [
+        "https://documentation.dataspace.copernicus.eu/Quotas.html"
+      ]
+    }
+  ]
+}

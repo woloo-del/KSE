@@ -1,0 +1,123 @@
+[
+  {
+    "source_id": "PSE_API_DOCS",
+    "url": "https://api.raporty.pse.pl/",
+    "retrieval_date": "2026-09-10T11:18:09.4508686Z",
+    "http_status": 200,
+    "content_type": "text/html",
+    "bytes": 487,
+    "sha256": "e7474cc8b3ae9c59b5193673e46e6bebcc005e611a5b29f9367849e4333c9abd",
+    "local_path": "data/raw/research/2026-09-10/pse_api_index.html",
+    "error": null
+  },
+  {
+    "source_id": "PSE_CAPACITY",
+    "url": "https://www.pse.pl/documents/20182/51490/informacja_o_dostepnosci_mocy_przylaczeniowej_do_sieci_przesylowej.pdf/81835e70-c6bb-4ed1-8154-1959a45b44f1",
+    "retrieval_date": "2026-09-10T11:18:09.9988780Z",
+    "http_status": 200,
+    "content_type": "application/pdf; charset=UTF-8",
+    "bytes": 1113716,
+    "sha256": "d51fa2cd778b6a358a2f9e45894f695a6d118ff0bb767e3466a6be48f54cf04a",
+    "local_path": "data/raw/research/2026-09-10/pse_capacity_retrieved_2026-09-10.pdf",
+    "error": null
+  },
+  {
+    "source_id": "ENERGA_PIPELINE",
+    "url": "https://cdn-netpr.pl/file/mediakit/3063617/fa/2026_08_31_pusop_wnioski_i_odmowy_eop.pdf",
+    "retrieval_date": "2026-09-10T11:18:11.5286327Z",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "bytes": 1419597,
+    "sha256": "4d66bfc4df8a9da1489b179395aff49f889bc6fd10c5551e3eacd3031ca8b44b",
+    "local_path": "data/raw/research/2026-09-10/energa_pipeline_2026-08-31.pdf",
+    "error": null
+  },
+  {
+    "source_id": "ENERGA_IMPORT",
+    "url": "https://cdn-netpr.pl/file/mediakit/3063619/5c/informacja_o_wartosci_lacznej_dostepnej_odbiorczej_mocy_przylaczeniowej_31_08_2026.pdf",
+    "retrieval_date": "2026-09-10T11:18:11.9085689Z",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "bytes": 2414777,
+    "sha256": "43abdeed101270cb7c66bb919f17fe7e6ab8a22632e3186fd611bd24cf903324",
+    "local_path": "data/raw/research/2026-09-10/energa_import_2026-08-31.pdf",
+    "error": null
+  },
+  {
+    "source_id": "ENERGA_EXPORT",
+    "url": "https://cdn-netpr.pl/file/mediakit/3063621/4a/informacja_o_wartosci_lacznej_dostepnej_wytworczej_mocy_przylaczeniowej_31_08_2026.pdf",
+    "retrieval_date": "2026-09-10T11:18:12.2132448Z",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "bytes": 2436908,
+    "sha256": "801ee2fc0a788dbac6b0453794a4dc5c2d13f0c6934a8bc47b6ddb0c3e051622",
+    "local_path": "data/raw/research/2026-09-10/energa_export_2026-08-31.pdf",
+    "error": null
+  },
+  {
+    "source_id": "PGE_LANDING",
+    "url": "https://pgedystrybucja.pl/przylaczenia/procedury-przylaczeniowe/dostepne-moce-dla-zrodel-wytworczych",
+    "retrieval_date": "2026-09-10T11:18:12.5181247Z",
+    "http_status": 200,
+    "content_type": "text/html",
+    "bytes": 346,
+    "sha256": "c73441b7a02ccd821ccc51e2f95f22195dd028faface80fb40ac21f5151db4df",
+    "local_path": "data/raw/research/2026-09-10/pge_capacity_landing.html",
+    "error": null
+  },
+  {
+    "source_id": "TAURON_PIPELINE",
+    "url": "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/podmioty-ubiegajace-sie",
+    "retrieval_date": "2026-09-10T11:18:12.5881143Z",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 97324,
+    "sha256": "f99110f8a0b5c9eba98c160beb0c97405e33e5b36ca5e7d18b6c5af829b39f2e",
+    "local_path": "data/raw/research/2026-09-10/tauron_pipeline_landing.html",
+    "error": null
+  },
+  {
+    "source_id": "ENERGA_LANDING",
+    "url": "https://energa-operator.pl/przylaczenie-do-sieci/informacje-o-stanie-przylaczen",
+    "retrieval_date": "2026-09-10T11:18:12.9671305Z",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 28320,
+    "sha256": "04474a16446a504cacb6af22e2e4df2e78bd3d7ad03dbb4b47c6196ee3df0bc1",
+    "local_path": "data/raw/research/2026-09-10/energa_landing.html",
+    "error": null
+  },
+  {
+    "source_id": "GUGIK_EGIB_CAPABILITIES",
+    "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&REQUEST=GetCapabilities",
+    "retrieval_date": "2026-09-10T11:18:13.0680137Z",
+    "http_status": 200,
+    "content_type": "text/xml; charset=UTF-8",
+    "bytes": 17111,
+    "sha256": "6609c18f6e3a268e383a9180037bd8bd8bfcf6ae190cae3be6f87e57a6c3b08c",
+    "local_path": "data/raw/research/2026-09-10/gugik_egib_capabilities.xml",
+    "error": null
+  },
+  {
+    "source_id": "GDOS_CAPABILITIES",
+    "url": "https://sdi.gdos.gov.pl/wfs?SERVICE=WFS&REQUEST=GetCapabilities",
+    "retrieval_date": "2026-09-10T11:18:13.4573839Z",
+    "http_status": 200,
+    "content_type": "application/xml",
+    "bytes": 85917,
+    "sha256": "3fc2a3b52d3a08d2ded4bffcd6f33296058772daa79f9a30442330cbb83002d0",
+    "local_path": "data/raw/research/2026-09-10/gdos_capabilities.xml",
+    "error": null
+  },
+  {
+    "source_id": "ENERGY_CHARTS_DOCS",
+    "url": "https://api.energy-charts.info/",
+    "retrieval_date": "2026-09-10T11:18:13.5516656Z",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1280,
+    "sha256": "3540ad41eba89d2cd8f6f3c2e56ea1c740faeea2bf1eddc5e1c99ecb23ee143d",
+    "local_path": "data/raw/research/2026-09-10/energy_charts_index.html",
+    "error": null
+  }
+]

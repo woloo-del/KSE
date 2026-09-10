@@ -1,0 +1,79 @@
+[
+  {
+    "source_id": "PSE_OPENAPI",
+    "url": "https://api.raporty.pse.pl/api/openapi",
+    "retrieval_date": "2026-09-10T11:21:02.8835007Z",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 665204,
+    "sha256": "e01af846f5ebfbf300a5ceae46d49a7651e81d8533b07939634e8222ea66cd39",
+    "local_path": "data/raw/research/2026-09-10/pse_openapi.json",
+    "error": null
+  },
+  {
+    "source_id": "PSE_PIPELINE_XLSX",
+    "url": "https://www.pse.pl/documents/20182/51490/Informacje_publikowane_zgodnie_z_Art_7_ust_8l_ustawy_PE_stan_na_31_07_2026.xlsx",
+    "retrieval_date": "2026-09-10T11:21:03.1201767Z",
+    "http_status": 200,
+    "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; charset=UTF-8",
+    "bytes": 174263,
+    "sha256": "21dff45875f6fe7d943fd3df98a2290c1e3f04e999389538bdc1c00fe54b86dc",
+    "local_path": "data/raw/research/2026-09-10/pse_pipeline_url_2026-07-31.xlsx",
+    "error": null
+  },
+  {
+    "source_id": "ENEA_MAP",
+    "url": "https://www.operator.enea.pl/przylaczone-i-dostepne-moce-oze",
+    "retrieval_date": "2026-09-10T11:21:03.6443935Z",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 298632,
+    "sha256": "0bb3e9e725d4f060cb6107c5996d0fd78e37eca94d089f42fa815f287461370c",
+    "local_path": "data/raw/research/2026-09-10/enea_maps.html",
+    "error": null
+  },
+  {
+    "source_id": "ENEA_PLAN",
+    "url": "https://www.operator.enea.pl/plan-rozwoju-enea-operator-na-lata-2026-2031",
+    "retrieval_date": "2026-09-10T11:21:03.8528543Z",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 282539,
+    "sha256": "63205797c3b2033038582048e836a879af9ced663fd7870296f2cd3b37e4ef5c",
+    "local_path": "data/raw/research/2026-09-10/enea_plan_landing.html",
+    "error": null
+  },
+  {
+    "source_id": "STOEN_EXPORT",
+    "url": "https://www.stoen.pl/files/2026-07/wielkosc-dostepnej-mocy-przylaczeniowej-zrodel-w-sieci-stoen-operator-iii-kw-2026.pdf",
+    "retrieval_date": "2026-09-10T11:21:04.0528357Z",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "bytes": 130676,
+    "sha256": "3e9f7d748ca1504c8590ea0c4340c5ab3316285cdc27297a6c84e33205b3d095",
+    "local_path": "data/raw/research/2026-09-10/stoen_export_2026_q3.pdf",
+    "error": null
+  },
+  {
+    "source_id": "STOEN_IMPORT",
+    "url": "https://www.stoen.pl/files/2026-09/wielkosc-dostepnej-mocy-przylaczeniowej-dla-odbiorcow-w-sieci-stoen-operator-31.08.2026r.pdf",
+    "retrieval_date": "2026-09-10T11:21:04.2488455Z",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "bytes": 129010,
+    "sha256": "c1f9d308f682b2012eecdcc7a8e68b2436ea3f382d3e4bf738f00f93c8b2fb0f",
+    "local_path": "data/raw/research/2026-09-10/stoen_import_2026-08-31.pdf",
+    "error": null
+  },
+  {
+    "source_id": "LAW_2026_516",
+    "url": "https://dziennikustaw.gov.pl/D2026000051601.pdf",
+    "retrieval_date": "2026-09-10T11:21:04.3613547Z",
+    "http_status": 200,
+    "content_type": "application/pdf; charset=UTF-8",
+    "bytes": 857111,
+    "sha256": "18b9bc85f174eee474247d18761fcd9b99812fc9a5fe8fd98485fa192d0ef646",
+    "local_path": "data/raw/research/2026-09-10/prawo_energetyczne_zmiana_2026_516.pdf",
+    "error": null
+  }
+]

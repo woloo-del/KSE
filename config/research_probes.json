@@ -1,0 +1,13 @@
+[
+ {"source_id":"PSE_API_DOCS","url":"https://api.raporty.pse.pl/","save_as":"pse_api_index.html"},
+ {"source_id":"PSE_CAPACITY","url":"https://www.pse.pl/documents/20182/51490/informacja_o_dostepnosci_mocy_przylaczeniowej_do_sieci_przesylowej.pdf/81835e70-c6bb-4ed1-8154-1959a45b44f1","save_as":"pse_capacity_retrieved_2026-09-10.pdf"},
+ {"source_id":"ENERGA_PIPELINE","url":"https://cdn-netpr.pl/file/mediakit/3063617/fa/2026_08_31_pusop_wnioski_i_odmowy_eop.pdf","save_as":"energa_pipeline_2026-08-31.pdf"},
+ {"source_id":"ENERGA_IMPORT","url":"https://cdn-netpr.pl/file/mediakit/3063619/5c/informacja_o_wartosci_lacznej_dostepnej_odbiorczej_mocy_przylaczeniowej_31_08_2026.pdf","save_as":"energa_import_2026-08-31.pdf"},
+ {"source_id":"ENERGA_EXPORT","url":"https://cdn-netpr.pl/file/mediakit/3063621/4a/informacja_o_wartosci_lacznej_dostepnej_wytworczej_mocy_przylaczeniowej_31_08_2026.pdf","save_as":"energa_export_2026-08-31.pdf"},
+ {"source_id":"PGE_LANDING","url":"https://pgedystrybucja.pl/przylaczenia/procedury-przylaczeniowe/dostepne-moce-dla-zrodel-wytworczych","save_as":"pge_capacity_landing.html"},
+ {"source_id":"TAURON_PIPELINE","url":"https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/podmioty-ubiegajace-sie","save_as":"tauron_pipeline_landing.html"},
+ {"source_id":"ENERGA_LANDING","url":"https://energa-operator.pl/przylaczenie-do-sieci/informacje-o-stanie-przylaczen","save_as":"energa_landing.html"},
+ {"source_id":"GUGIK_EGIB_CAPABILITIES","url":"https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&REQUEST=GetCapabilities","save_as":"gugik_egib_capabilities.xml"},
+ {"source_id":"GDOS_CAPABILITIES","url":"https://sdi.gdos.gov.pl/wfs?SERVICE=WFS&REQUEST=GetCapabilities","save_as":"gdos_capabilities.xml"},
+ {"source_id":"ENERGY_CHARTS_DOCS","url":"https://api.energy-charts.info/","save_as":"energy_charts_index.html"}
+]
