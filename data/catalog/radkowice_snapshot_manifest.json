@@ -1,0 +1,22 @@
+[
+  {
+    "retrieval_date": "2026-09-11T10:42:22.0922672Z",
+    "http_status": 200,
+    "sha256": "2d03643156da9b3d1886353d58491131b3cefed680fa23f45afd2056ff3d8b73",
+    "local_path": "data/raw/research/2026-09-11/pse_investments.html",
+    "content_type": "text/html; charset=UTF-8",
+    "url": "https://inwestycje.pse.pl/",
+    "bytes": 696937,
+    "source_id": "PSE_INVESTMENTS_RADK"
+  },
+  {
+    "retrieval_date": "2026-09-11T10:42:22.6213255Z",
+    "http_status": 200,
+    "sha256": "9eb25f92e7f064d50c4bf3015d88c51c73e3b191baceaa3beef7e9705b3a6550",
+    "local_path": "data/raw/research/2026-09-11/checiny_energy_plan.pdf",
+    "content_type": "application/pdf",
+    "url": "https://checiny.biuletyn.net/fls/bip_pliki/2026_03/BIPF64CD10561EC15Z/PZCEEPG_2025-2027.pdf",
+    "bytes": 2162183,
+    "source_id": "CHECINY_ENERGY_PLAN"
+  }
+]

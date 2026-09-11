@@ -12,8 +12,15 @@ ROOT = Path(__file__).resolve().parents[1]
 def build_catalog() -> dict[str, Any]:
     notes = json.loads((ROOT / "data/catalog/source_notes.json").read_text(encoding="utf-8"))
     checked = notes["verification_date"]
+    pilot_notes = ROOT / "data/catalog/radkowice_source_notes.json"
+    if pilot_notes.exists():
+        notes['sources'].extend(json.loads(pilot_notes.read_text(encoding='utf-8'))['sources'])
     manifests = []
-    for path in sorted((ROOT / "data/catalog").glob("probe_results_*.json")):
+    paths = sorted((ROOT / "data/catalog").glob("probe_results_*.json"))
+    pilot_manifest = ROOT / "data/catalog/radkowice_snapshot_manifest.json"
+    if pilot_manifest.exists():
+        paths.append(pilot_manifest)
+    for path in paths:
         for probe in json.loads(path.read_text(encoding="utf-8-sig")):
             manifests.append({**probe, "manifest": path.relative_to(ROOT).as_posix()})
     result = []
@@ -57,9 +64,9 @@ def build_catalog() -> dict[str, Any]:
         result.append(row)
     return {
         "schema_version": notes["schema_version"],
-        "as_of": checked,
+        "as_of": max(row['last_verified'] for row in result),
         "scope": "STAGE_1_RESEARCH_ONLY",
-        "source_of_truth": "data/catalog/source_notes.json; this file is generated",
+        "source_of_truth": "data/catalog/source_notes.json + data/catalog/radkowice_source_notes.json when present; this file is generated",
         "classification_note": "REPORTED indicates attributed publication, not automatic truth or MEASURED telemetry. Community and model data remain separately classified.",
         "sources": result,
     }

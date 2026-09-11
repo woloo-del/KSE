@@ -110,21 +110,22 @@
       "id": "KSE-007",
       "title": "Ustalić zakres i kryteria MVP",
       "stage": "Produkt",
-      "status": "In Progress",
+      "status": "Complete",
       "priority": "P0",
       "owner": "Użytkownik + Codex",
       "depends_on": [
         "KSE-001",
         "KSE-005"
       ],
-      "next_action": "Uzyskać akceptację propozycji raportu jednego GPZ i kryteriów odbioru.",
+      "next_action": "Realizować pilot dokumentacyjny Radkowic według zapisanych kryteriów; rozszerzenia uzgadniać osobno.",
       "acceptance": "Zapisany zakres pilota, mierzalne kryteria odbioru i wyłączenia bez obietnicy nieuzasadnionych MW/probability.",
       "evidence": [
         "docs/02_feasibility_matrix.md",
         "docs/08_roadmap.md",
         "docs/09_pilot_scope.md"
       ],
-      "started_at": "2026-09-11"
+      "started_at": "2026-09-11",
+      "completed_at": "2026-09-11"
     },
     {
       "id": "KSE-008",
@@ -174,7 +175,7 @@
       "depends_on": [
         "KSE-007"
       ],
-      "next_action": "Sprawdzić licencje, regulaminy, automatyzację i redystrybucję dla konkretnego zakresu.",
+      "next_action": "Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.",
       "acceptance": "Każde źródło pilota ma rozstrzygniętą podstawę użycia lub jest wyłączone. Kontakt z operatorem wymaga zlecenia użytkownika.",
       "evidence": [
         "docs/01_data_research.md"
@@ -218,18 +219,22 @@
       "id": "KSE-013",
       "title": "Wybrać stację i obszar pilota",
       "stage": "Produkt",
-      "status": "Not Started",
+      "status": "In Progress",
       "priority": "P0",
       "owner": "Użytkownik + Codex",
       "depends_on": [
         "KSE-007",
         "KSE-010"
       ],
-      "next_action": "Porównać kandydatów według źródeł, relacji 110 kV/PSE i projektów.",
+      "next_action": "Radkowice wybrane badawczo; uzupełnić granice PSE/PGE, źródła 110 kV i podstawę wykorzystania przed zamknięciem zadania.",
       "acceptance": "Rzeczywisty GPZ, udokumentowane powiązania, projekty i inwestycje; wybór uzasadniony dowodami.",
       "evidence": [
-        "docs/08_roadmap.md"
-      ]
+        "docs/08_roadmap.md",
+        "docs/10_radkowice_pilot.md",
+        "data/reference/radkowice_pse_projects_2026-07-31.json"
+      ],
+      "started_at": "2026-09-11",
+      "risk": "Brak potwierdzonych granic własności i kompletnego pipeline PGE; prawa źródeł nadal otwarte."
     },
     {
       "id": "KSE-014",

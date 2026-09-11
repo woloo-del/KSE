@@ -16,8 +16,12 @@ test('duplicate IDs and unknown dependencies are rejected',()=>{
   const b=copy();b.tasks.at(-1).depends_on=['KSE-999'];assert.throws(()=>validateTasks(b),/Nieznana zależność/);
 });
 test('cycles and premature completion are rejected',()=>{
-  const a=copy();a.tasks.find(t=>t.id==='KSE-007').depends_on=['KSE-014'];assert.throws(()=>validateTasks(a),/Cykl/);
-  const b=copy(),t=b.tasks.find(t=>t.id==='KSE-014');t.status='Complete';t.completed_at='2026-09-10';assert.throws(()=>validateTasks(b),/Nieukończona zależność/);
+  // Isolated synthetic graph: real task completion must not change this test's premise.
+  const task=(id,depends_on)=>({...original.tasks[0],id,title:'SYNTHETIC GRAPH TEST',status:'Not Started',completed_at:undefined,depends_on});
+  const a={schema_version:'todo_v1',tasks:[task('KSE-901',['KSE-902']),task('KSE-902',['KSE-901'])]};
+  assert.throws(()=>validateTasks(a),/Cykl/);
+  const b=structuredClone(a);b.tasks[1].depends_on=[];b.tasks[0].status='Complete';b.tasks[0].completed_at='2026-09-10';
+  assert.throws(()=>validateTasks(b),/Nieukończona zależność/);
 });
 test('completion requires evidence and invalid dates fail',()=>{
   const a=copy();a.tasks[0].evidence=[];assert.throws(()=>validateTasks(a),/Brak dowodu/);

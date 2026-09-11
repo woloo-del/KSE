@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-10**. Źródła: **56**.
+Stan badania: **2026-09-11**. Źródła: **58**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -66,6 +66,8 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | EMBER_API | [Ember Energy API — dokumentacja](https://api.ember-energy.org/v1/docs) | DOCUMENTATION_REVIEWED | P3 | UNKNOWN |
 | JRC_IDEES | [JRC IDEES-2023](https://data.jrc.ec.europa.eu/dataset/1f0b480c-6d21-4d95-897d-20c7ca33df6f) | CONTENT_REVIEWED | P3 | UNKNOWN |
 | COPERNICUS | [Copernicus Data Space — OData i produkty](https://documentation.dataspace.copernicus.eu/APIs/OData.html) | DOCUMENTATION_REVIEWED | P3 | PRODUCT_SPECIFIC |
+| PSE_INVESTMENTS_RADK | [Portal inwestycji PSE — sekcja Radkowice](https://inwestycje.pse.pl/) | CONTENT_REVIEWED | P0 | UNKNOWN |
+| CHECINY_ENERGY_PLAN | [BIP Chęcin — założenia energetyczne 2025–2027 z perspektywą 2040](https://checiny.biuletyn.net/fls/bip_pliki/2026_03/BIPF64CD10561EC15Z/PZCEEPG_2025-2027.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
 
 ## Karty źródeł
 
@@ -2087,5 +2089,77 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 - **Warunki:** [źródło prawne](https://dataspace.copernicus.eu/terms-and-conditions)
 - **Powiązane źródło/interfejs:** [link](https://documentation.dataspace.copernicus.eu/Quotas.html)
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### PSE_INVESTMENTS_RADK — Portal inwestycji PSE — sekcja Radkowice
+
+[Źródło](https://inwestycje.pse.pl/)
+
+- **Operator:** PSE
+- **Właściciel:** PSE S.A.
+- **Kraj:** PL
+- **Kategoria:** grid_investments
+- **Napięcie:** 220 kV; 110 kV
+- **Zasięg:** Polska; do pilota odczytano sekcję Radkowice
+- **Format:** HTML
+- **API:** UNKNOWN
+- **GIS:** UNKNOWN
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN — nie potwierdzono otwartej licencji wybranego zbioru.
+- **Użycie komercyjne:** UNKNOWN
+- **Autorytet źródła:** B
+- **Odczyt maszynowy:** PARTIAL — HTML wymaga rozpoznania sekcji
+- **Scraping:** YES — dla tego widoku HTML; brak wdrożonego cyklicznego scrapera
+- **Pola:** nazwa inwestycji; etap; status; rok zakończenia
+- **Zastosowanie:** Oddzielenie zakończonych i przyszłych prac w stacji pilota
+- **Ograniczenia:** Brak gwarantowanej częstotliwości aktualizacji i daty każdej zmiany; Wspólna nazwa stacji nie identyfikuje automatycznie tego samego zadania lub transformatora
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-11
+- **Udany odczyt:** 2026-09-11
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba PSE_INVESTMENTS_RADK:** HTTP 200; 2026-09-11T10:42:22.0922672Z; `data/catalog/radkowice_snapshot_manifest.json`; próbka `data/raw/research/2026-09-11/pse_investments.html`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### CHECINY_ENERGY_PLAN — BIP Chęcin — założenia energetyczne 2025–2027 z perspektywą 2040
+
+[Źródło](https://checiny.biuletyn.net/fls/bip_pliki/2026_03/BIPF64CD10561EC15Z/PZCEEPG_2025-2027.pdf)
+
+- **Operator:** PSE / PGE — informacje przypisane w dokumencie gminy
+- **Właściciel:** Gmina Chęciny — publikujący dokument; pierwotne dane PSE/PGE
+- **Kraj:** PL
+- **Kategoria:** local_grid_and_investments
+- **Napięcie:** 220 kV; 110 kV; SN
+- **Zasięg:** Gmina Chęciny i opisane powiązania sieciowe
+- **Format:** PDF
+- **API:** UNKNOWN
+- **GIS:** UNKNOWN
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN — nie potwierdzono otwartej licencji wybranego zbioru.
+- **Użycie komercyjne:** UNKNOWN
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** PARTIAL — tekst PDF i schematy
+- **Scraping:** NO — bezpośredni PDF; ekstrakcja i kontrola dokumentu
+- **Pola:** stacje; relacje linii; napięcia; planowane inwestycje; operator danych
+- **Zastosowanie:** Dowody topologii referencyjnej i plany dla Radkowic
+- **Ograniczenia:** Mieszane daty wejść i starsze opisy planistyczne; Nie potwierdza aktualnych granic własności ani obsady transformatorów; Folder 2026_03 w URL nie jest datą obserwacji wszystkich wartości
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** 21–25 (numeracja PDF od 1)
+- **Sprawdzono:** 2026-09-11
+- **Udany odczyt:** 2026-09-11
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba CHECINY_ENERGY_PLAN:** HTTP 200; 2026-09-11T10:42:22.6213255Z; `data/catalog/radkowice_snapshot_manifest.json`; próbka `data/raw/research/2026-09-11/checiny_energy_plan.pdf`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

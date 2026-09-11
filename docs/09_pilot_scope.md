@@ -1,6 +1,6 @@
 # Propozycja pilota GPZ
 
-11.09.2026 — propozycja zakresu do zatwierdzenia; nie oznacza uruchomienia MVP.
+11.09.2026 — zakres roboczy pilota dokumentacyjnego. Użytkownik wskazał SE Radkowice 220/110 kV; przyjmujemy ją jako kierunek dalszych prac, z warunkami opisanymi w [analizie wyboru](10_radkowice_pilot.md). Nie oznacza to uruchomienia MVP ani potwierdzenia dostępności wszystkich danych.
 
 Pierwszy wynik: audytowalny raport jednego GPZ z powiązanymi projektami, stanem źródeł, kierunkami mocy i ograniczeniami. Obszar wybieramy po porównaniu dowodów, nie po liczbie punktów na mapie. Użytkownik może wskazać własny region.
 

@@ -1,8 +1,8 @@
 {
   "schema_version": "research_catalog_v1",
-  "as_of": "2026-09-10",
+  "as_of": "2026-09-11",
   "scope": "STAGE_1_RESEARCH_ONLY",
-  "source_of_truth": "data/catalog/source_notes.json; this file is generated",
+  "source_of_truth": "data/catalog/source_notes.json + data/catalog/radkowice_source_notes.json when present; this file is generated",
   "classification_note": "REPORTED indicates attributed publication, not automatic truth or MEASURED telemetry. Community and model data remain separately classified.",
   "sources": [
     {
@@ -3673,6 +3673,157 @@
       "priority": "P3",
       "evidence": [],
       "retrieval_date": []
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Polska; do pilota odczytano sekcję Radkowice",
+      "grid_voltage": [
+        "220 kV",
+        "110 kV"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "UNKNOWN — nie potwierdzono otwartej licencji wybranego zbioru.",
+      "license_url": null,
+      "commercial_use": "UNKNOWN",
+      "machine_readable": "PARTIAL — HTML wymaga rozpoznania sekcji",
+      "scraping_required": "YES — dla tego widoku HTML; brak wdrożonego cyklicznego scrapera",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-11",
+      "last_successful_verification": "2026-09-11",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "PSE_INVESTMENTS_RADK"
+      ],
+      "related_urls": [],
+      "source_id": "PSE_INVESTMENTS_RADK",
+      "operator": "PSE",
+      "source_name": "Portal inwestycji PSE — sekcja Radkowice",
+      "url": "https://inwestycje.pse.pl/",
+      "data_owner": "PSE S.A.",
+      "data_category": "grid_investments",
+      "data_format": [
+        "HTML"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "nazwa inwestycji",
+        "etap",
+        "status",
+        "rok zakończenia"
+      ],
+      "potential_application": "Oddzielenie zakończonych i przyszłych prac w stacji pilota",
+      "known_limitations": [
+        "Brak gwarantowanej częstotliwości aktualizacji i daty każdej zmiany",
+        "Wspólna nazwa stacji nie identyfikuje automatycznie tego samego zadania lub transformatora"
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "retrieval_date": "2026-09-11T10:42:22.0922672Z",
+          "http_status": 200,
+          "sha256": "2d03643156da9b3d1886353d58491131b3cefed680fa23f45afd2056ff3d8b73",
+          "local_path": "data/raw/research/2026-09-11/pse_investments.html",
+          "content_type": "text/html; charset=UTF-8",
+          "url": "https://inwestycje.pse.pl/",
+          "bytes": 696937,
+          "source_id": "PSE_INVESTMENTS_RADK",
+          "manifest": "data/catalog/radkowice_snapshot_manifest.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-11T10:42:22.0922672Z"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Gmina Chęciny i opisane powiązania sieciowe",
+      "grid_voltage": [
+        "220 kV",
+        "110 kV",
+        "SN"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "UNKNOWN — nie potwierdzono otwartej licencji wybranego zbioru.",
+      "license_url": null,
+      "commercial_use": "UNKNOWN",
+      "machine_readable": "PARTIAL — tekst PDF i schematy",
+      "scraping_required": "NO — bezpośredni PDF; ekstrakcja i kontrola dokumentu",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-11",
+      "last_successful_verification": "2026-09-11",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": "21–25 (numeracja PDF od 1)",
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "CHECINY_ENERGY_PLAN"
+      ],
+      "related_urls": [],
+      "source_id": "CHECINY_ENERGY_PLAN",
+      "operator": "PSE / PGE — informacje przypisane w dokumencie gminy",
+      "source_name": "BIP Chęcin — założenia energetyczne 2025–2027 z perspektywą 2040",
+      "url": "https://checiny.biuletyn.net/fls/bip_pliki/2026_03/BIPF64CD10561EC15Z/PZCEEPG_2025-2027.pdf",
+      "data_owner": "Gmina Chęciny — publikujący dokument; pierwotne dane PSE/PGE",
+      "data_category": "local_grid_and_investments",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "key_fields": [
+        "stacje",
+        "relacje linii",
+        "napięcia",
+        "planowane inwestycje",
+        "operator danych"
+      ],
+      "potential_application": "Dowody topologii referencyjnej i plany dla Radkowic",
+      "known_limitations": [
+        "Mieszane daty wejść i starsze opisy planistyczne",
+        "Nie potwierdza aktualnych granic własności ani obsady transformatorów",
+        "Folder 2026_03 w URL nie jest datą obserwacji wszystkich wartości"
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "retrieval_date": "2026-09-11T10:42:22.6213255Z",
+          "http_status": 200,
+          "sha256": "9eb25f92e7f064d50c4bf3015d88c51c73e3b191baceaa3beef7e9705b3a6550",
+          "local_path": "data/raw/research/2026-09-11/checiny_energy_plan.pdf",
+          "content_type": "application/pdf",
+          "url": "https://checiny.biuletyn.net/fls/bip_pliki/2026_03/BIPF64CD10561EC15Z/PZCEEPG_2025-2027.pdf",
+          "bytes": 2162183,
+          "source_id": "CHECINY_ENERGY_PLAN",
+          "manifest": "data/catalog/radkowice_snapshot_manifest.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-11T10:42:22.6213255Z"
+      ]
     }
   ]
 }

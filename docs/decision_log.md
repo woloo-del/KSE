@@ -111,3 +111,13 @@
 **Selected option / Reason:** Ostatni wariant, `source_date=null`, `DATE_CONFLICT`. Nie ma podstaw do wyboru jednej daty dla całego zbioru. KSE-008 kończy się kontrolą ryzyka, a nie usunięciem sprzeczności u operatora.
 
 **Trade-offs / Consequences:** Mniejsze pokrycie pewnego bieżącego pipeline; dokument pozostaje dowodem badawczym. Nowy moduł bada wyłącznie daty, nie rekordy projektów. Zgodne daty nie zastępują kontroli licencji, aktualności i poprawności ekstrakcji. Zakres pilota nadal jest propozycją w `docs/09_pilot_scope.md`.
+
+## 2026-09-11 — Radkowice jako obszar pilota dokumentacyjnego
+
+**Decision / Context:** Użytkownik zaproponował Radkowice 220/110 kV i dopuścił lepiej udokumentowaną alternatywę.
+
+**Options considered:** Radkowice; Kościerzyna z publikacji Energi; dalsze poszukiwanie stacji bez wskazania użytkownika.
+
+**Selected option / Reason:** Radkowice do dalszych prac badawczych: trzy konkretne BESS w zachowanym XLSX PSE, portal inwestycji, lokalny plan energetyczny. Alternatywa Energi ma konflikt dat. To dobór obszaru, nie ranking technicznej zdolności przyłączeniowej.
+
+**Trade-offs / Consequences:** Granice PSE/PGE, pipeline 110 kV i prawa źródeł pozostają otwarte. KSE-013 jest w toku do spełnienia pełnych kryteriów i zależności; wybranie stacji nie kończy licencjonowania. Model ma oddzielać miejsce stacji, poziomy napięcia, granice operatorów i grupy publikowanych mocy. Nie zakładamy, że projekty 220 kV konkurują o jeden transformator 220/110 kV.

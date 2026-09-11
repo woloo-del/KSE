@@ -6,8 +6,8 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 
 ## Najbliższe zadania bez nieukończonych zależności
 
-- **KSE-007 — Ustalić zakres i kryteria MVP** (P0, W toku). Uzyskać akceptację propozycji raportu jednego GPZ i kryteriów odbioru.
 - **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). Sprawdzić zwykły dostęp lub oficjalny kanał bez obchodzenia blokady.
+- **KSE-010 — Ustalić prawa źródeł wybranych do pilota** (P0, Do zrobienia). Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Wykonać prywatną kopię ZIP na drugim nośniku i potwierdzić jej odczyt.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
@@ -22,13 +22,13 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-004 | Wykluczenie lokalnych sekretów z Git | Organizacja | Zrobione | P0 | — |
 | KSE-005 | Specyfikacja pipeline wybranego GPZ | Produkt | Zrobione | P0 | KSE-001 |
 | KSE-006 | TODO i generator pełnego raportu Excel | Organizacja | Zrobione | P0 | KSE-002 |
-| KSE-007 | Ustalić zakres i kryteria MVP | Produkt | W toku | P0 | KSE-001, KSE-005 |
+| KSE-007 | Ustalić zakres i kryteria MVP | Produkt | Zrobione | P0 | KSE-001, KSE-005 |
 | KSE-008 | Wyjaśnić konflikt dat Energi | Dane | Zrobione | P0 | KSE-002 |
 | KSE-009 | Zweryfikować dostęp do publikacji PGE | Dane | Zagrożone | P0 | KSE-002 |
 | KSE-010 | Ustalić prawa źródeł wybranych do pilota | Dane | Do zrobienia | P0 | KSE-007 |
 | KSE-011 | Przetestować uwierzytelnione API ENTSO-E | Dane | Do zrobienia | P1 | KSE-004 |
 | KSE-012 | Potwierdzić eksport ENEA i TAURON | Dane | Do zrobienia | P1 | KSE-002 |
-| KSE-013 | Wybrać stację i obszar pilota | Produkt | Do zrobienia | P0 | KSE-007, KSE-010 |
+| KSE-013 | Wybrać stację i obszar pilota | Produkt | W toku | P0 | KSE-007, KSE-010 |
 | KSE-014 | Zaprojektować model i architekturę pilota | Model | Do zrobienia | P0 | KSE-013 |
 | KSE-015 | Connector pipeline PSE XLSX | Connectory | Do zrobienia | P0 | KSE-014, KSE-010 |
 | KSE-016 | Connector dokumentów OSD pilota | Connectory | Do zrobienia | P0 | KSE-014, KSE-010 |
@@ -118,12 +118,12 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-007 — Ustalić zakres i kryteria MVP
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Uzyskać akceptację propozycji raportu jednego GPZ i kryteriów odbioru.
+- Następny krok: Realizować pilot dokumentacyjny Radkowic według zapisanych kryteriów; rozszerzenia uzgadniać osobno.
 - Kryterium: Zapisany zakres pilota, mierzalne kryteria odbioru i wyłączenia bez obietnicy nieuzasadnionych MW/probability.
 - Nieukończone zależności: brak.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
 - Termin docelowy: nie ustalono.
-- Zakończono: nie zakończono.
+- Zakończono: 2026-09-11.
 - Dowody/kontekst: [docs/02_feasibility_matrix.md](docs/02_feasibility_matrix.md), [docs/08_roadmap.md](docs/08_roadmap.md), [docs/09_pilot_scope.md](docs/09_pilot_scope.md).
 
 ### KSE-008 — Wyjaśnić konflikt dat Energi
@@ -151,9 +151,9 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-010 — Ustalić prawa źródeł wybranych do pilota
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Sprawdzić licencje, regulaminy, automatyzację i redystrybucję dla konkretnego zakresu.
+- Następny krok: Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
 - Kryterium: Każde źródło pilota ma rozstrzygniętą podstawę użycia lub jest wyłączone. Kontakt z operatorem wymaga zlecenia użytkownika.
-- Nieukończone zależności: KSE-007.
+- Nieukończone zależności: brak.
 - Ryzyko: Publiczny dostęp nie rozstrzyga komercyjnego wykorzystania; zastrzeżenia Stoen..
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
@@ -184,13 +184,13 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-013 — Wybrać stację i obszar pilota
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Porównać kandydatów według źródeł, relacji 110 kV/PSE i projektów.
+- Następny krok: Radkowice wybrane badawczo; uzupełnić granice PSE/PGE, źródła 110 kV i podstawę wykorzystania przed zamknięciem zadania.
 - Kryterium: Rzeczywisty GPZ, udokumentowane powiązania, projekty i inwestycje; wybór uzasadniony dowodami.
-- Nieukończone zależności: KSE-007, KSE-010.
-- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Nieukończone zależności: KSE-010.
+- Ryzyko: Brak potwierdzonych granic własności i kompletnego pipeline PGE; prawa źródeł nadal otwarte..
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/08_roadmap.md](docs/08_roadmap.md).
+- Dowody/kontekst: [docs/08_roadmap.md](docs/08_roadmap.md), [docs/10_radkowice_pilot.md](docs/10_radkowice_pilot.md), [data/reference/radkowice_pse_projects_2026-07-31.json](data/reference/radkowice_pse_projects_2026-07-31.json).
 
 ### KSE-014 — Zaprojektować model i architekturę pilota
 
