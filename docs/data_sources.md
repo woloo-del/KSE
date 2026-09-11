@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-11**. Źródła: **58**.
+Stan badania: **2026-09-11**. Źródła: **60**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -68,6 +68,8 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | COPERNICUS | [Copernicus Data Space — OData i produkty](https://documentation.dataspace.copernicus.eu/APIs/OData.html) | DOCUMENTATION_REVIEWED | P3 | PRODUCT_SPECIFIC |
 | PSE_INVESTMENTS_RADK | [Portal inwestycji PSE — sekcja Radkowice](https://inwestycje.pse.pl/) | CONTENT_REVIEWED | P0 | UNKNOWN |
 | CHECINY_ENERGY_PLAN | [BIP Chęcin — założenia energetyczne 2025–2027 z perspektywą 2040](https://checiny.biuletyn.net/fls/bip_pliki/2026_03/BIPF64CD10561EC15Z/PZCEEPG_2025-2027.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
+| PSE_TARIFF_2026 | [Taryfa PSE 2026 — odbiorcy i miejsca dostarczania](https://www.pse.pl/documents/20182/7005343691/20260116_Tekst_Taryfy_na_2026_tekst_jednolity.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
+| PGE_RADK_CAPACITY_ATTEMPT | [Próba dostępu do pliku mocy PGE I kw.2026](https://pgedystrybucja.pl/content/download/71691b9fb622cdf89306ec0dc0c1ac3d/file/dostepne-moce-pge-i-kw-2026.pdf?contentId=2208&inLanguage=pol-PL&version=6) | BLOCKED | P0 | UNKNOWN |
 
 ## Karty źródeł
 
@@ -2161,5 +2163,76 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Klasyfikacja wejścia:** REPORTED
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 - **Próba CHECINY_ENERGY_PLAN:** HTTP 200; 2026-09-11T10:42:22.6213255Z; `data/catalog/radkowice_snapshot_manifest.json`; próbka `data/raw/research/2026-09-11/checiny_energy_plan.pdf`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### PSE_TARIFF_2026 — Taryfa PSE 2026 — odbiorcy i miejsca dostarczania
+
+[Źródło](https://www.pse.pl/documents/20182/7005343691/20260116_Tekst_Taryfy_na_2026_tekst_jednolity.pdf)
+
+- **Operator:** PSE
+- **Właściciel:** PSE S.A.
+- **Kraj:** PL
+- **Kategoria:** operator_delivery_points
+- **Napięcie:** UNKNOWN_OR_NOT_APPLICABLE
+- **Zasięg:** Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.
+- **Format:** PDF
+- **API:** UNKNOWN
+- **GIS:** UNKNOWN
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN — nie potwierdzono otwartej licencji wybranego zbioru.
+- **Użycie komercyjne:** UNKNOWN
+- **Autorytet źródła:** B
+- **Odczyt maszynowy:** PARTIAL — tekst PDF
+- **Scraping:** NO — bezpośredni PDF
+- **Pola:** symbol odbiorcy; nazwa operatora; nazwa węzła; typ MD; grupa MD
+- **Zastosowanie:** Potwierdzenie relacji taryfowej PGE–Radkowice; nie własność urządzeń
+- **Ograniczenia:** Tabela może pozostawać niezmieniona mimo zmian umów; nie jest bieżącą telemetrią ani schematem własności; source_date dotyczy tabel 6 i 7, nie wszystkich rozdziałów taryfy
+- **Data stanu źródła:** 2025-12-03
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** Tekst uwzględniający decyzję z 16.01.2026; data tabel inna
+- **Strona źródła:** 42, 43, 46 — tabele 6/7 i ich data stanu
+- **Sprawdzono:** 2026-09-11
+- **Udany odczyt:** 2026-09-11
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba PSE_TARIFF_2026:** HTTP 200; 2026-09-11T10:50:16.7756540Z; `data/catalog/radkowice_tariff_snapshot.json`; próbka `data/raw/research/2026-09-11/pse_tariff_2026.pdf`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### PGE_RADK_CAPACITY_ATTEMPT — Próba dostępu do pliku mocy PGE I kw.2026
+
+[Źródło](https://pgedystrybucja.pl/content/download/71691b9fb622cdf89306ec0dc0c1ac3d/file/dostepne-moce-pge-i-kw-2026.pdf?contentId=2208&inLanguage=pol-PL&version=6)
+
+- **Operator:** PGE
+- **Właściciel:** PGE Dystrybucja S.A.
+- **Kraj:** PL
+- **Kategoria:** reported_connection_capacity
+- **Napięcie:** UNKNOWN_OR_NOT_APPLICABLE
+- **Zasięg:** Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.
+- **Format:** PDF — oczekiwany, nie otrzymany
+- **API:** UNKNOWN
+- **GIS:** UNKNOWN
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** UNKNOWN — pełna treść nie została zweryfikowana.
+- **Licencja:** UNKNOWN — nie potwierdzono otwartej licencji wybranego zbioru.
+- **Użycie komercyjne:** UNKNOWN
+- **Autorytet źródła:** B
+- **Odczyt maszynowy:** UNKNOWN
+- **Scraping:** UNKNOWN — przed scraperem preferować oficjalny plik lub API.
+- **Pola:** UNKNOWN — brak poprawnego pliku
+- **Zastosowanie:** Kandydat do informacji o grupach mocy PGE po poprawnym odczycie
+- **Ograniczenia:** HTTP 200, 346 bajtów, brak sygnatury PDF; nie pobrano wartości mocy; Dowód próby: data/catalog/pge_radkowice_access_2026-09-11.json
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-11
+- **Udany odczyt:** UNKNOWN / nie dotyczy
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

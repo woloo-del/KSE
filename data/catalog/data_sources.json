@@ -3824,6 +3824,135 @@
       "retrieval_date": [
         "2026-09-11T10:42:22.6213255Z"
       ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.",
+      "grid_voltage": [
+        "UNKNOWN_OR_NOT_APPLICABLE"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "UNKNOWN — nie potwierdzono otwartej licencji wybranego zbioru.",
+      "license_url": null,
+      "commercial_use": "UNKNOWN",
+      "machine_readable": "PARTIAL — tekst PDF",
+      "scraping_required": "NO — bezpośredni PDF",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-11",
+      "last_successful_verification": "2026-09-11",
+      "source_date": "2025-12-03",
+      "publication_date": null,
+      "source_version": "Tekst uwzględniający decyzję z 16.01.2026; data tabel inna",
+      "source_page": "42, 43, 46 — tabele 6/7 i ich data stanu",
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "PSE_TARIFF_2026"
+      ],
+      "related_urls": [],
+      "source_id": "PSE_TARIFF_2026",
+      "operator": "PSE",
+      "source_name": "Taryfa PSE 2026 — odbiorcy i miejsca dostarczania",
+      "url": "https://www.pse.pl/documents/20182/7005343691/20260116_Tekst_Taryfy_na_2026_tekst_jednolity.pdf",
+      "data_owner": "PSE S.A.",
+      "data_category": "operator_delivery_points",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "symbol odbiorcy",
+        "nazwa operatora",
+        "nazwa węzła",
+        "typ MD",
+        "grupa MD"
+      ],
+      "potential_application": "Potwierdzenie relacji taryfowej PGE–Radkowice; nie własność urządzeń",
+      "known_limitations": [
+        "Tabela może pozostawać niezmieniona mimo zmian umów; nie jest bieżącą telemetrią ani schematem własności",
+        "source_date dotyczy tabel 6 i 7, nie wszystkich rozdziałów taryfy"
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "url": "https://www.pse.pl/documents/20182/7005343691/20260116_Tekst_Taryfy_na_2026_tekst_jednolity.pdf",
+          "bytes": 768539,
+          "retrieval_date": "2026-09-11T10:50:16.7756540Z",
+          "sha256": "05e8f0481617dcbb92414194e06ff4c00a6f66d958fa8f4e7c195b264a3bda81",
+          "source_id": "PSE_TARIFF_2026",
+          "local_path": "data/raw/research/2026-09-11/pse_tariff_2026.pdf",
+          "content_type": "application/pdf; charset=UTF-8",
+          "error": null,
+          "http_status": 200,
+          "manifest": "data/catalog/radkowice_tariff_snapshot.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-11T10:50:16.7756540Z"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.",
+      "grid_voltage": [
+        "UNKNOWN_OR_NOT_APPLICABLE"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "UNKNOWN — pełna treść nie została zweryfikowana.",
+      "license": "UNKNOWN — nie potwierdzono otwartej licencji wybranego zbioru.",
+      "license_url": null,
+      "commercial_use": "UNKNOWN",
+      "machine_readable": "UNKNOWN",
+      "scraping_required": "UNKNOWN — przed scraperem preferować oficjalny plik lub API.",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-11",
+      "last_successful_verification": null,
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [],
+      "related_urls": [],
+      "source_id": "PGE_RADK_CAPACITY_ATTEMPT",
+      "operator": "PGE",
+      "source_name": "Próba dostępu do pliku mocy PGE I kw.2026",
+      "url": "https://pgedystrybucja.pl/content/download/71691b9fb622cdf89306ec0dc0c1ac3d/file/dostepne-moce-pge-i-kw-2026.pdf?contentId=2208&inLanguage=pol-PL&version=6",
+      "data_owner": "PGE Dystrybucja S.A.",
+      "data_category": "reported_connection_capacity",
+      "data_format": [
+        "PDF — oczekiwany, nie otrzymany"
+      ],
+      "verification_status": "BLOCKED",
+      "reliability": "B",
+      "key_fields": [
+        "UNKNOWN — brak poprawnego pliku"
+      ],
+      "potential_application": "Kandydat do informacji o grupach mocy PGE po poprawnym odczycie",
+      "known_limitations": [
+        "HTTP 200, 346 bajtów, brak sygnatury PDF; nie pobrano wartości mocy",
+        "Dowód próby: data/catalog/pge_radkowice_access_2026-09-11.json"
+      ],
+      "priority": "P0",
+      "evidence": [],
+      "retrieval_date": []
     }
   ]
 }

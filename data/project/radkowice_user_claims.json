@@ -1,0 +1,12 @@
+{
+  "schema_version": "user_claims_v1",
+  "recorded_date": "2026-09-11",
+  "source_type": "USER_PROVIDED",
+  "verification_status": "NOT_DOCUMENT_VERIFIED",
+  "claims": [
+    {"id": "RAD-USER-001", "subject": "Część stacji 110 kV", "claimed_owner": "PGE Dystrybucja", "classification": "REPORTED", "scope": "Informacja użytkownika; nie potwierdzone dane operatora"},
+    {"id": "RAD-USER-002", "subject": "Część stacji 220 kV", "claimed_owner": "PSE", "classification": "REPORTED", "scope": "Informacja użytkownika; nie potwierdzone dane operatora"},
+    {"id": "RAD-USER-003", "subject": "Granica własności w rejonie transformacji 220/110 kV", "classification": "INFERRED", "inference_author": "USER", "exact_boundary": null, "transformer_owner": null}
+  ],
+  "usage": "Kierunek weryfikacji i jawny scenariusz roboczy. Nie nadpisuje potwierdzonych pól właściciela ani nie tworzy krawędzi własności."
+}

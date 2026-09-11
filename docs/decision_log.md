@@ -121,3 +121,13 @@
 **Selected option / Reason:** Radkowice do dalszych prac badawczych: trzy konkretne BESS w zachowanym XLSX PSE, portal inwestycji, lokalny plan energetyczny. Alternatywa Energi ma konflikt dat. To dobór obszaru, nie ranking technicznej zdolności przyłączeniowej.
 
 **Trade-offs / Consequences:** Granice PSE/PGE, pipeline 110 kV i prawa źródeł pozostają otwarte. KSE-013 jest w toku do spełnienia pełnych kryteriów i zależności; wybranie stacji nie kończy licencjonowania. Model ma oddzielać miejsce stacji, poziomy napięcia, granice operatorów i grupy publikowanych mocy. Nie zakładamy, że projekty 220 kV konkurują o jeden transformator 220/110 kV.
+
+## 2026-09-11 — eksperymentalny graf dowodów, bez bazy produkcyjnej
+
+**Decision / Context:** Dostępne źródła pozwalają przetestować część relacji przed pełnym modelem pilota; brak granic własności i parametrów elektrycznych.
+
+**Options considered:** Czekać na komplet źródeł; uruchomić pełną bazę; przetestować niewielki graf dokumentacyjny w JSON z walidacją.
+
+**Selected option / Reason:** JSON i walidator Python, bez nowych zależności. Każde twierdzenie ma dowód, daty i hash. To odtwarzalny eksperyment reprezentacji danych; nie zmienia otwartych warunków produkcyjnego wykorzystania źródeł.
+
+**Trade-offs / Consequences:** Brak zapytań przestrzennych, trwałej bazy historii i modelu rozpływowego. Pełne KSE-014/018 pozostają otwarte. Powiązanie PGE z miejscem dostarczania z taryfy nie jest relacją własności. Nowe KSE-031 obejmuje wyłącznie wykonany eksperyment i jego testy.

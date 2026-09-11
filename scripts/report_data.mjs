@@ -12,6 +12,7 @@ export const DOCUMENTS = [
   'docs/reproducibility.md','docs/git_workflow.md','docs/project_reporting.md',
   'docs/09_pilot_scope.md',
   'docs/10_radkowice_pilot.md',
+  'docs/11_radkowice_evidence_model.md',
 ];
 export const sha = b => crypto.createHash('sha256').update(b).digest('hex');
 export const plain = s => String(s ?? '').replace(/\[([^\]]+)\]\(([^)]+)\)/g,'$1 ($2)').replace(/\*\*|`/g,'');

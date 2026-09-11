@@ -6,7 +6,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 
 ## Najbliższe zadania bez nieukończonych zależności
 
-- **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). Sprawdzić zwykły dostęp lub oficjalny kanał bez obchodzenia blokady.
+- **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). Bezpośredni PDF nadal zwraca blokadę (11.09); sprawdzić oficjalny alternatywny kanał lub dokumenty przekazane przez użytkownika.
 - **KSE-010 — Ustalić prawa źródeł wybranych do pilota** (P0, Do zrobienia). Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Wykonać prywatną kopię ZIP na drugim nośniku i potwierdzić jej odczyt.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
@@ -46,6 +46,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-028 | Metodologia confidence i scoringu | V2 | Do zrobienia | P2 | KSE-023, KSE-026 |
 | KSE-029 | Dane techniczne i model rozpływowy | Long-term | Do zrobienia | P2 | KSE-023 |
 | KSE-030 | Potwierdzić zewnętrzną kopię archiwum | Organizacja | Do zrobienia | P0 | KSE-003 |
+| KSE-031 | Eksperymentalny graf dowodów Radkowic | Model | Zrobione | P0 | KSE-002, KSE-007 |
 
 ## Kryteria zakończenia i dowody
 
@@ -140,13 +141,13 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-009 — Zweryfikować dostęp do publikacji PGE
 
 - Odpowiedzialność: Codex.
-- Następny krok: Sprawdzić zwykły dostęp lub oficjalny kanał bez obchodzenia blokady.
+- Następny krok: Bezpośredni PDF nadal zwraca blokadę (11.09); sprawdzić oficjalny alternatywny kanał lub dokumenty przekazane przez użytkownika.
 - Kryterium: Odczytana próbka z datą i prawami albo udokumentowane utrzymanie blokady.
 - Nieukończone zależności: brak.
 - Ryzyko: HTTP 200 zwracał stronę odrzucenia zamiast danych..
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/discovery_log.md](docs/discovery_log.md).
+- Dowody/kontekst: [docs/discovery_log.md](docs/discovery_log.md), [data/catalog/pge_radkowice_access_2026-09-11.json](data/catalog/pge_radkowice_access_2026-09-11.json).
 
 ### KSE-010 — Ustalić prawa źródeł wybranych do pilota
 
@@ -190,7 +191,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Ryzyko: Brak potwierdzonych granic własności i kompletnego pipeline PGE; prawa źródeł nadal otwarte..
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/08_roadmap.md](docs/08_roadmap.md), [docs/10_radkowice_pilot.md](docs/10_radkowice_pilot.md), [data/reference/radkowice_pse_projects_2026-07-31.json](data/reference/radkowice_pse_projects_2026-07-31.json).
+- Dowody/kontekst: [docs/08_roadmap.md](docs/08_roadmap.md), [docs/10_radkowice_pilot.md](docs/10_radkowice_pilot.md), [data/reference/radkowice_pse_projects_2026-07-31.json](data/reference/radkowice_pse_projects_2026-07-31.json), [docs/11_radkowice_evidence_model.md](docs/11_radkowice_evidence_model.md).
 
 ### KSE-014 — Zaprojektować model i architekturę pilota
 
@@ -378,3 +379,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
 - Dowody/kontekst: [docs/reproducibility.md](docs/reproducibility.md).
+
+### KSE-031 — Eksperymentalny graf dowodów Radkowic
+
+- Odpowiedzialność: Codex.
+- Następny krok: Wykorzystać doświadczenia w pełnym modelu pilota; uzupełniać tylko udokumentowane relacje.
+- Kryterium: Odtwarzalny graf źródłowy z testami, niepełnym pokryciem i jawnymi niewiadomymi; nie zastępuje KSE-014 ani KSE-018.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-11.
+- Dowody/kontekst: [docs/11_radkowice_evidence_model.md](docs/11_radkowice_evidence_model.md), [scripts/build_radkowice_graph.py](scripts/build_radkowice_graph.py), [grid_engine/evidence_graph.py](grid_engine/evidence_graph.py), [tests/test_evidence_graph.py](tests/test_evidence_graph.py), [data/reference/radkowice_evidence_graph_v1.json](data/reference/radkowice_evidence_graph_v1.json).

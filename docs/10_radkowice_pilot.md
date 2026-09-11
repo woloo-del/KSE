@@ -4,6 +4,8 @@ Weryfikacja: **11.09.2026**. Rekomendacja: przyjąć wskazane przez użytkownika
 
 ## Tożsamość i granice
 
+Aktualizacja 11.09.2026: [taryfa PSE i pierwszy model powiązań](11_radkowice_evidence_model.md) potwierdzają relację miejsca dostarczania Radkowice z PGE według stanu tabeli 03.12.2025. Nie rozstrzyga to poniższych braków dotyczących własności urządzeń.
+
 PSE opisuje obiekt jako **stację 220/110 kV Radkowice** ([źródło PSE](https://inwestycje.pse.pl/), sekcja Radkowice). Nie utożsamiamy go automatycznie z transformatorem 110/SN. Nazwy „GPZ Radkowice”, „SE Radkowice” i „Grupa Radkowice” należy rozróżniać według źródła i typu obiektu.
 
 Informację użytkownika o współdzieleniu stacji przez PSE/PGE zapisujemy jako wskazówkę do dalszej weryfikacji. Udział PGE w regionalnej sieci jest udokumentowany, ale **granice własności pól, rozdzielni i transformatorów pozostają UNKNOWN**. Nie przypisujemy całej części 110 kV jednemu operatorowi bez dokumentu. Przegląd nie znalazł dotąd pierwotnego schematu granic eksploatacji.

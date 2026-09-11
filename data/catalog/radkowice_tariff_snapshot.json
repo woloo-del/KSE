@@ -1,0 +1,11 @@
+{
+  "url": "https://www.pse.pl/documents/20182/7005343691/20260116_Tekst_Taryfy_na_2026_tekst_jednolity.pdf",
+  "bytes": 768539,
+  "retrieval_date": "2026-09-11T10:50:16.7756540Z",
+  "sha256": "05e8f0481617dcbb92414194e06ff4c00a6f66d958fa8f4e7c195b264a3bda81",
+  "source_id": "PSE_TARIFF_2026",
+  "local_path": "data/raw/research/2026-09-11/pse_tariff_2026.pdf",
+  "content_type": "application/pdf; charset=UTF-8",
+  "error": null,
+  "http_status": 200
+}

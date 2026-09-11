@@ -7,9 +7,14 @@
       "url": "https://inwestycje.pse.pl/",
       "data_owner": "PSE S.A.",
       "data_category": "grid_investments",
-      "grid_voltage": ["220 kV", "110 kV"],
+      "grid_voltage": [
+        "220 kV",
+        "110 kV"
+      ],
       "geographical_scope": "Polska; do pilota odczytano sekcję Radkowice",
-      "data_format": ["HTML"],
+      "data_format": [
+        "HTML"
+      ],
       "verification_status": "CONTENT_REVIEWED",
       "last_verified": "2026-09-11",
       "last_successful_verification": "2026-09-11",
@@ -18,11 +23,21 @@
       "machine_readable": "PARTIAL — HTML wymaga rozpoznania sekcji",
       "scraping_required": "YES — dla tego widoku HTML; brak wdrożonego cyklicznego scrapera",
       "reliability": "B",
-      "key_fields": ["nazwa inwestycji", "etap", "status", "rok zakończenia"],
+      "key_fields": [
+        "nazwa inwestycji",
+        "etap",
+        "status",
+        "rok zakończenia"
+      ],
       "potential_application": "Oddzielenie zakończonych i przyszłych prac w stacji pilota",
-      "known_limitations": ["Brak gwarantowanej częstotliwości aktualizacji i daty każdej zmiany", "Wspólna nazwa stacji nie identyfikuje automatycznie tego samego zadania lub transformatora"],
+      "known_limitations": [
+        "Brak gwarantowanej częstotliwości aktualizacji i daty każdej zmiany",
+        "Wspólna nazwa stacji nie identyfikuje automatycznie tego samego zadania lub transformatora"
+      ],
       "priority": "P0",
-      "probe_ids": ["PSE_INVESTMENTS_RADK"]
+      "probe_ids": [
+        "PSE_INVESTMENTS_RADK"
+      ]
     },
     {
       "source_id": "CHECINY_ENERGY_PLAN",
@@ -31,9 +46,15 @@
       "url": "https://checiny.biuletyn.net/fls/bip_pliki/2026_03/BIPF64CD10561EC15Z/PZCEEPG_2025-2027.pdf",
       "data_owner": "Gmina Chęciny — publikujący dokument; pierwotne dane PSE/PGE",
       "data_category": "local_grid_and_investments",
-      "grid_voltage": ["220 kV", "110 kV", "SN"],
+      "grid_voltage": [
+        "220 kV",
+        "110 kV",
+        "SN"
+      ],
       "geographical_scope": "Gmina Chęciny i opisane powiązania sieciowe",
-      "data_format": ["PDF"],
+      "data_format": [
+        "PDF"
+      ],
       "verification_status": "CONTENT_REVIEWED",
       "last_verified": "2026-09-11",
       "last_successful_verification": "2026-09-11",
@@ -41,11 +62,82 @@
       "machine_readable": "PARTIAL — tekst PDF i schematy",
       "scraping_required": "NO — bezpośredni PDF; ekstrakcja i kontrola dokumentu",
       "reliability": "C",
-      "key_fields": ["stacje", "relacje linii", "napięcia", "planowane inwestycje", "operator danych"],
+      "key_fields": [
+        "stacje",
+        "relacje linii",
+        "napięcia",
+        "planowane inwestycje",
+        "operator danych"
+      ],
       "potential_application": "Dowody topologii referencyjnej i plany dla Radkowic",
-      "known_limitations": ["Mieszane daty wejść i starsze opisy planistyczne", "Nie potwierdza aktualnych granic własności ani obsady transformatorów", "Folder 2026_03 w URL nie jest datą obserwacji wszystkich wartości"],
+      "known_limitations": [
+        "Mieszane daty wejść i starsze opisy planistyczne",
+        "Nie potwierdza aktualnych granic własności ani obsady transformatorów",
+        "Folder 2026_03 w URL nie jest datą obserwacji wszystkich wartości"
+      ],
       "priority": "P0",
-      "probe_ids": ["CHECINY_ENERGY_PLAN"]
+      "probe_ids": [
+        "CHECINY_ENERGY_PLAN"
+      ]
+    },
+    {
+      "source_id": "PSE_TARIFF_2026",
+      "operator": "PSE",
+      "source_name": "Taryfa PSE 2026 — odbiorcy i miejsca dostarczania",
+      "url": "https://www.pse.pl/documents/20182/7005343691/20260116_Tekst_Taryfy_na_2026_tekst_jednolity.pdf",
+      "data_owner": "PSE S.A.",
+      "data_category": "operator_delivery_points",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "last_verified": "2026-09-11",
+      "last_successful_verification": "2026-09-11",
+      "source_date": "2025-12-03",
+      "source_page": "42, 43, 46 — tabele 6/7 i ich data stanu",
+      "source_version": "Tekst uwzględniający decyzję z 16.01.2026; data tabel inna",
+      "reliability": "B",
+      "key_fields": [
+        "symbol odbiorcy",
+        "nazwa operatora",
+        "nazwa węzła",
+        "typ MD",
+        "grupa MD"
+      ],
+      "potential_application": "Potwierdzenie relacji taryfowej PGE–Radkowice; nie własność urządzeń",
+      "known_limitations": [
+        "Tabela może pozostawać niezmieniona mimo zmian umów; nie jest bieżącą telemetrią ani schematem własności",
+        "source_date dotyczy tabel 6 i 7, nie wszystkich rozdziałów taryfy"
+      ],
+      "machine_readable": "PARTIAL — tekst PDF",
+      "scraping_required": "NO — bezpośredni PDF",
+      "priority": "P0",
+      "probe_ids": [
+        "PSE_TARIFF_2026"
+      ]
+    },
+    {
+      "source_id": "PGE_RADK_CAPACITY_ATTEMPT",
+      "operator": "PGE",
+      "source_name": "Próba dostępu do pliku mocy PGE I kw.2026",
+      "url": "https://pgedystrybucja.pl/content/download/71691b9fb622cdf89306ec0dc0c1ac3d/file/dostepne-moce-pge-i-kw-2026.pdf?contentId=2208&inLanguage=pol-PL&version=6",
+      "data_owner": "PGE Dystrybucja S.A.",
+      "data_category": "reported_connection_capacity",
+      "data_format": [
+        "PDF — oczekiwany, nie otrzymany"
+      ],
+      "verification_status": "BLOCKED",
+      "last_verified": "2026-09-11",
+      "reliability": "B",
+      "key_fields": [
+        "UNKNOWN — brak poprawnego pliku"
+      ],
+      "potential_application": "Kandydat do informacji o grupach mocy PGE po poprawnym odczycie",
+      "known_limitations": [
+        "HTTP 200, 346 bajtów, brak sygnatury PDF; nie pobrano wartości mocy",
+        "Dowód próby: data/catalog/pge_radkowice_access_2026-09-11.json"
+      ],
+      "priority": "P0"
     }
   ]
 }

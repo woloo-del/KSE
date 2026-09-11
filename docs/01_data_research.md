@@ -253,6 +253,8 @@ System historyczny można wiarygodnie rozpocząć od własnych snapshotów. Nie 
 
 ## 13. Rekomendacja po etapie 1
 
+Dalsza aktualizacja 11.09.2026: katalog liczy 60 pozycji po dodaniu [taryfy PSE 2026](https://www.pse.pl/documents/20182/7005343691/20260116_Tekst_Taryfy_na_2026_tekst_jednolity.pdf) i nieudanej próby dostępu do bezpośredniego PDF PGE. [Model dowodów Radkowic](11_radkowice_evidence_model.md) zachowuje historyczną datę tabel taryfowych i nie wyznacza granic własności. Liczba pozycji katalogu nie jest liczbą działających kanałów danych.
+
 Aktualizacja 11.09.2026: użytkownik wskazał Radkowice. [Analiza pilota](10_radkowice_pilot.md) dokumentuje trzy wiersze BESS z zachowanego XLSX PSE oraz nowe źródła: [portal inwestycji PSE](https://inwestycje.pse.pl/) i [BIP Chęcin](https://checiny.biuletyn.net/fls/bip_pliki/2026_03/BIPF64CD10561EC15Z/PZCEEPG_2025-2027.pdf), odczytane 11.09.2026. Rejestr rozszerzono do 58 źródeł. Wcześniejsza walidacja 56 źródeł jest historycznym wynikiem etapu 1, nie kontrolą nowych pozycji. Rekomendujemy Radkowice do dalszej pracy dokumentacyjnej; granice PSE/PGE i prawa źródeł pozostają do wyjaśnienia.
 
 Zasadne jest przygotowanie pilota **evidence-based screening**: wybór punktu, parametry projektu, odczyt źródeł, znane projekty według kierunku i etapu, planowane inwestycje, graf tylko z uzasadnionymi relacjami i lista braków. PSE jest dobrym początkiem warstwy pobierania; do lokalnego rozszerzenia warto rozważyć obszar Energi lub ENEA po ocenie konkretnej stacji i wyjaśnieniu dostępu/licencji. Nie wybrano jeszcze regionu na podstawie samej atrakcyjności mapy.

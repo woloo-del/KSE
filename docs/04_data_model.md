@@ -1,5 +1,7 @@
 # Wymagania dla przyszłego modelu danych
 
+Aktualizacja 11.09.2026: powstał [eksperymentalny model Radkowic](11_radkowice_evidence_model.md) i walidator `grid_engine/evidence_graph.py`. Celowo rozróżnia poziom napięcia od fizycznej sekcji szyn oraz relację taryfową od własności. To ograniczony graf dokumentacyjny; pełny model bazy, obserwacji, wniosków i historii nadal wymaga opracowania.
+
 **10.09.2026 — notatka z etapu 1. To nie jest wdrożony schemat bazy.**
 
 Minimalne obiekty domenowe: `OPERATOR`, `SOURCE`, `SOURCE_SNAPSHOT`, `OBSERVATION`, `GRID_NODE`, `SUBSTATION/GPZ`, `BUS`, `TRANSFORMER`, `LINE`, `FEEDER`, `CONNECTION_POINT`, `PROJECT`, `GENERATION_ASSET`, `STORAGE_ASSET`, `DEMAND_ASSET`, `GRID_INVESTMENT`. Potrzebna jest także jednostka `CAPACITY_REPORTING_GROUP`, ponieważ publikowane moce bywają wspólne dla grupy stacji. Grupa raportowa nie jest fizycznym węzłem i nie musi być identyczna z kompletną grupą ograniczeń elektrycznych.

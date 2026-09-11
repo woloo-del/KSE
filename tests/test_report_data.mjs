@@ -39,7 +39,8 @@ test('long explanatory content and source URL are not truncated',()=>{
   assert.match(rows.at(-1)[2],/https:\/\/example.org\/source/);
 });
 test('TODO view scales past the 30-row plan without dropping records',()=>{
-  const a=copy();a.tasks.push({...a.tasks.at(-1),id:'KSE-031',title:'SYNTHETIC TEST TASK'});
-  const tasks=validateTasks(a);assert.equal(tasks.length,31);
-  assert.match(todoMarkdown({todo:a,tasks}),/KSE-031/);
+  const a=copy();a.tasks.push({...a.tasks.at(-1),id:'KSE-999',title:'SYNTHETIC TEST TASK'});
+  const tasks=validateTasks(a);assert.equal(tasks.length,original.tasks.length+1);
+  assert.ok(tasks.length>30);
+  assert.match(todoMarkdown({todo:a,tasks}),/KSE-999/);
 });

@@ -23,6 +23,10 @@ def build_catalog() -> dict[str, Any]:
     for path in paths:
         for probe in json.loads(path.read_text(encoding="utf-8-sig")):
             manifests.append({**probe, "manifest": path.relative_to(ROOT).as_posix()})
+    tariff_manifest = ROOT / 'data/catalog/radkowice_tariff_snapshot.json'
+    if tariff_manifest.exists():
+        probe = json.loads(tariff_manifest.read_text(encoding='utf-8-sig'))
+        manifests.append({**probe, 'manifest':tariff_manifest.relative_to(ROOT).as_posix()})
     result = []
     for note in notes["sources"]:
         row: dict[str, Any] = {
