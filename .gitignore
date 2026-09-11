@@ -1,5 +1,9 @@
 .env
 _secrets/
+.report_runtime/
+outputs/**/previews/
+outputs/**/*.inspection.json
+outputs/**/*.inspect.ndjson
 .env.*
 !.env.example
 __pycache__/

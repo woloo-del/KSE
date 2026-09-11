@@ -6,6 +6,9 @@ Stan na **10.09.2026**: zakończony pierwszy przegląd źródeł i prób dostęp
 
 ## Dokumenty
 
+- [Rejestr TODO](TODO.md)
+- [Raport Excel — generowanie i aktualizacja](docs/project_reporting.md)
+
 - [Raport badawczy i executive summary](docs/01_data_research.md)
 - [Katalog źródeł](docs/data_sources.md) oraz [wersja JSON](data/catalog/data_sources.json)
 - [Wstępna macierz wykonalności](docs/02_feasibility_matrix.md)

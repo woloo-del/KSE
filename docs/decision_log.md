@@ -83,3 +83,21 @@
 **Trade-offs:** Nie każdy publiczny rekord pozwala wypełnić jedną z trzech grup; potrzebna kategoria nieznana/konfliktowa.
 
 **Consequences:** Rozszerzono wymagania pilota i modelu danych; nie wdrożono jeszcze funkcji ani nie użyto klucza API.
+
+## 2026-09-10 — Stały TODO i generowany raport Excel
+
+**Date:** 2026-09-10
+
+**Decision:** Utrzymywać jeden strukturalny rejestr zadań i generować z plików projektu szczegółowy raport XLSX.
+
+**Context:** Użytkownik poprosił o prowadzenie TODO oraz skrypt do pełnego raportowania projektu; wybrał szablon Project Tracker.
+
+**Options considered:** Ręcznie aktualizowany Excel; osobne niesynchronizowane listy; JSON jako źródło i generowane widoki Markdown/Excel.
+
+**Selected option:** `data/project/todo.json`, stałe ID, zależności i kryteria; generator Node.js z dołączonym artifact-tool oraz zachowanym szablonem. Pełny raport obejmuje wszystkie źródła, wykonalność, ryzyka, dokumentację i zapisane kontrole.
+
+**Reason:** Utrzymanie historii w Git i odtwarzalnego powiązania raportu z konkretnymi wejściami. Brak podwójnej ręcznej edycji statusów.
+
+**Trade-offs:** Raport jest snapshotem, nie synchronizuje zmian z Excela do repo. Generator wymaga kompatybilnego środowiska artifact-tool. Oś planu pokazuje do 30 zadań, pełny rejestr nie ma tego ograniczenia. Brak terminów nie jest uzupełniany fikcyjnym harmonogramem.
+
+**Consequences:** Dodano walidację zależności, dowodów zakończenia, schematu wykonalności oraz manifest raportu z hashami wejść. Sekrety pozostają poza raportem. Nie rozpoczęto implementacji analitycznej aplikacji.

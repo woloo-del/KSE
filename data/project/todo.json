@@ -1,0 +1,515 @@
+{
+  "schema_version": "todo_v1",
+  "updated_at": "2026-09-11",
+  "project": "Grid Connection Intelligence — Polska",
+  "tasks": [
+    {
+      "id": "KSE-001",
+      "title": "Research źródeł i granic dokładności",
+      "stage": "Research",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [],
+      "next_action": "Uzupełniać badanie po nowych ustaleniach.",
+      "acceptance": "Raport odpowiada osobno dla SN, 110 i 220/400 kV; zawiera źródła i niewiadome.",
+      "evidence": [
+        "docs/01_data_research.md"
+      ],
+      "completed_at": "2026-09-10"
+    },
+    {
+      "id": "KSE-002",
+      "title": "Katalog i kontrola próbek źródłowych",
+      "stage": "Research",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-001"
+      ],
+      "next_action": "Zachować historię kolejnych publikacji.",
+      "acceptance": "Rejestr źródeł, status dostępu, daty, hashe próbek i raport kontroli są zapisane.",
+      "evidence": [
+        "data/catalog/data_sources.json",
+        "data/catalog/research_validation.json"
+      ],
+      "completed_at": "2026-09-10"
+    },
+    {
+      "id": "KSE-003",
+      "title": "Git i odtwarzanie snapshotów",
+      "stage": "Organizacja",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [],
+      "next_action": "Utrzymywać commity i instrukcję odtwarzania.",
+      "acceptance": "Lokalna historia Git i archiwum z hashami; test odtworzenia przechodzi. Nie oznacza wykonania zewnętrznej kopii.",
+      "evidence": [
+        "docs/reproducibility.md",
+        "scripts/research_archive.py",
+        "tests/test_research_archive.py"
+      ],
+      "completed_at": "2026-09-10"
+    },
+    {
+      "id": "KSE-004",
+      "title": "Wykluczenie lokalnych sekretów z Git",
+      "stage": "Organizacja",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [],
+      "next_action": "Utrzymać wykluczenie w raportach i backupach źródeł.",
+      "acceptance": "_secrets nie jest śledzony ani automatycznie odczytywany przez generatory.",
+      "evidence": [
+        ".gitignore"
+      ],
+      "completed_at": "2026-09-10"
+    },
+    {
+      "id": "KSE-005",
+      "title": "Specyfikacja pipeline wybranego GPZ",
+      "stage": "Produkt",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-001"
+      ],
+      "next_action": "Przenieść reguły do modelu i testów pilota.",
+      "acceptance": "Grupy przyłączone / planowane / oczekujące, status nieznany, deduplikacja i kierunki są opisane.",
+      "evidence": [
+        "docs/gpz_pipeline.md"
+      ],
+      "completed_at": "2026-09-10"
+    },
+    {
+      "id": "KSE-006",
+      "title": "TODO i generator pełnego raportu Excel",
+      "stage": "Organizacja",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-002"
+      ],
+      "next_action": "Aktualizować rejestr po wykonanych pracach i generować raport po ważnych zmianach.",
+      "acceptance": "TODO ma stabilne ID i zależności; skrypt tworzy szczegółowy XLSX z bieżących plików bez sekretów; testy przechodzą.",
+      "evidence": [
+        "scripts/generate_project_report.ps1",
+        "scripts/validate_project_report.py",
+        "tests/test_report_data.mjs",
+        "docs/project_reporting.md"
+      ],
+      "started_at": "2026-09-10",
+      "completed_at": "2026-09-11"
+    },
+    {
+      "id": "KSE-007",
+      "title": "Ustalić zakres i kryteria MVP",
+      "stage": "Produkt",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Użytkownik + Codex",
+      "depends_on": [
+        "KSE-001",
+        "KSE-005"
+      ],
+      "next_action": "Uzgodnić pierwszy raport i granice obietnicy produktu.",
+      "acceptance": "Zapisany zakres pilota, mierzalne kryteria odbioru i wyłączenia bez obietnicy nieuzasadnionych MW/probability.",
+      "evidence": [
+        "docs/02_feasibility_matrix.md",
+        "docs/08_roadmap.md"
+      ]
+    },
+    {
+      "id": "KSE-008",
+      "title": "Wyjaśnić konflikt dat Energi",
+      "stage": "Dane",
+      "status": "At Risk",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-002"
+      ],
+      "next_action": "Porównać nowsze wersje i dowody nagłówka z nazwą pliku.",
+      "acceptance": "Udokumentowane rozstrzygnięcie lub kwarantanna konfliktowej daty, bez nadpisania źródła.",
+      "evidence": [
+        "docs/07_data_quality.md"
+      ],
+      "risk": "Nazwa wskazuje sierpień, nagłówek czerwiec; aktualność nierozstrzygnięta."
+    },
+    {
+      "id": "KSE-009",
+      "title": "Zweryfikować dostęp do publikacji PGE",
+      "stage": "Dane",
+      "status": "At Risk",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-002"
+      ],
+      "next_action": "Sprawdzić zwykły dostęp lub oficjalny kanał bez obchodzenia blokady.",
+      "acceptance": "Odczytana próbka z datą i prawami albo udokumentowane utrzymanie blokady.",
+      "evidence": [
+        "docs/discovery_log.md"
+      ],
+      "risk": "HTTP 200 zwracał stronę odrzucenia zamiast danych."
+    },
+    {
+      "id": "KSE-010",
+      "title": "Ustalić prawa źródeł wybranych do pilota",
+      "stage": "Dane",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Użytkownik + Codex",
+      "depends_on": [
+        "KSE-007"
+      ],
+      "next_action": "Sprawdzić licencje, regulaminy, automatyzację i redystrybucję dla konkretnego zakresu.",
+      "acceptance": "Każde źródło pilota ma rozstrzygniętą podstawę użycia lub jest wyłączone. Kontakt z operatorem wymaga zlecenia użytkownika.",
+      "evidence": [
+        "docs/01_data_research.md"
+      ],
+      "risk": "Publiczny dostęp nie rozstrzyga komercyjnego wykorzystania; zastrzeżenia Stoen."
+    },
+    {
+      "id": "KSE-011",
+      "title": "Przetestować uwierzytelnione API ENTSO-E",
+      "stage": "Dane",
+      "status": "Not Started",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-004"
+      ],
+      "next_action": "W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.",
+      "acceptance": "Próbka XML i opis zakresu, dat, limitów i praw; żadnych sekretów w URL manifestu, logach ani Git.",
+      "evidence": [
+        "docs/01_data_research.md"
+      ],
+      "risk": "Dostarczenie klucza nie jest dowodem jego działania; test jeszcze niewykonany."
+    },
+    {
+      "id": "KSE-012",
+      "title": "Potwierdzić eksport ENEA i TAURON",
+      "stage": "Dane",
+      "status": "Not Started",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-002"
+      ],
+      "next_action": "Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.",
+      "acceptance": "Mała poprawna próbka z trwałego kanału lub jawny brak potwierdzonego eksportu.",
+      "evidence": [
+        "docs/discovery_log.md"
+      ]
+    },
+    {
+      "id": "KSE-013",
+      "title": "Wybrać stację i obszar pilota",
+      "stage": "Produkt",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Użytkownik + Codex",
+      "depends_on": [
+        "KSE-007",
+        "KSE-010"
+      ],
+      "next_action": "Porównać kandydatów według źródeł, relacji 110 kV/PSE i projektów.",
+      "acceptance": "Rzeczywisty GPZ, udokumentowane powiązania, projekty i inwestycje; wybór uzasadniony dowodami.",
+      "evidence": [
+        "docs/08_roadmap.md"
+      ]
+    },
+    {
+      "id": "KSE-014",
+      "title": "Zaprojektować model i architekturę pilota",
+      "stage": "Model",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-013"
+      ],
+      "next_action": "Uszczegółowić obserwacje, wnioski, projekty, grupy mocy, historię i relacje.",
+      "acceptance": "Schemat, kontrakty walidacji i decyzja architektury; BESS/PCC, statusy i daty rozdzielone.",
+      "evidence": [
+        "docs/03_system_architecture.md",
+        "docs/04_data_model.md"
+      ]
+    },
+    {
+      "id": "KSE-015",
+      "title": "Connector pipeline PSE XLSX",
+      "stage": "Connectory",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-014",
+        "KSE-010"
+      ],
+      "next_action": "Wdrożyć fetch/parse/normalize/validate/store na rzeczywistych próbkach.",
+      "acceptance": "Testy nagłówków, jednostek, dat, braków i zmian formatu; każdy rekord wskazuje arkusz/wiersz i snapshot.",
+      "evidence": [
+        "data/catalog/data_sources.json"
+      ]
+    },
+    {
+      "id": "KSE-016",
+      "title": "Connector dokumentów OSD pilota",
+      "stage": "Connectory",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-014",
+        "KSE-010"
+      ],
+      "next_action": "Wybrać właściwe publikacje importu, eksportu i pipeline.",
+      "acceptance": "Poprawny odczyt tabel i scenariuszy; konflikty dat i nieznane wartości nie trafiają po cichu do agregacji.",
+      "evidence": [
+        "docs/07_data_quality.md"
+      ]
+    },
+    {
+      "id": "KSE-017",
+      "title": "Canonical ID i deduplikacja projektów",
+      "stage": "Model",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-015",
+        "KSE-016"
+      ],
+      "next_action": "Rozdzielić inwestycję, wniosek i historię etapów; sprawdzać operatora, napięcie i aliasy.",
+      "acceptance": "Przypadki wielu wniosków i nazw nie podwajają projektów; niejednoznaczne dopasowania pozostają jawne.",
+      "evidence": [
+        "docs/gpz_pipeline.md"
+      ]
+    },
+    {
+      "id": "KSE-018",
+      "title": "Graf referencyjny pilota",
+      "stage": "Topologia",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-017"
+      ],
+      "next_action": "Połączyć udokumentowane stacje, linie, transformację i projekty.",
+      "acceptance": "Każda krawędź ma dowód, czas i pewność; brak sztucznego domykania grafu po odległości.",
+      "evidence": [
+        "docs/04_data_model.md"
+      ]
+    },
+    {
+      "id": "KSE-019",
+      "title": "BIP i inwestycje w obszarze pilota",
+      "stage": "Dane",
+      "status": "Not Started",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-013",
+        "KSE-010"
+      ],
+      "next_action": "Sprawdzić aktualne rejestry właściwych organów i dokumenty planów operatorów.",
+      "acceptance": "Źródła z datami i prawami; etap administracyjny nie jest automatycznie WP ani budową.",
+      "evidence": [
+        "docs/discovery_log.md"
+      ]
+    },
+    {
+      "id": "KSE-020",
+      "title": "Warstwy GIS i kontrola CRS",
+      "stage": "GIS",
+      "status": "Not Started",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-013",
+        "KSE-010"
+      ],
+      "next_action": "Pobrać małe wycinki działek, topografii i ograniczeń przyrodniczych.",
+      "acceptance": "GetFeature/pakiety sprawdzone, poprawne CRS i geometrie; prawa i daty zachowane.",
+      "evidence": [
+        "docs/01_data_research.md"
+      ]
+    },
+    {
+      "id": "KSE-021",
+      "title": "Zestawienie projektów A/B/C dla GPZ",
+      "stage": "Analityka",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-017",
+        "KSE-018"
+      ],
+      "next_action": "Zbudować raport grup statusu oraz nieznanych i konfliktowych rekordów.",
+      "acceptance": "Potwierdzone przyłączenie, plan i oczekiwanie odróżnione; deduplikacja i kierunkowe sumy z pokryciem.",
+      "evidence": [
+        "docs/gpz_pipeline.md"
+      ]
+    },
+    {
+      "id": "KSE-022",
+      "title": "Screening BESS i hybryd z PCC",
+      "stage": "Analityka",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-021"
+      ],
+      "next_action": "Połączyć parametry projektu z faktami, ograniczeniami i niewiadomymi.",
+      "acceptance": "Ładowanie/rozładowanie osobno; limity PCC zachowane; brak arbitralnej rezerwy MW i score.",
+      "evidence": [
+        "docs/05_grid_capacity_methodology.md"
+      ]
+    },
+    {
+      "id": "KSE-023",
+      "title": "Walidacja pilota na niezależnych dowodach",
+      "stage": "Walidacja",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Użytkownik + Codex",
+      "depends_on": [
+        "KSE-022"
+      ],
+      "next_action": "Przygotować próbę referencyjną projektów i relacji oraz kryteria porównania.",
+      "acceptance": "Oddzielnie zmierzona poprawność ekstrakcji, dopasowań, pokrycia i wniosków; błędy opisane.",
+      "evidence": [
+        "docs/07_data_quality.md"
+      ]
+    },
+    {
+      "id": "KSE-024",
+      "title": "Pierwszy interfejs i mapa dowodów",
+      "stage": "UI",
+      "status": "Not Started",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-023"
+      ],
+      "next_action": "Udostępnić wybór projektu/GPZ i czytelny raport zwalidowanych danych.",
+      "acceptance": "Mapa z tekstowymi dowodami, datami i niewiadomymi; testy podstawowej ścieżki użytkownika.",
+      "evidence": [
+        "docs/08_roadmap.md"
+      ]
+    },
+    {
+      "id": "KSE-025",
+      "title": "Cykliczne aktualizacje i historia zmian",
+      "stage": "V1",
+      "status": "Not Started",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-015",
+        "KSE-016",
+        "KSE-023"
+      ],
+      "next_action": "Zaprojektować harmonogram, cache, limity, korekty i powiadomienia.",
+      "acceptance": "Zmiana źródła wykrywana, historia zachowana, błąd parsera zatrzymuje promocję danych.",
+      "evidence": [
+        "docs/03_system_architecture.md"
+      ]
+    },
+    {
+      "id": "KSE-026",
+      "title": "Rozszerzenie pokrycia OSD i regionów",
+      "stage": "V1",
+      "status": "Not Started",
+      "priority": "P2",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-023",
+        "KSE-025"
+      ],
+      "next_action": "Powtórzyć proces walidacji dla następnego operatora i regionu.",
+      "acceptance": "Każdy nowy obszar ma jawny zakres i miary pokrycia; brak deklaracji kompletności kraju.",
+      "evidence": [
+        "docs/08_roadmap.md"
+      ]
+    },
+    {
+      "id": "KSE-027",
+      "title": "Scenariusze przyszłej sieci i trasy",
+      "stage": "V2",
+      "status": "Not Started",
+      "priority": "P2",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-019",
+        "KSE-020",
+        "KSE-023"
+      ],
+      "next_action": "Opracować warianty inwestycji i osiągalności przestrzennej.",
+      "acceptance": "Plany oddzielone od obecnej infrastruktury; zakresy i założenia uzasadnione danymi.",
+      "evidence": [
+        "docs/05_grid_capacity_methodology.md"
+      ]
+    },
+    {
+      "id": "KSE-028",
+      "title": "Metodologia confidence i scoringu",
+      "stage": "V2",
+      "status": "Not Started",
+      "priority": "P2",
+      "owner": "Użytkownik + Codex",
+      "depends_on": [
+        "KSE-023",
+        "KSE-026"
+      ],
+      "next_action": "Zdefiniować cel wskaźnika i zbiór kalibracyjny przed wagami.",
+      "acceptance": "Odrębne score/confidence, wyjaśnienia, walidacja; bez danych kalibracyjnych wynik pozostaje UNKNOWN.",
+      "evidence": [
+        "docs/06_scoring_methodology.md"
+      ]
+    },
+    {
+      "id": "KSE-029",
+      "title": "Dane techniczne i model rozpływowy",
+      "stage": "Long-term",
+      "status": "Not Started",
+      "priority": "P2",
+      "owner": "Użytkownik + Codex",
+      "depends_on": [
+        "KSE-023"
+      ],
+      "next_action": "Ocenić dostęp do parametrów, profili i topologii operatora oraz solverów.",
+      "acceptance": "Kompletne wymagane wejścia i niezależna walidacja; w przeciwnym razie dokumentacja niewykonalności.",
+      "evidence": [
+        "docs/05_grid_capacity_methodology.md"
+      ],
+      "risk": "Publiczne dane mogą nie wystarczyć; brak gwarancji osiągalności etapu."
+    },
+    {
+      "id": "KSE-030",
+      "title": "Potwierdzić zewnętrzną kopię archiwum",
+      "stage": "Organizacja",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Użytkownik",
+      "depends_on": [
+        "KSE-003"
+      ],
+      "next_action": "Wykonać prywatną kopię ZIP na drugim nośniku i potwierdzić jej odczyt.",
+      "acceptance": "Istnieje niezależna kopia archiwum zgodna z manifestem. Sam lokalny ZIP i push nie spełniają warunku.",
+      "evidence": [
+        "docs/reproducibility.md"
+      ]
+    }
+  ]
+}

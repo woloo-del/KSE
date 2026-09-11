@@ -2253,3 +2253,11 @@ Version project documentation, code, configuration, source catalogs, dependency 
 After a coherent, validated work increment, create a descriptive local commit when Git identity and access are configured. Report its identifier. Push when the user requests sending changes; distinguish a local commit from a successful push. Never force-push to resolve an ordinary synchronization problem.
 
 Preserve exact raw input bytes in immutable, checksummed snapshots. Large raw datasets and generated caches are not ordinary Git contents. Record the archive manifest in Git and maintain a separate private backup of the source archive; do not claim that URLs and hashes alone reproduce a changed historical source. See `docs/reproducibility.md` and `docs/git_workflow.md`.
+
+---
+
+# 91. TODO and Project Reports — User Request 2026-09-10
+
+Maintain `data/project/todo.json` as the authoritative task register. Preserve stable task IDs, dependencies, priorities, next actions, acceptance criteria and completion evidence. Update it as work progresses; never mark a task complete only because its specification exists. Do not invent deadlines. Retain completed tasks and Git history.
+
+`TODO.md` and the detailed Excel report are generated views. Use `scripts/generate_project_report.ps1` to refresh them at reporting milestones or when requested. Keep task changes in the JSON, not only in Excel. Clearly distinguish a generated snapshot from live source data. Reporting scripts must read an explicit list of project files and must not read `_secrets`, credentials, or arbitrary environment contents.
