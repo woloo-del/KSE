@@ -10,6 +10,7 @@ export const DOCUMENTS = [
   'docs/06_scoring_methodology.md','docs/07_data_quality.md','docs/08_roadmap.md',
   'docs/gpz_pipeline.md','docs/decision_log.md','docs/discovery_log.md',
   'docs/reproducibility.md','docs/git_workflow.md','docs/project_reporting.md',
+  'docs/09_pilot_scope.md',
 ];
 export const sha = b => crypto.createHash('sha256').update(b).digest('hex');
 export const plain = s => String(s ?? '').replace(/\[([^\]]+)\]\(([^)]+)\)/g,'$1 ($2)').replace(/\*\*|`/g,'');

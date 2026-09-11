@@ -26,6 +26,23 @@ Testy odtwarzania `python -m unittest discover -s tests -v`: **3/3 OK**. Sprawdz
 
 ## Wymagania dla przyszłych parserów
 
+### Kontrola dat Energi — 11.09.2026
+
+Ponownie odczytana [oficjalna strona przyłączeń](https://energa-operator.pl/przylaczenie-do-sieci/informacje-o-stanie-przylaczen) nadal wskazuje [PDF o nazwie 2026_08_31](https://cdn-netpr.pl/file/mediakit/3063617/fa/2026_08_31_pusop_wnioski_i_odmowy_eop.pdf). Odczyt treści online i zachowanej próbki wskazuje nagłówek „Stan na 30.06.2026” oraz tytuł metadanych z czerwcem. Nie otrzymano wyjaśnienia operatora. Nie przypisujemy dokumentowi pewnej daty sierpniowej ani czerwcowej dla wszystkich rekordów.
+
+Moduł `connectors/energa/date_quality.py` porównuje datę nazwy, nagłówka i tytułu metadanych. Konflikt, niepoprawna data lub brak nagłówka powoduje kwarantannę i `source_date=null`. Zgodność dat sama nie dopuszcza źródła do bieżącego pipeline: nadal potrzeba walidacji rekordów, aktualności i praw. Nie jest to jeszcze pełny connector ani parser tabel projektowych.
+
+Wynik dla zachowanej próbki: [energa_date_review_2026-09-11.json](../data/catalog/energa_date_review_2026-09-11.json). Stary PDF i wcześniejszy raport walidacji pozostają niezmienione. Zadanie KSE-008 zamykamy przez wdrożenie kwarantanny, zgodnie z jego kryterium; konflikt źródła pozostaje nierozstrzygnięty.
+
+Odtworzenie po przywróceniu archiwum (Python z `requirements-research.txt`; nowa nazwa wyjścia chroni historię):
+
+```powershell
+python -m connectors.energa.date_quality data/raw/research/2026-09-10/energa_pipeline_2026-08-31.pdf --source-url https://cdn-netpr.pl/file/mediakit/3063617/fa/2026_08_31_pusop_wnioski_i_odmowy_eop.pdf --output data/catalog/energa_date_review_repeat.json
+python -m unittest discover -s tests -p test_energa_date_quality.py -v
+```
+
+Wykonano 7 testów, w tym rzeczywistego PDF; wszystkie przeszły. Metoda rozpoznaje wyłącznie wskazany wzorzec dat, więc zmieniony nagłówek powoduje zatrzymanie, a nie zgadywanie daty z wierszy projektów.
+
 Parser ma sprawdzać sygnaturę i typ odpowiedzi, wymagane nagłówki, jednostki i zakres tabel, daty, wartości null, duplikaty, zgodność poziomu napięcia i zmiany historyczne. Niezrozumiała zmiana schematu ma zatrzymać promocję do warstwy analitycznej. Błędów nie wolno ignorować; klasy: FETCH_ERROR, PARSE_ERROR, SCHEMA_ERROR, VALIDATION_ERROR, SOURCE_CHANGED, RATE_LIMITED, AUTH_ERROR, UNKNOWN_ERROR.
 
 Potrzebne będą reprezentatywne próbki i testy jednostek oraz rzeczywistych wariantów tabel. Każdy znormalizowany rekord musi wskazywać snapshot i miejsce w źródle. Test poprawnego otwarcia PDF nie dowodzi poprawności ekstrakcji mocy lub przypisania projektu.

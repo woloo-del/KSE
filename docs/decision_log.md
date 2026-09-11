@@ -101,3 +101,13 @@
 **Trade-offs:** Raport jest snapshotem, nie synchronizuje zmian z Excela do repo. Generator wymaga kompatybilnego środowiska artifact-tool. Oś planu pokazuje do 30 zadań, pełny rejestr nie ma tego ograniczenia. Brak terminów nie jest uzupełniany fikcyjnym harmonogramem.
 
 **Consequences:** Dodano walidację zależności, dowodów zakończenia, schematu wykonalności oraz manifest raportu z hashami wejść. Sekrety pozostają poza raportem. Nie rozpoczęto implementacji analitycznej aplikacji.
+
+## 2026-09-11 — kwarantanna sprzecznej daty pipeline
+
+**Decision / Context:** Publikacja Energi wskazuje różne daty w nazwie pliku i nagłówku. Ponowny odczyt oficjalnej strony nie dostarczył rozstrzygnięcia.
+
+**Options considered:** Data z nazwy; data z nagłówka; zachowanie wszystkich twierdzeń i kwarantanna.
+
+**Selected option / Reason:** Ostatni wariant, `source_date=null`, `DATE_CONFLICT`. Nie ma podstaw do wyboru jednej daty dla całego zbioru. KSE-008 kończy się kontrolą ryzyka, a nie usunięciem sprzeczności u operatora.
+
+**Trade-offs / Consequences:** Mniejsze pokrycie pewnego bieżącego pipeline; dokument pozostaje dowodem badawczym. Nowy moduł bada wyłącznie daty, nie rekordy projektów. Zgodne daty nie zastępują kontroli licencji, aktualności i poprawności ekstrakcji. Zakres pilota nadal jest propozycją w `docs/09_pilot_scope.md`.

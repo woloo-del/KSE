@@ -110,36 +110,42 @@
       "id": "KSE-007",
       "title": "Ustalić zakres i kryteria MVP",
       "stage": "Produkt",
-      "status": "Not Started",
+      "status": "In Progress",
       "priority": "P0",
       "owner": "Użytkownik + Codex",
       "depends_on": [
         "KSE-001",
         "KSE-005"
       ],
-      "next_action": "Uzgodnić pierwszy raport i granice obietnicy produktu.",
+      "next_action": "Uzyskać akceptację propozycji raportu jednego GPZ i kryteriów odbioru.",
       "acceptance": "Zapisany zakres pilota, mierzalne kryteria odbioru i wyłączenia bez obietnicy nieuzasadnionych MW/probability.",
       "evidence": [
         "docs/02_feasibility_matrix.md",
-        "docs/08_roadmap.md"
-      ]
+        "docs/08_roadmap.md",
+        "docs/09_pilot_scope.md"
+      ],
+      "started_at": "2026-09-11"
     },
     {
       "id": "KSE-008",
       "title": "Wyjaśnić konflikt dat Energi",
       "stage": "Dane",
-      "status": "At Risk",
+      "status": "Complete",
       "priority": "P0",
       "owner": "Codex",
       "depends_on": [
         "KSE-002"
       ],
-      "next_action": "Porównać nowsze wersje i dowody nagłówka z nazwą pliku.",
+      "next_action": "Utrzymać kwarantannę do uzyskania spójnej publikacji lub wyjaśnienia operatora.",
       "acceptance": "Udokumentowane rozstrzygnięcie lub kwarantanna konfliktowej daty, bez nadpisania źródła.",
       "evidence": [
-        "docs/07_data_quality.md"
+        "docs/07_data_quality.md",
+        "connectors/energa/date_quality.py",
+        "tests/test_energa_date_quality.py",
+        "data/catalog/energa_date_review_2026-09-11.json"
       ],
-      "risk": "Nazwa wskazuje sierpień, nagłówek czerwiec; aktualność nierozstrzygnięta."
+      "risk": "Konflikt dat pozostaje nierozstrzygnięty; ukończono kontrolę i kwarantannę.",
+      "completed_at": "2026-09-11"
     },
     {
       "id": "KSE-009",

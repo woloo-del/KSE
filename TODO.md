@@ -6,8 +6,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 
 ## Najbliższe zadania bez nieukończonych zależności
 
-- **KSE-007 — Ustalić zakres i kryteria MVP** (P0, Do zrobienia). Uzgodnić pierwszy raport i granice obietnicy produktu.
-- **KSE-008 — Wyjaśnić konflikt dat Energi** (P0, Zagrożone). Porównać nowsze wersje i dowody nagłówka z nazwą pliku.
+- **KSE-007 — Ustalić zakres i kryteria MVP** (P0, W toku). Uzyskać akceptację propozycji raportu jednego GPZ i kryteriów odbioru.
 - **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). Sprawdzić zwykły dostęp lub oficjalny kanał bez obchodzenia blokady.
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Wykonać prywatną kopię ZIP na drugim nośniku i potwierdzić jej odczyt.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
@@ -23,8 +22,8 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-004 | Wykluczenie lokalnych sekretów z Git | Organizacja | Zrobione | P0 | — |
 | KSE-005 | Specyfikacja pipeline wybranego GPZ | Produkt | Zrobione | P0 | KSE-001 |
 | KSE-006 | TODO i generator pełnego raportu Excel | Organizacja | Zrobione | P0 | KSE-002 |
-| KSE-007 | Ustalić zakres i kryteria MVP | Produkt | Do zrobienia | P0 | KSE-001, KSE-005 |
-| KSE-008 | Wyjaśnić konflikt dat Energi | Dane | Zagrożone | P0 | KSE-002 |
+| KSE-007 | Ustalić zakres i kryteria MVP | Produkt | W toku | P0 | KSE-001, KSE-005 |
+| KSE-008 | Wyjaśnić konflikt dat Energi | Dane | Zrobione | P0 | KSE-002 |
 | KSE-009 | Zweryfikować dostęp do publikacji PGE | Dane | Zagrożone | P0 | KSE-002 |
 | KSE-010 | Ustalić prawa źródeł wybranych do pilota | Dane | Do zrobienia | P0 | KSE-007 |
 | KSE-011 | Przetestować uwierzytelnione API ENTSO-E | Dane | Do zrobienia | P1 | KSE-004 |
@@ -119,24 +118,24 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-007 — Ustalić zakres i kryteria MVP
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Uzgodnić pierwszy raport i granice obietnicy produktu.
+- Następny krok: Uzyskać akceptację propozycji raportu jednego GPZ i kryteriów odbioru.
 - Kryterium: Zapisany zakres pilota, mierzalne kryteria odbioru i wyłączenia bez obietnicy nieuzasadnionych MW/probability.
 - Nieukończone zależności: brak.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/02_feasibility_matrix.md](docs/02_feasibility_matrix.md), [docs/08_roadmap.md](docs/08_roadmap.md).
+- Dowody/kontekst: [docs/02_feasibility_matrix.md](docs/02_feasibility_matrix.md), [docs/08_roadmap.md](docs/08_roadmap.md), [docs/09_pilot_scope.md](docs/09_pilot_scope.md).
 
 ### KSE-008 — Wyjaśnić konflikt dat Energi
 
 - Odpowiedzialność: Codex.
-- Następny krok: Porównać nowsze wersje i dowody nagłówka z nazwą pliku.
+- Następny krok: Utrzymać kwarantannę do uzyskania spójnej publikacji lub wyjaśnienia operatora.
 - Kryterium: Udokumentowane rozstrzygnięcie lub kwarantanna konfliktowej daty, bez nadpisania źródła.
 - Nieukończone zależności: brak.
-- Ryzyko: Nazwa wskazuje sierpień, nagłówek czerwiec; aktualność nierozstrzygnięta..
+- Ryzyko: Konflikt dat pozostaje nierozstrzygnięty; ukończono kontrolę i kwarantannę..
 - Termin docelowy: nie ustalono.
-- Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/07_data_quality.md](docs/07_data_quality.md).
+- Zakończono: 2026-09-11.
+- Dowody/kontekst: [docs/07_data_quality.md](docs/07_data_quality.md), [connectors/energa/date_quality.py](connectors/energa/date_quality.py), [tests/test_energa_date_quality.py](tests/test_energa_date_quality.py), [data/catalog/energa_date_review_2026-09-11.json](data/catalog/energa_date_review_2026-09-11.json).
 
 ### KSE-009 — Zweryfikować dostęp do publikacji PGE
 

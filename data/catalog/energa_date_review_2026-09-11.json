@@ -1,0 +1,25 @@
+{
+  "method_version": "energa_date_gate_v1",
+  "claims": {
+    "filename": [
+      "2026-08-31"
+    ],
+    "header": [
+      "2026-06-30"
+    ],
+    "metadata_title": [
+      "2026-06-30"
+    ]
+  },
+  "errors": [],
+  "code": "DATE_CONFLICT",
+  "quarantined": true,
+  "source_date": null,
+  "source_date_classification": "UNKNOWN",
+  "current_pipeline_eligible": false,
+  "limitation": "Date coherence alone does not validate rows, completeness, legal use or freshness.",
+  "source_url": "https://cdn-netpr.pl/file/mediakit/3063617/fa/2026_08_31_pusop_wnioski_i_odmowy_eop.pdf",
+  "source_page": 1,
+  "snapshot_sha256": "4d66bfc4df8a9da1489b179395aff49f889bc6fd10c5551e3eacd3031ca8b44b",
+  "checked_at_utc": "2026-09-11T06:59:41.691710+00:00"
+}
