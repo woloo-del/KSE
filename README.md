@@ -1,4 +1,4 @@
-# Grid Connection Intelligence — Polska
+# Grid Connection Intelligence - Polska
 
 Stan na **10.09.2026**: zakończony pierwszy przegląd źródeł i prób dostępu. Projekt jest na etapie badań; nie zawiera aplikacji produkcyjnej ani zweryfikowanego modelu rozpływowego.
 
