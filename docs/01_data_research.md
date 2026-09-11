@@ -262,3 +262,7 @@ Zasadne jest przygotowanie pilota **evidence-based screening**: wybór punktu, p
 Warunek wyboru pilota: co najmniej jedna jednoznacznie zidentyfikowana stacja, udokumentowane relacje z siecią 110 kV/PSE, kilka rzeczywistych projektów z czytelnym statusem, źródło inwestycji oraz możliwość kontroli przynajmniej części danych u źródła. Jeśli brakuje danych elektrycznych, raport nie wyświetli obliczonej rezerwy MW.
 
 Wstępne rozdzielenie możliwości zawiera [macierz wykonalności](02_feasibility_matrix.md). Dalszy zakres MVP, wybór architektury i ewentualny PoC wymagają kolejnego etapu uzgodnionego z użytkownikiem. Pierwsze badanie nie uzasadnia budowy ogólnopolskiego kalkulatora prawdopodobieństwa przyłączenia. Uzasadnia budowę systemu, który rzetelnie pokazuje **co wiadomo, skąd to wiadomo i czego jeszcze trzeba się dowiedzieć**.
+
+## Uzupełnienie 11.09.2026 — linia 110 kV
+
+Rejestr obejmuje 61 źródeł publicznych. [Decyzja 3/2024](https://bip.kielce.uw.gov.pl/download/2/33548/decprzesylnr324.pdf) dostarczyła dowodu dla Radkowice–Wolica. Zakres i ograniczenia: [badanie 110 kV](12_radkowice_110kv_research.md). Prywatne materiały użytkownika mają osobny rejestr lokalny i nie zwiększają liczby publicznych źródeł.

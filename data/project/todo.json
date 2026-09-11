@@ -227,13 +227,14 @@
         "KSE-007",
         "KSE-010"
       ],
-      "next_action": "Radkowice wybrane badawczo; uzupełnić granice PSE/PGE, źródła 110 kV i podstawę wykorzystania przed zamknięciem zadania.",
+      "next_action": "Potwierdzić granice PSE/PGE i prawa źródeł; relacja 110 kV Radkowice–Wolica ma dowód administracyjny.",
       "acceptance": "Rzeczywisty GPZ, udokumentowane powiązania, projekty i inwestycje; wybór uzasadniony dowodami.",
       "evidence": [
         "docs/08_roadmap.md",
         "docs/10_radkowice_pilot.md",
         "data/reference/radkowice_pse_projects_2026-07-31.json",
-        "docs/11_radkowice_evidence_model.md"
+        "docs/11_radkowice_evidence_model.md",
+        "docs/12_radkowice_110kv_research.md"
       ],
       "started_at": "2026-09-11",
       "risk": "Brak potwierdzonych granic własności i kompletnego pipeline PGE; prawa źródeł nadal otwarte."
@@ -546,6 +547,43 @@
       ],
       "started_at": "2026-09-11",
       "completed_at": "2026-09-11"
+    },
+    {
+      "id": "KSE-032",
+      "title": "Rozszerzenie dowodów 110 kV i przegląd materiału użytkownika",
+      "stage": "Research",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-031"
+      ],
+      "next_action": "Rozwinąć integrację prywatnych obserwacji osobno; nadal sprawdzać aktualny stan sieci.",
+      "acceptance": "Publiczny dowód z zachowanym snapshotem i grafem v2; prywatny przegląd z proweniencją poza ogólnym eksportem.",
+      "evidence": [
+        "docs/12_radkowice_110kv_research.md",
+        "docs/private_sources.md",
+        "tests/test_wolica_evidence.py"
+      ],
+      "started_at": "2026-09-11",
+      "completed_at": "2026-09-11"
+    },
+    {
+      "id": "KSE-033",
+      "title": "Prywatne obserwacje i wspólna infrastruktura przyłączeniowa",
+      "stage": "Model",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Użytkownik + Codex",
+      "depends_on": [
+        "KSE-032"
+      ],
+      "next_action": "Ustalić model wspólnego przyłącza, praw dostępu, odrębnych limitów mocy i liczby miejsc oraz wersji dokumentów.",
+      "acceptance": "Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.",
+      "evidence": [
+        "docs/private_sources.md",
+        "docs/04_data_model.md"
+      ]
     }
   ]
 }

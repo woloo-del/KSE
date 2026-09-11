@@ -1,5 +1,7 @@
 .env
 _secrets/
+data/private/
+~$*.xlsx
 .report_runtime/
 outputs/**/previews/
 outputs/**/*.inspection.json

@@ -1,0 +1,15 @@
+[
+  {
+    "local_path": "data/raw/research/2026-09-11/radkowice_wolica_decision_3_2024.pdf",
+    "url": "https://bip.kielce.uw.gov.pl/download/2/33548/decprzesylnr324.pdf",
+    "retrieval_date": "2026-09-11T13:40:11.4850806Z",
+    "sha256": "10ef3e62e8ab57adec6170f91a1ca57fac4047fc8bf96a0fc4483bd044d2088b",
+    "content_type": [
+      "application/pdf"
+    ],
+    "source_id": "SUW_RADK_WOLICA_3_2024",
+    "bytes": 178281,
+    "error": null,
+    "http_status": 200
+  }
+]

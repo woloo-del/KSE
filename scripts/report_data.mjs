@@ -13,8 +13,14 @@ export const DOCUMENTS = [
   'docs/09_pilot_scope.md',
   'docs/10_radkowice_pilot.md',
   'docs/11_radkowice_evidence_model.md',
+  'docs/12_radkowice_110kv_research.md',
+  'docs/private_sources.md',
 ];
 export const sha = b => crypto.createHash('sha256').update(b).digest('hex');
+export function assertPublicReportPath(relative) {
+  const parts = relative.replaceAll('\\','/').toLowerCase().split('/');
+  if (parts.some(p=>['_secrets','private','..'].includes(p))) throw Error('Zabronione źródło raportu');
+}
 export const plain = s => String(s ?? '').replace(/\[([^\]]+)\]\(([^)]+)\)/g,'$1 ($2)').replace(/\*\*|`/g,'');
 
 export function validateTasks(data) {
@@ -74,13 +80,14 @@ export async function collect(root) {
   const inputs=[];
   async function read(relative) {
     // Allowlisted files only: never traverse the workspace or load credentials.
-    if(relative.split(/[\\/]/).includes('_secrets')) throw Error('Zabronione źródło raportu');
+    assertPublicReportPath(relative);
     const b=await fs.readFile(path.join(root,relative)); inputs.push({path:relative,sha256:sha(b),bytes:b.length});
     return b.toString('utf8').replace(/^\uFEFF/,'');
   }
   const todo=JSON.parse(await read('data/project/todo.json'));
   const tasks=validateTasks(todo);
   for(const t of tasks) for(const e of t.evidence??[]) {
+    assertPublicReportPath(e);
     const p=path.resolve(root,e); if(!p.startsWith(root+path.sep) || e.split(/[\\/]/).includes('_secrets')) throw Error(`Niedozwolony dowód ${t.id}`);
     await fs.access(p);
   }

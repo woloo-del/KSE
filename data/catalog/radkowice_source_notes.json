@@ -138,6 +138,47 @@
         "Dowód próby: data/catalog/pge_radkowice_access_2026-09-11.json"
       ],
       "priority": "P0"
+    },
+    {
+      "source_id": "SUW_RADK_WOLICA_3_2024",
+      "operator": "PGE Dystrybucja — wnioskodawca",
+      "source_name": "Decyzja 3/2024 — przebudowa odcinka Radkowice–Wolica",
+      "url": "https://bip.kielce.uw.gov.pl/download/2/33548/decprzesylnr324.pdf",
+      "data_owner": "Wojewoda Świętokrzyski / Świętokrzyski Urząd Wojewódzki",
+      "data_category": "grid_investment_administrative_decision",
+      "grid_voltage": [
+        "110 kV"
+      ],
+      "geographical_scope": "Odcinek w gminach Morawica i Chęciny",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "last_verified": "2026-09-11",
+      "last_successful_verification": "2026-09-11",
+      "source_date": "2024-11-29",
+      "source_page": "1–3",
+      "source_version": "SPN.III.747.20.2024, decyzja 3/2024",
+      "machine_readable": "PARTIAL — tekst i tabela PDF",
+      "scraping_required": "NO — bezpośredni plik PDF",
+      "reliability": "C",
+      "priority": "P0",
+      "key_fields": [
+        "relacja linii",
+        "napięcie",
+        "wnioskodawca",
+        "parametry planowanego odcinka",
+        "data decyzji"
+      ],
+      "potential_application": "Historyczny dowód relacji 110 kV i osobny rekord inwestycji",
+      "known_limitations": [
+        "Nie potwierdza realizacji inwestycji",
+        "991,8 m dotyczy zakresu decyzji, nie całej linii",
+        "Brak aktualnej obciążalności i dokładnej granicy własności PSE/PGE"
+      ],
+      "probe_ids": [
+        "SUW_RADK_WOLICA_3_2024"
+      ]
     }
   ]
 }

@@ -131,3 +131,12 @@
 **Selected option / Reason:** JSON i walidator Python, bez nowych zależności. Każde twierdzenie ma dowód, daty i hash. To odtwarzalny eksperyment reprezentacji danych; nie zmienia otwartych warunków produkcyjnego wykorzystania źródeł.
 
 **Trade-offs / Consequences:** Brak zapytań przestrzennych, trwałej bazy historii i modelu rozpływowego. Pełne KSE-014/018 pozostają otwarte. Powiązanie PGE z miejscem dostarczania z taryfy nie jest relacją własności. Nowe KSE-031 obejmuje wyłącznie wykonany eksperyment i jego testy.
+
+## 11.09.2026 — graf v2 i prywatne materiały
+
+Decision: zachować v1, utworzyć v2 z dodatkowym źródłem publicznym; dokumenty użytkownika i pochodne wyniki przechowywać oddzielnie.
+Options considered: nadpisanie grafu; wspólny katalog bez ograniczeń; jawne wersje i rozdział dostępu.
+Selected option: jawne wersje grafu i lokalny katalog prywatny z wersjami przeglądu oraz hashami.
+Reason: nie mieszać parametrów planowanych z istniejącymi ani materiałów użytkownika z publiczną bazą źródeł.
+Trade-offs: prywatne wyniki nie są objęte Git ani ogólnym Excelem; wymagają oddzielnej kopii.
+Consequences: pełna integracja prywatnych danych pozostaje KSE-033; obecna aplikacja nie ma jeszcze kontroli dostępu.

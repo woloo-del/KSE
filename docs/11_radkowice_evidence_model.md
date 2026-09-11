@@ -50,3 +50,7 @@ Walidator wykrywa brak dowodu, duplikaty ID, nieistniejące końce relacji, sprz
 ## Następny etap
 
 Rozstrzygnąć legalny zakres użycia źródeł pilota, uzyskać potwierdzone dane PGE i rozwinąć model obserwacji oraz wniosków. KSE-014 i KSE-018 pozostają osobnymi zadaniami pełnego pilota; prototyp nie spełnia wszystkich ich kryteriów. Taryfa nie zastępuje tych braków. Nowy PDF zachowano w `data/archives/radkowice_tariff_2026-09-11.zip`; manifest `data/catalog/radkowice_tariff_archive.json` wskazuje sprawdzone hashe. Paczka pozostaje lokalna, bez potwierdzonej kopii zewnętrznej.
+
+## Wersja v2 — 11.09.2026
+
+[Uzupełnienie 110 kV](12_radkowice_110kv_research.md) rozszerza graf do 13 obiektów i 13 relacji. Polecenie bez argumentu generuje teraz v2; `--version 1` odtwarza zachowaną wersję v1. Dokumenty prywatne nie wchodzą do tego grafu.

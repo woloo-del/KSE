@@ -1,10 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {validateTasks,parseFeasibility,documentRows,todoMarkdown} from '../scripts/report_data.mjs';
+import {validateTasks,parseFeasibility,documentRows,todoMarkdown,assertPublicReportPath} from '../scripts/report_data.mjs';
 
 const original=JSON.parse(await fs.readFile(new URL('../data/project/todo.json',import.meta.url),'utf8'));
 const copy=()=>structuredClone(original);
+test('private source and secret paths cannot enter general report inputs',()=>{
+  for(const name of ['data/private/review.json','data\\PRIVATE\\review.md','_secrets/key.txt','docs/../data/private/review.md']) {
+    assert.throws(()=>assertPublicReportPath(name),/Zabronione/);
+  }
+  assert.doesNotThrow(()=>assertPublicReportPath('docs/private_sources.md'));
+});
 test('real TODO has stable unique IDs and preserves missing deadlines',()=>{
   const tasks=validateTasks(original);
   assert.equal(tasks.length,original.tasks.length);

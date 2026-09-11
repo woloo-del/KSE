@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-11**. Źródła: **60**.
+Stan badania: **2026-09-11**. Źródła: **61**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -70,6 +70,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | CHECINY_ENERGY_PLAN | [BIP Chęcin — założenia energetyczne 2025–2027 z perspektywą 2040](https://checiny.biuletyn.net/fls/bip_pliki/2026_03/BIPF64CD10561EC15Z/PZCEEPG_2025-2027.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
 | PSE_TARIFF_2026 | [Taryfa PSE 2026 — odbiorcy i miejsca dostarczania](https://www.pse.pl/documents/20182/7005343691/20260116_Tekst_Taryfy_na_2026_tekst_jednolity.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
 | PGE_RADK_CAPACITY_ATTEMPT | [Próba dostępu do pliku mocy PGE I kw.2026](https://pgedystrybucja.pl/content/download/71691b9fb622cdf89306ec0dc0c1ac3d/file/dostepne-moce-pge-i-kw-2026.pdf?contentId=2208&inLanguage=pol-PL&version=6) | BLOCKED | P0 | UNKNOWN |
+| SUW_RADK_WOLICA_3_2024 | [Decyzja 3/2024 — przebudowa odcinka Radkowice–Wolica](https://bip.kielce.uw.gov.pl/download/2/33548/decprzesylnr324.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
 
 ## Karty źródeł
 
@@ -2234,5 +2235,41 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Udany odczyt:** UNKNOWN / nie dotyczy
 - **Klasyfikacja wejścia:** REPORTED
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### SUW_RADK_WOLICA_3_2024 — Decyzja 3/2024 — przebudowa odcinka Radkowice–Wolica
+
+[Źródło](https://bip.kielce.uw.gov.pl/download/2/33548/decprzesylnr324.pdf)
+
+- **Operator:** PGE Dystrybucja — wnioskodawca
+- **Właściciel:** Wojewoda Świętokrzyski / Świętokrzyski Urząd Wojewódzki
+- **Kraj:** PL
+- **Kategoria:** grid_investment_administrative_decision
+- **Napięcie:** 110 kV
+- **Zasięg:** Odcinek w gminach Morawica i Chęciny
+- **Format:** PDF
+- **API:** UNKNOWN
+- **GIS:** UNKNOWN
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN — nie potwierdzono otwartej licencji wybranego zbioru.
+- **Użycie komercyjne:** UNKNOWN
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** PARTIAL — tekst i tabela PDF
+- **Scraping:** NO — bezpośredni plik PDF
+- **Pola:** relacja linii; napięcie; wnioskodawca; parametry planowanego odcinka; data decyzji
+- **Zastosowanie:** Historyczny dowód relacji 110 kV i osobny rekord inwestycji
+- **Ograniczenia:** Nie potwierdza realizacji inwestycji; 991,8 m dotyczy zakresu decyzji, nie całej linii; Brak aktualnej obciążalności i dokładnej granicy własności PSE/PGE
+- **Data stanu źródła:** 2024-11-29
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** SPN.III.747.20.2024, decyzja 3/2024
+- **Strona źródła:** 1–3
+- **Sprawdzono:** 2026-09-11
+- **Udany odczyt:** 2026-09-11
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba SUW_RADK_WOLICA_3_2024:** HTTP 200; 2026-09-11T13:40:11.4850806Z; `data/catalog/probe_results_radkowice_wolica_2026-09-11.json`; próbka `data/raw/research/2026-09-11/radkowice_wolica_decision_3_2024.pdf`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

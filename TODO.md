@@ -9,6 +9,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). Bezpośredni PDF nadal zwraca blokadę (11.09); sprawdzić oficjalny alternatywny kanał lub dokumenty przekazane przez użytkownika.
 - **KSE-010 — Ustalić prawa źródeł wybranych do pilota** (P0, Do zrobienia). Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Wykonać prywatną kopię ZIP na drugim nośniku i potwierdzić jej odczyt.
+- **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, Do zrobienia). Ustalić model wspólnego przyłącza, praw dostępu, odrębnych limitów mocy i liczby miejsc oraz wersji dokumentów.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 
@@ -47,6 +48,8 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-029 | Dane techniczne i model rozpływowy | Long-term | Do zrobienia | P2 | KSE-023 |
 | KSE-030 | Potwierdzić zewnętrzną kopię archiwum | Organizacja | Do zrobienia | P0 | KSE-003 |
 | KSE-031 | Eksperymentalny graf dowodów Radkowic | Model | Zrobione | P0 | KSE-002, KSE-007 |
+| KSE-032 | Rozszerzenie dowodów 110 kV i przegląd materiału użytkownika | Research | Zrobione | P0 | KSE-031 |
+| KSE-033 | Prywatne obserwacje i wspólna infrastruktura przyłączeniowa | Model | Do zrobienia | P0 | KSE-032 |
 
 ## Kryteria zakończenia i dowody
 
@@ -185,13 +188,13 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-013 — Wybrać stację i obszar pilota
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Radkowice wybrane badawczo; uzupełnić granice PSE/PGE, źródła 110 kV i podstawę wykorzystania przed zamknięciem zadania.
+- Następny krok: Potwierdzić granice PSE/PGE i prawa źródeł; relacja 110 kV Radkowice–Wolica ma dowód administracyjny.
 - Kryterium: Rzeczywisty GPZ, udokumentowane powiązania, projekty i inwestycje; wybór uzasadniony dowodami.
 - Nieukończone zależności: KSE-010.
 - Ryzyko: Brak potwierdzonych granic własności i kompletnego pipeline PGE; prawa źródeł nadal otwarte..
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/08_roadmap.md](docs/08_roadmap.md), [docs/10_radkowice_pilot.md](docs/10_radkowice_pilot.md), [data/reference/radkowice_pse_projects_2026-07-31.json](data/reference/radkowice_pse_projects_2026-07-31.json), [docs/11_radkowice_evidence_model.md](docs/11_radkowice_evidence_model.md).
+- Dowody/kontekst: [docs/08_roadmap.md](docs/08_roadmap.md), [docs/10_radkowice_pilot.md](docs/10_radkowice_pilot.md), [data/reference/radkowice_pse_projects_2026-07-31.json](data/reference/radkowice_pse_projects_2026-07-31.json), [docs/11_radkowice_evidence_model.md](docs/11_radkowice_evidence_model.md), [docs/12_radkowice_110kv_research.md](docs/12_radkowice_110kv_research.md).
 
 ### KSE-014 — Zaprojektować model i architekturę pilota
 
@@ -390,3 +393,25 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-11.
 - Dowody/kontekst: [docs/11_radkowice_evidence_model.md](docs/11_radkowice_evidence_model.md), [scripts/build_radkowice_graph.py](scripts/build_radkowice_graph.py), [grid_engine/evidence_graph.py](grid_engine/evidence_graph.py), [tests/test_evidence_graph.py](tests/test_evidence_graph.py), [data/reference/radkowice_evidence_graph_v1.json](data/reference/radkowice_evidence_graph_v1.json).
+
+### KSE-032 — Rozszerzenie dowodów 110 kV i przegląd materiału użytkownika
+
+- Odpowiedzialność: Codex.
+- Następny krok: Rozwinąć integrację prywatnych obserwacji osobno; nadal sprawdzać aktualny stan sieci.
+- Kryterium: Publiczny dowód z zachowanym snapshotem i grafem v2; prywatny przegląd z proweniencją poza ogólnym eksportem.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-11.
+- Dowody/kontekst: [docs/12_radkowice_110kv_research.md](docs/12_radkowice_110kv_research.md), [docs/private_sources.md](docs/private_sources.md), [tests/test_wolica_evidence.py](tests/test_wolica_evidence.py).
+
+### KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa
+
+- Odpowiedzialność: Użytkownik + Codex.
+- Następny krok: Ustalić model wspólnego przyłącza, praw dostępu, odrębnych limitów mocy i liczby miejsc oraz wersji dokumentów.
+- Kryterium: Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: nie zakończono.
+- Dowody/kontekst: [docs/private_sources.md](docs/private_sources.md), [docs/04_data_model.md](docs/04_data_model.md).

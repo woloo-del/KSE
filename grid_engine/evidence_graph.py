@@ -31,7 +31,7 @@ def validate_graph(graph: dict) -> None:
             raise ValueError('DANGLING_ENDPOINT')
         if edge['relation'] == 'PLANNED_CONNECTION' and edge['physical_connection_confirmed'] is not False:
             raise ValueError('PLANNED_IS_NOT_CONNECTED')
-        if edge['relation'] == 'REPORTED_LINE' and edge.get('voltage_kV') != 220:
+        if edge['relation'] == 'REPORTED_LINE' and edge.get('voltage_kV') not in {110, 220}:
             raise ValueError('UNVERIFIED_VOLTAGE')
     if graph['power_flow_ready'] is not False:
         raise ValueError('NOT_A_POWER_FLOW_MODEL')
