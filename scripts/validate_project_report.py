@@ -22,7 +22,17 @@ def validate(report: Path) -> dict:
             raise AssertionError(name)
         checks.append(name)
 
-    check('Ten report sheets', len(values.sheetnames) == 10)
+    check('Eleven report sheets', len(values.sheetnames) == 11)
+    requests = json.loads((root / 'data/project/information_requests.json').read_text(encoding='utf-8'))['items']
+    check('All information request IDs', {values['Potrzebne informacje'].cell(r, 1).value for r in range(7,len(requests)+7)} == {i['id'] for i in requests})
+    fields = ['id','priority','title','status','requested_scope','unlocks','next_action','without_it','owner','updated_at','basis','received_evidence']
+    for row, item in enumerate(requests, 7):
+        for col, field in enumerate(fields, 1):
+            actual = values['Potrzebne informacje'].cell(row,col).value
+            expected = item[field] or 'Nie otrzymano'
+            if field == 'updated_at':
+                actual = actual.date().isoformat() if isinstance(actual, datetime) else actual
+            check(f'Information request {item["id"]} {field}', actual == expected)
     check('All task IDs', {values['TODO'].cell(r, 1).value for r in range(7, len(tasks)+7)} == {t['id'] for t in tasks})
     check('All source IDs', {values['Źródła'].cell(r, 1).value for r in range(7, len(sources)+7)} == {s['source_id'] for s in sources})
     for i, task in enumerate(tasks, 7):

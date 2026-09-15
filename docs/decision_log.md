@@ -185,3 +185,12 @@ Selected option: adapter v2 wybierany nową wersją żądania, z zachowaniem met
 Reason: nie reinterpretować wcześniejszych żądań; rozpatrywać wszystkie parametry dla tych samych dat i scenariusza.
 Trade-offs: kompletność pozostaje twierdzeniem źródła wymagającym kuracji. Każda nierozstrzygnięta historia miejsca blokuje liczbę nieprzypisanych miejsc; brak automatycznej normalizacji odmiennych tekstów liczbowych.
 Consequences: jawne jednostki i dowody są obowiązkowe; raportowane limity nie są dostępnymi MW. Nie dodano parametrów Radkowic bez dowodów. Kod i testy bez nowych zależności; manifest obejmuje nowy moduł. KSE-033 nadal w toku.
+
+## 2026-09-15 — rejestr potrzeb użytkownika w raporcie
+
+Decision / Context: użytkownik prosi o wskazywanie brakujących dokumentów i informacji w stałym rejestrze trafiającym do raportu.
+Options considered: uwagi w rozmowie; dodatkowe zadania TODO dla każdego dokumentu; odrębny rejestr potrzeb powiązany z dokumentacją i Excelem.
+Selected option: information_requests.json oraz zakładka Potrzebne informacje.
+Reason: dokument może być otrzymany, ale nadal niewystarczający; stan pozyskania nie jest stanem zadania implementacyjnego.
+Trade-offs: potrzebna regularna aktualizacja i kuracja tekstu; arkusz jest generowanym widokiem, nie formularzem zapisującym automatycznie do repozytorium.
+Consequences: pozycje niedostępne i otrzymane pozostają widoczne. Bez ponawiania prośby o ekspertyzę lub już dostarczone WP. Prywatna treść nie trafia do rejestru ani ogólnego raportu.

@@ -578,7 +578,7 @@
       "depends_on": [
         "KSE-032"
       ],
-      "next_action": "Wariant v2 obejmuje historyczne parametry i deklaracje kompletności. Następnie sprawdzić rzeczywiste dowody pilota względem kontraktu, zapisać braki i przygotować następny raport projektu; pełna baza i kontrola dostępu pozostają otwarte.",
+      "next_action": "Rejestr braków pilota i potrzeb użytkownika jest w information_requests.json oraz raporcie. Aktualizować po dostarczeniu materiału; kontynuować dostępne źródła niezależnie od niedostępnej ekspertyzy.",
       "acceptance": "Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.",
       "evidence": [
         "docs/private_sources.md",
@@ -600,7 +600,9 @@
         "grid_engine/strict_json.py",
         "tests/test_historical_assignment_replay.py",
         "grid_engine/historical_connection_parameters.py",
-        "tests/test_historical_connection_parameters.py"
+        "tests/test_historical_connection_parameters.py",
+        "data/project/information_requests.json",
+        "docs/15_information_requests.md"
       ],
       "started_at": "2026-09-11",
       "risk": "Brak ekspertyzy wpływu nie blokuje ewidencji. Brak danych sieciowych wyklucza wyliczanie rezerwy MW i częstości ograniczeń."

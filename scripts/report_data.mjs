@@ -16,9 +16,24 @@ export const DOCUMENTS = [
   'docs/12_radkowice_110kv_research.md',
   'docs/13_shared_connection_model.md',
   'docs/14_observation_history.md',
+  'docs/15_information_requests.md',
   'docs/private_sources.md',
 ];
 export const sha = b => crypto.createHash('sha256').update(b).digest('hex');
+export const REQUEST_STATUS = ['Do sprawdzenia','W pozyskiwaniu','Niedostępne','Otrzymano — do oceny zakresu','Zweryfikowano'];
+export function validateRequests(data) {
+  if(data.schema_version!=='information_requests_v1'||!Array.isArray(data.items)||!data.items.length) throw Error('Niepoprawny rejestr potrzeb');
+  const ids=new Set();
+  for(const item of data.items) {
+    if(!/^NEED-\d{3,}$/.test(item.id)||ids.has(item.id)) throw Error('Niepoprawne lub powtórzone ID potrzeby');
+    ids.add(item.id);
+    for(const field of ['title','requested_scope','unlocks','next_action','without_it','owner','basis']) if(typeof item[field]!=='string'||!item[field].trim()) throw Error('Niepełna potrzeba');
+    if(!REQUEST_STATUS.includes(item.status)||!['P0','P1','P2'].includes(item.priority)) throw Error('Niepoprawny status potrzeby');
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(item.updated_at)||new Date(item.updated_at).toISOString().slice(0,10)!==item.updated_at) throw Error('Niepoprawna data potrzeby');
+    if(['Otrzymano — do oceny zakresu','Zweryfikowano'].includes(item.status)&&!item.received_evidence) throw Error('Brak potwierdzenia otrzymania');
+  }
+  return data.items;
+}
 export function assertPublicReportPath(relative) {
   const parts = relative.replaceAll('\\','/').toLowerCase().split('/');
   if (parts.some(p=>['_secrets','private','..'].includes(p))) throw Error('Zabronione źródło raportu');
@@ -88,6 +103,7 @@ export async function collect(root) {
   }
   const todo=JSON.parse(await read('data/project/todo.json'));
   const tasks=validateTasks(todo);
+  const requests=validateRequests(JSON.parse(await read('data/project/information_requests.json')));
   for(const t of tasks) for(const e of t.evidence??[]) {
     assertPublicReportPath(e);
     const p=path.resolve(root,e); if(!p.startsWith(root+path.sep) || e.split(/[\\/]/).includes('_secrets')) throw Error(`Niedozwolony dowód ${t.id}`);
@@ -100,7 +116,7 @@ export async function collect(root) {
   const docs={}; for(const name of DOCUMENTS) docs[name]=await read(name);
   let git='UNKNOWN'; try {git=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}
   const fingerprint=sha(JSON.stringify(inputs));
-  return {todo,tasks,catalog,validation,archive,docs,inputs,fingerprint,git,feasibility:parseFeasibility(docs['docs/02_feasibility_matrix.md'])};
+  return {todo,tasks,requests,catalog,validation,archive,docs,inputs,fingerprint,git,feasibility:parseFeasibility(docs['docs/02_feasibility_matrix.md'])};
 }
 
 export function todoMarkdown(data) {

@@ -31,7 +31,7 @@ if(!skipPreviews) {
 console.log('Imported Project Tracker reference; preparing report.');
 
 const sheets={};
-for(const name of ['Podsumowanie','TODO','Wykonalność','Źródła','Źródła szczegóły','Ryzyka','Dokumentacja','Audyt','Odtwarzanie']) sheets[name]=wb.worksheets.add(name);
+for(const name of ['Podsumowanie','Potrzebne informacje','TODO','Wykonalność','Źródła','Źródła szczegóły','Ryzyka','Dokumentacja','Audyt','Odtwarzanie']) sheets[name]=wb.worksheets.add(name);
 const rendered=[];
 function literal(value) {
   if(value===null||value===undefined) return 'Nie ustalono';
@@ -74,6 +74,11 @@ function dateCells(sheet,column,values) {
   sheet.getRange(`${column}7:${column}${values.length+6}`).setNumberFormat('yyyy-mm-dd');
 }
 const tasks=data.tasks;
+const requestRows=data.requests.map(i=>[i.id,i.priority,i.title,i.status,i.requested_scope,i.unlocks,i.next_action,i.without_it,i.owner,i.updated_at,i.basis,i.received_evidence??'Nie otrzymano']);
+table('Potrzebne informacje','Dokumenty i informacje do pozyskania',
+  ['ID','Priorytet','Dokument / informacja','Status','Potrzebny zakres','Co umożliwi','Następny krok','Praca bez tych danych','Kto może pomóc','Aktualizacja','Podstawa wpisu','Potwierdzenie otrzymania'],
+  requestRows,[16,12,42,30,65,65,65,65,38,18,55,55],
+  'Rejestr potrzeb. Otrzymanie dokumentu nie oznacza potwierdzenia wszystkich tez. Niedostępne pozycje zachowujemy bez ponawiania próśb.');
 const todoRows=tasks.map(t=>[t.id,t.title,t.status,t.priority,t.stage,t.owner,t.depends_on.join(', ')||'Brak',t.unmet_dependencies.join(', ')||'Brak',t.next_action,t.acceptance,t.risk||'Brak dodatkowej uwagi',t.due_date??null,t.completed_at??null,(t.evidence??[]).join('\n')]);
 const todo=table('TODO','Rejestr zadań', ['ID','Zadanie','Status','Priorytet','Etap','Odpowiedzialność','Zależności','Nieukończone zależności','Następny krok','Kryterium zakończenia','Ryzyko / uwaga','Termin docelowy','Zakończono','Dowody i kontekst'],todoRows,[14,48,18,11,18,26,28,28,65,75,65,18,18,60],'Statusy: Complete = zrobione; In Progress = w toku; Not Started = do zrobienia; At Risk = zagrożone.');
 dateCells(todo,'L',tasks.map(t=>t.due_date));dateCells(todo,'M',tasks.map(t=>t.completed_at));
@@ -136,7 +141,7 @@ for(const c of data.validation.checks) auditRows.push(['Kontrola lokalna',c.name
 table('Audyt','Zapisane wyniki kontroli badania',['Grupa / źródło','Kontrola','Wynik / wyjaśnienie'],auditRows,[30,85,110],'To zapis wcześniejszych kontroli z podaną datą, nie potwierdzenie aktualnego stanu zdalnych serwisów.');
 
 const executive=documentRows('docs/01_data_research.md',data.docs['docs/01_data_research.md']).filter(r=>r[1]==='1. Executive summary');
-const summaryRows=[['Źródła w katalogu',null,'Obejmuje próbki, przegląd treści/dokumentacji, wskazania i blokady.'],['Zadania w rejestrze',null,'Pełna lista, także zakończone i dalsze etapy.'],['Zakończone zadania',null,'Liczba zadań nie mierzy procentowej gotowości produktu.'],['Zadania w toku',null,'Stan zapisany w rejestrze TODO.'],['Zadania zagrożone',null,'Odrębne od nieukończonych zależności.'],['Data katalogu',data.catalog.as_of,'Data przeglądu źródeł; nie oznacza aktualnego stanu każdego dokumentu.'],...executive.map(r=>['Wniosek z badań','Ocena badawcza',r[2]])];
+const summaryRows=[['Źródła w katalogu',null,'Obejmuje próbki, przegląd treści/dokumentacji, wskazania i blokady.'],['Zadania w rejestrze',null,'Pełna lista, także zakończone i dalsze etapy.'],['Zakończone zadania',null,'Liczba zadań nie mierzy procentowej gotowości produktu.'],['Zadania w toku',null,'Stan zapisany w rejestrze TODO.'],['Zadania zagrożone',null,'Odrębne od nieukończonych zależności.'],['Data katalogu',data.catalog.as_of,'Data przeglądu źródeł; nie oznacza aktualnego stanu każdego dokumentu.'],['Potrzebne informacje',data.requests.length,'Zakładka Potrzebne informacje zawiera zakres, status i sposób pomocy. Obejmuje także materiały niedostępne i już otrzymane.'],...executive.map(r=>['Wniosek z badań','Ocena badawcza',r[2]])];
 table('Podsumowanie','Stan projektu i najważniejsze wnioski',['Obszar','Wynik','Znaczenie i ograniczenia'],summaryRows,[35,27,125],'Raport wiedzy projektowej. Nie zawiera obliczonej rezerwy MW ani Grid Connection Score dla konkretnego GPZ.');
 for(const [cell,formula] of Object.entries({'B7':`=COUNTA('Źródła'!A7:A${sources.length+6})`,'B8':"='Project Plan'!K6",'B9':"='Project Plan'!O6",'B10':"='Project Plan'!S6",'B11':"='Project Plan'!W6"})) sheets['Podsumowanie'].getRange(cell).formulas=[[formula]];
 sheets['Podsumowanie'].getRange('B12').values=[[new Date(data.catalog.as_of)]];sheets['Podsumowanie'].getRange('B12').setNumberFormat('yyyy-mm-dd');
@@ -158,10 +163,11 @@ assert.equal(plan.getRange('O6').values[0][0],done);
 assert.equal(sheets['Podsumowanie'].getRange('B7').values[0][0],sources.length);
 const inspection=await wb.inspect({kind:'table',range:'Podsumowanie!A6:C12',include:'values,formulas',tableMaxRows:7,tableMaxCols:3,maxChars:2500});
 const errorScan=await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A|#NUM!|#NULL!|#SPILL!|#CALC!',options:{useRegex:true,maxResults:100},summary:'formula errors',maxChars:3000});
+assert.equal(sheets['Potrzebne informacje'].getRange('A7').values[0][0],data.requests[0].id);
 await fs.writeFile(path.join(outDir,stem+'.inspection.json'),JSON.stringify({inspection:inspection.ndjson,errorScan:errorScan.ndjson},null,2));
 console.log(inspection.ndjson);console.log(errorScan.ndjson);
 if(!skipPreviews) {
-  const ranges={'Project Plan':'B2:AD16','Podsumowanie':'A2:C13','TODO':'A2:F10','Wykonalność':'A2:D9','Źródła':'A2:F10','Źródła szczegóły':'A2:C12','Ryzyka':'A2:E9','Dokumentacja':'A2:C9','Audyt':'A2:C11','Odtwarzanie':'A2:B12'};
+  const ranges={'Project Plan':'B2:AD16','Podsumowanie':'A2:C13','Potrzebne informacje':'A2:F10','TODO':'A2:F10','Wykonalność':'A2:D9','Źródła':'A2:F10','Źródła szczegóły':'A2:C12','Ryzyka':'A2:E9','Dokumentacja':'A2:C9','Audyt':'A2:C11','Odtwarzanie':'A2:B12'};
   for(const [name,range] of Object.entries(ranges)) {
     const png=await wb.render({sheetName:name,range,scale:1,format:'png'});
     const filename=String(rendered.length+1).padStart(2,'0')+'_'+name.replaceAll(' ','_')+'.png';
@@ -172,6 +178,6 @@ if(!skipPreviews) {
 }
 const file=await SpreadsheetFile.exportXlsx(wb);
 const outputPath=path.join(outDir,stem+'.xlsx');await file.save(outputPath);
-const manifest={schema_version:'project_report_v1',generated_at_utc:new Date().toISOString(),output:path.relative(root,outputPath).replaceAll('\\','/'),output_sha256:sha(await fs.readFile(outputPath)),inputs_sha256:data.fingerprint,git_revision_at_generation:data.git,runtime:{node:process.version,artifact_tool:artifactVersion},counts:{tasks:tasks.length,completed_tasks:done,sources:sources.length,feasibility_rows:data.feasibility.length,source_detail_rows:details.length,documentation_rows:documentation.length},input_files:data.inputs,previews:rendered,formula_dependency_test:'PASS',research_validation_as_of:data.validation.checked_at_utc};
+const manifest={schema_version:'project_report_v1',generated_at_utc:new Date().toISOString(),output:path.relative(root,outputPath).replaceAll('\\','/'),output_sha256:sha(await fs.readFile(outputPath)),inputs_sha256:data.fingerprint,git_revision_at_generation:data.git,runtime:{node:process.version,artifact_tool:artifactVersion},counts:{information_requests:data.requests.length,tasks:tasks.length,completed_tasks:done,sources:sources.length,feasibility_rows:data.feasibility.length,source_detail_rows:details.length,documentation_rows:documentation.length},input_files:data.inputs,previews:rendered,formula_dependency_test:'PASS',research_validation_as_of:data.validation.checked_at_utc};
 await fs.writeFile(path.join(outDir,stem+'.manifest.json'),JSON.stringify(manifest,null,2)+'\n');
 console.log('XLSX:',outputPath);

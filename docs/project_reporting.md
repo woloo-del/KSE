@@ -25,6 +25,7 @@ Po eksporcie skrypt uruchamia kontrolę tylko do odczytu przez Python i openpyxl
 - Plan prac w wybranym szablonie, wraz z osią czasu. Daty nie są wymyślane; brak terminów oznacza brak paska na osi. Plan pokazuje maksymalnie 30 zadań, a pełny rejestr jest zawsze w zakładce TODO. Przy większym rejestrze najpierw pokazywane są zadania otwarte według priorytetu.
 - Podsumowanie wykonalności produktu, stan badań i najważniejsze niewiadome.
 - Pełny TODO: status, etap, priorytet, zależności, następna czynność, kryterium zakończenia, odpowiedzialność i dowody.
+- Zakładka **Potrzebne informacje** z rejestru `data/project/information_requests.json`: dokumenty i informacje, które użytkownik może pomóc pozyskać, ich status, zastosowanie, kolejny krok oraz sposób kontynuowania pracy bez nich. Szczegóły zasad: [rejestr potrzeb](15_information_requests.md). Obecny raport ma 11 zakładek.
 - Macierz wykonalności, katalog wszystkich źródeł i szczegółowe karty pól, w tym daty, interfejsy, ograniczenia i licencje.
 - Rejestr ryzyk ze źródeł i zadań oraz komplet wyjaśnień z dokumentów projektu wskazanych w generatorze.
 - Zapis wyników wcześniejszej walidacji i prób dostępu, z datą ich wykonania. Generowanie raportu nie wykonuje ponownie tych zdalnych prób ani nie odświeża dat źródeł.

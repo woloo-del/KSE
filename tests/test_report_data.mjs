@@ -1,10 +1,23 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {validateTasks,parseFeasibility,documentRows,todoMarkdown,assertPublicReportPath} from '../scripts/report_data.mjs';
+import {validateTasks,validateRequests,parseFeasibility,documentRows,todoMarkdown,assertPublicReportPath} from '../scripts/report_data.mjs';
 
 const original=JSON.parse(await fs.readFile(new URL('../data/project/todo.json',import.meta.url),'utf8'));
 const copy=()=>structuredClone(original);
+const requests=JSON.parse(await fs.readFile(new URL('../data/project/information_requests.json',import.meta.url),'utf8'));
+test('information requests retain unavailable and already received material',()=>{
+  const items=validateRequests(requests);
+  assert.equal(items.find(i=>i.id==='NEED-008').status,'Niedostępne');
+  assert.equal(items.find(i=>i.id==='NEED-009').status,'Otrzymano — do oceny zakresu');
+  assert.ok(items.every(i=>i.without_it&&i.unlocks&&i.next_action));
+});
+test('information registry rejects duplicates invalid dates and unsupported completion',()=>{
+  const duplicate=structuredClone(requests);duplicate.items.push(duplicate.items[0]);assert.throws(()=>validateRequests(duplicate));
+  for(const patch of [{status:'Complete'},{updated_at:'2026-02-30'},{status:'Zweryfikowano',received_evidence:null},{requested_scope:''}]) {
+    const changed=structuredClone(requests);Object.assign(changed.items[0],patch);assert.throws(()=>validateRequests(changed));
+  }
+});
 test('private source and secret paths cannot enter general report inputs',()=>{
   for(const name of ['data/private/review.json','data\\PRIVATE\\review.md','_secrets/key.txt','docs/../data/private/review.md']) {
     assert.throws(()=>assertPublicReportPath(name),/Zabronione/);
