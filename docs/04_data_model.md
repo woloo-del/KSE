@@ -27,3 +27,9 @@ Wymaganie widoku [pipeline GPZ](gpz_pipeline.md) dodaje odrębny `CONNECTION_APP
 ## Prototyp wspólnego przyłącza — 11.09.2026
 
 [Model ewidencji miejsc](13_shared_connection_model.md) rozdziela identyfikatory projektów, miejsc i przyłącza, scenariusz, kompletność danych oraz kierunkowe limity MW. Działa jako niezależna biblioteka i nie zastępuje pełnego schematu bazy, historii ani kontroli dostępu aplikacji. Wyniki elektryczne pozostają UNKNOWN.
+
+## Uzupełnienie historii — 2026-09-15
+
+Prototyp dwóch osi czasu, korekt i konfliktów opisano w
+[historii obserwacji](14_observation_history.md). Nie zastępuje pełnego modelu
+bazy. Data publikacji ani pobrania nie wyznacza automatycznie okresu ważności.

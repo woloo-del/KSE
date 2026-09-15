@@ -578,7 +578,7 @@
       "depends_on": [
         "KSE-032"
       ],
-      "next_action": "Odtwarzanie i kontrola powtórzonych pól JSON przetestowane. Następnie rozwinąć wersjonowaną historię obserwacji i integrację; projekt techniczny może uzupełnić dane później.",
+      "next_action": "Historia obserwacji i korekt przetestowana, z odtwarzalnym przykładem trzech wpisów PSE. Następnie zintegrować historię z ewidencją przypisań; projekt techniczny może uzupełnić dane później.",
       "acceptance": "Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.",
       "evidence": [
         "docs/private_sources.md",
@@ -587,7 +587,13 @@
         "grid_engine/shared_connection.py",
         "tests/test_shared_connection.py",
         "scripts/analyze_shared_connection.py",
-        "tests/test_shared_connection_replay.py"
+        "tests/test_shared_connection_replay.py",
+        "docs/14_observation_history.md",
+        "grid_engine/observation_history.py",
+        "tests/test_observation_history.py",
+        "scripts/build_radkowice_history.py",
+        "tests/test_radkowice_history.py",
+        "data/reference/radkowice_observation_history_v1.json"
       ],
       "started_at": "2026-09-11",
       "risk": "Brak ekspertyzy wpływu nie blokuje ewidencji. Brak danych sieciowych wyklucza wyliczanie rezerwy MW i częstości ograniczeń."

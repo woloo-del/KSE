@@ -15,6 +15,7 @@ export const DOCUMENTS = [
   'docs/11_radkowice_evidence_model.md',
   'docs/12_radkowice_110kv_research.md',
   'docs/13_shared_connection_model.md',
+  'docs/14_observation_history.md',
   'docs/private_sources.md',
 ];
 export const sha = b => crypto.createHash('sha256').update(b).digest('hex');

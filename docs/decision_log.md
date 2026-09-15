@@ -149,3 +149,12 @@ Selected option: ewidencja w osobnym, czystym module Python bez dodatkowych zale
 Reason: przypisania i status kompletności dają sprawdzalne informacje bez udawania modelu rozpływowego.
 Trade-offs: można obliczyć liczbę nieprzypisanych miejsc dopiero z kompletnych wejść; nie obliczamy dostępnych MW ani prawdopodobieństwa.
 Consequences: prywatny dowód oznacza prywatny wynik, również gdy nie wchodzi do pewnego licznika. KSE-033 pozostaje w toku, ponieważ nie ukończono historii i integracji aplikacyjnej.
+
+## 2026-09-15 — oddzielny czas wiedzy i ważności obserwacji
+
+Decision / Context: odtwarzać historyczną wiedzę bez nadpisywania korekt i bez uznawania daty publikacji za bezterminową ważność.
+Options considered: ostatni wpis wygrywa; pełna baza temporalna; czysty moduł obserwacji i wersjonowane snapshoty.
+Selected option: moduł Python z dwiema osiami czasu, jawnymi korektami i konfliktami.
+Reason: pozwala przetestować semantykę przed integracją bazy; nie wymaga dodatkowych zależności.
+Trade-offs: UNKNOWN przy nierozstrzygniętej ważności; brak trwałego dziennika transakcyjnego i automatycznej historii całego pipeline.
+Consequences: pierwsza rejestracja lipcowego źródła w nowym rejestrze ma rzeczywisty czas 15 września. Prywatność dziedziczy cały wynik widocznej historii pola. KSE-033 pozostaje w toku. Szczegóły: docs/14_observation_history.md.
