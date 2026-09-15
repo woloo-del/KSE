@@ -266,3 +266,9 @@ Wstępne rozdzielenie możliwości zawiera [macierz wykonalności](02_feasibilit
 ## Uzupełnienie 11.09.2026 — linia 110 kV
 
 Rejestr obejmuje 61 źródeł publicznych. [Decyzja 3/2024](https://bip.kielce.uw.gov.pl/download/2/33548/decprzesylnr324.pdf) dostarczyła dowodu dla Radkowice–Wolica. Zakres i ograniczenia: [badanie 110 kV](12_radkowice_110kv_research.md). Prywatne materiały użytkownika mają osobny rejestr lokalny i nie zwiększają liczby publicznych źródeł.
+# Uzupełnienie 15.09.2026
+
+[Ponowny przegląd Radkowic](16_radkowice_public_followup.md): publiczne ogłoszenie
+PSE o polu 220 kV z mostem, obwieszczenie RDOŚ dotyczące linii do Kielc Piaski
+i ponowny odczyt statusów portalu PSE. Katalog ma 63 źródła. Nie są to dowody
+obsadzenia mostu, ukończenia wszystkich robót ani dostępnej mocy.

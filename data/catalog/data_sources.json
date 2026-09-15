@@ -1,6 +1,6 @@
 {
   "schema_version": "research_catalog_v1",
-  "as_of": "2026-09-11",
+  "as_of": "2026-09-15",
   "scope": "STAGE_1_RESEARCH_ONLY",
   "source_of_truth": "data/catalog/source_notes.json + data/catalog/radkowice_source_notes.json when present; this file is generated",
   "classification_note": "REPORTED indicates attributed publication, not automatic truth or MEASURED telemetry. Community and model data remain separately classified.",
@@ -3693,8 +3693,8 @@
       "scraping_required": "YES — dla tego widoku HTML; brak wdrożonego cyklicznego scrapera",
       "data_quality_score": null,
       "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
-      "last_verified": "2026-09-11",
-      "last_successful_verification": "2026-09-11",
+      "last_verified": "2026-09-15",
+      "last_successful_verification": "2026-09-15",
       "source_date": null,
       "publication_date": null,
       "source_version": null,
@@ -3733,6 +3733,20 @@
       "priority": "P0",
       "evidence": [
         {
+          "source_id": "PSE_INVESTMENTS_RADK",
+          "url": "https://inwestycje.pse.pl/",
+          "retrieval_date": "2026-09-15T16:30:45.448433+00:00",
+          "local_path": "data/raw/research/2026-09-15/pse_investments_2026-09-15.html",
+          "sha256": "0901a8abf83fd1f6989f14941c8be212dce6383f11fe69c7183b56cc8a1df77d",
+          "bytes": 697180,
+          "content_type": [
+            "text/html; charset=UTF-8"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_radkowice_followup_2026-09-15.json"
+        },
+        {
           "retrieval_date": "2026-09-11T10:42:22.0922672Z",
           "http_status": 200,
           "sha256": "2d03643156da9b3d1886353d58491131b3cefed680fa23f45afd2056ff3d8b73",
@@ -3745,6 +3759,7 @@
         }
       ],
       "retrieval_date": [
+        "2026-09-15T16:30:45.448433+00:00",
         "2026-09-11T10:42:22.0922672Z"
       ]
     },
@@ -4030,6 +4045,160 @@
       ],
       "retrieval_date": [
         "2026-09-11T13:40:11.4850806Z"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Radkowice i opisane zadanie",
+      "grid_voltage": [
+        "220 kV"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Pobrano publicznie bez konta; HTTP 200.",
+      "license": "UNKNOWN — nie potwierdzono otwartej licencji wybranego zbioru.",
+      "license_url": null,
+      "commercial_use": "UNKNOWN",
+      "machine_readable": "PARTIAL — tekst dokumentu wymaga walidacji kontekstu",
+      "scraping_required": "PDF download",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-15",
+      "last_successful_verification": "2026-09-15",
+      "source_date": null,
+      "publication_date": "2025-03-31",
+      "source_version": null,
+      "source_page": "29; metadane 37",
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy snapshot z timeoutem i SHA-256. Nie ustalono API, limitów ani gwarantowanego cyklu; brak wdrożonej automatyzacji.",
+      "probe_ids": [
+        "PSE_RADK_BRIDGE_NOTICE_2025"
+      ],
+      "related_urls": [],
+      "source_id": "PSE_RADK_BRIDGE_NOTICE_2025",
+      "operator": "PSE S.A.",
+      "source_name": "PSE — ogłoszenie 205815-2025, pole 220 kV i most Radkowice",
+      "url": "https://www.pse.pl/documents/20182/5928746423/OKRESOWE_OGLOSZENIE_ROBOTY_BUDOWLANE.pdf/883a7669-eb9a-4650-84f4-cd67502fd545?safeargs=76657273696f6e3d312e31",
+      "data_owner": "PSE S.A.",
+      "data_category": "grid_investments",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "nazwa zakresu",
+        "numer ogłoszenia",
+        "okres prognozy postępowań",
+        "zastrzeżenie informacyjnego charakteru"
+      ],
+      "potential_application": "Publiczny punkt odniesienia dla projektu mostu, bez obsadzenia i bez parametrów technicznych",
+      "known_limitations": [
+        "Prognoza zamówień, nie wynik przetargu ani dowód ukończenia",
+        "Adres zamawiającego nie jest geometrią stacji",
+        "Brak liczby miejsc, MW i przypisań projektów"
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "PSE_RADK_BRIDGE_NOTICE_2025",
+          "url": "https://www.pse.pl/documents/20182/5928746423/OKRESOWE_OGLOSZENIE_ROBOTY_BUDOWLANE.pdf/883a7669-eb9a-4650-84f4-cd67502fd545?safeargs=76657273696f6e3d312e31",
+          "retrieval_date": "2026-09-15T16:30:45.003171+00:00",
+          "local_path": "data/raw/research/2026-09-15/pse_bridge_notice_2025.pdf",
+          "sha256": "2b85b5a12278fbf06851de098902782ccc6cfcfb5bac7dd7d960f6e0564ac86f",
+          "bytes": 181530,
+          "content_type": [
+            "application/pdf;charset=UTF-8"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_radkowice_followup_2026-09-15.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-15T16:30:45.003171+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Radkowice i opisane zadanie",
+      "grid_voltage": [
+        "220 kV"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Pobrano publicznie bez konta; HTTP 200.",
+      "license": "Gov.pl: treści tekstowe CC BY-SA 4.0, zastrzeżenia dla praw osób trzecich; ocena załączników osobno.",
+      "license_url": "https://www.gov.pl/web/gov/prawa-autorskie",
+      "commercial_use": "REQUIRES_PERMISSION_REVIEW",
+      "machine_readable": "PARTIAL — tekst dokumentu wymaga walidacji kontekstu",
+      "scraping_required": "HTML parsing; brak wdrożonego cyklicznego scrapera",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-15",
+      "last_successful_verification": "2026-09-15",
+      "source_date": "2025-12-04",
+      "publication_date": "2025-12-09",
+      "source_version": null,
+      "source_page": "Nagłówek i treść obwieszczenia",
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy snapshot z timeoutem i SHA-256. Nie ustalono API, limitów ani gwarantowanego cyklu; brak wdrożonej automatyzacji.",
+      "probe_ids": [
+        "RDOS_RADK_PIASKI_NOTICE_2025"
+      ],
+      "related_urls": [],
+      "source_id": "RDOS_RADK_PIASKI_NOTICE_2025",
+      "operator": "RDOŚ Kielce",
+      "source_name": "RDOŚ Kielce — obwieszczenie dotyczące Radkowice–Kielce Piaski",
+      "url": "https://www.gov.pl/web/rdos-kielce/obwieszczenie-regionalnego-dyrektora-ochrony-srodowiska-w-kielcach-z-dnia-04122025-r-znak-woo-i42072025pjpp16",
+      "data_owner": "RDOŚ Kielce",
+      "data_category": "grid_investments",
+      "data_format": [
+        "HTML"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "key_fields": [
+        "znak obwieszczenia",
+        "znak decyzji",
+        "nazwa przedsięwzięcia",
+        "data obwieszczenia",
+        "data publikacji"
+      ],
+      "potential_application": "Potwierdzenie publicznej informacji o decyzji środowiskowej dla przebudowy 220 kV",
+      "known_limitations": [
+        "Nie potwierdza prawomocności, uruchomienia ani obciążalności",
+        "Nie utożsamiać całego zadania stacji z mostem"
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "RDOS_RADK_PIASKI_NOTICE_2025",
+          "url": "https://www.gov.pl/web/rdos-kielce/obwieszczenie-regionalnego-dyrektora-ochrony-srodowiska-w-kielcach-z-dnia-04122025-r-znak-woo-i42072025pjpp16",
+          "retrieval_date": "2026-09-15T16:30:45.228667+00:00",
+          "local_path": "data/raw/research/2026-09-15/rdos_radkowice_piaski_2025.html",
+          "sha256": "2cf0a68fe83e34f8ef2cdc4db84effd24d8cfad2b4ff5583e5a733de8b71a7fb",
+          "bytes": 22474,
+          "content_type": [
+            "text/html;charset=UTF-8"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_radkowice_followup_2026-09-15.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-15T16:30:45.228667+00:00"
       ]
     }
   ]

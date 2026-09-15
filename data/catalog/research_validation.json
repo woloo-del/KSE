@@ -1,24 +1,24 @@
 {
-  "checked_at_utc": "2026-09-10T15:46:28.726160+00:00",
+  "checked_at_utc": "2026-09-15T16:34:41.997217+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 56,
+  "source_count": 63,
   "source_status_counts": {
     "SAMPLE_VERIFIED": 13,
-    "CONTENT_REVIEWED": 24,
+    "CONTENT_REVIEWED": 30,
     "DISCOVERED": 5,
-    "BLOCKED": 3,
+    "BLOCKED": 4,
     "DOCUMENTATION_REVIEWED": 11
   },
-  "probe_count": 29,
+  "probe_count": 36,
   "http_status_counts": {
-    "200": 28,
+    "200": 35,
     "404": 1
   },
-  "raw_file_count": 28,
+  "raw_file_count": 35,
   "format_counts": {
-    ".html": 10,
-    ".pdf": 8,
+    ".html": 13,
+    ".pdf": 12,
     ".json": 6,
     ".xml": 2,
     ".js": 1,
@@ -64,15 +64,35 @@
       "file": "data/raw/research/2026-09-10/tauron_pipeline_retrieved_2026-09-10.pdf",
       "pages": 99,
       "first_page_text_chars": 16819
+    },
+    {
+      "file": "data/raw/research/2026-09-11/checiny_energy_plan.pdf",
+      "pages": 78,
+      "first_page_text_chars": 671
+    },
+    {
+      "file": "data/raw/research/2026-09-11/pse_tariff_2026.pdf",
+      "pages": 46,
+      "first_page_text_chars": 601
+    },
+    {
+      "file": "data/raw/research/2026-09-11/radkowice_wolica_decision_3_2024.pdf",
+      "pages": 12,
+      "first_page_text_chars": 2411
+    },
+    {
+      "file": "data/raw/research/2026-09-15/pse_bridge_notice_2025.pdf",
+      "pages": 37,
+      "first_page_text_chars": 1618
     }
   ],
-  "local_links_checked": 25,
+  "local_links_checked": 46,
   "dependencies": {
     "python": "3.12.14",
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 554,
+  "checks_passed": 663,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -1611,7 +1631,187 @@
       "detail": null
     },
     {
-      "name": "probe_ids_unique",
+      "name": "catalog_fields:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:CHECINY_ENERGY_PLAN",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:CHECINY_ENERGY_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:CHECINY_ENERGY_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:CHECINY_ENERGY_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:CHECINY_ENERGY_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PSE_TARIFF_2026",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PSE_TARIFF_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PSE_TARIFF_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PSE_TARIFF_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PSE_TARIFF_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PGE_RADK_CAPACITY_ATTEMPT",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PGE_RADK_CAPACITY_ATTEMPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PGE_RADK_CAPACITY_ATTEMPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PGE_RADK_CAPACITY_ATTEMPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PGE_RADK_CAPACITY_ATTEMPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unverified_not_successful:PGE_RADK_CAPACITY_ATTEMPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:SUW_RADK_WOLICA_3_2024",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:SUW_RADK_WOLICA_3_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:SUW_RADK_WOLICA_3_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:SUW_RADK_WOLICA_3_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:SUW_RADK_WOLICA_3_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:PSE_RADK_BRIDGE_NOTICE_2025",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PSE_RADK_BRIDGE_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PSE_RADK_BRIDGE_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PSE_RADK_BRIDGE_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PSE_RADK_BRIDGE_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:RDOS_RADK_PIASKI_NOTICE_2025",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:RDOS_RADK_PIASKI_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:RDOS_RADK_PIASKI_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:RDOS_RADK_PIASKI_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:RDOS_RADK_PIASKI_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
     },
@@ -1892,6 +2092,41 @@
     },
     {
       "name": "probe_references:COPERNICUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:CHECINY_ENERGY_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PSE_TARIFF_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PGE_RADK_CAPACITY_ATTEMPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:SUW_RADK_WOLICA_3_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PSE_RADK_BRIDGE_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:RDOS_RADK_PIASKI_NOTICE_2025",
       "passed": true,
       "detail": null
     },
@@ -2456,6 +2691,146 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:PSE_RADK_BRIDGE_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_RADK_BRIDGE_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_RADK_BRIDGE_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_RADK_BRIDGE_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:RDOS_RADK_PIASKI_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:RDOS_RADK_PIASKI_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:RDOS_RADK_PIASKI_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:RDOS_RADK_PIASKI_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:SUW_RADK_WOLICA_3_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:SUW_RADK_WOLICA_3_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:SUW_RADK_WOLICA_3_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:SUW_RADK_WOLICA_3_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:CHECINY_ENERGY_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:CHECINY_ENERGY_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:CHECINY_ENERGY_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:CHECINY_ENERGY_PLAN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_TARIFF_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_TARIFF_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_TARIFF_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_TARIFF_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "all_raw_files_have_manifests",
       "passed": true,
       "detail": null
@@ -2666,6 +3041,61 @@
       "detail": null
     },
     {
+      "name": "pdf_text_layer:checiny_energy_plan.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:checiny_energy_plan.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_investments.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:pse_tariff_2026.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_tariff_2026.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:radkowice_wolica_decision_3_2024.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:radkowice_wolica_decision_3_2024.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:pse_bridge_notice_2025.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_bridge_notice_2025.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_investments_2026-09-15.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:rdos_radkowice_piaski_2025.html",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "pge_block_body_identified",
       "passed": true,
       "detail": null
@@ -2741,6 +3171,16 @@
       "detail": null
     },
     {
+      "name": "local_link:README.md:TODO.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/project_reporting.md",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "local_link:README.md:docs/01_data_research.md",
       "passed": true,
       "detail": null
@@ -2757,6 +3197,11 @@
     },
     {
       "name": "local_link:README.md:docs/02_feasibility_matrix.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/gpz_pipeline.md",
       "passed": true,
       "detail": null
     },
@@ -2811,7 +3256,27 @@
       "detail": null
     },
     {
+      "name": "local_link:01_data_research.md:11_radkowice_evidence_model.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:01_data_research.md:10_radkowice_pilot.md",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "local_link:01_data_research.md:02_feasibility_matrix.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:01_data_research.md:12_radkowice_110kv_research.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:01_data_research.md:16_radkowice_public_followup.md",
       "passed": true,
       "detail": null
     },
@@ -2826,7 +3291,57 @@
       "detail": null
     },
     {
+      "name": "local_link:04_data_model.md:11_radkowice_evidence_model.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:04_data_model.md:gpz_pipeline.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:04_data_model.md:13_shared_connection_model.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:04_data_model.md:14_observation_history.md",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "local_link:05_grid_capacity_methodology.md:01_data_research.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:07_data_quality.md:../data/catalog/energa_date_review_2026-09-11.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:08_roadmap.md:gpz_pipeline.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:09_pilot_scope.md:10_radkowice_pilot.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:10_radkowice_pilot.md:11_radkowice_evidence_model.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:11_radkowice_evidence_model.md:12_radkowice_110kv_research.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:13_shared_connection_model.md:14_observation_history.md",
       "passed": true,
       "detail": null
     },
@@ -2851,7 +3366,47 @@
       "detail": null
     },
     {
+      "name": "local_link:gpz_pipeline.md:data_sources.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:gpz_pipeline.md:02_feasibility_matrix.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:project_reporting.md:../TODO.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:project_reporting.md:15_information_requests.md",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "local_link:reproducibility.md:../data/catalog/archive_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:analyze_historical_assignments.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:analyze_shared_connection.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:build_radkowice_graph.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:build_radkowice_history.py",
       "passed": true,
       "detail": null
     },
@@ -2862,6 +3417,16 @@
     },
     {
       "name": "python_syntax:research_archive.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:research_radkowice.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:validate_project_report.py",
       "passed": true,
       "detail": null
     },

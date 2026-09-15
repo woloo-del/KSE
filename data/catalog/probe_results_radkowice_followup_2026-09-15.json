@@ -1,0 +1,41 @@
+[
+  {
+    "source_id": "PSE_RADK_BRIDGE_NOTICE_2025",
+    "url": "https://www.pse.pl/documents/20182/5928746423/OKRESOWE_OGLOSZENIE_ROBOTY_BUDOWLANE.pdf/883a7669-eb9a-4650-84f4-cd67502fd545?safeargs=76657273696f6e3d312e31",
+    "retrieval_date": "2026-09-15T16:30:45.003171+00:00",
+    "local_path": "data/raw/research/2026-09-15/pse_bridge_notice_2025.pdf",
+    "sha256": "2b85b5a12278fbf06851de098902782ccc6cfcfb5bac7dd7d960f6e0564ac86f",
+    "bytes": 181530,
+    "content_type": [
+      "application/pdf;charset=UTF-8"
+    ],
+    "http_status": 200,
+    "error": null
+  },
+  {
+    "source_id": "RDOS_RADK_PIASKI_NOTICE_2025",
+    "url": "https://www.gov.pl/web/rdos-kielce/obwieszczenie-regionalnego-dyrektora-ochrony-srodowiska-w-kielcach-z-dnia-04122025-r-znak-woo-i42072025pjpp16",
+    "retrieval_date": "2026-09-15T16:30:45.228667+00:00",
+    "local_path": "data/raw/research/2026-09-15/rdos_radkowice_piaski_2025.html",
+    "sha256": "2cf0a68fe83e34f8ef2cdc4db84effd24d8cfad2b4ff5583e5a733de8b71a7fb",
+    "bytes": 22474,
+    "content_type": [
+      "text/html;charset=UTF-8"
+    ],
+    "http_status": 200,
+    "error": null
+  },
+  {
+    "source_id": "PSE_INVESTMENTS_RADK",
+    "url": "https://inwestycje.pse.pl/",
+    "retrieval_date": "2026-09-15T16:30:45.448433+00:00",
+    "local_path": "data/raw/research/2026-09-15/pse_investments_2026-09-15.html",
+    "sha256": "0901a8abf83fd1f6989f14941c8be212dce6383f11fe69c7183b56cc8a1df77d",
+    "bytes": 697180,
+    "content_type": [
+      "text/html; charset=UTF-8"
+    ],
+    "http_status": 200,
+    "error": null
+  }
+]

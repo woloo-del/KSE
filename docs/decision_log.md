@@ -194,3 +194,12 @@ Selected option: information_requests.json oraz zakładka Potrzebne informacje.
 Reason: dokument może być otrzymany, ale nadal niewystarczający; stan pozyskania nie jest stanem zadania implementacyjnego.
 Trade-offs: potrzebna regularna aktualizacja i kuracja tekstu; arkusz jest generowanym widokiem, nie formularzem zapisującym automatycznie do repozytorium.
 Consequences: pozycje niedostępne i otrzymane pozostają widoczne. Bez ponawiania prośby o ekspertyzę lub już dostarczone WP. Prywatna treść nie trafia do rejestru ani ogólnego raportu.
+
+## 2026-09-15 — walidacja katalogu obejmująca wiele dat pobrań
+
+Decision / Context: pierwotny walidator ograniczał ścieżki do 10 września i pomijał manifesty pilota, mimo rozwoju katalogu.
+Options considered: osobne kontrole bez pełnego pokrycia; rozszerzenie istniejącej kontroli historii.
+Selected option: istniejący walidator obejmuje wszystkie daty pod data/raw/research i jawne dodatkowe manifesty pilota. Unikalność dotyczy snapshotu, nie źródła.
+Reason: kolejne pobranie tego samego źródła jest poprawną historią, a każdy surowy plik nadal musi mieć manifest i zgodny hash.
+Trade-offs: kontrola wymaga wszystkich zachowanych plików; nie jest testem aktualności stron operatorów. Starsze kontrole semantyczne nadal dotyczą swoich datowanych próbek.
+Consequences: 35 plików objętych kontrolą, bez włączania data/private i _secrets. Nowe źródła nie oznaczają nowych parametrów sieci w grafie.

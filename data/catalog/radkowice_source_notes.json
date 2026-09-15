@@ -16,8 +16,8 @@
         "HTML"
       ],
       "verification_status": "CONTENT_REVIEWED",
-      "last_verified": "2026-09-11",
-      "last_successful_verification": "2026-09-11",
+      "last_verified": "2026-09-15",
+      "last_successful_verification": "2026-09-15",
       "api_available": "UNKNOWN",
       "gis_available": "UNKNOWN",
       "machine_readable": "PARTIAL — HTML wymaga rozpoznania sekcji",
@@ -179,6 +179,97 @@
       "probe_ids": [
         "SUW_RADK_WOLICA_3_2024"
       ]
+    },
+    {
+      "source_id": "PSE_RADK_BRIDGE_NOTICE_2025",
+      "operator": "PSE S.A.",
+      "source_name": "PSE — ogłoszenie 205815-2025, pole 220 kV i most Radkowice",
+      "url": "https://www.pse.pl/documents/20182/5928746423/OKRESOWE_OGLOSZENIE_ROBOTY_BUDOWLANE.pdf/883a7669-eb9a-4650-84f4-cd67502fd545?safeargs=76657273696f6e3d312e31",
+      "data_owner": "PSE S.A.",
+      "data_category": "grid_investments",
+      "grid_voltage": [
+        "220 kV"
+      ],
+      "geographical_scope": "Radkowice i opisane zadanie",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "last_verified": "2026-09-15",
+      "last_successful_verification": "2026-09-15",
+      "source_date": null,
+      "publication_date": "2025-03-31",
+      "source_page": "29; metadane 37",
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "machine_readable": "PARTIAL — tekst dokumentu wymaga walidacji kontekstu",
+      "scraping_required": "PDF download",
+      "reliability": "B",
+      "key_fields": [
+        "nazwa zakresu",
+        "numer ogłoszenia",
+        "okres prognozy postępowań",
+        "zastrzeżenie informacyjnego charakteru"
+      ],
+      "potential_application": "Publiczny punkt odniesienia dla projektu mostu, bez obsadzenia i bez parametrów technicznych",
+      "known_limitations": [
+        "Prognoza zamówień, nie wynik przetargu ani dowód ukończenia",
+        "Adres zamawiającego nie jest geometrią stacji",
+        "Brak liczby miejsc, MW i przypisań projektów"
+      ],
+      "priority": "P0",
+      "probe_ids": [
+        "PSE_RADK_BRIDGE_NOTICE_2025"
+      ],
+      "authentication": "Pobrano publicznie bez konta; HTTP 200.",
+      "automation_notes": "Jednorazowy snapshot z timeoutem i SHA-256. Nie ustalono API, limitów ani gwarantowanego cyklu; brak wdrożonej automatyzacji."
+    },
+    {
+      "source_id": "RDOS_RADK_PIASKI_NOTICE_2025",
+      "operator": "RDOŚ Kielce",
+      "source_name": "RDOŚ Kielce — obwieszczenie dotyczące Radkowice–Kielce Piaski",
+      "url": "https://www.gov.pl/web/rdos-kielce/obwieszczenie-regionalnego-dyrektora-ochrony-srodowiska-w-kielcach-z-dnia-04122025-r-znak-woo-i42072025pjpp16",
+      "data_owner": "RDOŚ Kielce",
+      "data_category": "grid_investments",
+      "grid_voltage": [
+        "220 kV"
+      ],
+      "geographical_scope": "Radkowice i opisane zadanie",
+      "data_format": [
+        "HTML"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "last_verified": "2026-09-15",
+      "last_successful_verification": "2026-09-15",
+      "source_date": "2025-12-04",
+      "publication_date": "2025-12-09",
+      "source_page": "Nagłówek i treść obwieszczenia",
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "machine_readable": "PARTIAL — tekst dokumentu wymaga walidacji kontekstu",
+      "scraping_required": "HTML parsing; brak wdrożonego cyklicznego scrapera",
+      "reliability": "C",
+      "key_fields": [
+        "znak obwieszczenia",
+        "znak decyzji",
+        "nazwa przedsięwzięcia",
+        "data obwieszczenia",
+        "data publikacji"
+      ],
+      "potential_application": "Potwierdzenie publicznej informacji o decyzji środowiskowej dla przebudowy 220 kV",
+      "known_limitations": [
+        "Nie potwierdza prawomocności, uruchomienia ani obciążalności",
+        "Nie utożsamiać całego zadania stacji z mostem"
+      ],
+      "priority": "P0",
+      "probe_ids": [
+        "RDOS_RADK_PIASKI_NOTICE_2025"
+      ],
+      "authentication": "Pobrano publicznie bez konta; HTTP 200.",
+      "automation_notes": "Jednorazowy snapshot z timeoutem i SHA-256. Nie ustalono API, limitów ani gwarantowanego cyklu; brak wdrożonej automatyzacji.",
+      "license": "Gov.pl: treści tekstowe CC BY-SA 4.0, zastrzeżenia dla praw osób trzecich; ocena załączników osobno.",
+      "license_url": "https://www.gov.pl/web/gov/prawa-autorskie",
+      "commercial_use": "REQUIRES_PERMISSION_REVIEW"
     }
   ]
 }

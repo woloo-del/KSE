@@ -24,6 +24,7 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data/raw/research/2026-09-10"
+RAW_HISTORY = ROOT / "data/raw/research"
 REQUIRED = {
     "source_id", "operator", "source_name", "url", "data_owner", "country",
     "data_category", "grid_voltage", "geographical_scope", "data_format",
@@ -84,8 +85,14 @@ def validate() -> dict[str, Any]:
     probes = []
     for path in sorted((ROOT / "data/catalog").glob("probe_results_*.json")):
         probes.extend(load_json(path))
+    for name in ['radkowice_snapshot_manifest.json','radkowice_tariff_snapshot.json']:
+        path = ROOT / 'data/catalog' / name
+        if path.exists():
+            entries = load_json(path)
+            probes.extend(entries if isinstance(entries, list) else [entries])
     probe_ids = {probe["source_id"] for probe in probes}
-    check("probe_ids_unique", len(probe_ids) == len(probes))
+    identities = [(p['source_id'], p['retrieval_date'], p.get('local_path')) for p in probes]
+    check("probe_snapshot_identities_unique", len(identities) == len(set(identities)))
     for row in sources:
         check(f"probe_references:{row['source_id']}", set(row["probe_ids"]) <= probe_ids)
     local_paths: set[Path] = set()
@@ -95,13 +102,15 @@ def validate() -> dict[str, Any]:
             warnings.append({"source_id": sid, "code": "FETCH_ERROR", "http_status": probe["http_status"], "message": "Nie pobrano pliku; zachowano nieudaną próbę."})
             continue
         path = (ROOT / probe["local_path"]).resolve()
-        check(f"snapshot_within_raw:{sid}", path.is_relative_to(RAW))
+        check(f"snapshot_within_raw:{sid}", path.is_relative_to(RAW_HISTORY))
+        if not path.is_relative_to(RAW_HISTORY):
+            continue
         check(f"snapshot_exists:{sid}", path.is_file())
         if path.is_file():
             local_paths.add(path)
             check(f"snapshot_bytes:{sid}", path.stat().st_size == probe["bytes"])
             check(f"snapshot_sha256:{sid}", file_hash(path) == probe["sha256"])
-    check("all_raw_files_have_manifests", set(RAW.iterdir()) == local_paths)
+    check("all_raw_files_have_manifests", {p.resolve() for p in RAW_HISTORY.rglob('*') if p.is_file()} == local_paths)
 
     format_counts: Counter[str] = Counter()
     pdf_details = []
