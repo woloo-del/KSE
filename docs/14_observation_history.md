@@ -116,6 +116,9 @@ Test na zachowanych publicznych wpisach Radkowic potwierdza, że nie powstaje
 z nich żadne przypisanie do mostu. Syntetyczne przypisania istnieją tylko w testach.
 
 Następny krok po odtwarzaniu plikowym: historia parametrów i jawnych deklaracji kompletności.
+
+Aktualizacja: ten krok wykonano w wariancie v2 opisanym na końcu dokumentu;
+wcześniejsze akapity opisują zachowany wariant v1.
 Trwała baza, kontrola dostępu aplikacji i weryfikacja realnych przypisań pozostają
 otwarte w KSE-033. Excel z 12 września nadal jest historycznym raportem.
 
@@ -174,3 +177,60 @@ Walidacja przyrostu plikowego 2026-09-15: 84 testy Python i 8 testów raportowan
 przeszły; `git diff --check` bez błędów. Osiem nowych testów obejmuje manifest,
 deterministyczny zapis, zakaz nadpisania, zmianę parametrów, prywatność całego
 wejścia, ścieżki sekretów i odrzucanie błędnego schematu przed zapisem.
+
+## Historyczne parametry przyłącza — wariant v2, 2026-09-15
+
+`grid_engine/historical_connection_parameters.py` dodaje parametry i kompletność
+do istniejącej historii przypisań, bez zmiany obliczeń wariantu v1. Aby użyć go
+w tym samym runnerze, wejście musi jawnie wskazać
+`schema_version = historical_connection_request_v2`. Pozostałe pola żądania są
+takie same. Wynik nosi metodę `historical_shared_connection_v2`. Żądania
+`historical_assignments_request_v1` nadal używają pierwotnego modelu przypisań.
+Odtworzenie identycznych historycznych bajtów manifestu wymaga również starego
+commita, ponieważ aktualny runner ma nowy hash i dodatkowy moduł w manifeście.
+
+Wspólne dla parametrów: `entity_id` oznacza konkretne przyłącze, `scenario`
+rozdziela CURRENT / PLANNED, a daty i dowody mają kontrakt Observation.
+
+| field | unit | value jako tekst |
+|---|---|---|
+| maximum_positions | position | Nieujemna liczba całkowita |
+| inventory_complete | null | Dokładnie `true` albo `false` |
+| export_limit_MW | MW | Nieujemna liczba dziesiętna z kropką |
+| import_limit_MW | MW | Nieujemna liczba dziesiętna z kropką |
+
+Przy UNKNOWN wartość to null. Błędne jednostki, ujemne wartości, NaN/Infinity,
+ułamkowa liczba miejsc i nieznana deklaracja kompletności powodują błąd.
+Nie ma cichej konwersji kW na MW ani tekstu „tak” na true. Normalizacja wartości
+należy do warstwy pozyskiwania: różne teksty `50` i `50.0` z niezależnych źródeł
+mogą nadal stanowić konflikt w ogólnym modelu obserwacji; nie rozstrzygamy go
+automatycznie w tym adapterze.
+
+Każdy parametr jest rozstrzygany dla tego samego `known_at` i `effective_on` co
+przypisania. Wymaga dokumentu i rozstrzygniętego okresu ważności. Twierdzenie
+USER_PROVIDED, brak danych lub konflikt pozostają jawne w `parameter_history`.
+Dowody prywatne, również skorygowane i konfliktowe, chronią cały wynik.
+
+Nieprzypisane miejsca mogą zostać policzone tylko przy znanym maksimum,
+udokumentowanym true dla kompletności i braku nierozstrzygniętych historii miejsc.
+To nadal deklaracja źródłowa o kompletności, nie niezależny audyt całego pipeline.
+`inventory_complete` zachowuje rozstrzygnięte twierdzenie źródła; może pozostać
+true, podczas gdy wynik liczby miejsc jest UNKNOWN z powodu sprzecznych przypisań.
+Wygasły wpis nie staje się automatycznie dowodem wolnego miejsca. Liczba przypisań
+większa od maksimum powoduje błąd walidacji. Zero jest wartością inną niż null.
+
+Limity MW zachowują dokładność dziesiętną i niezależne kierunki. Nigdy nie
+wyliczamy z nich dostępnej mocy ani nie utożsamiamy miejsc z MW.
+Nie ma nowych technicznych faktów o Radkowicach: wartości, ważność i kompletność
+w testach są jawnie syntetyczne. Nie przeniesiono twierdzenia o sześciu miejscach
+do parametrów potwierdzonych dokumentem i nie dopisano przypisań projektów.
+
+Po zamknięciu tego przyrostu kolejnym krokiem jest sprawdzenie, które rzeczywiste
+dowody pilota spełniają kontrakt parametrów i jakie dokładnie braki pozostają.
+Trwała baza i kontrola dostępu aplikacji nadal nie są wdrożone.
+
+Walidacja wariantu v2, 2026-09-15: 96 testów Python i 8 testów raportowania
+przeszły; `git diff --check` bez błędów. Dwanaście nowych testów obejmuje m.in.
+konflikty parametrów, prywatność, kompletność, korekty, jednostki, zero, scenariusze
+oraz zachowanie żądań v1. Excel z 12 września pozostaje poprzednim snapshotem;
+niniejsza aktualizacja wejdzie do kolejnego odświeżenia raportu.

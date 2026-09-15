@@ -41,7 +41,7 @@ class HistoricalReplayTests(unittest.TestCase):
             self.assertEqual(manifest['input_sha256'], hashlib.sha256(source.read_bytes()).hexdigest())
             payload = json.dumps(result, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()
             self.assertEqual(manifest['analysis_payload_sha256'], hashlib.sha256(payload).hexdigest())
-            self.assertEqual(set(manifest['code_sha256']), set(CODE_FILES))
+            self.assertEqual(set(manifest['code_sha256']), set(CODE_FILES) | {'grid_engine/historical_connection_parameters.py'})
             for name, digest in manifest['code_sha256'].items():
                 self.assertEqual(digest, hashlib.sha256((ROOT/name).read_bytes()).hexdigest())
             with self.assertRaises(FileExistsError):

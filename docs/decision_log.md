@@ -176,3 +176,12 @@ Selected option: manifest osadzony w jednym wersjonowanym JSON, wyłączny zapis
 Reason: nie tworzy pary plików wymagającej synchronizacji; obejmuje wejście, zapytanie, kod i środowisko bez nowych zależności.
 Trade-offs: nie ma transakcyjnego magazynu ani automatycznej weryfikacji źródłowych dokumentów; przerwanie zapisu może pozostawić niepełny plik.
 Consequences: prywatny rekord w całym wejściu wymusza prywatność zapisanego wyniku z manifestem, także poza czasem zapytania. Dekoder JSON jest wspólny dla obu runnerów, jego hash jest zachowany. KSE-033 pozostaje otwarte do dalszej integracji i historii parametrów.
+
+## 2026-09-15 — jawnie wybierana wersja parametrów historycznych v2
+
+Decision / Context: dodać historię maksimum miejsc, kierunkowych limitów MW i deklaracji kompletności.
+Options considered: zmiana zachowania żądań v1; osobny duplikat całego silnika; adapter v2 wykorzystujący istniejącą historię i licznik.
+Selected option: adapter v2 wybierany nową wersją żądania, z zachowaniem metody v1.
+Reason: nie reinterpretować wcześniejszych żądań; rozpatrywać wszystkie parametry dla tych samych dat i scenariusza.
+Trade-offs: kompletność pozostaje twierdzeniem źródła wymagającym kuracji. Każda nierozstrzygnięta historia miejsca blokuje liczbę nieprzypisanych miejsc; brak automatycznej normalizacji odmiennych tekstów liczbowych.
+Consequences: jawne jednostki i dowody są obowiązkowe; raportowane limity nie są dostępnymi MW. Nie dodano parametrów Radkowic bez dowodów. Kod i testy bez nowych zależności; manifest obejmuje nowy moduł. KSE-033 nadal w toku.

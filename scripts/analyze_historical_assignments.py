@@ -9,6 +9,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from grid_engine.historical_assignments import historical_inventory
+from grid_engine.historical_connection_parameters import historical_inventory_v2
 from grid_engine.observation_history import Observation, validate_history
 from grid_engine.shared_connection import Evidence, require_public_result
 from grid_engine.strict_json import decode_json
@@ -25,7 +26,7 @@ def decode_request(raw: bytes) -> tuple[tuple[Observation, ...], dict]:
     data = decode_json(raw)
     if not isinstance(data, dict) or set(data) != {'schema_version', 'query', 'observations'}:
         raise ValueError('INVALID_HISTORY_REQUEST_FIELDS')
-    if data['schema_version'] != 'historical_assignments_request_v1':
+    if data['schema_version'] not in {'historical_assignments_request_v1', 'historical_connection_request_v2'}:
         raise ValueError('UNSUPPORTED_HISTORY_REQUEST_VERSION')
     query = data['query']
     if (not isinstance(query, dict) or set(query) != QUERY_FIELDS
@@ -47,7 +48,9 @@ def analyze_file(input_path: Path, output_path: Path, private_root: Path) -> dic
         raise ValueError('JSON_PATH_REQUIRED')
     raw = input_path.read_bytes()
     history, query = decode_request(raw)
-    result = historical_inventory(history, **query)
+    version2 = decode_json(raw)['schema_version'] == 'historical_connection_request_v2'
+    engine = historical_inventory_v2 if version2 else historical_inventory
+    result = engine(history, **query)
     # The file manifest fingerprints the WHOLE input, including future/private records.
     # Therefore persisted results are stricter than the in-memory temporal view.
     if input_path.is_relative_to(private_root) or any(i.evidence.access == 'PRIVATE' for i in history):
@@ -60,7 +63,8 @@ def analyze_file(input_path: Path, output_path: Path, private_root: Path) -> dic
         'input_sha256': hashlib.sha256(raw).hexdigest(),
         'analysis_payload_sha256': hashlib.sha256(payload).hexdigest(),
         'payload_encoding': 'UTF-8; sorted keys; compact JSON; exclude reproducibility; no final newline',
-        'code_sha256': {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in CODE_FILES},
+        'code_sha256': {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in
+                       (*CODE_FILES, 'grid_engine/historical_connection_parameters.py')},
         'python_version': platform.python_version(),
         'python_implementation': platform.python_implementation(),
         'query': query,
