@@ -1,24 +1,24 @@
 {
-  "checked_at_utc": "2026-09-15T16:34:41.997217+00:00",
+  "checked_at_utc": "2026-09-15T16:45:00.398149+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 63,
+  "source_count": 64,
   "source_status_counts": {
     "SAMPLE_VERIFIED": 13,
-    "CONTENT_REVIEWED": 30,
+    "CONTENT_REVIEWED": 31,
     "DISCOVERED": 5,
     "BLOCKED": 4,
     "DOCUMENTATION_REVIEWED": 11
   },
-  "probe_count": 36,
+  "probe_count": 37,
   "http_status_counts": {
-    "200": 35,
+    "200": 36,
     "404": 1
   },
-  "raw_file_count": 35,
+  "raw_file_count": 36,
   "format_counts": {
     ".html": 13,
-    ".pdf": 12,
+    ".pdf": 13,
     ".json": 6,
     ".xml": 2,
     ".js": 1,
@@ -84,6 +84,11 @@
       "file": "data/raw/research/2026-09-15/pse_bridge_notice_2025.pdf",
       "pages": 37,
       "first_page_text_chars": 1618
+    },
+    {
+      "file": "data/raw/research/2026-09-15/rdos_radkowice_piaski_decision_2025.pdf",
+      "pages": 8,
+      "first_page_text_chars": 3726
     }
   ],
   "local_links_checked": 46,
@@ -92,7 +97,7 @@
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 663,
+  "checks_passed": 675,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -1811,6 +1816,31 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:RDOS_RADK_PIASKI_DECISION_2025",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:RDOS_RADK_PIASKI_DECISION_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:RDOS_RADK_PIASKI_DECISION_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:RDOS_RADK_PIASKI_DECISION_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:RDOS_RADK_PIASKI_DECISION_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
@@ -2127,6 +2157,11 @@
     },
     {
       "name": "probe_references:RDOS_RADK_PIASKI_NOTICE_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:RDOS_RADK_PIASKI_DECISION_2025",
       "passed": true,
       "detail": null
     },
@@ -2691,6 +2726,26 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:RDOS_RADK_PIASKI_DECISION_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:RDOS_RADK_PIASKI_DECISION_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:RDOS_RADK_PIASKI_DECISION_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:RDOS_RADK_PIASKI_DECISION_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "snapshot_within_raw:PSE_RADK_BRIDGE_NOTICE_2025",
       "passed": true,
       "detail": null
@@ -3092,6 +3147,16 @@
     },
     {
       "name": "format_readable:rdos_radkowice_piaski_2025.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:rdos_radkowice_piaski_decision_2025.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:rdos_radkowice_piaski_decision_2025.pdf",
       "passed": true,
       "detail": null
     },

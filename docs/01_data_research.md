@@ -272,3 +272,12 @@ Rejestr obejmuje 61 źródeł publicznych. [Decyzja 3/2024](https://bip.kielce.u
 PSE o polu 220 kV z mostem, obwieszczenie RDOŚ dotyczące linii do Kielc Piaski
 i ponowny odczyt statusów portalu PSE. Katalog ma 63 źródła. Nie są to dowody
 obsadzenia mostu, ukończenia wszystkich robót ani dostępnej mocy.
+
+### Pełna decyzja Radkowice–Kielce Piaski — 15.09.2026
+
+Dodano RDOS_RADK_PIASKI_DECISION_2025: [decyzja RDOŚ z 04.12.2025](https://www.gov.pl/attachment/27ef7a8e-5094-4391-be1c-7e23cb1038b2), s.3.
+Opisuje planowane przełączenie przęsła ze słupa 81 z pola 8 do 6. Długość około
+60 m dotyczy odcinka robót. Nie potwierdza wykonania, parametrów mostu ani dostępnych MW.
+HTTP 200 bez konta, tekst PDF możliwy do ekstrakcji, SHA-256 i lokalne archiwum.
+Brak ustalonego API i cyklu aktualizacji; prawa do załącznika wymagają oceny.
+Szczegóły i ograniczenia: docs/16_radkowice_public_followup.md. Katalog: 64 źródła.

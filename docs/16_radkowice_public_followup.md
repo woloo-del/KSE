@@ -69,3 +69,34 @@ Kontrola katalogu obejmuje obecnie wszystkie datowane foldery `data/raw/research
 i dodatkowe manifesty pilota. Identyfikator źródła może wystąpić ponownie przy
 nowym pobraniu; unikalna musi być tożsamość snapshotu (źródło, czas, ścieżka).
 663 kontrole katalogu przeszły; zachowano cztery wcześniejsze ostrzeżenia źródłowe.
+
+## Pełna decyzja i rozróżnienie pól 8/6 — dalsza weryfikacja 15.09.2026
+
+Pozyskano [pełną decyzję RDOŚ WOO-I.420.7.2025.PJ/PP.14](https://www.gov.pl/attachment/27ef7a8e-5094-4391-be1c-7e23cb1038b2)
+z 04.12.2025, 8 stron. Strona 3, sprawdzona również na renderze PDF, opisuje
+planowane zdjęcie przęsła od słupa 81 do pola 8 i budowę przęsła do pola 6.
+Podana długość około 60 m dotyczy wyłącznie przebudowywanego odcinka, nie całej
+linii Radkowice–Kielce Piaski. Klasyfikacja: REPORTED, jakość C, zakres FUTURE GRID.
+Opis dotychczasowego układu jest stanem opisanym w dokumencie, a nie zweryfikowaną
+topologią na 15.09.2026. Data wykonania i ostateczność decyzji pozostają UNKNOWN.
+
+To konkretny dowód planowanej zmiany zakończenia linii. Nie łączymy go automatycznie
+z mostem, przypisaniami inwestycji, zajętością pól ani dodatkowymi MW. NEED-006
+w rejestrze raportowym wskazuje teraz potrzebę aktualnego schematu lub protokołu
+potwierdzającego wykonanie tej zmiany. Nie zamykamy potrzeby całościowego statusu robót.
+
+Źródło RDOS_RADK_PIASKI_DECISION_2025 pobrano bez konta, HTTP 200; ekstrakcja
+tekstu jest możliwa. Nie ustalono API ani częstotliwości zmian tego załącznika.
+Licencja i prawa do ewentualnych materiałów osób trzecich wymagają osobnej oceny;
+nie wywodzimy nieograniczonej redystrybucji z samej dostępności PDF. Zachowano bajty,
+SHA-256, manifest probe_results_radkowice_decision_2026-09-15.json i lokalny ZIP
+ data/archives/radkowice_decision_2026-09-15.zip; kopia zewnętrzna niepotwierdzona.
+Katalog po dodaniu dokumentu zawiera 64 źródła.
+
+Sprawdzono również publiczny interfejs [postępowań PSE](https://przetargi.pse.pl/open-auctions.html)
+i [wyników](https://przetargi.pse.pl/auction-result-publication.html), filtr nazwy
+„Radkowice”. Pierwszy nie zwrócił rekordów; drugi pokazał dwa starsze opracowania
+projektowe (AU-001312, AU-000861). To wynik konkretnego widoku i filtra, nie dowód
+braku przetargu lub wykonawcy. Wynik nie jest snapshotem API i nie zasila modelu.
+Trop TED 771822-2025 oraz informacje z agregatorów pozostają niezweryfikowane:
+odczyt TED nie powiódł się. Nie przyjęto z nich numeru pola mostu ani przypisania BESS.

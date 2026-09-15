@@ -79,10 +79,10 @@
       "status": "Do sprawdzenia",
       "requested_scope": "Potwierdzenie uruchomienia lub aktualny harmonogram, zakres zadania, data i źródło. Oddzielnie dokumentacja powykonawcza.",
       "unlocks": "Rozdzielenie sieci istniejącej i planowanej; pozwolenie nie dowodzi zakończenia prac.",
-      "next_action": "Poszukać potwierdzenia realizacji dla linii Radkowice–Kielce Piaski i poszczególnych zadań stacji. Portal PSE nadal podaje etap I w budowie, II w przygotowaniu; obwieszczenie RDOŚ nie jest odbiorem robót.",
+      "next_action": "Pozyskać aktualny schemat lub protokół potwierdzający wykonanie przełączenia linii Kielce Piaski z pola 8 do 6. Decyzja RDOŚ WOO-I.420.7.2025.PJ/PP.14 z 04.12.2025, s.3, opisuje plan, nie ukończenie; statusy etapów PSE nie wystarczają.",
       "without_it": "Zachować inwestycje jako planowane bez przenoszenia ich parametrów do CURRENT.",
       "owner": "Codex szuka publicznie; użytkownik może uzupełnić",
-      "basis": "docs/12_radkowice_110kv_research.md; RDOŚ WOO-I.420.7.2025.PJ/PP.14; portal PSE odczytany 15.09.2026",
+      "basis": "docs/12_radkowice_110kv_research.md; RDOŚ WOO-I.420.7.2025.PJ/PP.14; portal PSE odczytany 15.09.2026; pełna decyzja RDOS_RADK_PIASKI_DECISION_2025, s.3; docs/16_radkowice_public_followup.md",
       "updated_at": "2026-09-15",
       "received_evidence": null
     },

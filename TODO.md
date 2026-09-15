@@ -9,7 +9,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). Bezpośredni PDF nadal zwraca blokadę (11.09); sprawdzić oficjalny alternatywny kanał lub dokumenty przekazane przez użytkownika.
 - **KSE-010 — Ustalić prawa źródeł wybranych do pilota** (P0, Do zrobienia). Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Wykonać prywatną kopię ZIP na drugim nośniku i potwierdzić jej odczyt.
-- **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Publiczne ogłoszenie PSE potwierdza planowany zakres pola 220 kV z mostem. Kontynuować poszukiwanie dokumentacji postępowania i dowodów realizacji; NEED-001 i NEED-006 uaktualniono.
+- **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Potwierdzić aktualny układ pól 220 kV i postęp robót. Pełna decyzja RDOŚ opisuje plan przeniesienia przęsła z pola 8 do 6; potrzeba NEED-006 zaktualizowana. Nadal szukać dokumentacji mostu i postępowania.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 
@@ -408,7 +408,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Publiczne ogłoszenie PSE potwierdza planowany zakres pola 220 kV z mostem. Kontynuować poszukiwanie dokumentacji postępowania i dowodów realizacji; NEED-001 i NEED-006 uaktualniono.
+- Następny krok: Potwierdzić aktualny układ pól 220 kV i postęp robót. Pełna decyzja RDOŚ opisuje plan przeniesienia przęsła z pola 8 do 6; potrzeba NEED-006 zaktualizowana. Nadal szukać dokumentacji mostu i postępowania.
 - Kryterium: Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.
 - Nieukończone zależności: brak.
 - Ryzyko: Brak ekspertyzy wpływu nie blokuje ewidencji. Brak danych sieciowych wyklucza wyliczanie rezerwy MW i częstości ograniczeń..

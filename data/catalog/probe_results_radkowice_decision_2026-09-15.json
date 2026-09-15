@@ -1,0 +1,15 @@
+[
+  {
+    "source_id": "RDOS_RADK_PIASKI_DECISION_2025",
+    "url": "https://www.gov.pl/attachment/27ef7a8e-5094-4391-be1c-7e23cb1038b2",
+    "retrieval_date": "2026-09-15T16:42:41.935208+00:00",
+    "local_path": "data/raw/research/2026-09-15/rdos_radkowice_piaski_decision_2025.pdf",
+    "sha256": "88d830c00d1b982094174c69e6018ae2e4ab4bc23e80afd1fd5c88b178ad4b3d",
+    "bytes": 583447,
+    "content_type": [
+      "application/pdf"
+    ],
+    "http_status": 200,
+    "error": null
+  }
+]

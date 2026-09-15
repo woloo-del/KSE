@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-15**. Źródła: **63**.
+Stan badania: **2026-09-15**. Źródła: **64**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -73,6 +73,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | SUW_RADK_WOLICA_3_2024 | [Decyzja 3/2024 — przebudowa odcinka Radkowice–Wolica](https://bip.kielce.uw.gov.pl/download/2/33548/decprzesylnr324.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
 | PSE_RADK_BRIDGE_NOTICE_2025 | [PSE — ogłoszenie 205815-2025, pole 220 kV i most Radkowice](https://www.pse.pl/documents/20182/5928746423/OKRESOWE_OGLOSZENIE_ROBOTY_BUDOWLANE.pdf/883a7669-eb9a-4650-84f4-cd67502fd545?safeargs=76657273696f6e3d312e31) | CONTENT_REVIEWED | P0 | UNKNOWN |
 | RDOS_RADK_PIASKI_NOTICE_2025 | [RDOŚ Kielce — obwieszczenie dotyczące Radkowice–Kielce Piaski](https://www.gov.pl/web/rdos-kielce/obwieszczenie-regionalnego-dyrektora-ochrony-srodowiska-w-kielcach-z-dnia-04122025-r-znak-woo-i42072025pjpp16) | CONTENT_REVIEWED | P0 | REQUIRES_PERMISSION_REVIEW |
+| RDOS_RADK_PIASKI_DECISION_2025 | [RDOŚ Kielce — pełna decyzja dla przebudowy linii Radkowice–Kielce Piaski](https://www.gov.pl/attachment/27ef7a8e-5094-4391-be1c-7e23cb1038b2) | CONTENT_REVIEWED | P0 | REQUIRES_PERMISSION_REVIEW |
 
 ## Karty źródeł
 
@@ -2347,5 +2348,42 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Automatyzacja:** Jednorazowy snapshot z timeoutem i SHA-256. Nie ustalono API, limitów ani gwarantowanego cyklu; brak wdrożonej automatyzacji.
 - **Warunki:** [źródło prawne](https://www.gov.pl/web/gov/prawa-autorskie)
 - **Próba RDOS_RADK_PIASKI_NOTICE_2025:** HTTP 200; 2026-09-15T16:30:45.228667+00:00; `data/catalog/probe_results_radkowice_followup_2026-09-15.json`; próbka `data/raw/research/2026-09-15/rdos_radkowice_piaski_2025.html`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### RDOS_RADK_PIASKI_DECISION_2025 — RDOŚ Kielce — pełna decyzja dla przebudowy linii Radkowice–Kielce Piaski
+
+[Źródło](https://www.gov.pl/attachment/27ef7a8e-5094-4391-be1c-7e23cb1038b2)
+
+- **Operator:** RDOŚ Kielce
+- **Właściciel:** RDOŚ Kielce
+- **Kraj:** PL
+- **Kategoria:** grid_investments
+- **Napięcie:** 220 kV
+- **Zasięg:** Radkowice i opisane zadanie
+- **Format:** PDF
+- **API:** UNKNOWN
+- **GIS:** UNKNOWN
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Pobrano publicznie bez konta; HTTP 200.
+- **Licencja:** Dokument urzędowy; zasady Gov.pl zweryfikowano, zakres praw do załącznika i materiałów osób trzecich wymaga odrębnej oceny.
+- **Użycie komercyjne:** REQUIRES_PERMISSION_REVIEW
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** PARTIAL — tekst dokumentu wymaga walidacji kontekstu
+- **Scraping:** Pobranie PDF i ekstrakcja tekstu; walidacja kontekstu i numerów stron
+- **Pola:** znak decyzji; data decyzji; słup 81; dotychczasowe pole 8; projektowane pole 6; około 60 m — tylko przebudowywane przęsło
+- **Zastosowanie:** Dokumentacyjna topologia przyszła, rozdzielona od stanu aktualnego i mostu
+- **Ograniczenia:** Plan przebudowy, nie potwierdzenie wykonania ani prawomocności; 60 m nie oznacza długości całej linii; Nie potwierdza parametrów mostu, jego obsadzenia ani dostępnych MW
+- **Data stanu źródła:** 2025-12-04
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** 1: znak i data; 3: planowane przełączenie przęsła
+- **Sprawdzono:** 2026-09-15
+- **Udany odczyt:** 2026-09-15
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy snapshot z timeoutem i SHA-256. Nie ustalono API, limitów ani gwarantowanego cyklu; brak wdrożonej automatyzacji.
+- **Warunki:** [źródło prawne](https://www.gov.pl/web/gov/prawa-autorskie)
+- **Próba RDOS_RADK_PIASKI_DECISION_2025:** HTTP 200; 2026-09-15T16:42:41.935208+00:00; `data/catalog/probe_results_radkowice_decision_2026-09-15.json`; próbka `data/raw/research/2026-09-15/rdos_radkowice_piaski_decision_2025.pdf`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

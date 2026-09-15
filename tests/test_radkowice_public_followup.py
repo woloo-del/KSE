@@ -11,6 +11,21 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class PublicFollowupTests(unittest.TestCase):
+    def test_full_decision_preserves_original_and_archive(self):
+        manifest=json.loads((ROOT/'data/catalog/radkowice_decision_archive_2026-09-15.json').read_text(encoding='utf-8'))
+        self.assertEqual(hashlib.sha256((ROOT/manifest['archive']).read_bytes()).hexdigest(),manifest['sha256'])
+        with zipfile.ZipFile(ROOT/manifest['archive']) as archive:
+            for member in manifest['members']:
+                self.assertEqual(hashlib.sha256((ROOT/member['local_path']).read_bytes()).hexdigest(),member['sha256'])
+                self.assertEqual(hashlib.sha256(archive.read(member['local_path'])).hexdigest(),member['sha256'])
+
+    def test_full_decision_distinguishes_old_and_planned_bays(self):
+        pdf=PdfReader(ROOT/'data/raw/research/2026-09-15/rdos_radkowice_piaski_decision_2025.pdf')
+        text=' '.join(pdf.pages[2].extract_text().split())
+        self.assertIn('WOO-I.420.7.2025.PJ/PP.14',''.join(pdf.pages[0].extract_text().split()))
+        for expected in ['ok. 60 m','słupem nr 81','w polu nr 8','do projektowanej bramki w polu nr 6']:
+            self.assertIn(expected,text)
+
     def test_catalog_validator_covers_later_and_repeated_snapshots(self):
         result=validate()
         self.assertEqual(result['errors'],[])

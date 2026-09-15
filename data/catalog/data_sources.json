@@ -4200,6 +4200,85 @@
       "retrieval_date": [
         "2026-09-15T16:30:45.228667+00:00"
       ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Radkowice i opisane zadanie",
+      "grid_voltage": [
+        "220 kV"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Pobrano publicznie bez konta; HTTP 200.",
+      "license": "Dokument urzędowy; zasady Gov.pl zweryfikowano, zakres praw do załącznika i materiałów osób trzecich wymaga odrębnej oceny.",
+      "license_url": "https://www.gov.pl/web/gov/prawa-autorskie",
+      "commercial_use": "REQUIRES_PERMISSION_REVIEW",
+      "machine_readable": "PARTIAL — tekst dokumentu wymaga walidacji kontekstu",
+      "scraping_required": "Pobranie PDF i ekstrakcja tekstu; walidacja kontekstu i numerów stron",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-15",
+      "last_successful_verification": "2026-09-15",
+      "source_date": "2025-12-04",
+      "publication_date": null,
+      "source_version": null,
+      "source_page": "1: znak i data; 3: planowane przełączenie przęsła",
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy snapshot z timeoutem i SHA-256. Nie ustalono API, limitów ani gwarantowanego cyklu; brak wdrożonej automatyzacji.",
+      "probe_ids": [
+        "RDOS_RADK_PIASKI_DECISION_2025"
+      ],
+      "related_urls": [],
+      "source_id": "RDOS_RADK_PIASKI_DECISION_2025",
+      "operator": "RDOŚ Kielce",
+      "source_name": "RDOŚ Kielce — pełna decyzja dla przebudowy linii Radkowice–Kielce Piaski",
+      "url": "https://www.gov.pl/attachment/27ef7a8e-5094-4391-be1c-7e23cb1038b2",
+      "data_owner": "RDOŚ Kielce",
+      "data_category": "grid_investments",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "key_fields": [
+        "znak decyzji",
+        "data decyzji",
+        "słup 81",
+        "dotychczasowe pole 8",
+        "projektowane pole 6",
+        "około 60 m — tylko przebudowywane przęsło"
+      ],
+      "potential_application": "Dokumentacyjna topologia przyszła, rozdzielona od stanu aktualnego i mostu",
+      "known_limitations": [
+        "Plan przebudowy, nie potwierdzenie wykonania ani prawomocności",
+        "60 m nie oznacza długości całej linii",
+        "Nie potwierdza parametrów mostu, jego obsadzenia ani dostępnych MW"
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "RDOS_RADK_PIASKI_DECISION_2025",
+          "url": "https://www.gov.pl/attachment/27ef7a8e-5094-4391-be1c-7e23cb1038b2",
+          "retrieval_date": "2026-09-15T16:42:41.935208+00:00",
+          "local_path": "data/raw/research/2026-09-15/rdos_radkowice_piaski_decision_2025.pdf",
+          "sha256": "88d830c00d1b982094174c69e6018ae2e4ab4bc23e80afd1fd5c88b178ad4b3d",
+          "bytes": 583447,
+          "content_type": [
+            "application/pdf"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_radkowice_decision_2026-09-15.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-15T16:42:41.935208+00:00"
+      ]
     }
   ]
 }

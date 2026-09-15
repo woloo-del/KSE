@@ -578,7 +578,7 @@
       "depends_on": [
         "KSE-032"
       ],
-      "next_action": "Publiczne ogłoszenie PSE potwierdza planowany zakres pola 220 kV z mostem. Kontynuować poszukiwanie dokumentacji postępowania i dowodów realizacji; NEED-001 i NEED-006 uaktualniono.",
+      "next_action": "Potwierdzić aktualny układ pól 220 kV i postęp robót. Pełna decyzja RDOŚ opisuje plan przeniesienia przęsła z pola 8 do 6; potrzeba NEED-006 zaktualizowana. Nadal szukać dokumentacji mostu i postępowania.",
       "acceptance": "Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.",
       "evidence": [
         "docs/private_sources.md",
