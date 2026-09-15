@@ -1,6 +1,6 @@
 {
   "schema_version": "todo_v1",
-  "updated_at": "2026-09-11",
+  "updated_at": "2026-09-12",
   "project": "Grid Connection Intelligence — Polska",
   "tasks": [
     {
@@ -502,7 +502,7 @@
       "depends_on": [
         "KSE-023"
       ],
-      "next_action": "Ocenić dostęp do parametrów, profili i topologii operatora oraz solverów.",
+      "next_action": "Ekspertyza wpływu nie będzie dostępna od użytkownika w tym pilocie. Oceniać inne źródła parametrów; nie uzależniać ewidencji i modelu dokumentacyjnego od power-flow.",
       "acceptance": "Kompletne wymagane wejścia i niezależna walidacja; w przeciwnym razie dokumentacja niewykonalności.",
       "evidence": [
         "docs/05_grid_capacity_methodology.md"
@@ -572,18 +572,25 @@
       "id": "KSE-033",
       "title": "Prywatne obserwacje i wspólna infrastruktura przyłączeniowa",
       "stage": "Model",
-      "status": "Not Started",
+      "status": "In Progress",
       "priority": "P0",
       "owner": "Użytkownik + Codex",
       "depends_on": [
         "KSE-032"
       ],
-      "next_action": "Ustalić model wspólnego przyłącza, praw dostępu, odrębnych limitów mocy i liczby miejsc oraz wersji dokumentów.",
+      "next_action": "Prototyp ewidencji miejsc i dziedziczenia prywatności działa; rozwinąć historię, kontrakty wejściowe i integrację. Projekt techniczny może uzupełnić dane później.",
       "acceptance": "Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.",
       "evidence": [
         "docs/private_sources.md",
-        "docs/04_data_model.md"
-      ]
+        "docs/04_data_model.md",
+        "docs/13_shared_connection_model.md",
+        "grid_engine/shared_connection.py",
+        "tests/test_shared_connection.py",
+        "scripts/analyze_shared_connection.py",
+        "tests/test_shared_connection_replay.py"
+      ],
+      "started_at": "2026-09-11",
+      "risk": "Brak ekspertyzy wpływu nie blokuje ewidencji. Brak danych sieciowych wyklucza wyliczanie rezerwy MW i częstości ograniczeń."
     }
   ]
 }

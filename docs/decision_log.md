@@ -140,3 +140,12 @@ Selected option: jawne wersje grafu i lokalny katalog prywatny z wersjami przegl
 Reason: nie mieszać parametrów planowanych z istniejącymi ani materiałów użytkownika z publiczną bazą źródeł.
 Trade-offs: prywatne wyniki nie są objęte Git ani ogólnym Excelem; wymagają oddzielnej kopii.
 Consequences: pełna integracja prywatnych danych pozostaje KSE-033; obecna aplikacja nie ma jeszcze kontroli dostępu.
+
+## 11.09.2026 — niezależna ewidencja wspólnego przyłącza
+
+Decision: rozwijać model dokumentacyjny mimo niedostępności ekspertyzy wpływu od użytkownika.
+Options considered: oczekiwanie na ekspertyzę; heurystyczne MW; ewidencja miejsc z jawnymi brakami.
+Selected option: ewidencja w osobnym, czystym module Python bez dodatkowych zależności.
+Reason: przypisania i status kompletności dają sprawdzalne informacje bez udawania modelu rozpływowego.
+Trade-offs: można obliczyć liczbę nieprzypisanych miejsc dopiero z kompletnych wejść; nie obliczamy dostępnych MW ani prawdopodobieństwa.
+Consequences: prywatny dowód oznacza prywatny wynik, również gdy nie wchodzi do pewnego licznika. KSE-033 pozostaje w toku, ponieważ nie ukończono historii i integracji aplikacyjnej.

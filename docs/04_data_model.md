@@ -23,3 +23,7 @@ Minimalne obiekty domenowe: `OPERATOR`, `SOURCE`, `SOURCE_SNAPSHOT`, `OBSERVATIO
 Szczegółowy projekt SQL/API oraz walidacja kontraktów należą do etapu 2. Katalog źródeł w etapie 1 nie jest zamiennikiem modelu obserwacji technicznych.
 
 Wymaganie widoku [pipeline GPZ](gpz_pipeline.md) dodaje odrębny `CONNECTION_APPLICATION` z własnym identyfikatorem i historią statusów, związany z projektem oraz wskazanym punktem przyłączenia. Status wykonania przyłączenia, eksploatacji i procedury wniosku należy przechowywać oddzielnie. Brak odpowiedzi w źródle jest UNKNOWN; nie oznacza automatycznie potwierdzonego oczekiwania na odpowiedź.
+
+## Prototyp wspólnego przyłącza — 11.09.2026
+
+[Model ewidencji miejsc](13_shared_connection_model.md) rozdziela identyfikatory projektów, miejsc i przyłącza, scenariusz, kompletność danych oraz kierunkowe limity MW. Działa jako niezależna biblioteka i nie zastępuje pełnego schematu bazy, historii ani kontroli dostępu aplikacji. Wyniki elektryczne pozostają UNKNOWN.

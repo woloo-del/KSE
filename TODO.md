@@ -1,6 +1,6 @@
 # TODO — Grid Connection Intelligence
 
-Aktualizacja rejestru: **2026-09-11**. Źródło edytowalne: [todo.json](data/project/todo.json).
+Aktualizacja rejestru: **2026-09-12**. Źródło edytowalne: [todo.json](data/project/todo.json).
 
 Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zakończenia. Nie ustalono terminów dla niezaplanowanych zadań. P0 = warunek najbliższego etapu, P1 = rozwój po fundamentach, P2 = dalszy rozwój. Priorytety są kolejnością organizacji pracy, nie scoringiem sieci.
 
@@ -9,7 +9,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). Bezpośredni PDF nadal zwraca blokadę (11.09); sprawdzić oficjalny alternatywny kanał lub dokumenty przekazane przez użytkownika.
 - **KSE-010 — Ustalić prawa źródeł wybranych do pilota** (P0, Do zrobienia). Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Wykonać prywatną kopię ZIP na drugim nośniku i potwierdzić jej odczyt.
-- **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, Do zrobienia). Ustalić model wspólnego przyłącza, praw dostępu, odrębnych limitów mocy i liczby miejsc oraz wersji dokumentów.
+- **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Prototyp ewidencji miejsc i dziedziczenia prywatności działa; rozwinąć historię, kontrakty wejściowe i integrację. Projekt techniczny może uzupełnić dane później.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 
@@ -49,7 +49,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-030 | Potwierdzić zewnętrzną kopię archiwum | Organizacja | Do zrobienia | P0 | KSE-003 |
 | KSE-031 | Eksperymentalny graf dowodów Radkowic | Model | Zrobione | P0 | KSE-002, KSE-007 |
 | KSE-032 | Rozszerzenie dowodów 110 kV i przegląd materiału użytkownika | Research | Zrobione | P0 | KSE-031 |
-| KSE-033 | Prywatne obserwacje i wspólna infrastruktura przyłączeniowa | Model | Do zrobienia | P0 | KSE-032 |
+| KSE-033 | Prywatne obserwacje i wspólna infrastruktura przyłączeniowa | Model | W toku | P0 | KSE-032 |
 
 ## Kryteria zakończenia i dowody
 
@@ -364,7 +364,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-029 — Dane techniczne i model rozpływowy
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Ocenić dostęp do parametrów, profili i topologii operatora oraz solverów.
+- Następny krok: Ekspertyza wpływu nie będzie dostępna od użytkownika w tym pilocie. Oceniać inne źródła parametrów; nie uzależniać ewidencji i modelu dokumentacyjnego od power-flow.
 - Kryterium: Kompletne wymagane wejścia i niezależna walidacja; w przeciwnym razie dokumentacja niewykonalności.
 - Nieukończone zależności: KSE-023.
 - Ryzyko: Publiczne dane mogą nie wystarczyć; brak gwarancji osiągalności etapu..
@@ -408,10 +408,10 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Ustalić model wspólnego przyłącza, praw dostępu, odrębnych limitów mocy i liczby miejsc oraz wersji dokumentów.
+- Następny krok: Prototyp ewidencji miejsc i dziedziczenia prywatności działa; rozwinąć historię, kontrakty wejściowe i integrację. Projekt techniczny może uzupełnić dane później.
 - Kryterium: Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.
 - Nieukończone zależności: brak.
-- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Ryzyko: Brak ekspertyzy wpływu nie blokuje ewidencji. Brak danych sieciowych wyklucza wyliczanie rezerwy MW i częstości ograniczeń..
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/private_sources.md](docs/private_sources.md), [docs/04_data_model.md](docs/04_data_model.md).
+- Dowody/kontekst: [docs/private_sources.md](docs/private_sources.md), [docs/04_data_model.md](docs/04_data_model.md), [docs/13_shared_connection_model.md](docs/13_shared_connection_model.md), [grid_engine/shared_connection.py](grid_engine/shared_connection.py), [tests/test_shared_connection.py](tests/test_shared_connection.py), [scripts/analyze_shared_connection.py](scripts/analyze_shared_connection.py), [tests/test_shared_connection_replay.py](tests/test_shared_connection_replay.py).
