@@ -31,6 +31,24 @@ class ReplayTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'NONFINITE_JSON_NUMBER'):
             decode_snapshot(b'{"maximum_positions":NaN}')
 
+    def test_duplicate_fields_rejected_at_every_depth(self):
+        for raw in [b'{"maximum_positions":4,"maximum_positions":9}',
+                    b'{"position_evidence":{"access":"PRIVATE","access":"PUBLIC"}}',
+                    b'{"assignments":[{"project_id":"a","project_id":"b"}]}',
+                    b'{"maximum_positions":4,"maximum_positions":4}']:
+            with self.assertRaisesRegex(ValueError,'DUPLICATE_JSON_FIELD'):
+                decode_snapshot(raw)
+
+    def test_conflicting_privacy_fields_produce_no_export_file(self):
+        raw=json.dumps(self.input).replace('"access": "PUBLIC"',
+                                          '"access": "PRIVATE", "access": "PUBLIC"')
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); source=root/'input.json'; out=root/'output.json'
+            source.write_text(raw,encoding='utf-8')
+            with self.assertRaisesRegex(ValueError,'DUPLICATE_JSON_FIELD'):
+                analyze_file(source,out,root/'private')
+            self.assertFalse(out.exists())
+
     def test_private_path_blocks_export_even_with_public_labels(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); private=root/'private'; private.mkdir()

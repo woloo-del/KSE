@@ -17,7 +17,16 @@ def decode_snapshot(raw: bytes) -> SharedConnectionSnapshot:
     def reject_constant(value: str) -> None:
         raise ValueError('NONFINITE_JSON_NUMBER')
 
-    data = json.loads(raw.decode('utf-8-sig'), parse_float=Decimal, parse_constant=reject_constant)
+    def unique_fields(pairs: list[tuple[str, object]]) -> dict:
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError('DUPLICATE_JSON_FIELD')
+            result[key] = value
+        return result
+
+    data = json.loads(raw.decode('utf-8-sig'), parse_float=Decimal,
+                      parse_constant=reject_constant, object_pairs_hook=unique_fields)
     for field in ['position_evidence', 'coverage_evidence', 'export_evidence', 'import_evidence']:
         if data.get(field) is not None:
             data[field] = Evidence(**data[field])

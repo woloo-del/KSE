@@ -44,4 +44,8 @@ python scripts/analyze_shared_connection.py --input SCIEZKA_WEJSCIA.json --outpu
 
 Polecenie nie pobiera danych ani nie przeszukuje folderów. Wskazuje hashe wejścia, modułu i skryptu. Ponowne uruchomienie z tymi samymi bajtami daje identyczny wynik. Istniejący plik wyjściowy nie jest nadpisywany. Wynik prywatny można zapisać wyłącznie w `data/private/`; również samo pochodzenie wejścia z tego katalogu wymusza prywatność. JSON oraz dokumenty źródłowe należy przechowywać jako wersjonowany lokalny snapshot z niezależną kopią. Skrypt nie sprawdza automatycznie treści wszystkich dokumentów wskazanych przez hashe.
 
+## Kontrola wejścia — 15.09.2026
+
+Powtórzone nazwy pól JSON są odrzucane na każdym poziomie, również wewnątrz dowodów i przypisań. Dotyczy to także powtórzenia tej samej wartości. Parser nie wybiera ostatniej wersji liczby miejsc, identyfikatora ani klasy dostępu. Błąd występuje przed utworzeniem pliku wynikowego. Poprawne wejścia zachowują dotychczasową metodę obliczeń; zmiana walidacji jest identyfikowana hashem skryptu w wyniku i wersją Git. Raport Excel z 12.09 pozostaje historycznym snapshotem, bez tej późniejszej aktualizacji.
+
 Można rozwijać tę ewidencję bez ekspertyzy wpływu na KSE. Brak ekspertyzy ogranicza wnioski elektryczne, nie blokuje modelowania dokumentów, statusów i powiązań. Kolejne dane techniczne mogą doprecyzować konstrukcję przyłącza; same nie zastąpią topologii ruchowej, obciążeń, parametrów sieci i niezależnej walidacji.

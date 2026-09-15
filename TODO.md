@@ -1,6 +1,6 @@
 # TODO — Grid Connection Intelligence
 
-Aktualizacja rejestru: **2026-09-12**. Źródło edytowalne: [todo.json](data/project/todo.json).
+Aktualizacja rejestru: **2026-09-15**. Źródło edytowalne: [todo.json](data/project/todo.json).
 
 Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zakończenia. Nie ustalono terminów dla niezaplanowanych zadań. P0 = warunek najbliższego etapu, P1 = rozwój po fundamentach, P2 = dalszy rozwój. Priorytety są kolejnością organizacji pracy, nie scoringiem sieci.
 
@@ -9,7 +9,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). Bezpośredni PDF nadal zwraca blokadę (11.09); sprawdzić oficjalny alternatywny kanał lub dokumenty przekazane przez użytkownika.
 - **KSE-010 — Ustalić prawa źródeł wybranych do pilota** (P0, Do zrobienia). Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Wykonać prywatną kopię ZIP na drugim nośniku i potwierdzić jej odczyt.
-- **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Prototyp ewidencji miejsc i dziedziczenia prywatności działa; rozwinąć historię, kontrakty wejściowe i integrację. Projekt techniczny może uzupełnić dane później.
+- **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Odtwarzanie i kontrola powtórzonych pól JSON przetestowane. Następnie rozwinąć wersjonowaną historię obserwacji i integrację; projekt techniczny może uzupełnić dane później.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 
@@ -408,7 +408,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Prototyp ewidencji miejsc i dziedziczenia prywatności działa; rozwinąć historię, kontrakty wejściowe i integrację. Projekt techniczny może uzupełnić dane później.
+- Następny krok: Odtwarzanie i kontrola powtórzonych pól JSON przetestowane. Następnie rozwinąć wersjonowaną historię obserwacji i integrację; projekt techniczny może uzupełnić dane później.
 - Kryterium: Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.
 - Nieukończone zależności: brak.
 - Ryzyko: Brak ekspertyzy wpływu nie blokuje ewidencji. Brak danych sieciowych wyklucza wyliczanie rezerwy MW i częstości ograniczeń..
