@@ -61,18 +61,64 @@ archiwum poza komputerem nadal nie jest potwierdzona.
 ## Ograniczenia i kolejny krok
 
 Moduł operuje na niezmiennych obiektach w pamięci; przykład zapisuje jawny
-snapshot JSON. Nie ma jeszcze transakcyjnego rejestru, automatycznego porównania
-kolejnych publikacji ani integracji historii z ewidencją wspólnego przyłącza.
+snapshot JSON. Nie ma jeszcze transakcyjnego rejestru ani automatycznego porównania
+kolejnych publikacji. Integracja z ewidencją przypisań jest opisana poniżej.
 Kolejność czasu jest walidowana, lecz biblioteka nie uwierzytelnia zegara.
 Wartości są tekstem normalizowanym na wejściu; jednostki i scenariusze rozdzielają
 klucze. CALCULATED / ESTIMATED / INFERRED wymagają osobnego kontraktu metod i wejść.
 
-Następny krok: połączyć historię dowodów z odtwarzaniem ewidencji przypisań,
-zachowując daty, scenariusze i dziedziczenie prywatności. Nie wymaga to ekspertyzy
-wpływu; nie uprawnia do wyliczania rezerwy MW ani prawdopodobieństwa przyłączenia.
+Integrację historii z ewidencją przypisań dodano w kolejnym przyroście poniżej.
+Nie wymaga to ekspertyzy wpływu; nie uprawnia do wyliczania rezerwy MW ani
+prawdopodobieństwa przyłączenia.
 
 Walidacja 2026-09-15: 64 testy Python i 8 testów generatora raportu — wszystkie
 przeszły. Obejmuje to odtworzenie trzech wpisów z zachowanego XLSX, ochronę przed
 nadpisaniem, korekty, konflikty, granice dat i prywatność. Kontrola `git diff --check`
 nie wykazała błędów. Raport Excel z 12 września pozostaje historycznym snapshotem;
 nowy dokument jest już na liście wejść generatora do kolejnego odświeżenia raportu.
+
+## Integracja z przypisaniami — 2026-09-15
+
+`grid_engine/historical_assignments.py` łączy zapytanie `as_known` z istniejącym
+licznikiem `summarize`. Przyjmuje pełną historię oraz identyfikator przyłącza,
+scenariusz CURRENT / PLANNED, moment wiedzy i dzień ocenianego stanu.
+
+Kontrakt wejścia obserwacji: `entity_id` to ID wspólnego przyłącza,
+`field = position_project:<position_id>`, `value` to ID przypisanego projektu,
+`unit = null`. UNKNOWN pozostaje null. Takie przypisanie musi wynikać z dowodu
+dotyczącego konkretnego miejsca. Publikowana nazwa stacji lub bliskość projektu
+nie wystarczają. Ten kontrakt opisuje jeden projekt na miejsce; jeden projekt
+może zajmować kilka miejsc. Nie mapujemy nieznanych miejsc na sztuczne identyfikatory.
+
+Do licznika trafia tylko rozstrzygnięta wartość z dokumentem i ustaloną ważnością.
+Sam USER_PROVIDED zachowuje źródłowe twierdzenie, ale wymaga dokumentacyjnego
+potwierdzenia. Wszystkie dowody, również zgodne, sprzeczne, prywatne i skorygowane,
+pozostają w `position_history` oraz ogólnej liście `evidence`. Pojedynczy dowód
+w strukturze Assignment jest odnośnikiem reprezentatywnym, nie wyborem źródła
+rozstrzygającym konflikt. Prywatność dziedziczy cały wynik.
+
+`unresolved_position_histories` liczy historie miejsc niewłączone do potwierdzonych
+przypisań. Obejmuje również wpisy wygasłe lub jeszcze nieobowiązujące; przyczyny
+można odczytać w danej historii. Ten licznik nie jest liczbą projektów ani wolnych
+miejsc. Przyszły, jeszcze niezarejestrowany wpis nie ujawnia nawet ID miejsca.
+
+W tej wersji kompletność pozostaje false, maksimum miejsc i limity MW są null.
+Nie przenosimy parametrów bieżącego snapshotu do wcześniejszego dnia.
+`as_of` wynikowej ewidencji oznacza tu `effective_on`; `known_at` jest osobnym
+polem. Identyfikator `historical_assignment_view` opisuje widok w pamięci, nie
+unikalny utrwalony snapshot. Wynik jest deterministyczny dla tej samej historii,
+parametrów i wersji kodu; trwały zapis i manifest wymagają dalszej integracji.
+
+Testy integracyjne sprawdzają korekty, konflikty, prywatność, wygasłe wpisy,
+rozdział scenariuszy i jednostek oraz różnicę liczby projektów i miejsc.
+Test na zachowanych publicznych wpisach Radkowic potwierdza, że nie powstaje
+z nich żadne przypisanie do mostu. Syntetyczne przypisania istnieją tylko w testach.
+
+Następny krok: wersjonowany plik wejścia i bezpieczne odtwarzanie wyniku z
+manifestem, następnie historia parametrów i jawnych deklaracji kompletności.
+Trwała baza, kontrola dostępu aplikacji i weryfikacja realnych przypisań pozostają
+otwarte w KSE-033. Excel z 12 września nadal jest historycznym raportem.
+
+Walidacja przyrostu integracyjnego: 76 testów Python (w tym 12 testów nowego
+adaptera) oraz 8 testów raportowania przeszło 2026-09-15. `git diff --check`
+bez błędów. Nie wprowadzono nowych zależności ani danych prywatnych do repozytorium.

@@ -22,7 +22,7 @@ Sprzeczne lub powtórzone przypisania do jednego miejsca powodują błąd; nie m
 
 ## Czas i prywatność
 
-Datą zestawienia jest moment wiedzy analityka. Nie dowodzi aktualności każdego dokumentu. Wyboru wersji i oceny kompletności dokonuje wcześniejsza warstwa; moduł nie scala historii ani nie rozstrzyga sprzecznych okresów. Pochodzenie każdej informacji pozostaje dostępne w wyniku.
+W samodzielnym zestawieniu `as_of` jest datą zestawienia analityka. Nie dowodzi aktualności każdego dokumentu. Wyboru wersji i oceny kompletności dokonuje wcześniejsza warstwa; moduł nie scala historii ani nie rozstrzyga sprzecznych okresów. Pochodzenie każdej informacji pozostaje dostępne w wyniku. Integracja historyczna opisana w [historii obserwacji](14_observation_history.md) rozdziela `known_at` i `effective_on`; w jej wyniku `as_of` jest dniem ocenianego stanu, czyli `effective_on`.
 
 Każde prywatne wejście, także odrzucone z pewnego licznika, oznacza cały wynik jako PRIVATE. `require_public_result` odmawia eksportu takiego wyniku. Jest to kontrola logiczna biblioteki, nie uwierzytelnianie ani pełny system uprawnień. Produkcyjna integracja, automatyczne dziedziczenie dostępu w całym systemie i trwała historia pozostają otwarte w KSE-033.
 

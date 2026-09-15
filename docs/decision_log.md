@@ -158,3 +158,12 @@ Selected option: moduł Python z dwiema osiami czasu, jawnymi korektami i konfli
 Reason: pozwala przetestować semantykę przed integracją bazy; nie wymaga dodatkowych zależności.
 Trade-offs: UNKNOWN przy nierozstrzygniętej ważności; brak trwałego dziennika transakcyjnego i automatycznej historii całego pipeline.
 Consequences: pierwsza rejestracja lipcowego źródła w nowym rejestrze ma rzeczywisty czas 15 września. Prywatność dziedziczy cały wynik widocznej historii pola. KSE-033 pozostaje w toku. Szczegóły: docs/14_observation_history.md.
+
+## 2026-09-15 — odtwarzanie przypisań z historii dowodów
+
+Decision / Context: połączyć historię z licznikiem miejsc bez dopisywania niepotwierdzonych relacji.
+Options considered: kopiowanie bieżącego snapshotu do historii; osobny licznik historyczny; adapter wykorzystujący dotychczasową walidację i licznik.
+Selected option: adapter dla jawnych obserwacji projektu na konkretnym miejscu, z datami i scenariuszem.
+Reason: zachowuje korekty, konflikty i wszystkie źródła; nie duplikuje reguł liczenia miejsc.
+Trade-offs: brak udokumentowanej ważności albo tylko twierdzenie użytkownika wyklucza potwierdzony licznik. Maksimum, kompletność i MW wymagają osobnej historii i pozostają nieznane.
+Consequences: trzy publiczne wpisy projektów przy Radkowicach nie stają się przypisaniami do mostu. Integracja jest biblioteką, bez trwałego magazynu i bez nowych faktów sieciowych. KSE-033 nadal w toku.
