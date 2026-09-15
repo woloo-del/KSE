@@ -167,3 +167,12 @@ Selected option: adapter dla jawnych obserwacji projektu na konkretnym miejscu, 
 Reason: zachowuje korekty, konflikty i wszystkie źródła; nie duplikuje reguł liczenia miejsc.
 Trade-offs: brak udokumentowanej ważności albo tylko twierdzenie użytkownika wyklucza potwierdzony licznik. Maksimum, kompletność i MW wymagają osobnej historii i pozostają nieznane.
 Consequences: trzy publiczne wpisy projektów przy Radkowicach nie stają się przypisaniami do mostu. Integracja jest biblioteką, bez trwałego magazynu i bez nowych faktów sieciowych. KSE-033 nadal w toku.
+
+## 2026-09-15 — plikowy replay historii z manifestem
+
+Decision / Context: umożliwić ponowne uruchomienie historycznej analizy ze wskazanego wejścia.
+Options considered: osobny manifest i wynik; manifest osadzony; baza danych.
+Selected option: manifest osadzony w jednym wersjonowanym JSON, wyłączny zapis nowego pliku.
+Reason: nie tworzy pary plików wymagającej synchronizacji; obejmuje wejście, zapytanie, kod i środowisko bez nowych zależności.
+Trade-offs: nie ma transakcyjnego magazynu ani automatycznej weryfikacji źródłowych dokumentów; przerwanie zapisu może pozostawić niepełny plik.
+Consequences: prywatny rekord w całym wejściu wymusza prywatność zapisanego wyniku z manifestem, także poza czasem zapytania. Dekoder JSON jest wspólny dla obu runnerów, jego hash jest zachowany. KSE-033 pozostaje otwarte do dalszej integracji i historii parametrów.

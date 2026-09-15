@@ -11,22 +11,11 @@ sys.path.insert(0, str(ROOT))
 from grid_engine.shared_connection import (
     Assignment, Evidence, SharedConnectionSnapshot, require_public_result, summarize,
 )
+from grid_engine.strict_json import decode_json
 
 
 def decode_snapshot(raw: bytes) -> SharedConnectionSnapshot:
-    def reject_constant(value: str) -> None:
-        raise ValueError('NONFINITE_JSON_NUMBER')
-
-    def unique_fields(pairs: list[tuple[str, object]]) -> dict:
-        result = {}
-        for key, value in pairs:
-            if key in result:
-                raise ValueError('DUPLICATE_JSON_FIELD')
-            result[key] = value
-        return result
-
-    data = json.loads(raw.decode('utf-8-sig'), parse_float=Decimal,
-                      parse_constant=reject_constant, object_pairs_hook=unique_fields)
+    data = decode_json(raw)
     for field in ['position_evidence', 'coverage_evidence', 'export_evidence', 'import_evidence']:
         if data.get(field) is not None:
             data[field] = Evidence(**data[field])
@@ -58,6 +47,7 @@ def analyze_file(input_path: Path, output_path: Path, private_root: Path) -> dic
         'input_sha256':hashlib.sha256(raw).hexdigest(),
         'engine_sha256':hashlib.sha256((ROOT/'grid_engine/shared_connection.py').read_bytes()).hexdigest(),
         'runner_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        'decoder_sha256':hashlib.sha256((ROOT/'grid_engine/strict_json.py').read_bytes()).hexdigest(),
     }
     encoded = json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False)+'\n'
     output_path.parent.mkdir(parents=True, exist_ok=True)

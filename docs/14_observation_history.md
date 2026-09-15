@@ -107,18 +107,70 @@ Nie przenosimy parametrów bieżącego snapshotu do wcześniejszego dnia.
 `as_of` wynikowej ewidencji oznacza tu `effective_on`; `known_at` jest osobnym
 polem. Identyfikator `historical_assignment_view` opisuje widok w pamięci, nie
 unikalny utrwalony snapshot. Wynik jest deterministyczny dla tej samej historii,
-parametrów i wersji kodu; trwały zapis i manifest wymagają dalszej integracji.
+parametrów i wersji kodu. Zapis plikowy i manifest dodano w kolejnym przyroście,
+opisanym poniżej; nie jest to transakcyjna baza historii.
 
 Testy integracyjne sprawdzają korekty, konflikty, prywatność, wygasłe wpisy,
 rozdział scenariuszy i jednostek oraz różnicę liczby projektów i miejsc.
 Test na zachowanych publicznych wpisach Radkowic potwierdza, że nie powstaje
 z nich żadne przypisanie do mostu. Syntetyczne przypisania istnieją tylko w testach.
 
-Następny krok: wersjonowany plik wejścia i bezpieczne odtwarzanie wyniku z
-manifestem, następnie historia parametrów i jawnych deklaracji kompletności.
+Następny krok po odtwarzaniu plikowym: historia parametrów i jawnych deklaracji kompletności.
 Trwała baza, kontrola dostępu aplikacji i weryfikacja realnych przypisań pozostają
 otwarte w KSE-033. Excel z 12 września nadal jest historycznym raportem.
 
 Walidacja przyrostu integracyjnego: 76 testów Python (w tym 12 testów nowego
 adaptera) oraz 8 testów raportowania przeszło 2026-09-15. `git diff --check`
 bez błędów. Nie wprowadzono nowych zależności ani danych prywatnych do repozytorium.
+
+## Odtwarzanie plikowe z manifestem — 2026-09-15
+
+```powershell
+python scripts/analyze_historical_assignments.py --input SCIEZKA_WEJSCIA.json --output SCIEZKA_NOWEGO_WYNIKU.json
+```
+
+Wejście ma dokładnie trzy pola: `schema_version` o wartości
+`historical_assignments_request_v1`, `query` i `observations`.
+`query` zawiera dokładnie `connection_id`, `scenario`, `known_at`, `effective_on`.
+`observations` to lista obiektów Observation opisanych powyżej, z kompletnym
+Evidence w każdym wpisie. Daty i identyfikatory są parametrami użytkownika,
+nie domyślnym czasem uruchomienia. Zapisany przykład historii statusów Radkowic
+nie jest sam w sobie takim żądaniem ani historią miejsc na moście.
+
+Skrypt nie pobiera danych i nie skanuje folderów. Weryfikuje schemat, historię,
+daty i proweniencję. Wspólny dekoder `grid_engine/strict_json.py` odrzuca
+powtórzone pola na każdym poziomie i NaN/Infinity. Nieznane pola wejścia,
+obserwacji, dowodów lub zapytania powodują błąd przed zapisem.
+
+Manifest jest osadzony w `reproducibility` tego samego pliku. Zawiera hash
+oryginalnych bajtów wejścia, hashe pięciu lokalnych modułów, wersję i implementację
+Pythona, komplet parametrów oraz hash analitycznej części wyniku. Dla ostatniego
+hasha używany jest UTF-8, JSON ze sortowanymi kluczami, bez spacji i końcowego LF,
+bez pola `reproducibility`. Nie zapisujemy lokalnych ścieżek użytkownika ani
+sekretów środowiska. Manifest identyfikuje dane i kod, ale nie zastępuje ich kopii
+i nie dowodzi autentyczności dokumentu źródłowego. Dowodów zewnętrznych nie pobiera
+ani nie weryfikuje względem podanego hasha.
+
+Wynik z tym samym wejściem, kodem i środowiskiem jest identyczny bajtowo.
+Istniejący plik wynikowy nie jest nadpisywany, również przy identycznym wyniku.
+Ponowne wykonanie wymaga nowej nazwy pliku. Zapis jest wyłączny, lecz nie stanowi
+transakcji bazy; awaria dysku podczas zapisu może pozostawić niepełny plik.
+
+Dowolny prywatny rekord w pełnym wejściu lub pochodzenie wejścia z `data/private/`
+wymusza PRIVATE. To celowo silniejsza reguła niż widok w pamięci: manifest
+identyfikuje całe wejście, także rekordy przyszłe i dotyczące innych pól.
+Prywatny wynik można zapisać wyłącznie pod `data/private/`. Nie odczytujemy
+ani nie zapisujemy ścieżek zawierających `_secrets`. Eksport poza katalog prywatny
+wymaga publicznych dowodów; pusty wynik bez dowodów nie jest publiczną ewidencją.
+Nie jest to mechanizm uwierzytelniania ani kontrola dostępu systemu operacyjnego.
+
+Dotychczasowy runner pojedynczego snapshotu korzysta z tego samego dekodera;
+jego manifest uwzględnia dodatkowy hash dekodera. Reguły liczenia pozostają te same.
+Brak zweryfikowanych przypisań Radkowic nadal uniemożliwia przygotowanie rzeczywistego
+raportu o obsadzeniu mostu. Testy plikowego odtwarzania używają jawnie syntetycznych
+rekordów w katalogach tymczasowych. Nie dodano ich do danych pilota.
+
+Walidacja przyrostu plikowego 2026-09-15: 84 testy Python i 8 testów raportowania
+przeszły; `git diff --check` bez błędów. Osiem nowych testów obejmuje manifest,
+deterministyczny zapis, zakaz nadpisania, zmianę parametrów, prywatność całego
+wejścia, ścieżki sekretów i odrzucanie błędnego schematu przed zapisem.

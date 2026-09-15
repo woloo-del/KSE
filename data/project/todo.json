@@ -578,7 +578,7 @@
       "depends_on": [
         "KSE-032"
       ],
-      "next_action": "Integracja historii z licznikiem przypisań gotowa i przetestowana. Następnie dodać wersjonowane wejście i bezpieczne odtwarzanie z manifestem; później historię parametrów oraz deklaracji kompletności.",
+      "next_action": "Plikowe odtwarzanie historii z manifestem i ochroną prywatnych wejść gotowe. Następnie dodać historię parametrów przyłącza i jawnych deklaracji kompletności; zweryfikować realne przypisania po uzyskaniu dowodów.",
       "acceptance": "Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.",
       "evidence": [
         "docs/private_sources.md",
@@ -595,7 +595,10 @@
         "tests/test_radkowice_history.py",
         "data/reference/radkowice_observation_history_v1.json",
         "grid_engine/historical_assignments.py",
-        "tests/test_historical_assignments.py"
+        "tests/test_historical_assignments.py",
+        "scripts/analyze_historical_assignments.py",
+        "grid_engine/strict_json.py",
+        "tests/test_historical_assignment_replay.py"
       ],
       "started_at": "2026-09-11",
       "risk": "Brak ekspertyzy wpływu nie blokuje ewidencji. Brak danych sieciowych wyklucza wyliczanie rezerwy MW i częstości ograniczeń."
