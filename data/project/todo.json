@@ -368,7 +368,7 @@
         "KSE-017",
         "KSE-018"
       ],
-      "next_action": "Rozwinąć widok radkowice_pse_pipeline_view_v1 po deduplikacji i uzupełnieniu źródeł. Działa zestawienie 3 wierszy umów PSE; nie jest pełnym pipeline stacji ani dowodem przyłączenia.",
+      "next_action": "Rozwinąć widok radkowice_pse_pipeline_view_v1 po deduplikacji i uzupełnieniu źródeł. Działa zestawienie 3 wierszy umów PSE z testami ochrony zapisu przy zmianie danych/kodu; nadal nie jest pełnym pipeline stacji.",
       "acceptance": "Potwierdzone przyłączenie, plan i oczekiwanie odróżnione; deduplikacja i kierunkowe sumy z pokryciem.",
       "evidence": [
         "docs/gpz_pipeline.md",

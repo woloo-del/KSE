@@ -77,3 +77,11 @@ Wynik zawiera wersję metody i hashe dwóch skryptów. Ponowienie z tymi samymi
 wejściami zachowuje identyczny plik; inna treść pod istniejącą nazwą jest odrzucana.
 Nie jest to uniwersalny parser statusów PSE, pełny connector ani realizacja KSE-021.
 Nadal potrzebne są rozstrzygnięcia tożsamości, dane PGE i kompletność źródeł.
+
+### Kontrola ponownego uruchomienia — 16.09.2026
+
+Testy generatora obejmują teraz zapis w izolowanym katalogu: identyczne wejście
+zachowuje bajty i czas modyfikacji wyniku, zmieniona moc lub hash kodu blokują
+nadpisanie, a błąd ekstrakcji nie pozostawia wyniku. Sprawdzono hashe obu skryptów
+w zapisanym rezultacie. Mutacje wejść występują wyłącznie w testach syntetycznych.
+Nie zmieniono metody v1 ani zachowanego zestawienia rzeczywistych projektów.
