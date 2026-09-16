@@ -4,6 +4,10 @@ Stan na **16.09.2026**: pierwszy przegląd źródeł zakończony, rozwijany jest
 
 **Wniosek:** publiczne dane pozwalają budować audytowalny system rozpoznania sytuacji przyłączeniowej. Nie pozwalają obecnie wiarygodnie wyznaczać wolnej mocy każdego GPZ ani procentowego prawdopodobieństwa uzyskania warunków przyłączenia.
 
+## Uruchom lokalną aplikację
+
+W PowerShell uruchom `./scripts/start_local_app.ps1`, a następnie otwórz http://127.0.0.1:8787. Pilot pokazuje źródła, projekty, powiązania i ocenę przesłanek dla Radkowic. [Zakres, ograniczenia i instrukcja](docs/17_local_application.md).
+
 ## Dokumenty
 
 - [Rejestr TODO](TODO.md)

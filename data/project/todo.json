@@ -610,6 +610,28 @@
       ],
       "started_at": "2026-09-11",
       "risk": "Brak ekspertyzy wpływu nie blokuje ewidencji. Brak danych sieciowych wyklucza wyliczanie rezerwy MW i częstości ograniczeń."
+    },
+    {
+      "id": "KSE-034",
+      "title": "Lokalna aplikacja pilotażowa — ocena przesłanek Radkowic",
+      "stage": "MVP UI",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-032"
+      ],
+      "next_action": "Test użytkownika i rozwój pokrycia danych; zweryfikować pobieranie JSON poza przeglądarką Codex.",
+      "acceptance": "Lokalny widok publicznych dowodów, osobne kierunki i napięcia, jawne braki, odtwarzalny wynik bez fikcyjnego scoringu.",
+      "evidence": [
+        "docs/17_local_application.md",
+        "backend/local_app.py",
+        "grid_engine/screening_opinion.py",
+        "tests/test_local_app.py"
+      ],
+      "started_at": "2026-09-16",
+      "completed_at": "2026-09-16",
+      "risk": "Pilot jakościowy, nie pełne MVP. Automatyczne potwierdzenie pobrania JSON w Codex nieudane; tekst raportu dostępny w widoku."
     }
   ]
 }

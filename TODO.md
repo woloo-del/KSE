@@ -50,6 +50,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-031 | Eksperymentalny graf dowodów Radkowic | Model | Zrobione | P0 | KSE-002, KSE-007 |
 | KSE-032 | Rozszerzenie dowodów 110 kV i przegląd materiału użytkownika | Research | Zrobione | P0 | KSE-031 |
 | KSE-033 | Prywatne obserwacje i wspólna infrastruktura przyłączeniowa | Model | W toku | P0 | KSE-032 |
+| KSE-034 | Lokalna aplikacja pilotażowa — ocena przesłanek Radkowic | MVP UI | Zrobione | P0 | KSE-032 |
 
 ## Kryteria zakończenia i dowody
 
@@ -415,3 +416,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
 - Dowody/kontekst: [docs/private_sources.md](docs/private_sources.md), [docs/04_data_model.md](docs/04_data_model.md), [docs/13_shared_connection_model.md](docs/13_shared_connection_model.md), [grid_engine/shared_connection.py](grid_engine/shared_connection.py), [tests/test_shared_connection.py](tests/test_shared_connection.py), [scripts/analyze_shared_connection.py](scripts/analyze_shared_connection.py), [tests/test_shared_connection_replay.py](tests/test_shared_connection_replay.py), [docs/14_observation_history.md](docs/14_observation_history.md), [grid_engine/observation_history.py](grid_engine/observation_history.py), [tests/test_observation_history.py](tests/test_observation_history.py), [scripts/build_radkowice_history.py](scripts/build_radkowice_history.py), [tests/test_radkowice_history.py](tests/test_radkowice_history.py), [data/reference/radkowice_observation_history_v1.json](data/reference/radkowice_observation_history_v1.json), [grid_engine/historical_assignments.py](grid_engine/historical_assignments.py), [tests/test_historical_assignments.py](tests/test_historical_assignments.py), [scripts/analyze_historical_assignments.py](scripts/analyze_historical_assignments.py), [grid_engine/strict_json.py](grid_engine/strict_json.py), [tests/test_historical_assignment_replay.py](tests/test_historical_assignment_replay.py), [grid_engine/historical_connection_parameters.py](grid_engine/historical_connection_parameters.py), [tests/test_historical_connection_parameters.py](tests/test_historical_connection_parameters.py), [data/project/information_requests.json](data/project/information_requests.json), [docs/15_information_requests.md](docs/15_information_requests.md), [docs/16_radkowice_public_followup.md](docs/16_radkowice_public_followup.md).
+
+### KSE-034 — Lokalna aplikacja pilotażowa — ocena przesłanek Radkowic
+
+- Odpowiedzialność: Codex.
+- Następny krok: Test użytkownika i rozwój pokrycia danych; zweryfikować pobieranie JSON poza przeglądarką Codex.
+- Kryterium: Lokalny widok publicznych dowodów, osobne kierunki i napięcia, jawne braki, odtwarzalny wynik bez fikcyjnego scoringu.
+- Nieukończone zależności: brak.
+- Ryzyko: Pilot jakościowy, nie pełne MVP. Automatyczne potwierdzenie pobrania JSON w Codex nieudane; tekst raportu dostępny w widoku..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-16.
+- Dowody/kontekst: [docs/17_local_application.md](docs/17_local_application.md), [backend/local_app.py](backend/local_app.py), [grid_engine/screening_opinion.py](grid_engine/screening_opinion.py), [tests/test_local_app.py](tests/test_local_app.py).

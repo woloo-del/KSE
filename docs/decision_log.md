@@ -221,3 +221,14 @@ Selected option: generator wersjonowanego widoku wierszy PSE, korzystający z is
 Reason: dostępne dowody potwierdzają umowy, ale nie wykonane przyłączenia ani kompletność ewidencji PGE/PSE.
 Trade-offs: obsługiwana interpretacja statusu dotyczy wyłącznie zweryfikowanego tekstu umowy; inne statusy pozostają UNKNOWN. Brak deduplikacji między źródłami.
 Consequences: sumy kierunkowych mocy są CALCULATED, liczą rekordy, nie przepływy ani rezerwę MW. Brak podstaw do zamknięcia KSE-021 i przypisywania wpisów do mostu.
+
+
+## 2026-09-16 — pierwsza lokalna aplikacja oceny przesłanek
+
+Date: 2026-09-16.
+Decision / Context: użytkownik zatwierdził aplikację na częściowych dowodach oraz jakościową ocenę przesłanek i ryzyk; porównanie stacji później.
+Options considered: czekać na pełny model; wdrożyć pełny stack od razu; ograniczony lokalny adapter i osobna metoda analityczna.
+Selected option: lokalny serwer biblioteki standardowej Python, statyczny frontend i metoda documentary_screening_v1 w grid_engine.
+Reason: udostępnić zachowane dowody do oceny użytkownika bez nowych zależności i nieuzasadnionego scoringu.
+Trade-offs: jeden obszar, brak mapy geograficznej, kont, bazy użytkowników i automatycznych aktualizacji; nie jest serwerem produkcyjnym.
+Consequences: scope pilota opisany w docs/17_local_application.md. Pełne zadania KSE-023/024 pozostają osobne. Wolna moc, score i prawdopodobieństwo null. Dane prywatne poza aplikacją. Eksport zachowuje parametry, czas, metodę i zestaw dowodów.
