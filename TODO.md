@@ -9,9 +9,10 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). 16.09 ponownie otrzymano HTML zamiast dwóch PDF. Konkretna pomoc zapisana jako NEED-011; nadal bez danych mocy PGE w modelu.
 - **KSE-010 — Ustalić prawa źródeł wybranych do pilota** (P0, Do zrobienia). Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Zachować sześć ZIP wymienionych w docs/reproducibility.md na niezależnym prywatnym nośniku i sprawdzić je z właściwymi manifestami przez --verify-only. Potwierdzić datę kopii.
-- **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Potwierdzić aktualny układ pól 220 kV i postęp robót. Pełna decyzja RDOŚ opisuje plan przeniesienia przęsła z pola 8 do 6; potrzeba NEED-006 zaktualizowana. Nadal szukać dokumentacji mostu i postępowania.
+- **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Uwzględnić prywatny przegląd pakietu otrzymanego 16.09.2026; rozstrzygnąć rewizje i zakres przypisań przed integracją. Zachować separację prywatnych wniosków.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
+- **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, Do zrobienia). Zweryfikować pochodzenie, porównać geometrie i alternatywne formaty oraz daty i zakresy grup mocowych.
 
 ## Pełny rejestr
 
@@ -51,6 +52,8 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-032 | Rozszerzenie dowodów 110 kV i przegląd materiału użytkownika | Research | Zrobione | P0 | KSE-031 |
 | KSE-033 | Prywatne obserwacje i wspólna infrastruktura przyłączeniowa | Model | W toku | P0 | KSE-032 |
 | KSE-034 | Lokalna aplikacja pilotażowa — ocena przesłanek Radkowic | MVP UI | Zrobione | P0 | KSE-032 |
+| KSE-035 | Pierwszy prywatny przegląd pakietu mostu i historycznego GIS | Research | Zrobione | P0 | KSE-032 |
+| KSE-036 | Weryfikacja i normalizacja historycznej warstwy GIS | Data quality | Do zrobienia | P1 | KSE-035 |
 
 ## Kryteria zakończenia i dowody
 
@@ -409,7 +412,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Potwierdzić aktualny układ pól 220 kV i postęp robót. Pełna decyzja RDOŚ opisuje plan przeniesienia przęsła z pola 8 do 6; potrzeba NEED-006 zaktualizowana. Nadal szukać dokumentacji mostu i postępowania.
+- Następny krok: Uwzględnić prywatny przegląd pakietu otrzymanego 16.09.2026; rozstrzygnąć rewizje i zakres przypisań przed integracją. Zachować separację prywatnych wniosków.
 - Kryterium: Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.
 - Nieukończone zależności: brak.
 - Ryzyko: Brak ekspertyzy wpływu nie blokuje ewidencji. Brak danych sieciowych wyklucza wyliczanie rezerwy MW i częstości ograniczeń..
@@ -427,3 +430,25 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-16.
 - Dowody/kontekst: [docs/17_local_application.md](docs/17_local_application.md), [backend/local_app.py](backend/local_app.py), [grid_engine/screening_opinion.py](grid_engine/screening_opinion.py), [tests/test_local_app.py](tests/test_local_app.py).
+
+### KSE-035 — Pierwszy prywatny przegląd pakietu mostu i historycznego GIS
+
+- Odpowiedzialność: Codex.
+- Następny krok: Rozstrzygnąć rewizje i pochodzenie; kontynuować weryfikację szczegółową, bez automatycznego importu do publicznego pilota.
+- Kryterium: Inwentaryzacja i hashe, kontrola kluczowych rysunków i struktury GeoPackage, prywatne wnioski oraz jawne ograniczenia zakresu.
+- Nieukończone zależności: brak.
+- Ryzyko: Nie jest pełnym audytem wykonawczym, CAD, geometrii GIS ani praw wykorzystania..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-16.
+- Dowody/kontekst: [docs/private_sources.md](docs/private_sources.md), [scripts/inspect_private_materials.py](scripts/inspect_private_materials.py), [tests/test_private_material_inspection.py](tests/test_private_material_inspection.py).
+
+### KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS
+
+- Odpowiedzialność: Codex + Użytkownik.
+- Następny krok: Zweryfikować pochodzenie, porównać geometrie i alternatywne formaty oraz daty i zakresy grup mocowych.
+- Kryterium: Udokumentowana proweniencja i dostęp; geometrie sprawdzone, duplikaty oznaczone, historia oddzielona od bieżących danych.
+- Nieukończone zależności: brak.
+- Ryzyko: Publiczne źródła składowe nie potwierdzają dokładności i licencji całego opracowania..
+- Termin docelowy: nie ustalono.
+- Zakończono: nie zakończono.
+- Dowody/kontekst: .

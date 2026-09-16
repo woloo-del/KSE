@@ -581,7 +581,7 @@
       "depends_on": [
         "KSE-032"
       ],
-      "next_action": "Potwierdzić aktualny układ pól 220 kV i postęp robót. Pełna decyzja RDOŚ opisuje plan przeniesienia przęsła z pola 8 do 6; potrzeba NEED-006 zaktualizowana. Nadal szukać dokumentacji mostu i postępowania.",
+      "next_action": "Uwzględnić prywatny przegląd pakietu otrzymanego 16.09.2026; rozstrzygnąć rewizje i zakres przypisań przed integracją. Zachować separację prywatnych wniosków.",
       "acceptance": "Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.",
       "evidence": [
         "docs/private_sources.md",
@@ -632,6 +632,42 @@
       "started_at": "2026-09-16",
       "completed_at": "2026-09-16",
       "risk": "Pilot jakościowy, nie pełne MVP. Automatyczne potwierdzenie pobrania JSON w Codex nieudane; tekst raportu dostępny w widoku."
+    },
+    {
+      "id": "KSE-035",
+      "title": "Pierwszy prywatny przegląd pakietu mostu i historycznego GIS",
+      "stage": "Research",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-032"
+      ],
+      "next_action": "Rozstrzygnąć rewizje i pochodzenie; kontynuować weryfikację szczegółową, bez automatycznego importu do publicznego pilota.",
+      "acceptance": "Inwentaryzacja i hashe, kontrola kluczowych rysunków i struktury GeoPackage, prywatne wnioski oraz jawne ograniczenia zakresu.",
+      "evidence": [
+        "docs/private_sources.md",
+        "scripts/inspect_private_materials.py",
+        "tests/test_private_material_inspection.py"
+      ],
+      "started_at": "2026-09-16",
+      "completed_at": "2026-09-16",
+      "risk": "Nie jest pełnym audytem wykonawczym, CAD, geometrii GIS ani praw wykorzystania."
+    },
+    {
+      "id": "KSE-036",
+      "title": "Weryfikacja i normalizacja historycznej warstwy GIS",
+      "stage": "Data quality",
+      "status": "Not Started",
+      "priority": "P1",
+      "owner": "Codex + Użytkownik",
+      "depends_on": [
+        "KSE-035"
+      ],
+      "next_action": "Zweryfikować pochodzenie, porównać geometrie i alternatywne formaty oraz daty i zakresy grup mocowych.",
+      "acceptance": "Udokumentowana proweniencja i dostęp; geometrie sprawdzone, duplikaty oznaczone, historia oddzielona od bieżących danych.",
+      "evidence": [],
+      "risk": "Publiczne źródła składowe nie potwierdzają dokładności i licencji całego opracowania."
     }
   ]
 }
