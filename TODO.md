@@ -12,7 +12,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Uwzględnić prywatny przegląd pakietu otrzymanego 16.09.2026; rozstrzygnąć rewizje i zakres przypisań przed integracją. Zachować separację prywatnych wniosków.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
-- **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, Do zrobienia). Zweryfikować pochodzenie, porównać geometrie i alternatywne formaty oraz daty i zakresy grup mocowych.
+- **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Zweryfikować zapisy wielogrupowe i sekcje, porównać atrybuty XLSX oraz ustalić pierwotne publikacje i prawa wykorzystania.
 
 ## Pełny rejestr
 
@@ -53,7 +53,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-033 | Prywatne obserwacje i wspólna infrastruktura przyłączeniowa | Model | W toku | P0 | KSE-032 |
 | KSE-034 | Lokalna aplikacja pilotażowa — ocena przesłanek Radkowic | MVP UI | Zrobione | P0 | KSE-032 |
 | KSE-035 | Pierwszy prywatny przegląd pakietu mostu i historycznego GIS | Research | Zrobione | P0 | KSE-032 |
-| KSE-036 | Weryfikacja i normalizacja historycznej warstwy GIS | Data quality | Do zrobienia | P1 | KSE-035 |
+| KSE-036 | Weryfikacja i normalizacja historycznej warstwy GIS | Data quality | W toku | P1 | KSE-035 |
 
 ## Kryteria zakończenia i dowody
 
@@ -445,10 +445,10 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS
 
 - Odpowiedzialność: Codex + Użytkownik.
-- Następny krok: Zweryfikować pochodzenie, porównać geometrie i alternatywne formaty oraz daty i zakresy grup mocowych.
+- Następny krok: Zweryfikować zapisy wielogrupowe i sekcje, porównać atrybuty XLSX oraz ustalić pierwotne publikacje i prawa wykorzystania.
 - Kryterium: Udokumentowana proweniencja i dostęp; geometrie sprawdzone, duplikaty oznaczone, historia oddzielona od bieżących danych.
 - Nieukończone zależności: brak.
 - Ryzyko: Publiczne źródła składowe nie potwierdzają dokładności i licencji całego opracowania..
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: .
+- Dowody/kontekst: [docs/private_sources.md](docs/private_sources.md), [scripts/audit_private_gis_geometry.py](scripts/audit_private_gis_geometry.py), [scripts/normalize_private_gis_capacity.py](scripts/normalize_private_gis_capacity.py), [tests/test_gis_geometry.py](tests/test_gis_geometry.py), [tests/test_historical_gis_capacity.py](tests/test_historical_gis_capacity.py).

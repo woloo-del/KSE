@@ -1,0 +1,3 @@
+# Optional local GIS audit; independent of the read-only pilot web server.
+numpy==2.3.5
+shapely==2.1.2

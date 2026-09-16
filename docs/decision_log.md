@@ -232,3 +232,15 @@ Selected option: lokalny serwer biblioteki standardowej Python, statyczny fronte
 Reason: udostępnić zachowane dowody do oceny użytkownika bez nowych zależności i nieuzasadnionego scoringu.
 Trade-offs: jeden obszar, brak mapy geograficznej, kont, bazy użytkowników i automatycznych aktualizacji; nie jest serwerem produkcyjnym.
 Consequences: scope pilota opisany w docs/17_local_application.md. Pełne zadania KSE-023/024 pozostają osobne. Wolna moc, score i prawdopodobieństwo null. Dane prywatne poza aplikacją. Eksport zachowuje parametry, czas, metodę i zestaw dowodów.
+
+
+## 2026-09-16 — lokalna kontrola geometrii i pól historycznych
+
+Date: 2026-09-16.
+Decision / Context: sprawdzić przekazany historyczny GIS przed integracją analityczną.
+Options considered: własny pełny parser WKB; GDAL/GeoPandas; SQLite i Shapely jako opcjonalna zależność badawcza.
+Selected option: SQLite tylko do odczytu, minimalny dekoder nagłówka GeoPackage oraz Shapely 2.1.2 do WKB i kontroli geometrii; przypięte zależności w requirements-gis.txt.
+Reason: dojrzała walidacja geometrii bez dodatkowego serwera i bez własnej implementacji operacji geometrycznych.
+Trade-offs: osobne środowisko GIS; Shapely BSD-3-Clause korzysta z GEOS LGPL-2.1, co wymaga zachowania informacji licencyjnych przy dystrybucji. Lokalna analiza nie nadaje praw do publikacji danych.
+Consequences: prywatne wyniki i jawne hashe, bez modyfikacji źródeł. Zgodność XY eksportów nie dowodzi topologii. Historyczne wartości grupowe nie stają się bieżącą mocą stacji. Nierozpoznane zapisy pozostają UNKNOWN i wymagają przeglądu.
+Sources checked 2026-09-16: https://shapely.readthedocs.io/en/stable/ oraz https://www.geopackage.org/spec131/#gpb_format .

@@ -658,16 +658,23 @@
       "id": "KSE-036",
       "title": "Weryfikacja i normalizacja historycznej warstwy GIS",
       "stage": "Data quality",
-      "status": "Not Started",
+      "status": "In Progress",
       "priority": "P1",
       "owner": "Codex + Użytkownik",
       "depends_on": [
         "KSE-035"
       ],
-      "next_action": "Zweryfikować pochodzenie, porównać geometrie i alternatywne formaty oraz daty i zakresy grup mocowych.",
+      "next_action": "Zweryfikować zapisy wielogrupowe i sekcje, porównać atrybuty XLSX oraz ustalić pierwotne publikacje i prawa wykorzystania.",
       "acceptance": "Udokumentowana proweniencja i dostęp; geometrie sprawdzone, duplikaty oznaczone, historia oddzielona od bieżących danych.",
-      "evidence": [],
-      "risk": "Publiczne źródła składowe nie potwierdzają dokładności i licencji całego opracowania."
+      "evidence": [
+        "docs/private_sources.md",
+        "scripts/audit_private_gis_geometry.py",
+        "scripts/normalize_private_gis_capacity.py",
+        "tests/test_gis_geometry.py",
+        "tests/test_historical_gis_capacity.py"
+      ],
+      "risk": "Publiczne źródła składowe nie potwierdzają dokładności i licencji całego opracowania.",
+      "started_at": "2026-09-16"
     }
   ]
 }
