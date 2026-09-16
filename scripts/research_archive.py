@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import zipfile
 from pathlib import Path
 
@@ -41,11 +42,37 @@ def create() -> None:
     print(f"Archive ready: {archive.name}; {len(records)} files; {archive.stat().st_size} bytes")
 
 
-def restore(archive: Path) -> None:
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    if sha256(archive) != manifest["archive_sha256"]:
+def restore(archive: Path, manifest_path: Path | None = None, *, verify_only: bool = False) -> None:
+    """Restore historical manifests without rewriting their original schemas."""
+    manifest = json.loads((manifest_path or MANIFEST).read_text(encoding="utf-8"))
+    if "files" in manifest and "members" in manifest:
+        raise ValueError("Ambiguous archive manifest")
+    if "files" in manifest:
+        records = manifest["files"]
+        archive_hash = manifest["archive_sha256"]
+    else:
+        records = manifest["members"]
+        archive_hash = manifest["sha256"]
+    expected = {}
+    identities = set()
+    for item in records:
+        if "path" in item and "local_path" in item and item["path"] != item["local_path"]:
+            raise ValueError("Ambiguous archive member path")
+        name = item.get("path", item.get("local_path"))
+        if not isinstance(name, str) or not name or "\\" in name or ":" in name or name.startswith("/") or any(part in {"", ".", ".."} for part in name.split("/")):
+            raise ValueError("Invalid archive member path")
+        if name.casefold() in identities:
+            raise ValueError("Duplicate manifest member")
+        if "bytes" in item and (type(item["bytes"]) is not int or item["bytes"] < 0):
+            raise ValueError("Invalid archive member size")
+        if not isinstance(item.get("sha256"), str) or not re.fullmatch(r"[0-9a-f]{64}", item["sha256"]):
+            raise ValueError("Invalid archive member hash")
+        identities.add(name.casefold())
+        expected[name] = item
+    if not expected:
+        raise ValueError("Empty archive manifest")
+    if sha256(archive) != archive_hash:
         raise ValueError("Archive hash mismatch; nothing restored")
-    expected = {item["path"]: item for item in manifest["files"]}
     with zipfile.ZipFile(archive) as source:
         if len(source.namelist()) != len(expected) or set(source.namelist()) != set(expected):
             raise ValueError("Archive file list mismatch; nothing restored")
@@ -56,28 +83,32 @@ def restore(archive: Path) -> None:
             if not any(target.is_relative_to(base.resolve()) for base in allowed):
                 raise ValueError("Archive target outside allowed research directories")
             data = source.read(name)
-            if len(data) != record["bytes"] or hashlib.sha256(data).hexdigest() != record["sha256"]:
+            if ("bytes" in record and len(data) != record["bytes"]) or hashlib.sha256(data).hexdigest() != record["sha256"]:
                 raise ValueError("Archive member mismatch; nothing restored")
             if target.exists():
                 if sha256(target) != record["sha256"]:
                     raise ValueError(f"Existing different file preserved: {name}")
             else:
                 pending.append((target, data))
-        for target, data in pending:
+        for target, data in ([] if verify_only else pending):
             target.parent.mkdir(parents=True, exist_ok=True)
             with target.open("xb") as output:
                 output.write(data)
-    print(f"Verified {len(expected)} archive members; restored {len(pending)} missing files.")
+    print(f"Verified {len(expected)} archive members; restored {0 if verify_only else len(pending)} missing files.")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("operation", choices=["create", "restore"])
     parser.add_argument("archive", nargs="?", type=Path)
+    parser.add_argument("--manifest", type=Path, help="Manifest for the selected archive (restore only)")
+    parser.add_argument("--verify-only", action="store_true", help="Check without writing restored files")
     args = parser.parse_args()
     if args.operation == "create":
+        if args.manifest or args.verify_only:
+            parser.error("--manifest and --verify-only apply only to restore")
         create()
     elif args.archive is None:
         parser.error("restore requires the backup ZIP path")
     else:
-        restore(args.archive)
+        restore(args.archive, args.manifest, verify_only=args.verify_only)

@@ -1,6 +1,6 @@
 {
   "schema_version": "todo_v1",
-  "updated_at": "2026-09-15",
+  "updated_at": "2026-09-16",
   "project": "Grid Connection Intelligence — Polska",
   "tasks": [
     {
@@ -44,7 +44,7 @@
       "priority": "P0",
       "owner": "Codex",
       "depends_on": [],
-      "next_action": "Utrzymywać commity i instrukcję odtwarzania.",
+      "next_action": "Utrzymywać pary ZIP–manifest. 16.09 sprawdzono odtwarzanie sześciu archiwów (42 elementy), wybór manifestu i kontrolę bez zapisu; kopia zewnętrzna osobno w KSE-030.",
       "acceptance": "Lokalna historia Git i archiwum z hashami; test odtworzenia przechodzi. Nie oznacza wykonania zewnętrznej kopii.",
       "evidence": [
         "docs/reproducibility.md",
@@ -519,7 +519,7 @@
       "depends_on": [
         "KSE-003"
       ],
-      "next_action": "Wykonać prywatną kopię ZIP na drugim nośniku i potwierdzić jej odczyt.",
+      "next_action": "Zachować sześć ZIP wymienionych w docs/reproducibility.md na niezależnym prywatnym nośniku i sprawdzić je z właściwymi manifestami przez --verify-only. Potwierdzić datę kopii.",
       "acceptance": "Istnieje niezależna kopia archiwum zgodna z manifestem. Sam lokalny ZIP i push nie spełniają warunku.",
       "evidence": [
         "docs/reproducibility.md"

@@ -62,6 +62,33 @@ class ArchiveRestoreTests(unittest.TestCase):
         finally:
             target.write_bytes(original)
 
+    def test_new_radkowice_archives_restore_and_verify_without_writing(self) -> None:
+        for name in ['radkowice_archive_manifest.json', 'radkowice_tariff_archive.json',
+                     'radkowice_wolica_archive.json', 'radkowice_followup_archive_2026-09-15.json',
+                     'radkowice_decision_archive_2026-09-15.json']:
+            manifest_path = ROOT / 'data/catalog' / name
+            manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+            archive = ROOT / manifest.get('archive', manifest.get('archive_path'))
+            members = manifest.get('members', manifest.get('files'))
+            archive_module.restore(archive, manifest_path, verify_only=True)
+            for member in members:
+                self.assertFalse((self.test_root / member.get('local_path', member.get('path'))).exists())
+            archive_module.restore(archive, manifest_path)
+            for member in members:
+                self.assertEqual(archive_module.sha256(self.test_root / member.get('local_path', member.get('path'))), member['sha256'])
+
+    def test_duplicate_and_unsafe_manifest_paths_rejected_before_write(self) -> None:
+        for name in ['../outside.txt', 'data/raw/research/../../private/file', 'data/raw/research/file:stream', 'C:/outside', 'data\\raw\\research\\file']:
+            invalid = dict(self.manifest, files=[dict(self.manifest['files'][0], path=name)])
+            path = self.test_root / 'invalid_manifest.json'
+            path.write_text(json.dumps(invalid), encoding='utf-8')
+            with self.assertRaisesRegex(ValueError, 'Invalid archive member path'):
+                archive_module.restore(self.archive, path)
+        invalid = dict(self.manifest, files=[self.manifest['files'][0]] * 2)
+        path.write_text(json.dumps(invalid), encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'Duplicate manifest member'):
+            archive_module.restore(self.archive, path)
+
 
 if __name__ == "__main__":
     unittest.main()

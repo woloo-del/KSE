@@ -203,3 +203,12 @@ Selected option: istniejący walidator obejmuje wszystkie daty pod data/raw/rese
 Reason: kolejne pobranie tego samego źródła jest poprawną historią, a każdy surowy plik nadal musi mieć manifest i zgodny hash.
 Trade-offs: kontrola wymaga wszystkich zachowanych plików; nie jest testem aktualności stron operatorów. Starsze kontrole semantyczne nadal dotyczą swoich datowanych próbek.
 Consequences: 35 plików objętych kontrolą, bez włączania data/private i _secrets. Nowe źródła nie oznaczają nowych parametrów sieci w grafie.
+
+## 2026-09-16 — odtwarzanie jawnie wybranego archiwum
+
+Decision / Context: nowe snapshoty Radkowic mają osobne manifesty o historycznie różnych strukturach; pierwotny restore obsługiwał tylko pierwszy ZIP.
+Options considered: przepisać historyczne manifesty; osobne skrypty; adapter w istniejącym narzędziu.
+Selected option: --manifest i --verify-only w research_archive.py, wspólna walidacja przed zapisem.
+Reason: zachować niezmienione manifesty i kompatybilność dotychczasowego polecenia.
+Trade-offs: trzeba wskazać właściwą parę ZIP–manifest; brak automatycznej kopii zewnętrznej i transakcyjności zapisu. Brak rozmiaru w historycznym manifeście Wolica nie pomija kontroli hash.
+Consequences: sprawdzono wszystkie sześć istniejących archiwów, 42 elementy. Nie poszerzono zakresu o prywatne dane ani sekrety. Zewnętrzna kopia nadal niepotwierdzona.

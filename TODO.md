@@ -1,6 +1,6 @@
 # TODO — Grid Connection Intelligence
 
-Aktualizacja rejestru: **2026-09-15**. Źródło edytowalne: [todo.json](data/project/todo.json).
+Aktualizacja rejestru: **2026-09-16**. Źródło edytowalne: [todo.json](data/project/todo.json).
 
 Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zakończenia. Nie ustalono terminów dla niezaplanowanych zadań. P0 = warunek najbliższego etapu, P1 = rozwój po fundamentach, P2 = dalszy rozwój. Priorytety są kolejnością organizacji pracy, nie scoringiem sieci.
 
@@ -8,7 +8,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 
 - **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). Bezpośredni PDF nadal zwraca blokadę (11.09); sprawdzić oficjalny alternatywny kanał lub dokumenty przekazane przez użytkownika.
 - **KSE-010 — Ustalić prawa źródeł wybranych do pilota** (P0, Do zrobienia). Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
-- **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Wykonać prywatną kopię ZIP na drugim nośniku i potwierdzić jej odczyt.
+- **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Zachować sześć ZIP wymienionych w docs/reproducibility.md na niezależnym prywatnym nośniku i sprawdzić je z właściwymi manifestami przez --verify-only. Potwierdzić datę kopii.
 - **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Potwierdzić aktualny układ pól 220 kV i postęp robót. Pełna decyzja RDOŚ opisuje plan przeniesienia przęsła z pola 8 do 6; potrzeba NEED-006 zaktualizowana. Nadal szukać dokumentacji mostu i postępowania.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
@@ -78,7 +78,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-003 — Git i odtwarzanie snapshotów
 
 - Odpowiedzialność: Codex.
-- Następny krok: Utrzymywać commity i instrukcję odtwarzania.
+- Następny krok: Utrzymywać pary ZIP–manifest. 16.09 sprawdzono odtwarzanie sześciu archiwów (42 elementy), wybór manifestu i kontrolę bez zapisu; kopia zewnętrzna osobno w KSE-030.
 - Kryterium: Lokalna historia Git i archiwum z hashami; test odtworzenia przechodzi. Nie oznacza wykonania zewnętrznej kopii.
 - Nieukończone zależności: brak.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
@@ -375,7 +375,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-030 — Potwierdzić zewnętrzną kopię archiwum
 
 - Odpowiedzialność: Użytkownik.
-- Następny krok: Wykonać prywatną kopię ZIP na drugim nośniku i potwierdzić jej odczyt.
+- Następny krok: Zachować sześć ZIP wymienionych w docs/reproducibility.md na niezależnym prywatnym nośniku i sprawdzić je z właściwymi manifestami przez --verify-only. Potwierdzić datę kopii.
 - Kryterium: Istnieje niezależna kopia archiwum zgodna z manifestem. Sam lokalny ZIP i push nie spełniają warunku.
 - Nieukończone zależności: brak.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.

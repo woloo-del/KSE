@@ -1,6 +1,6 @@
 {
   "schema_version": "information_requests_v1",
-  "updated_at": "2026-09-15",
+  "updated_at": "2026-09-16",
   "items": [
     {
       "id": "NEED-001",
@@ -135,11 +135,11 @@
       "status": "Do sprawdzenia",
       "requested_scope": "Potwierdzenie wykonania i sprawdzenia kopii źródeł oraz prywatnych dokumentów poza tym komputerem. Bez haseł i tokenów.",
       "unlocks": "Odtwarzalność po utracie lokalnych plików. Git i hashe nie zastępują źródłowych bajtów.",
-      "next_action": "Użytkownik może potwierdzić miejsce i datę kopii bez przekazywania danych logowania.",
+      "next_action": "Zachować sześć publicznych archiwów wymienionych w docs/reproducibility.md poza komputerem i sprawdzić --verify-only; prywatne materiały skopiować osobno. Potwierdzić datę i zakres kopii, bez danych logowania.",
       "without_it": "Utrzymać lokalne archiwum; nie deklarować istnienia niezależnej kopii.",
       "owner": "Użytkownik",
       "basis": "docs/reproducibility.md",
-      "updated_at": "2026-09-15",
+      "updated_at": "2026-09-16",
       "received_evidence": null
     }
   ]
