@@ -788,16 +788,19 @@
       "data_format": [
         "PDF"
       ],
-      "verification_status": "DISCOVERED",
+      "verification_status": "BLOCKED",
       "reliability": "B",
       "key_fields": [
         "UNKNOWN"
       ],
       "potential_application": "Sprawdzenie po uzyskaniu dostępu.",
       "known_limitations": [
-        "Treść i aktualność niepotwierdzone; nazwa sugeruje historyczny kwartał."
+        "Treść i aktualność niepotwierdzone; nazwa sugeruje historyczny kwartał.",
+        "16.09.2026 bezpośredni dokument zwrócił HTTP 200 i 346 bajtów HTML zamiast PDF; brak odczytu treści. Metadane: data/catalog/pge_radkowice_access_2026-09-16.json."
       ],
-      "priority": "P2"
+      "priority": "P2",
+      "last_verified": "2026-09-16",
+      "automation_notes": "Pobieranie niepotwierdzone: odpowiedź HTML zamiast PDF. Nie wyprowadzono danych z fragmentów wyszukiwarki. Pomoc użytkownika: NEED-011."
     },
     {
       "source_id": "PGE_PLAN_DISCOVERY",
@@ -817,10 +820,13 @@
       ],
       "potential_application": "Przyszłe inwestycje po zweryfikowaniu treści.",
       "known_limitations": [
-        "Nie potwierdzono pełnego tekstu ani aktualnego statusu uzgodnienia."
+        "Nie potwierdzono pełnego tekstu ani aktualnego statusu uzgodnienia.",
+        "16.09.2026 bezpośredni dokument zwrócił HTTP 200 i 346 bajtów HTML zamiast PDF; brak odczytu treści. Metadane: data/catalog/pge_radkowice_access_2026-09-16.json."
       ],
       "priority": "P2",
-      "current_future_scope": "FUTURE_GRID"
+      "current_future_scope": "FUTURE_GRID",
+      "last_verified": "2026-09-16",
+      "automation_notes": "Pobieranie niepotwierdzone: odpowiedź HTML zamiast PDF. Nie wyprowadzono danych z fragmentów wyszukiwarki. Pomoc użytkownika: NEED-011."
     },
     {
       "source_id": "KGHM_OSD",

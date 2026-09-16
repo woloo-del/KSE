@@ -158,7 +158,7 @@
       "depends_on": [
         "KSE-002"
       ],
-      "next_action": "Bezpośredni PDF nadal zwraca blokadę (11.09); sprawdzić oficjalny alternatywny kanał lub dokumenty przekazane przez użytkownika.",
+      "next_action": "16.09 ponownie otrzymano HTML zamiast dwóch PDF. Konkretna pomoc zapisana jako NEED-011; nadal bez danych mocy PGE w modelu.",
       "acceptance": "Odczytana próbka z datą i prawami albo udokumentowane utrzymanie blokady.",
       "evidence": [
         "docs/discovery_log.md",
@@ -368,7 +368,7 @@
         "KSE-017",
         "KSE-018"
       ],
-      "next_action": "Rozwinąć widok radkowice_pse_pipeline_view_v1 po deduplikacji i uzupełnieniu źródeł. Działa zestawienie 3 wierszy umów PSE z testami ochrony zapisu przy zmianie danych/kodu; nadal nie jest pełnym pipeline stacji.",
+      "next_action": "Uwzględnić rozróżnienie weryfikacji, analizy technicznej i wniosku niekompletnego. Audit PSE na 31.07: 17/97/1 wierszy w tych etapach, bez dodatkowych trafień Radkowic. Nadal potrzebne deduplikacja i źródła PGE.",
       "acceptance": "Potwierdzone przyłączenie, plan i oczekiwanie odróżnione; deduplikacja i kierunkowe sumy z pokryciem.",
       "evidence": [
         "docs/gpz_pipeline.md",

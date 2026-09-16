@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-15**. Źródła: **64**.
+Stan badania: **2026-09-16**. Źródła: **64**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -33,7 +33,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | STOEN_STORAGE | [Rejestr magazynów — link do PDF](https://www.stoen.pl/files/2026-01/rejestr-magazynow-energii-stoen-operator-sp.-z-o.o.pdf) | DISCOVERED | P2 | REQUIRES_PERMISSION_REVIEW |
 | STOEN_PLAN | [Plan rozwoju 2026–2031](https://stoen.pl/strona/plan-rozwoju-w-zakresie-zaspokojenia-obecnego-i-przyszlego-zapotrzebowania-na-energie-elektryczna-na-lata-2026-2031) | DISCOVERED | P2 | REQUIRES_PERMISSION_REVIEW |
 | PGE_LANDING | [Dostępne moce dla źródeł wytwórczych](https://pgedystrybucja.pl/przylaczenia/procedury-przylaczeniowe/dostepne-moce-dla-zrodel-wytworczych) | BLOCKED | P1 | UNKNOWN |
-| PGE_EXPORT_DISCOVERY | [Dostępne moce I kwartał 2026 — wskazanie wyszukiwarki](https://pgedystrybucja.pl/content/download/71691b9fb622cdf89306ec0dc0c1ac3d/file/dostepne-moce-pge-i-kw-2026.pdf?contentId=2208&inLanguage=pol-PL&version=6) | DISCOVERED | P2 | UNKNOWN |
+| PGE_EXPORT_DISCOVERY | [Dostępne moce I kwartał 2026 — wskazanie wyszukiwarki](https://pgedystrybucja.pl/content/download/71691b9fb622cdf89306ec0dc0c1ac3d/file/dostepne-moce-pge-i-kw-2026.pdf?contentId=2208&inLanguage=pol-PL&version=6) | BLOCKED | P2 | UNKNOWN |
 | PGE_PLAN_DISCOVERY | [Konsultacje planu rozwoju — wskazanie strony](https://pgedystrybucja.pl/o-spolce/dzialalnosc/konsultacje-spoleczne-projektu-planu-rozwoju) | BLOCKED | P2 | UNKNOWN |
 | KGHM_OSD | [OSD dla systemu elektroenergetycznego](https://kghm.com/pl/biznes/strefa-energetyczna/osd-dla-systemu-elektroenergetycznego) | CONTENT_REVIEWED | P2 | UNKNOWN |
 | URE_REGISTERS | [BIP URE — rejestry i bazy](https://bip.ure.gov.pl/bip/rejestry-i-bazy) | CONTENT_REVIEWED | P1 | UNKNOWN |
@@ -940,15 +940,15 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Scraping:** UNKNOWN — przed scraperem preferować oficjalny plik lub API.
 - **Pola:** UNKNOWN
 - **Zastosowanie:** Sprawdzenie po uzyskaniu dostępu.
-- **Ograniczenia:** Treść i aktualność niepotwierdzone; nazwa sugeruje historyczny kwartał.
+- **Ograniczenia:** Treść i aktualność niepotwierdzone; nazwa sugeruje historyczny kwartał.; 16.09.2026 bezpośredni dokument zwrócił HTTP 200 i 346 bajtów HTML zamiast PDF; brak odczytu treści. Metadane: data/catalog/pge_radkowice_access_2026-09-16.json.
 - **Data stanu źródła:** UNKNOWN / nie dotyczy
 - **Publikacja:** UNKNOWN / nie dotyczy
 - **Wersja:** UNKNOWN / nie dotyczy
 - **Strona źródła:** UNKNOWN / nie dotyczy
-- **Sprawdzono:** 2026-09-10
+- **Sprawdzono:** 2026-09-16
 - **Udany odczyt:** UNKNOWN / nie dotyczy
 - **Klasyfikacja wejścia:** REPORTED
-- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Automatyzacja:** Pobieranie niepotwierdzone: odpowiedź HTML zamiast PDF. Nie wyprowadzono danych z fragmentów wyszukiwarki. Pomoc użytkownika: NEED-011.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
 
@@ -975,15 +975,15 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Scraping:** UNKNOWN — przed scraperem preferować oficjalny plik lub API.
 - **Pola:** UNKNOWN
 - **Zastosowanie:** Przyszłe inwestycje po zweryfikowaniu treści.
-- **Ograniczenia:** Nie potwierdzono pełnego tekstu ani aktualnego statusu uzgodnienia.
+- **Ograniczenia:** Nie potwierdzono pełnego tekstu ani aktualnego statusu uzgodnienia.; 16.09.2026 bezpośredni dokument zwrócił HTTP 200 i 346 bajtów HTML zamiast PDF; brak odczytu treści. Metadane: data/catalog/pge_radkowice_access_2026-09-16.json.
 - **Data stanu źródła:** UNKNOWN / nie dotyczy
 - **Publikacja:** UNKNOWN / nie dotyczy
 - **Wersja:** UNKNOWN / nie dotyczy
 - **Strona źródła:** UNKNOWN / nie dotyczy
-- **Sprawdzono:** 2026-09-10
+- **Sprawdzono:** 2026-09-16
 - **Udany odczyt:** UNKNOWN / nie dotyczy
 - **Klasyfikacja wejścia:** REPORTED
-- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Automatyzacja:** Pobieranie niepotwierdzone: odpowiedź HTML zamiast PDF. Nie wyprowadzono danych z fragmentów wyszukiwarki. Pomoc użytkownika: NEED-011.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
 

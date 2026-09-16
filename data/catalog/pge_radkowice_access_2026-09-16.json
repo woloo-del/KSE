@@ -1,0 +1,24 @@
+[
+  {
+    "source_id": "PGE_CAPACITY_Q1_2026_ATTEMPT",
+    "url": "https://pgedystrybucja.pl/content/download/71691b9fb622cdf89306ec0dc0c1ac3d/file/dostepne-moce-pge-i-kw-2026.pdf?contentId=2208&inLanguage=pol-PL&version=6",
+    "checked_at_utc": "2026-09-16T09:00:09.905575+00:00",
+    "http_status": 200,
+    "bytes": 346,
+    "sha256": "f8ec8db8e8fdcef59547beb085e16e489de03544d18a7dbf8ff3a04c2b7ba496",
+    "is_pdf": false,
+    "content_type": "text/html",
+    "result": "NON_PDF_RESPONSE; no grid values extracted"
+  },
+  {
+    "source_id": "PGE_PLAN_2026_2031_ATTEMPT",
+    "url": "https://pgedystrybucja.pl/content/download/c7ba19647b231faa03da3cb3d03c973c/file/PGED%20projekt%20Planu%20rozwoju%202026-31%20konsultacje.pdf?contentId=22372&inLanguage=pol-PL&version=1",
+    "checked_at_utc": "2026-09-16T09:00:10.065435+00:00",
+    "http_status": 200,
+    "bytes": 346,
+    "sha256": "1c79b980fb5d50d74a386176c5f9e8403fcf9312e1b4d30d59579355a4062fc8",
+    "is_pdf": false,
+    "content_type": "text/html",
+    "result": "NON_PDF_RESPONSE; no grid values extracted"
+  }
+]

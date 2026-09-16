@@ -1,13 +1,13 @@
 {
-  "checked_at_utc": "2026-09-15T16:45:00.398149+00:00",
+  "checked_at_utc": "2026-09-16T09:04:13.794255+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
   "source_count": 64,
   "source_status_counts": {
     "SAMPLE_VERIFIED": 13,
     "CONTENT_REVIEWED": 31,
-    "DISCOVERED": 5,
-    "BLOCKED": 4,
+    "DISCOVERED": 4,
+    "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 11
   },
   "probe_count": 37,
@@ -91,13 +91,13 @@
       "first_page_text_chars": 3726
     }
   ],
-  "local_links_checked": 46,
+  "local_links_checked": 50,
   "dependencies": {
     "python": "3.12.14",
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 675,
+  "checks_passed": 681,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -3246,6 +3246,21 @@
       "detail": null
     },
     {
+      "name": "local_link:README.md:docs/15_information_requests.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/11_radkowice_evidence_model.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/14_observation_history.md",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "local_link:README.md:docs/01_data_research.md",
       "passed": true,
       "detail": null
@@ -3312,6 +3327,11 @@
     },
     {
       "name": "local_link:README.md:docs/reproducibility.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/gpz_pipeline.md",
       "passed": true,
       "detail": null
     },
@@ -3466,12 +3486,22 @@
       "detail": null
     },
     {
+      "name": "python_syntax:audit_pse_pipeline_statuses.py",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "python_syntax:build_radkowice_graph.py",
       "passed": true,
       "detail": null
     },
     {
       "name": "python_syntax:build_radkowice_history.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:build_radkowice_pipeline.py",
       "passed": true,
       "detail": null
     },

@@ -141,6 +141,20 @@
       "basis": "docs/reproducibility.md",
       "updated_at": "2026-09-16",
       "received_evidence": null
+    },
+    {
+      "id": "NEED-011",
+      "priority": "P0",
+      "title": "Publiczne PDF PGE: moce i plan rozwoju",
+      "status": "Do sprawdzenia",
+      "requested_scope": "Oryginalne pliki: Dostępne moce PGE I kw. 2026 oraz projekt planu rozwoju 2026–2031 do konsultacji, albo ich oficjalne nowsze wersje; zachować URL i datę pobrania.",
+      "unlocks": "Odczyt grup mocy i inwestycji PGE wokół Radkowic. Nie zapewnia kompletnej listy projektów ani bieżącej mocy konkretnego GPZ.",
+      "next_action": "Jeśli pliki otwierają się w Twojej przeglądarce, pobrać je do osobnego folderu wejściowego projektu i podać lokalizację. Adresy obu dokumentów w docs/01_data_research.md, sekcja 16.09.2026. Bez logowania w moim imieniu i bez udostępniania haseł.",
+      "without_it": "Kontynuować PSE i BIP; dane PGE pozostają niezweryfikowane, brakujące moce UNKNOWN.",
+      "owner": "Użytkownik; PGE",
+      "basis": "data/catalog/pge_radkowice_access_2026-09-16.json; PGE_EXPORT_DISCOVERY; PGE_PLAN_DISCOVERY",
+      "updated_at": "2026-09-16",
+      "received_evidence": null
     }
   ]
 }

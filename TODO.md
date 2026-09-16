@@ -6,7 +6,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 
 ## Najbliższe zadania bez nieukończonych zależności
 
-- **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). Bezpośredni PDF nadal zwraca blokadę (11.09); sprawdzić oficjalny alternatywny kanał lub dokumenty przekazane przez użytkownika.
+- **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). 16.09 ponownie otrzymano HTML zamiast dwóch PDF. Konkretna pomoc zapisana jako NEED-011; nadal bez danych mocy PGE w modelu.
 - **KSE-010 — Ustalić prawa źródeł wybranych do pilota** (P0, Do zrobienia). Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Zachować sześć ZIP wymienionych w docs/reproducibility.md na niezależnym prywatnym nośniku i sprawdzić je z właściwymi manifestami przez --verify-only. Potwierdzić datę kopii.
 - **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Potwierdzić aktualny układ pól 220 kV i postęp robót. Pełna decyzja RDOŚ opisuje plan przeniesienia przęsła z pola 8 do 6; potrzeba NEED-006 zaktualizowana. Nadal szukać dokumentacji mostu i postępowania.
@@ -144,7 +144,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-009 — Zweryfikować dostęp do publikacji PGE
 
 - Odpowiedzialność: Codex.
-- Następny krok: Bezpośredni PDF nadal zwraca blokadę (11.09); sprawdzić oficjalny alternatywny kanał lub dokumenty przekazane przez użytkownika.
+- Następny krok: 16.09 ponownie otrzymano HTML zamiast dwóch PDF. Konkretna pomoc zapisana jako NEED-011; nadal bez danych mocy PGE w modelu.
 - Kryterium: Odczytana próbka z datą i prawami albo udokumentowane utrzymanie blokady.
 - Nieukończone zależności: brak.
 - Ryzyko: HTTP 200 zwracał stronę odrzucenia zamiast danych..
@@ -276,7 +276,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-021 — Zestawienie projektów A/B/C dla GPZ
 
 - Odpowiedzialność: Codex.
-- Następny krok: Rozwinąć widok radkowice_pse_pipeline_view_v1 po deduplikacji i uzupełnieniu źródeł. Działa zestawienie 3 wierszy umów PSE z testami ochrony zapisu przy zmianie danych/kodu; nadal nie jest pełnym pipeline stacji.
+- Następny krok: Uwzględnić rozróżnienie weryfikacji, analizy technicznej i wniosku niekompletnego. Audit PSE na 31.07: 17/97/1 wierszy w tych etapach, bez dodatkowych trafień Radkowic. Nadal potrzebne deduplikacja i źródła PGE.
 - Kryterium: Potwierdzone przyłączenie, plan i oczekiwanie odróżnione; deduplikacja i kierunkowe sumy z pokryciem.
 - Nieukończone zależności: KSE-017, KSE-018.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.

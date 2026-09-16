@@ -281,3 +281,38 @@ Opisuje planowane przełączenie przęsła ze słupa 81 z pola 8 do 6. Długoś�
 HTTP 200 bez konta, tekst PDF możliwy do ekstrakcji, SHA-256 i lokalne archiwum.
 Brak ustalonego API i cyklu aktualizacji; prawa do załącznika wymagają oceny.
 Szczegóły i ograniczenia: docs/16_radkowice_public_followup.md. Katalog: 64 źródła.
+
+### 16.09.2026 — ponowna próba PGE i etapy wniosków PSE
+
+Dwa bezpośrednie adresy PGE: [moce I kw. 2026](https://pgedystrybucja.pl/content/download/71691b9fb622cdf89306ec0dc0c1ac3d/file/dostepne-moce-pge-i-kw-2026.pdf?contentId=2208&inLanguage=pol-PL&version=6)
+i [projekt planu 2026–2031](https://pgedystrybucja.pl/content/download/c7ba19647b231faa03da3cb3d03c973c/file/PGED%20projekt%20Planu%20rozwoju%202026-31%20konsultacje.pdf?contentId=22372&inLanguage=pol-PL&version=1)
+ponownie zwróciły po 346 bajtów HTML, HTTP 200, bez sygnatury PDF. Odczyt web
+zwrócił 502. Wyniki wyszukiwarki nie zostały uznane za treść dokumentów. Metadane
+próby i hashe odpowiedzi są w pge_radkowice_access_2026-09-16.json; same odpowiedzi
+HTML nie są archiwizowane. Brak treści oznacza brak weryfikacji wartości, licencji
+i automatycznego przetwarzania. NEED-011 wskazuje te pliki do pomocy w pozyskaniu.
+
+[Oficjalna strona PSE wykazów](https://www.pse.pl/obszary-dzialalnosci/krajowy-system-elektroenergetyczny/wykaz-obiektow-planowanych-do-przylaczenia),
+odczyt 16.09.2026, opisuje również wnioski oczekujące na weryfikację i z potwierdzoną
+kompletnością. Link edytowalny prowadzi do znanego XLSX na 31.07.2026. Nie pobierano
+nowej kopii ani nie zakładano, że zdalne bajty są identyczne z zachowaną próbką.
+Strona deklaruje aktualizację informacji co najmniej raz w miesiącu; nie oznacza
+to aktualności każdej obserwacji w naszym lokalnym archiwum.
+
+Lokalny audit tego XLSX wykazał: 17 wierszy „WNIOSEK w weryfikacji”, 97 „WNIOSEK
+kompletny - w trakcie analizy technicznej i ekonomicznej”, 1 „WNIOSEK niekompletny”.
+To osobne etapy, nie automatyczna kategoria wszystkich wniosków bez odpowiedzi.
+Ponadto 553 wiersze mają wydane WP, 195 umowy, 29 odmowy. Dziesięć niepustych
+wierszy bez statusu wyłączono z tych liczników. Nie są to zidentyfikowane unikalne
+inwestycje ani gwarancja kompletności krajowej kolejki.
+
+Wyszukanie fragmentu „radkow” we wszystkich komórkach arkusza wskazało tylko
+wiersze 787, 843, 847, wszystkie z umową. Brak dodatkowego trafienia nie dowodzi
+braku innych projektów. ID obiektu dla tych trzech wpisów to „-”, więc nie nadaje
+się na kanoniczny identyfikator. Nie zmieniono grafu ani przypisań do mostu.
+
+Skrypt audit_pse_pipeline_statuses.py zachowuje numery wierszy, hash źródła,
+proweniencję, formułę liczników i hash kodu w wersjonowanym wyniku
+pse_status_audit_2026-07-31_v1.json. Jest to badanie jednej próbki, bez cyklicznego
+pobierania i bez pełnego parsera wniosków. Status źródłowy oraz brak ID wymagają
+rozwiązania przed deduplikacją i produkcyjną klasyfikacją A/B/C.

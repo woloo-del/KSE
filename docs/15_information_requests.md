@@ -42,3 +42,8 @@ i sekretów. Sam walidator nie wykrywa automatycznie poufnych informacji w tekś
 Możesz odpowiadać numerem, np. „NEED-001: mam projekt, rewizja ...” albo
 „NEED-004: nie uda się uzyskać”. Zaktualizuję rejestr i kolejny raport.
 Zmiany wpisane bezpośrednio w Excel nie wracają automatycznie do rejestru.
+
+16.09.2026: dodano NEED-011 — dwa publiczne dokumenty PGE, których bezpośrednie
+pobranie ponownie zwraca HTML zamiast PDF. Dokładne linki są w końcowej sekcji
+raportu badawczego. Pomoc polega na przekazaniu oryginalnych plików z datą i URL,
+jeśli użytkownik może je zwyczajnie pobrać; nie wymaga przekazywania poświadczeń.
