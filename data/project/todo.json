@@ -368,10 +368,13 @@
         "KSE-017",
         "KSE-018"
       ],
-      "next_action": "Zbudować raport grup statusu oraz nieznanych i konfliktowych rekordów.",
+      "next_action": "Rozwinąć widok radkowice_pse_pipeline_view_v1 po deduplikacji i uzupełnieniu źródeł. Działa zestawienie 3 wierszy umów PSE; nie jest pełnym pipeline stacji ani dowodem przyłączenia.",
       "acceptance": "Potwierdzone przyłączenie, plan i oczekiwanie odróżnione; deduplikacja i kierunkowe sumy z pokryciem.",
       "evidence": [
-        "docs/gpz_pipeline.md"
+        "docs/gpz_pipeline.md",
+        "scripts/build_radkowice_pipeline.py",
+        "tests/test_radkowice_pipeline.py",
+        "data/reference/radkowice_pipeline_view_2026-07-31_v1.json"
       ]
     },
     {

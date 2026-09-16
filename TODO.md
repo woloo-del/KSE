@@ -276,13 +276,13 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-021 — Zestawienie projektów A/B/C dla GPZ
 
 - Odpowiedzialność: Codex.
-- Następny krok: Zbudować raport grup statusu oraz nieznanych i konfliktowych rekordów.
+- Następny krok: Rozwinąć widok radkowice_pse_pipeline_view_v1 po deduplikacji i uzupełnieniu źródeł. Działa zestawienie 3 wierszy umów PSE; nie jest pełnym pipeline stacji ani dowodem przyłączenia.
 - Kryterium: Potwierdzone przyłączenie, plan i oczekiwanie odróżnione; deduplikacja i kierunkowe sumy z pokryciem.
 - Nieukończone zależności: KSE-017, KSE-018.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/gpz_pipeline.md](docs/gpz_pipeline.md).
+- Dowody/kontekst: [docs/gpz_pipeline.md](docs/gpz_pipeline.md), [scripts/build_radkowice_pipeline.py](scripts/build_radkowice_pipeline.py), [tests/test_radkowice_pipeline.py](tests/test_radkowice_pipeline.py), [data/reference/radkowice_pipeline_view_2026-07-31_v1.json](data/reference/radkowice_pipeline_view_2026-07-31_v1.json).
 
 ### KSE-022 — Screening BESS i hybryd z PCC
 

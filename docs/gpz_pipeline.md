@@ -40,3 +40,40 @@ Nagłówek raportu: **„Znane projekty na podstawie wskazanych źródeł”**, 
 6. Testy na rzeczywistych dopuszczonych próbkach sprawdzają wszystkie dostępne kategorie; brakujące przypadki nie są przedstawiane jako dane produkcyjne.
 
 Źródła kandydackie i ich ograniczenia są już opisane w [katalogu](data_sources.md) oraz [macierzy wykonalności](02_feasibility_matrix.md). Specyfikacja nie potwierdza kompletności takich list dla wszystkich GPZ w Polsce.
+
+## Działający widok badawczy Radkowic — 16.09.2026
+
+Skrypt `scripts/build_radkowice_pipeline.py` ponownie odczytuje zachowany XLSX PSE,
+sprawdza hash i nagłówki przez istniejący ekstraktor, a następnie generuje
+`data/reference/radkowice_pipeline_view_2026-07-31_v1.json`.
+Stan dokumentu: **31.07.2026**, nie aktualny stan na dzień uruchomienia.
+
+| Wpis PSE | Eksport przyłączeniowy MW | Import przyłączeniowy MW | Wiersz |
+|---|---|---|---|
+| MEE Chałupki | 96,96 | 98,8992 | 787 |
+| MEE Radkowice | 50 | 50 | 843 |
+| MEE Chęciny | 100 | 102 | 847 |
+
+Wszystkie trzy mają źródłowy status „UMOWA O PRZYŁĄCZENIE obowiązująca” i wskazanie
+Radkowice 220 kV; kwalifikujemy je do B — planowane, bez dowodu wykonania.
+Suma **wierszy tej próbki**: eksport 246,96 MW, import 250,8992 MW (CALCULATED).
+To dokładne dodawanie wartości dokumentu, nie taka precyzja oceny sieci. Nie jest
+to bilans przepływów, dostępna moc, suma zarezerwowana na moście ani pełna,
+zdeduplikowana liczba inwestycji. Identyfikatory zachowują tożsamość wiersza,
+nie udają kanonicznych identyfikatorów projektów między źródłami.
+
+Źródło: [PSE — wykaz na 31.07.2026](https://www.pse.pl/documents/20182/51490/Informacje_publikowane_zgodnie_z_Art_7_ust_8l_ustawy_PE_stan_na_31_07_2026.xlsx),
+arkusz „Wykaz wspólny”, kolumny I/J (kierunki MW), Q (status), E/F (punkt/napięcie).
+Pobrano 10.09.2026; lokalny odczyt i zgodność SHA-256 sprawdzono 16.09.2026.
+Nie pobierano nowego pliku ani nie potwierdzano aktualności strony operatora.
+
+Dla A i C brak potwierdzających rekordów w tym widoku. Liczba projektów całej
+stacji i sumy bez żadnych znanych mocy pozostają null. Nieznany status trafia do
+UNKNOWN; przeszła data planowanego rozpoczęcia dostaw nie tworzy przyłączenia.
+Brakująca moc pozostaje odrębna od zera. Nie przypisujemy wpisów do miejsc mostu.
+
+Każdy wiersz zachowuje proweniencję; każda suma wskazuje użyte rekordy i formułę.
+Wynik zawiera wersję metody i hashe dwóch skryptów. Ponowienie z tymi samymi
+wejściami zachowuje identyczny plik; inna treść pod istniejącą nazwą jest odrzucana.
+Nie jest to uniwersalny parser statusów PSE, pełny connector ani realizacja KSE-021.
+Nadal potrzebne są rozstrzygnięcia tożsamości, dane PGE i kompletność źródeł.

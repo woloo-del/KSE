@@ -212,3 +212,12 @@ Selected option: --manifest i --verify-only w research_archive.py, wspólna wali
 Reason: zachować niezmienione manifesty i kompatybilność dotychczasowego polecenia.
 Trade-offs: trzeba wskazać właściwą parę ZIP–manifest; brak automatycznej kopii zewnętrznej i transakcyjności zapisu. Brak rozmiaru w historycznym manifeście Wolica nie pomija kontroli hash.
 Consequences: sprawdzono wszystkie sześć istniejących archiwów, 42 elementy. Nie poszerzono zakresu o prywatne dane ani sekrety. Zewnętrzna kopia nadal niepotwierdzona.
+
+## 2026-09-16 — widok pipeline ograniczony do zachowanej próbki
+
+Decision / Context: udostępnić użyteczne zestawienie trzech wpisów Radkowic bez sugerowania kompletności stacji.
+Options considered: sumować jako pełny pipeline projektów; poczekać na pełną deduplikację; jawny widok wierszy jednej publikacji.
+Selected option: generator wersjonowanego widoku wierszy PSE, korzystający z istniejącego ekstraktora.
+Reason: dostępne dowody potwierdzają umowy, ale nie wykonane przyłączenia ani kompletność ewidencji PGE/PSE.
+Trade-offs: obsługiwana interpretacja statusu dotyczy wyłącznie zweryfikowanego tekstu umowy; inne statusy pozostają UNKNOWN. Brak deduplikacji między źródłami.
+Consequences: sumy kierunkowych mocy są CALCULATED, liczą rekordy, nie przepływy ani rezerwę MW. Brak podstaw do zamknięcia KSE-021 i przypisywania wpisów do mostu.

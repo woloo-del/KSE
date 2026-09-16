@@ -1,0 +1,252 @@
+{
+  "schema_version": "project_report_v1",
+  "generated_at_utc": "2026-09-16T07:08:32.340Z",
+  "output": "outputs/01a08b04-7ddd-7641-8f44-7d0d6ae13653/raport_projektu_KSE_2026-09-16_ae58e6e581.xlsx",
+  "output_sha256": "17c684bccbda1edf32c2e1d445025120c97c94beed58a3a6e0f3e7135dd1f95a",
+  "inputs_sha256": "ae58e6e5810c23049bd252e17c84409557781c4060544e3614d351808dc0499b",
+  "git_revision_at_generation": "885bd61af6b54d54168e05e381e8293437e02279",
+  "runtime": {
+    "node": "v24.19.0",
+    "artifact_tool": "2.8.59"
+  },
+  "counts": {
+    "information_requests": 10,
+    "tasks": 33,
+    "completed_tasks": 10,
+    "sources": 64,
+    "feasibility_rows": 29,
+    "source_detail_rows": 2763,
+    "documentation_rows": 553
+  },
+  "input_files": [
+    {
+      "path": "data/project/todo.json",
+      "sha256": "d92ebe0f0bf5bbeca6b459222ada5dd8fe6a696ebbd04b78acecc837b3b56fd0",
+      "bytes": 22130
+    },
+    {
+      "path": "data/project/information_requests.json",
+      "sha256": "b103b3883846dc95c342573f9848c987db2167f12b117004bddfef376e91ceb8",
+      "bytes": 9004
+    },
+    {
+      "path": "data/catalog/data_sources.json",
+      "sha256": "223266c356cf6fe6a3343c7f9fc7007e649c7deaed5b141c4565d09bbd37f5e5",
+      "bytes": 185645
+    },
+    {
+      "path": "data/catalog/research_validation.json",
+      "sha256": "17b98c7d857d728d7ec86ded2171c4f661e8e5c40cffa229f5d396543f60bed3",
+      "bytes": 76074
+    },
+    {
+      "path": "data/catalog/archive_manifest.json",
+      "sha256": "db9d4a636e3ecfd47b4bfb690a61d61b8a6853fef35dcb945a671d99d1f16d48",
+      "bytes": 6867
+    },
+    {
+      "path": "README.md",
+      "sha256": "cb3cdaf58d479eb7eb3bdf6cbe7bc329e0a1340c3d2c8ff41eb4dc0dae2fc419",
+      "bytes": 3247
+    },
+    {
+      "path": "docs/01_data_research.md",
+      "sha256": "fefb39df2c765712069f17788076c33fa89cd0eb0205e91ade7cad2d9fed228f",
+      "bytes": 41981
+    },
+    {
+      "path": "docs/02_feasibility_matrix.md",
+      "sha256": "adbf7284bd5e5793a2334f71956a5cdca52e583dfc4ffb3cb04b7c02d491d3b0",
+      "bytes": 6602
+    },
+    {
+      "path": "docs/03_system_architecture.md",
+      "sha256": "84c4a3b458e65fac551238e50d54a4e05de61e66316fc2292af7a0f95eb5e0b8",
+      "bytes": 3000
+    },
+    {
+      "path": "docs/04_data_model.md",
+      "sha256": "e8a4cc6f81c6334840f3cbe625d8eadae132c56d3155c4056078bf4cc59059ee",
+      "bytes": 3748
+    },
+    {
+      "path": "docs/05_grid_capacity_methodology.md",
+      "sha256": "bb567d9f754aafbd1b71a174b574e50c5bdbbd783d73ad8a67641e8659db0d82",
+      "bytes": 1787
+    },
+    {
+      "path": "docs/06_scoring_methodology.md",
+      "sha256": "eb1cc874f964a8968ea08d9cef93ec8e02081a8b2b37836042426c940b351d7d",
+      "bytes": 1857
+    },
+    {
+      "path": "docs/07_data_quality.md",
+      "sha256": "b92dc582206e53ac60600774d7d9f4a1199a4d0092606fdcd01d2f450b1249dd",
+      "bytes": 5298
+    },
+    {
+      "path": "docs/08_roadmap.md",
+      "sha256": "e0a7ed406410c129fff6df65be213addcc1f254601336d6e9ec01c2d69a8852e",
+      "bytes": 2244
+    },
+    {
+      "path": "docs/gpz_pipeline.md",
+      "sha256": "25d8f77410e6c77dce5dd767a4275ab4bff3b978059b11f656f3f6ea7310e350",
+      "bytes": 6993
+    },
+    {
+      "path": "docs/decision_log.md",
+      "sha256": "89bdbcbe03666149347afdde957295f3007bbe29a5cc42ee323218814284d6b6",
+      "bytes": 18741
+    },
+    {
+      "path": "docs/discovery_log.md",
+      "sha256": "e1049cda6e471993bb574f4a6ff8c95479402f653f43b24a9605041cf86eafbc",
+      "bytes": 4217
+    },
+    {
+      "path": "docs/reproducibility.md",
+      "sha256": "d850a65027a57cc81e08ef2073ffc8def23f73d157216c48aa6704ed443f43de",
+      "bytes": 6473
+    },
+    {
+      "path": "docs/git_workflow.md",
+      "sha256": "5f3a11ae855ab526329ecaeb5e311ed9a86342114be5f29e72e214476d51a72b",
+      "bytes": 4545
+    },
+    {
+      "path": "docs/project_reporting.md",
+      "sha256": "c761014d95f5709fe04fc469db591243de84ceacd7c748846b73a080f6d0e70c",
+      "bytes": 4981
+    },
+    {
+      "path": "docs/09_pilot_scope.md",
+      "sha256": "626a9d282a813c8159599775b5eadf78e877f5eb263f3b52da4cf0024b4e2989",
+      "bytes": 2277
+    },
+    {
+      "path": "docs/10_radkowice_pilot.md",
+      "sha256": "fc561d66d3da9f0adbff8c9b9d606d3b6662b2cb9a5c4501c131fb55fe262f14",
+      "bytes": 6036
+    },
+    {
+      "path": "docs/11_radkowice_evidence_model.md",
+      "sha256": "5cd11d18db7bf9895571e809cf64b1122ad0009d58d23a2e6141912f1c04120b",
+      "bytes": 4672
+    },
+    {
+      "path": "docs/12_radkowice_110kv_research.md",
+      "sha256": "ef234cda866ed99b939d647fa8bd4c316965f457daa2ea3c2f97a0c797e8f4c8",
+      "bytes": 2087
+    },
+    {
+      "path": "docs/13_shared_connection_model.md",
+      "sha256": "1d9a6abadd3d111af2710829aa1827a688c9fcc630bead8e4c79948f14b65d71",
+      "bytes": 5895
+    },
+    {
+      "path": "docs/14_observation_history.md",
+      "sha256": "5d988552c01deded013c82aa7a19de50a8ca668869326783f0f6c8da24e8fd84",
+      "bytes": 14297
+    },
+    {
+      "path": "docs/15_information_requests.md",
+      "sha256": "3f49178494f93af9719df5e38aac07f2acb4ae0a2356992ce65ee51305a614c7",
+      "bytes": 2817
+    },
+    {
+      "path": "docs/16_radkowice_public_followup.md",
+      "sha256": "59d351855d2f9d0f61d7b9a24469f1584f6edcd13d73fba9d35c53c7e7bc15de",
+      "bytes": 6718
+    },
+    {
+      "path": "docs/private_sources.md",
+      "sha256": "7f5b4f7fa69d4f3e21b1d60cb98b0578aaf4e428671472289cfd66338842a676",
+      "bytes": 1460
+    },
+    {
+      "path": "scripts/report_data.mjs",
+      "sha256": "6ae21a30d402750da1d184ad41b96bb1b86c6c1e8e989cf0bbd4584b1289ddee",
+      "bytes": 9257
+    },
+    {
+      "path": "scripts/generate_project_report.mjs",
+      "sha256": "dacbfb8dabe86d332d44547a58a84bf1c69f41600167b5ad3600146c59ad6fb7",
+      "bytes": 18927
+    },
+    {
+      "path": "scripts/generate_project_report.ps1",
+      "sha256": "18664ffdf769acf42dce0d589a54a313d2f16e5732617b6bf8e31a0545b0ca4d",
+      "bytes": 1950
+    },
+    {
+      "path": "scripts/validate_project_report.py",
+      "sha256": "fc2fd0533037b1e4ffd90886926efaa1947e4ce29f50ae864d14586f83a009b0",
+      "bytes": 4810
+    },
+    {
+      "path": "data/reference/project_tracker_template.xlsx",
+      "sha256": "dd8bd283784a189061a328040e845a6d26807e2ee1005a9a195e6dc7baeefe80",
+      "bytes": 14846
+    }
+  ],
+  "previews": [
+    {
+      "sheet": "Project Plan",
+      "range": "B2:AD16",
+      "file": "outputs/01a08b04-7ddd-7641-8f44-7d0d6ae13653/previews/raport_projektu_KSE_2026-09-16_ae58e6e581/01_Project_Plan.png"
+    },
+    {
+      "sheet": "Podsumowanie",
+      "range": "A2:C13",
+      "file": "outputs/01a08b04-7ddd-7641-8f44-7d0d6ae13653/previews/raport_projektu_KSE_2026-09-16_ae58e6e581/02_Podsumowanie.png"
+    },
+    {
+      "sheet": "Potrzebne informacje",
+      "range": "A2:F10",
+      "file": "outputs/01a08b04-7ddd-7641-8f44-7d0d6ae13653/previews/raport_projektu_KSE_2026-09-16_ae58e6e581/03_Potrzebne_informacje.png"
+    },
+    {
+      "sheet": "TODO",
+      "range": "A2:F10",
+      "file": "outputs/01a08b04-7ddd-7641-8f44-7d0d6ae13653/previews/raport_projektu_KSE_2026-09-16_ae58e6e581/04_TODO.png"
+    },
+    {
+      "sheet": "Wykonalność",
+      "range": "A2:D9",
+      "file": "outputs/01a08b04-7ddd-7641-8f44-7d0d6ae13653/previews/raport_projektu_KSE_2026-09-16_ae58e6e581/05_Wykonalność.png"
+    },
+    {
+      "sheet": "Źródła",
+      "range": "A2:F10",
+      "file": "outputs/01a08b04-7ddd-7641-8f44-7d0d6ae13653/previews/raport_projektu_KSE_2026-09-16_ae58e6e581/06_Źródła.png"
+    },
+    {
+      "sheet": "Źródła szczegóły",
+      "range": "A2:C12",
+      "file": "outputs/01a08b04-7ddd-7641-8f44-7d0d6ae13653/previews/raport_projektu_KSE_2026-09-16_ae58e6e581/07_Źródła_szczegóły.png"
+    },
+    {
+      "sheet": "Ryzyka",
+      "range": "A2:E9",
+      "file": "outputs/01a08b04-7ddd-7641-8f44-7d0d6ae13653/previews/raport_projektu_KSE_2026-09-16_ae58e6e581/08_Ryzyka.png"
+    },
+    {
+      "sheet": "Dokumentacja",
+      "range": "A2:C9",
+      "file": "outputs/01a08b04-7ddd-7641-8f44-7d0d6ae13653/previews/raport_projektu_KSE_2026-09-16_ae58e6e581/09_Dokumentacja.png"
+    },
+    {
+      "sheet": "Audyt",
+      "range": "A2:C11",
+      "file": "outputs/01a08b04-7ddd-7641-8f44-7d0d6ae13653/previews/raport_projektu_KSE_2026-09-16_ae58e6e581/10_Audyt.png"
+    },
+    {
+      "sheet": "Odtwarzanie",
+      "range": "A2:B12",
+      "file": "outputs/01a08b04-7ddd-7641-8f44-7d0d6ae13653/previews/raport_projektu_KSE_2026-09-16_ae58e6e581/11_Odtwarzanie.png"
+    }
+  ],
+  "formula_dependency_test": "PASS",
+  "research_validation_as_of": "2026-09-15T16:45:00.398149+00:00"
+}
