@@ -265,3 +265,14 @@ Selected option: rejestr wierszy, oryginalne atrybuty, hash i fid; identyfikator
 Reason: jeden wiersz może obejmować kilka zadań, a daty i historyczne nazwy warstw nie potwierdzają aktualnej eksploatacji.
 Trade-offs: dodatkowa weryfikacja źródeł i rozpoznanie obiektów przed wykorzystaniem w scenariuszach sieci.
 Consequences: metoda historical_investment_records_v1, osobna kolejka linków bez pobierania, brak automatycznego dodawania infrastruktury lub MW. Kod i ogólny postęp wersjonowane; dane i ich szczegółowe wyniki pozostają prywatne.
+
+
+## 17.09.2026 — projekt planu jako osobny dowód przyszłych inwestycji
+
+Date: 2026-09-17.
+Decision / Context: pozyskano wydanie PRSP po konsultacjach z terminami dwóch zadań pilota.
+Options considered: nadpisać dotychczasowy stan; dopasować automatycznie do mostu; zachować odrębne wpisy projektu planu.
+Selected option: odrębny snapshot, status w dokumencie i jawne znaczenie roku zakończenia.
+Reason: termin obejmuje także rozliczenie i formalności; zakresy zadań nie mają potwierdzonej tożsamości z innymi wpisami.
+Trade-offs: brak automatycznego prognozowania dostępnych MW.
+Consequences: dodatkowy widok i materiał w eksporcie; brak zmiany scoringu, grafu ruchowego lub publikowania źródeł prywatnych.

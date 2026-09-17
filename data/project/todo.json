@@ -725,6 +725,29 @@
       "started_at": "2026-09-17",
       "completed_at": "2026-09-17",
       "risk": "Rekordy nie są unikalnymi inwestycjami. Linki z kompilacji nie zostały zbiorczo zweryfikowane; nieznane prawa i aktualność pozostają otwarte."
+    },
+    {
+      "id": "KSE-039",
+      "title": "Projekt PRSP po konsultacjach: dowody inwestycji w pilocie",
+      "stage": "Data quality",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-034"
+      ],
+      "next_action": "Zweryfikować późniejsze wersje i rzeczywiste wykonanie; rozwijać powiązania bez automatycznego łączenia zakresów.",
+      "acceptance": "Oryginalny PDF i archiwum, dwa sprawdzone wiersze z parserem i testami, jawne daty oraz ograniczenia w aplikacji i eksporcie.",
+      "evidence": [
+        "docs/16_radkowice_public_followup.md",
+        "connectors/pse/development_plan.py",
+        "scripts/build_radkowice_development_plan.py",
+        "tests/test_pse_development_plan.py",
+        "tests/test_local_app.py"
+      ],
+      "started_at": "2026-09-17",
+      "completed_at": "2026-09-17",
+      "risk": "Projekt planu nie potwierdza uzgodnienia, załączenia ani dodatkowych dostępnych MW."
     }
   ]
 }

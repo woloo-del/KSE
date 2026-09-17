@@ -1,24 +1,24 @@
 {
-  "checked_at_utc": "2026-09-17T06:45:46.763250+00:00",
+  "checked_at_utc": "2026-09-17T11:14:21.279205+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 65,
+  "source_count": 66,
   "source_status_counts": {
     "SAMPLE_VERIFIED": 13,
-    "CONTENT_REVIEWED": 32,
+    "CONTENT_REVIEWED": 33,
     "DISCOVERED": 4,
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 11
   },
-  "probe_count": 39,
+  "probe_count": 40,
   "http_status_counts": {
-    "200": 38,
+    "200": 39,
     "404": 1
   },
-  "raw_file_count": 38,
+  "raw_file_count": 39,
   "format_counts": {
     ".html": 14,
-    ".pdf": 14,
+    ".pdf": 15,
     ".json": 6,
     ".xml": 2,
     ".js": 1,
@@ -94,6 +94,11 @@
       "file": "data/raw/research/2026-09-17/pse_impact_report_2023.pdf",
       "pages": 291,
       "first_page_text_chars": 297
+    },
+    {
+      "file": "data/raw/research/2026-09-17/pse_prsp_2027_2036_post_consultation.pdf",
+      "pages": 120,
+      "first_page_text_chars": 206
     }
   ],
   "local_links_checked": 51,
@@ -102,7 +107,7 @@
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 705,
+  "checks_passed": 719,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -1871,6 +1876,31 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:PSE_PRSP_2027_2036_POST_CONSULTATION",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PSE_PRSP_2027_2036_POST_CONSULTATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PSE_PRSP_2027_2036_POST_CONSULTATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PSE_PRSP_2027_2036_POST_CONSULTATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PSE_PRSP_2027_2036_POST_CONSULTATION",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
@@ -2197,6 +2227,11 @@
     },
     {
       "name": "probe_references:PSE_IMPACT_REPORT_2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PSE_PRSP_2027_2036_POST_CONSULTATION",
       "passed": true,
       "detail": null
     },
@@ -2881,6 +2916,26 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:PSE_PRSP_2027_2036_POST_CONSULTATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_PRSP_2027_2036_POST_CONSULTATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_PRSP_2027_2036_POST_CONSULTATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_PRSP_2027_2036_POST_CONSULTATION",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "snapshot_within_raw:SUW_RADK_WOLICA_3_2024",
       "passed": true,
       "detail": null
@@ -3251,6 +3306,16 @@
       "detail": null
     },
     {
+      "name": "pdf_text_layer:pse_prsp_2027_2036_post_consultation.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_prsp_2027_2036_post_consultation.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "pge_block_body_identified",
       "passed": true,
       "detail": null
@@ -3591,6 +3656,11 @@
       "detail": null
     },
     {
+      "name": "python_syntax:build_radkowice_development_plan.py",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "python_syntax:build_radkowice_graph.py",
       "passed": true,
       "detail": null
@@ -3627,6 +3697,11 @@
     },
     {
       "name": "python_syntax:normalize_private_gis_capacity.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:normalize_private_gis_investments.py",
       "passed": true,
       "detail": null
     },

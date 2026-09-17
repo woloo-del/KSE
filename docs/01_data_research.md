@@ -323,3 +323,8 @@ rozwiązania przed deduplikacją i produkcyjną klasyfikacją A/B/C.
 Zweryfikowano [raport wpływu PSE za 2023 rok](https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf), s.47–48, oraz [portal inwestycji](https://inwestycje.pse.pl/mapa_inwestycji_pse/). Raport zalicza wymianę transformatora Radkowice do zadań zakończonych w 2023; portal podaje 2025. Nie ustalono identyczności zakresu ani daty załączenia. Oba wskazania zachowano bez wyboru jednej daty i bez wnioskowania o dodatkowych MW. Katalog ma 65 źródeł; nie ponowiono przeglądu wszystkich pozycji.
 
 PDF i HTML pobrano bez konta, HTTP 200, zachowano SHA-256. Odczyt PDF wymaga kontekstu dwóch stron; HTML oddzielenia sekcji inwestycji. Nie ustalono API/GIS ani otwartej licencji tych publikacji. Ponowny odczyt PDF PGE przez narzędzie web zakończył się 502; wyniki wyszukiwania nie stały się danymi modelu i NEED-011 pozostaje otwarty.
+
+
+## 17.09.2026 — nowszy projekt PRSP, dwa zadania Radkowic
+
+Zarejestrowano PSE_PRSP_2027_2036_POST_CONSULTATION: [PDF PSE](https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30), wydanie kwiecień 2026; sprawdzono 17.09.2026. Dwa wpisy i objaśnienia dat opisuje docs/16_radkowice_public_followup.md. Katalog zawiera 66 źródeł. Dokument pobrano publicznie bez konta; zachowano oryginał i hash. Dostępna warstwa tekstowa pozwala na ograniczoną automatyzację z kontrolą układu. Nie ustalono API/GIS, gwarantowanego cyklu, limitów wywołań ani otwartej licencji. Użycie komercyjne i redystrybucja wymagają oceny praw. Projekt planu nie potwierdza bieżącego wykonania ani nowej rezerwy MW.

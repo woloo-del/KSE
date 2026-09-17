@@ -80,11 +80,15 @@ class LocalApiTests(unittest.TestCase):
             result=json.load(response)
         self.assertEqual(result['method'],'documentary_screening_v2')
         self.assertEqual(len(result['method_code_sha256']),64)
-        self.assertEqual(len(result['input_sha256']),5)
+        self.assertEqual(len(result['input_sha256']),6)
         self.assertTrue(any(f['id']=='INVESTMENT_DATE_OR_SCOPE_UNRESOLVED' for f in result['findings']))
         self.assertIsNone(result['evidence_snapshot']['investment_review']['selected_completion_year'])
         self.assertEqual(result['input_sha256'], result['evidence_snapshot']['input_sha256'])
         self.assertEqual(len(result['evidence_snapshot']['pipeline']['records']),3)
+        plan = result['evidence_snapshot']['development_plan']
+        self.assertEqual(len(plan['records']), 2)
+        self.assertEqual(plan['document_status'], 'POST_CONSULTATION_DRAFT')
+        self.assertTrue(all(r['additional_available_capacity_MW'] is None for r in plan['records']))
         self.assertIn('evaluated_at',result)
 
     def test_bad_payload_is_a_readable_error(self):

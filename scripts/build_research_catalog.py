@@ -135,6 +135,6 @@ def markdown(catalog: dict[str, Any]) -> str:
 
 if __name__ == "__main__":
     output = build_catalog()
-    (ROOT / "data/catalog/data_sources.json").write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (ROOT / "docs/data_sources.md").write_text(markdown(output).rstrip() + "\n", encoding="utf-8")
+    (ROOT / "data/catalog/data_sources.json").write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    (ROOT / "docs/data_sources.md").write_text(markdown(output).rstrip() + "\n", encoding="utf-8", newline="\n")
     print(f"Built {len(output['sources'])} source records and Markdown view.")

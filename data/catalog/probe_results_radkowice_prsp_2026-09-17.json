@@ -1,0 +1,15 @@
+[
+  {
+    "source_id": "PSE_PRSP_2027_2036_POST_CONSULTATION",
+    "url": "https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30",
+    "retrieval_date": "2026-09-17T11:04:59.379112+00:00",
+    "local_path": "data/raw/research/2026-09-17/pse_prsp_2027_2036_post_consultation.pdf",
+    "sha256": "5273f6837f5051a2de077f8904cb497fb9dcbab3e9302d8a4f8d34211ca3cc19",
+    "bytes": 4510145,
+    "content_type": [
+      "application/pdf (signature verified; response header not retained)"
+    ],
+    "http_status": 200,
+    "error": null
+  }
+]

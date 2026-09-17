@@ -135,7 +135,7 @@
       "status": "Do sprawdzenia",
       "requested_scope": "Potwierdzenie wykonania i sprawdzenia kopii źródeł oraz prywatnych dokumentów poza tym komputerem. Bez haseł i tokenów.",
       "unlocks": "Odtwarzalność po utracie lokalnych plików. Git i hashe nie zastępują źródłowych bajtów.",
-      "next_action": "Zachować siedem publicznych archiwów wymienionych w docs/reproducibility.md poza komputerem i sprawdzić --verify-only; prywatne materiały skopiować osobno. Potwierdzić datę i zakres kopii, bez danych logowania.",
+      "next_action": "Zachować osiem publicznych archiwów wymienionych w docs/reproducibility.md poza komputerem i sprawdzić --verify-only; prywatne materiały skopiować osobno. Potwierdzić datę i zakres kopii, bez danych logowania.",
       "without_it": "Utrzymać lokalne archiwum; nie deklarować istnienia niezależnej kopii.",
       "owner": "Użytkownik",
       "basis": "docs/reproducibility.md",

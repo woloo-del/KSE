@@ -4374,6 +4374,86 @@
       "retrieval_date": [
         "2026-09-17T06:40:16.437810+00:00"
       ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Polska; zweryfikowano dwa wpisy inwestycji wokół Radkowic",
+      "grid_voltage": [
+        "110 kV",
+        "220 kV",
+        "400 kV"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Publiczny dokument bez logowania",
+      "license": "UNKNOWN — nie potwierdzono otwartej licencji wybranego zbioru.",
+      "license_url": null,
+      "commercial_use": "UNKNOWN",
+      "machine_readable": "PARTIAL — warstwa tekstowa PDF; ograniczony parser dwóch wierszy",
+      "scraping_required": "NO — bezpośredni PDF",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": "Projekt po konsultacjach, kwiecień 2026",
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "PSE_PRSP_2027_2036_POST_CONSULTATION"
+      ],
+      "related_urls": [],
+      "source_id": "PSE_PRSP_2027_2036_POST_CONSULTATION",
+      "operator": "PSE",
+      "source_name": "Projekt PRSP 2027–2036 po konsultacjach — kwiecień 2026",
+      "url": "https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30",
+      "data_owner": "PSE S.A.",
+      "data_category": "grid_investments",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "identyfikator zadania w dokumencie",
+        "opis",
+        "cel",
+        "rok rozpoczęcia",
+        "rok zakończenia"
+      ],
+      "potential_application": "Scenariusze przyszłych inwestycji z jawną wersją planu",
+      "known_limitations": [
+        "Projekt po konsultacjach; nie potwierdzono uzgodnienia tej wersji.",
+        "Zakończenie obejmuje wymiar techniczny, finansowy i formalny, nie jest datą załączenia.",
+        "Wpis nie zapewnia dodatkowej dostępnej mocy ani identyczności zakresu z innymi zadaniami."
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "PSE_PRSP_2027_2036_POST_CONSULTATION",
+          "url": "https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30",
+          "retrieval_date": "2026-09-17T11:04:59.379112+00:00",
+          "local_path": "data/raw/research/2026-09-17/pse_prsp_2027_2036_post_consultation.pdf",
+          "sha256": "5273f6837f5051a2de077f8904cb497fb9dcbab3e9302d8a4f8d34211ca3cc19",
+          "bytes": 4510145,
+          "content_type": [
+            "application/pdf (signature verified; response header not retained)"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_radkowice_prsp_2026-09-17.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-17T11:04:59.379112+00:00"
+      ]
     }
   ]
 }

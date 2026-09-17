@@ -107,3 +107,21 @@ odczyt TED nie powiódł się. Nie przyjęto z nich numeru pola mostu ani przypi
 Nowy przegląd wskazuje różnicę 2023/2025 między raportem wpływu a portalem PSE; źródła i datę sprawdzenia zapisano w sekcji 17.09 w docs/01_data_research.md. Wcześniejsze odczyty portalu pozostają prawidłowymi zapisami jego treści, ale nie stanowią rozstrzygnięcia daty odbioru. Dane źródłowe: `data/reference/radkowice_investment_dates_2026-09-17_v1.json`.
 
 Odtwarzanie: `python scripts/build_radkowice_investment_review.py --output NOWY_PLIK.json`. Skrypt kontroluje hashe, kontekst listy PDF oraz jedną dokładnie oznaczoną sekcję HTML. Błąd schematu zatrzymuje ekstrakcję. Testy obejmują brak roku, sąsiednią inwestycję, powtórzony nagłówek, przypis i rzeczywiste snapshoty. Nie jest to pełny parser raportów PSE. Obie wartości pozostają REPORTED, wybrany rok i dodatkowe MW są null.
+
+
+## 17.09.2026 — projekt PRSP po konsultacjach
+
+Pobrano pełny [projekt PRSP 2027–2036 po konsultacjach](https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30), wydanie kwiecień 2026, 120 stron. Nie potwierdzono uzgodnienia tej wersji. Zweryfikowano tekst i obrazy stron 58 i 67.
+
+| Wpis | Strona | Przedmiot | Horyzont w dokumencie |
+|---|---|---|---|
+| III.82 | 58 | Modernizacja linii Kielce–Radkowice 220 kV | 2029–2034 |
+| II.47 | 67 | Rozbudowa i modernizacja stacji Radkowice 220/110 kV | 2024–2032 |
+
+Drugi wpis znajduje się w tabeli zadań realizowanych (początek s.63). To status raportowany w wydaniu dokumentu, nie potwierdzony stan robót na dziś. Objaśnienia s.62 i 75 definiują zakończenie łącznie w wymiarze technicznym, finansowym i formalnym; nie należy utożsamiać go z załączeniem. Cel zadania stacyjnego obejmuje także umożliwienie przyłączenia magazynów, ale nie identyfikuje konkretnego mostu, inwestora ani przyrostu dostępnych MW.
+
+Nie połączono wpisów automatycznie z wymianą transformatora, jej rozbieżnymi datami ani linią Radkowice–Kielce Piaski. API i eksport zawierają dodatkowy snapshot, a zakładka „Inwestycje sieciowe” dwa wpisy, nie kompletny program inwestycji.
+
+Odtwarzanie: `python scripts/build_radkowice_development_plan.py --output NOWY_PLIK.json`. Kontrola hash, wydania, nagłówka, tytułu i granicy wiersza. Brak roku, nierozpoznany przypis lub zmieniona granica zatrzymują odczyt. To ograniczony parser, nie ekstraktor całego PDF. Surowy dokument zachowano w ZIP z manifestem `radkowice_prsp_archive_2026-09-17.json`; kontrola integralności przeszła.
+
+Nie pobrano w tym przyroście starszego projektu konsultacyjnego (web: 404), PDF planu postępowań PGE 2026 (502) ani TED 771822-2025 (błąd odczytu). Snippety nie są dowodami terminów; brak odczytu nie dowodzi braku dokumentu lub inwestycji. NEED-011 pozostaje otwarty.

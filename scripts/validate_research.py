@@ -215,6 +215,6 @@ def validate() -> dict[str, Any]:
 
 if __name__ == "__main__":
     report = validate()
-    (ROOT / "data/catalog/research_validation.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (ROOT / "data/catalog/research_validation.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({key: value for key, value in report.items() if key not in {"checks", "pdf_details"}}, ensure_ascii=False, indent=2))
     sys.exit(1 if report["errors"] else 0)

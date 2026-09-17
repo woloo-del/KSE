@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-17**. Źródła: **65**.
+Stan badania: **2026-09-17**. Źródła: **66**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -75,6 +75,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | RDOS_RADK_PIASKI_NOTICE_2025 | [RDOŚ Kielce — obwieszczenie dotyczące Radkowice–Kielce Piaski](https://www.gov.pl/web/rdos-kielce/obwieszczenie-regionalnego-dyrektora-ochrony-srodowiska-w-kielcach-z-dnia-04122025-r-znak-woo-i42072025pjpp16) | CONTENT_REVIEWED | P0 | REQUIRES_PERMISSION_REVIEW |
 | RDOS_RADK_PIASKI_DECISION_2025 | [RDOŚ Kielce — pełna decyzja dla przebudowy linii Radkowice–Kielce Piaski](https://www.gov.pl/attachment/27ef7a8e-5094-4391-be1c-7e23cb1038b2) | CONTENT_REVIEWED | P0 | REQUIRES_PERMISSION_REVIEW |
 | PSE_IMPACT_REPORT_2023 | [PSE — raport wpływu za 2023 rok, edycja 2024](https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
+| PSE_PRSP_2027_2036_POST_CONSULTATION | [Projekt PRSP 2027–2036 po konsultacjach — kwiecień 2026](https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30) | CONTENT_REVIEWED | P0 | UNKNOWN |
 
 ## Karty źródeł
 
@@ -2423,5 +2424,41 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Klasyfikacja wejścia:** REPORTED
 - **Automatyzacja:** Jednorazowy GET, timeout, zachowane bajty i SHA-256. API/GIS dla tego raportu nie ustalono.
 - **Próba PSE_IMPACT_REPORT_2023:** HTTP 200; 2026-09-17T06:40:16.437810+00:00; `data/catalog/probe_results_radkowice_investment_dates_2026-09-17.json`; próbka `data/raw/research/2026-09-17/pse_impact_report_2023.pdf`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### PSE_PRSP_2027_2036_POST_CONSULTATION — Projekt PRSP 2027–2036 po konsultacjach — kwiecień 2026
+
+[Źródło](https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30)
+
+- **Operator:** PSE
+- **Właściciel:** PSE S.A.
+- **Kraj:** PL
+- **Kategoria:** grid_investments
+- **Napięcie:** 110 kV; 220 kV; 400 kV
+- **Zasięg:** Polska; zweryfikowano dwa wpisy inwestycji wokół Radkowic
+- **Format:** PDF
+- **API:** UNKNOWN
+- **GIS:** UNKNOWN
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Publiczny dokument bez logowania
+- **Licencja:** UNKNOWN — nie potwierdzono otwartej licencji wybranego zbioru.
+- **Użycie komercyjne:** UNKNOWN
+- **Autorytet źródła:** B
+- **Odczyt maszynowy:** PARTIAL — warstwa tekstowa PDF; ograniczony parser dwóch wierszy
+- **Scraping:** NO — bezpośredni PDF
+- **Pola:** identyfikator zadania w dokumencie; opis; cel; rok rozpoczęcia; rok zakończenia
+- **Zastosowanie:** Scenariusze przyszłych inwestycji z jawną wersją planu
+- **Ograniczenia:** Projekt po konsultacjach; nie potwierdzono uzgodnienia tej wersji.; Zakończenie obejmuje wymiar techniczny, finansowy i formalny, nie jest datą załączenia.; Wpis nie zapewnia dodatkowej dostępnej mocy ani identyczności zakresu z innymi zadaniami.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** Projekt po konsultacjach, kwiecień 2026
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-17
+- **Udany odczyt:** 2026-09-17
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba PSE_PRSP_2027_2036_POST_CONSULTATION:** HTTP 200; 2026-09-17T11:04:59.379112+00:00; `data/catalog/probe_results_radkowice_prsp_2026-09-17.json`; próbka `data/raw/research/2026-09-17/pse_prsp_2027_2036_post_consultation.pdf`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

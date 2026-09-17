@@ -56,6 +56,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-036 | Weryfikacja i normalizacja historycznej warstwy GIS | Data quality | W toku | P1 | KSE-035 |
 | KSE-037 | Rozbieżności dat inwestycji PSE w ocenie pilota | Data quality | Zrobione | P0 | KSE-034 |
 | KSE-038 | Historyczny rejestr wpisów o inwestycjach z GIS | Data quality | Zrobione | P1 | KSE-035 |
+| KSE-039 | Projekt PRSP po konsultacjach: dowody inwestycji w pilocie | Data quality | Zrobione | P1 | KSE-034 |
 
 ## Kryteria zakończenia i dowody
 
@@ -476,3 +477,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-17.
 - Dowody/kontekst: [docs/private_sources.md](docs/private_sources.md), [connectors/gis/historical_investments.py](connectors/gis/historical_investments.py), [scripts/normalize_private_gis_investments.py](scripts/normalize_private_gis_investments.py), [tests/test_historical_gis_investments.py](tests/test_historical_gis_investments.py).
+
+### KSE-039 — Projekt PRSP po konsultacjach: dowody inwestycji w pilocie
+
+- Odpowiedzialność: Codex.
+- Następny krok: Zweryfikować późniejsze wersje i rzeczywiste wykonanie; rozwijać powiązania bez automatycznego łączenia zakresów.
+- Kryterium: Oryginalny PDF i archiwum, dwa sprawdzone wiersze z parserem i testami, jawne daty oraz ograniczenia w aplikacji i eksporcie.
+- Nieukończone zależności: brak.
+- Ryzyko: Projekt planu nie potwierdza uzgodnienia, załączenia ani dodatkowych dostępnych MW..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-17.
+- Dowody/kontekst: [docs/16_radkowice_public_followup.md](docs/16_radkowice_public_followup.md), [connectors/pse/development_plan.py](connectors/pse/development_plan.py), [scripts/build_radkowice_development_plan.py](scripts/build_radkowice_development_plan.py), [tests/test_pse_development_plan.py](tests/test_pse_development_plan.py), [tests/test_local_app.py](tests/test_local_app.py).

@@ -44,3 +44,8 @@ To ograniczony pilot, nie zamknięcie zadania pełnego MVP. Następne kroki: uzu
 Ocena `documentary_screening_v2` korzysta także z piątego jawnie wskazanego snapshotu: przeglądu dat inwestycji PSE. Pokazuje rozbieżność roku lub zakresu wraz z dwoma źródłami, bez wyboru daty odbioru lub dodatkowej mocy. Eksport zapisuje przegląd i jego hash. Wcześniejsze wyniki v1 pozostają historyczne; nie są nadpisywane. Nie dodano prywatnych dokumentów do API.
 
 Sprawdzono działającą aplikację w przeglądarce: scenariusz testowy BESS 50 MW eksportu i 20 MW importu pokazuje nową rozbieżność oraz oba źródła, zachowując niezależne kierunki i nieznaną rezerwę. Są to parametry testu interfejsu, nie nowy rekord inwestycji.
+
+
+## 17.09.2026 — inwestycje sieciowe
+
+Dodano zakładkę z dwoma zweryfikowanymi wpisami projektu PRSP po konsultacjach. Widok rozróżnia plan i realizację deklarowaną w dokumencie, pokazuje strony, identyfikatory, datę odczytu i hash. Zakończenie formalne/finansowe/techniczne nie jest datą załączenia; dostępne MW pozostają nieustalone. API i eksport oceny zachowują szósty snapshot `development_plan`. Metoda opinii documentary_screening_v2 nie zmienia reguł ani wag; nowy dokument jest dodatkowym materiałem do oceny użytkownika. Potwierdzono w przeglądarce oba horyzonty, oznaczenie projektu oraz rozwijany dowód i odnośnik. Test API sprawdza zawartość eksportu; nie testowano ponownie samego mechanizmu pobrania pliku przez przeglądarkę.

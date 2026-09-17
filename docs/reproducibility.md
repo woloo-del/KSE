@@ -87,3 +87,10 @@ aktualna instrukcja i rejestry zostaną uwzględnione przy kolejnym generowaniu 
 ### Archiwum dat inwestycji — 17.09.2026
 
 `data/archives/radkowice_investment_dates_2026-09-17.zip` zawiera dwa nowe oryginały: raport PSE i portal inwestycji. Manifest: `data/catalog/radkowice_investment_dates_archive_2026-09-17.json`. Kontrola: `python scripts/research_archive.py restore data/archives/radkowice_investment_dates_2026-09-17.zip --manifest data/catalog/radkowice_investment_dates_archive_2026-09-17.json --verify-only`. Sprawdzono oba elementy. To siódme archiwum publicznych źródeł; niezależna kopia nadal wymaga potwierdzenia.
+
+
+### Archiwum projektu PRSP — 17.09.2026
+
+Ósme publiczne archiwum: `data/archives/radkowice_prsp_2026-09-17.zip`, jeden oryginalny PDF. Manifest: `data/catalog/radkowice_prsp_archive_2026-09-17.json`. Kontrola: `python scripts/research_archive.py restore data/archives/radkowice_prsp_2026-09-17.zip --manifest data/catalog/radkowice_prsp_archive_2026-09-17.json --verify-only`. Wykonano ją pomyślnie. Kopia niezależna nadal niepotwierdzona. Parser `scripts/build_radkowice_development_plan.py --output NOWY_PLIK.json` odtwarza dwa wpisy i nie nadpisuje wyniku.
+
+Generatory katalogu i kontroli źródeł zapisują końce linii LF także w Windows, zgodnie z .gitattributes. Zapobiega to zmianie hashy wejść raportu wyłącznie przez normalizację Git.
