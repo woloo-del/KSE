@@ -1,0 +1,18 @@
+{
+  "policy_version": "evidence_decision_support_v1",
+  "effective_date": "2026-09-17",
+  "authority": "Explicit user product-scope decision",
+  "purpose": "Inform the user's decision using auditable facts, favorable factors, risks and unknowns",
+  "policy_type": "Project specification; not a runtime feature flag",
+  "excluded_outputs": ["estimated_available_connection_MW", "connection_probability", "grid_connection_score", "technical_connection_feasibility_verdict", "estimated_grid_loading"],
+  "active_flow_telemetry_acquisition": false,
+  "power_flow_required": false,
+  "factor_categories": ["FAVORABLE", "RISK", "NEUTRAL", "UNKNOWN"],
+  "factor_required_context": ["evidence", "source_date", "voltage", "infrastructure_relationship", "import_export_direction", "time_horizon", "limitations"],
+  "reported_operator_capacity": "May quote original dated and scoped publication; no inference of project-specific availability",
+  "planned_reinforcements": "Potentially favorable only with relevant scope and explicit planned status; no assumed extra MW",
+  "connected_projects_and_pipeline": "Potential competition only with evidenced shared infrastructure and relevant direction; no automatic negative effect from count or proximity",
+  "aggregate_feasibility_rating": false,
+  "data_quality": "Separate descriptive assessment of authority, recency, coverage and conflicts",
+  "future_scope_change": "Requires explicit user decision"
+}

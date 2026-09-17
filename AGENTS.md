@@ -1,5 +1,16 @@
 # AGENTS.md
 
+## Current product scope — user decision 2026-09-17 (overrides earlier capacity/scoring goals)
+
+Build an evidence-based decision-support platform, not an estimator of connection feasibility.
+Present sourced facts, potentially favorable factors, risks, conflicts and unknowns for the user's own investment decision.
+Do not estimate available connection MW, connection probability, technical feasibility, grid loading or Grid Connection Score. These are outside the agreed scope, not merely deferred until more data arrives.
+Operator flow/telemetry data and power-flow studies are not prerequisites or active acquisition targets. Do not repeatedly request them from the user.
+Retain useful topology, GIS, project pipeline, infrastructure, historical observations and planned reinforcements. Published operator capacity values may be quoted with their original date, direction, scope and assumptions; never turn them into an application estimate for the user's project.
+Classify interpretation as favorable / risk / neutral / unknown, separately from fact provenance and data quality. Explain relevance to the specific point, voltage, direction and time horizon. Do not aggregate these factors into a feasibility verdict, score or probability.
+A planned reinforcement is potentially favorable only where its scope is relevant; it is not existing capacity. Existing projects or pipeline may indicate potential competition only where shared infrastructure is evidenced; count or proximity alone does not establish congestion or an adverse effect. Preserve different implications for generation, demand, BESS import/export and PCC constraints.
+The user's original start prompt and earlier research documents remain historical context. This decision governs current work unless the user explicitly changes it. See `config/product_policy.json` and `docs/decision_log.md`.
+
 ## 1. Project Mission
 
 This repository contains a **Grid Connection Intelligence Platform** for renewable energy, battery storage and hybrid energy projects.

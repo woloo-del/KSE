@@ -60,16 +60,16 @@
     },
     {
       "id": "NEED-005",
-      "priority": "P1",
+      "priority": "P2",
       "title": "Historyczne obciążenia i ograniczenia",
       "status": "Do sprawdzenia",
       "requested_scope": "Serie czasowe przepływów P/Q, obciążeń linii i transformatorów, kierunki, jednostki, rozdzielczość, okres i identyfikatory elementów.",
       "unlocks": "Ocena rzeczywistego wykorzystania i ograniczeń. Same znamionowe MVA nie określają dostępnych MW.",
-      "next_action": "Sprawdzić możliwość udostępnienia uzgodnionego zakresu danych przez operatora. Nie zakładamy ich dostępności.",
-      "without_it": "Analiza dowodów bez wiarygodnego wyniku wykorzystania elementów.",
+      "next_action": "Poza aktywnym zakresem od 17.09.2026: nie zabiegać o dane przepływowe ani model rozpływowy i nie ponawiać prośby do użytkownika. Zachować historyczny wpis.",
+      "without_it": "Produkt działa jako informacja i ocena przesłanek do decyzji użytkownika; brak tych danych nie blokuje rozwoju.",
       "owner": "Użytkownik; PSE/PGE",
       "basis": "docs/02_feasibility_matrix.md",
-      "updated_at": "2026-09-15",
+      "updated_at": "2026-09-17",
       "received_evidence": null
     },
     {
@@ -93,11 +93,11 @@
       "status": "Do sprawdzenia",
       "requested_scope": "Impedancje i limity linii, parametry transformatorów, stan łączeń, profile generacji/poboru i założenia N-1.",
       "unlocks": "Warunek rozważenia rozpływu mocy. Schemat topologii sam nie wystarcza.",
-      "next_action": "Sprawdzić możliwość pozyskania modelu lub uzgodnionego zestawu parametrów wraz z prawami użycia.",
-      "without_it": "Nie uruchamiać pozornego power-flow; kontynuować screening dokumentacyjny.",
+      "next_action": "Poza aktywnym zakresem od 17.09.2026: nie zabiegać o dane przepływowe ani model rozpływowy i nie ponawiać prośby do użytkownika. Zachować historyczny wpis.",
+      "without_it": "Produkt działa jako informacja i ocena przesłanek do decyzji użytkownika; brak tych danych nie blokuje rozwoju.",
       "owner": "Użytkownik; operator lub uprawniony projektant",
       "basis": "docs/05_grid_capacity_methodology.md",
-      "updated_at": "2026-09-15",
+      "updated_at": "2026-09-17",
       "received_evidence": null
     },
     {
@@ -107,11 +107,11 @@
       "status": "Niedostępne",
       "requested_scope": "Ekspertyza i założenia analiz, gdyby dostępność zmieniła się w przyszłości.",
       "unlocks": "Niezależne odniesienie dla ograniczeń sieciowych i scenariuszy.",
-      "next_action": "Użytkownik poinformował, że dokumentu nie otrzyma. Nie ponawiać prośby; zachować brak i jego konsekwencje.",
-      "without_it": "Brak nie blokuje researchu, ewidencji, historii ani raportów. Ogranicza wnioski elektryczne.",
+      "next_action": "Poza aktywnym zakresem od 17.09.2026: nie zabiegać o dane przepływowe ani model rozpływowy i nie ponawiać prośby do użytkownika. Zachować historyczny wpis.",
+      "without_it": "Produkt działa jako informacja i ocena przesłanek do decyzji użytkownika; brak tych danych nie blokuje rozwoju.",
       "owner": "Brak aktywnej prośby do użytkownika",
       "basis": "Informacja użytkownika w rozmowie",
-      "updated_at": "2026-09-15",
+      "updated_at": "2026-09-17",
       "received_evidence": null
     },
     {

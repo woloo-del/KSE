@@ -45,8 +45,8 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-025 | Cykliczne aktualizacje i historia zmian | V1 | Do zrobienia | P1 | KSE-015, KSE-016, KSE-023 |
 | KSE-026 | Rozszerzenie pokrycia OSD i regionów | V1 | Do zrobienia | P2 | KSE-023, KSE-025 |
 | KSE-027 | Scenariusze przyszłej sieci i trasy | V2 | Do zrobienia | P2 | KSE-019, KSE-020, KSE-023 |
-| KSE-028 | Metodologia confidence i scoringu | V2 | Do zrobienia | P2 | KSE-023, KSE-026 |
-| KSE-029 | Dane techniczne i model rozpływowy | Long-term | Do zrobienia | P2 | KSE-023 |
+| KSE-028 | Poza zakresem — Metodologia confidence i scoringu | V2 | Do zrobienia | P2 | KSE-023, KSE-026 |
+| KSE-029 | Poza zakresem — Dane techniczne i model rozpływowy | Long-term | Do zrobienia | P2 | KSE-023 |
 | KSE-030 | Potwierdzić zewnętrzną kopię archiwum | Organizacja | Do zrobienia | P0 | KSE-003 |
 | KSE-031 | Eksperymentalny graf dowodów Radkowic | Model | Zrobione | P0 | KSE-002, KSE-007 |
 | KSE-032 | Rozszerzenie dowodów 110 kV i przegląd materiału użytkownika | Research | Zrobione | P0 | KSE-031 |
@@ -297,7 +297,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-022 — Screening BESS i hybryd z PCC
 
 - Odpowiedzialność: Codex.
-- Następny krok: Połączyć parametry projektu z faktami, ograniczeniami i niewiadomymi.
+- Następny krok: Rozwijać wyłącznie przesłanki korzystne, ryzyka i niewiadome dla importu/eksportu oraz PCC; bez werdyktu możliwości przyłączenia, rezerwy i score.
 - Kryterium: Ładowanie/rozładowanie osobno; limity PCC zachowane; brak arbitralnej rezerwy MW i score.
 - Nieukończone zależności: KSE-021.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
@@ -308,7 +308,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-023 — Walidacja pilota na niezależnych dowodach
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Przygotować próbę referencyjną projektów i relacji oraz kryteria porównania.
+- Następny krok: Weryfikować fakty, jakość danych i trafność przypisania przesłanek do infrastruktury, kierunku i terminu; bez kalibracji prawdopodobieństwa przyłączenia.
 - Kryterium: Oddzielnie zmierzona poprawność ekstrakcji, dopasowań, pokrycia i wniosków; błędy opisane.
 - Nieukończone zależności: KSE-022.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
@@ -360,24 +360,24 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Zakończono: nie zakończono.
 - Dowody/kontekst: [docs/05_grid_capacity_methodology.md](docs/05_grid_capacity_methodology.md).
 
-### KSE-028 — Metodologia confidence i scoringu
+### KSE-028 — Poza zakresem — Metodologia confidence i scoringu
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Zdefiniować cel wskaźnika i zbiór kalibracyjny przed wagami.
+- Następny krok: Nie realizować. Zachowano historyczny zamiar; powrót wymaga wyraźnej decyzji użytkownika. Jakość danych nadal rozwijana niezależnie.
 - Kryterium: Odrębne score/confidence, wyjaśnienia, walidacja; bez danych kalibracyjnych wynik pozostaje UNKNOWN.
 - Nieukończone zależności: KSE-023, KSE-026.
-- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Ryzyko: Poza zakresem decyzją użytkownika; nie jest blokadą produktu..
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
 - Dowody/kontekst: [docs/06_scoring_methodology.md](docs/06_scoring_methodology.md).
 
-### KSE-029 — Dane techniczne i model rozpływowy
+### KSE-029 — Poza zakresem — Dane techniczne i model rozpływowy
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Ekspertyza wpływu nie będzie dostępna od użytkownika w tym pilocie. Oceniać inne źródła parametrów; nie uzależniać ewidencji i modelu dokumentacyjnego od power-flow.
+- Następny krok: Nie realizować. Zachowano historyczny zamiar; powrót wymaga wyraźnej decyzji użytkownika. Jakość danych nadal rozwijana niezależnie.
 - Kryterium: Kompletne wymagane wejścia i niezależna walidacja; w przeciwnym razie dokumentacja niewykonalności.
 - Nieukończone zależności: KSE-023.
-- Ryzyko: Publiczne dane mogą nie wystarczyć; brak gwarancji osiągalności etapu..
+- Ryzyko: Poza zakresem decyzją użytkownika; nie jest blokadą produktu..
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
 - Dowody/kontekst: [docs/05_grid_capacity_methodology.md](docs/05_grid_capacity_methodology.md).

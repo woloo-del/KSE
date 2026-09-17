@@ -280,3 +280,14 @@ Consequences: dodatkowy widok i materiał w eksporcie; brak zmiany scoringu, gra
 ## 2026-09-17 — OSM jako dowód geometrii i kandydatów topologii
 
 Decision: zachować oddzielny, wersjonowany audyt OSM z klasyfikacją źródła G. Context: użytkownik wskazał szczegółową mapę ebin.josm.pl. Options considered: bezpośrednie uznanie mapy za model elektryczny; audyt geometrii przed budową grafu. Selected option: audyt. Reason: brak potwierdzonego układu pracy, parametrów i własności urządzeń. Trade-offs: dodatkowa weryfikacja kosztem szybkości integracji. Consequences: przecięcia przestrzenne nie tworzą potwierdzonych krawędzi; brak nowej punktacji lub MW; dane ODbL pozostają odrębne od prywatnej kompilacji. Główne API OSM wykorzystano jednorazowo do rozpoznania, nie jako planowane zaplecze produkcyjne. Szczegóły: docs/18_gis_osm_integration.md.
+
+## 17.09.2026 — produkt informacyjny bez szacowania przyłączenia
+
+Date: 2026-09-17.
+Decision: na wyraźne polecenie użytkownika wyłączyć szacowanie możliwości przyłączenia, rezerwy MW, prawdopodobieństwa WP, obciążenia i Grid Connection Score.
+Context: użytkownik nie zakłada uzyskania danych przepływowych operatorów; chce faktów oraz pozytywnych i negatywnych przesłanek do własnej oceny.
+Options considered: dalsze dążenie do heurystycznego oszacowania; produkt wspierający decyzję przez wyjaśnione dowody.
+Selected option: produkt oparty na faktach i przesłankach, z kategoriami korzystne / ryzyko / neutralne / nieznane.
+Reason: decyzja użytkownika i brak podstaw do wiarygodnego rozstrzygania możliwości przyłączenia.
+Trade-offs: brak jednego werdyktu lub liczby; użytkownik ocenia znaczenie jawnych dowodów i ograniczeń.
+Consequences: dane przepływowe i power-flow poza aktywnym planem. KSE-028/029 zachowane jako historyczne zadania poza zakresem; jakość danych pozostaje aktywna w KSE-023. Nie ponawiać próśb o telemetrię i ekspertyzę. Cytowanie raportowanych przez operatora wartości pozostaje dozwolone z pełnym kontekstem. Nie zmieniono bieżącego API ani historycznych wyników; ustawienie w config/product_policy.json jest specyfikacją, nie flagą wykonawczą.

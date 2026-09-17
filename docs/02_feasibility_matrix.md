@@ -1,5 +1,13 @@
 # Wstępna macierz wykonalności
 
+## Obowiązująca decyzja produktowa — 17.09.2026
+
+Aplikacja dostarcza użytkownikowi fakty, przesłanki korzystne, ryzyka, sprzeczności i niewiadome do jego decyzji. **Nie szacuje możliwości przyłączenia, wolnych MW, obciążenia ani prawdopodobieństwa WP i nie tworzy Grid Connection Score.** To wyłączenie z zakresu, nie odroczenie funkcji. Dane przepływowe od operatorów i model rozpływowy nie są warunkiem rozwoju ani aktywnym celem pozyskania.
+
+Modernizacja może być przesłanką korzystną, gdy jej zakres dotyczy analizowanego punktu; plan nie oznacza dostępnej mocy. Znane przyłączone lub planowane inwestycje mogą wskazywać potencjalną konkurencję o udokumentowaną wspólną infrastrukturę. Sama liczba projektów nie dowodzi negatywnego wpływu lub przeciążenia. Znaczenie zależy od kierunku pracy, napięcia, relacji sieciowej i terminu. Brak dowodu oznacza neutralny kontekst lub niewiadomą.
+
+Można prezentować wartości opublikowane przez operatora z ich datą, jednostką raportowania i założeniami; nie przeliczać ich na własną ocenę dostępności dla projektu użytkownika. Jakość danych opisujemy oddzielnie. Nie sumujemy przesłanek do werdyktu technicznego ani punktacji. Ustawienia zakresu: `config/product_policy.json`. Starsze treści poniżej mają charakter historyczny w zakresie sprzecznym z tą decyzją.
+
 **10.09.2026 — wynik badań etapu 1; nie jest deklaracją wdrożonej funkcjonalności.** Pełne dowody, daty i linki: [raport](01_data_research.md) i [katalog](data_sources.md). Identyfikatory poniżej odnoszą się do katalogu JSON.
 
 `AVAILABLE_DIRECTLY` oznacza dostępność określonej informacji w zbadanym zakresie źródła, nie całego kraju ani całego poziomu napięcia. `CALCULABLE` wymaga wskazanych wejść i nie obejmuje imputowania braków. `ESTIMABLE` dopuszcza tylko jawnie warunkowy model. `NOT_CURRENTLY_AVAILABLE` dotyczy wiarygodnego produktu o opisanym zakresie w sprawdzonych źródłach publicznych.

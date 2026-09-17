@@ -1,12 +1,20 @@
 # Kierunek rozwoju aplikacji
 
+## Obowiązująca decyzja produktowa — 17.09.2026
+
+Aplikacja dostarcza użytkownikowi fakty, przesłanki korzystne, ryzyka, sprzeczności i niewiadome do jego decyzji. **Nie szacuje możliwości przyłączenia, wolnych MW, obciążenia ani prawdopodobieństwa WP i nie tworzy Grid Connection Score.** To wyłączenie z zakresu, nie odroczenie funkcji. Dane przepływowe od operatorów i model rozpływowy nie są warunkiem rozwoju ani aktywnym celem pozyskania.
+
+Modernizacja może być przesłanką korzystną, gdy jej zakres dotyczy analizowanego punktu; plan nie oznacza dostępnej mocy. Znane przyłączone lub planowane inwestycje mogą wskazywać potencjalną konkurencję o udokumentowaną wspólną infrastrukturę. Sama liczba projektów nie dowodzi negatywnego wpływu lub przeciążenia. Znaczenie zależy od kierunku pracy, napięcia, relacji sieciowej i terminu. Brak dowodu oznacza neutralny kontekst lub niewiadomą.
+
+Można prezentować wartości opublikowane przez operatora z ich datą, jednostką raportowania i założeniami; nie przeliczać ich na własną ocenę dostępności dla projektu użytkownika. Jakość danych opisujemy oddzielnie. Nie sumujemy przesłanek do werdyktu technicznego ani punktacji. Ustawienia zakresu: `config/product_policy.json`. Starsze treści poniżej mają charakter historyczny w zakresie sprzecznym z tą decyzją.
+
 Aktualizacja: 2026-09-17. Plan oparty na wynikach projektu; opisuje także funkcje jeszcze niewdrożone. Zastępuje rekomendację z 10.09.2026 zachowaną w Git. Radkowice są pilotem, lokalna aplikacja dokumentacyjna działa, a użytkownik wybrał ocenę przesłanek i ryzyk przed porównywaniem stacji.
 
 ## Cel produktu
 
 Aplikacja ma być warsztatem oceny lokalizacji inwestycji. Użytkownik wskazuje lokalizację, parametry i termin projektu, a otrzymuje kartę potencjalnego punktu przyłączenia: infrastrukturę, znane projekty, inwestycje sieciowe, przesłanki, ryzyka i brakujące dowody. Każdy wniosek prowadzi do źródła z datą i zakresem.
 
-Rezultat: użytkownik rozumie, które warianty warto dalej badać oraz jakie informacje mogą zmienić ocenę. Obecne dane nie uzasadniają liczbowego prawdopodobieństwa otrzymania WP ani automatycznej rezerwy MW.
+Rezultat: użytkownik rozumie, które warianty warto dalej badać oraz jakie informacje mogą zmienić ocenę. Szacowanie możliwości przyłączenia, score i prawdopodobieństwa WP jest poza zakresem produktu.
 
 ## Dostępna podstawa i wartość dla użytkownika
 
@@ -37,7 +45,7 @@ Rezultat: użytkownik rozumie, które warianty warto dalej badać oraz jakie inf
 | 2. Relacje i karta stacji | Obiekty mapy powiązane z dokumentami i znanymi projektami | Stabilne ID i przegląd niejednoznacznych dopasowań; projekty pobliskie oddzielone od przypisanych do stacji | KSE-017, KSE-018, KSE-021 |
 | 3. Ocena konkretnego projektu | Wyjaśnione przesłanki dla importu, eksportu i terminu | Wniosek ograniczony do napięcia, daty i zakresu dowodów; bez sztucznego score | KSE-022, KSE-023 |
 | 4. Historia i przyszła sieć | Co się zmieniło i które inwestycje mogą mieć znaczenie | Zachowane wersje, wykrywanie zmian i usunięć, jawne statusy planu i odbioru; bez automatycznego przyrostu MW | KSE-025, KSE-027 |
-| 5. Porównanie stacji | Zestawienie wariantów z widocznymi brakami | Wspólne definicje, okresy i napięcia; brak danych nie daje przewagi w rankingu | KSE-026, KSE-028 |
+| 5. Porównanie stacji | Zestawienie wariantów z widocznymi brakami | Wspólne definicje, okresy i napięcia; brak danych nie daje przewagi w rankingu | KSE-026 |
 
 Najbliższy zakres to geometria Radkowic. Najpierw wykorzystać zachowaną próbkę do normalizacji geometrii i identyfikatorów, następnie zwiększać obszar przez odpowiednie źródło wyciągów. Nie stosować cyklicznie głównego API OSM ani masowego pobierania kafli mapy. Nie wprowadzać nowej bazy lub frameworka tylko dla pokazania próbki.
 

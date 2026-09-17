@@ -1,5 +1,13 @@
 # Grid Connection Intelligence - Polska
 
+## Obowiązująca decyzja produktowa — 17.09.2026
+
+Aplikacja dostarcza użytkownikowi fakty, przesłanki korzystne, ryzyka, sprzeczności i niewiadome do jego decyzji. **Nie szacuje możliwości przyłączenia, wolnych MW, obciążenia ani prawdopodobieństwa WP i nie tworzy Grid Connection Score.** To wyłączenie z zakresu, nie odroczenie funkcji. Dane przepływowe od operatorów i model rozpływowy nie są warunkiem rozwoju ani aktywnym celem pozyskania.
+
+Modernizacja może być przesłanką korzystną, gdy jej zakres dotyczy analizowanego punktu; plan nie oznacza dostępnej mocy. Znane przyłączone lub planowane inwestycje mogą wskazywać potencjalną konkurencję o udokumentowaną wspólną infrastrukturę. Sama liczba projektów nie dowodzi negatywnego wpływu lub przeciążenia. Znaczenie zależy od kierunku pracy, napięcia, relacji sieciowej i terminu. Brak dowodu oznacza neutralny kontekst lub niewiadomą.
+
+Można prezentować wartości opublikowane przez operatora z ich datą, jednostką raportowania i założeniami; nie przeliczać ich na własną ocenę dostępności dla projektu użytkownika. Jakość danych opisujemy oddzielnie. Nie sumujemy przesłanek do werdyktu technicznego ani punktacji. Ustawienia zakresu: `config/product_policy.json`. Starsze treści poniżej mają charakter historyczny w zakresie sprzecznym z tą decyzją.
+
 Stan na **16.09.2026**: pierwszy przegląd źródeł zakończony, rozwijany jest lokalny pilot dokumentacyjny Radkowic 220/110 kV. Działają narzędzia badawcze, graf dowodów, historia obserwacji, ewidencja wspólnego przyłącza i widok trzech wpisów PSE. Projekt nie zawiera aplikacji produkcyjnej ani zweryfikowanego modelu rozpływowego.
 
 **Wniosek:** publiczne dane pozwalają budować audytowalny system rozpoznania sytuacji przyłączeniowej. Nie pozwalają obecnie wiarygodnie wyznaczać wolnej mocy każdego GPZ ani procentowego prawdopodobieństwa uzyskania warunków przyłączenia.

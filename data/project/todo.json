@@ -387,7 +387,7 @@
       "depends_on": [
         "KSE-021"
       ],
-      "next_action": "Połączyć parametry projektu z faktami, ograniczeniami i niewiadomymi.",
+      "next_action": "Rozwijać wyłącznie przesłanki korzystne, ryzyka i niewiadome dla importu/eksportu oraz PCC; bez werdyktu możliwości przyłączenia, rezerwy i score.",
       "acceptance": "Ładowanie/rozładowanie osobno; limity PCC zachowane; brak arbitralnej rezerwy MW i score.",
       "evidence": [
         "docs/05_grid_capacity_methodology.md"
@@ -403,7 +403,7 @@
       "depends_on": [
         "KSE-022"
       ],
-      "next_action": "Przygotować próbę referencyjną projektów i relacji oraz kryteria porównania.",
+      "next_action": "Weryfikować fakty, jakość danych i trafność przypisania przesłanek do infrastruktury, kierunku i terminu; bez kalibracji prawdopodobieństwa przyłączenia.",
       "acceptance": "Oddzielnie zmierzona poprawność ekstrakcji, dopasowań, pokrycia i wniosków; błędy opisane.",
       "evidence": [
         "docs/07_data_quality.md"
@@ -480,7 +480,7 @@
     },
     {
       "id": "KSE-028",
-      "title": "Metodologia confidence i scoringu",
+      "title": "Poza zakresem — Metodologia confidence i scoringu",
       "stage": "V2",
       "status": "Not Started",
       "priority": "P2",
@@ -489,15 +489,17 @@
         "KSE-023",
         "KSE-026"
       ],
-      "next_action": "Zdefiniować cel wskaźnika i zbiór kalibracyjny przed wagami.",
+      "next_action": "Nie realizować. Zachowano historyczny zamiar; powrót wymaga wyraźnej decyzji użytkownika. Jakość danych nadal rozwijana niezależnie.",
       "acceptance": "Odrębne score/confidence, wyjaśnienia, walidacja; bez danych kalibracyjnych wynik pozostaje UNKNOWN.",
       "evidence": [
         "docs/06_scoring_methodology.md"
-      ]
+      ],
+      "scope": "EXCLUDED_BY_USER_2026-09-17",
+      "risk": "Poza zakresem decyzją użytkownika; nie jest blokadą produktu."
     },
     {
       "id": "KSE-029",
-      "title": "Dane techniczne i model rozpływowy",
+      "title": "Poza zakresem — Dane techniczne i model rozpływowy",
       "stage": "Long-term",
       "status": "Not Started",
       "priority": "P2",
@@ -505,12 +507,13 @@
       "depends_on": [
         "KSE-023"
       ],
-      "next_action": "Ekspertyza wpływu nie będzie dostępna od użytkownika w tym pilocie. Oceniać inne źródła parametrów; nie uzależniać ewidencji i modelu dokumentacyjnego od power-flow.",
+      "next_action": "Nie realizować. Zachowano historyczny zamiar; powrót wymaga wyraźnej decyzji użytkownika. Jakość danych nadal rozwijana niezależnie.",
       "acceptance": "Kompletne wymagane wejścia i niezależna walidacja; w przeciwnym razie dokumentacja niewykonalności.",
       "evidence": [
         "docs/05_grid_capacity_methodology.md"
       ],
-      "risk": "Publiczne dane mogą nie wystarczyć; brak gwarancji osiągalności etapu."
+      "risk": "Poza zakresem decyzją użytkownika; nie jest blokadą produktu.",
+      "scope": "EXCLUDED_BY_USER_2026-09-17"
     },
     {
       "id": "KSE-030",
