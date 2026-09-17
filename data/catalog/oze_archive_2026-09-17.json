@@ -1,0 +1,163 @@
+{
+  "archive": "data/archives/oze_discovery_2026-09-17.zip",
+  "sha256": "59565e73d9df555cf0b549df2b1e978e68925f34b059b06bb2afe10363b2c943",
+  "members": [
+    {
+      "source_id": "GRID_OZE_PORTAL",
+      "url": "https://geoportal-oze.gridw.pl/",
+      "retrieval_date": "2026-09-17T12:15:06.325545+00:00",
+      "local_path": "data/raw/research/2026-09-17/oze/grid.html",
+      "sha256": "33e8934d346cd2500d8eeef88ac6ee08d05e616c17592c34c9e438caf6b16f46",
+      "bytes": 462,
+      "content_type": [
+        "text/html"
+      ],
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "source_id": "EMP_PW",
+      "url": "https://emp.pw.edu.pl/mapa",
+      "retrieval_date": "2026-09-17T12:15:06.530559+00:00",
+      "local_path": "data/raw/research/2026-09-17/oze/emp.html",
+      "sha256": "4913d80510b257a2f612bfed5e5489d3b27c56a9480305729ca07201431c4bbc",
+      "bytes": 44724,
+      "content_type": [
+        "text/html"
+      ],
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "source_id": "GRID_OZE_REPORT",
+      "url": "https://gridw.home.pl/pub/Raport_potencjal_OZE.pdf",
+      "retrieval_date": "2026-09-17T12:15:07.071618+00:00",
+      "local_path": "data/raw/research/2026-09-17/oze/report.pdf",
+      "sha256": "2de4ffff77337a1be325637c6500955e2f03b5d5964d513ea18da5254ad51e24",
+      "bytes": 1080371,
+      "content_type": [
+        "application/pdf"
+      ],
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "source_id": "GRID_OZE_PORTAL",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f6e44953d693416e83473bcbb59aae2d/data?f=json",
+      "retrieval_date": "2026-09-17T12:15:36.988162+00:00",
+      "local_path": "data/raw/research/2026-09-17/oze/grid_app.json",
+      "sha256": "ce970afb9797c8d35f9b07fc639a9bab7b22d91ec3376bed58606145cb5324af",
+      "bytes": 11607,
+      "content_type": [
+        "application/json"
+      ],
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "source_id": "GRID_OZE_PORTAL",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/c3be596d51d846d2a7b90ca007a4879c/data?f=json",
+      "retrieval_date": "2026-09-17T12:16:06.603601+00:00",
+      "local_path": "data/raw/research/2026-09-17/oze/grid_webmap.json",
+      "sha256": "2eda34afca184c4a2c5301f81e3cbe6cb49a9b25bd3ca491c5a545e51c8c11f2",
+      "bytes": 61519,
+      "content_type": [
+        "application/json"
+      ],
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "source_id": "GRID_OZE_PORTAL",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/c3be596d51d846d2a7b90ca007a4879c?f=json",
+      "retrieval_date": "2026-09-17T12:16:06.759916+00:00",
+      "local_path": "data/raw/research/2026-09-17/oze/grid_metadata.json",
+      "sha256": "733893b8826736122dca963c850136e6a5007cb70c09a3795c7ca5e5ef413866",
+      "bytes": 1114,
+      "content_type": [
+        "application/json"
+      ],
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "source_id": "EMP_PW",
+      "url": "https://emp.pw.edu.pl/js/site/index.js",
+      "retrieval_date": "2026-09-17T12:15:37.334888+00:00",
+      "local_path": "data/raw/research/2026-09-17/oze/emp.js",
+      "sha256": "034db5501e4b88f371119df78f205501369129adfd75a33cf08fd5e272bba490",
+      "bytes": 2405511,
+      "content_type": [
+        "text/javascript"
+      ],
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "source_id": "EMP_PW",
+      "url": "https://emp.pw.edu.pl/api/v1/units",
+      "retrieval_date": "2026-09-17T12:16:18.665795+00:00",
+      "local_path": "data/raw/research/2026-09-17/oze/emp_units.json",
+      "sha256": "8e2e194efeebe4ce344471b4e6e5937122ef7fe082bec2268d1814bc43b50ea7",
+      "bytes": 219905,
+      "content_type": [
+        "application/json"
+      ],
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "source_id": "GRID_OZE_PORTAL",
+      "url": "https://services8.arcgis.com/TG6EwIH3KnV3ncxM/arcgis/rest/services/analiza_pv_1ha/FeatureServer/0?f=pjson",
+      "retrieval_date": "2026-09-17T12:17:00.525784+00:00",
+      "local_path": "data/raw/research/2026-09-17/oze/pv_layer.json",
+      "sha256": "a46fcf764e27be9374b2549a0825a872ac47aacc69278f2711b7c35368dba971",
+      "bytes": 11320,
+      "content_type": [
+        "application/json"
+      ],
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "source_id": "GRID_OZE_PORTAL",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/fcc3595614204c06a250012850451f92?f=json",
+      "retrieval_date": "2026-09-17T12:17:00.697275+00:00",
+      "local_path": "data/raw/research/2026-09-17/oze/pv_metadata.json",
+      "sha256": "252e2980fb341ee7b7f807f4fe101ce0afd8297d43a2e6033c23f034f1b50d22",
+      "bytes": 1210,
+      "content_type": [
+        "application/json"
+      ],
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "source_id": "GRID_OZE_PORTAL",
+      "url": "https://services8.arcgis.com/TG6EwIH3KnV3ncxM/arcgis/rest/services/gminy_pilota%C5%BCowe/FeatureServer/0/query?where=1%3D1&outFields=JPT_NAZWA_,JPT_KOD_JE&returnGeometry=false&f=json",
+      "retrieval_date": "2026-09-17T12:17:00.997329+00:00",
+      "local_path": "data/raw/research/2026-09-17/oze/gminy_sample.json",
+      "sha256": "49f2d1e394392c17a8ad5e7a2c6b91c95322b0726cc1e5557d8432e73b6cf3c6",
+      "bytes": 1699,
+      "content_type": [
+        "application/json"
+      ],
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "source_id": "GRID_OZE_PORTAL",
+      "url": "https://services8.arcgis.com/TG6EwIH3KnV3ncxM/arcgis/rest/services/analiza_pv_1ha/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=1&returnGeometry=false&f=json",
+      "retrieval_date": "2026-09-17T12:17:01.995814+00:00",
+      "local_path": "data/raw/research/2026-09-17/oze/pv_sample.json",
+      "sha256": "70ee98818c0b6969fe6a862ff4d4439b54fefa390f6a63a0c8abf7d8650d2841",
+      "bytes": 1141,
+      "content_type": [
+        "application/json"
+      ],
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "note": "Private local research archive. Raw EMP HTML may contain ephemeral public-session metadata; do not publish. MIME labels inferred from validated content; response headers not retained."
+}

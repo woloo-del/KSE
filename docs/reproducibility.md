@@ -98,3 +98,7 @@ Generatory katalogu i kontroli źródeł zapisują końce linii LF także w Wind
 ## Dziewiąte archiwum — OSM, 2026-09-17
 
 `data/archives/osm_radkowice_discovery_2026-09-17.zip` przechowuje sześć wejść mapy i OSM. Manifest: `data/catalog/osm_radkowice_archive_2026-09-17.json`. Wszystkie sześć elementów sprawdzono przez `scripts/research_archive.py restore ... --manifest ... --verify-only`. Archiwum wymaga osobnej kopii zapasowej (NEED-010); sam Git przechowuje manifest i publiczny wynik audytu, nie surowe archiwum.
+
+## Dziesiąte archiwum — źródła OZE, 17.09.2026
+
+`data/archives/oze_discovery_2026-09-17.zip`, 12 plików. Manifest: `data/catalog/oze_archive_2026-09-17.json`. Pliki obejmują raport, konfiguracje i próbki API; nie są publiczną paczką do redystrybucji. NEED-010 obejmuje osobną kopię zapasową.

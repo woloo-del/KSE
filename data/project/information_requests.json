@@ -135,7 +135,7 @@
       "status": "Do sprawdzenia",
       "requested_scope": "Potwierdzenie wykonania i sprawdzenia kopii źródeł oraz prywatnych dokumentów poza tym komputerem. Bez haseł i tokenów.",
       "unlocks": "Odtwarzalność po utracie lokalnych plików. Git i hashe nie zastępują źródłowych bajtów.",
-      "next_action": "Zachować dziewięć publicznych archiwów wymienionych w docs/reproducibility.md poza komputerem i sprawdzić --verify-only; prywatne materiały skopiować osobno. Potwierdzić datę i zakres kopii, bez danych logowania.",
+      "next_action": "Zachować dziesięć publicznych archiwów wymienionych w docs/reproducibility.md poza komputerem i sprawdzić --verify-only; prywatne materiały skopiować osobno. Potwierdzić datę i zakres kopii, bez danych logowania.",
       "without_it": "Utrzymać lokalne archiwum; nie deklarować istnienia niezależnej kopii.",
       "owner": "Użytkownik",
       "basis": "docs/reproducibility.md",
@@ -195,6 +195,34 @@
       "without_it": "Zachować obie deklaracje, nie wybierać daty ani dodatkowej mocy.",
       "owner": "Użytkownik; PSE",
       "basis": "PSE_IMPACT_REPORT_2023; PSE_INVESTMENTS_RADK; docs/16_radkowice_public_followup.md",
+      "updated_at": "2026-09-17",
+      "received_evidence": null
+    },
+    {
+      "id": "NEED-015",
+      "priority": "P1",
+      "title": "Prawa i aktualność warstw GRID OZE",
+      "status": "Do sprawdzenia",
+      "requested_scope": "Licencja komercyjnego użycia i redystrybucji, paczki GPKG/SHP, zakres gmin, daty wejść, aktualizacja kryteriów i warunki API.",
+      "unlocks": "Kontrolowana integracja źródła z aplikacją i raportami.",
+      "next_action": "Pozyskać opublikowane warunki lub odpowiedź właściciela. Nie wysłano wiadomości w imieniu użytkownika.",
+      "without_it": "Zachować źródło do badań i odnośników; nie włączać masowej redystrybucji ani stałego pobierania.",
+      "owner": "UNEP/GRID-Warszawa; użytkownik może pomóc w kontakcie",
+      "basis": "docs/19_oze_sources_review.md",
+      "updated_at": "2026-09-17",
+      "received_evidence": null
+    },
+    {
+      "id": "NEED-016",
+      "priority": "P1",
+      "title": "Prawa, aktualność i semantyka API EMP",
+      "status": "Do sprawdzenia",
+      "requested_scope": "Licencja bazy, warunki API i limity, cykl aktualizacji, jednostki wartości, definicje statusów i relacji rodzic-dziecko.",
+      "unlocks": "Kontrolowana integracja źródła z aplikacją i raportami.",
+      "next_action": "Pozyskać opublikowane warunki lub odpowiedź właściciela. Nie wysłano wiadomości w imieniu użytkownika.",
+      "without_it": "Zachować źródło do badań i odnośników; nie włączać masowej redystrybucji ani stałego pobierania.",
+      "owner": "Zespół EMP / KNE PW; użytkownik może pomóc w kontakcie",
+      "basis": "docs/19_oze_sources_review.md",
       "updated_at": "2026-09-17",
       "received_evidence": null
     }

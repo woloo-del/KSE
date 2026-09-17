@@ -332,3 +332,7 @@ Zarejestrowano PSE_PRSP_2027_2036_POST_CONSULTATION: [PDF PSE](https://www.pse.p
 ## 2026-09-17 — szczegółowa mapa OSM Radkowic
 
 Zweryfikowano mapę ebin.josm.pl oraz rzeczywistą próbkę OSM. Trzy nowe wpisy katalogowe (69 łącznie) obejmują wizualizację, obiekt stacji i odpowiedź obszarową. Szczegóły źródeł, dat, licencji i ograniczeń: [GIS i OSM](18_gis_osm_integration.md). Geometria pól i tagi transformatorów wspierają budowę kandydatów topologii, lecz nie dostarczają obciążenia ani dostępnej mocy.
+
+## 17.09.2026 — GRID OZE i EMP
+
+Zweryfikowano trzy źródła użytkownika oraz komunikat o krajowych usługach GUGiK. Katalog obejmuje 73 źródła. Odkryto działające ArcGIS REST i odczyt JSON EMP, lecz prawa wykorzystania pozostają otwarte. Szczegóły: [przegląd źródeł OZE](19_oze_sources_review.md). Potencjał przestrzenny, katalog wytwórców i dostępna moc przyłączeniowa pozostają odrębnymi pojęciami.

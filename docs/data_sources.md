@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-17**. Źródła: **69**.
+Stan badania: **2026-09-17**. Źródła: **73**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -66,6 +66,10 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | EMBER_API | [Ember Energy API — dokumentacja](https://api.ember-energy.org/v1/docs) | DOCUMENTATION_REVIEWED | P3 | UNKNOWN |
 | JRC_IDEES | [JRC IDEES-2023](https://data.jrc.ec.europa.eu/dataset/1f0b480c-6d21-4d95-897d-20c7ca33df6f) | CONTENT_REVIEWED | P3 | UNKNOWN |
 | COPERNICUS | [Copernicus Data Space — OData i produkty](https://documentation.dataspace.copernicus.eu/APIs/OData.html) | DOCUMENTATION_REVIEWED | P3 | PRODUCT_SPECIFIC |
+| GRID_OZE_REPORT | [Mamy przestrzeń dla OZE — raport metodyczny](https://gridw.home.pl/pub/Raport_potencjal_OZE.pdf) | CONTENT_REVIEWED | P1 | UNKNOWN |
+| GRID_OZE_PORTAL | [Geoportal OZE GRID — ArcGIS WebMap i FeatureServer](https://geoportal-oze.gridw.pl/) | SAMPLE_VERIFIED | P1 | UNKNOWN |
+| EMP_PW | [Energetyczna Mapa Polski — katalog źródeł wytwórczych](https://emp.pw.edu.pl/mapa) | SAMPLE_VERIFIED | P1 | UNKNOWN |
+| GUGIK_OZE_DETAIL_2026 | [Geoportal krajowy — szczegółowe usługi potencjału OZE](https://www.geoportal.gov.pl/aktualnosci/nowe-uslugi-potencjalu-oze-dane-szczegolowe/) | CONTENT_REVIEWED | P1 | UNKNOWN |
 | PSE_INVESTMENTS_RADK | [Portal inwestycji PSE — sekcja Radkowice](https://inwestycje.pse.pl/mapa_inwestycji_pse/) | CONTENT_REVIEWED | P0 | UNKNOWN |
 | CHECINY_ENERGY_PLAN | [BIP Chęcin — założenia energetyczne 2025–2027 z perspektywą 2040](https://checiny.biuletyn.net/fls/bip_pliki/2026_03/BIPF64CD10561EC15Z/PZCEEPG_2025-2027.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
 | PSE_TARIFF_2026 | [Taryfa PSE 2026 — odbiorcy i miejsca dostarczania](https://www.pse.pl/documents/20182/7005343691/20260116_Tekst_Taryfy_na_2026_tekst_jednolity.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
@@ -2100,6 +2104,158 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 - **Warunki:** [źródło prawne](https://dataspace.copernicus.eu/terms-and-conditions)
 - **Powiązane źródło/interfejs:** [link](https://documentation.dataspace.copernicus.eu/Quotas.html)
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### GRID_OZE_REPORT — Mamy przestrzeń dla OZE — raport metodyczny
+
+[Źródło](https://gridw.home.pl/pub/Raport_potencjal_OZE.pdf)
+
+- **Operator:** NOT_AN_OPERATOR
+- **Właściciel:** UNEP/GRID-Warszawa i konsorcjum projektu
+- **Kraj:** PL
+- **Kategoria:** spatial_methodology
+- **Napięcie:** UNKNOWN_OR_NOT_APPLICABLE
+- **Zasięg:** Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.
+- **Format:** PDF
+- **API:** NO — dokument
+- **GIS:** NO — dokument
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN — nie potwierdzono licencji ponownego użycia
+- **Użycie komercyjne:** UNKNOWN
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** PARTIAL
+- **Scraping:** NO — preferować wskazane API lub plik; brak wdrożenia
+- **Pola:** kryteria przestrzenne; bufory; powierzchnia ha; statystyki 18 gmin
+- **Zastosowanie:** Inspiracja dla odrębnej oceny przestrzennej PV i wiatru
+- **Ograniczenia:** Opracowanie 2025, parametry prawne wymagają osobnej aktualizacji; Nie określa rezerwy sieci ani zasad lokalizacji BESS; Raport opisuje przekazanie GPKG/SHP; nie zweryfikowano publicznej paczki
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-17
+- **Udany odczyt:** 2026-09-17
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba GRID_OZE_REPORT:** HTTP 200; 2026-09-17T12:15:07.071618+00:00; `data/catalog/probe_results_oze_2026-09-17.json`; próbka `data/raw/research/2026-09-17/oze/report.pdf`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### GRID_OZE_PORTAL — Geoportal OZE GRID — ArcGIS WebMap i FeatureServer
+
+[Źródło](https://geoportal-oze.gridw.pl/)
+
+- **Operator:** NOT_AN_OPERATOR
+- **Właściciel:** UNEP/GRID-Warszawa; konto publikujące w ArcGIS
+- **Kraj:** PL
+- **Kategoria:** spatial_screening
+- **Napięcie:** UNKNOWN_OR_NOT_APPLICABLE
+- **Zasięg:** Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.
+- **Format:** HTML; ArcGIS REST JSON; GeoJSON advertised; PBF advertised
+- **API:** YES — odczyt metadanych i query bez konta
+- **GIS:** YES — ArcGIS REST FeatureServer
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN — nie potwierdzono licencji ponownego użycia
+- **Użycie komercyjne:** UNKNOWN
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO — preferować wskazane API lub plik; brak wdrożenia
+- **Pola:** TERYT; nazwa gminy; pow_ha; geometria EPSG:3857
+- **Zastosowanie:** Warstwy potencjału i ograniczeń przestrzennych, po ustaleniu praw
+- **Ograniczenia:** 18 gmin pilotażowych bez Chęcin; inne warstwy mają własny zakres; GPZ bufory 30/40 km nie są topologią ani rezerwą; Puste licenseInfo/copyrightText nie stanowią otwartej licencji; Próbka PV bez geometrii; GeoJSON/PBF deklarowane w metadanych, nie testowane; maxRecordCount 2000 dotyczy odpowiedzi, nie limitu zapytań na czas
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-17
+- **Udany odczyt:** 2026-09-17
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba GRID_OZE_PORTAL:** HTTP 200; 2026-09-17T12:15:06.325545+00:00; `data/catalog/probe_results_oze_2026-09-17.json`; próbka `data/raw/research/2026-09-17/oze/grid.html`.
+- **Próba GRID_OZE_PORTAL:** HTTP 200; 2026-09-17T12:15:36.988162+00:00; `data/catalog/probe_results_oze_2026-09-17.json`; próbka `data/raw/research/2026-09-17/oze/grid_app.json`.
+- **Próba GRID_OZE_PORTAL:** HTTP 200; 2026-09-17T12:16:06.603601+00:00; `data/catalog/probe_results_oze_2026-09-17.json`; próbka `data/raw/research/2026-09-17/oze/grid_webmap.json`.
+- **Próba GRID_OZE_PORTAL:** HTTP 200; 2026-09-17T12:16:06.759916+00:00; `data/catalog/probe_results_oze_2026-09-17.json`; próbka `data/raw/research/2026-09-17/oze/grid_metadata.json`.
+- **Próba GRID_OZE_PORTAL:** HTTP 200; 2026-09-17T12:17:00.525784+00:00; `data/catalog/probe_results_oze_2026-09-17.json`; próbka `data/raw/research/2026-09-17/oze/pv_layer.json`.
+- **Próba GRID_OZE_PORTAL:** HTTP 200; 2026-09-17T12:17:00.697275+00:00; `data/catalog/probe_results_oze_2026-09-17.json`; próbka `data/raw/research/2026-09-17/oze/pv_metadata.json`.
+- **Próba GRID_OZE_PORTAL:** HTTP 200; 2026-09-17T12:17:00.997329+00:00; `data/catalog/probe_results_oze_2026-09-17.json`; próbka `data/raw/research/2026-09-17/oze/gminy_sample.json`.
+- **Próba GRID_OZE_PORTAL:** HTTP 200; 2026-09-17T12:17:01.995814+00:00; `data/catalog/probe_results_oze_2026-09-17.json`; próbka `data/raw/research/2026-09-17/oze/pv_sample.json`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### EMP_PW — Energetyczna Mapa Polski — katalog źródeł wytwórczych
+
+[Źródło](https://emp.pw.edu.pl/mapa)
+
+- **Operator:** NOT_AN_OPERATOR
+- **Właściciel:** Koło Naukowe Energetyków Politechniki Warszawskiej
+- **Kraj:** PL
+- **Kategoria:** generation_asset_discovery
+- **Napięcie:** UNKNOWN_OR_NOT_APPLICABLE
+- **Zasięg:** Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.
+- **Format:** HTML; JavaScript; JSON
+- **API:** YES — GET /api/v1/units odczytane bez konta
+- **GIS:** UNKNOWN — współrzędne w JSON; WMS/WFS nie potwierdzono
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN — nie potwierdzono licencji ponownego użycia
+- **Użycie komercyjne:** UNKNOWN
+- **Autorytet źródła:** G
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO — preferować wskazane API lub plik; brak wdrożenia
+- **Pola:** id; slug; name; unit_type; latitude; longitude; power_installed; owner; bibliography; parent_unit_slug; status
+- **Zastosowanie:** Poszukiwanie projektów i źródeł pierwotnych, kontrola nazw i lokalizacji
+- **Ograniczenia:** 173 rekordy w pobranej odpowiedzi nie dowodzą kompletności kraju; Brak jawnych dat aktualizacji rekordów, GPZ i PCC w sprawdzonym schemacie; Kody statusu 0/1 nie zostały zmapowane na cykl projektu; Możliwe relacje rodzic-dziecko; nie sumować mocy bez deduplikacji; Nie potwierdzono licencji, stabilności API ani limitów; brak wdrożonego cyklicznego pobierania
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-17
+- **Udany odczyt:** 2026-09-17
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba EMP_PW:** HTTP 200; 2026-09-17T12:15:06.530559+00:00; `data/catalog/probe_results_oze_2026-09-17.json`; próbka `data/raw/research/2026-09-17/oze/emp.html`.
+- **Próba EMP_PW:** HTTP 200; 2026-09-17T12:15:37.334888+00:00; `data/catalog/probe_results_oze_2026-09-17.json`; próbka `data/raw/research/2026-09-17/oze/emp.js`.
+- **Próba EMP_PW:** HTTP 200; 2026-09-17T12:16:18.665795+00:00; `data/catalog/probe_results_oze_2026-09-17.json`; próbka `data/raw/research/2026-09-17/oze/emp_units.json`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### GUGIK_OZE_DETAIL_2026 — Geoportal krajowy — szczegółowe usługi potencjału OZE
+
+[Źródło](https://www.geoportal.gov.pl/aktualnosci/nowe-uslugi-potencjalu-oze-dane-szczegolowe/)
+
+- **Operator:** NOT_AN_OPERATOR
+- **Właściciel:** GUGiK / MKiŚ
+- **Kraj:** PL
+- **Kategoria:** spatial_potential
+- **Napięcie:** UNKNOWN_OR_NOT_APPLICABLE
+- **Zasięg:** Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.
+- **Format:** HTML; WMS announced
+- **API:** UNKNOWN
+- **GIS:** YES — WMS ogłoszone; endpointów nie przetestowano
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN — nie potwierdzono licencji ponownego użycia
+- **Użycie komercyjne:** UNKNOWN
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** PARTIAL
+- **Scraping:** NO — preferować wskazane API lub plik; brak wdrożenia
+- **Pola:** potencjał technologii OZE; potencjał magazynowania energii
+- **Zastosowanie:** Kolejka do weryfikacji krajowej alternatywy przestrzennej
+- **Ograniczenia:** Komunikat 15.06.2026; nie przetestowano usług ani licencji warstw; Potencjał magazynowania nie jest dostępną mocą przyłączeniową
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-17
+- **Udany odczyt:** 2026-09-17
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
 

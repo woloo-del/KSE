@@ -58,6 +58,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-038 | Historyczny rejestr wpisów o inwestycjach z GIS | Data quality | Zrobione | P1 | KSE-035 |
 | KSE-039 | Projekt PRSP po konsultacjach: dowody inwestycji w pilocie | Data quality | Zrobione | P1 | KSE-034 |
 | KSE-040 | Audyt przydatności GIS i rzeczywistej próbki OSM Radkowic | Data quality | Zrobione | P1 | — |
+| KSE-041 | Weryfikacja źródeł GRID OZE i Energetycznej Mapy Polski | Research | Zrobione | P1 | — |
 
 ## Kryteria zakończenia i dowody
 
@@ -500,3 +501,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-17.
 - Dowody/kontekst: [docs/18_gis_osm_integration.md](docs/18_gis_osm_integration.md), [connectors/gis/discovery.py](connectors/gis/discovery.py), [connectors/gis/osm_station.py](connectors/gis/osm_station.py), [tests/test_gis_discovery.py](tests/test_gis_discovery.py), [tests/test_osm_station.py](tests/test_osm_station.py), [data/catalog/osm_radkowice_archive_2026-09-17.json](data/catalog/osm_radkowice_archive_2026-09-17.json).
+
+### KSE-041 — Weryfikacja źródeł GRID OZE i Energetycznej Mapy Polski
+
+- Odpowiedzialność: Codex.
+- Następny krok: Wyjaśnić NEED-015/016; przetestować krajowe usługi GUGiK dla obszaru pilota przed integracją.
+- Kryterium: Źródła opisane wraz z datami, interfejsami, próbkami, ograniczeniami i nierozstrzygniętymi prawami; archiwum z hashami.
+- Nieukończone zależności: brak.
+- Ryzyko: Dostęp techniczny nie oznacza prawa redystrybucji; brak danych o rezerwie przyłączeniowej..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-17.
+- Dowody/kontekst: [docs/19_oze_sources_review.md](docs/19_oze_sources_review.md), [data/catalog/oze_archive_2026-09-17.json](data/catalog/oze_archive_2026-09-17.json).

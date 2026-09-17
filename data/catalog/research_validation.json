@@ -1,27 +1,27 @@
 {
-  "checked_at_utc": "2026-09-17T11:56:29.268280+00:00",
+  "checked_at_utc": "2026-09-17T16:48:13.994582+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 69,
+  "source_count": 73,
   "source_status_counts": {
-    "SAMPLE_VERIFIED": 15,
-    "CONTENT_REVIEWED": 34,
+    "SAMPLE_VERIFIED": 17,
+    "CONTENT_REVIEWED": 36,
     "DISCOVERED": 4,
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 11
   },
-  "probe_count": 46,
+  "probe_count": 58,
   "http_status_counts": {
-    "200": 45,
+    "200": 57,
     "404": 1
   },
-  "raw_file_count": 45,
+  "raw_file_count": 57,
   "format_counts": {
-    ".html": 15,
-    ".pdf": 15,
-    ".json": 7,
+    ".html": 17,
+    ".pdf": 16,
+    ".json": 15,
     ".xml": 4,
-    ".js": 3,
+    ".js": 4,
     ".xlsx": 1
   },
   "pdf_details": [
@@ -91,6 +91,11 @@
       "first_page_text_chars": 3726
     },
     {
+      "file": "data/raw/research/2026-09-17/oze/report.pdf",
+      "pages": 15,
+      "first_page_text_chars": 11
+    },
+    {
       "file": "data/raw/research/2026-09-17/pse_impact_report_2023.pdf",
       "pages": 291,
       "first_page_text_chars": 297
@@ -101,13 +106,13 @@
       "first_page_text_chars": 206
     }
   ],
-  "local_links_checked": 53,
+  "local_links_checked": 57,
   "dependencies": {
     "python": "3.12.14",
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 777,
+  "checks_passed": 868,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -1646,6 +1651,116 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:GRID_OZE_REPORT",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GRID_OZE_REPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GRID_OZE_REPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GRID_OZE_REPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GRID_OZE_REPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:EMP_PW",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:GUGIK_OZE_DETAIL_2026",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GUGIK_OZE_DETAIL_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GUGIK_OZE_DETAIL_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GUGIK_OZE_DETAIL_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GUGIK_OZE_DETAIL_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "catalog_fields:PSE_INVESTMENTS_RADK",
       "passed": true,
       "detail": []
@@ -2267,6 +2382,26 @@
     },
     {
       "name": "probe_references:COPERNICUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GRID_OZE_REPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GUGIK_OZE_DETAIL_2026",
       "passed": true,
       "detail": null
     },
@@ -3016,6 +3151,246 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GRID_OZE_REPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRID_OZE_REPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRID_OZE_REPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRID_OZE_REPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EMP_PW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRID_OZE_PORTAL",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "snapshot_within_raw:RDOS_RADK_PIASKI_DECISION_2025",
       "passed": true,
       "detail": null
@@ -3561,6 +3936,71 @@
       "detail": null
     },
     {
+      "name": "format_readable:emp.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:emp.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:emp_units.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:gminy_sample.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:grid.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:grid_app.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:grid_metadata.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:grid_webmap.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pv_layer.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pv_metadata.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pv_sample.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:report.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:report.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "pdf_text_layer:pse_impact_report_2023.pdf",
       "passed": true,
       "detail": null
@@ -3801,6 +4241,11 @@
       "detail": null
     },
     {
+      "name": "local_link:01_data_research.md:19_oze_sources_review.md",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "local_link:02_feasibility_matrix.md:01_data_research.md",
       "passed": true,
       "detail": null
@@ -3837,6 +4282,21 @@
     },
     {
       "name": "local_link:07_data_quality.md:../data/catalog/energa_date_review_2026-09-11.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:08_roadmap.md:18_gis_osm_integration.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:08_roadmap.md:17_local_application.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:08_roadmap.md:02_feasibility_matrix.md",
       "passed": true,
       "detail": null
     },

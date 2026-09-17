@@ -1767,6 +1767,166 @@
       "related_urls": [
         "https://documentation.dataspace.copernicus.eu/Quotas.html"
       ]
+    },
+    {
+      "source_id": "GRID_OZE_REPORT",
+      "operator": "NOT_AN_OPERATOR",
+      "source_name": "Mamy przestrzeń dla OZE — raport metodyczny",
+      "url": "https://gridw.home.pl/pub/Raport_potencjal_OZE.pdf",
+      "data_owner": "UNEP/GRID-Warszawa i konsorcjum projektu",
+      "data_category": "spatial_methodology",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "api_available": "NO — dokument",
+      "gis_available": "NO — dokument",
+      "machine_readable": "PARTIAL",
+      "scraping_required": "NO — preferować wskazane API lub plik; brak wdrożenia",
+      "reliability": "C",
+      "key_fields": [
+        "kryteria przestrzenne",
+        "bufory",
+        "powierzchnia ha",
+        "statystyki 18 gmin"
+      ],
+      "potential_application": "Inspiracja dla odrębnej oceny przestrzennej PV i wiatru",
+      "known_limitations": [
+        "Opracowanie 2025, parametry prawne wymagają osobnej aktualizacji",
+        "Nie określa rezerwy sieci ani zasad lokalizacji BESS",
+        "Raport opisuje przekazanie GPKG/SHP; nie zweryfikowano publicznej paczki"
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "GRID_OZE_REPORT"
+      ],
+      "license": "UNKNOWN — nie potwierdzono licencji ponownego użycia",
+      "commercial_use": "UNKNOWN"
+    },
+    {
+      "source_id": "GRID_OZE_PORTAL",
+      "operator": "NOT_AN_OPERATOR",
+      "source_name": "Geoportal OZE GRID — ArcGIS WebMap i FeatureServer",
+      "url": "https://geoportal-oze.gridw.pl/",
+      "data_owner": "UNEP/GRID-Warszawa; konto publikujące w ArcGIS",
+      "data_category": "spatial_screening",
+      "data_format": [
+        "HTML",
+        "ArcGIS REST JSON",
+        "GeoJSON advertised",
+        "PBF advertised"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "api_available": "YES — odczyt metadanych i query bez konta",
+      "gis_available": "YES — ArcGIS REST FeatureServer",
+      "machine_readable": "YES",
+      "scraping_required": "NO — preferować wskazane API lub plik; brak wdrożenia",
+      "reliability": "C",
+      "key_fields": [
+        "TERYT",
+        "nazwa gminy",
+        "pow_ha",
+        "geometria EPSG:3857"
+      ],
+      "potential_application": "Warstwy potencjału i ograniczeń przestrzennych, po ustaleniu praw",
+      "known_limitations": [
+        "18 gmin pilotażowych bez Chęcin; inne warstwy mają własny zakres",
+        "GPZ bufory 30/40 km nie są topologią ani rezerwą",
+        "Puste licenseInfo/copyrightText nie stanowią otwartej licencji",
+        "Próbka PV bez geometrii; GeoJSON/PBF deklarowane w metadanych, nie testowane",
+        "maxRecordCount 2000 dotyczy odpowiedzi, nie limitu zapytań na czas"
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "GRID_OZE_PORTAL"
+      ],
+      "license": "UNKNOWN — nie potwierdzono licencji ponownego użycia",
+      "commercial_use": "UNKNOWN"
+    },
+    {
+      "source_id": "EMP_PW",
+      "operator": "NOT_AN_OPERATOR",
+      "source_name": "Energetyczna Mapa Polski — katalog źródeł wytwórczych",
+      "url": "https://emp.pw.edu.pl/mapa",
+      "data_owner": "Koło Naukowe Energetyków Politechniki Warszawskiej",
+      "data_category": "generation_asset_discovery",
+      "data_format": [
+        "HTML",
+        "JavaScript",
+        "JSON"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "api_available": "YES — GET /api/v1/units odczytane bez konta",
+      "gis_available": "UNKNOWN — współrzędne w JSON; WMS/WFS nie potwierdzono",
+      "machine_readable": "YES",
+      "scraping_required": "NO — preferować wskazane API lub plik; brak wdrożenia",
+      "reliability": "G",
+      "key_fields": [
+        "id",
+        "slug",
+        "name",
+        "unit_type",
+        "latitude",
+        "longitude",
+        "power_installed",
+        "owner",
+        "bibliography",
+        "parent_unit_slug",
+        "status"
+      ],
+      "potential_application": "Poszukiwanie projektów i źródeł pierwotnych, kontrola nazw i lokalizacji",
+      "known_limitations": [
+        "173 rekordy w pobranej odpowiedzi nie dowodzą kompletności kraju",
+        "Brak jawnych dat aktualizacji rekordów, GPZ i PCC w sprawdzonym schemacie",
+        "Kody statusu 0/1 nie zostały zmapowane na cykl projektu",
+        "Możliwe relacje rodzic-dziecko; nie sumować mocy bez deduplikacji",
+        "Nie potwierdzono licencji, stabilności API ani limitów; brak wdrożonego cyklicznego pobierania"
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "EMP_PW"
+      ],
+      "license": "UNKNOWN — nie potwierdzono licencji ponownego użycia",
+      "commercial_use": "UNKNOWN"
+    },
+    {
+      "source_id": "GUGIK_OZE_DETAIL_2026",
+      "operator": "NOT_AN_OPERATOR",
+      "source_name": "Geoportal krajowy — szczegółowe usługi potencjału OZE",
+      "url": "https://www.geoportal.gov.pl/aktualnosci/nowe-uslugi-potencjalu-oze-dane-szczegolowe/",
+      "data_owner": "GUGiK / MKiŚ",
+      "data_category": "spatial_potential",
+      "data_format": [
+        "HTML",
+        "WMS announced"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "api_available": "UNKNOWN",
+      "gis_available": "YES — WMS ogłoszone; endpointów nie przetestowano",
+      "machine_readable": "PARTIAL",
+      "scraping_required": "NO — preferować wskazane API lub plik; brak wdrożenia",
+      "reliability": "C",
+      "key_fields": [
+        "potencjał technologii OZE",
+        "potencjał magazynowania energii"
+      ],
+      "potential_application": "Kolejka do weryfikacji krajowej alternatywy przestrzennej",
+      "known_limitations": [
+        "Komunikat 15.06.2026; nie przetestowano usług ani licencji warstw",
+        "Potencjał magazynowania nie jest dostępną mocą przyłączeniową"
+      ],
+      "priority": "P1",
+      "probe_ids": [],
+      "license": "UNKNOWN — nie potwierdzono licencji ponownego użycia",
+      "commercial_use": "UNKNOWN"
     }
   ]
 }

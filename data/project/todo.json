@@ -770,6 +770,24 @@
       "started_at": "2026-09-17",
       "completed_at": "2026-09-17",
       "risk": "OSM nie potwierdza kompletności, własności urządzeń, układu pracy ani wolnej mocy."
+    },
+    {
+      "id": "KSE-041",
+      "title": "Weryfikacja źródeł GRID OZE i Energetycznej Mapy Polski",
+      "stage": "Research",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [],
+      "next_action": "Wyjaśnić NEED-015/016; przetestować krajowe usługi GUGiK dla obszaru pilota przed integracją.",
+      "acceptance": "Źródła opisane wraz z datami, interfejsami, próbkami, ograniczeniami i nierozstrzygniętymi prawami; archiwum z hashami.",
+      "evidence": [
+        "docs/19_oze_sources_review.md",
+        "data/catalog/oze_archive_2026-09-17.json"
+      ],
+      "started_at": "2026-09-17",
+      "completed_at": "2026-09-17",
+      "risk": "Dostęp techniczny nie oznacza prawa redystrybucji; brak danych o rezerwie przyłączeniowej."
     }
   ]
 }

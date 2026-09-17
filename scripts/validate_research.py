@@ -133,7 +133,9 @@ def validate() -> dict[str, Any]:
                 text = reader.pages[0].extract_text() or ""
                 pdf_first_pages[path.name] = text
                 pdf_details.append({"file": path.relative_to(ROOT).as_posix(), "pages": len(reader.pages), "first_page_text_chars": len(text)})
-                check(f"pdf_text_layer:{path.name}", len(text.strip()) > 20)
+                # A graphical cover does not imply that the document lacks text.
+                sampled_text = [text] + [(page.extract_text() or "") for page in reader.pages[1:3]]
+                check(f"pdf_text_layer:{path.name}", any(len(value.strip()) > 20 for value in sampled_text))
             elif suffix == ".xlsx":
                 workbook = load_workbook(path, read_only=True, data_only=False)
                 check("pse_xlsx_expected_sheet", "Wykaz wspólny" in workbook.sheetnames)

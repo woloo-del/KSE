@@ -3678,6 +3678,444 @@
     },
     {
       "country": "PL",
+      "geographical_scope": "Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.",
+      "grid_voltage": [
+        "UNKNOWN_OR_NOT_APPLICABLE"
+      ],
+      "api_available": "NO — dokument",
+      "gis_available": "NO — dokument",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "UNKNOWN — nie potwierdzono licencji ponownego użycia",
+      "license_url": null,
+      "commercial_use": "UNKNOWN",
+      "machine_readable": "PARTIAL",
+      "scraping_required": "NO — preferować wskazane API lub plik; brak wdrożenia",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "GRID_OZE_REPORT"
+      ],
+      "related_urls": [],
+      "source_id": "GRID_OZE_REPORT",
+      "operator": "NOT_AN_OPERATOR",
+      "source_name": "Mamy przestrzeń dla OZE — raport metodyczny",
+      "url": "https://gridw.home.pl/pub/Raport_potencjal_OZE.pdf",
+      "data_owner": "UNEP/GRID-Warszawa i konsorcjum projektu",
+      "data_category": "spatial_methodology",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "key_fields": [
+        "kryteria przestrzenne",
+        "bufory",
+        "powierzchnia ha",
+        "statystyki 18 gmin"
+      ],
+      "potential_application": "Inspiracja dla odrębnej oceny przestrzennej PV i wiatru",
+      "known_limitations": [
+        "Opracowanie 2025, parametry prawne wymagają osobnej aktualizacji",
+        "Nie określa rezerwy sieci ani zasad lokalizacji BESS",
+        "Raport opisuje przekazanie GPKG/SHP; nie zweryfikowano publicznej paczki"
+      ],
+      "priority": "P1",
+      "evidence": [
+        {
+          "source_id": "GRID_OZE_REPORT",
+          "url": "https://gridw.home.pl/pub/Raport_potencjal_OZE.pdf",
+          "retrieval_date": "2026-09-17T12:15:07.071618+00:00",
+          "local_path": "data/raw/research/2026-09-17/oze/report.pdf",
+          "sha256": "2de4ffff77337a1be325637c6500955e2f03b5d5964d513ea18da5254ad51e24",
+          "bytes": 1080371,
+          "content_type": [
+            "application/pdf"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_oze_2026-09-17.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-17T12:15:07.071618+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.",
+      "grid_voltage": [
+        "UNKNOWN_OR_NOT_APPLICABLE"
+      ],
+      "api_available": "YES — odczyt metadanych i query bez konta",
+      "gis_available": "YES — ArcGIS REST FeatureServer",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "UNKNOWN — nie potwierdzono licencji ponownego użycia",
+      "license_url": null,
+      "commercial_use": "UNKNOWN",
+      "machine_readable": "YES",
+      "scraping_required": "NO — preferować wskazane API lub plik; brak wdrożenia",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "GRID_OZE_PORTAL"
+      ],
+      "related_urls": [],
+      "source_id": "GRID_OZE_PORTAL",
+      "operator": "NOT_AN_OPERATOR",
+      "source_name": "Geoportal OZE GRID — ArcGIS WebMap i FeatureServer",
+      "url": "https://geoportal-oze.gridw.pl/",
+      "data_owner": "UNEP/GRID-Warszawa; konto publikujące w ArcGIS",
+      "data_category": "spatial_screening",
+      "data_format": [
+        "HTML",
+        "ArcGIS REST JSON",
+        "GeoJSON advertised",
+        "PBF advertised"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "C",
+      "key_fields": [
+        "TERYT",
+        "nazwa gminy",
+        "pow_ha",
+        "geometria EPSG:3857"
+      ],
+      "potential_application": "Warstwy potencjału i ograniczeń przestrzennych, po ustaleniu praw",
+      "known_limitations": [
+        "18 gmin pilotażowych bez Chęcin; inne warstwy mają własny zakres",
+        "GPZ bufory 30/40 km nie są topologią ani rezerwą",
+        "Puste licenseInfo/copyrightText nie stanowią otwartej licencji",
+        "Próbka PV bez geometrii; GeoJSON/PBF deklarowane w metadanych, nie testowane",
+        "maxRecordCount 2000 dotyczy odpowiedzi, nie limitu zapytań na czas"
+      ],
+      "priority": "P1",
+      "evidence": [
+        {
+          "source_id": "GRID_OZE_PORTAL",
+          "url": "https://geoportal-oze.gridw.pl/",
+          "retrieval_date": "2026-09-17T12:15:06.325545+00:00",
+          "local_path": "data/raw/research/2026-09-17/oze/grid.html",
+          "sha256": "33e8934d346cd2500d8eeef88ac6ee08d05e616c17592c34c9e438caf6b16f46",
+          "bytes": 462,
+          "content_type": [
+            "text/html"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_oze_2026-09-17.json"
+        },
+        {
+          "source_id": "GRID_OZE_PORTAL",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f6e44953d693416e83473bcbb59aae2d/data?f=json",
+          "retrieval_date": "2026-09-17T12:15:36.988162+00:00",
+          "local_path": "data/raw/research/2026-09-17/oze/grid_app.json",
+          "sha256": "ce970afb9797c8d35f9b07fc639a9bab7b22d91ec3376bed58606145cb5324af",
+          "bytes": 11607,
+          "content_type": [
+            "application/json"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_oze_2026-09-17.json"
+        },
+        {
+          "source_id": "GRID_OZE_PORTAL",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/c3be596d51d846d2a7b90ca007a4879c/data?f=json",
+          "retrieval_date": "2026-09-17T12:16:06.603601+00:00",
+          "local_path": "data/raw/research/2026-09-17/oze/grid_webmap.json",
+          "sha256": "2eda34afca184c4a2c5301f81e3cbe6cb49a9b25bd3ca491c5a545e51c8c11f2",
+          "bytes": 61519,
+          "content_type": [
+            "application/json"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_oze_2026-09-17.json"
+        },
+        {
+          "source_id": "GRID_OZE_PORTAL",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/c3be596d51d846d2a7b90ca007a4879c?f=json",
+          "retrieval_date": "2026-09-17T12:16:06.759916+00:00",
+          "local_path": "data/raw/research/2026-09-17/oze/grid_metadata.json",
+          "sha256": "733893b8826736122dca963c850136e6a5007cb70c09a3795c7ca5e5ef413866",
+          "bytes": 1114,
+          "content_type": [
+            "application/json"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_oze_2026-09-17.json"
+        },
+        {
+          "source_id": "GRID_OZE_PORTAL",
+          "url": "https://services8.arcgis.com/TG6EwIH3KnV3ncxM/arcgis/rest/services/analiza_pv_1ha/FeatureServer/0?f=pjson",
+          "retrieval_date": "2026-09-17T12:17:00.525784+00:00",
+          "local_path": "data/raw/research/2026-09-17/oze/pv_layer.json",
+          "sha256": "a46fcf764e27be9374b2549a0825a872ac47aacc69278f2711b7c35368dba971",
+          "bytes": 11320,
+          "content_type": [
+            "application/json"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_oze_2026-09-17.json"
+        },
+        {
+          "source_id": "GRID_OZE_PORTAL",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/fcc3595614204c06a250012850451f92?f=json",
+          "retrieval_date": "2026-09-17T12:17:00.697275+00:00",
+          "local_path": "data/raw/research/2026-09-17/oze/pv_metadata.json",
+          "sha256": "252e2980fb341ee7b7f807f4fe101ce0afd8297d43a2e6033c23f034f1b50d22",
+          "bytes": 1210,
+          "content_type": [
+            "application/json"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_oze_2026-09-17.json"
+        },
+        {
+          "source_id": "GRID_OZE_PORTAL",
+          "url": "https://services8.arcgis.com/TG6EwIH3KnV3ncxM/arcgis/rest/services/gminy_pilota%C5%BCowe/FeatureServer/0/query?where=1%3D1&outFields=JPT_NAZWA_,JPT_KOD_JE&returnGeometry=false&f=json",
+          "retrieval_date": "2026-09-17T12:17:00.997329+00:00",
+          "local_path": "data/raw/research/2026-09-17/oze/gminy_sample.json",
+          "sha256": "49f2d1e394392c17a8ad5e7a2c6b91c95322b0726cc1e5557d8432e73b6cf3c6",
+          "bytes": 1699,
+          "content_type": [
+            "application/json"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_oze_2026-09-17.json"
+        },
+        {
+          "source_id": "GRID_OZE_PORTAL",
+          "url": "https://services8.arcgis.com/TG6EwIH3KnV3ncxM/arcgis/rest/services/analiza_pv_1ha/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=1&returnGeometry=false&f=json",
+          "retrieval_date": "2026-09-17T12:17:01.995814+00:00",
+          "local_path": "data/raw/research/2026-09-17/oze/pv_sample.json",
+          "sha256": "70ee98818c0b6969fe6a862ff4d4439b54fefa390f6a63a0c8abf7d8650d2841",
+          "bytes": 1141,
+          "content_type": [
+            "application/json"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_oze_2026-09-17.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-17T12:15:06.325545+00:00",
+        "2026-09-17T12:15:36.988162+00:00",
+        "2026-09-17T12:16:06.603601+00:00",
+        "2026-09-17T12:16:06.759916+00:00",
+        "2026-09-17T12:17:00.525784+00:00",
+        "2026-09-17T12:17:00.697275+00:00",
+        "2026-09-17T12:17:00.997329+00:00",
+        "2026-09-17T12:17:01.995814+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.",
+      "grid_voltage": [
+        "UNKNOWN_OR_NOT_APPLICABLE"
+      ],
+      "api_available": "YES — GET /api/v1/units odczytane bez konta",
+      "gis_available": "UNKNOWN — współrzędne w JSON; WMS/WFS nie potwierdzono",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "UNKNOWN — nie potwierdzono licencji ponownego użycia",
+      "license_url": null,
+      "commercial_use": "UNKNOWN",
+      "machine_readable": "YES",
+      "scraping_required": "NO — preferować wskazane API lub plik; brak wdrożenia",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "EMP_PW"
+      ],
+      "related_urls": [],
+      "source_id": "EMP_PW",
+      "operator": "NOT_AN_OPERATOR",
+      "source_name": "Energetyczna Mapa Polski — katalog źródeł wytwórczych",
+      "url": "https://emp.pw.edu.pl/mapa",
+      "data_owner": "Koło Naukowe Energetyków Politechniki Warszawskiej",
+      "data_category": "generation_asset_discovery",
+      "data_format": [
+        "HTML",
+        "JavaScript",
+        "JSON"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "G",
+      "key_fields": [
+        "id",
+        "slug",
+        "name",
+        "unit_type",
+        "latitude",
+        "longitude",
+        "power_installed",
+        "owner",
+        "bibliography",
+        "parent_unit_slug",
+        "status"
+      ],
+      "potential_application": "Poszukiwanie projektów i źródeł pierwotnych, kontrola nazw i lokalizacji",
+      "known_limitations": [
+        "173 rekordy w pobranej odpowiedzi nie dowodzą kompletności kraju",
+        "Brak jawnych dat aktualizacji rekordów, GPZ i PCC w sprawdzonym schemacie",
+        "Kody statusu 0/1 nie zostały zmapowane na cykl projektu",
+        "Możliwe relacje rodzic-dziecko; nie sumować mocy bez deduplikacji",
+        "Nie potwierdzono licencji, stabilności API ani limitów; brak wdrożonego cyklicznego pobierania"
+      ],
+      "priority": "P1",
+      "evidence": [
+        {
+          "source_id": "EMP_PW",
+          "url": "https://emp.pw.edu.pl/mapa",
+          "retrieval_date": "2026-09-17T12:15:06.530559+00:00",
+          "local_path": "data/raw/research/2026-09-17/oze/emp.html",
+          "sha256": "4913d80510b257a2f612bfed5e5489d3b27c56a9480305729ca07201431c4bbc",
+          "bytes": 44724,
+          "content_type": [
+            "text/html"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_oze_2026-09-17.json"
+        },
+        {
+          "source_id": "EMP_PW",
+          "url": "https://emp.pw.edu.pl/js/site/index.js",
+          "retrieval_date": "2026-09-17T12:15:37.334888+00:00",
+          "local_path": "data/raw/research/2026-09-17/oze/emp.js",
+          "sha256": "034db5501e4b88f371119df78f205501369129adfd75a33cf08fd5e272bba490",
+          "bytes": 2405511,
+          "content_type": [
+            "text/javascript"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_oze_2026-09-17.json"
+        },
+        {
+          "source_id": "EMP_PW",
+          "url": "https://emp.pw.edu.pl/api/v1/units",
+          "retrieval_date": "2026-09-17T12:16:18.665795+00:00",
+          "local_path": "data/raw/research/2026-09-17/oze/emp_units.json",
+          "sha256": "8e2e194efeebe4ce344471b4e6e5937122ef7fe082bec2268d1814bc43b50ea7",
+          "bytes": 219905,
+          "content_type": [
+            "application/json"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_oze_2026-09-17.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-17T12:15:06.530559+00:00",
+        "2026-09-17T12:15:37.334888+00:00",
+        "2026-09-17T12:16:18.665795+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.",
+      "grid_voltage": [
+        "UNKNOWN_OR_NOT_APPLICABLE"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "YES — WMS ogłoszone; endpointów nie przetestowano",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "UNKNOWN — nie potwierdzono licencji ponownego użycia",
+      "license_url": null,
+      "commercial_use": "UNKNOWN",
+      "machine_readable": "PARTIAL",
+      "scraping_required": "NO — preferować wskazane API lub plik; brak wdrożenia",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [],
+      "related_urls": [],
+      "source_id": "GUGIK_OZE_DETAIL_2026",
+      "operator": "NOT_AN_OPERATOR",
+      "source_name": "Geoportal krajowy — szczegółowe usługi potencjału OZE",
+      "url": "https://www.geoportal.gov.pl/aktualnosci/nowe-uslugi-potencjalu-oze-dane-szczegolowe/",
+      "data_owner": "GUGiK / MKiŚ",
+      "data_category": "spatial_potential",
+      "data_format": [
+        "HTML",
+        "WMS announced"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "key_fields": [
+        "potencjał technologii OZE",
+        "potencjał magazynowania energii"
+      ],
+      "potential_application": "Kolejka do weryfikacji krajowej alternatywy przestrzennej",
+      "known_limitations": [
+        "Komunikat 15.06.2026; nie przetestowano usług ani licencji warstw",
+        "Potencjał magazynowania nie jest dostępną mocą przyłączeniową"
+      ],
+      "priority": "P1",
+      "evidence": [],
+      "retrieval_date": []
+    },
+    {
+      "country": "PL",
       "geographical_scope": "Polska; do pilota odczytano sekcję Radkowice",
       "grid_voltage": [
         "220 kV",
