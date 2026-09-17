@@ -351,7 +351,7 @@
         "KSE-013",
         "KSE-010"
       ],
-      "next_action": "Pobrać małe wycinki działek, topografii i ograniczeń przyrodniczych.",
+      "next_action": "Rozpocząć od zachowanej próbki OSM Radkowic: normalizacja geometrii, ID, CRS, dat i atrybucji; relacje elektryczne pozostają odrębne. Patrz docs/08_roadmap.md.",
       "acceptance": "GetFeature/pakiety sprawdzone, poprawne CRS i geometrie; prawa i daty zachowane.",
       "evidence": [
         "docs/01_data_research.md"
@@ -368,7 +368,7 @@
         "KSE-017",
         "KSE-018"
       ],
-      "next_action": "Uwzględnić rozróżnienie weryfikacji, analizy technicznej i wniosku niekompletnego. Audit PSE na 31.07: 17/97/1 wierszy w tych etapach, bez dodatkowych trafień Radkowic. Nadal potrzebne deduplikacja i źródła PGE.",
+      "next_action": "Powiązać znane projekty z kartą stacji na podstawie dowodów; pokazać niepełne pokrycie operacyjnych, planowanych i oczekujących, bez zamiany braków na zero.",
       "acceptance": "Potwierdzone przyłączenie, plan i oczekiwanie odróżnione; deduplikacja i kierunkowe sumy z pokryciem.",
       "evidence": [
         "docs/gpz_pipeline.md",
@@ -419,7 +419,7 @@
       "depends_on": [
         "KSE-023"
       ],
-      "next_action": "Udostępnić wybór projektu/GPZ i czytelny raport zwalidowanych danych.",
+      "next_action": "Po walidacji geometrii dodać mapę dowodów do istniejącej aplikacji: źródła i status relacji, bez awansu przecięć do połączeń.",
       "acceptance": "Mapa z tekstowymi dowodami, datami i niewiadomymi; testy podstawowej ścieżki użytkownika.",
       "evidence": [
         "docs/08_roadmap.md"
@@ -472,7 +472,7 @@
         "KSE-020",
         "KSE-023"
       ],
-      "next_action": "Opracować warianty inwestycji i osiągalności przestrzennej.",
+      "next_action": "Rozwijać scenariusze udokumentowanych inwestycji i terminów; nie przypisywać automatycznego przyrostu MW. Trasy wymagają osobnej warstwy ograniczeń.",
       "acceptance": "Plany oddzielone od obecnej infrastruktury; zakresy i założenia uzasadnione danymi.",
       "evidence": [
         "docs/05_grid_capacity_methodology.md"

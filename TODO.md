@@ -273,7 +273,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-020 — Warstwy GIS i kontrola CRS
 
 - Odpowiedzialność: Codex.
-- Następny krok: Pobrać małe wycinki działek, topografii i ograniczeń przyrodniczych.
+- Następny krok: Rozpocząć od zachowanej próbki OSM Radkowic: normalizacja geometrii, ID, CRS, dat i atrybucji; relacje elektryczne pozostają odrębne. Patrz docs/08_roadmap.md.
 - Kryterium: GetFeature/pakiety sprawdzone, poprawne CRS i geometrie; prawa i daty zachowane.
 - Nieukończone zależności: KSE-013, KSE-010.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
@@ -284,7 +284,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-021 — Zestawienie projektów A/B/C dla GPZ
 
 - Odpowiedzialność: Codex.
-- Następny krok: Uwzględnić rozróżnienie weryfikacji, analizy technicznej i wniosku niekompletnego. Audit PSE na 31.07: 17/97/1 wierszy w tych etapach, bez dodatkowych trafień Radkowic. Nadal potrzebne deduplikacja i źródła PGE.
+- Następny krok: Powiązać znane projekty z kartą stacji na podstawie dowodów; pokazać niepełne pokrycie operacyjnych, planowanych i oczekujących, bez zamiany braków na zero.
 - Kryterium: Potwierdzone przyłączenie, plan i oczekiwanie odróżnione; deduplikacja i kierunkowe sumy z pokryciem.
 - Nieukończone zależności: KSE-017, KSE-018.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
@@ -317,7 +317,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-024 — Pierwszy interfejs i mapa dowodów
 
 - Odpowiedzialność: Codex.
-- Następny krok: Udostępnić wybór projektu/GPZ i czytelny raport zwalidowanych danych.
+- Następny krok: Po walidacji geometrii dodać mapę dowodów do istniejącej aplikacji: źródła i status relacji, bez awansu przecięć do połączeń.
 - Kryterium: Mapa z tekstowymi dowodami, datami i niewiadomymi; testy podstawowej ścieżki użytkownika.
 - Nieukończone zależności: KSE-023.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
@@ -350,7 +350,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-027 — Scenariusze przyszłej sieci i trasy
 
 - Odpowiedzialność: Codex.
-- Następny krok: Opracować warianty inwestycji i osiągalności przestrzennej.
+- Następny krok: Rozwijać scenariusze udokumentowanych inwestycji i terminów; nie przypisywać automatycznego przyrostu MW. Trasy wymagają osobnej warstwy ograniczeń.
 - Kryterium: Plany oddzielone od obecnej infrastruktury; zakresy i założenia uzasadnione danymi.
 - Nieukończone zależności: KSE-019, KSE-020, KSE-023.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
