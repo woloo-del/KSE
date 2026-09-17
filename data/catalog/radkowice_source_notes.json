@@ -411,6 +411,147 @@
       "probe_ids": [
         "PSE_PRSP_2027_2036_POST_CONSULTATION"
       ]
+    },
+    {
+      "source_id": "EBIN_ELECTRICITY",
+      "operator": "Community map — not grid operator",
+      "source_name": "ebin.josm.pl — mapa sieci i konfiguracja warstw",
+      "url": "https://ebin.josm.pl/electricity/",
+      "data_owner": "Autor ebin.josm.pl; dane OpenStreetMap contributors",
+      "data_category": "community_grid_geometry",
+      "grid_voltage": [
+        "110 kV",
+        "220 kV",
+        "SN"
+      ],
+      "geographical_scope": "Mapa Europy i Polski; sprawdzono konfigurację i widok Radkowic",
+      "data_format": [
+        "HTML",
+        "JavaScript",
+        "TileJSON",
+        "vector PBF (metadata only)"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "api_available": "TileJSON/vector tiles; no bulk service permission established",
+      "gis_available": "YES",
+      "machine_readable": "YES",
+      "scraping_required": "NO — structured OSM XML preferred to copying rendered map",
+      "authentication": "Public read without login",
+      "reliability": "G",
+      "license": "ODbL-1.0 for OSM data; map software and tile service conditions separate",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "commercial_use": "CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate",
+      "key_fields": [
+        "OSM identity",
+        "object version",
+        "tags",
+        "geometry"
+      ],
+      "potential_application": "Geographic reference and candidate network topology, subject to operator verification",
+      "known_limitations": [
+        "Community data are not operator-verified, exhaustive or an operational switching diagram.",
+        "OSM operator tag is not ownership of all equipment.",
+        "Map declares 2026-02-26 update; individual OSM object edit dates differ.",
+        "No confirmed thermal ratings, loading or available MW."
+      ],
+      "priority": "P0",
+      "probe_ids": [
+        "EBIN_ELECTRICITY"
+      ]
+    },
+    {
+      "source_id": "OSM_RADK_STATION_OBJECT",
+      "operator": "Community map — not grid operator",
+      "source_name": "OSM — obiekt stacji Radkowice, way 199098055",
+      "url": "https://www.openstreetmap.org/api/0.6/way/199098055/full",
+      "data_owner": "OpenStreetMap contributors",
+      "data_category": "community_grid_geometry",
+      "grid_voltage": [
+        "110 kV",
+        "220 kV",
+        "SN"
+      ],
+      "geographical_scope": "Mały obszar stacji Radkowice",
+      "data_format": [
+        "OSM XML"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "api_available": "YES — OSM read API",
+      "gis_available": "YES",
+      "machine_readable": "YES",
+      "scraping_required": "NO — structured OSM XML preferred to copying rendered map",
+      "authentication": "Public read without login",
+      "reliability": "G",
+      "license": "ODbL-1.0 for OSM data; map software and tile service conditions separate",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "commercial_use": "CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate",
+      "key_fields": [
+        "OSM identity",
+        "object version",
+        "tags",
+        "geometry"
+      ],
+      "potential_application": "Geographic reference and candidate network topology, subject to operator verification",
+      "known_limitations": [
+        "Community data are not operator-verified, exhaustive or an operational switching diagram.",
+        "OSM operator tag is not ownership of all equipment.",
+        "Edit timestamps are not measurement or commissioning dates.",
+        "No confirmed thermal ratings, loading or available MW."
+      ],
+      "priority": "P0",
+      "probe_ids": [
+        "OSM_RADK_STATION_OBJECT"
+      ]
+    },
+    {
+      "source_id": "OSM_RADK_STATION_AREA",
+      "operator": "Community map — not grid operator",
+      "source_name": "OSM — próbka obszaru stacji Radkowice",
+      "url": "https://www.openstreetmap.org/api/0.6/map?bbox=20.516927,50.783155,20.527321,50.792370",
+      "data_owner": "OpenStreetMap contributors",
+      "data_category": "community_grid_geometry",
+      "grid_voltage": [
+        "110 kV",
+        "220 kV",
+        "SN"
+      ],
+      "geographical_scope": "Mały obszar stacji Radkowice",
+      "data_format": [
+        "OSM XML"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "api_available": "YES — OSM read API",
+      "gis_available": "YES",
+      "machine_readable": "YES",
+      "scraping_required": "NO — structured OSM XML preferred to copying rendered map",
+      "authentication": "Public read without login",
+      "reliability": "G",
+      "license": "ODbL-1.0 for OSM data; map software and tile service conditions separate",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "commercial_use": "CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate",
+      "key_fields": [
+        "OSM identity",
+        "object version",
+        "tags",
+        "geometry"
+      ],
+      "potential_application": "Geographic reference and candidate network topology, subject to operator verification",
+      "known_limitations": [
+        "Community data are not operator-verified, exhaustive or an operational switching diagram.",
+        "OSM operator tag is not ownership of all equipment.",
+        "Edit timestamps are not measurement or commissioning dates.",
+        "No confirmed thermal ratings, loading or available MW."
+      ],
+      "priority": "P0",
+      "probe_ids": [
+        "OSM_RADK_STATION_AREA"
+      ]
     }
   ]
 }

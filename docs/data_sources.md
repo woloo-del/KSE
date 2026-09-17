@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-17**. Źródła: **66**.
+Stan badania: **2026-09-17**. Źródła: **69**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -76,6 +76,9 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | RDOS_RADK_PIASKI_DECISION_2025 | [RDOŚ Kielce — pełna decyzja dla przebudowy linii Radkowice–Kielce Piaski](https://www.gov.pl/attachment/27ef7a8e-5094-4391-be1c-7e23cb1038b2) | CONTENT_REVIEWED | P0 | REQUIRES_PERMISSION_REVIEW |
 | PSE_IMPACT_REPORT_2023 | [PSE — raport wpływu za 2023 rok, edycja 2024](https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
 | PSE_PRSP_2027_2036_POST_CONSULTATION | [Projekt PRSP 2027–2036 po konsultacjach — kwiecień 2026](https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30) | CONTENT_REVIEWED | P0 | UNKNOWN |
+| EBIN_ELECTRICITY | [ebin.josm.pl — mapa sieci i konfiguracja warstw](https://ebin.josm.pl/electricity/) | CONTENT_REVIEWED | P0 | CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate |
+| OSM_RADK_STATION_OBJECT | [OSM — obiekt stacji Radkowice, way 199098055](https://www.openstreetmap.org/api/0.6/way/199098055/full) | SAMPLE_VERIFIED | P0 | CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate |
+| OSM_RADK_STATION_AREA | [OSM — próbka obszaru stacji Radkowice](https://www.openstreetmap.org/api/0.6/map?bbox=20.516927,50.783155,20.527321,50.792370) | SAMPLE_VERIFIED | P0 | CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate |
 
 ## Karty źródeł
 
@@ -2460,5 +2463,119 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Klasyfikacja wejścia:** REPORTED
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 - **Próba PSE_PRSP_2027_2036_POST_CONSULTATION:** HTTP 200; 2026-09-17T11:04:59.379112+00:00; `data/catalog/probe_results_radkowice_prsp_2026-09-17.json`; próbka `data/raw/research/2026-09-17/pse_prsp_2027_2036_post_consultation.pdf`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### EBIN_ELECTRICITY — ebin.josm.pl — mapa sieci i konfiguracja warstw
+
+[Źródło](https://ebin.josm.pl/electricity/)
+
+- **Operator:** Community map — not grid operator
+- **Właściciel:** Autor ebin.josm.pl; dane OpenStreetMap contributors
+- **Kraj:** PL
+- **Kategoria:** community_grid_geometry
+- **Napięcie:** 110 kV; 220 kV; SN
+- **Zasięg:** Mapa Europy i Polski; sprawdzono konfigurację i widok Radkowic
+- **Format:** HTML; JavaScript; TileJSON; vector PBF (metadata only)
+- **API:** TileJSON/vector tiles; no bulk service permission established
+- **GIS:** YES
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Public read without login
+- **Licencja:** ODbL-1.0 for OSM data; map software and tile service conditions separate
+- **Użycie komercyjne:** CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate
+- **Autorytet źródła:** G
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO — structured OSM XML preferred to copying rendered map
+- **Pola:** OSM identity; object version; tags; geometry
+- **Zastosowanie:** Geographic reference and candidate network topology, subject to operator verification
+- **Ograniczenia:** Community data are not operator-verified, exhaustive or an operational switching diagram.; OSM operator tag is not ownership of all equipment.; Map declares 2026-02-26 update; individual OSM object edit dates differ.; No confirmed thermal ratings, loading or available MW.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-17
+- **Udany odczyt:** 2026-09-17
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Warunki:** [źródło prawne](https://www.openstreetmap.org/copyright)
+- **Próba EBIN_ELECTRICITY:** HTTP 200; 2026-09-17T11:40:39.685129+00:00; `data/catalog/probe_results_osm_radkowice_2026-09-17.json`; próbka `data/raw/research/2026-09-17/ebin_electricity_landing.html`.
+- **Próba EBIN_ELECTRICITY:** HTTP 200; 2026-09-17T11:41:06.040649+00:00; `data/catalog/probe_results_osm_radkowice_2026-09-17.json`; próbka `data/raw/research/2026-09-17/ebin_electricity_map.js`.
+- **Próba EBIN_ELECTRICITY:** HTTP 200; 2026-09-17T11:41:06.085406+00:00; `data/catalog/probe_results_osm_radkowice_2026-09-17.json`; próbka `data/raw/research/2026-09-17/ebin_electricity_locales.js`.
+- **Próba EBIN_ELECTRICITY:** HTTP 200; 2026-09-17T11:41:36.780070+00:00; `data/catalog/probe_results_osm_radkowice_2026-09-17.json`; próbka `data/raw/research/2026-09-17/ebin_power_poland_tilejson.json`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### OSM_RADK_STATION_OBJECT — OSM — obiekt stacji Radkowice, way 199098055
+
+[Źródło](https://www.openstreetmap.org/api/0.6/way/199098055/full)
+
+- **Operator:** Community map — not grid operator
+- **Właściciel:** OpenStreetMap contributors
+- **Kraj:** PL
+- **Kategoria:** community_grid_geometry
+- **Napięcie:** 110 kV; 220 kV; SN
+- **Zasięg:** Mały obszar stacji Radkowice
+- **Format:** OSM XML
+- **API:** YES — OSM read API
+- **GIS:** YES
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Public read without login
+- **Licencja:** ODbL-1.0 for OSM data; map software and tile service conditions separate
+- **Użycie komercyjne:** CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate
+- **Autorytet źródła:** G
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO — structured OSM XML preferred to copying rendered map
+- **Pola:** OSM identity; object version; tags; geometry
+- **Zastosowanie:** Geographic reference and candidate network topology, subject to operator verification
+- **Ograniczenia:** Community data are not operator-verified, exhaustive or an operational switching diagram.; OSM operator tag is not ownership of all equipment.; Edit timestamps are not measurement or commissioning dates.; No confirmed thermal ratings, loading or available MW.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-17
+- **Udany odczyt:** 2026-09-17
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Warunki:** [źródło prawne](https://www.openstreetmap.org/copyright)
+- **Próba OSM_RADK_STATION_OBJECT:** HTTP 200; 2026-09-17T11:44:23.034423+00:00; `data/catalog/probe_results_osm_radkowice_2026-09-17.json`; próbka `data/raw/research/2026-09-17/osm_radkowice_way_199098055.xml`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### OSM_RADK_STATION_AREA — OSM — próbka obszaru stacji Radkowice
+
+[Źródło](https://www.openstreetmap.org/api/0.6/map?bbox=20.516927,50.783155,20.527321,50.792370)
+
+- **Operator:** Community map — not grid operator
+- **Właściciel:** OpenStreetMap contributors
+- **Kraj:** PL
+- **Kategoria:** community_grid_geometry
+- **Napięcie:** 110 kV; 220 kV; SN
+- **Zasięg:** Mały obszar stacji Radkowice
+- **Format:** OSM XML
+- **API:** YES — OSM read API
+- **GIS:** YES
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Public read without login
+- **Licencja:** ODbL-1.0 for OSM data; map software and tile service conditions separate
+- **Użycie komercyjne:** CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate
+- **Autorytet źródła:** G
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO — structured OSM XML preferred to copying rendered map
+- **Pola:** OSM identity; object version; tags; geometry
+- **Zastosowanie:** Geographic reference and candidate network topology, subject to operator verification
+- **Ograniczenia:** Community data are not operator-verified, exhaustive or an operational switching diagram.; OSM operator tag is not ownership of all equipment.; Edit timestamps are not measurement or commissioning dates.; No confirmed thermal ratings, loading or available MW.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-17
+- **Udany odczyt:** 2026-09-17
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Warunki:** [źródło prawne](https://www.openstreetmap.org/copyright)
+- **Próba OSM_RADK_STATION_AREA:** HTTP 200; 2026-09-17T11:45:03.826411+00:00; `data/catalog/probe_results_osm_radkowice_2026-09-17.json`; próbka `data/raw/research/2026-09-17/osm_radkowice_station_area.xml`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

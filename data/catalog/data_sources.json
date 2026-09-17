@@ -4454,6 +4454,294 @@
       "retrieval_date": [
         "2026-09-17T11:04:59.379112+00:00"
       ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Mapa Europy i Polski; sprawdzono konfigurację i widok Radkowic",
+      "grid_voltage": [
+        "110 kV",
+        "220 kV",
+        "SN"
+      ],
+      "api_available": "TileJSON/vector tiles; no bulk service permission established",
+      "gis_available": "YES",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Public read without login",
+      "license": "ODbL-1.0 for OSM data; map software and tile service conditions separate",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "commercial_use": "CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate",
+      "machine_readable": "YES",
+      "scraping_required": "NO — structured OSM XML preferred to copying rendered map",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "EBIN_ELECTRICITY"
+      ],
+      "related_urls": [],
+      "source_id": "EBIN_ELECTRICITY",
+      "operator": "Community map — not grid operator",
+      "source_name": "ebin.josm.pl — mapa sieci i konfiguracja warstw",
+      "url": "https://ebin.josm.pl/electricity/",
+      "data_owner": "Autor ebin.josm.pl; dane OpenStreetMap contributors",
+      "data_category": "community_grid_geometry",
+      "data_format": [
+        "HTML",
+        "JavaScript",
+        "TileJSON",
+        "vector PBF (metadata only)"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "G",
+      "key_fields": [
+        "OSM identity",
+        "object version",
+        "tags",
+        "geometry"
+      ],
+      "potential_application": "Geographic reference and candidate network topology, subject to operator verification",
+      "known_limitations": [
+        "Community data are not operator-verified, exhaustive or an operational switching diagram.",
+        "OSM operator tag is not ownership of all equipment.",
+        "Map declares 2026-02-26 update; individual OSM object edit dates differ.",
+        "No confirmed thermal ratings, loading or available MW."
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "EBIN_ELECTRICITY",
+          "url": "https://ebin.josm.pl/electricity/",
+          "retrieval_date": "2026-09-17T11:40:39.685129+00:00",
+          "local_path": "data/raw/research/2026-09-17/ebin_electricity_landing.html",
+          "sha256": "eb3b278d4892c535a284f72c58d76e5345f877c1ea93bd41d27bee3cfe6a5a5b",
+          "bytes": 1487,
+          "content_type": [
+            "text/html"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_osm_radkowice_2026-09-17.json"
+        },
+        {
+          "source_id": "EBIN_ELECTRICITY",
+          "url": "https://ebin.josm.pl/electricity/map.js",
+          "retrieval_date": "2026-09-17T11:41:06.040649+00:00",
+          "local_path": "data/raw/research/2026-09-17/ebin_electricity_map.js",
+          "sha256": "cc97ec5a0c300e51fefb8f21fa8a4abda3bda99003ff561a2e11cceed08d6366",
+          "bytes": 22753,
+          "content_type": [
+            "text/javascript"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_osm_radkowice_2026-09-17.json"
+        },
+        {
+          "source_id": "EBIN_ELECTRICITY",
+          "url": "https://ebin.josm.pl/electricity/locales.js",
+          "retrieval_date": "2026-09-17T11:41:06.085406+00:00",
+          "local_path": "data/raw/research/2026-09-17/ebin_electricity_locales.js",
+          "sha256": "89a41245348d4abdad6e5793a44dc5525223f563025c4d44457f4725a2c89304",
+          "bytes": 4896,
+          "content_type": [
+            "text/javascript"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_osm_radkowice_2026-09-17.json"
+        },
+        {
+          "source_id": "EBIN_ELECTRICITY",
+          "url": "https://tiles.josm.pl/data/vector-power-poland.json",
+          "retrieval_date": "2026-09-17T11:41:36.780070+00:00",
+          "local_path": "data/raw/research/2026-09-17/ebin_power_poland_tilejson.json",
+          "sha256": "dedf887286c4230c76c76cd2a9d081eef5c556e3cfe0d37e1ccee4118cd23df8",
+          "bytes": 1225,
+          "content_type": [
+            "application/json"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_osm_radkowice_2026-09-17.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-17T11:40:39.685129+00:00",
+        "2026-09-17T11:41:06.040649+00:00",
+        "2026-09-17T11:41:06.085406+00:00",
+        "2026-09-17T11:41:36.780070+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Mały obszar stacji Radkowice",
+      "grid_voltage": [
+        "110 kV",
+        "220 kV",
+        "SN"
+      ],
+      "api_available": "YES — OSM read API",
+      "gis_available": "YES",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Public read without login",
+      "license": "ODbL-1.0 for OSM data; map software and tile service conditions separate",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "commercial_use": "CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate",
+      "machine_readable": "YES",
+      "scraping_required": "NO — structured OSM XML preferred to copying rendered map",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "OSM_RADK_STATION_OBJECT"
+      ],
+      "related_urls": [],
+      "source_id": "OSM_RADK_STATION_OBJECT",
+      "operator": "Community map — not grid operator",
+      "source_name": "OSM — obiekt stacji Radkowice, way 199098055",
+      "url": "https://www.openstreetmap.org/api/0.6/way/199098055/full",
+      "data_owner": "OpenStreetMap contributors",
+      "data_category": "community_grid_geometry",
+      "data_format": [
+        "OSM XML"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "G",
+      "key_fields": [
+        "OSM identity",
+        "object version",
+        "tags",
+        "geometry"
+      ],
+      "potential_application": "Geographic reference and candidate network topology, subject to operator verification",
+      "known_limitations": [
+        "Community data are not operator-verified, exhaustive or an operational switching diagram.",
+        "OSM operator tag is not ownership of all equipment.",
+        "Edit timestamps are not measurement or commissioning dates.",
+        "No confirmed thermal ratings, loading or available MW."
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "OSM_RADK_STATION_OBJECT",
+          "url": "https://www.openstreetmap.org/api/0.6/way/199098055/full",
+          "retrieval_date": "2026-09-17T11:44:23.034423+00:00",
+          "local_path": "data/raw/research/2026-09-17/osm_radkowice_way_199098055.xml",
+          "sha256": "2ea35b722e22766b7a9e09f76ec40292c40bc4a26057cf3061b4cb157fe3a39f",
+          "bytes": 2088,
+          "content_type": [
+            "text/xml"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_osm_radkowice_2026-09-17.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-17T11:44:23.034423+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Mały obszar stacji Radkowice",
+      "grid_voltage": [
+        "110 kV",
+        "220 kV",
+        "SN"
+      ],
+      "api_available": "YES — OSM read API",
+      "gis_available": "YES",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Public read without login",
+      "license": "ODbL-1.0 for OSM data; map software and tile service conditions separate",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "commercial_use": "CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate",
+      "machine_readable": "YES",
+      "scraping_required": "NO — structured OSM XML preferred to copying rendered map",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "OSM_RADK_STATION_AREA"
+      ],
+      "related_urls": [],
+      "source_id": "OSM_RADK_STATION_AREA",
+      "operator": "Community map — not grid operator",
+      "source_name": "OSM — próbka obszaru stacji Radkowice",
+      "url": "https://www.openstreetmap.org/api/0.6/map?bbox=20.516927,50.783155,20.527321,50.792370",
+      "data_owner": "OpenStreetMap contributors",
+      "data_category": "community_grid_geometry",
+      "data_format": [
+        "OSM XML"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "G",
+      "key_fields": [
+        "OSM identity",
+        "object version",
+        "tags",
+        "geometry"
+      ],
+      "potential_application": "Geographic reference and candidate network topology, subject to operator verification",
+      "known_limitations": [
+        "Community data are not operator-verified, exhaustive or an operational switching diagram.",
+        "OSM operator tag is not ownership of all equipment.",
+        "Edit timestamps are not measurement or commissioning dates.",
+        "No confirmed thermal ratings, loading or available MW."
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "OSM_RADK_STATION_AREA",
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=20.516927,50.783155,20.527321,50.792370",
+          "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+          "local_path": "data/raw/research/2026-09-17/osm_radkowice_station_area.xml",
+          "sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+          "bytes": 670370,
+          "content_type": [
+            "text/xml"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_osm_radkowice_2026-09-17.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-17T11:45:03.826411+00:00"
+      ]
     }
   ]
 }

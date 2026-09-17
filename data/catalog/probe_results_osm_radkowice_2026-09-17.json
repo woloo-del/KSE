@@ -1,0 +1,80 @@
+[
+  {
+    "source_id": "EBIN_ELECTRICITY",
+    "url": "https://ebin.josm.pl/electricity/",
+    "retrieval_date": "2026-09-17T11:40:39.685129+00:00",
+    "local_path": "data/raw/research/2026-09-17/ebin_electricity_landing.html",
+    "sha256": "eb3b278d4892c535a284f72c58d76e5345f877c1ea93bd41d27bee3cfe6a5a5b",
+    "bytes": 1487,
+    "content_type": [
+      "text/html"
+    ],
+    "http_status": 200,
+    "error": null
+  },
+  {
+    "source_id": "EBIN_ELECTRICITY",
+    "url": "https://ebin.josm.pl/electricity/map.js",
+    "retrieval_date": "2026-09-17T11:41:06.040649+00:00",
+    "local_path": "data/raw/research/2026-09-17/ebin_electricity_map.js",
+    "sha256": "cc97ec5a0c300e51fefb8f21fa8a4abda3bda99003ff561a2e11cceed08d6366",
+    "bytes": 22753,
+    "content_type": [
+      "text/javascript"
+    ],
+    "http_status": 200,
+    "error": null
+  },
+  {
+    "source_id": "EBIN_ELECTRICITY",
+    "url": "https://ebin.josm.pl/electricity/locales.js",
+    "retrieval_date": "2026-09-17T11:41:06.085406+00:00",
+    "local_path": "data/raw/research/2026-09-17/ebin_electricity_locales.js",
+    "sha256": "89a41245348d4abdad6e5793a44dc5525223f563025c4d44457f4725a2c89304",
+    "bytes": 4896,
+    "content_type": [
+      "text/javascript"
+    ],
+    "http_status": 200,
+    "error": null
+  },
+  {
+    "source_id": "EBIN_ELECTRICITY",
+    "url": "https://tiles.josm.pl/data/vector-power-poland.json",
+    "retrieval_date": "2026-09-17T11:41:36.780070+00:00",
+    "local_path": "data/raw/research/2026-09-17/ebin_power_poland_tilejson.json",
+    "sha256": "dedf887286c4230c76c76cd2a9d081eef5c556e3cfe0d37e1ccee4118cd23df8",
+    "bytes": 1225,
+    "content_type": [
+      "application/json"
+    ],
+    "http_status": 200,
+    "error": null
+  },
+  {
+    "source_id": "OSM_RADK_STATION_OBJECT",
+    "url": "https://www.openstreetmap.org/api/0.6/way/199098055/full",
+    "retrieval_date": "2026-09-17T11:44:23.034423+00:00",
+    "local_path": "data/raw/research/2026-09-17/osm_radkowice_way_199098055.xml",
+    "sha256": "2ea35b722e22766b7a9e09f76ec40292c40bc4a26057cf3061b4cb157fe3a39f",
+    "bytes": 2088,
+    "content_type": [
+      "text/xml"
+    ],
+    "http_status": 200,
+    "error": null
+  },
+  {
+    "source_id": "OSM_RADK_STATION_AREA",
+    "url": "https://www.openstreetmap.org/api/0.6/map?bbox=20.516927,50.783155,20.527321,50.792370",
+    "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+    "local_path": "data/raw/research/2026-09-17/osm_radkowice_station_area.xml",
+    "sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+    "bytes": 670370,
+    "content_type": [
+      "text/xml"
+    ],
+    "http_status": 200,
+    "error": null
+  }
+]

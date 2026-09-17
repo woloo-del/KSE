@@ -276,3 +276,7 @@ Selected option: odrębny snapshot, status w dokumencie i jawne znaczenie roku z
 Reason: termin obejmuje także rozliczenie i formalności; zakresy zadań nie mają potwierdzonej tożsamości z innymi wpisami.
 Trade-offs: brak automatycznego prognozowania dostępnych MW.
 Consequences: dodatkowy widok i materiał w eksporcie; brak zmiany scoringu, grafu ruchowego lub publikowania źródeł prywatnych.
+
+## 2026-09-17 — OSM jako dowód geometrii i kandydatów topologii
+
+Decision: zachować oddzielny, wersjonowany audyt OSM z klasyfikacją źródła G. Context: użytkownik wskazał szczegółową mapę ebin.josm.pl. Options considered: bezpośrednie uznanie mapy za model elektryczny; audyt geometrii przed budową grafu. Selected option: audyt. Reason: brak potwierdzonego układu pracy, parametrów i własności urządzeń. Trade-offs: dodatkowa weryfikacja kosztem szybkości integracji. Consequences: przecięcia przestrzenne nie tworzą potwierdzonych krawędzi; brak nowej punktacji lub MW; dane ODbL pozostają odrębne od prywatnej kompilacji. Główne API OSM wykorzystano jednorazowo do rozpoznania, nie jako planowane zaplecze produkcyjne. Szczegóły: docs/18_gis_osm_integration.md.

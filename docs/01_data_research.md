@@ -328,3 +328,7 @@ PDF i HTML pobrano bez konta, HTTP 200, zachowano SHA-256. Odczyt PDF wymaga kon
 ## 17.09.2026 — nowszy projekt PRSP, dwa zadania Radkowic
 
 Zarejestrowano PSE_PRSP_2027_2036_POST_CONSULTATION: [PDF PSE](https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30), wydanie kwiecień 2026; sprawdzono 17.09.2026. Dwa wpisy i objaśnienia dat opisuje docs/16_radkowice_public_followup.md. Katalog zawiera 66 źródeł. Dokument pobrano publicznie bez konta; zachowano oryginał i hash. Dostępna warstwa tekstowa pozwala na ograniczoną automatyzację z kontrolą układu. Nie ustalono API/GIS, gwarantowanego cyklu, limitów wywołań ani otwartej licencji. Użycie komercyjne i redystrybucja wymagają oceny praw. Projekt planu nie potwierdza bieżącego wykonania ani nowej rezerwy MW.
+
+## 2026-09-17 — szczegółowa mapa OSM Radkowic
+
+Zweryfikowano mapę ebin.josm.pl oraz rzeczywistą próbkę OSM. Trzy nowe wpisy katalogowe (69 łącznie) obejmują wizualizację, obiekt stacji i odpowiedź obszarową. Szczegóły źródeł, dat, licencji i ograniczeń: [GIS i OSM](18_gis_osm_integration.md). Geometria pól i tagi transformatorów wspierają budowę kandydatów topologii, lecz nie dostarczają obciążenia ani dostępnej mocy.

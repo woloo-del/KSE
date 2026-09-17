@@ -1,0 +1,18 @@
+{
+  "checked_date": "2026-09-17",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:25];nwr[\"power\"~\"^(line|minor_line|cable|substation|transformer|switch|circuit)$\"](50.70,20.35,50.87,20.65);out meta geom;",
+  "attempts": [
+    {
+      "method": "POST",
+      "http_status": 406
+    },
+    {
+      "method": "GET",
+      "http_status": 406
+    }
+  ],
+  "data_received": false,
+  "reason": "NOT_ESTABLISHED",
+  "conclusion": "Failed access is not evidence of absent OSM features."
+}

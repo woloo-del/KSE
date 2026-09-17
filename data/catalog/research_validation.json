@@ -1,27 +1,27 @@
 {
-  "checked_at_utc": "2026-09-17T11:14:21.279205+00:00",
+  "checked_at_utc": "2026-09-17T11:56:29.268280+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 66,
+  "source_count": 69,
   "source_status_counts": {
-    "SAMPLE_VERIFIED": 13,
-    "CONTENT_REVIEWED": 33,
+    "SAMPLE_VERIFIED": 15,
+    "CONTENT_REVIEWED": 34,
     "DISCOVERED": 4,
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 11
   },
-  "probe_count": 40,
+  "probe_count": 46,
   "http_status_counts": {
-    "200": 39,
+    "200": 45,
     "404": 1
   },
-  "raw_file_count": 39,
+  "raw_file_count": 45,
   "format_counts": {
-    ".html": 14,
+    ".html": 15,
     ".pdf": 15,
-    ".json": 6,
-    ".xml": 2,
-    ".js": 1,
+    ".json": 7,
+    ".xml": 4,
+    ".js": 3,
     ".xlsx": 1
   },
   "pdf_details": [
@@ -101,13 +101,13 @@
       "first_page_text_chars": 206
     }
   ],
-  "local_links_checked": 51,
+  "local_links_checked": 53,
   "dependencies": {
     "python": "3.12.14",
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 719,
+  "checks_passed": 777,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -1901,6 +1901,91 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:OSM_RADK_STATION_OBJECT",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:OSM_RADK_STATION_OBJECT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:OSM_RADK_STATION_OBJECT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:OSM_RADK_STATION_OBJECT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:OSM_RADK_STATION_OBJECT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:OSM_RADK_STATION_OBJECT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:OSM_RADK_STATION_AREA",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:OSM_RADK_STATION_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:OSM_RADK_STATION_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:OSM_RADK_STATION_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:OSM_RADK_STATION_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:OSM_RADK_STATION_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
@@ -2232,6 +2317,21 @@
     },
     {
       "name": "probe_references:PSE_PRSP_2027_2036_POST_CONSULTATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:OSM_RADK_STATION_OBJECT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:OSM_RADK_STATION_AREA",
       "passed": true,
       "detail": null
     },
@@ -2796,6 +2896,126 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EBIN_ELECTRICITY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:OSM_RADK_STATION_OBJECT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:OSM_RADK_STATION_OBJECT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:OSM_RADK_STATION_OBJECT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:OSM_RADK_STATION_OBJECT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:OSM_RADK_STATION_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:OSM_RADK_STATION_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:OSM_RADK_STATION_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:OSM_RADK_STATION_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "snapshot_within_raw:RDOS_RADK_PIASKI_DECISION_2025",
       "passed": true,
       "detail": null
@@ -3291,6 +3511,56 @@
       "detail": null
     },
     {
+      "name": "format_readable:ebin_electricity_landing.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:ebin_electricity_locales.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:ebin_electricity_map.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:ebin_power_poland_tilejson.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "osm_version:osm_radkowice_station_area.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "osm_elements:osm_radkowice_station_area.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:osm_radkowice_station_area.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "osm_version:osm_radkowice_way_199098055.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "osm_elements:osm_radkowice_way_199098055.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:osm_radkowice_way_199098055.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "pdf_text_layer:pse_impact_report_2023.pdf",
       "passed": true,
       "detail": null
@@ -3526,6 +3796,11 @@
       "detail": null
     },
     {
+      "name": "local_link:01_data_research.md:18_gis_osm_integration.md",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "local_link:02_feasibility_matrix.md:01_data_research.md",
       "passed": true,
       "detail": null
@@ -3621,6 +3896,11 @@
       "detail": null
     },
     {
+      "name": "local_link:private_sources.md:18_gis_osm_integration.md",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "local_link:project_reporting.md:../TODO.md",
       "passed": true,
       "detail": null
@@ -3646,12 +3926,22 @@
       "detail": null
     },
     {
+      "name": "python_syntax:audit_osm_radkowice.py",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "python_syntax:audit_private_gis_geometry.py",
       "passed": true,
       "detail": null
     },
     {
       "name": "python_syntax:audit_pse_pipeline_statuses.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:build_private_gis_usefulness.py",
       "passed": true,
       "detail": null
     },

@@ -94,3 +94,7 @@ aktualna instrukcja i rejestry zostaną uwzględnione przy kolejnym generowaniu 
 Ósme publiczne archiwum: `data/archives/radkowice_prsp_2026-09-17.zip`, jeden oryginalny PDF. Manifest: `data/catalog/radkowice_prsp_archive_2026-09-17.json`. Kontrola: `python scripts/research_archive.py restore data/archives/radkowice_prsp_2026-09-17.zip --manifest data/catalog/radkowice_prsp_archive_2026-09-17.json --verify-only`. Wykonano ją pomyślnie. Kopia niezależna nadal niepotwierdzona. Parser `scripts/build_radkowice_development_plan.py --output NOWY_PLIK.json` odtwarza dwa wpisy i nie nadpisuje wyniku.
 
 Generatory katalogu i kontroli źródeł zapisują końce linii LF także w Windows, zgodnie z .gitattributes. Zapobiega to zmianie hashy wejść raportu wyłącznie przez normalizację Git.
+
+## Dziewiąte archiwum — OSM, 2026-09-17
+
+`data/archives/osm_radkowice_discovery_2026-09-17.zip` przechowuje sześć wejść mapy i OSM. Manifest: `data/catalog/osm_radkowice_archive_2026-09-17.json`. Wszystkie sześć elementów sprawdzono przez `scripts/research_archive.py restore ... --manifest ... --verify-only`. Archiwum wymaga osobnej kopii zapasowej (NEED-010); sam Git przechowuje manifest i publiczny wynik audytu, nie surowe archiwum.

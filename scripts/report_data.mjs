@@ -19,6 +19,7 @@ export const DOCUMENTS = [
   'docs/15_information_requests.md',
   'docs/16_radkowice_public_followup.md',
   'docs/17_local_application.md',
+  'docs/18_gis_osm_integration.md',
   'docs/private_sources.md',
 ];
 export const sha = b => crypto.createHash('sha256').update(b).digest('hex');

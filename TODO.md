@@ -57,6 +57,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-037 | Rozbieżności dat inwestycji PSE w ocenie pilota | Data quality | Zrobione | P0 | KSE-034 |
 | KSE-038 | Historyczny rejestr wpisów o inwestycjach z GIS | Data quality | Zrobione | P1 | KSE-035 |
 | KSE-039 | Projekt PRSP po konsultacjach: dowody inwestycji w pilocie | Data quality | Zrobione | P1 | KSE-034 |
+| KSE-040 | Audyt przydatności GIS i rzeczywistej próbki OSM Radkowic | Data quality | Zrobione | P1 | — |
 
 ## Kryteria zakończenia i dowody
 
@@ -488,3 +489,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-17.
 - Dowody/kontekst: [docs/16_radkowice_public_followup.md](docs/16_radkowice_public_followup.md), [connectors/pse/development_plan.py](connectors/pse/development_plan.py), [scripts/build_radkowice_development_plan.py](scripts/build_radkowice_development_plan.py), [tests/test_pse_development_plan.py](tests/test_pse_development_plan.py), [tests/test_local_app.py](tests/test_local_app.py).
+
+### KSE-040 — Audyt przydatności GIS i rzeczywistej próbki OSM Radkowic
+
+- Odpowiedzialność: Codex.
+- Następny krok: Pozyskać regionalną geometrię OSM i zweryfikować kandydatów połączeń z dokumentami operatorów.
+- Kryterium: Prywatna kompilacja odseparowana, publiczna próbka OSM z hashami i wersjami, selekcja przestrzenna przetestowana, brak awansu geometrii do potwierdzonej topologii.
+- Nieukończone zależności: brak.
+- Ryzyko: OSM nie potwierdza kompletności, własności urządzeń, układu pracy ani wolnej mocy..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-17.
+- Dowody/kontekst: [docs/18_gis_osm_integration.md](docs/18_gis_osm_integration.md), [connectors/gis/discovery.py](connectors/gis/discovery.py), [connectors/gis/osm_station.py](connectors/gis/osm_station.py), [tests/test_gis_discovery.py](tests/test_gis_discovery.py), [tests/test_osm_station.py](tests/test_osm_station.py), [data/catalog/osm_radkowice_archive_2026-09-17.json](data/catalog/osm_radkowice_archive_2026-09-17.json).

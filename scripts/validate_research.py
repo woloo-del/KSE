@@ -123,7 +123,11 @@ def validate() -> dict[str, Any]:
                 load_json(path)
             elif suffix == ".xml":
                 root = ET.parse(path).getroot()
-                check(f"wfs_capabilities:{path.name}", root.tag.endswith("WFS_Capabilities"), root.attrib.get("version"))
+                if root.tag == "osm":
+                    check(f"osm_version:{path.name}", root.attrib.get("version") == "0.6")
+                    check(f"osm_elements:{path.name}", any(e.tag in {"node", "way", "relation"} for e in root))
+                else:
+                    check(f"wfs_capabilities:{path.name}", root.tag.endswith("WFS_Capabilities"), root.attrib.get("version"))
             elif suffix == ".pdf":
                 reader = PdfReader(path)
                 text = reader.pages[0].extract_text() or ""
