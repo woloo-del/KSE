@@ -37,3 +37,10 @@ Zmiana formularza unieważnia poprzednią opinię. Źródła mają własne daty;
 Testy `tests/test_local_app.py` sprawdzają niezależność kierunków, brak przenoszenia wniosków 220→110 kV, walidację formularza, wersjonowanie wyniku i brak dostępu do dowolnych plików. W przeglądarce sprawdzono formularz oraz zmianę poziomu napięcia. Automatyczne potwierdzenie zdarzenia pobrania JSON w przeglądarce Codex nie powiodło się; dostępny jest też tekst raportu do ręcznego zapisania.
 
 To ograniczony pilot, nie zamknięcie zadania pełnego MVP. Następne kroki: uzupełnienie źródeł PGE, test użytkownika, lepsza prezentacja relacji, następnie mapa na zweryfikowanych współrzędnych. Docelowa architektura PostgreSQL/PostGIS i API pozostaje rekomendacją; obecny adapter można zastąpić bez przenoszenia metody analitycznej do UI.
+
+
+### Uzupełnienie 17.09.2026
+
+Ocena `documentary_screening_v2` korzysta także z piątego jawnie wskazanego snapshotu: przeglądu dat inwestycji PSE. Pokazuje rozbieżność roku lub zakresu wraz z dwoma źródłami, bez wyboru daty odbioru lub dodatkowej mocy. Eksport zapisuje przegląd i jego hash. Wcześniejsze wyniki v1 pozostają historyczne; nie są nadpisywane. Nie dodano prywatnych dokumentów do API.
+
+Sprawdzono działającą aplikację w przeglądarce: scenariusz testowy BESS 50 MW eksportu i 20 MW importu pokazuje nową rozbieżność oraz oba źródła, zachowując niezależne kierunki i nieznaną rezerwę. Są to parametry testu interfejsu, nie nowy rekord inwestycji.

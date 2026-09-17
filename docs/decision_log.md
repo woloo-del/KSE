@@ -244,3 +244,14 @@ Reason: dojrzała walidacja geometrii bez dodatkowego serwera i bez własnej imp
 Trade-offs: osobne środowisko GIS; Shapely BSD-3-Clause korzysta z GEOS LGPL-2.1, co wymaga zachowania informacji licencyjnych przy dystrybucji. Lokalna analiza nie nadaje praw do publikacji danych.
 Consequences: prywatne wyniki i jawne hashe, bez modyfikacji źródeł. Zgodność XY eksportów nie dowodzi topologii. Historyczne wartości grupowe nie stają się bieżącą mocą stacji. Nierozpoznane zapisy pozostają UNKNOWN i wymagają przeglądu.
 Sources checked 2026-09-16: https://shapely.readthedocs.io/en/stable/ oraz https://www.geopackage.org/spec131/#gpb_format .
+
+
+## 2026-09-17 — rozbieżne daty inwestycji w ocenie aplikacji
+
+Date: 2026-09-17.
+Decision / Context: dwie oficjalne publikacje opisują podobnie nazwane zadanie z różnymi latami zakończenia.
+Options considered: wybrać nowsze wskazanie; automatycznie połączyć jako jedno zadanie; zachować obie deklaracje i nierozstrzygnięty zakres.
+Selected option: wersjonowany przegląd źródeł i jakościowa przesłanka w documentary_screening_v2.
+Reason: brak identyfikatora jednostki i dowodu tożsamości zakresu nie pozwala arbitralnie wybrać daty ani wyprowadzać dodatkowych MW.
+Trade-offs: nie rozstrzyga daty eksploatacji; potrzebna dalsza weryfikacja operatora.
+Consequences: piąty jawny snapshot API, historia i hashe; bez nowego scoringu, zmiany grafu lub danych prywatnych.

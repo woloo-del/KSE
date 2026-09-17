@@ -135,11 +135,11 @@
       "status": "Do sprawdzenia",
       "requested_scope": "Potwierdzenie wykonania i sprawdzenia kopii źródeł oraz prywatnych dokumentów poza tym komputerem. Bez haseł i tokenów.",
       "unlocks": "Odtwarzalność po utracie lokalnych plików. Git i hashe nie zastępują źródłowych bajtów.",
-      "next_action": "Zachować sześć publicznych archiwów wymienionych w docs/reproducibility.md poza komputerem i sprawdzić --verify-only; prywatne materiały skopiować osobno. Potwierdzić datę i zakres kopii, bez danych logowania.",
+      "next_action": "Zachować siedem publicznych archiwów wymienionych w docs/reproducibility.md poza komputerem i sprawdzić --verify-only; prywatne materiały skopiować osobno. Potwierdzić datę i zakres kopii, bez danych logowania.",
       "without_it": "Utrzymać lokalne archiwum; nie deklarować istnienia niezależnej kopii.",
       "owner": "Użytkownik",
       "basis": "docs/reproducibility.md",
-      "updated_at": "2026-09-16",
+      "updated_at": "2026-09-17",
       "received_evidence": null
     },
     {
@@ -181,6 +181,20 @@
       "without_it": "Zachować niepewność, historię i ograniczony zakres wykorzystania.",
       "owner": "Użytkownik; autor opracowania lub projektant",
       "basis": "Rozmowa i przegląd materiałów otrzymanych 2026-09-16; docs/private_sources.md",
+      "updated_at": "2026-09-17",
+      "received_evidence": null
+    },
+    {
+      "id": "NEED-014",
+      "priority": "P1",
+      "title": "Zakres i odbiór wymiany transformatora w Radkowicach",
+      "status": "Do sprawdzenia",
+      "requested_scope": "Identyfikator jednostki i zadania, zakres odbioru oraz potwierdzona data załączenia. Wyjaśnienie lat 2023 i 2025 w publikacjach PSE.",
+      "unlocks": "Rozdzielenie zakończenia robót, formalnego zamknięcia i eksploatacji; nadal bez automatycznej rezerwy MW.",
+      "next_action": "Jeżeli dostępne, dostarczyć potwierdzenie operatora lub protokół odbioru z oznaczeniem jednostki; nie ponawiać prośby o analizę wpływu.",
+      "without_it": "Zachować obie deklaracje, nie wybierać daty ani dodatkowej mocy.",
+      "owner": "Użytkownik; PSE",
+      "basis": "PSE_IMPACT_REPORT_2023; PSE_INVESTMENTS_RADK; docs/16_radkowice_public_followup.md",
       "updated_at": "2026-09-17",
       "received_evidence": null
     }

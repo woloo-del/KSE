@@ -1,6 +1,6 @@
 {
   "schema_version": "research_catalog_v1",
-  "as_of": "2026-09-16",
+  "as_of": "2026-09-17",
   "scope": "STAGE_1_RESEARCH_ONLY",
   "source_of_truth": "data/catalog/source_notes.json + data/catalog/radkowice_source_notes.json when present; this file is generated",
   "classification_note": "REPORTED indicates attributed publication, not automatic truth or MEASURED telemetry. Community and model data remain separately classified.",
@@ -3695,8 +3695,8 @@
       "scraping_required": "YES — dla tego widoku HTML; brak wdrożonego cyklicznego scrapera",
       "data_quality_score": null,
       "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
-      "last_verified": "2026-09-15",
-      "last_successful_verification": "2026-09-15",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
       "source_date": null,
       "publication_date": null,
       "source_version": null,
@@ -3713,7 +3713,7 @@
       "source_id": "PSE_INVESTMENTS_RADK",
       "operator": "PSE",
       "source_name": "Portal inwestycji PSE — sekcja Radkowice",
-      "url": "https://inwestycje.pse.pl/",
+      "url": "https://inwestycje.pse.pl/mapa_inwestycji_pse/",
       "data_owner": "PSE S.A.",
       "data_category": "grid_investments",
       "data_format": [
@@ -3730,7 +3730,8 @@
       "potential_application": "Oddzielenie zakończonych i przyszłych prac w stacji pilota",
       "known_limitations": [
         "Brak gwarantowanej częstotliwości aktualizacji i daty każdej zmiany",
-        "Wspólna nazwa stacji nie identyfikuje automatycznie tego samego zadania lub transformatora"
+        "Wspólna nazwa stacji nie identyfikuje automatycznie tego samego zadania lub transformatora",
+        "Raport wpływu za 2023 rok i portal podają różne lata dla podobnie nazwanego zadania transformatora; zakres i data odbioru nierozstrzygnięte."
       ],
       "priority": "P0",
       "evidence": [
@@ -3749,6 +3750,20 @@
           "manifest": "data/catalog/probe_results_radkowice_followup_2026-09-15.json"
         },
         {
+          "source_id": "PSE_INVESTMENTS_RADK",
+          "url": "https://inwestycje.pse.pl/mapa_inwestycji_pse/",
+          "retrieval_date": "2026-09-17T06:40:16.579444+00:00",
+          "local_path": "data/raw/research/2026-09-17/pse_investment_map_2026-09-17.html",
+          "sha256": "f0375814ed8665ea7646ccea8087fa72d27c5a0f745fd804c33ce60a4131dc27",
+          "bytes": 660780,
+          "content_type": [
+            "text/html; charset=UTF-8"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_radkowice_investment_dates_2026-09-17.json"
+        },
+        {
           "retrieval_date": "2026-09-11T10:42:22.0922672Z",
           "http_status": 200,
           "sha256": "2d03643156da9b3d1886353d58491131b3cefed680fa23f45afd2056ff3d8b73",
@@ -3762,6 +3777,7 @@
       ],
       "retrieval_date": [
         "2026-09-15T16:30:45.448433+00:00",
+        "2026-09-17T06:40:16.579444+00:00",
         "2026-09-11T10:42:22.0922672Z"
       ]
     },
@@ -4280,6 +4296,83 @@
       ],
       "retrieval_date": [
         "2026-09-15T16:42:41.935208+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Polska; sprawdzona wzmianka o Radkowicach",
+      "grid_voltage": [
+        "220 kV",
+        "110 kV"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "update_frequency": "Raport roczny; brak zweryfikowanej gwarancji terminu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Publiczny PDF pobrany bez konta, HTTP 200.",
+      "license": "UNKNOWN — nie potwierdzono otwartej licencji raportu ani prawa do jego redystrybucji.",
+      "license_url": null,
+      "commercial_use": "UNKNOWN",
+      "machine_readable": "PARTIAL — tekst PDF; kontekst listy na poprzedniej stronie",
+      "scraping_required": "Pobranie oficjalnego PDF, bez scrapingu HTML",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": "Edycja 2024; rok raportowany 2023",
+      "source_page": "47–48",
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy GET, timeout, zachowane bajty i SHA-256. API/GIS dla tego raportu nie ustalono.",
+      "probe_ids": [
+        "PSE_IMPACT_REPORT_2023"
+      ],
+      "related_urls": [],
+      "source_id": "PSE_IMPACT_REPORT_2023",
+      "operator": "PSE",
+      "source_name": "PSE — raport wpływu za 2023 rok, edycja 2024",
+      "url": "https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf",
+      "data_owner": "PSE S.A.",
+      "data_category": "grid_investments",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "rok raportowany",
+        "zakończone zadania",
+        "nazwa inwestycji"
+      ],
+      "potential_application": "Porównanie historycznych deklaracji wykonania inwestycji",
+      "known_limitations": [
+        "Rok wymiany transformatora wymaga wyjaśnienia wobec portalu inwestycji wskazującego 2025.",
+        "Podobna nazwa nie ustala identyczności zakresu; brak numeru jednostki i mocy MVA.",
+        "Sprawdzono wskazany fragment, nie wszystkie 291 stron."
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "PSE_IMPACT_REPORT_2023",
+          "url": "https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf",
+          "retrieval_date": "2026-09-17T06:40:16.437810+00:00",
+          "local_path": "data/raw/research/2026-09-17/pse_impact_report_2023.pdf",
+          "sha256": "13c8c0785f12291fe50be09b089f6c4111d8f0f0e593de7adcb3dab4fe22ab19",
+          "bytes": 7334874,
+          "content_type": [
+            "application/pdf"
+          ],
+          "http_status": 200,
+          "error": null,
+          "manifest": "data/catalog/probe_results_radkowice_investment_dates_2026-09-17.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-17T06:40:16.437810+00:00"
       ]
     }
   ]

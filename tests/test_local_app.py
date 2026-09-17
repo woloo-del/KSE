@@ -78,9 +78,11 @@ class LocalApiTests(unittest.TestCase):
         request = Request(self.url+'/api/assessment', data=json.dumps({'technology':'BESS','voltage_kV':220,'export_MW':'50','import_MW':'50'}).encode(),headers={'Content-Type':'application/json'})
         with urlopen(request) as response:
             result=json.load(response)
-        self.assertEqual(result['method'],'documentary_screening_v1')
+        self.assertEqual(result['method'],'documentary_screening_v2')
         self.assertEqual(len(result['method_code_sha256']),64)
-        self.assertEqual(len(result['input_sha256']),4)
+        self.assertEqual(len(result['input_sha256']),5)
+        self.assertTrue(any(f['id']=='INVESTMENT_DATE_OR_SCOPE_UNRESOLVED' for f in result['findings']))
+        self.assertIsNone(result['evidence_snapshot']['investment_review']['selected_completion_year'])
         self.assertEqual(result['input_sha256'], result['evidence_snapshot']['input_sha256'])
         self.assertEqual(len(result['evidence_snapshot']['pipeline']['records']),3)
         self.assertIn('evaluated_at',result)

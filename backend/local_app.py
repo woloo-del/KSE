@@ -19,6 +19,7 @@ INPUTS = {
     'graph': 'data/reference/radkowice_evidence_graph_v2.json',
     'requests': 'data/project/information_requests.json',
     'catalog': 'data/catalog/data_sources.json',
+    'investment_review': 'data/reference/radkowice_investment_dates_2026-09-17_v1.json',
 }
 ASSETS = {'/': ('index.html', 'text/html; charset=utf-8'),
           '/app.js': ('app.js', 'text/javascript; charset=utf-8'),
@@ -33,13 +34,14 @@ def snapshot() -> dict:
         hashes[name] = hashlib.sha256(raw).hexdigest()
     ids = {e['source_id'] for node in loaded['graph']['entities'] for e in node['evidence']}
     ids.update({'PSE_PIPELINE', 'PSE_RADK_BRIDGE_NOTICE_2025', 'RDOS_RADK_PIASKI_DECISION_2025',
-                'PGE_EXPORT_DISCOVERY', 'PGE_PLAN_DISCOVERY', 'PSE_INVESTMENTS_RADK'})
+                'PGE_EXPORT_DISCOVERY', 'PGE_PLAN_DISCOVERY', 'PSE_INVESTMENTS_RADK', 'PSE_IMPACT_REPORT_2023'})
     fields = ('source_id', 'source_name', 'url', 'last_verified', 'source_date',
               'verification_status', 'known_limitations', 'license', 'commercial_use')
     sources = [{key: source.get(key) for key in fields} for source in loaded['catalog']['sources'] if source['source_id'] in ids]
     return {'station': 'SE Radkowice', 'pipeline': loaded['pipeline'],
             'graph': loaded['graph'], 'requests': loaded['requests']['items'],
             'sources': sources, 'catalog_date': loaded['catalog']['as_of'],
+            'investment_review': loaded['investment_review'],
             'input_sha256': hashes, 'scope': 'Lokalny pilot dokumentacyjny; dane publiczne, aktualizowane ręcznie.'}
 
 
@@ -82,7 +84,7 @@ class Handler(BaseHTTPRequestHandler):
             if not isinstance(project, dict):
                 raise ValueError('Wymagany obiekt parametrów projektu.')
             data = snapshot()
-            result = assess(project, data['pipeline'])
+            result = assess(project, data['pipeline'], data['investment_review'])
             result['input_sha256'] = data['input_sha256']
             result['evaluated_at'] = datetime.now(timezone.utc).isoformat()
             result['evidence_snapshot'] = data

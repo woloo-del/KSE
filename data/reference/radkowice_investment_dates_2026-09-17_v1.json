@@ -1,0 +1,53 @@
+{
+  "method": "radkowice_investment_dates_v1",
+  "access": "PUBLIC_SOURCE_REVIEW",
+  "verified_date": "2026-09-17",
+  "subject": "Wymiana transformatora i dostosowanie infrastruktury w Radkowicach",
+  "claims": [
+    {
+      "source_id": "PSE_IMPACT_REPORT_2023",
+      "completion_year_reported": 2023,
+      "classification": "REPORTED",
+      "source_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "source_quality": "B",
+      "evidence": {
+        "source_id": "PSE_IMPACT_REPORT_2023",
+        "url": "https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf",
+        "snapshot_sha256": "13c8c0785f12291fe50be09b089f6c4111d8f0f0e593de7adcb3dab4fe22ab19",
+        "retrieval_date": "2026-09-17T06:40:16.437810+00:00",
+        "source_date": null,
+        "locator": "PDF pages 47–48; edition 2024, reporting year 2023"
+      }
+    },
+    {
+      "source_id": "PSE_INVESTMENTS_RADK",
+      "completion_year_reported": 2025,
+      "classification": "REPORTED",
+      "source_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "source_quality": "B",
+      "evidence": {
+        "source_id": "PSE_INVESTMENTS_RADK",
+        "url": "https://inwestycje.pse.pl/mapa_inwestycji_pse/",
+        "snapshot_sha256": "f0375814ed8665ea7646ccea8087fa72d27c5a0f745fd804c33ce60a4131dc27",
+        "retrieval_date": "2026-09-17T06:40:16.579444+00:00",
+        "source_date": null,
+        "locator": "h4: wymiana transformatora Radkowice; following completion paragraph"
+      }
+    }
+  ],
+  "status": "UNRESOLVED_DATE_OR_SCOPE",
+  "same_project_identity": "UNCONFIRMED",
+  "selected_completion_year": null,
+  "physical_commissioning_date": null,
+  "transformer_rating_MVA": null,
+  "additional_available_capacity_MW": null,
+  "explanation": "Podobna nazwa zadania nie rozstrzyga identyczności zakresu. Nie wybrano nowszego wskazania automatycznie.",
+  "limitations": [
+    "Rok zakończenia zadania nie jest automatycznie datą załączenia urządzenia.",
+    "Brak identyfikatora jednostki, zakresu odbioru i mocy znamionowej; nie wyliczono dodatkowych MW."
+  ]
+}

@@ -54,6 +54,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-034 | Lokalna aplikacja pilotażowa — ocena przesłanek Radkowic | MVP UI | Zrobione | P0 | KSE-032 |
 | KSE-035 | Pierwszy prywatny przegląd pakietu mostu i historycznego GIS | Research | Zrobione | P0 | KSE-032 |
 | KSE-036 | Weryfikacja i normalizacja historycznej warstwy GIS | Data quality | W toku | P1 | KSE-035 |
+| KSE-037 | Rozbieżności dat inwestycji PSE w ocenie pilota | Data quality | Zrobione | P0 | KSE-034 |
 
 ## Kryteria zakończenia i dowody
 
@@ -452,3 +453,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
 - Dowody/kontekst: [docs/private_sources.md](docs/private_sources.md), [scripts/audit_private_gis_geometry.py](scripts/audit_private_gis_geometry.py), [scripts/normalize_private_gis_capacity.py](scripts/normalize_private_gis_capacity.py), [tests/test_gis_geometry.py](tests/test_gis_geometry.py), [tests/test_historical_gis_capacity.py](tests/test_historical_gis_capacity.py), [scripts/compare_private_gis_tables.py](scripts/compare_private_gis_tables.py), [tests/test_gis_tables.py](tests/test_gis_tables.py), [connectors/gis/compound_groups.py](connectors/gis/compound_groups.py), [scripts/review_private_gis_groups.py](scripts/review_private_gis_groups.py), [tests/test_compound_groups.py](tests/test_compound_groups.py).
+
+### KSE-037 — Rozbieżności dat inwestycji PSE w ocenie pilota
+
+- Odpowiedzialność: Codex.
+- Następny krok: Wyjaśnić zakres i odbiór zadania — NEED-014; rozszerzać ewidencję inwestycji.
+- Kryterium: Oba publiczne snapshoty zachowane, ekstrakcja z testami, jawna rozbieżność w API i ocenie, bez automatycznego wybrania daty i mocy.
+- Nieukończone zależności: brak.
+- Ryzyko: Tożsamość zakresu i data fizycznego załączenia nadal nieustalone..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-17.
+- Dowody/kontekst: [docs/16_radkowice_public_followup.md](docs/16_radkowice_public_followup.md), [connectors/pse/investment_dates.py](connectors/pse/investment_dates.py), [scripts/build_radkowice_investment_review.py](scripts/build_radkowice_investment_review.py), [tests/test_pse_investment_dates.py](tests/test_pse_investment_dates.py), [tests/test_local_app.py](tests/test_local_app.py).

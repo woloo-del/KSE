@@ -1,0 +1,28 @@
+[
+  {
+    "source_id": "PSE_IMPACT_REPORT_2023",
+    "url": "https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf",
+    "retrieval_date": "2026-09-17T06:40:16.437810+00:00",
+    "local_path": "data/raw/research/2026-09-17/pse_impact_report_2023.pdf",
+    "sha256": "13c8c0785f12291fe50be09b089f6c4111d8f0f0e593de7adcb3dab4fe22ab19",
+    "bytes": 7334874,
+    "content_type": [
+      "application/pdf"
+    ],
+    "http_status": 200,
+    "error": null
+  },
+  {
+    "source_id": "PSE_INVESTMENTS_RADK",
+    "url": "https://inwestycje.pse.pl/mapa_inwestycji_pse/",
+    "retrieval_date": "2026-09-17T06:40:16.579444+00:00",
+    "local_path": "data/raw/research/2026-09-17/pse_investment_map_2026-09-17.html",
+    "sha256": "f0375814ed8665ea7646ccea8087fa72d27c5a0f745fd804c33ce60a4131dc27",
+    "bytes": 660780,
+    "content_type": [
+      "text/html; charset=UTF-8"
+    ],
+    "http_status": 200,
+    "error": null
+  }
+]

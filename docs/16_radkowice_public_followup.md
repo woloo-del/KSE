@@ -100,3 +100,10 @@ projektowe (AU-001312, AU-000861). To wynik konkretnego widoku i filtra, nie dow
 braku przetargu lub wykonawcy. Wynik nie jest snapshotem API i nie zasila modelu.
 Trop TED 771822-2025 oraz informacje z agregatorów pozostają niezweryfikowane:
 odczyt TED nie powiódł się. Nie przyjęto z nich numeru pola mostu ani przypisania BESS.
+
+
+## 17.09.2026 — nierozstrzygnięty rok lub zakres wymiany transformatora
+
+Nowy przegląd wskazuje różnicę 2023/2025 między raportem wpływu a portalem PSE; źródła i datę sprawdzenia zapisano w sekcji 17.09 w docs/01_data_research.md. Wcześniejsze odczyty portalu pozostają prawidłowymi zapisami jego treści, ale nie stanowią rozstrzygnięcia daty odbioru. Dane źródłowe: `data/reference/radkowice_investment_dates_2026-09-17_v1.json`.
+
+Odtwarzanie: `python scripts/build_radkowice_investment_review.py --output NOWY_PLIK.json`. Skrypt kontroluje hashe, kontekst listy PDF oraz jedną dokładnie oznaczoną sekcję HTML. Błąd schematu zatrzymuje ekstrakcję. Testy obejmują brak roku, sąsiednią inwestycję, powtórzony nagłówek, przypis i rzeczywiste snapshoty. Nie jest to pełny parser raportów PSE. Obie wartości pozostają REPORTED, wybrany rok i dodatkowe MW są null.

@@ -316,3 +316,10 @@ proweniencję, formułę liczników i hash kodu w wersjonowanym wyniku
 pse_status_audit_2026-07-31_v1.json. Jest to badanie jednej próbki, bez cyklicznego
 pobierania i bez pełnego parsera wniosków. Status źródłowy oraz brak ID wymagają
 rozwiązania przed deduplikacją i produkcyjną klasyfikacją A/B/C.
+
+
+## 17.09.2026 — daty inwestycji w źródłach PSE
+
+Zweryfikowano [raport wpływu PSE za 2023 rok](https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf), s.47–48, oraz [portal inwestycji](https://inwestycje.pse.pl/mapa_inwestycji_pse/). Raport zalicza wymianę transformatora Radkowice do zadań zakończonych w 2023; portal podaje 2025. Nie ustalono identyczności zakresu ani daty załączenia. Oba wskazania zachowano bez wyboru jednej daty i bez wnioskowania o dodatkowych MW. Katalog ma 65 źródeł; nie ponowiono przeglądu wszystkich pozycji.
+
+PDF i HTML pobrano bez konta, HTTP 200, zachowano SHA-256. Odczyt PDF wymaga kontekstu dwóch stron; HTML oddzielenia sekcji inwestycji. Nie ustalono API/GIS ani otwartej licencji tych publikacji. Ponowny odczyt PDF PGE przez narzędzie web zakończył się 502; wyniki wyszukiwania nie stały się danymi modelu i NEED-011 pozostaje otwarty.

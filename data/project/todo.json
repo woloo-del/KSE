@@ -680,6 +680,29 @@
       ],
       "risk": "Publiczne źródła składowe nie potwierdzają dokładności i licencji całego opracowania.",
       "started_at": "2026-09-16"
+    },
+    {
+      "id": "KSE-037",
+      "title": "Rozbieżności dat inwestycji PSE w ocenie pilota",
+      "stage": "Data quality",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-034"
+      ],
+      "next_action": "Wyjaśnić zakres i odbiór zadania — NEED-014; rozszerzać ewidencję inwestycji.",
+      "acceptance": "Oba publiczne snapshoty zachowane, ekstrakcja z testami, jawna rozbieżność w API i ocenie, bez automatycznego wybrania daty i mocy.",
+      "evidence": [
+        "docs/16_radkowice_public_followup.md",
+        "connectors/pse/investment_dates.py",
+        "scripts/build_radkowice_investment_review.py",
+        "tests/test_pse_investment_dates.py",
+        "tests/test_local_app.py"
+      ],
+      "started_at": "2026-09-17",
+      "completed_at": "2026-09-17",
+      "risk": "Tożsamość zakresu i data fizycznego załączenia nadal nieustalone."
     }
   ]
 }

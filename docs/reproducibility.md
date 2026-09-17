@@ -82,3 +82,8 @@ projektu. Dokumenty prywatne i sekrety pozostają poza tym narzędziem. Kopia
 zewnętrzna nadal wymaga potwierdzenia użytkownika (NEED-010, KSE-030).
 Excel z 15.09 pozostaje historycznym snapshotem sprzed tej aktualizacji narzędzia;
 aktualna instrukcja i rejestry zostaną uwzględnione przy kolejnym generowaniu raportu.
+
+
+### Archiwum dat inwestycji — 17.09.2026
+
+`data/archives/radkowice_investment_dates_2026-09-17.zip` zawiera dwa nowe oryginały: raport PSE i portal inwestycji. Manifest: `data/catalog/radkowice_investment_dates_archive_2026-09-17.json`. Kontrola: `python scripts/research_archive.py restore data/archives/radkowice_investment_dates_2026-09-17.zip --manifest data/catalog/radkowice_investment_dates_archive_2026-09-17.json --verify-only`. Sprawdzono oba elementy. To siódme archiwum publicznych źródeł; niezależna kopia nadal wymaga potwierdzenia.

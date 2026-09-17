@@ -4,7 +4,7 @@
       "source_id": "PSE_INVESTMENTS_RADK",
       "operator": "PSE",
       "source_name": "Portal inwestycji PSE — sekcja Radkowice",
-      "url": "https://inwestycje.pse.pl/",
+      "url": "https://inwestycje.pse.pl/mapa_inwestycji_pse/",
       "data_owner": "PSE S.A.",
       "data_category": "grid_investments",
       "grid_voltage": [
@@ -16,8 +16,8 @@
         "HTML"
       ],
       "verification_status": "CONTENT_REVIEWED",
-      "last_verified": "2026-09-15",
-      "last_successful_verification": "2026-09-15",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
       "api_available": "UNKNOWN",
       "gis_available": "UNKNOWN",
       "machine_readable": "PARTIAL — HTML wymaga rozpoznania sekcji",
@@ -32,7 +32,8 @@
       "potential_application": "Oddzielenie zakończonych i przyszłych prac w stacji pilota",
       "known_limitations": [
         "Brak gwarantowanej częstotliwości aktualizacji i daty każdej zmiany",
-        "Wspólna nazwa stacji nie identyfikuje automatycznie tego samego zadania lub transformatora"
+        "Wspólna nazwa stacji nie identyfikuje automatycznie tego samego zadania lub transformatora",
+        "Raport wpływu za 2023 rok i portal podają różne lata dla podobnie nazwanego zadania transformatora; zakres i data odbioru nierozstrzygnięte."
       ],
       "priority": "P0",
       "probe_ids": [
@@ -319,6 +320,52 @@
       "license": "Dokument urzędowy; zasady Gov.pl zweryfikowano, zakres praw do załącznika i materiałów osób trzecich wymaga odrębnej oceny.",
       "license_url": "https://www.gov.pl/web/gov/prawa-autorskie",
       "commercial_use": "REQUIRES_PERMISSION_REVIEW"
+    },
+    {
+      "source_id": "PSE_IMPACT_REPORT_2023",
+      "operator": "PSE",
+      "source_name": "PSE — raport wpływu za 2023 rok, edycja 2024",
+      "url": "https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf",
+      "data_owner": "PSE S.A.",
+      "data_category": "grid_investments",
+      "grid_voltage": [
+        "220 kV",
+        "110 kV"
+      ],
+      "geographical_scope": "Polska; sprawdzona wzmianka o Radkowicach",
+      "data_format": [
+        "PDF"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "last_verified": "2026-09-17",
+      "last_successful_verification": "2026-09-17",
+      "source_version": "Edycja 2024; rok raportowany 2023",
+      "source_page": "47–48",
+      "source_date": null,
+      "publication_date": null,
+      "machine_readable": "PARTIAL — tekst PDF; kontekst listy na poprzedniej stronie",
+      "scraping_required": "Pobranie oficjalnego PDF, bez scrapingu HTML",
+      "reliability": "B",
+      "key_fields": [
+        "rok raportowany",
+        "zakończone zadania",
+        "nazwa inwestycji"
+      ],
+      "potential_application": "Porównanie historycznych deklaracji wykonania inwestycji",
+      "known_limitations": [
+        "Rok wymiany transformatora wymaga wyjaśnienia wobec portalu inwestycji wskazującego 2025.",
+        "Podobna nazwa nie ustala identyczności zakresu; brak numeru jednostki i mocy MVA.",
+        "Sprawdzono wskazany fragment, nie wszystkie 291 stron."
+      ],
+      "priority": "P0",
+      "probe_ids": [
+        "PSE_IMPACT_REPORT_2023"
+      ],
+      "authentication": "Publiczny PDF pobrany bez konta, HTTP 200.",
+      "update_frequency": "Raport roczny; brak zweryfikowanej gwarancji terminu publikacji.",
+      "automation_notes": "Jednorazowy GET, timeout, zachowane bajty i SHA-256. API/GIS dla tego raportu nie ustalono.",
+      "license": "UNKNOWN — nie potwierdzono otwartej licencji raportu ani prawa do jego redystrybucji.",
+      "commercial_use": "UNKNOWN"
     }
   ]
 }

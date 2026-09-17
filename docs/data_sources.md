@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-16**. Źródła: **64**.
+Stan badania: **2026-09-17**. Źródła: **65**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -66,7 +66,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | EMBER_API | [Ember Energy API — dokumentacja](https://api.ember-energy.org/v1/docs) | DOCUMENTATION_REVIEWED | P3 | UNKNOWN |
 | JRC_IDEES | [JRC IDEES-2023](https://data.jrc.ec.europa.eu/dataset/1f0b480c-6d21-4d95-897d-20c7ca33df6f) | CONTENT_REVIEWED | P3 | UNKNOWN |
 | COPERNICUS | [Copernicus Data Space — OData i produkty](https://documentation.dataspace.copernicus.eu/APIs/OData.html) | DOCUMENTATION_REVIEWED | P3 | PRODUCT_SPECIFIC |
-| PSE_INVESTMENTS_RADK | [Portal inwestycji PSE — sekcja Radkowice](https://inwestycje.pse.pl/) | CONTENT_REVIEWED | P0 | UNKNOWN |
+| PSE_INVESTMENTS_RADK | [Portal inwestycji PSE — sekcja Radkowice](https://inwestycje.pse.pl/mapa_inwestycji_pse/) | CONTENT_REVIEWED | P0 | UNKNOWN |
 | CHECINY_ENERGY_PLAN | [BIP Chęcin — założenia energetyczne 2025–2027 z perspektywą 2040](https://checiny.biuletyn.net/fls/bip_pliki/2026_03/BIPF64CD10561EC15Z/PZCEEPG_2025-2027.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
 | PSE_TARIFF_2026 | [Taryfa PSE 2026 — odbiorcy i miejsca dostarczania](https://www.pse.pl/documents/20182/7005343691/20260116_Tekst_Taryfy_na_2026_tekst_jednolity.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
 | PGE_RADK_CAPACITY_ATTEMPT | [Próba dostępu do pliku mocy PGE I kw.2026](https://pgedystrybucja.pl/content/download/71691b9fb622cdf89306ec0dc0c1ac3d/file/dostepne-moce-pge-i-kw-2026.pdf?contentId=2208&inLanguage=pol-PL&version=6) | BLOCKED | P0 | UNKNOWN |
@@ -74,6 +74,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | PSE_RADK_BRIDGE_NOTICE_2025 | [PSE — ogłoszenie 205815-2025, pole 220 kV i most Radkowice](https://www.pse.pl/documents/20182/5928746423/OKRESOWE_OGLOSZENIE_ROBOTY_BUDOWLANE.pdf/883a7669-eb9a-4650-84f4-cd67502fd545?safeargs=76657273696f6e3d312e31) | CONTENT_REVIEWED | P0 | UNKNOWN |
 | RDOS_RADK_PIASKI_NOTICE_2025 | [RDOŚ Kielce — obwieszczenie dotyczące Radkowice–Kielce Piaski](https://www.gov.pl/web/rdos-kielce/obwieszczenie-regionalnego-dyrektora-ochrony-srodowiska-w-kielcach-z-dnia-04122025-r-znak-woo-i42072025pjpp16) | CONTENT_REVIEWED | P0 | REQUIRES_PERMISSION_REVIEW |
 | RDOS_RADK_PIASKI_DECISION_2025 | [RDOŚ Kielce — pełna decyzja dla przebudowy linii Radkowice–Kielce Piaski](https://www.gov.pl/attachment/27ef7a8e-5094-4391-be1c-7e23cb1038b2) | CONTENT_REVIEWED | P0 | REQUIRES_PERMISSION_REVIEW |
+| PSE_IMPACT_REPORT_2023 | [PSE — raport wpływu za 2023 rok, edycja 2024](https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf) | CONTENT_REVIEWED | P0 | UNKNOWN |
 
 ## Karty źródeł
 
@@ -2100,7 +2101,7 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 
 ### PSE_INVESTMENTS_RADK — Portal inwestycji PSE — sekcja Radkowice
 
-[Źródło](https://inwestycje.pse.pl/)
+[Źródło](https://inwestycje.pse.pl/mapa_inwestycji_pse/)
 
 - **Operator:** PSE
 - **Właściciel:** PSE S.A.
@@ -2121,16 +2122,17 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Scraping:** YES — dla tego widoku HTML; brak wdrożonego cyklicznego scrapera
 - **Pola:** nazwa inwestycji; etap; status; rok zakończenia
 - **Zastosowanie:** Oddzielenie zakończonych i przyszłych prac w stacji pilota
-- **Ograniczenia:** Brak gwarantowanej częstotliwości aktualizacji i daty każdej zmiany; Wspólna nazwa stacji nie identyfikuje automatycznie tego samego zadania lub transformatora
+- **Ograniczenia:** Brak gwarantowanej częstotliwości aktualizacji i daty każdej zmiany; Wspólna nazwa stacji nie identyfikuje automatycznie tego samego zadania lub transformatora; Raport wpływu za 2023 rok i portal podają różne lata dla podobnie nazwanego zadania transformatora; zakres i data odbioru nierozstrzygnięte.
 - **Data stanu źródła:** UNKNOWN / nie dotyczy
 - **Publikacja:** UNKNOWN / nie dotyczy
 - **Wersja:** UNKNOWN / nie dotyczy
 - **Strona źródła:** UNKNOWN / nie dotyczy
-- **Sprawdzono:** 2026-09-15
-- **Udany odczyt:** 2026-09-15
+- **Sprawdzono:** 2026-09-17
+- **Udany odczyt:** 2026-09-17
 - **Klasyfikacja wejścia:** REPORTED
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 - **Próba PSE_INVESTMENTS_RADK:** HTTP 200; 2026-09-15T16:30:45.448433+00:00; `data/catalog/probe_results_radkowice_followup_2026-09-15.json`; próbka `data/raw/research/2026-09-15/pse_investments_2026-09-15.html`.
+- **Próba PSE_INVESTMENTS_RADK:** HTTP 200; 2026-09-17T06:40:16.579444+00:00; `data/catalog/probe_results_radkowice_investment_dates_2026-09-17.json`; próbka `data/raw/research/2026-09-17/pse_investment_map_2026-09-17.html`.
 - **Próba PSE_INVESTMENTS_RADK:** HTTP 200; 2026-09-11T10:42:22.0922672Z; `data/catalog/radkowice_snapshot_manifest.json`; próbka `data/raw/research/2026-09-11/pse_investments.html`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
@@ -2385,5 +2387,41 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Automatyzacja:** Jednorazowy snapshot z timeoutem i SHA-256. Nie ustalono API, limitów ani gwarantowanego cyklu; brak wdrożonej automatyzacji.
 - **Warunki:** [źródło prawne](https://www.gov.pl/web/gov/prawa-autorskie)
 - **Próba RDOS_RADK_PIASKI_DECISION_2025:** HTTP 200; 2026-09-15T16:42:41.935208+00:00; `data/catalog/probe_results_radkowice_decision_2026-09-15.json`; próbka `data/raw/research/2026-09-15/rdos_radkowice_piaski_decision_2025.pdf`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### PSE_IMPACT_REPORT_2023 — PSE — raport wpływu za 2023 rok, edycja 2024
+
+[Źródło](https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf)
+
+- **Operator:** PSE
+- **Właściciel:** PSE S.A.
+- **Kraj:** PL
+- **Kategoria:** grid_investments
+- **Napięcie:** 220 kV; 110 kV
+- **Zasięg:** Polska; sprawdzona wzmianka o Radkowicach
+- **Format:** PDF
+- **API:** UNKNOWN
+- **GIS:** UNKNOWN
+- **Aktualizacja:** Raport roczny; brak zweryfikowanej gwarancji terminu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Publiczny PDF pobrany bez konta, HTTP 200.
+- **Licencja:** UNKNOWN — nie potwierdzono otwartej licencji raportu ani prawa do jego redystrybucji.
+- **Użycie komercyjne:** UNKNOWN
+- **Autorytet źródła:** B
+- **Odczyt maszynowy:** PARTIAL — tekst PDF; kontekst listy na poprzedniej stronie
+- **Scraping:** Pobranie oficjalnego PDF, bez scrapingu HTML
+- **Pola:** rok raportowany; zakończone zadania; nazwa inwestycji
+- **Zastosowanie:** Porównanie historycznych deklaracji wykonania inwestycji
+- **Ograniczenia:** Rok wymiany transformatora wymaga wyjaśnienia wobec portalu inwestycji wskazującego 2025.; Podobna nazwa nie ustala identyczności zakresu; brak numeru jednostki i mocy MVA.; Sprawdzono wskazany fragment, nie wszystkie 291 stron.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** Edycja 2024; rok raportowany 2023
+- **Strona źródła:** 47–48
+- **Sprawdzono:** 2026-09-17
+- **Udany odczyt:** 2026-09-17
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy GET, timeout, zachowane bajty i SHA-256. API/GIS dla tego raportu nie ustalono.
+- **Próba PSE_IMPACT_REPORT_2023:** HTTP 200; 2026-09-17T06:40:16.437810+00:00; `data/catalog/probe_results_radkowice_investment_dates_2026-09-17.json`; próbka `data/raw/research/2026-09-17/pse_impact_report_2023.pdf`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

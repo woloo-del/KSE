@@ -1,11 +1,11 @@
 """Explainable evidence screening, not a calibrated connection probability."""
 from decimal import Decimal, InvalidOperation
 
-METHOD = 'documentary_screening_v1'
+METHOD = 'documentary_screening_v2'
 TECHNOLOGIES = {'BESS', 'PV', 'WIND', 'PV+BESS', 'WIND+BESS', 'PV+WIND+BESS'}
 
 
-def assess(project: dict, pipeline: dict) -> dict:
+def assess(project: dict, pipeline: dict, investment_review: dict | None = None) -> dict:
     allowed = {'technology', 'voltage_kV', 'export_MW', 'import_MW', 'energy_MWh'}
     if set(project) - allowed or not isinstance(project.get('technology'), str) or project['technology'] not in TECHNOLOGIES:
         raise ValueError('Nieprawidłowy typ projektu lub pola wejściowe.')
@@ -46,6 +46,13 @@ def assess(project: dict, pipeline: dict) -> dict:
             'id': 'NO_110_PIPELINE', 'kind': 'Brak danych',
             'text': 'Zestawienia projektów 220 kV nie przenosimy na 110 kV. Dane PGE wymagają uzupełnienia; nie ma porównywalnego zestawienia dla wybranego poziomu.',
             'basis': ['NEED-011', 'docs/12_radkowice_110kv_research.md'],
+        })
+    if investment_review is not None and investment_review['status']=='UNRESOLVED_DATE_OR_SCOPE':
+        years=sorted({claim['completion_year_reported'] for claim in investment_review['claims']})
+        findings.append({
+            'id':'INVESTMENT_DATE_OR_SCOPE_UNRESOLVED','kind':'Rozbieżność źródeł',
+            'text':f"Publikacje PSE podają różne lata zakończenia wymiany transformatora w Radkowicach: {', '.join(map(str,years))}. Trzeba wyjaśnić zakres i datę odbioru. Nie wynika z tego dodatkowa dostępna moc ani parametr transformatora.",
+            'basis':[claim['source_id'] for claim in investment_review['claims']],
         })
     directions = []
     for field, title in [('export_MW', 'Oddawanie do sieci'), ('import_MW', 'Pobór z sieci')]:

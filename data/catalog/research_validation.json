@@ -1,24 +1,24 @@
 {
-  "checked_at_utc": "2026-09-16T09:04:13.794255+00:00",
+  "checked_at_utc": "2026-09-17T06:45:46.763250+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 64,
+  "source_count": 65,
   "source_status_counts": {
     "SAMPLE_VERIFIED": 13,
-    "CONTENT_REVIEWED": 31,
+    "CONTENT_REVIEWED": 32,
     "DISCOVERED": 4,
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 11
   },
-  "probe_count": 37,
+  "probe_count": 39,
   "http_status_counts": {
-    "200": 36,
+    "200": 38,
     "404": 1
   },
-  "raw_file_count": 36,
+  "raw_file_count": 38,
   "format_counts": {
-    ".html": 13,
-    ".pdf": 13,
+    ".html": 14,
+    ".pdf": 14,
     ".json": 6,
     ".xml": 2,
     ".js": 1,
@@ -89,15 +89,20 @@
       "file": "data/raw/research/2026-09-15/rdos_radkowice_piaski_decision_2025.pdf",
       "pages": 8,
       "first_page_text_chars": 3726
+    },
+    {
+      "file": "data/raw/research/2026-09-17/pse_impact_report_2023.pdf",
+      "pages": 291,
+      "first_page_text_chars": 297
     }
   ],
-  "local_links_checked": 50,
+  "local_links_checked": 51,
   "dependencies": {
     "python": "3.12.14",
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 681,
+  "checks_passed": 705,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -1841,6 +1846,31 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:PSE_IMPACT_REPORT_2023",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PSE_IMPACT_REPORT_2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PSE_IMPACT_REPORT_2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PSE_IMPACT_REPORT_2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PSE_IMPACT_REPORT_2023",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
@@ -2162,6 +2192,11 @@
     },
     {
       "name": "probe_references:RDOS_RADK_PIASKI_DECISION_2025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PSE_IMPACT_REPORT_2023",
       "passed": true,
       "detail": null
     },
@@ -2806,6 +2841,46 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:PSE_IMPACT_REPORT_2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_IMPACT_REPORT_2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_IMPACT_REPORT_2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_IMPACT_REPORT_2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_INVESTMENTS_RADK",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "snapshot_within_raw:SUW_RADK_WOLICA_3_2024",
       "passed": true,
       "detail": null
@@ -3161,6 +3236,21 @@
       "detail": null
     },
     {
+      "name": "pdf_text_layer:pse_impact_report_2023.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_impact_report_2023.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:pse_investment_map_2026-09-17.html",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "pge_block_body_identified",
       "passed": true,
       "detail": null
@@ -3232,6 +3322,11 @@
     },
     {
       "name": "openapi_contract:energy_charts_openapi.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:README.md:docs/17_local_application.md",
       "passed": true,
       "detail": null
     },
@@ -3486,6 +3581,11 @@
       "detail": null
     },
     {
+      "name": "python_syntax:audit_private_gis_geometry.py",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "python_syntax:audit_pse_pipeline_statuses.py",
       "passed": true,
       "detail": null
@@ -3501,6 +3601,11 @@
       "detail": null
     },
     {
+      "name": "python_syntax:build_radkowice_investment_review.py",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "python_syntax:build_radkowice_pipeline.py",
       "passed": true,
       "detail": null
@@ -3511,12 +3616,32 @@
       "detail": null
     },
     {
+      "name": "python_syntax:compare_private_gis_tables.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:inspect_private_materials.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:normalize_private_gis_capacity.py",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "python_syntax:research_archive.py",
       "passed": true,
       "detail": null
     },
     {
       "name": "python_syntax:research_radkowice.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:review_private_gis_groups.py",
       "passed": true,
       "detail": null
     },
