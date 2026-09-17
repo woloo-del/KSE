@@ -38,3 +38,8 @@ Grupy stacji, obszary i dzielnice mają oddzielny zakres obowiązywania; diagnos
 
 
 Porównanie atrybutów alternatywnych eksportów: `.venv/Scripts/python.exe scripts/compare_private_gis_tables.py ROOT OUTPUT`. Wymaga także zależności z `requirements-research.txt`. Czyta XLSX tylko do odczytu, odrzuca formuły zamiast ufać nieaktualnym wynikom zapisanym w pliku. Sprawdza nagłówki i porównuje multizbiory pełnych wierszy, więc kolejność i powtórzenia nie powodują automatycznego scalania. Zmiany schematu przerywają porównanie. Diagnostyka możliwej zamiany dwóch kolumn nie naprawia źródła i nie usuwa oryginalnego ostrzeżenia. Wyniki są prywatne.
+
+
+## 17.09.2026 — uzupełnienie dokumentacji mostu
+
+Rozszerzono prywatny przegląd o przekrój pola, zestawienie szaf oraz cztery arkusze etapowania. Zachowano nowe obserwacje i nierozstrzygniętą rozbieżność przypisań między dokumentami; wcześniejsze dowody pozostają niezmienione. Potwierdzono zgodność hashy całego pakietu ze wcześniejszą inwentaryzacją. Doprecyzowano NEED-013 o spójność schematów, przekrojów i zestawień. Nie zmieniono modelu publicznej aplikacji, nie uznano planowanych wyłączeń za fakty eksploatacyjne ani nie wyliczono wolnej mocy. Szczegółowe źródła, strony i parametry pozostają w prywatnym przeglądzie z 17.09.2026.

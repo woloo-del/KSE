@@ -1,6 +1,6 @@
 {
   "schema_version": "todo_v1",
-  "updated_at": "2026-09-16",
+  "updated_at": "2026-09-17",
   "project": "Grid Connection Intelligence — Polska",
   "tasks": [
     {
@@ -581,7 +581,7 @@
       "depends_on": [
         "KSE-032"
       ],
-      "next_action": "Uwzględnić prywatny przegląd pakietu otrzymanego 16.09.2026; rozstrzygnąć rewizje i zakres przypisań przed integracją. Zachować separację prywatnych wniosków.",
+      "next_action": "Uwzględnić prywatny przegląd schematów i etapów, rozstrzygnąć rewizje oraz przypisania pól (NEED-013). Nie przenosić relacji projektowych do bieżącego modelu bez dowodu wykonania.",
       "acceptance": "Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.",
       "evidence": [
         "docs/private_sources.md",

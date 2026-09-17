@@ -1,6 +1,6 @@
 # TODO — Grid Connection Intelligence
 
-Aktualizacja rejestru: **2026-09-16**. Źródło edytowalne: [todo.json](data/project/todo.json).
+Aktualizacja rejestru: **2026-09-17**. Źródło edytowalne: [todo.json](data/project/todo.json).
 
 Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zakończenia. Nie ustalono terminów dla niezaplanowanych zadań. P0 = warunek najbliższego etapu, P1 = rozwój po fundamentach, P2 = dalszy rozwój. Priorytety są kolejnością organizacji pracy, nie scoringiem sieci.
 
@@ -9,7 +9,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-009 — Zweryfikować dostęp do publikacji PGE** (P0, Zagrożone). 16.09 ponownie otrzymano HTML zamiast dwóch PDF. Konkretna pomoc zapisana jako NEED-011; nadal bez danych mocy PGE w modelu.
 - **KSE-010 — Ustalić prawa źródeł wybranych do pilota** (P0, Do zrobienia). Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Zachować sześć ZIP wymienionych w docs/reproducibility.md na niezależnym prywatnym nośniku i sprawdzić je z właściwymi manifestami przez --verify-only. Potwierdzić datę kopii.
-- **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Uwzględnić prywatny przegląd pakietu otrzymanego 16.09.2026; rozstrzygnąć rewizje i zakres przypisań przed integracją. Zachować separację prywatnych wniosków.
+- **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Uwzględnić prywatny przegląd schematów i etapów, rozstrzygnąć rewizje oraz przypisania pól (NEED-013). Nie przenosić relacji projektowych do bieżącego modelu bez dowodu wykonania.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Zweryfikować zapisy wielogrupowe i sekcje oraz rozbieżności eksportów względem pierwotnych publikacji; ustalić prawa wykorzystania. Geometrie i porównanie atrybutów XLSX wykonane.
@@ -412,7 +412,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa
 
 - Odpowiedzialność: Użytkownik + Codex.
-- Następny krok: Uwzględnić prywatny przegląd pakietu otrzymanego 16.09.2026; rozstrzygnąć rewizje i zakres przypisań przed integracją. Zachować separację prywatnych wniosków.
+- Następny krok: Uwzględnić prywatny przegląd schematów i etapów, rozstrzygnąć rewizje oraz przypisania pól (NEED-013). Nie przenosić relacji projektowych do bieżącego modelu bez dowodu wykonania.
 - Kryterium: Źródła prywatne i pochodne wyniki dziedziczą dostęp; miejsca nie są MW; konflikty danych i status planowany pozostają jawne.
 - Nieukończone zależności: brak.
 - Ryzyko: Brak ekspertyzy wpływu nie blokuje ewidencji. Brak danych sieciowych wyklucza wyliczanie rezerwy MW i częstości ograniczeń..

@@ -1,6 +1,6 @@
 {
   "schema_version": "information_requests_v1",
-  "updated_at": "2026-09-16",
+  "updated_at": "2026-09-17",
   "items": [
     {
       "id": "NEED-001",
@@ -177,11 +177,11 @@
       "status": "Do sprawdzenia",
       "requested_scope": "Wykaz rewizji, zatwierdzeń, odstępstw i dokumentów nadrzędnych; uzgodniony projekt wykonawczy.",
       "unlocks": "Rozstrzygnięcie różnic między dokumentacją poglądową, wzorcową i docelową.",
-      "next_action": "Jeśli dostępne, przekazać wykaz aktualnych uzgodnień oraz zatwierdzoną specyfikację. Szczegóły rozbieżności w prywatnym przeglądzie.",
+      "next_action": "Jeśli dostępne, przekazać wykaz aktualnych uzgodnień, zatwierdzoną specyfikację oraz spójne przypisanie pól między schematem, przekrojami i zestawieniem szaf. Szczegóły w prywatnym uzupełnieniu przeglądu z 17.09.2026; nie przesyłać ponownie całego pakietu.",
       "without_it": "Zachować niepewność, historię i ograniczony zakres wykorzystania.",
       "owner": "Użytkownik; autor opracowania lub projektant",
       "basis": "Rozmowa i przegląd materiałów otrzymanych 2026-09-16; docs/private_sources.md",
-      "updated_at": "2026-09-16",
+      "updated_at": "2026-09-17",
       "received_evidence": null
     }
   ]
