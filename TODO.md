@@ -60,6 +60,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-040 | Audyt przydatności GIS i rzeczywistej próbki OSM Radkowic | Data quality | Zrobione | P1 | — |
 | KSE-041 | Weryfikacja źródeł GRID OZE i Energetycznej Mapy Polski | Research | Zrobione | P1 | — |
 | KSE-042 | Interaktywny prototyp pastelowego interfejsu | UI concept | Zrobione | P1 | KSE-040 |
+| KSE-043 | Wspólny rejestr dowodów Radkowic | Data aggregation | Zrobione | P1 | KSE-039, KSE-040 |
 
 ## Kryteria zakończenia i dowody
 
@@ -524,3 +525,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-17.
 - Dowody/kontekst: [docs/prototypes/platform-concept.html](docs/prototypes/platform-concept.html), [scripts/build_platform_concept.py](scripts/build_platform_concept.py), [docs/17_local_application.md](docs/17_local_application.md).
+
+### KSE-043 — Wspólny rejestr dowodów Radkowic
+
+- Odpowiedzialność: Codex.
+- Następny krok: Weryfikować powiązania dowodów i obiektów; potem prezentować kontekstowe przesłanki bez automatycznych ocen na podstawie liczby wpisów.
+- Kryterium: Cztery publiczne snapshoty połączone bez utraty źródeł, dat i rozbieżności; stabilne ID dowodów, powtarzalny wynik i obecność w API oraz eksporcie.
+- Nieukończone zależności: brak.
+- Ryzyko: 76 rekordów nie jest liczbą unikalnych inwestycji lub urządzeń. Interpretacja i scalanie to osobny etap..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-17.
+- Dowody/kontekst: [docs/20_station_data_aggregation.md](docs/20_station_data_aggregation.md), [grid_engine/station_evidence.py](grid_engine/station_evidence.py), [scripts/build_station_evidence.py](scripts/build_station_evidence.py), [tests/test_station_evidence.py](tests/test_station_evidence.py), [tests/test_local_app.py](tests/test_local_app.py).

@@ -291,3 +291,13 @@ Selected option: produkt oparty na faktach i przesłankach, z kategoriami korzys
 Reason: decyzja użytkownika i brak podstaw do wiarygodnego rozstrzygania możliwości przyłączenia.
 Trade-offs: brak jednego werdyktu lub liczby; użytkownik ocenia znaczenie jawnych dowodów i ograniczeń.
 Consequences: dane przepływowe i power-flow poza aktywnym planem. KSE-028/029 zachowane jako historyczne zadania poza zakresem; jakość danych pozostaje aktywna w KSE-023. Nie ponawiać próśb o telemetrię i ekspertyzę. Cytowanie raportowanych przez operatora wartości pozostaje dozwolone z pełnym kontekstem. Nie zmieniono bieżącego API ani historycznych wyników; ustawienie w config/product_policy.json jest specyfikacją, nie flagą wykonawczą.
+
+## 17.09.2026 — agregacja dowodów przed scalaniem obiektów
+
+Date: 2026-09-17.
+Decision: wspólny rejestr źródłowych rekordów pilota, z odrębnymi rodzajami i pochodzeniem.
+Options considered: łączenie po nazwach; zachowanie oddzielnych zestawów; wspólny rejestr dowodów bez automatycznego scalania.
+Selected option: rejestr dowodów.
+Reason: umożliwia przegląd danych i późniejsze powiązania, zachowując niepewność tożsamości i różnice źródeł.
+Trade-offs: wynik nie jest jeszcze rejestrem unikalnych obiektów.
+Consequences: stabilne ID dowodów, cztery snapshoty, jawne OSM G i publikacje B, brak sumowania MW lub oceny możliwości przyłączenia. Szczegóły: docs/20_station_data_aggregation.md.

@@ -80,7 +80,11 @@ class LocalApiTests(unittest.TestCase):
             result=json.load(response)
         self.assertEqual(result['method'],'documentary_screening_v2')
         self.assertEqual(len(result['method_code_sha256']),64)
-        self.assertEqual(len(result['input_sha256']),6)
+        self.assertEqual(len(result['input_sha256']),7)
+        ledger = result['evidence_snapshot']['aggregated_evidence']
+        self.assertEqual(ledger['source_record_count'], 76)
+        self.assertIsNone(ledger['unique_project_count'])
+        self.assertEqual(len(ledger['input_sha256']), 4)
         self.assertTrue(any(f['id']=='INVESTMENT_DATE_OR_SCOPE_UNRESOLVED' for f in result['findings']))
         self.assertIsNone(result['evidence_snapshot']['investment_review']['selected_completion_year'])
         self.assertEqual(result['input_sha256'], result['evidence_snapshot']['input_sha256'])

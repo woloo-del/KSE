@@ -812,6 +812,30 @@
       "started_at": "2026-09-17",
       "completed_at": "2026-09-17",
       "risk": "To prototyp wyglądu i interakcji, nie nowe możliwości obliczeń sieciowych."
+    },
+    {
+      "id": "KSE-043",
+      "title": "Wspólny rejestr dowodów Radkowic",
+      "stage": "Data aggregation",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-039",
+        "KSE-040"
+      ],
+      "next_action": "Weryfikować powiązania dowodów i obiektów; potem prezentować kontekstowe przesłanki bez automatycznych ocen na podstawie liczby wpisów.",
+      "acceptance": "Cztery publiczne snapshoty połączone bez utraty źródeł, dat i rozbieżności; stabilne ID dowodów, powtarzalny wynik i obecność w API oraz eksporcie.",
+      "evidence": [
+        "docs/20_station_data_aggregation.md",
+        "grid_engine/station_evidence.py",
+        "scripts/build_station_evidence.py",
+        "tests/test_station_evidence.py",
+        "tests/test_local_app.py"
+      ],
+      "started_at": "2026-09-17",
+      "completed_at": "2026-09-17",
+      "risk": "76 rekordów nie jest liczbą unikalnych inwestycji lub urządzeń. Interpretacja i scalanie to osobny etap."
     }
   ]
 }

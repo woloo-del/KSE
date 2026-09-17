@@ -1,0 +1,4694 @@
+{
+  "attribution": {
+    "license": "ODbL-1.0",
+    "osm": "© OpenStreetMap contributors",
+    "url": "https://www.openstreetmap.org/copyright"
+  },
+  "input_sha256": {
+    "data/reference/osm_radkowice_station_audit_2026-09-17_v2.json": "055e4bb2415437d556cd1ecad1589e42c80d02a60443ee889e38a5756b7c8123",
+    "data/reference/radkowice_development_plan_2026-04_v1.json": "d5bc5abd83fb2132e4a0cc685ecf8ed858c971d6458d2d9c0df8727d0d9763d5",
+    "data/reference/radkowice_investment_dates_2026-09-17_v1.json": "6801e4afda791b99cc34ce57dea04955cc3348aef4a5a29a3e6a675c2b0856ab",
+    "data/reference/radkowice_pipeline_view_2026-07-31_v1.json": "98c5d6479990d3ecb380bceadc1843748661fb19821efa37e2223bea174efad8"
+  },
+  "limitations": [
+    "Aggregation of evidence, not a merge of grid entities.",
+    "No capacity, loading, feasibility, probability or score is calculated.",
+    "Source dates and status claims are retained; retrieval date does not make them current.",
+    "Spatial association does not establish electrical connectivity or equipment ownership.",
+    "Planned projects are not commissioned assets; no automatic positive/negative assessment.",
+    "OSM-derived records remain identifiable separately from operator publications."
+  ],
+  "method": "radkowice_evidence_aggregation_v1",
+  "method_code_sha256": "a848d7b9fb1337ea91ed90e187cc0ab0e91a2f11e72d5882de376f3cd63a3a40",
+  "record_counts": {
+    "GRID_INVESTMENT_PUBLICATION": 2,
+    "INVESTMENT_DATE_CLAIM": 2,
+    "OSM_SPATIAL_RECORD": 69,
+    "PROJECT_PUBLICATION": 3
+  },
+  "records": [
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "0047997fc133d03a21e47c0dc214b8b1a81c98e42f279053aa37696720b48d67",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2019-03-22T10:10:05Z",
+        "locator": "node/3339707294",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/3339707294",
+        "source_version": 2
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2019-03-22T10:10:05Z",
+        "osm_id": 3339707294,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/3339707294",
+        "osm_version": 2,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/3339707294",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/3339707294"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "02b4ab6957c75ba2a5c71ed5f5e9012e7c828dfe3a413f3ac355cf78089aeccf",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677745",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677745",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2515729465",
+          "10259315322",
+          "10259315323"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677745,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677745",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677745",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677745"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "03f1ca0b6552476824d96725ce95b1d5b71432894bedf847d6dbbb7fd9f8c08f",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314376",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314376",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314376,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314376",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314376",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314376"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "04d84aab823f2886d9d33974fc528df18fd44d57bb690ef692011df0685b056f",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677732",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677732",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259314399",
+          "10259314402",
+          "10259315315",
+          "10259314401",
+          "10259314408",
+          "10259315324",
+          "10259314400",
+          "10259315317",
+          "10259314379"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677732,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677732",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677732",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677732"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "08b2c8440c563283670260e2c2a3cb864c3e61ff6d7192cd04106e441e250973",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2026-06-29T10:39:54Z",
+        "locator": "way/244236816",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/244236816",
+        "source_version": 9
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2515740773",
+          "2515740780",
+          "2516523479",
+          "2516523480",
+          "2516523481",
+          "2516523482",
+          "2516523483",
+          "2516523484",
+          "2516523485",
+          "2516523486",
+          "2516523487",
+          "2516523488",
+          "2516523489",
+          "2516523490",
+          "2516523491",
+          "2516523492",
+          "2516523493"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2026-06-29T10:39:54Z",
+        "osm_id": 244236816,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/244236816",
+        "osm_version": 9,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "name": "110kV Radkowice - Trzuskawica (1)",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/244236816",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "110kV Radkowice - Trzuskawica (1)"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "09ef869f808d6a14fa84b26e0f36b694b9879c8e473d624c9e689d2071d4dca5",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2019-03-22T10:10:05Z",
+        "locator": "node/2582297567",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/2582297567",
+        "source_version": 3
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2019-03-22T10:10:05Z",
+        "osm_id": 2582297567,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/2582297567",
+        "osm_version": 3,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/2582297567",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/2582297567"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "0a6a7f445f3c7fdf585dc0dca3aa5e3426897cd4af298b80ded9284b0b64234b",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/2515740773",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/2515740773",
+        "source_version": 4
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 2515740773,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/2515740773",
+        "osm_version": 4,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/2515740773",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/2515740773"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "0bf7cd584f29dd97f0b50552997ea5f3bd208b8ed09e1d82ff6e33099582039b",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2026-06-27T14:43:13Z",
+        "locator": "way/514977834",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/514977834",
+        "source_version": 4
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2515729465",
+          "2515729467",
+          "2515729463",
+          "2515729460",
+          "2279430335",
+          "2279430328",
+          "4676435425",
+          "2279430358",
+          "2279430351",
+          "2279430300",
+          "2279430399",
+          "2279430344",
+          "2279430377",
+          "2279430346",
+          "2279430396",
+          "2279430333",
+          "2279430341",
+          "2279430350",
+          "2279430394",
+          "2279430280",
+          "2279430343",
+          "2279430331",
+          "2279430366",
+          "4689963405",
+          "4689963404",
+          "2279430285",
+          "2279430318",
+          "4689963406",
+          "2279430364",
+          "2279430360",
+          "2279430329",
+          "2279430302",
+          "2279430337",
+          "2279430295",
+          "2279430362",
+          "2279430287",
+          "2279430332",
+          "2279430380",
+          "2279430383",
+          "2279430319",
+          "2279430322",
+          "2279430334",
+          "2279430323",
+          "2279430352",
+          "4689963407",
+          "2279430354",
+          "4688780864",
+          "4688780863",
+          "2515703848"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2026-06-27T14:43:13Z",
+        "osm_id": 514977834,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/514977834",
+        "osm_version": 4,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "cables": "3",
+          "name": "110kV Radkowice - Kielce Browar",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/514977834",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "110kV Radkowice - Kielce Browar"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "0c78a4dad18addc87c2d6848576cdbf9ea2df81b0c46b65d363e5d8e94dec207",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677728",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677728",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2367663239",
+          "10259314391",
+          "10259314392",
+          "10259314393"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677728,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677728",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "220000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "220000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677728",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677728"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "0c8cc630aa17a007b8f3ecb822f1ec9ab079de070730ade96e6414ea6da6afb7",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677743",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677743",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "3339707294",
+          "10259315318"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677743,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677743",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677743",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677743"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "0e0bbf5b7fc218594a455361328f10f18f8f1d548543f1c4e0d2622746837196",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677740",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677740",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259315313",
+          "10259315314"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677740,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677740",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677740",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677740"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "108ebb2a10bdc97d3340180846551b5a8a3842929560080521e7b8f4c922ff3c",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314374",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314374",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314374,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314374",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314374",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314374"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "12e2d6aed7c4104d6a025a8411f61f2ac14b520044fe957f25f251e64bb3a813",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677734",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677734",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259314402",
+          "10259314403"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677734,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677734",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677734",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677734"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "181f95e775e20bc8e547f71835679ccf298be0da5d422576fe229eb79a361304",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677724",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677724",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2582297567",
+          "10259315310",
+          "10259314407",
+          "10259314379"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677724,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677724",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677724",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677724"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "1b8a6bc509c67c4c046e9454814b2b67ebf04cf1acb50f846324fdafa9e238f2",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2024-06-01T22:14:23Z",
+        "locator": "way/451058808",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/451058808",
+        "source_version": 7
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "1822247568",
+          "1822247536",
+          "1822247539",
+          "1822247533",
+          "1822247610",
+          "1822247763",
+          "1822247685",
+          "1822247807",
+          "1822247625",
+          "1822247701",
+          "1822247834",
+          "1822717187",
+          "1822717185",
+          "1822717181",
+          "1822717177",
+          "1822717168",
+          "1822717161",
+          "1822717157",
+          "1822809343",
+          "1822717151",
+          "1822717153",
+          "1822717155",
+          "1822717150",
+          "1822717159",
+          "1822717163",
+          "1822717166",
+          "1822717172",
+          "1822717175",
+          "1822717179",
+          "1822717170",
+          "1822717183",
+          "1822717188",
+          "1822717192",
+          "1822717195",
+          "11950891373",
+          "1822717197",
+          "1822717199",
+          "1822717201",
+          "1822717203",
+          "1822717205",
+          "1822717207",
+          "1822717208",
+          "1822717211",
+          "1822717213",
+          "1822717215",
+          "1822717217",
+          "1822717219",
+          "1822717220",
+          "1822717222",
+          "1822717224",
+          "1822717226",
+          "1822717227",
+          "1822354400",
+          "1822354397",
+          "1822809355",
+          "1822354398",
+          "1822354186",
+          "1822354184",
+          "1822354183",
+          "1822354177",
+          "1822354176",
+          "1822354180",
+          "1822809352",
+          "1822809348",
+          "1822354187",
+          "1822354188",
+          "1822354181",
+          "1822354189",
+          "1822354185",
+          "1822354182",
+          "1822354179",
+          "1822354190",
+          "1822354178",
+          "1822349644",
+          "1822349651",
+          "1822349635",
+          "1822349625",
+          "1822349646",
+          "1822349657",
+          "1822349631",
+          "1822349633",
+          "1822349637",
+          "1822349648",
+          "1822349661",
+          "1822349658",
+          "1822349629",
+          "1822349642",
+          "1822349623",
+          "1822349640",
+          "1822344247",
+          "1822344236",
+          "1822344244",
+          "1822344272",
+          "1822344264",
+          "1822344260",
+          "1822344242",
+          "1822344250",
+          "1822344232",
+          "1822344239",
+          "1822344251",
+          "1822344270",
+          "8848648955",
+          "1822344262",
+          "1822344249",
+          "1822344253",
+          "1822344267",
+          "1822340175",
+          "1822340183",
+          "1822340178",
+          "1822340173",
+          "1822340174",
+          "1822340200",
+          "1822340193",
+          "1822340195",
+          "1822340188",
+          "1822340186",
+          "1822340198",
+          "1822340181",
+          "1822260321",
+          "1822260293",
+          "1822260296",
+          "1822260311",
+          "1822260325",
+          "1822260319",
+          "1822260304",
+          "1822260322",
+          "1822260312",
+          "1822260301",
+          "1822260316",
+          "1822260330",
+          "1822260326",
+          "1822260317",
+          "1822260292",
+          "1822260306",
+          "1822260323",
+          "1822260314",
+          "1822260331",
+          "1822260302",
+          "1822260328",
+          "1822260300",
+          "1822260318",
+          "1822260298",
+          "1822260291",
+          "1822260308",
+          "1822260295",
+          "1822260294",
+          "1822260303",
+          "1822260309",
+          "1822260297",
+          "1822260320",
+          "1822260324",
+          "1822260307",
+          "1822260313",
+          "1822260327",
+          "1822260332",
+          "1822260333",
+          "1822260305",
+          "1822260310",
+          "1822260299",
+          "1822260315",
+          "1822260329",
+          "4479120547"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2024-06-01T22:14:23Z",
+        "osm_id": 451058808,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/451058808",
+        "osm_version": 7,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "cables": "3",
+          "name": "220kV Połaniec - Radkowice",
+          "power": "line",
+          "voltage": "220000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "220000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/451058808",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "220kV Połaniec - Radkowice"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "1d9976601aa99acfaf90ed078ba6fe04920acd87289fd695e06ccb4309fd47cf",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2026-06-29T10:39:54Z",
+        "locator": "way/514967364",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/514967364",
+        "source_version": 4
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2582297567",
+          "2582297564",
+          "2582297579",
+          "2582297561",
+          "2582297545",
+          "2582297542",
+          "2582297539",
+          "2582297536",
+          "2582297534",
+          "2582297531"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2026-06-29T10:39:54Z",
+        "osm_id": 514967364,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/514967364",
+        "osm_version": 4,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "name": "110kV Radkowice - Cementownia Nowiny II (1)",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/514967364",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "110kV Radkowice - Cementownia Nowiny II (1)"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "20c9a2a8bc7759c34a716c9bb296ad3b8418313dcfed12754254abd0169a5bbb",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677737",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677737",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259314405",
+          "10259314404",
+          "10259315309",
+          "10259315319",
+          "10259315323",
+          "10259315321",
+          "10259314406",
+          "10259314407"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677737,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677737",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677737",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677737"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "23e626327017c2c0ae93a625e0241277fa8c2c8253de242b8ecc18a29738f40e",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677729",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677729",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259314394",
+          "10259315312",
+          "10259314405",
+          "10259314399",
+          "10259314395"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677729,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677729",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677729",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677729"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "26e97321a3581a2a0fbbd4898b9b7ad431f7536037b74106a304473b2d2623a4",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "locator": "PDF page 58; task III.82",
+        "retrieval_date": "2026-09-17T11:04:59.379112+00:00",
+        "snapshot_sha256": "5273f6837f5051a2de077f8904cb497fb9dcbab3e9302d8a4f8d34211ca3cc19",
+        "source_date": null,
+        "source_date_precision": "MONTH",
+        "source_id": "PSE_PRSP_2027_2036_POST_CONSULTATION",
+        "source_month": "2026-04",
+        "source_quality": "B",
+        "source_url": "https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30"
+      },
+      "record_kind": "GRID_INVESTMENT_PUBLICATION",
+      "source_record": {
+        "additional_available_capacity_MW": null,
+        "classification": "REPORTED",
+        "commissioning_date": null,
+        "completion_definition_page": 62,
+        "completion_year_meaning": "TECHNICAL_FINANCIAL_AND_FORMAL_COMPLETION",
+        "completion_year_reported": 2034,
+        "current_grid_eligible": false,
+        "current_status": "UNKNOWN",
+        "operator_task_id": "III.82",
+        "purpose_reported": "Likwidacja ograniczeń przesyłowych przy przesyłaniu energii elektrycznej w rejonie Kielc",
+        "retrieval_date": "2026-09-17T11:04:59.379112+00:00",
+        "snapshot_sha256": "5273f6837f5051a2de077f8904cb497fb9dcbab3e9302d8a4f8d34211ca3cc19",
+        "source_date": null,
+        "source_date_precision": "MONTH",
+        "source_id": "PSE_PRSP_2027_2036_POST_CONSULTATION",
+        "source_month": "2026-04",
+        "source_page": 58,
+        "source_quality": "B",
+        "source_url": "https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30",
+        "start_year_reported": 2029,
+        "status_in_document": "PLANNED_IN_DOCUMENT",
+        "title_reported": "Modernizacja (rozbudowa) linii 220 kV Kielce-Radkowice",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "source_record_key": "III.82",
+      "station_association": "REVIEWED_DOCUMENTARY_ASSOCIATION",
+      "title": "Modernizacja (rozbudowa) linii 220 kV Kielce-Radkowice"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "2b0c025e262e398d20d9b059b4c89f9d4d00aa573f862d818cefe69d11374f55",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314377",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314377",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314377,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314377",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314377",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314377"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "2b5362b81bea02da5824551755722c53c3fa615430eb0c1a06b35a46573f4735",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677731",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677731",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2515740775",
+          "10259314400",
+          "10259314406",
+          "10259315311",
+          "10259314396"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677731,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677731",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677731",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677731"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "2e7d0e1d63ad95c1f242aa702203928e29853f2446a0aee2d2101a9cbc980ea4",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2019-03-22T10:10:05Z",
+        "locator": "node/2582297570",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/2582297570",
+        "source_version": 3
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2019-03-22T10:10:05Z",
+        "osm_id": 2582297570,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/2582297570",
+        "osm_version": 3,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/2582297570",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/2582297570"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "2f1658390192b63cad780d288f5c23507fce772d6c7bd12ed0f1e17263862c23",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2019-03-22T10:10:05Z",
+        "locator": "node/2517876650",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/2517876650",
+        "source_version": 4
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2019-03-22T10:10:05Z",
+        "osm_id": 2517876650,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/2517876650",
+        "osm_version": 4,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/2517876650",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/2517876650"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "423010310fe050e5ca53b7cfe3bd256ecd95cbfcd8f2b1c291f41206cef18fdf",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314397",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314397",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314397,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314397",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314397",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314397"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "47db7652cf056f7b4eb86642c6badc6bb9125fd7c4d5476f21573c65cb9b605c",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314388",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314388",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314388,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314388",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314388",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314388"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "495aa879c491f9cd7494c964e639fddcf3b1e45f623a85d5a1c42b29dd133eea",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2023-12-08T15:07:49Z",
+        "locator": "way/244471295",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/244471295",
+        "source_version": 33
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "4681238825",
+          "4665462973",
+          "2517876697",
+          "4681238832",
+          "2517876696",
+          "5191376077",
+          "2517876694",
+          "4665462974",
+          "4665462975",
+          "2517876693",
+          "4681238833",
+          "2517876692",
+          "4665462976",
+          "2517876691",
+          "2517876690",
+          "2517876689",
+          "2517876688",
+          "5191376078",
+          "2517876687",
+          "5191321795",
+          "4665462977",
+          "4688597030",
+          "2517876686",
+          "4706434135",
+          "4688597029",
+          "2517876685",
+          "4688597028",
+          "2517876684",
+          "4706434134",
+          "4688597027",
+          "2517876683",
+          "2517876682",
+          "2517876681",
+          "4703944203",
+          "5673059616",
+          "2517876680",
+          "2517876679",
+          "2517876678",
+          "2517876677",
+          "4688597026",
+          "2517876675",
+          "2517876674",
+          "2517876673",
+          "2517876672",
+          "4665711405",
+          "2517876671",
+          "2517876670",
+          "4688597025",
+          "2517876669",
+          "4688597024",
+          "2517876668",
+          "4668543480",
+          "2517876667",
+          "2517876666",
+          "5710741714",
+          "2517876665",
+          "11403373980",
+          "4665711400",
+          "2517876664",
+          "11403374009",
+          "4589205208",
+          "2517876663",
+          "2517876662",
+          "2517876661",
+          "4688597023",
+          "2517876660",
+          "2517876659",
+          "2517876657",
+          "2517876656",
+          "2517876655",
+          "2517876654",
+          "5678317729",
+          "4688597022",
+          "2517876652",
+          "4589189324",
+          "5678317728",
+          "4706434133",
+          "4589189323",
+          "4589189326",
+          "4589189325",
+          "4688597021",
+          "2517876651",
+          "2517876650"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2023-12-08T15:07:49Z",
+        "osm_id": 244471295,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/244471295",
+        "osm_version": 33,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "cables": "3",
+          "name": "220 kV Kielce Piaski - Radkowice",
+          "power": "line",
+          "voltage": "220000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "220000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/244471295",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "220 kV Kielce Piaski - Radkowice"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "49cec98725a3ecc5b170c46b8b7b03860ba9ac7e0e7efad390386f1210013a79",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314391",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314391",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314391,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314391",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314391",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314391"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "4b81b452babdac75ca66307474684c9a8d8bfae8abb224842332152d975ffda4",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314384",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314384",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314384,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314384",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314384",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314384"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "51bd0e58b42d1439ce85b76fbad4c9f373152f8e32a1c5339d88789cd69cd848",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2023-09-11T09:54:06Z",
+        "locator": "way/1121677722",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677722",
+        "source_version": 2
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2517876650",
+          "10259314378",
+          "10259315325",
+          "10259314382",
+          "10259314375"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2023-09-11T09:54:06Z",
+        "osm_id": 1121677722,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677722",
+        "osm_version": 2,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "220000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "220000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677722",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677722"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "52279aa5b8399129b0cafead8d39bb569af6aa8ddbfea836ee8f8a12384f060c",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314369",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314369",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314369,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314369",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "location": "outdoor",
+          "power": "transformer",
+          "transformer": "main",
+          "voltage:primary": "220000",
+          "voltage:secondary": "110000"
+        },
+        "voltage_observations": {
+          "voltage:primary": {
+            "classification": "CALCULATED",
+            "raw_value": "220000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0
+            ]
+          },
+          "voltage:secondary": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "node/10259314369",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314369"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "52e45634aa5dda65395153c3f669cd6a35fa5370d9326c792528c6085ea83f41",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "locator": "Wykaz wspólny!row 843",
+        "retrieval_date": "2026-09-10T11:21:03.1201767Z",
+        "snapshot_sha256": "21dff45875f6fe7d943fd3df98a2290c1e3f04e999389538bdc1c00fe54b86dc",
+        "source_date": "2026-07-31",
+        "source_id": "PSE_PIPELINE",
+        "source_quality": "B",
+        "source_url": "https://www.pse.pl/documents/20182/51490/Informacje_publikowane_zgodnie_z_Art_7_ust_8l_ustawy_PE_stan_na_31_07_2026.xlsx"
+      },
+      "record_kind": "PROJECT_PUBLICATION",
+      "source_record": {
+        "applicant": "RSE 10 Sp. z o.o.",
+        "bridge_assignment": null,
+        "cells": {
+          "applicant": "D843",
+          "connection_agreement_date": "X843",
+          "connection_export_MW": "I843",
+          "connection_import_MW": "J843",
+          "connection_point_reported": "E843",
+          "delivery_start_date_reported": "Y843",
+          "project_name": "B843",
+          "status_reported": "Q843",
+          "voltage_kV": "F843"
+        },
+        "classification": "REPORTED",
+        "connection_agreement_date": "2025-10-16",
+        "connection_export_MW": "50",
+        "connection_import_MW": "50",
+        "connection_point_reported": "Radkowice",
+        "delivery_start_date_reported": "2029-08-31",
+        "group": "B_PLANNED",
+        "project_identity_resolved_across_sources": false,
+        "project_name": "MEE Radkowice",
+        "research_record_id": "pse_20260731_row_843",
+        "retrieval_date": "2026-09-10T11:21:03.1201767Z",
+        "row": 843,
+        "sheet": "Wykaz wspólny",
+        "snapshot_sha256": "21dff45875f6fe7d943fd3df98a2290c1e3f04e999389538bdc1c00fe54b86dc",
+        "source_date": "2026-07-31",
+        "source_id": "PSE_PIPELINE",
+        "source_url": "https://www.pse.pl/documents/20182/51490/Informacje_publikowane_zgodnie_z_Art_7_ust_8l_ustawy_PE_stan_na_31_07_2026.xlsx",
+        "status_interpretation": "Agreement does not confirm completed connection; no inference from delivery date.",
+        "status_reported": "UMOWA O PRZYŁĄCZENIE obowiązująca",
+        "technology_reported": "MEE",
+        "voltage_kV": 220
+      },
+      "source_record_key": "pse_20260731_row_843",
+      "station_association": "REPORTED_CONNECTION_POINT",
+      "title": "MEE Radkowice"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "5ce119cf2b54ac32eb9bbeeed7b9d3bcbc644e7c641e7e4e1ec276b400e63291",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677738",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677738",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2515729458",
+          "10259314408",
+          "10259315309"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677738,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677738",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677738",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677738"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "5e547bd83daf74b23a6649cfc2108c70fd5d1c1aa651f095485dc5fdf1c338b5",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677727",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677727",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "4479120547",
+          "10259314388",
+          "10259314389",
+          "10259314390"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677727,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677727",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "line",
+          "voltage": "220000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "220000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677727",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677727"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "65d98ad7ee675812b110d0bafbe938092ebb78cfac36bc302f5ff3b82a1a0120",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314370",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314370",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314370,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314370",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314370",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314370"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "66bd638b64a1e82a7eb2917191dc6d4f6ae9eb4e4d15ca527c536054db9b9a63",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677725",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677725",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259314381",
+          "10259314382",
+          "10259314383",
+          "10259314393",
+          "10259314390",
+          "10259314386",
+          "10259314384"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677725,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677725",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "220000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "220000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677725",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677725"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "689769dc7564ecab58a500f05b5792f53b7380bd4817e04e7ff906ca344ab24b",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/2515729465",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/2515729465",
+        "source_version": 4
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 2515729465,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/2515729465",
+        "osm_version": 4,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/2515729465",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/2515729465"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "6aa29d70d710e7294634619c73f51e265a16f910847e950150c07a3f053bdd83",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677744",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677744",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259315320",
+          "10259315321",
+          "10259315324",
+          "2515740773"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677744,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677744",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677744",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677744"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "6d23a3c3a99003ab43a53242b1011ed81ecce8cac87aeb1b6ee75e8d3bedf17d",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2019-03-22T10:10:05Z",
+        "locator": "node/2515729458",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/2515729458",
+        "source_version": 3
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2019-03-22T10:10:05Z",
+        "osm_id": 2515729458,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/2515729458",
+        "osm_version": 3,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/2515729458",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/2515729458"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "6d634a939d38013922d5f8cbdc57992e1f5b56028964b83cf57355e0daa9ef38",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677730",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677730",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2367663247",
+          "10259314398",
+          "10259314397",
+          "10259314394",
+          "10259315316",
+          "10259315313",
+          "3339707294",
+          "2367658263",
+          "10259314396",
+          "2582297570",
+          "2582297567"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677730,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677730",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677730",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677730"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "6eddaf284311eaa22c11e9573dad35cbb41bf094f6ca8e5193bd236d10803a53",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2019-03-22T10:10:05Z",
+        "locator": "node/2515740771",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/2515740771",
+        "source_version": 3
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2019-03-22T10:10:05Z",
+        "osm_id": 2515740771,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/2515740771",
+        "osm_version": 3,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/2515740771",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/2515740771"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "6f79f29eb6eef54483fab097197a6b9357a3ccb3510ec555715255a1b71b03d0",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677736",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677736",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259314401",
+          "10259314404"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677736,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677736",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "way/1121677736",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677736"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "6fa6dab69586d064fe316eaa1d92b64a2cb5babbea30268eb0bb5b4d3258b804",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "locator": "Wykaz wspólny!row 847",
+        "retrieval_date": "2026-09-10T11:21:03.1201767Z",
+        "snapshot_sha256": "21dff45875f6fe7d943fd3df98a2290c1e3f04e999389538bdc1c00fe54b86dc",
+        "source_date": "2026-07-31",
+        "source_id": "PSE_PIPELINE",
+        "source_quality": "B",
+        "source_url": "https://www.pse.pl/documents/20182/51490/Informacje_publikowane_zgodnie_z_Art_7_ust_8l_ustawy_PE_stan_na_31_07_2026.xlsx"
+      },
+      "record_kind": "PROJECT_PUBLICATION",
+      "source_record": {
+        "applicant": "Qair Polska S.A.",
+        "bridge_assignment": null,
+        "cells": {
+          "applicant": "D847",
+          "connection_agreement_date": "X847",
+          "connection_export_MW": "I847",
+          "connection_import_MW": "J847",
+          "connection_point_reported": "E847",
+          "delivery_start_date_reported": "Y847",
+          "project_name": "B847",
+          "status_reported": "Q847",
+          "voltage_kV": "F847"
+        },
+        "classification": "REPORTED",
+        "connection_agreement_date": "2025-05-29",
+        "connection_export_MW": "100",
+        "connection_import_MW": "102",
+        "connection_point_reported": "Radkowice",
+        "delivery_start_date_reported": "2029-01-31",
+        "group": "B_PLANNED",
+        "project_identity_resolved_across_sources": false,
+        "project_name": "MEE Chęciny",
+        "research_record_id": "pse_20260731_row_847",
+        "retrieval_date": "2026-09-10T11:21:03.1201767Z",
+        "row": 847,
+        "sheet": "Wykaz wspólny",
+        "snapshot_sha256": "21dff45875f6fe7d943fd3df98a2290c1e3f04e999389538bdc1c00fe54b86dc",
+        "source_date": "2026-07-31",
+        "source_id": "PSE_PIPELINE",
+        "source_url": "https://www.pse.pl/documents/20182/51490/Informacje_publikowane_zgodnie_z_Art_7_ust_8l_ustawy_PE_stan_na_31_07_2026.xlsx",
+        "status_interpretation": "Agreement does not confirm completed connection; no inference from delivery date.",
+        "status_reported": "UMOWA O PRZYŁĄCZENIE obowiązująca",
+        "technology_reported": "MEE",
+        "voltage_kV": 220
+      },
+      "source_record_key": "pse_20260731_row_847",
+      "station_association": "REPORTED_CONNECTION_POINT",
+      "title": "MEE Chęciny"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "79010ef539d9e24903f0e2d4452fc03447f66aa422d3dd2e505fc18b7bd50dd3",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "locator": "h4: wymiana transformatora Radkowice; following completion paragraph",
+        "retrieval_date": "2026-09-17T06:40:16.579444+00:00",
+        "snapshot_sha256": "f0375814ed8665ea7646ccea8087fa72d27c5a0f745fd804c33ce60a4131dc27",
+        "source_date": null,
+        "source_id": "PSE_INVESTMENTS_RADK",
+        "source_quality": "B",
+        "source_url": "https://inwestycje.pse.pl/mapa_inwestycji_pse/"
+      },
+      "record_kind": "INVESTMENT_DATE_CLAIM",
+      "source_record": {
+        "classification": "REPORTED",
+        "completion_year_reported": 2025,
+        "evidence": {
+          "locator": "h4: wymiana transformatora Radkowice; following completion paragraph",
+          "retrieval_date": "2026-09-17T06:40:16.579444+00:00",
+          "snapshot_sha256": "f0375814ed8665ea7646ccea8087fa72d27c5a0f745fd804c33ce60a4131dc27",
+          "source_date": null,
+          "source_id": "PSE_INVESTMENTS_RADK",
+          "url": "https://inwestycje.pse.pl/mapa_inwestycji_pse/"
+        },
+        "source_date": null,
+        "source_id": "PSE_INVESTMENTS_RADK",
+        "source_quality": "B",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "source_record_key": "PSE_INVESTMENTS_RADK",
+      "station_association": "REVIEWED_SUBJECT_IDENTITY_UNCONFIRMED",
+      "title": "Wymiana transformatora i dostosowanie infrastruktury w Radkowicach"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "7c629bf06b3e94d39411886af6ee5449fc2bd31e6df05329924149856721eb3e",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677726",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677726",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259314369",
+          "10259314385",
+          "10259314386",
+          "10259314387"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677726,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677726",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "220000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "220000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677726",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677726"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "7d05f16843a9f3d1512e3ddfb5c5980b2732f0f834c815c0cd0b3ad59e0be960",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677735",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677735",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259314395",
+          "10259314403",
+          "10259314380"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677735,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677735",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677735",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677735"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "8795681e722c8e1cfa35e413639c5d09c876c6137bde1275ac0bc323482f6367",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677739",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677739",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259315310",
+          "10259315311",
+          "10259315320",
+          "10259314372",
+          "10259315318",
+          "10259315314",
+          "10259315312"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677739,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677739",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677739",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677739"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "89ccdd74860c24d850a78ee344226c665f2350c59b80125f02d048255c90b5e4",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677719",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677719",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2515740775",
+          "2515740773",
+          "2515740771",
+          "10259314370",
+          "10259314371",
+          "10259314369"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677719,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677719",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677719",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677719"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "933a0f1d350112f6f909ed8a87e3b4ab30a6e89b8ea2253c8d50bf70f1a42425",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314378",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314378",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314378,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314378",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314378",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314378"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "948459896f6fa2c87e3fcf608c6acaf607496bfaaa45b2b6cc605c22d74f4740",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314398",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314398",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314398,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314398",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314398",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314398"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "960626aa7d6d091cfc56af8855d9028d7e957bc7c5ea1617f93cf39d1bc1b8e4",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2024-11-12T19:04:48Z",
+        "locator": "way/170742633",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/170742633",
+        "source_version": 15
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2369404264",
+          "1818882945",
+          "1818883021",
+          "1818883080",
+          "1818883067",
+          "2598074380",
+          "1818883063",
+          "1818883036",
+          "1818883031",
+          "1818883004",
+          "1818883084",
+          "1818882885",
+          "1818883070",
+          "1818883071",
+          "1818882919",
+          "1818882889",
+          "1818883078",
+          "1818882877",
+          "1818882978",
+          "1818882943",
+          "1822834466",
+          "1822834471",
+          "1822834522",
+          "1822834573",
+          "1822834571",
+          "1822834538",
+          "1822834568",
+          "8892818119",
+          "1822834528",
+          "1822834556",
+          "1822834535",
+          "1822834510",
+          "1822834486",
+          "1822834514",
+          "1822834565",
+          "1822834480",
+          "1822834525",
+          "1822834506",
+          "1822834559",
+          "1822834520",
+          "1822834562",
+          "1822834503",
+          "1822834468",
+          "1822834476",
+          "1822834473",
+          "1822834463",
+          "1822834499",
+          "1822834531",
+          "1822834517",
+          "1822809365",
+          "1822809368",
+          "1822809357",
+          "5430671808",
+          "1822809361",
+          "1822809360",
+          "1822809359",
+          "1822809336",
+          "1822809362",
+          "1822809346",
+          "1822809341",
+          "1822809338",
+          "1822809329",
+          "2367663239"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2024-11-12T19:04:48Z",
+        "osm_id": 170742633,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/170742633",
+        "osm_version": 15,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "cables": "3",
+          "name": "LNN 220kV Kielce–Radkowice",
+          "operator": "Polskie Sieci Elektroenergetyczne",
+          "operator:short": "PSE",
+          "operator:wikidata": "Q1749435",
+          "power": "line",
+          "ref": "2406",
+          "voltage": "220000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "220000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/170742633",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "LNN 220kV Kielce–Radkowice"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "97396ed437e4dd09b4a90187148b5d27a7816444f91a1b9976954db346de0764",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "locator": "PDF page 67; task II.47",
+        "retrieval_date": "2026-09-17T11:04:59.379112+00:00",
+        "snapshot_sha256": "5273f6837f5051a2de077f8904cb497fb9dcbab3e9302d8a4f8d34211ca3cc19",
+        "source_date": null,
+        "source_date_precision": "MONTH",
+        "source_id": "PSE_PRSP_2027_2036_POST_CONSULTATION",
+        "source_month": "2026-04",
+        "source_quality": "B",
+        "source_url": "https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30"
+      },
+      "record_kind": "GRID_INVESTMENT_PUBLICATION",
+      "source_record": {
+        "additional_available_capacity_MW": null,
+        "classification": "REPORTED",
+        "commissioning_date": null,
+        "completion_definition_page": 75,
+        "completion_year_meaning": "TECHNICAL_FINANCIAL_AND_FORMAL_COMPLETION",
+        "completion_year_reported": 2032,
+        "current_grid_eligible": false,
+        "current_status": "UNKNOWN",
+        "operator_task_id": "II.47",
+        "purpose_reported": "Zwiększenie niezawodności działania systemów telemechaniki stacyjnej i EAZ, dostosowanie do obowiązujących standardów technicznych PSE S.A. oraz zwiększenie liczby stacji zdalnie sterowanych Stworzenie warunków dla przyłączenia i wyprowadzenia/doprowadzenia mocy z/do magazynu energii elektrycznej",
+        "retrieval_date": "2026-09-17T11:04:59.379112+00:00",
+        "snapshot_sha256": "5273f6837f5051a2de077f8904cb497fb9dcbab3e9302d8a4f8d34211ca3cc19",
+        "source_date": null,
+        "source_date_precision": "MONTH",
+        "source_id": "PSE_PRSP_2027_2036_POST_CONSULTATION",
+        "source_month": "2026-04",
+        "source_page": 67,
+        "source_quality": "B",
+        "source_url": "https://www.pse.pl/documents/20182/7102190804/PRSP_2027-2036-dokument_glowny_projekt_po_konsultacji.pdf/de2f004f-8a80-4264-907a-a38d52c5d50f?safeargs=76657273696f6e3d312e30",
+        "start_year_reported": 2024,
+        "status_in_document": "IMPLEMENTATION_REPORTED_IN_DOCUMENT",
+        "title_reported": "Rozbudowa i modernizacja stacji 220/110 kV Radkowice",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "source_record_key": "II.47",
+      "station_association": "REVIEWED_DOCUMENTARY_ASSOCIATION",
+      "title": "Rozbudowa i modernizacja stacji 220/110 kV Radkowice"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "9b4047678cdd6e1256f465323d8dc2dbd072bf54177f9d4481727031b45abd34",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/2515740775",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/2515740775",
+        "source_version": 4
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 2515740775,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/2515740775",
+        "osm_version": 4,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/2515740775",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/2515740775"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "9b606b535f47fdb94b31004befe7c986b79193a62dc2a89e9514f007f512aa64",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2026-06-27T14:43:13Z",
+        "locator": "way/327551125",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/327551125",
+        "source_version": 8
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "3339707294",
+          "3339707296",
+          "3339707299",
+          "3339707301",
+          "3339707298",
+          "3339707295",
+          "3339707191",
+          "3339707189",
+          "3339707187",
+          "3339707184",
+          "3339707181",
+          "3339707179",
+          "3339707180",
+          "3339707182",
+          "3339707183",
+          "3339707185",
+          "3339707186",
+          "3339707188",
+          "3339707190",
+          "3339707192",
+          "3339707293",
+          "3339707297",
+          "3339707300",
+          "3339707302",
+          "3339707303",
+          "3339707304",
+          "3339707305",
+          "3339707306",
+          "3339707307",
+          "3339707308",
+          "3339707309",
+          "3339707310",
+          "3339707311",
+          "3339707312",
+          "3339707313",
+          "3339707314",
+          "3339707315",
+          "3339707316",
+          "3339707317",
+          "3339707318",
+          "3339707319",
+          "3339707320",
+          "3339707321",
+          "3339707322",
+          "3339707323",
+          "4676479239",
+          "3339707324",
+          "4693152227",
+          "3339707325",
+          "3339707326",
+          "3339707327",
+          "3339707328",
+          "3339707329",
+          "3339707330",
+          "3339707331",
+          "3339707332",
+          "3339707333",
+          "3339707334",
+          "3339707335",
+          "3339707336",
+          "3339707337",
+          "3339707338",
+          "3339707339",
+          "3339707340",
+          "3339707341",
+          "3339707342",
+          "3339707343",
+          "3339707344",
+          "3339707345",
+          "3339707346",
+          "3339707347",
+          "3339707348",
+          "3339707349",
+          "3339707350",
+          "3339707351",
+          "3339707352",
+          "3339707353",
+          "3339707354",
+          "3339707355",
+          "3339707356",
+          "3339707357",
+          "3339707358"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2026-06-27T14:43:13Z",
+        "osm_id": 327551125,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/327551125",
+        "osm_version": 8,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "cables": "3",
+          "circuits": "1",
+          "frequency": "50",
+          "name": "Radkowice–Małogoszcz",
+          "operator": "PGE Dystrybucja",
+          "operator:wikidata": "Q787714",
+          "power": "line",
+          "ref": "W443",
+          "voltage": "110000",
+          "wires": "single"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/327551125",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "Radkowice–Małogoszcz"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "9d71fa393e869b572465deff4df22355080c1cc0bc844a6a7cab35922ede4021",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314396",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314396",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314396,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314396",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314396",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314396"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "a38e286e10bc4713767c2fabf97716da9b91e2d97ee2d69e6767e5eaaa8018a9",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2019-03-22T10:10:05Z",
+        "locator": "node/2367663239",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/2367663239",
+        "source_version": 6
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2019-03-22T10:10:05Z",
+        "osm_id": 2367663239,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/2367663239",
+        "osm_version": 6,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/2367663239",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/2367663239"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "b1be643dc0ec0dd7ecc738efc7f3f05cf1404dbe06c0e10f4d83161bc909fe14",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/2367663247",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/2367663247",
+        "source_version": 8
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 2367663247,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/2367663247",
+        "osm_version": 8,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "location": "outdoor",
+          "power": "transformer",
+          "transformer": "main",
+          "voltage:primary": "220000",
+          "voltage:secondary": "110000"
+        },
+        "voltage_observations": {
+          "voltage:primary": {
+            "classification": "CALCULATED",
+            "raw_value": "220000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0
+            ]
+          },
+          "voltage:secondary": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "node/2367663247",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/2367663247"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "b35bb83cf4fb5e566645e1df544c555356e1733797aae00e6ab2e62a124a87bd",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2026-06-29T10:39:54Z",
+        "locator": "way/244236817",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/244236817",
+        "source_version": 8
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2515740775",
+          "2515740778",
+          "2516523464",
+          "2516523465",
+          "2516523466",
+          "2516523467",
+          "2516523468",
+          "2516523469",
+          "2516523470",
+          "2516523471",
+          "2516523472",
+          "2516523473",
+          "2516523474",
+          "2516523475",
+          "2516523476",
+          "2516523477",
+          "2516523478"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2026-06-29T10:39:54Z",
+        "osm_id": 244236817,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/244236817",
+        "osm_version": 8,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "name": "110kV Radkowice - Trzuskawica (2)",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/244236817",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "110kV Radkowice - Trzuskawica (2)"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "b3d77c2b14ede60ea8f271b5f0192721ad0d91fe1836e3d7bee4fc48a570e153",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677733",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677733",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2515740771",
+          "10259314401"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677733,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677733",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "way/1121677733",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677733"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "b6865a2229b2b43898bc0d884b05bed630e120cbab68a29f20ff7de9a6edb742",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2019-03-22T10:10:05Z",
+        "locator": "node/2367658263",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/2367658263",
+        "source_version": 4
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2019-03-22T10:10:05Z",
+        "osm_id": 2367658263,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/2367658263",
+        "osm_version": 4,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/2367658263",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/2367658263"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "c69ad460c34b83161e4df6d313ad206a26da5b3218a201719739c5211dce239f",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677723",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677723",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259314373",
+          "10259314381",
+          "10259314376",
+          "10259314377",
+          "2367663247"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677723,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677723",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "220000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "220000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677723",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677723"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "c7e960f50039303673fbfa32b22815550d35659eb4c232dc7eaf4c69a5dcf45a",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314380",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314380",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314380,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314380",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "location": "outdoor",
+          "power": "transformer",
+          "transformer": "distribution"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314380",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314380"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "c8036ac479b6d73fdc6d6550c184ebd4b67132d3118c258d1debf6e14619489f",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677742",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677742",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259315317",
+          "2582297570"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677742,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677742",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677742",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677742"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "cd3e9d5a61dd189b01e8af644abba373a274feff4aa4e06afaa8ba019925c920",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2026-06-27T14:43:13Z",
+        "locator": "way/199098055",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/199098055",
+        "source_version": 14
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2091402440",
+          "2091402439",
+          "2091402441",
+          "2091402442",
+          "2091402443",
+          "2091402444",
+          "2091402440"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2026-06-27T14:43:13Z",
+        "osm_id": 199098055,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/199098055",
+        "osm_version": 14,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "frequency": "50",
+          "location": "outdoor",
+          "name": "Stacja elektroenergetyczna 220/110/15kV „SE Radkowice”",
+          "operator": "Polskie Sieci Elektroenergetyczne",
+          "operator:short": "PSE",
+          "operator:wikidata": "Q1749435",
+          "power": "substation",
+          "ref": "RAD",
+          "source": "Bing",
+          "substation": "transmission",
+          "voltage": "220000;110000;15000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "220000;110000;15000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0,
+              110.0,
+              15.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/199098055",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "Stacja elektroenergetyczna 220/110/15kV „SE Radkowice”"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "d1e895f047818bf3dc6049a7c13815b7ddfdee3322f26a4213eec68cdc46feb7",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677720",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677720",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2367658263",
+          "10259314372",
+          "10259315319"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677720,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677720",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677720",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677720"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "d23f423c03acf08eed3949f0a73657cd5600d54a20a1c7b44705a16df7d71972",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2026-06-27T14:43:13Z",
+        "locator": "way/327242616",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/327242616",
+        "source_version": 11
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "3341453891",
+          "2367195570",
+          "2367195568",
+          "2367195572",
+          "2367138677",
+          "2367138666",
+          "2368523221",
+          "2367107742",
+          "2367621059",
+          "2367621060",
+          "2367621061",
+          "2367621062",
+          "2367621063",
+          "2367621073",
+          "2367621072",
+          "2367621071",
+          "2367621070",
+          "2367621069",
+          "2367621067",
+          "2367621068",
+          "2367621066",
+          "2367621065",
+          "2367621064",
+          "2367640888",
+          "2367640889",
+          "2367640890",
+          "2367640891",
+          "2367640892",
+          "2367640893",
+          "2367640894",
+          "2367640896",
+          "2367640895",
+          "2367640897",
+          "2367640898",
+          "2367658247",
+          "4690110106",
+          "2367658248",
+          "2367658249",
+          "2367658250",
+          "2367658251",
+          "2367658252",
+          "2367658253",
+          "2367658254",
+          "2367658255",
+          "2367658256",
+          "2367658257",
+          "2367658258",
+          "2367658259",
+          "2367658260",
+          "2367658261",
+          "2367658266",
+          "4689973804",
+          "2367658268",
+          "2367658267",
+          "2367658264",
+          "2367658265",
+          "2367658262",
+          "2367658263"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2026-06-27T14:43:13Z",
+        "osm_id": 327242616,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/327242616",
+        "osm_version": 11,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "cables": "3",
+          "circuits": "1",
+          "frequency": "50",
+          "name": "Kielce Karczówka–Radkowice",
+          "operator": "PGE Dystrybucja",
+          "operator:wikidata": "Q787714",
+          "power": "line",
+          "ref": "W439",
+          "voltage": "110000",
+          "wires": "single"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/327242616",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "Kielce Karczówka–Radkowice"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "d702595ebe18e7ae162703cb732eee4cb371b277a1a89fd77bb35f78265f5c74",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2026-06-29T10:39:54Z",
+        "locator": "way/244236815",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/244236815",
+        "source_version": 13
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2515740771",
+          "2515740777",
+          "2598556636",
+          "2598556637",
+          "2598556638",
+          "2598584923",
+          "2598584924",
+          "2598584925",
+          "2598584926",
+          "2598584927",
+          "2598584928",
+          "2598584929",
+          "2598584930",
+          "2598584931",
+          "2598584932",
+          "2598584933",
+          "2598584934",
+          "2598584935",
+          "2598584936",
+          "2598584937",
+          "2598584938",
+          "2598584939",
+          "2598584940",
+          "2598584941",
+          "2632839870",
+          "10141741094",
+          "2632839867",
+          "2632839863",
+          "2632839860",
+          "2632839855",
+          "2632839848",
+          "2289284162",
+          "2289284167",
+          "2289284174",
+          "2289284173",
+          "2289284181",
+          "2289284157",
+          "2289284165",
+          "2289284175",
+          "2289284156",
+          "2289284171",
+          "2289284161",
+          "2289284159",
+          "2289284176",
+          "2289284166",
+          "2598614219"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2026-06-29T10:39:54Z",
+        "osm_id": 244236815,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/244236815",
+        "osm_version": 13,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "cables": "3",
+          "circuits": "1",
+          "frequency": "50",
+          "length": "8.3 km",
+          "name": "Radkowice–Wolica",
+          "operator": "PGE Dystrybucja",
+          "operator:wikidata": "Q787714",
+          "power": "line",
+          "ref": "W444",
+          "voltage": "110000",
+          "wires": "single"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/244236815",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "Radkowice–Wolica"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "de887347ee0b53b663bcff6c97136f57bca07ffcce310833514115fb23e1fe61",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "locator": "PDF pages 47–48; edition 2024, reporting year 2023",
+        "retrieval_date": "2026-09-17T06:40:16.437810+00:00",
+        "snapshot_sha256": "13c8c0785f12291fe50be09b089f6c4111d8f0f0e593de7adcb3dab4fe22ab19",
+        "source_date": null,
+        "source_id": "PSE_IMPACT_REPORT_2023",
+        "source_quality": "B",
+        "source_url": "https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf"
+      },
+      "record_kind": "INVESTMENT_DATE_CLAIM",
+      "source_record": {
+        "classification": "REPORTED",
+        "completion_year_reported": 2023,
+        "evidence": {
+          "locator": "PDF pages 47–48; edition 2024, reporting year 2023",
+          "retrieval_date": "2026-09-17T06:40:16.437810+00:00",
+          "snapshot_sha256": "13c8c0785f12291fe50be09b089f6c4111d8f0f0e593de7adcb3dab4fe22ab19",
+          "source_date": null,
+          "source_id": "PSE_IMPACT_REPORT_2023",
+          "url": "https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf"
+        },
+        "source_date": null,
+        "source_id": "PSE_IMPACT_REPORT_2023",
+        "source_quality": "B",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "source_record_key": "PSE_IMPACT_REPORT_2023",
+      "station_association": "REVIEWED_SUBJECT_IDENTITY_UNCONFIRMED",
+      "title": "Wymiana transformatora i dostosowanie infrastruktury w Radkowicach"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "deb37e250a14d90cb2d47d8f54ee1abfe613087faa5566e5a55d2a0e864bc8b7",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677721",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677721",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259314373",
+          "10259315325",
+          "10259314392",
+          "10259314389",
+          "10259314387",
+          "10259314374"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677721,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677721",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "220000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "220000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              220.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677721",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677721"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "df9becb2103d7bf1889053187e8d2ce2bf3cf38c20183457ba876a4082d48da7",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2026-06-29T10:39:54Z",
+        "locator": "way/218801478",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/218801478",
+        "source_version": 13
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2515729458",
+          "2515729469",
+          "2515729472",
+          "2515729456",
+          "2515729453",
+          "2279430353",
+          "2279430395",
+          "2279430376",
+          "4676435426",
+          "2279430393",
+          "2279430265",
+          "2279430305",
+          "2279430397",
+          "2279430348",
+          "2279430379",
+          "2279430321",
+          "2279430365",
+          "2279430326",
+          "2279430315",
+          "2279430370",
+          "2279430375",
+          "2279430325",
+          "2279430308",
+          "5030144807",
+          "2279430356",
+          "2279430368",
+          "2279430363",
+          "2279430359",
+          "2279430293",
+          "2279430401",
+          "2279430361",
+          "2279430317",
+          "5923856272",
+          "2279430382",
+          "2279430339",
+          "2279430378",
+          "2279430336",
+          "2279430345",
+          "2279430324",
+          "2279430371",
+          "2279430400",
+          "2279430340",
+          "2696708340"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2026-06-29T10:39:54Z",
+        "osm_id": 218801478,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/218801478",
+        "osm_version": 13,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "cables": "3",
+          "circuits": "1",
+          "frequency": "50",
+          "name": "Radkowice–Morawica",
+          "operator": "PGE Dystrybucja",
+          "operator:wikidata": "Q787714",
+          "power": "line",
+          "ref": "W447",
+          "voltage": "110000",
+          "wires": "single"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/218801478",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "Radkowice–Morawica"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "e35dfd0382cfac08dfba26e91d63897f5e8bbc9a2cb9f86bbb0b06a4f0084073",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2019-03-22T10:10:05Z",
+        "locator": "node/4479120547",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/4479120547",
+        "source_version": 2
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2019-03-22T10:10:05Z",
+        "osm_id": 4479120547,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/4479120547",
+        "osm_version": 2,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/4479120547",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/4479120547"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "e71628d8ba00c4d8250b8287c668e58c0f73388ed6e94a38bc7b20fdf1dbe1c1",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314375",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314375",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314375,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314375",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314375",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314375"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "e78f411efd24b0fff69e68701090de85a65360961efeb69db3505a9a2ebe45c7",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "locator": "Wykaz wspólny!row 787",
+        "retrieval_date": "2026-09-10T11:21:03.1201767Z",
+        "snapshot_sha256": "21dff45875f6fe7d943fd3df98a2290c1e3f04e999389538bdc1c00fe54b86dc",
+        "source_date": "2026-07-31",
+        "source_id": "PSE_PIPELINE",
+        "source_quality": "B",
+        "source_url": "https://www.pse.pl/documents/20182/51490/Informacje_publikowane_zgodnie_z_Art_7_ust_8l_ustawy_PE_stan_na_31_07_2026.xlsx"
+      },
+      "record_kind": "PROJECT_PUBLICATION",
+      "source_record": {
+        "applicant": "Grand Solar 23 Sp. z o.o.",
+        "bridge_assignment": null,
+        "cells": {
+          "applicant": "D787",
+          "connection_agreement_date": "X787",
+          "connection_export_MW": "I787",
+          "connection_import_MW": "J787",
+          "connection_point_reported": "E787",
+          "delivery_start_date_reported": "Y787",
+          "project_name": "B787",
+          "status_reported": "Q787",
+          "voltage_kV": "F787"
+        },
+        "classification": "REPORTED",
+        "connection_agreement_date": "2025-05-13",
+        "connection_export_MW": "96.96",
+        "connection_import_MW": "98.8992",
+        "connection_point_reported": "Radkowice",
+        "delivery_start_date_reported": "2029-06-30",
+        "group": "B_PLANNED",
+        "project_identity_resolved_across_sources": false,
+        "project_name": "MEE Chałupki",
+        "research_record_id": "pse_20260731_row_787",
+        "retrieval_date": "2026-09-10T11:21:03.1201767Z",
+        "row": 787,
+        "sheet": "Wykaz wspólny",
+        "snapshot_sha256": "21dff45875f6fe7d943fd3df98a2290c1e3f04e999389538bdc1c00fe54b86dc",
+        "source_date": "2026-07-31",
+        "source_id": "PSE_PIPELINE",
+        "source_url": "https://www.pse.pl/documents/20182/51490/Informacje_publikowane_zgodnie_z_Art_7_ust_8l_ustawy_PE_stan_na_31_07_2026.xlsx",
+        "status_interpretation": "Agreement does not confirm completed connection; no inference from delivery date.",
+        "status_reported": "UMOWA O PRZYŁĄCZENIE obowiązująca",
+        "technology_reported": "MEE",
+        "voltage_kV": 220
+      },
+      "source_record_key": "pse_20260731_row_787",
+      "station_association": "REPORTED_CONNECTION_POINT",
+      "title": "MEE Chałupki"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "e88da03cf1a010178d000c62a3431cfcf0924a4f7a8ece32f98da5d81846309c",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "way/1121677741",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/1121677741",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "10259315316",
+          "10259315315"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 1121677741,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/1121677741",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "line": "bay",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/1121677741",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "way/1121677741"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "ea29a62df44b9dc832cfd9502d6f1546ac17a148fe036bf1ec82ade8e3963d1a",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314371",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314371",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314371,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314371",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314371",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314371"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "ed7181b8dadea82866f20d460dbbe0ea919e493f9cabf3bfb43dbc6e5db0dfdd",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2026-06-29T10:39:54Z",
+        "locator": "way/252122720",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/way/252122720",
+        "source_version": 7
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": [
+          "2582297570",
+          "2582297573",
+          "2582297581",
+          "2582297576",
+          "2582297547",
+          "2582297550",
+          "2582297552",
+          "2582297555",
+          "2582297557",
+          "2582297531"
+        ],
+        "operator_verified": false,
+        "osm_edit_timestamp": "2026-06-29T10:39:54Z",
+        "osm_id": 252122720,
+        "osm_type": "way",
+        "osm_url": "https://www.openstreetmap.org/way/252122720",
+        "osm_version": 7,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "WAY_INTERSECTS_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "name": "110kV Radkowice - Cementownia Nowiny II (2)",
+          "power": "line",
+          "voltage": "110000"
+        },
+        "voltage_observations": {
+          "voltage": {
+            "classification": "CALCULATED",
+            "raw_value": "110000",
+            "unit_conversion": "V / 1000; semicolon components retained",
+            "value_kV": [
+              110.0
+            ]
+          }
+        }
+      },
+      "source_record_key": "way/252122720",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "110kV Radkowice - Cementownia Nowiny II (2)"
+    },
+    {
+      "canonical_entity_id": null,
+      "evidence_id": "fd5f5f608271ebb078041410e190f0cff07942cb66a50965ddcb7c8de8b7a81a",
+      "interpretation": "NOT_ASSESSED",
+      "provenance": {
+        "edit_timestamp_not_observation_date": "2022-12-13T11:08:30Z",
+        "locator": "node/10259314385",
+        "retrieval_date": "2026-09-17T11:45:03.826411+00:00",
+        "snapshot_sha256": "03093d3f182f406e32346d3ed69858e0b550474257f976d5d375c79747174213",
+        "source_date": null,
+        "source_id": "OSM_RADK_STATION_AREA",
+        "source_quality": "G",
+        "source_url": "https://www.openstreetmap.org/node/10259314385",
+        "source_version": 1
+      },
+      "record_kind": "OSM_SPATIAL_RECORD",
+      "source_record": {
+        "available_capacity_MW": null,
+        "electrical_connectivity": "UNKNOWN",
+        "equipment_owner": null,
+        "node_ids": null,
+        "operator_verified": false,
+        "osm_edit_timestamp": "2022-12-13T11:08:30Z",
+        "osm_id": 10259314385,
+        "osm_type": "node",
+        "osm_url": "https://www.openstreetmap.org/node/10259314385",
+        "osm_version": 1,
+        "reporting_authority": "OSM_COMMUNITY_NOT_OPERATOR",
+        "source_quality": "G",
+        "spatial_selection": {
+          "classification": "CALCULATED",
+          "method": "POINT_COVERED_BY_STATION_POLYGON"
+        },
+        "tag_value_classification": "REPORTED",
+        "tags_reported_by_osm": {
+          "power": "portal"
+        },
+        "voltage_observations": {}
+      },
+      "source_record_key": "node/10259314385",
+      "station_association": "CALCULATED_SPATIAL_ASSOCIATION_ONLY",
+      "title": "node/10259314385"
+    }
+  ],
+  "scope": "PUBLIC_SNAPSHOTS_ONLY_NOT_CURRENT_COMPLETE_INVENTORY",
+  "source_record_count": 76,
+  "station": "Radkowice",
+  "unique_asset_count": null,
+  "unique_project_count": null,
+  "unresolved_review": {
+    "access": "PUBLIC_SOURCE_REVIEW",
+    "additional_available_capacity_MW": null,
+    "claims": [
+      {
+        "classification": "REPORTED",
+        "completion_year_reported": 2023,
+        "evidence": {
+          "locator": "PDF pages 47–48; edition 2024, reporting year 2023",
+          "retrieval_date": "2026-09-17T06:40:16.437810+00:00",
+          "snapshot_sha256": "13c8c0785f12291fe50be09b089f6c4111d8f0f0e593de7adcb3dab4fe22ab19",
+          "source_date": null,
+          "source_id": "PSE_IMPACT_REPORT_2023",
+          "url": "https://api-raport.pse.pl/uploads/PSE-Zintegrowany_Raport_Wplywu_2023.pdf"
+        },
+        "source_date": null,
+        "source_id": "PSE_IMPACT_REPORT_2023",
+        "source_quality": "B",
+        "valid_from": null,
+        "valid_to": null
+      },
+      {
+        "classification": "REPORTED",
+        "completion_year_reported": 2025,
+        "evidence": {
+          "locator": "h4: wymiana transformatora Radkowice; following completion paragraph",
+          "retrieval_date": "2026-09-17T06:40:16.579444+00:00",
+          "snapshot_sha256": "f0375814ed8665ea7646ccea8087fa72d27c5a0f745fd804c33ce60a4131dc27",
+          "source_date": null,
+          "source_id": "PSE_INVESTMENTS_RADK",
+          "url": "https://inwestycje.pse.pl/mapa_inwestycji_pse/"
+        },
+        "source_date": null,
+        "source_id": "PSE_INVESTMENTS_RADK",
+        "source_quality": "B",
+        "valid_from": null,
+        "valid_to": null
+      }
+    ],
+    "explanation": "Podobna nazwa zadania nie rozstrzyga identyczności zakresu. Nie wybrano nowszego wskazania automatycznie.",
+    "limitations": [
+      "Rok zakończenia zadania nie jest automatycznie datą załączenia urządzenia.",
+      "Brak identyfikatora jednostki, zakresu odbioru i mocy znamionowej; nie wyliczono dodatkowych MW."
+    ],
+    "method": "radkowice_investment_dates_v1",
+    "physical_commissioning_date": null,
+    "same_project_identity": "UNCONFIRMED",
+    "selected_completion_year": null,
+    "status": "UNRESOLVED_DATE_OR_SCOPE",
+    "subject": "Wymiana transformatora i dostosowanie infrastruktury w Radkowicach",
+    "transformer_rating_MVA": null,
+    "verified_date": "2026-09-17"
+  }
+}

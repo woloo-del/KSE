@@ -21,6 +21,7 @@ INPUTS = {
     'catalog': 'data/catalog/data_sources.json',
     'investment_review': 'data/reference/radkowice_investment_dates_2026-09-17_v1.json',
     'development_plan': 'data/reference/radkowice_development_plan_2026-04_v1.json',
+    'aggregated_evidence': 'data/reference/radkowice_aggregated_evidence_2026-09-17_v1.json',
 }
 ASSETS = {'/': ('index.html', 'text/html; charset=utf-8'),
           '/app.js': ('app.js', 'text/javascript; charset=utf-8'),
@@ -36,7 +37,7 @@ def snapshot() -> dict:
     ids = {e['source_id'] for node in loaded['graph']['entities'] for e in node['evidence']}
     ids.update({'PSE_PIPELINE', 'PSE_RADK_BRIDGE_NOTICE_2025', 'RDOS_RADK_PIASKI_DECISION_2025',
                 'PGE_EXPORT_DISCOVERY', 'PGE_PLAN_DISCOVERY', 'PSE_INVESTMENTS_RADK', 'PSE_IMPACT_REPORT_2023',
-                'PSE_PRSP_2027_2036_POST_CONSULTATION'})
+                'PSE_PRSP_2027_2036_POST_CONSULTATION', 'OSM_RADK_STATION_AREA'})
     fields = ('source_id', 'source_name', 'url', 'last_verified', 'source_date',
               'verification_status', 'known_limitations', 'license', 'commercial_use')
     sources = [{key: source.get(key) for key in fields} for source in loaded['catalog']['sources'] if source['source_id'] in ids]
@@ -45,6 +46,7 @@ def snapshot() -> dict:
             'sources': sources, 'catalog_date': loaded['catalog']['as_of'],
             'investment_review': loaded['investment_review'],
             'development_plan': loaded['development_plan'],
+            'aggregated_evidence': loaded['aggregated_evidence'],
             'input_sha256': hashes, 'scope': 'Lokalny pilot dokumentacyjny; dane publiczne, aktualizowane ręcznie.'}
 
 
