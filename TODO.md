@@ -12,7 +12,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Uwzględnić prywatny przegląd schematów i etapów, rozstrzygnąć rewizje oraz przypisania pól (NEED-013). Nie przenosić relacji projektowych do bieżącego modelu bez dowodu wykonania.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
-- **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Zweryfikować zapisy wielogrupowe i sekcje oraz rozbieżności eksportów względem pierwotnych publikacji; ustalić prawa wykorzystania. Geometrie i porównanie atrybutów XLSX wykonane.
+- **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Zweryfikować kandydatów przypisań wielogrupowych oraz rozbieżności eksportów względem pierwotnych publikacji i legend; ustalić prawa wykorzystania. Kontrola kolejności opisów i spójności grup w kompilacji wykonana.
 
 ## Pełny rejestr
 
@@ -445,10 +445,10 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS
 
 - Odpowiedzialność: Codex + Użytkownik.
-- Następny krok: Zweryfikować zapisy wielogrupowe i sekcje oraz rozbieżności eksportów względem pierwotnych publikacji; ustalić prawa wykorzystania. Geometrie i porównanie atrybutów XLSX wykonane.
+- Następny krok: Zweryfikować kandydatów przypisań wielogrupowych oraz rozbieżności eksportów względem pierwotnych publikacji i legend; ustalić prawa wykorzystania. Kontrola kolejności opisów i spójności grup w kompilacji wykonana.
 - Kryterium: Udokumentowana proweniencja i dostęp; geometrie sprawdzone, duplikaty oznaczone, historia oddzielona od bieżących danych.
 - Nieukończone zależności: brak.
 - Ryzyko: Publiczne źródła składowe nie potwierdzają dokładności i licencji całego opracowania..
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/private_sources.md](docs/private_sources.md), [scripts/audit_private_gis_geometry.py](scripts/audit_private_gis_geometry.py), [scripts/normalize_private_gis_capacity.py](scripts/normalize_private_gis_capacity.py), [tests/test_gis_geometry.py](tests/test_gis_geometry.py), [tests/test_historical_gis_capacity.py](tests/test_historical_gis_capacity.py), [scripts/compare_private_gis_tables.py](scripts/compare_private_gis_tables.py), [tests/test_gis_tables.py](tests/test_gis_tables.py).
+- Dowody/kontekst: [docs/private_sources.md](docs/private_sources.md), [scripts/audit_private_gis_geometry.py](scripts/audit_private_gis_geometry.py), [scripts/normalize_private_gis_capacity.py](scripts/normalize_private_gis_capacity.py), [tests/test_gis_geometry.py](tests/test_gis_geometry.py), [tests/test_historical_gis_capacity.py](tests/test_historical_gis_capacity.py), [scripts/compare_private_gis_tables.py](scripts/compare_private_gis_tables.py), [tests/test_gis_tables.py](tests/test_gis_tables.py), [connectors/gis/compound_groups.py](connectors/gis/compound_groups.py), [scripts/review_private_gis_groups.py](scripts/review_private_gis_groups.py), [tests/test_compound_groups.py](tests/test_compound_groups.py).

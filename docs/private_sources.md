@@ -43,3 +43,6 @@ Porównanie atrybutów alternatywnych eksportów: `.venv/Scripts/python.exe scri
 ## 17.09.2026 — uzupełnienie dokumentacji mostu
 
 Rozszerzono prywatny przegląd o przekrój pola, zestawienie szaf oraz cztery arkusze etapowania. Zachowano nowe obserwacje i nierozstrzygniętą rozbieżność przypisań między dokumentami; wcześniejsze dowody pozostają niezmienione. Potwierdzono zgodność hashy całego pakietu ze wcześniejszą inwentaryzacją. Doprecyzowano NEED-013 o spójność schematów, przekrojów i zestawień. Nie zmieniono modelu publicznej aplikacji, nie uznano planowanych wyłączeń za fakty eksploatacyjne ani nie wyliczono wolnej mocy. Szczegółowe źródła, strony i parametry pozostają w prywatnym przeglądzie z 17.09.2026.
+
+
+Przegląd zapisów wielogrupowych: `scripts/review_private_gis_groups.py ROOT OUTPUT`. Wymaga zgodności kolejności nazw z numerowanym opisem, zgodnej liczby składników i jednostki MW. Porównuje kandydatów wyłącznie z wpisami pojedynczych grup w tej samej warstwie i roku. Zgodność wewnątrz kompilacji nie stanowi niezależnego potwierdzenia; przypisania pozostają INFERRED, bez promocji pierwotnych UNKNOWN do aktualnej mocy. Brak porównania i konflikty są jawne. Wyniki, pełne opisy oraz powiązania fid pozostają prywatne.
