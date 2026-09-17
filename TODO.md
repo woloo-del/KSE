@@ -12,7 +12,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Uwzględnić prywatny przegląd schematów i etapów, rozstrzygnąć rewizje oraz przypisania pól (NEED-013). Nie przenosić relacji projektowych do bieżącego modelu bez dowodu wykonania.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
-- **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Zweryfikować kandydatów przypisań wielogrupowych oraz rozbieżności eksportów względem pierwotnych publikacji i legend; ustalić prawa wykorzystania. Kontrola kolejności opisów i spójności grup w kompilacji wykonana.
+- **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
 
 ## Pełny rejestr
 
@@ -55,6 +55,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-035 | Pierwszy prywatny przegląd pakietu mostu i historycznego GIS | Research | Zrobione | P0 | KSE-032 |
 | KSE-036 | Weryfikacja i normalizacja historycznej warstwy GIS | Data quality | W toku | P1 | KSE-035 |
 | KSE-037 | Rozbieżności dat inwestycji PSE w ocenie pilota | Data quality | Zrobione | P0 | KSE-034 |
+| KSE-038 | Historyczny rejestr wpisów o inwestycjach z GIS | Data quality | Zrobione | P1 | KSE-035 |
 
 ## Kryteria zakończenia i dowody
 
@@ -446,7 +447,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS
 
 - Odpowiedzialność: Codex + Użytkownik.
-- Następny krok: Zweryfikować kandydatów przypisań wielogrupowych oraz rozbieżności eksportów względem pierwotnych publikacji i legend; ustalić prawa wykorzystania. Kontrola kolejności opisów i spójności grup w kompilacji wykonana.
+- Następny krok: Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
 - Kryterium: Udokumentowana proweniencja i dostęp; geometrie sprawdzone, duplikaty oznaczone, historia oddzielona od bieżących danych.
 - Nieukończone zależności: brak.
 - Ryzyko: Publiczne źródła składowe nie potwierdzają dokładności i licencji całego opracowania..
@@ -464,3 +465,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-17.
 - Dowody/kontekst: [docs/16_radkowice_public_followup.md](docs/16_radkowice_public_followup.md), [connectors/pse/investment_dates.py](connectors/pse/investment_dates.py), [scripts/build_radkowice_investment_review.py](scripts/build_radkowice_investment_review.py), [tests/test_pse_investment_dates.py](tests/test_pse_investment_dates.py), [tests/test_local_app.py](tests/test_local_app.py).
+
+### KSE-038 — Historyczny rejestr wpisów o inwestycjach z GIS
+
+- Odpowiedzialność: Codex.
+- Następny krok: Weryfikować publikacje pierwotne z prywatnej kolejki; powiązania i bieżący status wymagają osobnych dowodów.
+- Kryterium: Wersjonowany prywatny wynik, stabilne identyfikatory wpisów, oryginalne atrybuty i hashe; brak awansu planowanej daty do stanu istniejącego.
+- Nieukończone zależności: brak.
+- Ryzyko: Rekordy nie są unikalnymi inwestycjami. Linki z kompilacji nie zostały zbiorczo zweryfikowane; nieznane prawa i aktualność pozostają otwarte..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-17.
+- Dowody/kontekst: [docs/private_sources.md](docs/private_sources.md), [connectors/gis/historical_investments.py](connectors/gis/historical_investments.py), [scripts/normalize_private_gis_investments.py](scripts/normalize_private_gis_investments.py), [tests/test_historical_gis_investments.py](tests/test_historical_gis_investments.py).

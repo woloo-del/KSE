@@ -255,3 +255,13 @@ Selected option: wersjonowany przegląd źródeł i jakościowa przesłanka w do
 Reason: brak identyfikatora jednostki i dowodu tożsamości zakresu nie pozwala arbitralnie wybrać daty ani wyprowadzać dodatkowych MW.
 Trade-offs: nie rozstrzyga daty eksploatacji; potrzebna dalsza weryfikacja operatora.
 Consequences: piąty jawny snapshot API, historia i hashe; bez nowego scoringu, zmiany grafu lub danych prywatnych.
+
+## 2026-09-17 — historyczny rekord inwestycji oddzielony od obiektu sieci
+
+Date: 2026-09-17.
+Decision / Context: historyczny GIS zawiera warstwy planów, realizacji i modernizacji z datami oraz odsyłaczami do publikacji.
+Options considered: bezpośredni import do bieżącego grafu; automatyczne scalanie po nazwie; prywatny rejestr wierszy źródłowych.
+Selected option: rejestr wierszy, oryginalne atrybuty, hash i fid; identyfikator kanonicznej inwestycji pozostaje null.
+Reason: jeden wiersz może obejmować kilka zadań, a daty i historyczne nazwy warstw nie potwierdzają aktualnej eksploatacji.
+Trade-offs: dodatkowa weryfikacja źródeł i rozpoznanie obiektów przed wykorzystaniem w scenariuszach sieci.
+Consequences: metoda historical_investment_records_v1, osobna kolejka linków bez pobierania, brak automatycznego dodawania infrastruktury lub MW. Kod i ogólny postęp wersjonowane; dane i ich szczegółowe wyniki pozostają prywatne.

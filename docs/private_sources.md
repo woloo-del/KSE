@@ -46,3 +46,11 @@ Rozszerzono prywatny przegląd o przekrój pola, zestawienie szaf oraz cztery ar
 
 
 Przegląd zapisów wielogrupowych: `scripts/review_private_gis_groups.py ROOT OUTPUT`. Wymaga zgodności kolejności nazw z numerowanym opisem, zgodnej liczby składników i jednostki MW. Porównuje kandydatów wyłącznie z wpisami pojedynczych grup w tej samej warstwie i roku. Zgodność wewnątrz kompilacji nie stanowi niezależnego potwierdzenia; przypisania pozostają INFERRED, bez promocji pierwotnych UNKNOWN do aktualnej mocy. Brak porównania i konflikty są jawne. Wyniki, pełne opisy oraz powiązania fid pozostają prywatne.
+
+## 17.09.2026 — rejestr historycznych wpisów o inwestycjach
+
+Polecenie: `.venv/Scripts/python.exe scripts/normalize_private_gis_investments.py ROOT OUTPUT`. Odczytuje dziewięć jawnie wskazanych warstw inwestycji, modernizacji i planów przestrzennych. Wymaga pełnego zestawu plików oraz oczekiwanych pól; błędy geometrii lub zmienione hashe przerywają budowę wyniku. Nie odczytuje pozostałych katalogów ani sekretów. OUTPUT musi być nowym, prywatnym katalogiem poza wejściem.
+
+Każdy wpis zachowuje wszystkie atrybuty, źródłową tabelę, fid i hash. Stabilny identyfikator odnosi się do wiersza konkretnego snapshotu, nie do rozpoznanej inwestycji. Nazwy podobne, powtórzenia i współrzędne nie powodują scalania. Klasyfikacja historyczna wynika wyłącznie z nazwy warstwy i jest oznaczona INFERRED; nie stanowi potwierdzenia aktualnego statusu. Pole roku normalizowane jest tylko wtedy, gdy zawiera pojedynczy czterocyfrowy rok; zakresy i opisy wielu zadań pozostają do przeglądu. Zachowane deklaracje REPORTED dotyczą kompilacji, nie niezależnie zweryfikowanych dokumentów operatora. Rozbieżność kolumn między eksportami pozostaje widoczna.
+
+Prywatny wynik obejmuje rejestr JSON, przegląd i kolejkę adresów do weryfikacji. Grupowanie identycznych URL służy ograniczeniu przyszłych pobrań; nie jest dopasowaniem inwestycji ani dowodem wiarygodności strony. Pierwotne teksty linków pozostają w atrybutach. Nie wykonywano masowego pobierania adresów. Daty załączenia, bieżące statusy, tożsamość inwestycji i przyrosty dostępnej mocy pozostają nieustalone. Wynik nie zasila publicznego API ani ogólnego raportu szczegółami prywatnego zbioru; raport obejmuje postęp i ograniczenia.
