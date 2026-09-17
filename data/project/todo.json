@@ -788,6 +788,27 @@
       "started_at": "2026-09-17",
       "completed_at": "2026-09-17",
       "risk": "Dostęp techniczny nie oznacza prawa redystrybucji; brak danych o rezerwie przyłączeniowej."
+    },
+    {
+      "id": "KSE-042",
+      "title": "Interaktywny prototyp pastelowego interfejsu",
+      "stage": "UI concept",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-040"
+      ],
+      "next_action": "Zebrać uwagi użytkownika do koncepcji; przenieść zatwierdzone elementy do aplikacji po walidacji geometrii.",
+      "acceptance": "Działający podgląd z publiczną geometrią, projektami i niezależnymi parametrami BESS; dane demonstracyjne jawne; brak fikcyjnego score.",
+      "evidence": [
+        "docs/prototypes/platform-concept.html",
+        "scripts/build_platform_concept.py",
+        "docs/17_local_application.md"
+      ],
+      "started_at": "2026-09-17",
+      "completed_at": "2026-09-17",
+      "risk": "To prototyp wyglądu i interakcji, nie nowe możliwości obliczeń sieciowych."
     }
   ]
 }

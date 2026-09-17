@@ -59,6 +59,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-039 | Projekt PRSP po konsultacjach: dowody inwestycji w pilocie | Data quality | Zrobione | P1 | KSE-034 |
 | KSE-040 | Audyt przydatności GIS i rzeczywistej próbki OSM Radkowic | Data quality | Zrobione | P1 | — |
 | KSE-041 | Weryfikacja źródeł GRID OZE i Energetycznej Mapy Polski | Research | Zrobione | P1 | — |
+| KSE-042 | Interaktywny prototyp pastelowego interfejsu | UI concept | Zrobione | P1 | KSE-040 |
 
 ## Kryteria zakończenia i dowody
 
@@ -512,3 +513,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-17.
 - Dowody/kontekst: [docs/19_oze_sources_review.md](docs/19_oze_sources_review.md), [data/catalog/oze_archive_2026-09-17.json](data/catalog/oze_archive_2026-09-17.json).
+
+### KSE-042 — Interaktywny prototyp pastelowego interfejsu
+
+- Odpowiedzialność: Codex.
+- Następny krok: Zebrać uwagi użytkownika do koncepcji; przenieść zatwierdzone elementy do aplikacji po walidacji geometrii.
+- Kryterium: Działający podgląd z publiczną geometrią, projektami i niezależnymi parametrami BESS; dane demonstracyjne jawne; brak fikcyjnego score.
+- Nieukończone zależności: brak.
+- Ryzyko: To prototyp wyglądu i interakcji, nie nowe możliwości obliczeń sieciowych..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-17.
+- Dowody/kontekst: [docs/prototypes/platform-concept.html](docs/prototypes/platform-concept.html), [scripts/build_platform_concept.py](scripts/build_platform_concept.py), [docs/17_local_application.md](docs/17_local_application.md).

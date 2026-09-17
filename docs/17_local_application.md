@@ -49,3 +49,11 @@ Sprawdzono działającą aplikację w przeglądarce: scenariusz testowy BESS 50 
 ## 17.09.2026 — inwestycje sieciowe
 
 Dodano zakładkę z dwoma zweryfikowanymi wpisami projektu PRSP po konsultacjach. Widok rozróżnia plan i realizację deklarowaną w dokumencie, pokazuje strony, identyfikatory, datę odczytu i hash. Zakończenie formalne/finansowe/techniczne nie jest datą załączenia; dostępne MW pozostają nieustalone. API i eksport oceny zachowują szósty snapshot `development_plan`. Metoda opinii documentary_screening_v2 nie zmienia reguł ani wag; nowy dokument jest dodatkowym materiałem do oceny użytkownika. Potwierdzono w przeglądarce oba horyzonty, oznaczenie projektu oraz rozwijany dowód i odnośnik. Test API sprawdza zawartość eksportu; nie testowano ponownie samego mechanizmu pobrania pliku przez przeglądarkę.
+
+## 17.09.2026 — interaktywna koncepcja wizualna
+
+Na prośbę użytkownika przygotowano `docs/prototypes/platform-concept.html`: jasna matowa paleta, mapa rzeczywistej geometrii OSM pilota, zakładki projektów, inwestycji i dowodów. To oddzielna koncepcja, nie zmiana działającej aplikacji ani metodologii. Parametry BESS są demonstracyjne; import/eksport niezależne. Widok jakościowej opinii reaguje na wejścia, ale nie oblicza mocy lub prawdopodobieństwa. Nie czyta prywatnych źródeł.
+
+Odtworzenie danych osadzonych: `.venv/Scripts/python.exe scripts/build_platform_concept.py`. Potrzebne publiczne snapshoty OSM i pipeline. Hash OSM jest sprawdzany; hashe obu wejść zapisane w fragmencie. Projekcja D3 7.9.0, ODbL i atrybucja OSM. Przeglądarka wymaga dostępu do biblioteki D3 z CDN; dane nie są pobierane na żywo.
+
+Sprawdzono podgląd przy 1024 i 360 px, przełączanie napięcia, zachowanie niezależnych mocy (import 75 MW / eksport 50 MW), scenariusz planów, tabelę projektów i wybór transformatora. Nie testowano hostowych wariantów palety Tweak; są opcjonalne. Koncepcja nie wdraża krajowej mapy ani automatycznego pozyskiwania danych.
