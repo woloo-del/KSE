@@ -964,18 +964,22 @@
       "id": "KSE-050",
       "title": "Test zbiorczego importu drugiego operatora",
       "stage": "Scaling",
-      "status": "Not Started",
+      "status": "Complete",
       "priority": "P0",
       "owner": "Codex",
       "depends_on": [
         "KSE-048"
       ],
-      "next_action": "Wybrać już zweryfikowany wykaz OSD z katalogu i porównać semantykę pól oraz zakres pokrycia.",
+      "next_action": "Sprawdzić NEED-019 oraz KSE-049; parser mocy TAURON wymaga geometrii kolumn, obecny adapter świadomie ich nie odczytuje.",
       "acceptance": "Co najmniej drugi operator obsłużony zbiorczo, sprawdzona przenośność zasad i udokumentowane różnice źródeł.",
       "evidence": [
-        "docs/21_scalability_benchmark.md"
+        "docs/21_scalability_benchmark.md",
+        "tests/test_tauron_bulk.py",
+        "data/reference/tauron_scale_benchmark_2026-09-10_v1.json"
       ],
-      "risk": "Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych."
+      "risk": "Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych.",
+      "started_at": "2026-09-18",
+      "completed_at": "2026-09-18"
     }
   ]
 }

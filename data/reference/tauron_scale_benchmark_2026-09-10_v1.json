@@ -1,0 +1,682 @@
+{
+  "method": "tauron_bulk_text_v1",
+  "source_date_reported": "30.06.2026",
+  "metrics": {
+    "source_records": 10955,
+    "source_code_voltage_groups": 624,
+    "grouped_records": 8571,
+    "ungrouped_records": 2384,
+    "records_requiring_identity_review": 2389,
+    "reason_counts": {
+      "POINT_NOT_SINGLE_CODE": 638,
+      "MULTIPLE_POINTS": 1873,
+      "REPEATED_OPERATOR_OBJECT_ID": 1876
+    },
+    "unique_operator_ids": 9926,
+    "repeated_operator_ids": 847,
+    "status_counts": {
+      "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 237,
+      "WNIOSEK wycofany": 318,
+      "WARUNKI PRZYŁĄCZENIA utraciły ważność": 335,
+      "WARUNKI PRZYŁĄCZENIA wydane": 2794,
+      "UMOWA O PRZYŁĄCZENIE obowiązująca": 6629,
+      "ODMOWA PRZYŁĄCZENIA": 50,
+      "WNIOSEK niekompletny": 148,
+      "UMOWA O PRZYŁĄCZENIE - obiekt przyłączony": 342,
+      "UMOWA O PRZYŁĄCZENIE rozwiązana": 69,
+      "WNIOSEK w weryfikacji": 33
+    },
+    "power_values_extracted": 0,
+    "canonical_stations_verified": 0
+  },
+  "sample_profiles": [
+    {
+      "profile_id": "34ec200eaac8e21a8bc9be2d3be55c15c8a10fbad0c2584576fd3f3a75fbbc52",
+      "point_code": "ARG3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3636
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "b8ce348e1db1b3f83190a56bb9bf1f147f6166a805757f654f49d184dee42be1",
+      "point_code": "BDL3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3624
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "9dab46a2d360c23736de2e679a7f01cd753f2a07d46d45c9c7c1d400c0e1db16",
+      "point_code": "BIK4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3564,
+        3573
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 2
+      }
+    },
+    {
+      "profile_id": "1c994c813383964268755373c553accf5990e1726d17af6037297b46f023b274",
+      "point_code": "BLM4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3631
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "bb7e9f7d77fcf215a60488b2bac6aef0f857c77a92930369f13436394fff990f",
+      "point_code": "BLW4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3615
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "4026be416186c2e4054fd54b465065e6d5e0e0632dbcf4ad47b0fab3e9dee0df",
+      "point_code": "BOG4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3549,
+        3662
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE rozwiązana": 1,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "87a90f9aa0e7df61c83e72f8a848cc62a57cd0f759f1e14e5c9d1fa530fde325",
+      "point_code": "BRD3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3674
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "9b3eea63a3ab6e399a8f294137d60d22219cb67d3f403e55bb9c66ff01480a2d",
+      "point_code": "BSP4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        10835,
+        10848
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "78fabcfee2af296427e4d55b432e0a6763bcddb662b4070e062e2fc7e1cb2991",
+      "point_code": "BST4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3568
+      ],
+      "status_counts": {
+        "ODMOWA PRZYŁĄCZENIA": 1
+      }
+    },
+    {
+      "profile_id": "b0d030d45d2660aa88f860a2169603a940fffc24b0ada597ed86880cdd4bd7c5",
+      "point_code": "BUK3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3650
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "dcef3efaca1e85a80aadc32eaca94a3f6b5ba7f2dac0815d8b8c67c6f8a1aca9",
+      "point_code": "CCC4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        10834
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE rozwiązana": 1
+      }
+    },
+    {
+      "profile_id": "4c05d836b51fe4f005e423b4a245b9d66f19316779487a03667591525ec712bc",
+      "point_code": "CER3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3521
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "54e542e264d278852bd5efa3f9a1ee57f56345731fd9a84dc7f28d6bbb1434f7",
+      "point_code": "CHO3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3502,
+        3608
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 2
+      }
+    },
+    {
+      "profile_id": "536fa72d71f32c10ddfd426c7db2dc78402107ce7dd68af4a51a530b111cee18",
+      "point_code": "CIS3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3666
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "2940e459effc2d80d4e51a1009ba2b02afd03ae911035eda7dde1c88455e520e",
+      "point_code": "CJO4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3532,
+        3555,
+        3577
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 2,
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "c0becebe89e68ec7ae662128bf88ac69d395332583aadf50eee7a0294eb224c6",
+      "point_code": "CPC4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3545,
+        3628
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 2
+      }
+    },
+    {
+      "profile_id": "d06b3f6b783f109078696a11c6857e6b7ee409b1139def95880060964669151e",
+      "point_code": "CRN4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        18,
+        3531,
+        3572,
+        3579,
+        3587,
+        3655,
+        3663,
+        3688
+      ],
+      "status_counts": {
+        "ODMOWA PRZYŁĄCZENIA": 3,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 4,
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "bc98363f40c0b6c925f4d0c203073e6b4edc786a1057e6ab58455aca22121b98",
+      "point_code": "CYK3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3648
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "f43f667111276d53b1e2e77d2d8add750462ea9245c0dc308ee4828bb123c102",
+      "point_code": "CZC3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3610
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "ff7652e2ad7611ea2515dcdda83cba388ff5519c91827ae0d76621d69089a4ba",
+      "point_code": "DBR3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3560
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "c56f16aad5636d87164695cd69a05c416eede077fa8dbca0d6a6a5eff1fac763",
+      "point_code": "DKA3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3541,
+        3594
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 2
+      }
+    },
+    {
+      "profile_id": "aeda6598c69f84708009669b25542c40af15b5ccabfd519f62b9073ff3463496",
+      "point_code": "DUN3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        2207
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "4be17a53948a6da9358b13f61ae78ce3ea5568d8f71c8ec49d3a0f271782b794",
+      "point_code": "GDK3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3619
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE - obiekt przyłączony": 1
+      }
+    },
+    {
+      "profile_id": "a3448f59fc4ed534b020900d8b2ee297c0e192dc7daa74269bfd3152f286ac7c",
+      "point_code": "GON3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3661
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "1162abd04cbe12cf8fd82c105575b34bf2ac7aca54007574c122818fe388ec99",
+      "point_code": "GOS3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3530,
+        3586
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 2
+      }
+    },
+    {
+      "profile_id": "71a3a0788080fd51bb82040cd750dd00b3892870ccf6ffa3c2ac317867bf731c",
+      "point_code": "GRA3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3540,
+        3618
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "504610b7125b9a88bc12603c5772d82c43adc09763b7edc75870d8b0a5839a34",
+      "point_code": "GRD3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3535
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "a39414d956032a1251bebbf20980523897df9f3ead08e79162a4cf91c156d5cb",
+      "point_code": "GRK3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3603
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "a5fccbc48efb9aa8cdf05653d972e5e085b099524cde486bae7b2032a2d60f5a",
+      "point_code": "GRM4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3558
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "03eee84f00aaff541d319ea28d6226792e60ebf21c2de748c18cbf84d7f2eedb",
+      "point_code": "HAJ3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3471,
+        3510,
+        3512,
+        3513
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE rozwiązana": 1,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 3
+      }
+    },
+    {
+      "profile_id": "7b46cb88bce184baa9becfd5aef8485cac642b695532a96554949afd03783852",
+      "point_code": "HAL3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3606,
+        3665
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 2
+      }
+    },
+    {
+      "profile_id": "a4ca2ec94488aea8a39fb0ae1465263b7f025575ee56594641411e19384a0d1b",
+      "point_code": "HER3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        10919
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "68d5b0787db86964433e605a74d9c025d54ed30e708c4ee5389b5dfa99abb05a",
+      "point_code": "HMN3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3519,
+        3635,
+        3639
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 2,
+        "ODMOWA PRZYŁĄCZENIA": 1
+      }
+    },
+    {
+      "profile_id": "92fb52edce487cd33ec4ed537737bff2ac82220c92dfa08cfc322a0c86f1dbd4",
+      "point_code": "JAM3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3638
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "858135c40192ff26226b49d19da642bcd957cf9514c5eda712dde97124387d24",
+      "point_code": "JDK3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3525
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "447467e840e4947e3b6546b6cde216a1a09dec6b9c734e2009e8dfb5330ce51b",
+      "point_code": "JEL4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3617
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "24e4f68d286061a4824da6c519b1ab63ccd84848d533c0d4e5cd4a9297260730",
+      "point_code": "JLS3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3523
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "fa30c98b39448f82b4645106ab075b126de87fb7fa22e3ed55cb2364da3ea865",
+      "point_code": "JWR4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3518
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "49b3df01e1502dbc5d9fc676488ce17d410c4e179e9b51b288e62c5da8f6e0bb",
+      "point_code": "JWS4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3646
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "f8a164f92cbe77ae04c467bfd7d2db39959eb4d03229f51bc5291948cdfa5ed5",
+      "point_code": "KAL3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        10924
+      ],
+      "status_counts": {
+        "ODMOWA PRZYŁĄCZENIA": 1
+      }
+    },
+    {
+      "profile_id": "606bd28a7b4bfa960a45554055c3f6329eec2a2f284b8ca7b36082ab6b086eac",
+      "point_code": "KAS3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3647
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "7015aacb6c03cdef568e8096dff7e8dcd5e657859c9cd36a9f0776c707db3274",
+      "point_code": "KAZ3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3613
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "d4a38c4ed1778dcc4034067a68cdc84091f7db7e9ea144bef50e4c05233639c4",
+      "point_code": "KDZ4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3524
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "a8ffad336702a5540e341e39b0233f41a2a474d18074d5988569a84605278a41",
+      "point_code": "KET3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        2266
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "d1c56f510b7ba4c84872d8bb22695904e298a73e18c9388c0b7f4e618530364c",
+      "point_code": "KLI4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3621,
+        3640
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "2e5127d23bdfeb0eb064b440d5c197e817d88b972dd0462a9804f1e0714ee6c6",
+      "point_code": "KLU3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3515
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "14be390611569d87d62722d6ba0d9fe324e086d2b152e6e278bf1af99d470b3b",
+      "point_code": "KOS3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3511
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "e997ca98659e99a923b5ead35f01fed29c5bc8547b37f75aad94e7bc4148c693",
+      "point_code": "KRD4",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3678
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    },
+    {
+      "profile_id": "8410ec7dbdd75a61f788cbc5c453f014fe27ea913d5ab5b5c68b3e5b9e9c519d",
+      "point_code": "KRE3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        3644
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      }
+    },
+    {
+      "profile_id": "6dd98efacf8f4978aba0095784e356bd334d72afbeff184dd847ee9ac714e795",
+      "point_code": "KSW3",
+      "voltage_reported": "110 kV",
+      "canonical_station_id": null,
+      "row_numbers": [
+        87
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      }
+    }
+  ],
+  "limitations": [
+    "Point codes are not verified GPZ names; no decoding by code suffix.",
+    "Repeated object IDs are preserved, never deduplicated as projects.",
+    "PDF text omits blank columns; power values are not inferred by token position.",
+    "Connected status is reported by the source, not independent operational confirmation.",
+    "Grouping statistics do not measure matching accuracy or nationwide coverage."
+  ],
+  "provenance": {
+    "url": "https://www.tauron-dystrybucja.pl/-/media/offer-documents/dystrybucja/przylaczenie/dostepne-moce/informacja-o-przylaczanych-obiektach-i-wydanych-odmowach.ashx",
+    "sha256": "ce11455a2575454588fef46f711700b476ead67f4cd0b9a829b96e6698bc83b8",
+    "retrieval_date": "2026-09-10T11:19:38.2544804Z",
+    "local_path": "data/raw/research/2026-09-10/tauron_pipeline_retrieved_2026-09-10.pdf"
+  },
+  "method_code_sha256": "5162461177e24abcddd8fb6a74fd918a625ecd8e99f3a271218855b179d861d9",
+  "text_sha256": "2485637b8cd30bf2dd7f4d5a738a39a9051191f7340f412689e9e51f16267f80"
+}

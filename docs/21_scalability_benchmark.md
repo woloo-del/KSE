@@ -105,3 +105,34 @@ Liczniki oznaczają wiersze publikacji. Tabela nie jest rankingiem stacji.
 1. Zweryfikować tożsamości 50 grup wobec niezależnego słownika, zachowując rozdział stacji planowanych i istniejących; mierzyć błędy i czas rozstrzygnięć.
 2. Uruchomić drugi zbiorczy import dla OSD; dopiero wtedy ocenić przenośność metody między operatorami.
 3. Udostępnić wybór wielu stacji w aplikacji po ustaleniu jawnych identyfikatorów i zakresu pokrycia. Dokumentacja szczegółowa Radkowic pozostaje osobnym poziomem analizy na żądanie.
+
+## Drugi operator — TAURON, próba z 18.09.2026
+
+Przetworzono zachowany 99-stronicowy PDF: 98 stron tabeli i stronę legendy. Data wydrukowana w nagłówku: 30.06.2026; plik pobrano 10.09.2026. Nie odświeżano danych operatora. Obejrzano render pierwszej i ostatniej strony tabeli. Parser rozlicza ciąg numerów 1–10955; nie jest to ręczny audyt wszystkich komórek.
+
+| Miara | Wynik |
+|---|---:|
+| Wiersze tabeli | 10 955 |
+| Grupy kod + poziom napięcia | 624 |
+| Wiersze przypisane do grup | 8 571 |
+| Wiersze bez przypisania | 2 384 |
+| Wiersze z flagą weryfikacji tożsamości | 2 389 |
+| Unikalne wartości ID obiektu w źródle | 9 926 |
+| Wartości ID występujące więcej niż raz | 847 |
+| Wiersze z powtarzającymi się ID | 1 876 |
+| Wiersze o statusie obiekt przyłączony | 342 |
+| Znormalizowane wartości mocy | 0 |
+
+624 grupy nie są 624 potwierdzonymi GPZ. ID obiektu nie jest liczbą projektów: powtórzenia mogą dotyczyć części instalacji lub wielu punktów i pozostają zachowane. Zdarzają się opisy „Stacja obca”, brak określonego miejsca oraz kody, które wymagają słownika. Automatycznie grupujemy tylko pojedynczą etykietę w formie trzech wielkich liter ASCII i cyfry 3/4, przy fladze NIE; jest to rozpoznanie formy kodu, nie interpretacja jego znaczenia. Inne oznaczenia trafiają do przeglądu. Numer kodu nie wyznacza napięcia — poziom odczytujemy z osobnej kolumny.
+
+Wiersze z powtarzanym ID i pojedynczym kodem mogą zachować grupę źródłową, ale nadal mają flagę weryfikacji. Flagi nakładają się: 638 etykiet poza pojedynczym kodem, 1873 wiersze z wieloma miejscami, 1876 z powtórzonym ID. Nie sumujemy tych liczb jako liczby błędów.
+
+Eksport tekstu PDF usuwa puste komórki, więc kolejne liczby w linii nie określają bezpiecznie kolumn eksport/import. Dlatego adapter normalizuje punkt, poziom, status, typ, ID i lokalizator; moce mają null oraz NOT_EXTRACTED_FROM_FLATTENED_PDF, a oryginalna linia jest zachowana. To świadomie węższy zakres niż PSE. Liczniki wyjątków PSE i TAURON nie mierzą identycznych kryteriów. Do mocy potrzebna jest osobna ekstrakcja geometryczna tabeli i kontrola nagłówków oraz próbek — nie zgadywanie pozycji liczb.
+
+Odczyt tekstu 99 stron: 65,04 s. Przebieg z zapisanym tekstem, parsowaniem i zapisem wyników: około 0,53 s. Cache związano z hashem PDF i tekstu. Są to dwa różne zakresy pomiaru. Nie uwzględniają czasu researchu i ręcznej weryfikacji. Test potwierdza możliwość przetwarzania całych publikacji, nie potwierdza jakości identyfikacji wszystkich stacji.
+
+Odtworzenie: `python scripts/benchmark_tauron_scale.py`. Brak cache powoduje ponowny odczyt PDF. Wynik śledzony: `data/reference/tauron_scale_benchmark_2026-09-10_v1.json`; pełne 10955 rekordów w ignorowanym `data/processed/tauron_bulk_pipeline_2026-09-10_v1.json`. Cache oraz surowy PDF pozostają lokalne. Adapter zatrzymuje się przy zmianie formatu wiersza, nieznanym statusie, braku/sporze daty lub nieciągłej numeracji. Nie deduplikuje po ID obiektu i nie sumuje mocy.
+
+Źródło: [TAURON — wykaz obiektów i odmów](https://www.tauron-dystrybucja.pl/-/media/offer-documents/dystrybucja/przylaczenie/dostepne-moce/informacja-o-przylaczanych-obiektach-i-wydanych-odmowach.ashx). SHA-256 zachowanej wersji: `ce11455a2575454588fef46f711700b476ead67f4cd0b9a829b96e6698bc83b8`. Licencja i warunki regularnego użycia pozostają zgodne z nierozstrzygniętymi ograniczeniami katalogu; ten test nie ustanawia prawa redystrybucji.
+
+Wspólne dla obu operatorów są kontrola snapshotu, provenance, rozdział statusów, jawne braki i kolejka wyjątków. Odczyt tabeli i znaczenie identyfikatorów pozostają specyficzne dla operatora. Następna bramka to NEED-019 (słownik kodów) i KSE-049 (niezależny audyt tożsamości), nie rozszerzanie ręcznej analizy każdego GPZ.

@@ -11,7 +11,6 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Zachować sześć ZIP wymienionych w docs/reproducibility.md na niezależnym prywatnym nośniku i sprawdzić je z właściwymi manifestami przez --verify-only. Potwierdzić datę kopii.
 - **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Uwzględnić prywatny przegląd schematów i etapów, rozstrzygnąć rewizje oraz przypisania pól (NEED-013). Nie przenosić relacji projektowych do bieżącego modelu bez dowodu wykonania.
 - **KSE-049 — Niezależna walidacja tożsamości profili i kosztu wyjątków** (P0, Do zrobienia). Wybrać niezależny słownik i zweryfikować 50 grup; zachować wyniki trafne, niejednoznaczne i błędne oraz czas ręcznej pracy.
-- **KSE-050 — Test zbiorczego importu drugiego operatora** (P0, Do zrobienia). Wybrać już zweryfikowany wykaz OSD z katalogu i porównać semantykę pól oraz zakres pokrycia.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
@@ -69,7 +68,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-047 | Etapy modernizacji PSE w aplikacji i eksporcie | Application | Zrobione | P1 | KSE-046 |
 | KSE-048 | Zbiorczy import PSE i próba 50 profili źródłowych | Scaling | Zrobione | P0 | KSE-047 |
 | KSE-049 | Niezależna walidacja tożsamości profili i kosztu wyjątków | Scaling | Do zrobienia | P0 | KSE-048 |
-| KSE-050 | Test zbiorczego importu drugiego operatora | Scaling | Do zrobienia | P0 | KSE-048 |
+| KSE-050 | Test zbiorczego importu drugiego operatora | Scaling | Zrobione | P0 | KSE-048 |
 
 ## Kryteria zakończenia i dowody
 
@@ -615,10 +614,10 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-050 — Test zbiorczego importu drugiego operatora
 
 - Odpowiedzialność: Codex.
-- Następny krok: Wybrać już zweryfikowany wykaz OSD z katalogu i porównać semantykę pól oraz zakres pokrycia.
+- Następny krok: Sprawdzić NEED-019 oraz KSE-049; parser mocy TAURON wymaga geometrii kolumn, obecny adapter świadomie ich nie odczytuje.
 - Kryterium: Co najmniej drugi operator obsłużony zbiorczo, sprawdzona przenośność zasad i udokumentowane różnice źródeł.
 - Nieukończone zależności: brak.
 - Ryzyko: Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych..
 - Termin docelowy: nie ustalono.
-- Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/21_scalability_benchmark.md](docs/21_scalability_benchmark.md).
+- Zakończono: 2026-09-18.
+- Dowody/kontekst: [docs/21_scalability_benchmark.md](docs/21_scalability_benchmark.md), [tests/test_tauron_bulk.py](tests/test_tauron_bulk.py), [data/reference/tauron_scale_benchmark_2026-09-10_v1.json](data/reference/tauron_scale_benchmark_2026-09-10_v1.json).

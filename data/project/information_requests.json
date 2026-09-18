@@ -253,6 +253,20 @@
       "basis": "OSM_RADK_STATION_AREA; docs/20_station_data_aggregation.md",
       "updated_at": "2026-09-18",
       "received_evidence": null
+    },
+    {
+      "id": "NEED-019",
+      "priority": "P0",
+      "title": "Oficjalny słownik kodów punktów TAURON",
+      "status": "Do sprawdzenia",
+      "requested_scope": "Powiązanie kodów publikacji (np. SKB3) z nazwą stacji lub innym elementem, identyfikatorem operatora, lokalizacją, poziomem napięcia, datą obowiązywania i statusem planowana/istniejąca.",
+      "unlocks": "Identyfikację zbiorczą grup źródłowych bez ręcznego researchu każdej stacji.",
+      "next_action": "Najpierw sprawdzić publiczną mapę i dokumenty TAURON. Użytkownik może pomóc znanym słownikiem lub wskazaniem publikacji, jeśli je posiada.",
+      "without_it": "Pokazywać kody jako kody źródłowe, bez przypisywania pełnych nazw i współrzędnych.",
+      "owner": "Codex — źródła publiczne; użytkownik — pomoc opcjonalna",
+      "basis": "docs/21_scalability_benchmark.md; TAURON_PIPELINE; TAURON_MAP",
+      "updated_at": "2026-09-18",
+      "received_evidence": null
     }
   ]
 }

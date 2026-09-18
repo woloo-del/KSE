@@ -49,3 +49,5 @@ raportu badawczego. Pomoc polega na przekazaniu oryginalnych plików z datą i U
 jeśli użytkownik może je zwyczajnie pobrać; nie wymaga przekazywania poświadczeń.
 
 18.09.2026: dodano NEED-017 (zakresy dwóch zadań PRSP) i NEED-018 (identyfikacja obiektów OSM). W pierwszej kolejności sprawdzamy publiczne i już otrzymane materiały. NEED-014 obsługuje istniejącą rozbieżność dat; nie tworzono jej duplikatu. Nie są potrzebne dane przepływów ani analiza wpływu.
+
+18.09.2026: NEED-019 dotyczy oficjalnego słownika kodów TAURON. Pozyskanie jednego słownika może zastąpić ręczne ustalanie nazw setek punktów. Najpierw badamy źródła publiczne; pomoc użytkownika jest opcjonalna.
