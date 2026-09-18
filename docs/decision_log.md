@@ -301,3 +301,12 @@ Selected option: rejestr dowodów.
 Reason: umożliwia przegląd danych i późniejsze powiązania, zachowując niepewność tożsamości i różnice źródeł.
 Trade-offs: wynik nie jest jeszcze rejestrem unikalnych obiektów.
 Consequences: stabilne ID dowodów, cztery snapshoty, jawne OSM G i publikacje B, brak sumowania MW lub oceny możliwości przyłączenia. Szczegóły: docs/20_station_data_aggregation.md.
+
+## 2026-09-18 — Rozpoznawanie ponownie użytych dowodów
+
+- Decision: odróżniać identyczny rekord źródłowy od niezależnego potwierdzenia i od tożsamości urządzenia.
+- Options considered: scalanie po nazwie; zgodność identyfikatora; zgodność ID, źródła i snapshotu.
+- Selected option: zgodność wszystkich trzech pól dla wpisów projektowych.
+- Reason: nie zwiększać pozornie liczby potwierdzeń przez dwa widoki tej samej publikacji.
+- Trade-offs: wiele wpisów pozostaje nierozstrzygniętych; potrzebny dalszy przegląd dokumentacyjny.
+- Consequences: trzy powiązania SAME_SOURCE_RECORD; bez nowych relacji fizycznych, ocen wpływu ani automatycznego scalania OSM.

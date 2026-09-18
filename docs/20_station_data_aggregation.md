@@ -25,8 +25,16 @@ Każdy rekord ma stabilny identyfikator dowodu zależny od źródła i identyfik
 
 Ten sam wynik jest idempotentny. Inne bajty pod istniejącą nazwą powodują błąd; trzeba wybrać nową wersję. Wynik zawiera hashe czterech plików wejściowych i modułu metody. Listę wejść utrzymuje skrypt; nie przeszukuje prywatnych folderów. Adapter obsługuje wyłącznie sprawdzone schematy pilota Radkowic, nie dowolną stację.
 
-Backend dodaje `aggregated_evidence` do `/api/station` oraz snapshotu eksportowanej oceny. To siódme jawne wejście API; wejścia źródłowe agregacji są identyfikowane dodatkowo wewnętrznymi hashami. Istniejąca opinia nie wykorzystuje liczby 76 jako przesłanki. Nie dodano nowej zakładki frontendowej. Uruchomiony wcześniej proces serwera wymaga restartu, aby załadować zmieniony kod.
+Backend dodaje `aggregated_evidence` do `/api/station` oraz snapshotu eksportowanej oceny. To siódme jawne wejście API; wejścia źródłowe agregacji są identyfikowane dodatkowo wewnętrznymi hashami. Istniejąca opinia nie wykorzystuje liczby 76 jako przesłanki. Od 18.09.2026 dostępna jest zakładka Rejestr dowodów. Uruchomiony wcześniej proces serwera wymaga restartu, aby załadować zmieniony kod.
 
 ## Kontrole i następny krok
 
 Testy obejmują powtarzalność, zachowanie kategorii i rozbieżności, brak mutacji danych, odrzucenie duplikatów źródłowych, braków provenance i zmienionego schematu. Następny krok to przegląd relacji pomiędzy dowodami i obiektami oraz przypisanie kontekstowych przesłanek. Nie powstaje score, rezerwa MW ani werdykt możliwości przyłączenia.
+
+## Powiązania i przeglądarka dowodów — 18.09.2026
+
+Metoda `exact_evidence_record_link_v1` rozpoznaje ten sam wpis projektu wyłącznie przy zgodności ID rekordu, source_id oraz SHA-256 źródła. Trzy wiersze PSE mają odpowiedniki w grafie; to ponowne użycie tej samej publikacji, nie niezależne potwierdzenie. Pozostałe 73 wpisy pozostają UNLINKED. Nie oznacza to nieobecności urządzeń ani nieistnienia relacji. Nie powstają nowe połączenia elektryczne.
+
+API i eksport zawierają `evidence_links`, wersję metody i hash jej kodu. Interfejs udostępnia wyszukiwanie po nazwie, ID i źródle, filtr rodzaju wpisu oraz rozwijane źródło, lokalizator, daty, hash i oryginalną treść. Liczniki wynikają z danych.
+
+Weryfikacja: 18 testów modułów powiązań, agregacji i API; przeglądarka: 76 wpisów, filtr projektów 3, wyszukanie Chęcin 1, rozwinięcie źródła z wierszem 847 i hashem. Nadal potrzebna jest osobna weryfikacja tożsamości obiektów między różnymi źródłami.

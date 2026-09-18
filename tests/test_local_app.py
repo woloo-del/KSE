@@ -62,6 +62,7 @@ class LocalApiTests(unittest.TestCase):
             data = json.load(response)
         self.assertEqual(len(data['pipeline']['records']),3)
         self.assertEqual(len(data['graph']['entities']),13)
+        self.assertEqual(data['evidence_links']['status_counts'], {'SAME_SOURCE_RECORD': 3, 'UNLINKED': 73})
         self.assertIn('NEED-011',{r['id'] for r in data['requests']})
         for route in ['/', '/app.js','/style.css']:
             with urlopen(self.url+route) as response:

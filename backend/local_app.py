@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from grid_engine.screening_opinion import assess
+from grid_engine.evidence_links import link_records
 
 INPUTS = {
     'pipeline': 'data/reference/radkowice_pipeline_view_2026-07-31_v1.json',
@@ -47,6 +48,7 @@ def snapshot() -> dict:
             'investment_review': loaded['investment_review'],
             'development_plan': loaded['development_plan'],
             'aggregated_evidence': loaded['aggregated_evidence'],
+            'evidence_links': link_records(loaded['aggregated_evidence'], loaded['graph']),
             'input_sha256': hashes, 'scope': 'Lokalny pilot dokumentacyjny; dane publiczne, aktualizowane ręcznie.'}
 
 

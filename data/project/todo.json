@@ -1,6 +1,6 @@
 {
   "schema_version": "todo_v1",
-  "updated_at": "2026-09-17",
+  "updated_at": "2026-09-18",
   "project": "Grid Connection Intelligence — Polska",
   "tasks": [
     {
@@ -836,6 +836,28 @@
       "started_at": "2026-09-17",
       "completed_at": "2026-09-17",
       "risk": "76 rekordów nie jest liczbą unikalnych inwestycji lub urządzeń. Interpretacja i scalanie to osobny etap."
+    },
+    {
+      "id": "KSE-044",
+      "title": "Przeglądarka dowodów i rozpoznawanie tych samych publikacji",
+      "stage": "Data aggregation",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-043"
+      ],
+      "next_action": "Weryfikować tożsamość między odrębnymi źródłami oraz zakresy modernizacji; nie scalać po samej nazwie.",
+      "acceptance": "Filtry i źródła dostępne w aplikacji; dokładne powiązania odróżnione od niezależnych potwierdzeń; testy API i przeglądarki.",
+      "evidence": [
+        "docs/20_station_data_aggregation.md",
+        "grid_engine/evidence_links.py",
+        "tests/test_evidence_links.py",
+        "tests/test_local_app.py"
+      ],
+      "started_at": "2026-09-17",
+      "completed_at": "2026-09-18",
+      "risk": "73 nierozstrzygnięte powiązania nie oznaczają braku obiektów."
     }
   ]
 }

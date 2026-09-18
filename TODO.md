@@ -1,6 +1,6 @@
 # TODO — Grid Connection Intelligence
 
-Aktualizacja rejestru: **2026-09-17**. Źródło edytowalne: [todo.json](data/project/todo.json).
+Aktualizacja rejestru: **2026-09-18**. Źródło edytowalne: [todo.json](data/project/todo.json).
 
 Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zakończenia. Nie ustalono terminów dla niezaplanowanych zadań. P0 = warunek najbliższego etapu, P1 = rozwój po fundamentach, P2 = dalszy rozwój. Priorytety są kolejnością organizacji pracy, nie scoringiem sieci.
 
@@ -61,6 +61,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-041 | Weryfikacja źródeł GRID OZE i Energetycznej Mapy Polski | Research | Zrobione | P1 | — |
 | KSE-042 | Interaktywny prototyp pastelowego interfejsu | UI concept | Zrobione | P1 | KSE-040 |
 | KSE-043 | Wspólny rejestr dowodów Radkowic | Data aggregation | Zrobione | P1 | KSE-039, KSE-040 |
+| KSE-044 | Przeglądarka dowodów i rozpoznawanie tych samych publikacji | Data aggregation | Zrobione | P1 | KSE-043 |
 
 ## Kryteria zakończenia i dowody
 
@@ -536,3 +537,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-17.
 - Dowody/kontekst: [docs/20_station_data_aggregation.md](docs/20_station_data_aggregation.md), [grid_engine/station_evidence.py](grid_engine/station_evidence.py), [scripts/build_station_evidence.py](scripts/build_station_evidence.py), [tests/test_station_evidence.py](tests/test_station_evidence.py), [tests/test_local_app.py](tests/test_local_app.py).
+
+### KSE-044 — Przeglądarka dowodów i rozpoznawanie tych samych publikacji
+
+- Odpowiedzialność: Codex.
+- Następny krok: Weryfikować tożsamość między odrębnymi źródłami oraz zakresy modernizacji; nie scalać po samej nazwie.
+- Kryterium: Filtry i źródła dostępne w aplikacji; dokładne powiązania odróżnione od niezależnych potwierdzeń; testy API i przeglądarki.
+- Nieukończone zależności: brak.
+- Ryzyko: 73 nierozstrzygnięte powiązania nie oznaczają braku obiektów..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-18.
+- Dowody/kontekst: [docs/20_station_data_aggregation.md](docs/20_station_data_aggregation.md), [grid_engine/evidence_links.py](grid_engine/evidence_links.py), [tests/test_evidence_links.py](tests/test_evidence_links.py), [tests/test_local_app.py](tests/test_local_app.py).

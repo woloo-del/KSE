@@ -57,3 +57,7 @@ Na prośbę użytkownika przygotowano `docs/prototypes/platform-concept.html`: j
 Odtworzenie danych osadzonych: `.venv/Scripts/python.exe scripts/build_platform_concept.py`. Potrzebne publiczne snapshoty OSM i pipeline. Hash OSM jest sprawdzany; hashe obu wejść zapisane w fragmencie. Projekcja D3 7.9.0, ODbL i atrybucja OSM. Przeglądarka wymaga dostępu do biblioteki D3 z CDN; dane nie są pobierane na żywo.
 
 Sprawdzono podgląd przy 1024 i 360 px, przełączanie napięcia, zachowanie niezależnych mocy (import 75 MW / eksport 50 MW), scenariusz planów, tabelę projektów i wybór transformatora. Nie testowano hostowych wariantów palety Tweak; są opcjonalne. Koncepcja nie wdraża krajowej mapy ani automatycznego pozyskiwania danych.
+
+## Rejestr dowodów — 18.09.2026
+
+Siódma zakładka pozwala przeszukiwać publiczny rejestr i filtrować rodzaje wpisów. Szczegóły zawierają źródło, daty, lokalizator i zachowany rekord. `evidence_links` w API oraz eksporcie rozróżnia ten sam rekord publikacji od nierozstrzygniętej tożsamości; szczegóły w docs/20_station_data_aggregation.md. Backend po aktualizacji wymaga restartu.
