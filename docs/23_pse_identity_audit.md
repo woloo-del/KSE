@@ -31,4 +31,6 @@ Pełna kolejka: `data/private/analysis/pse_gis_candidates_2026-09-18_v2.json`. D
 
 ## Następna bramka
 
+Uzupełnienie z 18.09.2026: [zbiorczy indeks nagłówków portalu PSE](24_pse_bulk_investment_index.md) dostarcza tropów dla 40 profili. Opis budowy Gdańsk Przyjaźń 400/110 kV wyjaśnia, dlaczego brak napięcia w etykiecie GIS wymaga sprawdzenia zakresu, a nie automatycznego odrzucenia. Nie zmienia to statusu kandydatów na potwierdzony.
+
 Dla kandydatów potrzebne jest pierwotne źródło potwierdzające stację, poziom napięcia i zakres czasowy. Dla wyjątków dodatkowo kontrola aliasów, skrótów i planowanego statusu. Nie należy usuwać słowa „planowana” tylko w celu zwiększenia liczby dopasowań. Miernik błędnych tożsamości i czas ręcznej pracy pozostają null — automatyczne wyszukanie kandydatów nie stanowi ręcznego audytu ani próby reprezentatywnej.

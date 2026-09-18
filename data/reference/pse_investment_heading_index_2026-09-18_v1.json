@@ -1,0 +1,2296 @@
+{
+  "method": "pse_investment_heading_index_v1",
+  "source": {
+    "source_id": "PSE_RADK_STAGES",
+    "url": "https://inwestycje.pse.pl/",
+    "local_path": "data/raw/research/2026-09-18/pse_investments_home.html",
+    "sha256": "f1191dc99d430013f0714fb8c3c689d192d6ebfa083d32c796ad704e82d1fa38",
+    "retrieval_date": "2026-09-18T06:33:11.170759+00:00"
+  },
+  "source_quality": "B",
+  "source_date": null,
+  "profiles_sha256": "d7b9a1ca921dabf8d42511c5a861a530ac43c56a47ba1ff8ae62badaa8d3091f",
+  "code_sha256": {
+    "connectors/pse/investment_index.py": "dab06adcba2d92d90722b82e459428fad868b50d3f3497528b711a195e1e6561",
+    "connectors/pse/investment_dates.py": "253e36b55eee353c168f7d40dc69dba3df191df2c37db1a7a061351efd65b7bc"
+  },
+  "metrics": {
+    "nonempty_heading_occurrences": 267,
+    "distinct_heading_texts": 258,
+    "profiles": 50,
+    "profiles_with_mentions": 40,
+    "referenced_heading_texts": 105,
+    "confirmed_station_identities": 0
+  },
+  "headings": [
+    {
+      "heading_id": "df5a1e609f2258cf1072e2460912302adf4338badd158a8fbdaae6fe1840c484",
+      "title_reported": "Budowa stacji 400 kV Krzemienica z wprowadzeniem do linii 400 kV Dunowo – Słupsk i linii 400 kV Słupsk – Żydowo Kierzkowo",
+      "h4_positions": [
+        1
+      ],
+      "status_reported": null,
+      "status_review_required": true,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "a10d3cea0e83f004e981ee2c0248a3ad4afd33ab1d8acf65c66b8ba8b7f4698a",
+      "title_reported": "Budowa linii 400 kV Choczewo-Żarnowiec",
+      "h4_positions": [
+        2
+      ],
+      "status_reported": null,
+      "status_review_required": true,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "35dcc26173bca4da7643fbe08db2f2a4b1a47307b23778b628d1bcc85d785b23",
+      "title_reported": "Budowa linii 400 kV Choczewo do nacięcia linii Żarnowiec-Słupsk",
+      "h4_positions": [
+        3
+      ],
+      "status_reported": null,
+      "status_review_required": true,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "ee0d2b9f798651b974b968e19f03c180b8dc8e55523f84ebb2f265abdbe1e2e8",
+      "title_reported": "Budowa linii 400 kV Choczewo-Gdańsk Przyjaźń",
+      "h4_positions": [
+        4
+      ],
+      "status_reported": null,
+      "status_review_required": true,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "8d5f7b73d99a97c01b0bcc5e14508941c1a321dc7953c7e27296bd39226be288",
+      "title_reported": "Budowa linii 400 kV Choczewo do nacięcia linii Gdańsk Błonia-Grudziądz Węgrowo",
+      "h4_positions": [
+        5
+      ],
+      "status_reported": null,
+      "status_review_required": true,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "69c0a7358f4bd83a7455d4e2eed1034bb5d0cd1fd11a038fc1a9f44e0f808062",
+      "title_reported": "Modernizacja linii 400 kV Dunowo-Słupsk (w budowie)",
+      "h4_positions": [
+        6
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "0e78212a361cc54bd772365796d67f67bec6372156e60ddd1094acc68d056814",
+      "title_reported": "Modernizacja linii 400 kV: Krajnik-Morzyczyn, Morzyczyn-Dunowo oraz Krajnik-Baczyna na odcinku wykorzystującym istniejącą linię 400 kV Krajnik-Plewiska (zakończona)",
+      "h4_positions": [
+        8
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "3bc192f92c17801a9789c7799fa63c9322918e49545e8222f3cf4e1f6d0abe8d",
+      "title_reported": "Budowa linii 400 kV Gdańsk Błonia – Olsztyn Mątki (w przygotowaniu)",
+      "h4_positions": [
+        11
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "f6191e03b27462cd13cd05124923e0a452eb6dc6f23db220d5cd874b9acd8948",
+      "title_reported": "Budowa linii 400 kV Dunowo – Żydowo Kierzkowo – Piła Krzewina (w budowie)",
+      "h4_positions": [
+        12
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "e1cd4409df094e0b831625fc01a885289cb588dcd3c01d3d23bd068822fe6232",
+      "title_reported": "Przebudowa linii 220 kV Krajnik – Pomorzany – Glinki (w przygotowaniu) Rozbudowa stacji 110 kV Pomorzany o rozdzielnię 220 kV (w przygotowaniu)",
+      "h4_positions": [
+        13
+      ],
+      "status_reported": null,
+      "status_review_required": true,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "65881029a3d66a4a4050adceeb652a560cf86dba0d802fa5cc8ef4b267c118fe",
+      "title_reported": "Rozbudowa stacji 400/220 kV Krajnik dla przyłączenia nowych obiektów do KSE (w przygotowaniu)",
+      "h4_positions": [
+        14
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "d3dab2483f90614e68b00fb528f1a3bac1429ff7a9d67cb18877d3af5951e956",
+      "title_reported": "Rozbudowa rozdzielni 400 kV w stacji 400/220 kV Krajnik dla przyłączenia farmy fotowoltaicznej Banie 2 (w budowie)",
+      "h4_positions": [
+        15
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "3d72e5ad367cffe4237b007e3d2b85133fea417ce1a5bfb5fb0137574fb0200e",
+      "title_reported": "Rozbudowa i modernizacja stacji 400/220 kV Krajnik (zakończona)",
+      "h4_positions": [
+        17
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "392f4dc20ad3f232ef1950f61c15ecfbeb2b7c9037822e81a177a9f9f0133cde",
+      "title_reported": "Rozbudowa stacji 400/220 kV Krajnik dla przyłączenia dwóch bloków gazowo-parowych Elektrowni Dolna Odra (zakończona)",
+      "h4_positions": [
+        18
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "352f1bd2976c2400cff42c13c3e9dffe7a9f19e1e91bd2ce667b17d27b049da0",
+      "title_reported": "Budowa linii 400 kV Krajnik-Baczyna na przedpolu stacji Baczyna (zakończona)",
+      "h4_positions": [
+        19
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "52e00c11995a321a55b7c29cbc2cdab3d47172e7e003795de24864097717df51",
+      "title_reported": "Budowa stacji 400/220/110 kV Baczyna wraz z wprowadzeniem linii 400 kV Krajnik-Plewiska oraz linii 220 kV Krajnik-Gorzów – Etap II (w przygotowaniu) Budowa stacji 400/220/110 kV Baczyna wraz z wprowadzeniem linii 400 kV Krajnik-Plewiska oraz linii 220 kV Krajnik-Gorzów – Etap I (w budowie)",
+      "h4_positions": [
+        20
+      ],
+      "status_reported": null,
+      "status_review_required": true,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "b44c3a78a27c8fbf08e84848969f06b8df1a80935717482827cb0dbc1de93ea0",
+      "title_reported": "Modernizacja linii 220 kV Krajnik-Gorzów na odcinku Baczyna-Gorzów (w budowie)",
+      "h4_positions": [
+        21
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "5caae57529c350c510c5453fdc842cac9a54893ef29c5e4d4370da0788e71e1f",
+      "title_reported": "Rozbudowa stacji 400/220/110 kV Pątnów wraz z wprowadzeniem linii 400 kV Kromolice-Pątnów (w budowie)",
+      "h4_positions": [
+        29
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "4790be6529469d8ce0df0a1705af09b75439607757f06fded1aea960662e1888",
+      "title_reported": "Rozbudowa stacji 400/220/110 kV Pątnów wraz z wprowadzeniem linii 400 kV Kromolice-Pątnów – Etap I-VIII i Etap X (zakończona)",
+      "h4_positions": [
+        31
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "92ce6752938c8f4301d941d46dbd5417d01ad13092c6f33a0ab5849accff1bfa",
+      "title_reported": "Budowa linii 400 kV Kozienice – Miłosna (zakończona)",
+      "h4_positions": [
+        42
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "7655a7b1ffcce3a2bb5ce27d9fe8a03eb7140ba1ac56742d619677057dc4f624",
+      "title_reported": "Rozbudowa stacji 400-220-110 kV Chełm dla przyłączenia nowych obiektów do KSE (w przygotowaniu) Rozbudowa stacji 220/110 kV Chełm (w budowie)",
+      "h4_positions": [
+        54
+      ],
+      "status_reported": null,
+      "status_review_required": true,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "5bed99d76670ff00aa45f9b65ee8009bc4d5a79d9a361f8f9281f5831fa957c5",
+      "title_reported": "Modernizacja linii 220 kV Janów – Zgierz – Adamów – etap II (zakończona)",
+      "h4_positions": [
+        57
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "0535d3460840f63621d522840bed9ac5c1002dea1d719cc99b7d8db8fa59c121",
+      "title_reported": "Modernizacja linii 220 kV Janów-Zgierz-Adamów – etap I (zakończona)",
+      "h4_positions": [
+        59
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "9db12513bc1135ac465976e2a92970febb027b5f1e38763560b9d4a27d276aae",
+      "title_reported": "Modernizacja linii 220 kV Abramowice-Puławy (w przygotowaniu)",
+      "h4_positions": [
+        60
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "74fdd2ec185de80ae8cd5273d0a594649ba869a9742929305797f15d34edc72a",
+      "title_reported": "Wymiana przewodu odgromowego OPGW na liniach 220 kV: Puławy-Abramowice, Kozienice-Puławy, Rożki-Puławy (zakończona)",
+      "h4_positions": [
+        62,
+        64
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "f9882fdc5a7fc0f909d3763a3e80383db40e4ca230af50abb8c971589c4febac",
+      "title_reported": "Budowa linii 220 kV Konin – nacięcie linii Pątnów-Podolszyce wraz z rozbudową stacji 220/110 kV Konin",
+      "h4_positions": [
+        65
+      ],
+      "status_reported": null,
+      "status_review_required": true,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "c356496708e2f5976d8ed7e80ea578987e42040482df8f37896146775a1c1b77",
+      "title_reported": "Rozbudowa stacji 400/110 kV Kromolice dla przyłączenia nowych obiektów do KSE – Etap I i Etap II (w przygotowaniu)",
+      "h4_positions": [
+        67
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "fe7a270d3018c7a163688df300358de3574fa7865121ee6cb96540cf9e09c009",
+      "title_reported": "Rozbudowa rozdzielni 110 kV w stacji 400/110 kV Kromolice dla przyłączenia FW Wielkopolska (zakończona)",
+      "h4_positions": [
+        69
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "659a74c59bf46b62b7b7996e6deaf6e0c677fae9126c64bd38addff2a12e48bb",
+      "title_reported": "Rozbudowa rozdzielni 110 kV w stacji 400/110 kV Kromolice dla przyłączenia farmy fotowoltaicznej Młodzikowo (w budowie)",
+      "h4_positions": [
+        70
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "06c6ebf4d842c663e8c06e3978ff6d31c935d7df70a5166209903162ad6a3a97",
+      "title_reported": "Budowa linii 400 kV relacji Dobrzeń – nacięcie linii Pasikurowice – Ostrów",
+      "h4_positions": [
+        73
+      ],
+      "status_reported": null,
+      "status_review_required": true,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "91e1f19b30b475beaec192cc2fe03579bdfb7a929c130467b91a8e9a04cf89da",
+      "title_reported": "Modernizacja linii 400 kV relacji Dobrzeń – Pasikurowice / Trębaczew",
+      "h4_positions": [
+        74
+      ],
+      "status_reported": null,
+      "status_review_required": true,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "61552c0f2fd9dbbc1c19773fc714dff37cae6b24e7a63d3d261e8ecbde55f835",
+      "title_reported": "Budowa linii 400 kV Trębaczew – nacięcie linii Joachimów (Rokitnica) – Wielopole (w budowie)",
+      "h4_positions": [
+        77
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "e90e356191a50a026af761b7b6eb21ab885ebd357ced18f17fac297c7c41ac7d",
+      "title_reported": "Modernizacja odcinka linii elektroenergetycznej 400 kV relacji Trębaczew – Dobrzeń/Joachimów, od SE Trębaczew do słupa nr 183 (zakończona)",
+      "h4_positions": [
+        78
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "0d7b411e41631d92a24cb92f7872f68ad95590733fd0cbdae22dc2543e11c0f1",
+      "title_reported": "Przebudowa linii 220 kV Byczyna-Poręba, Poręba-Czeczott (zakończona)",
+      "h4_positions": [
+        80
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "9a9e034e809ce641fe5dc75f778bd08c920528506601e9ff839d15b88cd63dc1",
+      "title_reported": "Modernizacja linii 400 kV Rzeszów – Krosno Iskrzynia (w budowie)",
+      "h4_positions": [
+        84
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "a86ab4eec34d5949be838a330be269d2231584561ef5283c3bb3cbd3e08987e8",
+      "title_reported": "Modernizacja linii 400 kV Krosno Iskrzynia – Lemešany w zakresie wymiany przewodu odgromowego w sekcjach 344-346 oraz 349-352 i przewodów fazowych w sekcji 344-346 (w przygotowaniu)",
+      "h4_positions": [
+        86
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "f161b787ed61fca49066c056117216fc3a6a4655074002cdea8bca01c0792f39",
+      "title_reported": "Linia Krosno Iskrzynia – Lemešany (zakończona)",
+      "h4_positions": [
+        87
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "8b5071fcde36d030c1ab23a0bfc496a0735c81b90760a6556c08e86176a6048c",
+      "title_reported": "Modernizacja stacji 220/110 kV Boguszów – Etap II (w przygotowaniu)",
+      "h4_positions": [
+        89
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "25055680ad2f661dec4bc644619481f681adbc0f04bf2318d072129602044f38",
+      "title_reported": "Modernizacja stacji 220/110 kV Boguszów – Etap I (w budowie)",
+      "h4_positions": [
+        90
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "73a769057766cd30922128689ccdbd3303c91dabf49f6b2e6a8d8c0b7cc3c774",
+      "title_reported": "Modernizacja linii 220 kV Janów-Rogowiec, Rogowiec-Piotrków (zakończona)",
+      "h4_positions": [
+        91
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "c6f23a331153dde04c34cd157f499a1b4d1eb5832858682d9f705c38dbafe626",
+      "title_reported": "Modernizacja stacji 220/110 kV Konin dla przyłączenia nowych obiektów do KSE – Etap IV (w przygotowaniu)",
+      "h4_positions": [
+        92
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "752bb251e55ff256d5f1780fd8bb14bb1643a13bf5fefdc0b17f9ea0c66ead98",
+      "title_reported": "Modernizacja stacji 220/110 kV Konin – Etap I, Etap II i Etap III (w budowie)",
+      "h4_positions": [
+        93
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "627701138149b85c6017f306c2a06c68d4c50d0d107a6be1915ab9071225ccd5",
+      "title_reported": "Modernizacja stacji 220/110 kV Adamów Etap II (w przygotowaniu)",
+      "h4_positions": [
+        102
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "3ca4c35ff8de3acfeeee60500648cc14b3bb128db90ff8477f2e7ec6f4b18169",
+      "title_reported": "Modernizacja stacji 220/110 kV Adamów Etap IIA (w budowie)",
+      "h4_positions": [
+        103
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "886b7c85f8b40e31e9680c47e8bef29a2b6f3325c1f381c9d4f38d2a194b25cc",
+      "title_reported": "Modernizacja stacji 220/110 kV Adamów Etap I (zakończona)",
+      "h4_positions": [
+        105
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "ac0a2b0482be1d2c3b4def948d4dea70b9cb2e3877217eab23ee0d6bcb365c94",
+      "title_reported": "Rozbudowa i przebudowa stacji 400/220/110 kV Kozienice – Etap IIA i Etap IIB (w przygotowaniu)",
+      "h4_positions": [
+        109
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "c4b75ee0612259ffcaf6fd15dd7f3095516a4351d8251d8e0c466294b5f14b67",
+      "title_reported": "Rozbudowa i przebudowa stacji 400/220/110 kV Kozienice – Etap I (w budowie)",
+      "h4_positions": [
+        110
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "52eb964958b0f7da02a212c7fd56ec6d12461ff82b1e528fc3e07b092c1f8dbe",
+      "title_reported": "Modernizacja stacji 400/110 kV Krosno Iskrzynia (w budowie)",
+      "h4_positions": [
+        111
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "623f8021bd999fca76745296ba4e6cc1d4719368e5855905bf65dae4386b213f",
+      "title_reported": "Rozbudowa stacji 400 kV Gdańsk Przyjaźń oraz stacji 400(220)/110 kV Żydowo Kierzkowo wraz z instalacją urządzeń do kompensacji mocy biernej oraz przystosowaniem stacji 400/220/110 kV Gdańsk I do przełączenia toru linii 400 kV Dunowo-Żydowo Kierzkowo-Gdańsk I i Piła Krzewina-Żydowo Kierzkowo na napięcie 400 kV – Etap IIC, Etap IID, Etap IIIB i Etap IV (w przygotowaniu)",
+      "h4_positions": [
+        112,
+        236
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "451c85e87c31e948369f369cd5c79e92e7b4c6faee728d0ca978ae23ee486f4f",
+      "title_reported": "Rozbudowa stacji 400 kV Gdańsk Przyjaźń oraz stacji 400(220)/110 kV Żydowo Kierzkowo wraz z instalacją urządzeń do kompensacji mocy biernej oraz przystosowaniem stacji 400/220/110 kV Gdańsk I do przełączenia toru linii 400 kV Dunowo-Żydowo Kierzkowo-Gdańsk I i Piła Krzewina-Żydowo Kierzkowo na napięcie 400 kV – Etap IIA, Etap IIB i Etap IIIA (w budowie)",
+      "h4_positions": [
+        113,
+        237
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "fee9bfb0e21e6f7dffb2adf3eec886df64212e47f15bd5c9f9f2c32a8472f75f",
+      "title_reported": "Rozbudowa stacji 400 kV Gdańsk Przyjaźń oraz stacji 400(220)/110 kV Żydowo Kierzkowo wraz z instalacją urządzeń do kompensacji mocy biernej oraz przystosowaniem stacji 400/220/110 kV Gdańsk I do przełączenia toru linii 400 kV Dunowo-Żydowo Kierzkowo-Gdańsk I i Piła Krzewina-Żydowo Kierzkowo na napięcie 400 kV – Etap 1 (zakończona)",
+      "h4_positions": [
+        115
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "f19618e97c33e4bd32b10e16f77ababbc90f6e5a12b19457e70a97a6e37687fb",
+      "title_reported": "Budowa stacji 400/110 kV Gdańsk Przyjaźń wraz z wprowadzeniem jednego toru linii 400 kV Gdańsk Błonia-Żarnowiec (zakończona)",
+      "h4_positions": [
+        116
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "41f9f66ac10e39d3bbfcfa487fa982732a3d2de80220f1b9b610c497f758217d",
+      "title_reported": "Rozbudowa stacji 400/110 kV Żarnowiec w celu przyłączenia FW Choczewo, FW Osieki i FW Zwartowo (zakończona)",
+      "h4_positions": [
+        126
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "b3b0cf92f69b6781efd36ef74e67ccb0557b8525df21ef7534cf3b285b62cb5c",
+      "title_reported": "Rozbudowa i modernizacja stacji 400/220 kV Joachimów – Etap II (w przygotowaniu)",
+      "h4_positions": [
+        127
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "50b6d9072bc2321a4d5ce8ccc04b36a0fc6d41a90c568f97275815819182797e",
+      "title_reported": "Rozbudowa i modernizacja stacji 400/220 kV Joachimów – Etap I (w budowie)",
+      "h4_positions": [
+        128
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "739656b633b12885770561536ab23d306d07155e14226b7305b19dcbc5d7c12b",
+      "title_reported": "Zakup, dostawa i montaż jednostek regulacyjnych kąta fazowego napięcia do pracy z autotransformatorami AT1 i AT2 400/220 kV o mocy 500 MVA w stacji 400/220 kV Joachimów (zakończona)",
+      "h4_positions": [
+        130
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "4a53febfcf2ea8019aed520f4bf516f0d69fc1fa2640e9ab7d6a07dbfcf600bc",
+      "title_reported": "Modernizacja stacji 400/220 kV Joachimów (zakończona)",
+      "h4_positions": [
+        132
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "c3d6c682081775d106ab6504725821315590c58ab10e97eea84d5fabe7c1a270",
+      "title_reported": "Modernizacja linii 220 kV Połaniec-Chmielów tor II (w budowie)",
+      "h4_positions": [
+        139
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "566b9961e9451988a1d323209858e34142ffa8d2ede502a2b921c9acd10dd556",
+      "title_reported": "Wymiana przewodu odgromowego OPGW na linii 400 kV Połaniec-Rzeszów oraz na linii 220 kV Połaniec-Chmielów tor I i tor II (zakończona)",
+      "h4_positions": [
+        141
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "85c8446be40998bcb103b1b0a72f7589fb1cecf127c3230b1addf7134de42408",
+      "title_reported": "Rozbudowa stacji 400/220/110 kV Grudziądz Węgrowo dla przyłączenia nowych obiektów do KSE – Etap I i Etap II (w przygotowaniu)",
+      "h4_positions": [
+        146
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "8e6e2746591aab1282eb1c5698c33b9f4a96bc97b3b577c527ab89fcd7df35aa",
+      "title_reported": "Rozbudowa stacji 400/220/110 kV Grudziądz Węgrowo dla przyłączenia bloku nr 1 w Elektrowni Grudziądz (zakończona)",
+      "h4_positions": [
+        148
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "4194aeaf260d6b702c183fdcdcf2252a5119500cf6f23dbf76c1fa810fbc0d6c",
+      "title_reported": "Rozbudowa stacji 400/220/110 kV Grudziądz Węgrowo (zakończona)",
+      "h4_positions": [
+        149
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "7a751b92391d90d7f7e33963058b1a70440925403a8549517b473ca2023e22e5",
+      "title_reported": "Rozbudowa stacji Gdańsk Błonia wraz z instalacją urządzeń do kompensacji mocy biernej (w budowie)",
+      "h4_positions": [
+        150
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "6e8bb11900dff5fb174e40b1fa11513c279183c064e60ba13a96afc16aeaf6e3",
+      "title_reported": "Rozbudowa stacji 400/110 kV Gdańsk Błonia dla przyłączenia FW Jasna (zakończona)",
+      "h4_positions": [
+        152
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "f9a8c56a27fcb97aab7d4138f74798d5cafe3671a4d30b3b1888b0d56f265284",
+      "title_reported": "Rozbudowa stacji 400/220/110 kV Jasiniec wraz z instalacją autotransformatora 400/110 kV oraz przełączeniem linii 220 kV Jasiniec-Grudziądz Węgrowo na napięcie 400 kV (w budowie)",
+      "h4_positions": [
+        153,
+        310
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "b0bc80526c485f2ab905432b3a6c097cefb6ea51f9ea4f2040a9011d4b44f722",
+      "title_reported": "Rozbudowa stacji 400 kV Gdańsk Przyjaźń oraz stacji 400(220)/110 kV Żydowo Kierzkowo wraz z instalacją urządzeń do kompensacji mocy biernej oraz przystosowaniem stacji 400/220/110 kV Gdańsk I do przełączenia toru linii 400 kV Dunowo-Żydowo Kierzkowo-Gdańsk I i Piła Krzewina-Żydowo Kierzkowo na napięcie 400 kV (w budowie)",
+      "h4_positions": [
+        156
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "f43dcc920aacfb0e196df5644720355e232e6b0c0ecbf166721cdec3a58c204d",
+      "title_reported": "Dostosowanie stacji 400(220)/110 kV Żydowo Kierzkowo wraz z wprowadzeniem linii 220 kV ze stacji Piła Krzewina i stacji Dunowo (zakończona)",
+      "h4_positions": [
+        158
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "3d6a1f143c92c799c35a068029b4741629ca419e87346081df8a61b7accd226e",
+      "title_reported": "Rozbudowa rozdzielni 400 kV i 110 kV w stacji 400/220/110 kV Dunowo wraz z instalacją transformatorów 400/110 kV – Etap 2 (w przygotowaniu)",
+      "h4_positions": [
+        162
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "dd75de5003f11b1d4832163f3305d4463681529f214593ee278fbff846415541",
+      "title_reported": "Rozbudowa rozdzielni 400 kV i 110 kV w stacji 400/220/110 kV Dunowo wraz z instalacją transformatorów 400/110 kV – Etap IA i IB (w budowie)",
+      "h4_positions": [
+        163
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "3014ec3c64939b03d7596a9031d9cda19ea4ef6c20b2cd385a4707385d6c2d72",
+      "title_reported": "Modernizacja stacji 220/110 kV Gorzów – Etap I i Etap II (w przygotowaniu)",
+      "h4_positions": [
+        169
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "417a40a35a6fcdab9fe88e9120fbae5ed345c1dc91ecfacc3a5eab65dc352573",
+      "title_reported": "Budowa linii 400 kV Chełm – Lublin Systemowa (zakończona)",
+      "h4_positions": [
+        184
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "26f323c3f9d5ab9ef63cb71caff96ffb4ff59fe7571db32fa90d4df585017784",
+      "title_reported": "Modernizacja (przebudowa) linii 400 kV Rogowiec-Joachimów, Rogowiec-Tucznawa (Joachimów) (w przygotowaniu)",
+      "h4_positions": [
+        197
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "75b3cc6487a2e18f32d73a2bd5350d833f7deb89403e084c6d80f02c53fde4ad",
+      "title_reported": "Budowa stacji 400/110 kV w rejonie Legnicy (Miękinia) wraz z wprowadzeniem linii 400 kV Mikułowa – Pasikurowice oraz Czarna – Pasikurowice (w przygotowaniu)",
+      "h4_positions": [
+        198
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "0bfde06af8191d7493d398b2b22e54905479aa8ef6837d2dc1140d19864bbc67",
+      "title_reported": "Budowa stacji 400 kV Choczewo (w budowie)",
+      "h4_positions": [
+        200
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "4a621061cf9aa40ecca61b2526f5dc720784c28b8d1e8cf14a64f794513b4f5f",
+      "title_reported": "Dostosowanie stacji Bydgoszcz Zachód do pracy na napięciu 400 kV wraz z instalacją autotransformatorową 400/110 kV i urządzeń do kompensacji mocy biernej (w przygotowaniu)",
+      "h4_positions": [
+        201
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "21fbb2317e061d53807af6e03196a61e9d624ce8e5dba853b9b491971e9915df",
+      "title_reported": "Rozbudowa stacji 220/110 kV Bydgoszcz Zachód o rozdzielnię 400 kV (zakończona)",
+      "h4_positions": [
+        203
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "3b4f96149210cfed052b8c4284af1c147be8eb38302559c3054327408b39fbfc",
+      "title_reported": "Rozbudowa stacji 220/110 kV Groszowice dla przyłączenia nowych obiektów do KSE (w budowie)",
+      "h4_positions": [
+        204
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "ebbc954d1639829f9e6e1b6ca137e63b3651df086666e68a7840360f187fb41c",
+      "title_reported": "Wymiana transformatora wraz z dostosowaniem infrastruktury w stacji 220/110 kV Groszowice (zakończona)",
+      "h4_positions": [
+        206
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "60114cc7deb2335afcb7c748420f2f7b65e4371253ce97361c829dae4e5a4020",
+      "title_reported": "Rozbudowa stacji 400/110 kV Dobrzeń dla przyłączenia nowych obiektów do KSE (w przygotowaniu)",
+      "h4_positions": [
+        214
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "277099496f57f0020de994d78c29614017f5f3ebd9b7d54854e6869f30f5e0be",
+      "title_reported": "Dostosowanie stacji Dobrzeń do nowej relacji linii 400 kV Dobrzeń-Detmarovice (zakończona)",
+      "h4_positions": [
+        216
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "1bfe63065dfe08e0f7e59a65eb322a2e48f9efa7853c8167c27858c60317ae55",
+      "title_reported": "Rozbudowa stacji 400/110 kV Dobrzeń w związku z przyłączeniem bloków nr 5 i 6 El. Opole (zakończona)",
+      "h4_positions": [
+        217
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "a48057a65e819c72fc2b40c6aca34a53f08729375387d317ad609b0560052b9f",
+      "title_reported": "Rozbudowa stacji 400/220 kV Kielce – Etap II (w przygotowaniu)",
+      "h4_positions": [
+        225
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "cf428a4b79777ad587e840f5d7d0e2a5557e31d0b8999464cd85092fc8e3a767",
+      "title_reported": "Rozbudowa stacji 400/220 kV Kielce – Etap I (w budowie)",
+      "h4_positions": [
+        226
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "8ea8b9aa4fdab98fa9c510c55d8522a6e8d82c7a9c58995af0a9f091889c7164",
+      "title_reported": "Rozbudowa stacji 220/110 kV Blachownia wraz z wprowadzeniem linii 220 kV Groszowice-Kędzierzyn (w przygotowaniu)",
+      "h4_positions": [
+        228
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "3f9cc387d76f7ad1dac4e86bfca1c9d405da10700e0da4cd8ba793ec5daa4dc2",
+      "title_reported": "Przełączenie linii 220 kV Bydgoszcz Zachód-Jasiniec do pracy na napięciu 400 kV (w przygotowaniu)",
+      "h4_positions": [
+        232
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "b5d9e7c9ce774943d3bc1a52eea7de2f7acc93cb51e0fef8803fd92cf745bb8c",
+      "title_reported": "Budowa linii 400 kV Kozienice – stacja w rejonie Stalowej Woli. Budowa linii 400 kV Połaniec/Rzeszów – stacja w rejonie Stalowej Woli (w przygotowaniu)",
+      "h4_positions": [
+        233
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "cd34ea103c65839d23afd90dd2598be38602f66ba83b80f253a9b9040c396205",
+      "title_reported": "Podwieszenie drugiego toru 400 kV na linii Ostrów – Kromolice wraz z rozbudową stacji 400/110 kV Ostrów i stacji 400/110 kV Kromolice (zakończona)",
+      "h4_positions": [
+        234
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "b46ae0122be94d1ec8abd7e9b63739e63535e7b9ec6c44e6bde2d75619170fa5",
+      "title_reported": "Modernizacja (przebudowa) linii 220 kV Adamów-Konin tor I i tor II (w przygotowaniu)",
+      "h4_positions": [
+        253
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "21627131bebfd882b78d80192447185e052672d470977f600681d0587bc15091",
+      "title_reported": "Modernizacja stacji 220 kV Bujaków – Etap II (w przygotowaniu)",
+      "h4_positions": [
+        254
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "9df565550835ba17cff35041d820a14e9bddcfcf3227788a2c66745b9fbe0096",
+      "title_reported": "Modernizacja stacji 220 kV Bujaków – Etap I (w budowie)",
+      "h4_positions": [
+        255
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "3806da078bae28a17801d429475c8b72322314b27ba11e66a63f696ec46ce999",
+      "title_reported": "Rozbudowa stacji 400/110 kV Czarna dla przyłączenia nowych obiektów do KSE (w przygotowaniu)",
+      "h4_positions": [
+        258
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "0c484679e386e40b2fb6c73afa91f7d6c0e64398c4c871db7eb3f341ca67f056",
+      "title_reported": "Rozbudowa stacji 400/110 kV Czarna w zakresie rozdzielni 400 kV (zakończona)",
+      "h4_positions": [
+        260
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "c48ac90904607f801e99bff2694cbbe861e6cc47b529eaf331cd49927af63337",
+      "title_reported": "Rozbudowa stacji 220/110 kV Kopanina dla przyłączenia nowych obiektów do KSE (w przygotowaniu)",
+      "h4_positions": [
+        261
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "687a827affda1974531712e85604731056cdd5843cf97fa6adecc09a0c6c5ff4",
+      "title_reported": "Wymiana istniejących autotransformatorów w stacji 220/110 kV Kopanina na jednostki 275 MVA (zakończona)",
+      "h4_positions": [
+        263
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "72638631f3d0d67b03f0b7b849b804f0f0468db814d6c0d03641e636b41075f8",
+      "title_reported": "Rozbudowa stacji 400/220 kV Byczyna dla przyłączenia nowych obiektów do KSE (w przygotowaniu)",
+      "h4_positions": [
+        266
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "46911356e3749d66e451ed81f52c63b05f4837c0ef0ce09f924dcb607c7c9ee4",
+      "title_reported": "Rozbudowa i modernizacja stacji Byczyna wraz z wprowadzeniem linii 400 kV Tucznawa-Tarnów (Skawina) w związku z przyłączeniem bloku Jaworzno II (zakończona)",
+      "h4_positions": [
+        268
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "7601998f64d91047750f579afbdb366f29d38ef5c699c41591aea109b70814d3",
+      "title_reported": "Rozbudowa i modernizacja stacji 220/110 kV Chmielów – Etap I i Etap II (w budowie)",
+      "h4_positions": [
+        269
+      ],
+      "status_reported": "w budowie",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "db6514752b182771bbfdb8a5112114d3b2f298761ab3be0e68341b24e05e0ef9",
+      "title_reported": "Rozbudowa stacji 220/110 kV Abramowice dla przyłączenia nowych obiektów do KSE (w przygotowaniu)",
+      "h4_positions": [
+        274
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "a7671b482ce82a586a15275e3577b310ecfff1ccc5c604f45b4c52081b2e7197",
+      "title_reported": "Budowa nowej stacji 400 kV w rejonie Konina wraz z wprowadzeniem linii 400 kV Kromolice-Pątnów (w przygotowaniu)",
+      "h4_positions": [
+        299
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "886185d29c816bbe149881e918c3d173e377d61cb633b3397436276eefbe6c51",
+      "title_reported": "Rozbudowa i modernizacja stacji 220/110 kV Cieplice (w przygotowaniu)",
+      "h4_positions": [
+        301
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "6cfc34e016c7c064dc74b5fa6800ac5281ac66222c7ce04f2327b6f37be37f50",
+      "title_reported": "Rozbudowa stacji 220/110 kV Janów dla przyłączenia nowych obiektów do KSE (w przygotowaniu)",
+      "h4_positions": [
+        302
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "bcfa5cba3b78d1af814d282bec0f00c98ee51a8871606b5b35387a21fa2d317d",
+      "title_reported": "Rozbudowa stacji 220/110 kV Glinki (zakończona)",
+      "h4_positions": [
+        303
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "027340cf4d93c3f562b5b07bfb82b6033899dba9f79b15ac42ae9900c3104e71",
+      "title_reported": "Rozbudowa stacji 220/110 kV Kielce Piaski (zakończona)",
+      "h4_positions": [
+        305
+      ],
+      "status_reported": "zakończona",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "44e6c9b75be112a0cd26a0b6edbe4f6dd7cb6042b13e0d25c436ae9c7c827706",
+      "title_reported": "Modernizacja (rozbudowa) linii 220 kV Pątnów – Konin (w przygotowaniu)",
+      "h4_positions": [
+        307
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    },
+    {
+      "heading_id": "d660cc4b1012bc460a8c6cc4e836082962ee95bec345335bcbaf0234e61e5a6a",
+      "title_reported": "Budowa nowej stacji 400 kV w rejonie Dziadowej Kłody z wprowadzeniem linii 400 kV Dobrzeń-Pasikurowice/Ostrów (w przygotowaniu)",
+      "h4_positions": [
+        314
+      ],
+      "status_reported": "w przygotowaniu",
+      "status_review_required": false,
+      "classification": "REPORTED",
+      "source_date": null,
+      "canonical_station_id": null,
+      "operator_task_id": null,
+      "commissioning_date": null
+    }
+  ],
+  "profiles": [
+    {
+      "profile_id": "7820d5aee659ad05d27ab61ade74404284e2d0ad38c5219838b03c25c3700f84",
+      "name_reported": "Adamów",
+      "voltage_kV": 110,
+      "heading_ids": [
+        "5bed99d76670ff00aa45f9b65ee8009bc4d5a79d9a361f8f9281f5831fa957c5",
+        "0535d3460840f63621d522840bed9ac5c1002dea1d719cc99b7d8db8fa59c121",
+        "627701138149b85c6017f306c2a06c68d4c50d0d107a6be1915ab9071225ccd5",
+        "3ca4c35ff8de3acfeeee60500648cc14b3bb128db90ff8477f2e7ec6f4b18169",
+        "886b7c85f8b40e31e9680c47e8bef29a2b6f3325c1f381c9d4f38d2a194b25cc",
+        "b46ae0122be94d1ec8abd7e9b63739e63535e7b9ec6c44e6bde2d75619170fa5"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "74f8dcaec0630509109fb4e8b9a1e24a13bcb368da5823ad2ed786b0bc29fd76",
+      "name_reported": "Abramowice",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "9db12513bc1135ac465976e2a92970febb027b5f1e38763560b9d4a27d276aae",
+        "74fdd2ec185de80ae8cd5273d0a594649ba869a9742929305797f15d34edc72a",
+        "db6514752b182771bbfdb8a5112114d3b2f298761ab3be0e68341b24e05e0ef9"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "d458b8d851578e572e079c682c4d9864a5032738301a2d0d51e52f8790a154e2",
+      "name_reported": "Baczyna Systemowa",
+      "voltage_kV": 400,
+      "heading_ids": [],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "703ca336128c61db5267fe38525a049c5c32f27ba305912cc2c89b1a0bf8bb72",
+      "name_reported": "Baczyna Systemowa",
+      "voltage_kV": 110,
+      "heading_ids": [],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "3b140ab256575704d1e040215b1e6f641e3239fd7eaaaecff85f5b379b1bbfa0",
+      "name_reported": "Adamów",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "5bed99d76670ff00aa45f9b65ee8009bc4d5a79d9a361f8f9281f5831fa957c5",
+        "0535d3460840f63621d522840bed9ac5c1002dea1d719cc99b7d8db8fa59c121",
+        "627701138149b85c6017f306c2a06c68d4c50d0d107a6be1915ab9071225ccd5",
+        "3ca4c35ff8de3acfeeee60500648cc14b3bb128db90ff8477f2e7ec6f4b18169",
+        "886b7c85f8b40e31e9680c47e8bef29a2b6f3325c1f381c9d4f38d2a194b25cc",
+        "b46ae0122be94d1ec8abd7e9b63739e63535e7b9ec6c44e6bde2d75619170fa5"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "c844a59141487321050339b00280ba2b2b879acf14e662ff6177898d0cf2a595",
+      "name_reported": "Byczyna",
+      "voltage_kV": 400,
+      "heading_ids": [
+        "0d7b411e41631d92a24cb92f7872f68ad95590733fd0cbdae22dc2543e11c0f1",
+        "72638631f3d0d67b03f0b7b849b804f0f0468db814d6c0d03641e636b41075f8",
+        "46911356e3749d66e451ed81f52c63b05f4837c0ef0ce09f924dcb607c7c9ee4"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "f6165b234bd6528eed38794bac9368ecf18a5fd69608e487811f4ad1aae5439f",
+      "name_reported": "Baczyna Systemowa (planowana)",
+      "voltage_kV": 110,
+      "heading_ids": [],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "11e577f758f5c4c034210a7ab9454ff33043c20133552ec0125a93e467280456",
+      "name_reported": "Blachownia",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "8ea8b9aa4fdab98fa9c510c55d8522a6e8d82c7a9c58995af0a9f091889c7164"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "6e04e8f82a0efc26a0f0f0abe50d9924348ca4e58a090fc781acc490f6790ac3",
+      "name_reported": "Bydgoszcz Zachód",
+      "voltage_kV": 400,
+      "heading_ids": [
+        "4a621061cf9aa40ecca61b2526f5dc720784c28b8d1e8cf14a64f794513b4f5f",
+        "21fbb2317e061d53807af6e03196a61e9d624ce8e5dba853b9b491971e9915df",
+        "3f9cc387d76f7ad1dac4e86bfca1c9d405da10700e0da4cd8ba793ec5daa4dc2"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "e97f9afe2c9fa0bc434172b3cee63b642be75a5deefc0c09311d88d1c77c63d6",
+      "name_reported": "CPKK",
+      "voltage_kV": 110,
+      "heading_ids": [],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "131b01575f71aa1c90215f092e6bb5cd7eed7bc4a164f9e3ccc8f23d5607974c",
+      "name_reported": "Boguszów",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "8b5071fcde36d030c1ab23a0bfc496a0735c81b90760a6556c08e86176a6048c",
+        "25055680ad2f661dec4bc644619481f681adbc0f04bf2318d072129602044f38"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "ac347530dde8a38d8c33364b98562c35e4ab7663fdb840b06eb92e03865348f0",
+      "name_reported": "CPKK",
+      "voltage_kV": 400,
+      "heading_ids": [],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "2f5ed3df48f99c479ac3fa7da20978e52ffdd66972e83fc0da5963ad8db0cd4e",
+      "name_reported": "Chmielów",
+      "voltage_kV": 110,
+      "heading_ids": [
+        "c3d6c682081775d106ab6504725821315590c58ab10e97eea84d5fabe7c1a270",
+        "566b9961e9451988a1d323209858e34142ffa8d2ede502a2b921c9acd10dd556",
+        "7601998f64d91047750f579afbdb366f29d38ef5c699c41591aea109b70814d3"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "70b282041fc75bf537b916a2441625d4f5195241263cbfb0c6bf51b574347c00",
+      "name_reported": "Bujaków",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "21627131bebfd882b78d80192447185e052672d470977f600681d0587bc15091",
+        "9df565550835ba17cff35041d820a14e9bddcfcf3227788a2c66745b9fbe0096"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "ab6302b21ee67af03984bfb7d2aec900c7fb5b6ea9a875ca0d8c0c7e4017080e",
+      "name_reported": "Choczewo",
+      "voltage_kV": 400,
+      "heading_ids": [
+        "a10d3cea0e83f004e981ee2c0248a3ad4afd33ab1d8acf65c66b8ba8b7f4698a",
+        "35dcc26173bca4da7643fbe08db2f2a4b1a47307b23778b628d1bcc85d785b23",
+        "ee0d2b9f798651b974b968e19f03c180b8dc8e55523f84ebb2f265abdbe1e2e8",
+        "8d5f7b73d99a97c01b0bcc5e14508941c1a321dc7953c7e27296bd39226be288",
+        "41f9f66ac10e39d3bbfcfa487fa982732a3d2de80220f1b9b610c497f758217d",
+        "0bfde06af8191d7493d398b2b22e54905479aa8ef6837d2dc1140d19864bbc67"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "417dbe0906cb10c24c257eccd3919563453ddf0b1ed75f4bdb77d6911297b3fb",
+      "name_reported": "Dobrzeń",
+      "voltage_kV": 110,
+      "heading_ids": [
+        "06c6ebf4d842c663e8c06e3978ff6d31c935d7df70a5166209903162ad6a3a97",
+        "91e1f19b30b475beaec192cc2fe03579bdfb7a929c130467b91a8e9a04cf89da",
+        "e90e356191a50a026af761b7b6eb21ab885ebd357ced18f17fac297c7c41ac7d",
+        "60114cc7deb2335afcb7c748420f2f7b65e4371253ce97361c829dae4e5a4020",
+        "277099496f57f0020de994d78c29614017f5f3ebd9b7d54854e6869f30f5e0be",
+        "1bfe63065dfe08e0f7e59a65eb322a2e48f9efa7853c8167c27858c60317ae55",
+        "d660cc4b1012bc460a8c6cc4e836082962ee95bec345335bcbaf0234e61e5a6a"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "bfe744bd0cf8cc155456de19b40eeb901e7c171f3c01460f7507d739110770c8",
+      "name_reported": "Byczyna",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "0d7b411e41631d92a24cb92f7872f68ad95590733fd0cbdae22dc2543e11c0f1",
+        "72638631f3d0d67b03f0b7b849b804f0f0468db814d6c0d03641e636b41075f8",
+        "46911356e3749d66e451ed81f52c63b05f4837c0ef0ce09f924dcb607c7c9ee4"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "3d2cb2d4f88029fcae8bba91ddc1b997c7b2ded729b4a5cfd78152195d780047",
+      "name_reported": "Czarna",
+      "voltage_kV": 400,
+      "heading_ids": [
+        "75b3cc6487a2e18f32d73a2bd5350d833f7deb89403e084c6d80f02c53fde4ad",
+        "3806da078bae28a17801d429475c8b72322314b27ba11e66a63f696ec46ce999",
+        "0c484679e386e40b2fb6c73afa91f7d6c0e64398c4c871db7eb3f341ca67f056"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "f414bdcb08dbcd623969b014afc524522cf2a2d086cc73391901307362d980af",
+      "name_reported": "Dunowo",
+      "voltage_kV": 110,
+      "heading_ids": [
+        "df5a1e609f2258cf1072e2460912302adf4338badd158a8fbdaae6fe1840c484",
+        "69c0a7358f4bd83a7455d4e2eed1034bb5d0cd1fd11a038fc1a9f44e0f808062",
+        "0e78212a361cc54bd772365796d67f67bec6372156e60ddd1094acc68d056814",
+        "f6191e03b27462cd13cd05124923e0a452eb6dc6f23db220d5cd874b9acd8948",
+        "623f8021bd999fca76745296ba4e6cc1d4719368e5855905bf65dae4386b213f",
+        "451c85e87c31e948369f369cd5c79e92e7b4c6faee728d0ca978ae23ee486f4f",
+        "fee9bfb0e21e6f7dffb2adf3eec886df64212e47f15bd5c9f9f2c32a8472f75f",
+        "b0bc80526c485f2ab905432b3a6c097cefb6ea51f9ea4f2040a9011d4b44f722",
+        "f43dcc920aacfb0e196df5644720355e232e6b0c0ecbf166721cdec3a58c204d",
+        "3d6a1f143c92c799c35a068029b4741629ca419e87346081df8a61b7accd226e",
+        "dd75de5003f11b1d4832163f3305d4463681529f214593ee278fbff846415541"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "f676ee7de0d91a1208b1c3126ae282acd454c62934c5ec7b6a1408531c60c3fc",
+      "name_reported": "Chełm",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "7655a7b1ffcce3a2bb5ce27d9fe8a03eb7140ba1ac56742d619677057dc4f624",
+        "417a40a35a6fcdab9fe88e9120fbae5ed345c1dc91ecfacc3a5eab65dc352573"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "a24edf3d732e4dcaf09f6bb8cc8c7910dcffaa9c843d5b26c34c6d5efc6ac3e1",
+      "name_reported": "Dobrzeń",
+      "voltage_kV": 400,
+      "heading_ids": [
+        "06c6ebf4d842c663e8c06e3978ff6d31c935d7df70a5166209903162ad6a3a97",
+        "91e1f19b30b475beaec192cc2fe03579bdfb7a929c130467b91a8e9a04cf89da",
+        "e90e356191a50a026af761b7b6eb21ab885ebd357ced18f17fac297c7c41ac7d",
+        "60114cc7deb2335afcb7c748420f2f7b65e4371253ce97361c829dae4e5a4020",
+        "277099496f57f0020de994d78c29614017f5f3ebd9b7d54854e6869f30f5e0be",
+        "1bfe63065dfe08e0f7e59a65eb322a2e48f9efa7853c8167c27858c60317ae55",
+        "d660cc4b1012bc460a8c6cc4e836082962ee95bec345335bcbaf0234e61e5a6a"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "4b8e22947f8217aa2eed9aba7f0010c03a5bbb9edfe61605a8c9b50d0c828cea",
+      "name_reported": "Ełk Bis",
+      "voltage_kV": 110,
+      "heading_ids": [],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "7be686725203b12711f25a16ed0f72ff887f26a46c2a0e3dccd62d74b87e999d",
+      "name_reported": "Chełm Systemowa",
+      "voltage_kV": 220,
+      "heading_ids": [],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "0d296b77a8e8f6d4a5d95aeeedb18d67cee775042d0f6c1fd1a0d1de6c44f5ba",
+      "name_reported": "Dunowo",
+      "voltage_kV": 400,
+      "heading_ids": [
+        "df5a1e609f2258cf1072e2460912302adf4338badd158a8fbdaae6fe1840c484",
+        "69c0a7358f4bd83a7455d4e2eed1034bb5d0cd1fd11a038fc1a9f44e0f808062",
+        "0e78212a361cc54bd772365796d67f67bec6372156e60ddd1094acc68d056814",
+        "f6191e03b27462cd13cd05124923e0a452eb6dc6f23db220d5cd874b9acd8948",
+        "623f8021bd999fca76745296ba4e6cc1d4719368e5855905bf65dae4386b213f",
+        "451c85e87c31e948369f369cd5c79e92e7b4c6faee728d0ca978ae23ee486f4f",
+        "fee9bfb0e21e6f7dffb2adf3eec886df64212e47f15bd5c9f9f2c32a8472f75f",
+        "b0bc80526c485f2ab905432b3a6c097cefb6ea51f9ea4f2040a9011d4b44f722",
+        "f43dcc920aacfb0e196df5644720355e232e6b0c0ecbf166721cdec3a58c204d",
+        "3d6a1f143c92c799c35a068029b4741629ca419e87346081df8a61b7accd226e",
+        "dd75de5003f11b1d4832163f3305d4463681529f214593ee278fbff846415541"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "c68a0cc7910a52987d15fe84ba3c76001d0ff49bd2c983b564192247909f49ae",
+      "name_reported": "Gdańsk Błonia",
+      "voltage_kV": 110,
+      "heading_ids": [
+        "8d5f7b73d99a97c01b0bcc5e14508941c1a321dc7953c7e27296bd39226be288",
+        "3bc192f92c17801a9789c7799fa63c9322918e49545e8222f3cf4e1f6d0abe8d",
+        "f19618e97c33e4bd32b10e16f77ababbc90f6e5a12b19457e70a97a6e37687fb",
+        "7a751b92391d90d7f7e33963058b1a70440925403a8549517b473ca2023e22e5",
+        "6e8bb11900dff5fb174e40b1fa11513c279183c064e60ba13a96afc16aeaf6e3"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "a258a2b07accbf599343891677f39a21ce3c8a99815d8d47060d87119886a134",
+      "name_reported": "Chmielów",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "c3d6c682081775d106ab6504725821315590c58ab10e97eea84d5fabe7c1a270",
+        "566b9961e9451988a1d323209858e34142ffa8d2ede502a2b921c9acd10dd556",
+        "7601998f64d91047750f579afbdb366f29d38ef5c699c41591aea109b70814d3"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "7063e98accb80b65cbc03a50bdde453975e1d64431e43dec66d7073423866991",
+      "name_reported": "Ełk Bis",
+      "voltage_kV": 400,
+      "heading_ids": [],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "7b265b8f20a36acc29680db1dfd2d8c004d5575e7c6f75af12bb598440507596",
+      "name_reported": "Gdańsk Przyjaźń",
+      "voltage_kV": 110,
+      "heading_ids": [
+        "ee0d2b9f798651b974b968e19f03c180b8dc8e55523f84ebb2f265abdbe1e2e8",
+        "623f8021bd999fca76745296ba4e6cc1d4719368e5855905bf65dae4386b213f",
+        "451c85e87c31e948369f369cd5c79e92e7b4c6faee728d0ca978ae23ee486f4f",
+        "fee9bfb0e21e6f7dffb2adf3eec886df64212e47f15bd5c9f9f2c32a8472f75f",
+        "f19618e97c33e4bd32b10e16f77ababbc90f6e5a12b19457e70a97a6e37687fb",
+        "b0bc80526c485f2ab905432b3a6c097cefb6ea51f9ea4f2040a9011d4b44f722"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "ee56d9b93486cf6a43ada31e7a22a7a4c1f4df60102203e8a7d176989db1a579",
+      "name_reported": "Cieplice",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "886185d29c816bbe149881e918c3d173e377d61cb633b3397436276eefbe6c51"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "a462f5fc8c92395d78f604054b2e3fd309e0c485448d760885b90a9d987f29aa",
+      "name_reported": "Gdańsk Błonia",
+      "voltage_kV": 400,
+      "heading_ids": [
+        "8d5f7b73d99a97c01b0bcc5e14508941c1a321dc7953c7e27296bd39226be288",
+        "3bc192f92c17801a9789c7799fa63c9322918e49545e8222f3cf4e1f6d0abe8d",
+        "f19618e97c33e4bd32b10e16f77ababbc90f6e5a12b19457e70a97a6e37687fb",
+        "7a751b92391d90d7f7e33963058b1a70440925403a8549517b473ca2023e22e5",
+        "6e8bb11900dff5fb174e40b1fa11513c279183c064e60ba13a96afc16aeaf6e3"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "14e01bf53f3a2ea6d8fed4fc2d0439bea15a518302b054e6af46ea0e356a3fb9",
+      "name_reported": "Gorzów",
+      "voltage_kV": 110,
+      "heading_ids": [
+        "52e00c11995a321a55b7c29cbc2cdab3d47172e7e003795de24864097717df51",
+        "b44c3a78a27c8fbf08e84848969f06b8df1a80935717482827cb0dbc1de93ea0",
+        "3014ec3c64939b03d7596a9031d9cda19ea4ef6c20b2cd385a4707385d6c2d72"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "ce8f53fa103992c4e9c998e1467476e82211fd7f116f331984437756634ddf86",
+      "name_reported": "Dunowo",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "df5a1e609f2258cf1072e2460912302adf4338badd158a8fbdaae6fe1840c484",
+        "69c0a7358f4bd83a7455d4e2eed1034bb5d0cd1fd11a038fc1a9f44e0f808062",
+        "0e78212a361cc54bd772365796d67f67bec6372156e60ddd1094acc68d056814",
+        "f6191e03b27462cd13cd05124923e0a452eb6dc6f23db220d5cd874b9acd8948",
+        "623f8021bd999fca76745296ba4e6cc1d4719368e5855905bf65dae4386b213f",
+        "451c85e87c31e948369f369cd5c79e92e7b4c6faee728d0ca978ae23ee486f4f",
+        "fee9bfb0e21e6f7dffb2adf3eec886df64212e47f15bd5c9f9f2c32a8472f75f",
+        "b0bc80526c485f2ab905432b3a6c097cefb6ea51f9ea4f2040a9011d4b44f722",
+        "f43dcc920aacfb0e196df5644720355e232e6b0c0ecbf166721cdec3a58c204d",
+        "3d6a1f143c92c799c35a068029b4741629ca419e87346081df8a61b7accd226e",
+        "dd75de5003f11b1d4832163f3305d4463681529f214593ee278fbff846415541"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "b5cd6d732563905bced44c08d06df674f60b7626c224db3fc5e8c9a4b8d1ce5d",
+      "name_reported": "Gdańsk Przyjaźń",
+      "voltage_kV": 400,
+      "heading_ids": [
+        "ee0d2b9f798651b974b968e19f03c180b8dc8e55523f84ebb2f265abdbe1e2e8",
+        "623f8021bd999fca76745296ba4e6cc1d4719368e5855905bf65dae4386b213f",
+        "451c85e87c31e948369f369cd5c79e92e7b4c6faee728d0ca978ae23ee486f4f",
+        "fee9bfb0e21e6f7dffb2adf3eec886df64212e47f15bd5c9f9f2c32a8472f75f",
+        "f19618e97c33e4bd32b10e16f77ababbc90f6e5a12b19457e70a97a6e37687fb",
+        "b0bc80526c485f2ab905432b3a6c097cefb6ea51f9ea4f2040a9011d4b44f722"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "b7c22c61af1bb53d273845c2abe5837e3794783129b12fb02ece03c3b15e2807",
+      "name_reported": "Jarosław (planowana)",
+      "voltage_kV": 110,
+      "heading_ids": [],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "dc19b8004f5a45fa0b1a3ea18f85663726811126e99072d83b27f80ff27b918d",
+      "name_reported": "Glinki",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "e1cd4409df094e0b831625fc01a885289cb588dcd3c01d3d23bd068822fe6232",
+        "bcfa5cba3b78d1af814d282bec0f00c98ee51a8871606b5b35387a21fa2d317d"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "dd2591196d8b6eab4cedc000a2f1f98427acf0ee96d4d2a936cc0f5715ce38f9",
+      "name_reported": "Grudziądz Węgrowo",
+      "voltage_kV": 400,
+      "heading_ids": [
+        "8d5f7b73d99a97c01b0bcc5e14508941c1a321dc7953c7e27296bd39226be288",
+        "85c8446be40998bcb103b1b0a72f7589fb1cecf127c3230b1addf7134de42408",
+        "8e6e2746591aab1282eb1c5698c33b9f4a96bc97b3b577c527ab89fcd7df35aa",
+        "4194aeaf260d6b702c183fdcdcf2252a5119500cf6f23dbf76c1fa810fbc0d6c",
+        "f9a8c56a27fcb97aab7d4138f74798d5cafe3671a4d30b3b1888b0d56f265284"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "74154abfb10a3f25ace0e9db86d0021a09c8830f20a93d1504b803e42e92d72f",
+      "name_reported": "Konin",
+      "voltage_kV": 110,
+      "heading_ids": [
+        "f9882fdc5a7fc0f909d3763a3e80383db40e4ca230af50abb8c971589c4febac",
+        "c6f23a331153dde04c34cd157f499a1b4d1eb5832858682d9f705c38dbafe626",
+        "752bb251e55ff256d5f1780fd8bb14bb1643a13bf5fefdc0b17f9ea0c66ead98",
+        "b46ae0122be94d1ec8abd7e9b63739e63535e7b9ec6c44e6bde2d75619170fa5",
+        "44e6c9b75be112a0cd26a0b6edbe4f6dd7cb6042b13e0d25c436ae9c7c827706"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "b37ac5fa9c6ae84c1ee1c6f11ebc1b4d589821aa33b1ab1020aebc2366e16b85",
+      "name_reported": "Groszowice",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "3b4f96149210cfed052b8c4284af1c147be8eb38302559c3054327408b39fbfc",
+        "ebbc954d1639829f9e6e1b6ca137e63b3651df086666e68a7840360f187fb41c",
+        "8ea8b9aa4fdab98fa9c510c55d8522a6e8d82c7a9c58995af0a9f091889c7164"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "30b9b5f83e1121685d2f11ddb5c8fc174b65e8811fc6e03a828105b804f6e814",
+      "name_reported": "Jarosław (planowana)",
+      "voltage_kV": 400,
+      "heading_ids": [],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "0fd4687f3507f786a61a72c1ed8bd840f96b6fcf0820702c45b5af46dddaa31c",
+      "name_reported": "Kopanina",
+      "voltage_kV": 110,
+      "heading_ids": [
+        "c48ac90904607f801e99bff2694cbbe861e6cc47b529eaf331cd49927af63337",
+        "687a827affda1974531712e85604731056cdd5843cf97fa6adecc09a0c6c5ff4"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "ee4c48c40ee9415cb519164d107c47a37f88e69a070cd31af8b6808603443304",
+      "name_reported": "Grudziądz Węgrowo",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "8d5f7b73d99a97c01b0bcc5e14508941c1a321dc7953c7e27296bd39226be288",
+        "85c8446be40998bcb103b1b0a72f7589fb1cecf127c3230b1addf7134de42408",
+        "8e6e2746591aab1282eb1c5698c33b9f4a96bc97b3b577c527ab89fcd7df35aa",
+        "4194aeaf260d6b702c183fdcdcf2252a5119500cf6f23dbf76c1fa810fbc0d6c",
+        "f9a8c56a27fcb97aab7d4138f74798d5cafe3671a4d30b3b1888b0d56f265284"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "40ffb5e7ad42235488efb99a3bd8fef17e2f2922ab0b9ef5cc05e8d29ca82e92",
+      "name_reported": "Kozienice",
+      "voltage_kV": 400,
+      "heading_ids": [
+        "92ce6752938c8f4301d941d46dbd5417d01ad13092c6f33a0ab5849accff1bfa",
+        "74fdd2ec185de80ae8cd5273d0a594649ba869a9742929305797f15d34edc72a",
+        "ac0a2b0482be1d2c3b4def948d4dea70b9cb2e3877217eab23ee0d6bcb365c94",
+        "c4b75ee0612259ffcaf6fd15dd7f3095516a4351d8251d8e0c466294b5f14b67",
+        "b5d9e7c9ce774943d3bc1a52eea7de2f7acc93cb51e0fef8803fd92cf745bb8c"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "6ce7eaf0a6fbe133c87324df461281a66dd114dcae31ced99ff3d9ffb3d16b18",
+      "name_reported": "Krajnik",
+      "voltage_kV": 110,
+      "heading_ids": [
+        "0e78212a361cc54bd772365796d67f67bec6372156e60ddd1094acc68d056814",
+        "e1cd4409df094e0b831625fc01a885289cb588dcd3c01d3d23bd068822fe6232",
+        "65881029a3d66a4a4050adceeb652a560cf86dba0d802fa5cc8ef4b267c118fe",
+        "d3dab2483f90614e68b00fb528f1a3bac1429ff7a9d67cb18877d3af5951e956",
+        "3d72e5ad367cffe4237b007e3d2b85133fea417ce1a5bfb5fb0137574fb0200e",
+        "392f4dc20ad3f232ef1950f61c15ecfbeb2b7c9037822e81a177a9f9f0133cde",
+        "352f1bd2976c2400cff42c13c3e9dffe7a9f19e1e91bd2ce667b17d27b049da0",
+        "52e00c11995a321a55b7c29cbc2cdab3d47172e7e003795de24864097717df51",
+        "b44c3a78a27c8fbf08e84848969f06b8df1a80935717482827cb0dbc1de93ea0"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "89a222e2bf5ec101273c2024b50452a74438c0f4a11ac98390e7dcb4c3135c7b",
+      "name_reported": "Janów",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "5bed99d76670ff00aa45f9b65ee8009bc4d5a79d9a361f8f9281f5831fa957c5",
+        "0535d3460840f63621d522840bed9ac5c1002dea1d719cc99b7d8db8fa59c121",
+        "73a769057766cd30922128689ccdbd3303c91dabf49f6b2e6a8d8c0b7cc3c774",
+        "6cfc34e016c7c064dc74b5fa6800ac5281ac66222c7ce04f2327b6f37be37f50"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "b2250a86518bc350405f94c702a319c5f5c3ceca4ce45346c28c0db1ffbe1b1f",
+      "name_reported": "Krajnik",
+      "voltage_kV": 400,
+      "heading_ids": [
+        "0e78212a361cc54bd772365796d67f67bec6372156e60ddd1094acc68d056814",
+        "e1cd4409df094e0b831625fc01a885289cb588dcd3c01d3d23bd068822fe6232",
+        "65881029a3d66a4a4050adceeb652a560cf86dba0d802fa5cc8ef4b267c118fe",
+        "d3dab2483f90614e68b00fb528f1a3bac1429ff7a9d67cb18877d3af5951e956",
+        "3d72e5ad367cffe4237b007e3d2b85133fea417ce1a5bfb5fb0137574fb0200e",
+        "392f4dc20ad3f232ef1950f61c15ecfbeb2b7c9037822e81a177a9f9f0133cde",
+        "352f1bd2976c2400cff42c13c3e9dffe7a9f19e1e91bd2ce667b17d27b049da0",
+        "52e00c11995a321a55b7c29cbc2cdab3d47172e7e003795de24864097717df51",
+        "b44c3a78a27c8fbf08e84848969f06b8df1a80935717482827cb0dbc1de93ea0"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "202dfa41771ca0f348224d40aee28e7dd7b2ca0950f279e8426954dcda3fa0e8",
+      "name_reported": "Kromolice",
+      "voltage_kV": 110,
+      "heading_ids": [
+        "5caae57529c350c510c5453fdc842cac9a54893ef29c5e4d4370da0788e71e1f",
+        "4790be6529469d8ce0df0a1705af09b75439607757f06fded1aea960662e1888",
+        "c356496708e2f5976d8ed7e80ea578987e42040482df8f37896146775a1c1b77",
+        "fe7a270d3018c7a163688df300358de3574fa7865121ee6cb96540cf9e09c009",
+        "659a74c59bf46b62b7b7996e6deaf6e0c677fae9126c64bd38addff2a12e48bb",
+        "cd34ea103c65839d23afd90dd2598be38602f66ba83b80f253a9b9040c396205",
+        "a7671b482ce82a586a15275e3577b310ecfff1ccc5c604f45b4c52081b2e7197"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "7358fa276c6e99512c3074e66c04e4326e41187ca9c7ace93a3b4ae1b1e67d52",
+      "name_reported": "Joachimów",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "61552c0f2fd9dbbc1c19773fc714dff37cae6b24e7a63d3d261e8ecbde55f835",
+        "e90e356191a50a026af761b7b6eb21ab885ebd357ced18f17fac297c7c41ac7d",
+        "b3b0cf92f69b6781efd36ef74e67ccb0557b8525df21ef7534cf3b285b62cb5c",
+        "50b6d9072bc2321a4d5ce8ccc04b36a0fc6d41a90c568f97275815819182797e",
+        "739656b633b12885770561536ab23d306d07155e14226b7305b19dcbc5d7c12b",
+        "4a53febfcf2ea8019aed520f4bf516f0d69fc1fa2640e9ab7d6a07dbfcf600bc",
+        "26f323c3f9d5ab9ef63cb71caff96ffb4ff59fe7571db32fa90d4df585017784"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "354d01685a4fe6dc21430dba29f99ca7643c5980274e0cc10def14fd951afca6",
+      "name_reported": "Kromolice",
+      "voltage_kV": 400,
+      "heading_ids": [
+        "5caae57529c350c510c5453fdc842cac9a54893ef29c5e4d4370da0788e71e1f",
+        "4790be6529469d8ce0df0a1705af09b75439607757f06fded1aea960662e1888",
+        "c356496708e2f5976d8ed7e80ea578987e42040482df8f37896146775a1c1b77",
+        "fe7a270d3018c7a163688df300358de3574fa7865121ee6cb96540cf9e09c009",
+        "659a74c59bf46b62b7b7996e6deaf6e0c677fae9126c64bd38addff2a12e48bb",
+        "cd34ea103c65839d23afd90dd2598be38602f66ba83b80f253a9b9040c396205",
+        "a7671b482ce82a586a15275e3577b310ecfff1ccc5c604f45b4c52081b2e7197"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "18b8eddc4a45a1ffa9eaf5a5e20705dc85811667dd36e4e87ce8ef85bdc23f38",
+      "name_reported": "Krosno Iskrzynia",
+      "voltage_kV": 110,
+      "heading_ids": [
+        "9a9e034e809ce641fe5dc75f778bd08c920528506601e9ff839d15b88cd63dc1",
+        "a86ab4eec34d5949be838a330be269d2231584561ef5283c3bb3cbd3e08987e8",
+        "f161b787ed61fca49066c056117216fc3a6a4655074002cdea8bca01c0792f39",
+        "52eb964958b0f7da02a212c7fd56ec6d12461ff82b1e528fc3e07b092c1f8dbe"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    },
+    {
+      "profile_id": "63fc166ff74e009d0019fb9fe1c5fb1caf86f066abb722b861a6b0017f1a2705",
+      "name_reported": "Kielce",
+      "voltage_kV": 220,
+      "heading_ids": [
+        "a48057a65e819c72fc2b40c6aca34a53f08729375387d317ad609b0560052b9f",
+        "cf428a4b79777ad587e840f5d7d0e2a5557e31d0b8999464cd85092fc8e3a767",
+        "027340cf4d93c3f562b5b07bfb82b6033899dba9f79b15ac42ae9900c3104e71"
+      ],
+      "relationship": "NAME_MENTION_ONLY",
+      "classification": "INFERRED",
+      "canonical_station_id": null,
+      "voltage_relevance": "UNKNOWN",
+      "interpretation": "unknown"
+    }
+  ],
+  "limitations": [
+    "Name mention may concern a line, wind farm or another station.",
+    "No alias resolution, voltage assignment or canonical station merge.",
+    "Heading status describes the task, not station commissioning.",
+    "Duplicate text is stored once with all locators; not independent evidence.",
+    "Undated historical snapshot, not live confirmation of project progress."
+  ]
+}

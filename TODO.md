@@ -10,7 +10,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-010 — Ustalić prawa źródeł wybranych do pilota** (P0, Do zrobienia). Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Zachować sześć ZIP wymienionych w docs/reproducibility.md na niezależnym prywatnym nośniku i sprawdzić je z właściwymi manifestami przez --verify-only. Potwierdzić datę kopii.
 - **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Uwzględnić prywatny przegląd schematów i etapów, rozstrzygnąć rewizje oraz przypisania pól (NEED-013). Nie przenosić relacji projektowych do bieżącego modelu bez dowodu wykonania.
-- **KSE-049 — Niezależna walidacja tożsamości profili i kosztu wyjątków** (P0, W toku). Zweryfikować kandydatów w pierwotnych źródłach operatora: 36 zgodnych nazw i napięć, 12 bez dokładnej nazwy, 2 z napięciem niewymienionym. Nie utożsamiać porównania GIS z niezależnym audytem; dopiero potem zmierzyć błędy i czas ręcznej pracy.
+- **KSE-049 — Niezależna walidacja tożsamości profili i kosztu wyjątków** (P0, W toku). Przejrzeć znaczenie 105 nagłówków operatora dla 40 profili; rozstrzygnąć aliasy, zakres napięć i daty, pozyskać aktualny słownik API. Nie utożsamiać wzmianki z potwierdzeniem tożsamości.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
@@ -70,6 +70,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-049 | Niezależna walidacja tożsamości profili i kosztu wyjątków | Scaling | W toku | P0 | KSE-048 |
 | KSE-050 | Test zbiorczego importu drugiego operatora | Scaling | Zrobione | P0 | KSE-048 |
 | KSE-051 | Odkrycie interfejsu słownika TAURON i warunków użycia | Research | Zrobione | P0 | KSE-050 |
+| KSE-052 | Zbiorczy indeks nagłówków inwestycji PSE dla profili stacji | Scaling | Zrobione | P0 | KSE-048 |
 
 ## Kryteria zakończenia i dowody
 
@@ -604,13 +605,13 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-049 — Niezależna walidacja tożsamości profili i kosztu wyjątków
 
 - Odpowiedzialność: Codex.
-- Następny krok: Zweryfikować kandydatów w pierwotnych źródłach operatora: 36 zgodnych nazw i napięć, 12 bez dokładnej nazwy, 2 z napięciem niewymienionym. Nie utożsamiać porównania GIS z niezależnym audytem; dopiero potem zmierzyć błędy i czas ręcznej pracy.
+- Następny krok: Przejrzeć znaczenie 105 nagłówków operatora dla 40 profili; rozstrzygnąć aliasy, zakres napięć i daty, pozyskać aktualny słownik API. Nie utożsamiać wzmianki z potwierdzeniem tożsamości.
 - Kryterium: Audyt dopasowań do rzeczywistych stacji, rozdział planowanych/istniejących, rzeczywista miara błędów i nakładu pracy.
 - Nieukończone zależności: brak.
 - Ryzyko: Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych..
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/21_scalability_benchmark.md](docs/21_scalability_benchmark.md), [docs/23_pse_identity_audit.md](docs/23_pse_identity_audit.md).
+- Dowody/kontekst: [docs/21_scalability_benchmark.md](docs/21_scalability_benchmark.md), [docs/23_pse_identity_audit.md](docs/23_pse_identity_audit.md), [docs/24_pse_bulk_investment_index.md](docs/24_pse_bulk_investment_index.md).
 
 ### KSE-050 — Test zbiorczego importu drugiego operatora
 
@@ -633,3 +634,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-18.
 - Dowody/kontekst: [docs/22_tauron_dictionary_discovery.md](docs/22_tauron_dictionary_discovery.md), [data/catalog/probe_results_tauron_dictionary_2026-09-18.json](data/catalog/probe_results_tauron_dictionary_2026-09-18.json).
+
+### KSE-052 — Zbiorczy indeks nagłówków inwestycji PSE dla profili stacji
+
+- Odpowiedzialność: Codex.
+- Następny krok: Zweryfikować znaczenie wzmianek w KSE-049 przed pokazaniem ich jako powiązanych inwestycji w aplikacji.
+- Kryterium: Odtwarzalny indeks wszystkich 50 profili, zachowane powtórzenia lokalizatorów i złożone statusy, bez automatycznego potwierdzania tożsamości.
+- Nieukończone zależności: brak.
+- Ryzyko: Wzmianka o nazwie może dotyczyć linii lub farmy; nagłówek nie ustala bieżącego układu stacji..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-18.
+- Dowody/kontekst: [docs/24_pse_bulk_investment_index.md](docs/24_pse_bulk_investment_index.md), [tests/test_pse_investment_index.py](tests/test_pse_investment_index.py), [data/reference/pse_investment_heading_index_2026-09-18_v1.json](data/reference/pse_investment_heading_index_2026-09-18_v1.json).
