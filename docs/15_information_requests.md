@@ -47,3 +47,5 @@ Zmiany wpisane bezpośrednio w Excel nie wracają automatycznie do rejestru.
 pobranie ponownie zwraca HTML zamiast PDF. Dokładne linki są w końcowej sekcji
 raportu badawczego. Pomoc polega na przekazaniu oryginalnych plików z datą i URL,
 jeśli użytkownik może je zwyczajnie pobrać; nie wymaga przekazywania poświadczeń.
+
+18.09.2026: dodano NEED-017 (zakresy dwóch zadań PRSP) i NEED-018 (identyfikacja obiektów OSM). W pierwszej kolejności sprawdzamy publiczne i już otrzymane materiały. NEED-014 obsługuje istniejącą rozbieżność dat; nie tworzono jej duplikatu. Nie są potrzebne dane przepływów ani analiza wpływu.

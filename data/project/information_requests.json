@@ -1,6 +1,6 @@
 {
   "schema_version": "information_requests_v1",
-  "updated_at": "2026-09-17",
+  "updated_at": "2026-09-18",
   "items": [
     {
       "id": "NEED-001",
@@ -224,6 +224,34 @@
       "owner": "Zespół EMP / KNE PW; użytkownik może pomóc w kontakcie",
       "basis": "docs/19_oze_sources_review.md",
       "updated_at": "2026-09-17",
+      "received_evidence": null
+    },
+    {
+      "id": "NEED-017",
+      "priority": "P1",
+      "title": "Zakres zadań PRSP II.47 i III.82 względem obiektów Radkowic",
+      "status": "Do sprawdzenia",
+      "requested_scope": "Publiczny opis zakresu, identyfikatory urządzeń lub odcinków, etap i aktualny harmonogram zadań II.47 oraz III.82; rozróżnienie od zakończonej wymiany transformatora.",
+      "unlocks": "Powiązanie dwóch zadań planu z odpowiednimi obiektami i ocenę ich znaczenia dokumentacyjnego.",
+      "next_action": "Najpierw szukać publicznych opisów PSE i dokumentów postępowań; użytkownik może pomóc identyfikatorem zadania lub zatwierdzonym zakresem, jeśli go posiada.",
+      "without_it": "Pokazywać oba zadania ze statusem publikacji i horyzontem; nie przypisywać ich do konkretnego transformatora ani mostu.",
+      "owner": "Codex — źródła publiczne i posiadane materiały; użytkownik — pomoc opcjonalna",
+      "basis": "PSE_PRSP_2027_2036_POST_CONSULTATION; docs/20_station_data_aggregation.md",
+      "updated_at": "2026-09-18",
+      "received_evidence": null
+    },
+    {
+      "id": "NEED-018",
+      "priority": "P1",
+      "title": "Identyfikacja urządzeń i odcinków na mapie Radkowic",
+      "status": "Do sprawdzenia",
+      "requested_scope": "Datowany plan sytuacyjny lub wykaz oznaczeń urządzeń i odcinków, pozwalający porównać konkretne OSM ID z dokumentacją operatora; wystarczą fragmenty dotyczące pilota.",
+      "unlocks": "Stopniowe rozstrzygnięcie tożsamości obiektów mapy i dokumentacji; nie dowodzi stanu łączników ani przepływów.",
+      "next_action": "W pierwszej kolejności sprawdzić już otrzymane materiały. Użytkownik może pomóc aktualnym wykazem oznaczeń, jeśli istnieje; nie przesyłać ponownie całego pakietu mostu.",
+      "without_it": "Zachować 69 wpisów OSM jako kontekst przestrzenny. Nie utożsamiać liczby segmentów z liczbą linii ani urządzeń.",
+      "owner": "Codex — źródła publiczne i posiadane materiały; użytkownik — pomoc opcjonalna",
+      "basis": "OSM_RADK_STATION_AREA; docs/20_station_data_aggregation.md",
+      "updated_at": "2026-09-18",
       "received_evidence": null
     }
   ]

@@ -62,6 +62,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-042 | Interaktywny prototyp pastelowego interfejsu | UI concept | Zrobione | P1 | KSE-040 |
 | KSE-043 | Wspólny rejestr dowodów Radkowic | Data aggregation | Zrobione | P1 | KSE-039, KSE-040 |
 | KSE-044 | Przeglądarka dowodów i rozpoznawanie tych samych publikacji | Data aggregation | Zrobione | P1 | KSE-043 |
+| KSE-045 | Kolejka weryfikacji dowodów powiązana z rejestrem potrzeb | Data quality | Zrobione | P1 | KSE-044 |
 
 ## Kryteria zakończenia i dowody
 
@@ -548,3 +549,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-18.
 - Dowody/kontekst: [docs/20_station_data_aggregation.md](docs/20_station_data_aggregation.md), [grid_engine/evidence_links.py](grid_engine/evidence_links.py), [tests/test_evidence_links.py](tests/test_evidence_links.py), [tests/test_local_app.py](tests/test_local_app.py).
+
+### KSE-045 — Kolejka weryfikacji dowodów powiązana z rejestrem potrzeb
+
+- Odpowiedzialność: Codex.
+- Następny krok: Sprawdzić publiczne zakresy zadań II.47 i III.82 oraz oznaczenia w posiadanych materiałach; dokumentować rozstrzygnięcia pojedynczo.
+- Kryterium: Każda grupa zachowuje ID dowodów i istniejące potrzeby; konflikt wersji trafia do przeglądu wewnętrznego; status potrzeby nie potwierdza automatycznie tożsamości.
+- Nieukończone zależności: brak.
+- Ryzyko: Kolejka opisuje braki dokumentacyjne, nie negatywny wpływ na sieć..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-18.
+- Dowody/kontekst: [docs/20_station_data_aggregation.md](docs/20_station_data_aggregation.md), [data/project/information_requests.json](data/project/information_requests.json), [tests/test_evidence_links.py](tests/test_evidence_links.py).

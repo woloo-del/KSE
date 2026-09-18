@@ -1,7 +1,7 @@
 from copy import deepcopy
 import unittest
 from backend.local_app import snapshot
-from grid_engine.evidence_links import link_records
+from grid_engine.evidence_links import link_records, review_queue
 
 
 class EvidenceLinkTests(unittest.TestCase):
@@ -38,3 +38,33 @@ class EvidenceLinkTests(unittest.TestCase):
         self.ledger['records'].append(deepcopy(self.ledger['records'][0]))
         with self.assertRaisesRegex(ValueError, 'DUPLICATE_EVIDENCE_ID'):
             link_records(self.ledger, self.graph)
+
+
+class ReviewQueueTests(unittest.TestCase):
+    def test_real_groups_preserve_evidence_without_requiring_telemetry(self):
+        data = snapshot()
+        groups = data['evidence_review_queue']['groups']
+        self.assertEqual(sorted(g['evidence_count'] for g in groups), [2, 2, 69])
+        self.assertEqual({n for g in groups for n in g['request_ids']}, {'NEED-014', 'NEED-017', 'NEED-018'})
+        linked = {r['evidence_id'] for r in data['evidence_links']['links'] if r['status'] == 'SAME_SOURCE_RECORD'}
+        self.assertFalse(linked & {e for g in groups for e in g['evidence_ids']})
+
+    def test_missing_request_fails_instead_of_dangling_reference(self):
+        data = snapshot()
+        with self.assertRaisesRegex(ValueError, 'MISSING_REVIEW_REQUEST'):
+            review_queue(data['evidence_links'], [])
+
+    def test_received_document_does_not_resolve_identity(self):
+        data = snapshot()
+        for r in data['requests']:
+            r['status'] = 'Zweryfikowano'
+        queue = review_queue(data['evidence_links'], data['requests'])
+        self.assertTrue(all(g['review_status'] == 'OPEN' for g in queue['groups']))
+
+    def test_unknown_reason_goes_to_internal_review(self):
+        links = {'links': [{'status': 'UNLINKED', 'reason': 'SOURCE_OR_VERSION_CONFLICT', 'evidence_id': 'test'}]}
+        original = deepcopy(links)
+        group = review_queue(links, [])['groups'][0]
+        self.assertEqual(group['request_ids'], [])
+        self.assertEqual(group['owner'], 'INTERNAL_DATA_REVIEW')
+        self.assertEqual(links, original)

@@ -858,6 +858,27 @@
       "started_at": "2026-09-17",
       "completed_at": "2026-09-18",
       "risk": "73 nierozstrzygnięte powiązania nie oznaczają braku obiektów."
+    },
+    {
+      "id": "KSE-045",
+      "title": "Kolejka weryfikacji dowodów powiązana z rejestrem potrzeb",
+      "stage": "Data quality",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-044"
+      ],
+      "next_action": "Sprawdzić publiczne zakresy zadań II.47 i III.82 oraz oznaczenia w posiadanych materiałach; dokumentować rozstrzygnięcia pojedynczo.",
+      "acceptance": "Każda grupa zachowuje ID dowodów i istniejące potrzeby; konflikt wersji trafia do przeglądu wewnętrznego; status potrzeby nie potwierdza automatycznie tożsamości.",
+      "evidence": [
+        "docs/20_station_data_aggregation.md",
+        "data/project/information_requests.json",
+        "tests/test_evidence_links.py"
+      ],
+      "started_at": "2026-09-18",
+      "completed_at": "2026-09-18",
+      "risk": "Kolejka opisuje braki dokumentacyjne, nie negatywny wpływ na sieć."
     }
   ]
 }

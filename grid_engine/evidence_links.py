@@ -41,3 +41,35 @@ def link_records(ledger: dict, graph: dict) -> dict:
                            'No matching by name, proximity or common station label.',
                            'Unlinked means identity not resolved, not that an asset is absent.',
                            'No new physical grid edges or confirmed operating status are created.']}
+
+
+REVIEW_REQUESTS = {
+    'SPATIAL_ASSOCIATION_IS_NOT_ENTITY_IDENTITY': ['NEED-018'],
+    'INVESTMENT_SCOPE_IDENTITY_UNCONFIRMED': ['NEED-014'],
+    'OPERATOR_TASK_NOT_RESOLVED_TO_GRAPH_ASSET': ['NEED-017'],
+}
+
+
+def review_queue(links: dict, requests: list[dict]) -> dict:
+    """Group unresolved evidence for review; request status never resolves identity."""
+    available = {r['id'] for r in requests}
+    if len(available) != len(requests):
+        raise ValueError('DUPLICATE_REQUEST_ID')
+    groups = {}
+    for link in links['links']:
+        if link['status'] == 'SAME_SOURCE_RECORD':
+            continue
+        if link['status'] != 'UNLINKED':
+            raise ValueError('UNSUPPORTED_LINK_STATUS')
+        reason = link['reason']
+        needs = REVIEW_REQUESTS.get(reason, [])
+        if any(n not in available for n in needs):
+            raise ValueError('MISSING_REVIEW_REQUEST')
+        group = groups.setdefault(reason, {'reason': reason, 'request_ids': needs,
+            'evidence_ids': [], 'review_status': 'OPEN',
+            'owner': 'SOURCE_REVIEW' if needs else 'INTERNAL_DATA_REVIEW'})
+        group['evidence_ids'].append(link['evidence_id'])
+    return {'method': 'evidence_review_queue_v1',
+            'method_code_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+            'groups': [dict(g, evidence_count=len(g['evidence_ids'])) for g in groups.values()],
+            'meaning': 'Review work groups, not counts of unique assets or negative grid factors.'}

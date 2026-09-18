@@ -38,3 +38,9 @@ Metoda `exact_evidence_record_link_v1` rozpoznaje ten sam wpis projektu wyłącz
 API i eksport zawierają `evidence_links`, wersję metody i hash jej kodu. Interfejs udostępnia wyszukiwanie po nazwie, ID i źródle, filtr rodzaju wpisu oraz rozwijane źródło, lokalizator, daty, hash i oryginalną treść. Liczniki wynikają z danych.
 
 Weryfikacja: 18 testów modułów powiązań, agregacji i API; przeglądarka: 76 wpisów, filtr projektów 3, wyszukanie Chęcin 1, rozwinięcie źródła z wierszem 847 i hashem. Nadal potrzebna jest osobna weryfikacja tożsamości obiektów między różnymi źródłami.
+
+## Kolejka weryfikacji — 18.09.2026
+
+`evidence_review_queue_v1` grupuje 73 nierozstrzygnięte wpisy: 69 przestrzennych OSM (NEED-018), dwa zadania PRSP (NEED-017) i dwie deklaracje daty (NEED-014). To grupy pracy, nie liczby unikalnych urządzeń ani ocena ryzyka sieciowego. Powtórzenia tej samej publikacji nie trafiają do kolejki. Konflikt wersji trafia do wewnętrznego przeglądu bez automatycznej prośby do użytkownika.
+
+Kolejka w API i eksporcie zachowuje ID dowodów i wersję kodu. UI pokazuje powiązane potrzeby obok wpisu. Brak wskazanego NEED powoduje błąd walidacji. Samo oznaczenie dokumentu jako otrzymanego lub zweryfikowanego nie zamyka rozstrzygnięcia tożsamości. Potrzeby są częścią istniejącego rejestru czytanego przez generator Excel; historyczne pliki Excel nie aktualizują się automatycznie.

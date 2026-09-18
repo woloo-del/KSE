@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from grid_engine.screening_opinion import assess
-from grid_engine.evidence_links import link_records
+from grid_engine.evidence_links import link_records, review_queue
 
 INPUTS = {
     'pipeline': 'data/reference/radkowice_pipeline_view_2026-07-31_v1.json',
@@ -42,13 +42,15 @@ def snapshot() -> dict:
     fields = ('source_id', 'source_name', 'url', 'last_verified', 'source_date',
               'verification_status', 'known_limitations', 'license', 'commercial_use')
     sources = [{key: source.get(key) for key in fields} for source in loaded['catalog']['sources'] if source['source_id'] in ids]
+    links = link_records(loaded['aggregated_evidence'], loaded['graph'])
     return {'station': 'SE Radkowice', 'pipeline': loaded['pipeline'],
             'graph': loaded['graph'], 'requests': loaded['requests']['items'],
             'sources': sources, 'catalog_date': loaded['catalog']['as_of'],
             'investment_review': loaded['investment_review'],
             'development_plan': loaded['development_plan'],
             'aggregated_evidence': loaded['aggregated_evidence'],
-            'evidence_links': link_records(loaded['aggregated_evidence'], loaded['graph']),
+            'evidence_links': links,
+            'evidence_review_queue': review_queue(links, loaded['requests']['items']),
             'input_sha256': hashes, 'scope': 'Lokalny pilot dokumentacyjny; dane publiczne, aktualizowane ręcznie.'}
 
 
