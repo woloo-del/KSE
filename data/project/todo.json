@@ -879,6 +879,27 @@
       "started_at": "2026-09-18",
       "completed_at": "2026-09-18",
       "risk": "Kolejka opisuje braki dokumentacyjne, nie negatywny wpływ na sieć."
+    },
+    {
+      "id": "KSE-046",
+      "title": "Weryfikacja etapów modernizacji Radkowic na portalu PSE",
+      "stage": "Research",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-045"
+      ],
+      "next_action": "Powiązać etapy I/II z zakresem zadania II.47 dopiero po znalezieniu jawnego identyfikatora; kontynuować NEED-017.",
+      "acceptance": "Źródło zweryfikowane, snapshot zachowany z hashem, dwa etapy rozdzielone, parser przetestowany; brak nieuprawnionego scalenia z transformatorem.",
+      "evidence": [
+        "docs/01_data_research.md",
+        "data/reference/radkowice_portal_stages_2026-09-18_v1.json",
+        "tests/test_investment_stages.py"
+      ],
+      "started_at": "2026-09-18",
+      "completed_at": "2026-09-18",
+      "risk": "Niedatowane statusy publikacji nie potwierdzają aktualnego postępu ani odbioru."
     }
   ]
 }

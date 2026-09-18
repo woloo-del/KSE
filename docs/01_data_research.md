@@ -336,3 +336,11 @@ Zweryfikowano mapę ebin.josm.pl oraz rzeczywistą próbkę OSM. Trzy nowe wpisy
 ## 17.09.2026 — GRID OZE i EMP
 
 Zweryfikowano trzy źródła użytkownika oraz komunikat o krajowych usługach GUGiK. Katalog obejmuje 73 źródła. Odkryto działające ArcGIS REST i odczyt JSON EMP, lecz prawa wykorzystania pozostają otwarte. Szczegóły: [przegląd źródeł OZE](19_oze_sources_review.md). Potencjał przestrzenny, katalog wytwórców i dostępna moc przyłączeniowa pozostają odrębnymi pojęciami.
+
+## 18.09.2026 — Etapy modernizacji Radkowic w portalu PSE
+
+Źródło: [portal inwestycji PSE](https://inwestycje.pse.pl/), PSE S.A.; zweryfikowano 18.09.2026. Nagłówki rozróżniają etap I (budowa) i II (przygotowanie). To statusy REPORTED w niedatowanym HTML. Osobny nagłówek dotyczy wymiany transformatora zakończonej według portalu w 2025 r. Nie rozstrzyga to wcześniejszej rozbieżności z raportem rocznym.
+
+Nie potwierdzono mapowania etapów na II.47 ani zakresu III.82, przypisania do mostu, jednostki transformatorowej czy odbioru. Potencjalnie korzystny kierunek rozwoju stacji wymaga oceny konkretnego zakresu. Brak podstaw do prognozy MW.
+
+Technicznie: publiczny HTML pobrany raz, zachowany i zahashowany; parser h4 odrzuca brakujące/powtórzone etapy i nieznane statusy. Brak zweryfikowanego API, cyklu aktualizacji, limitów automatyzacji i licencji redystrybucji. Nie uruchomiono cyklicznego scrapingu. Snapshot i wynik: manifest `probe_results_radkowice_stages_2026-09-18.json`, wynik `radkowice_portal_stages_2026-09-18_v1.json`. Dwa wpisy pozostają osobnym materiałem badawczym, nie dopisano ich automatycznie do historycznego rejestru 76 dowodów.

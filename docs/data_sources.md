@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-17**. Źródła: **73**.
+Stan badania: **2026-09-18**. Źródła: **74**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -83,6 +83,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | EBIN_ELECTRICITY | [ebin.josm.pl — mapa sieci i konfiguracja warstw](https://ebin.josm.pl/electricity/) | CONTENT_REVIEWED | P0 | CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate |
 | OSM_RADK_STATION_OBJECT | [OSM — obiekt stacji Radkowice, way 199098055](https://www.openstreetmap.org/api/0.6/way/199098055/full) | SAMPLE_VERIFIED | P0 | CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate |
 | OSM_RADK_STATION_AREA | [OSM — próbka obszaru stacji Radkowice](https://www.openstreetmap.org/api/0.6/map?bbox=20.516927,50.783155,20.527321,50.792370) | SAMPLE_VERIFIED | P0 | CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate |
+| PSE_RADK_STAGES | [Portal inwestycji PSE — etapy modernizacji Radkowic](https://inwestycje.pse.pl/) | SAMPLE_VERIFIED | P0 | UNKNOWN |
 
 ## Karty źródeł
 
@@ -2733,5 +2734,41 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 - **Warunki:** [źródło prawne](https://www.openstreetmap.org/copyright)
 - **Próba OSM_RADK_STATION_AREA:** HTTP 200; 2026-09-17T11:45:03.826411+00:00; `data/catalog/probe_results_osm_radkowice_2026-09-17.json`; próbka `data/raw/research/2026-09-17/osm_radkowice_station_area.xml`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### PSE_RADK_STAGES — Portal inwestycji PSE — etapy modernizacji Radkowic
+
+[Źródło](https://inwestycje.pse.pl/)
+
+- **Operator:** PSE
+- **Właściciel:** PSE S.A.
+- **Kraj:** PL
+- **Kategoria:** grid_investments
+- **Napięcie:** 220 kV; 110 kV
+- **Zasięg:** Polska; do pilota odczytano sekcję Radkowice
+- **Format:** HTML
+- **API:** UNKNOWN
+- **GIS:** UNKNOWN
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN — nie ustalono licencji redystrybucji treści portalu
+- **Użycie komercyjne:** UNKNOWN
+- **Autorytet źródła:** B
+- **Odczyt maszynowy:** PARTIAL — HTML wymaga rozpoznania sekcji
+- **Scraping:** YES — dla tego widoku HTML; brak wdrożonego cyklicznego scrapera
+- **Pola:** Etap I/II; Status publikowany; Nagłówek
+- **Zastosowanie:** Rozdzielenie etapów modernizacji od zakończonej wymiany transformatora.
+- **Ograniczenia:** Brak daty stanu i aktualizacji wpisów.; Brak identyfikatora PRSP i konkretnych urządzeń.; Status strony nie potwierdza odbioru ani dostępnej mocy.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-18
+- **Udany odczyt:** 2026-09-18
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowe pobranie HTML; parser h4 z kontrolą nagłówków. Brak potwierdzonego API i warunków stałego pobierania.
+- **Próba PSE_RADK_STAGES:** HTTP 200; 2026-09-18T06:33:11.170759+00:00; `data/catalog/probe_results_radkowice_stages_2026-09-18.json`; próbka `data/raw/research/2026-09-18/pse_investments_home.html`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

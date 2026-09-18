@@ -1,0 +1,12 @@
+[
+  {
+    "source_id": "PSE_RADK_STAGES",
+    "url": "https://inwestycje.pse.pl/",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "local_path": "data/raw/research/2026-09-18/pse_investments_home.html",
+    "sha256": "f1191dc99d430013f0714fb8c3c689d192d6ebfa083d32c796ad704e82d1fa38",
+    "bytes": 697406,
+    "retrieval_date": "2026-09-18T06:33:11.170759+00:00"
+  }
+]

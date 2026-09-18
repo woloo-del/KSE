@@ -233,7 +233,7 @@
       "status": "Do sprawdzenia",
       "requested_scope": "Publiczny opis zakresu, identyfikatory urządzeń lub odcinków, etap i aktualny harmonogram zadań II.47 oraz III.82; rozróżnienie od zakończonej wymiany transformatora.",
       "unlocks": "Powiązanie dwóch zadań planu z odpowiednimi obiektami i ocenę ich znaczenia dokumentacyjnego.",
-      "next_action": "Najpierw szukać publicznych opisów PSE i dokumentów postępowań; użytkownik może pomóc identyfikatorem zadania lub zatwierdzonym zakresem, jeśli go posiada.",
+      "next_action": "Portal PSE sprawdzony 18.09.2026: etap I w budowie, II w przygotowaniu, bez daty stanu i mapowania na PRSP. Nadal szukać identyfikatorów zakresu i urządzeń; użytkownik może pomóc, jeśli posiada takie oznaczenia.",
       "without_it": "Pokazywać oba zadania ze statusem publikacji i horyzontem; nie przypisywać ich do konkretnego transformatora ani mostu.",
       "owner": "Codex — źródła publiczne i posiadane materiały; użytkownik — pomoc opcjonalna",
       "basis": "PSE_PRSP_2027_2036_POST_CONSULTATION; docs/20_station_data_aggregation.md",

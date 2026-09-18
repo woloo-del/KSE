@@ -63,6 +63,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-043 | Wspólny rejestr dowodów Radkowic | Data aggregation | Zrobione | P1 | KSE-039, KSE-040 |
 | KSE-044 | Przeglądarka dowodów i rozpoznawanie tych samych publikacji | Data aggregation | Zrobione | P1 | KSE-043 |
 | KSE-045 | Kolejka weryfikacji dowodów powiązana z rejestrem potrzeb | Data quality | Zrobione | P1 | KSE-044 |
+| KSE-046 | Weryfikacja etapów modernizacji Radkowic na portalu PSE | Research | Zrobione | P1 | KSE-045 |
 
 ## Kryteria zakończenia i dowody
 
@@ -560,3 +561,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-18.
 - Dowody/kontekst: [docs/20_station_data_aggregation.md](docs/20_station_data_aggregation.md), [data/project/information_requests.json](data/project/information_requests.json), [tests/test_evidence_links.py](tests/test_evidence_links.py).
+
+### KSE-046 — Weryfikacja etapów modernizacji Radkowic na portalu PSE
+
+- Odpowiedzialność: Codex.
+- Następny krok: Powiązać etapy I/II z zakresem zadania II.47 dopiero po znalezieniu jawnego identyfikatora; kontynuować NEED-017.
+- Kryterium: Źródło zweryfikowane, snapshot zachowany z hashem, dwa etapy rozdzielone, parser przetestowany; brak nieuprawnionego scalenia z transformatorem.
+- Nieukończone zależności: brak.
+- Ryzyko: Niedatowane statusy publikacji nie potwierdzają aktualnego postępu ani odbioru..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-18.
+- Dowody/kontekst: [docs/01_data_research.md](docs/01_data_research.md), [data/reference/radkowice_portal_stages_2026-09-18_v1.json](data/reference/radkowice_portal_stages_2026-09-18_v1.json), [tests/test_investment_stages.py](tests/test_investment_stages.py).

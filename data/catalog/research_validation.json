@@ -1,23 +1,23 @@
 {
-  "checked_at_utc": "2026-09-17T16:48:13.994582+00:00",
+  "checked_at_utc": "2026-09-18T06:35:47.105386+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 73,
+  "source_count": 74,
   "source_status_counts": {
-    "SAMPLE_VERIFIED": 17,
+    "SAMPLE_VERIFIED": 18,
     "CONTENT_REVIEWED": 36,
     "DISCOVERED": 4,
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 11
   },
-  "probe_count": 58,
+  "probe_count": 59,
   "http_status_counts": {
-    "200": 57,
+    "200": 58,
     "404": 1
   },
-  "raw_file_count": 57,
+  "raw_file_count": 58,
   "format_counts": {
-    ".html": 17,
+    ".html": 18,
     ".pdf": 16,
     ".json": 15,
     ".xml": 4,
@@ -112,7 +112,7 @@
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 868,
+  "checks_passed": 883,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -2101,6 +2101,36 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:PSE_RADK_STAGES",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PSE_RADK_STAGES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PSE_RADK_STAGES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PSE_RADK_STAGES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PSE_RADK_STAGES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:PSE_RADK_STAGES",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
@@ -2467,6 +2497,11 @@
     },
     {
       "name": "probe_references:OSM_RADK_STATION_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PSE_RADK_STAGES",
       "passed": true,
       "detail": null
     },
@@ -3531,6 +3566,26 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:PSE_RADK_STAGES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:PSE_RADK_STAGES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:PSE_RADK_STAGES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:PSE_RADK_STAGES",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "snapshot_within_raw:SUW_RADK_WOLICA_3_2024",
       "passed": true,
       "detail": null
@@ -4026,6 +4081,11 @@
       "detail": null
     },
     {
+      "name": "format_readable:pse_investments_home.html",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "pge_block_body_identified",
       "passed": true,
       "detail": null
@@ -4401,6 +4461,11 @@
       "detail": null
     },
     {
+      "name": "python_syntax:build_platform_concept.py",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "python_syntax:build_private_gis_usefulness.py",
       "passed": true,
       "detail": null
@@ -4431,7 +4496,17 @@
       "detail": null
     },
     {
+      "name": "python_syntax:build_radkowice_stages.py",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "python_syntax:build_research_catalog.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:build_station_evidence.py",
       "passed": true,
       "detail": null
     },

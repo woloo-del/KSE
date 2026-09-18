@@ -1,0 +1,42 @@
+{
+  "method": "radkowice_portal_stages_v1",
+  "records": [
+    {
+      "stage": "I",
+      "title_reported": "Rozbudowa i modernizacja stacji 220/110 kV Radkowice – Etap I (w budowie)",
+      "status_reported": "w budowie",
+      "classification": "REPORTED",
+      "operator_task_id": null,
+      "specific_asset_identity": null,
+      "commissioning_date": null,
+      "source_date": null,
+      "source_id": "PSE_RADK_STAGES",
+      "source_url": "https://inwestycje.pse.pl/",
+      "retrieval_date": "2026-09-18T06:33:11.170759+00:00",
+      "snapshot_sha256": "f1191dc99d430013f0714fb8c3c689d192d6ebfa083d32c796ad704e82d1fa38",
+      "locator": "h4: Rozbudowa i modernizacja stacji 220/110 kV Radkowice – Etap I (w budowie)",
+      "source_quality": "B"
+    },
+    {
+      "stage": "II",
+      "title_reported": "Rozbudowa i modernizacja stacji 220/110 kV Radkowice – Etap II (w przygotowaniu)",
+      "status_reported": "w przygotowaniu",
+      "classification": "REPORTED",
+      "operator_task_id": null,
+      "specific_asset_identity": null,
+      "commissioning_date": null,
+      "source_date": null,
+      "source_id": "PSE_RADK_STAGES",
+      "source_url": "https://inwestycje.pse.pl/",
+      "retrieval_date": "2026-09-18T06:33:11.170759+00:00",
+      "snapshot_sha256": "f1191dc99d430013f0714fb8c3c689d192d6ebfa083d32c796ad704e82d1fa38",
+      "locator": "h4: Rozbudowa i modernizacja stacji 220/110 kV Radkowice – Etap II (w przygotowaniu)",
+      "source_quality": "B"
+    }
+  ],
+  "method_code_sha256": "09f3c9f578ab4875fc5d13e249969f6c7e8f1648261b2b3eff97ed570161c375",
+  "limitations": [
+    "Undated website status, not independent confirmation of work progress.",
+    "No mapping to PRSP II.47, bus bridge or transformer identity established."
+  ]
+}

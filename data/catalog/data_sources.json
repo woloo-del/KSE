@@ -1,6 +1,6 @@
 {
   "schema_version": "research_catalog_v1",
-  "as_of": "2026-09-17",
+  "as_of": "2026-09-18",
   "scope": "STAGE_1_RESEARCH_ONLY",
   "source_of_truth": "data/catalog/source_notes.json + data/catalog/radkowice_source_notes.json when present; this file is generated",
   "classification_note": "REPORTED indicates attributed publication, not automatic truth or MEASURED telemetry. Community and model data remain separately classified.",
@@ -5179,6 +5179,80 @@
       ],
       "retrieval_date": [
         "2026-09-17T11:45:03.826411+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Polska; do pilota odczytano sekcję Radkowice",
+      "grid_voltage": [
+        "220 kV",
+        "110 kV"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "UNKNOWN — nie ustalono licencji redystrybucji treści portalu",
+      "license_url": null,
+      "commercial_use": "UNKNOWN",
+      "machine_readable": "PARTIAL — HTML wymaga rozpoznania sekcji",
+      "scraping_required": "YES — dla tego widoku HTML; brak wdrożonego cyklicznego scrapera",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-18",
+      "last_successful_verification": "2026-09-18",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowe pobranie HTML; parser h4 z kontrolą nagłówków. Brak potwierdzonego API i warunków stałego pobierania.",
+      "probe_ids": [
+        "PSE_RADK_STAGES"
+      ],
+      "related_urls": [],
+      "source_id": "PSE_RADK_STAGES",
+      "operator": "PSE",
+      "source_name": "Portal inwestycji PSE — etapy modernizacji Radkowic",
+      "url": "https://inwestycje.pse.pl/",
+      "data_owner": "PSE S.A.",
+      "data_category": "grid_investments",
+      "data_format": [
+        "HTML"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "B",
+      "key_fields": [
+        "Etap I/II",
+        "Status publikowany",
+        "Nagłówek"
+      ],
+      "potential_application": "Rozdzielenie etapów modernizacji od zakończonej wymiany transformatora.",
+      "known_limitations": [
+        "Brak daty stanu i aktualizacji wpisów.",
+        "Brak identyfikatora PRSP i konkretnych urządzeń.",
+        "Status strony nie potwierdza odbioru ani dostępnej mocy."
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "PSE_RADK_STAGES",
+          "url": "https://inwestycje.pse.pl/",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "local_path": "data/raw/research/2026-09-18/pse_investments_home.html",
+          "sha256": "f1191dc99d430013f0714fb8c3c689d192d6ebfa083d32c796ad704e82d1fa38",
+          "bytes": 697406,
+          "retrieval_date": "2026-09-18T06:33:11.170759+00:00",
+          "manifest": "data/catalog/probe_results_radkowice_stages_2026-09-18.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-18T06:33:11.170759+00:00"
       ]
     }
   ]

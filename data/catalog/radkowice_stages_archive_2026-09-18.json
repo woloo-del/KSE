@@ -1,0 +1,11 @@
+{
+  "archive_path": "data/archives/radkowice_stages_2026-09-18.zip",
+  "archive_sha256": "2a5d01a3eefe373d09cf6116e5a3cae31633c674a5ed46312aa01b969b60766b",
+  "files": [
+    {
+      "path": "data/raw/research/2026-09-18/pse_investments_home.html",
+      "sha256": "f1191dc99d430013f0714fb8c3c689d192d6ebfa083d32c796ad704e82d1fa38",
+      "bytes": 697406
+    }
+  ]
+}

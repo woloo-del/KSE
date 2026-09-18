@@ -552,6 +552,49 @@
       "probe_ids": [
         "OSM_RADK_STATION_AREA"
       ]
+    },
+    {
+      "source_id": "PSE_RADK_STAGES",
+      "operator": "PSE",
+      "source_name": "Portal inwestycji PSE — etapy modernizacji Radkowic",
+      "url": "https://inwestycje.pse.pl/",
+      "data_owner": "PSE S.A.",
+      "data_category": "grid_investments",
+      "grid_voltage": [
+        "220 kV",
+        "110 kV"
+      ],
+      "geographical_scope": "Polska; do pilota odczytano sekcję Radkowice",
+      "data_format": [
+        "HTML"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "last_verified": "2026-09-18",
+      "last_successful_verification": "2026-09-18",
+      "api_available": "UNKNOWN",
+      "gis_available": "UNKNOWN",
+      "machine_readable": "PARTIAL — HTML wymaga rozpoznania sekcji",
+      "scraping_required": "YES — dla tego widoku HTML; brak wdrożonego cyklicznego scrapera",
+      "reliability": "B",
+      "key_fields": [
+        "Etap I/II",
+        "Status publikowany",
+        "Nagłówek"
+      ],
+      "potential_application": "Rozdzielenie etapów modernizacji od zakończonej wymiany transformatora.",
+      "known_limitations": [
+        "Brak daty stanu i aktualizacji wpisów.",
+        "Brak identyfikatora PRSP i konkretnych urządzeń.",
+        "Status strony nie potwierdza odbioru ani dostępnej mocy."
+      ],
+      "priority": "P0",
+      "probe_ids": [
+        "PSE_RADK_STAGES"
+      ],
+      "source_date": null,
+      "automation_notes": "Jednorazowe pobranie HTML; parser h4 z kontrolą nagłówków. Brak potwierdzonego API i warunków stałego pobierania.",
+      "license": "UNKNOWN — nie ustalono licencji redystrybucji treści portalu",
+      "commercial_use": "UNKNOWN"
     }
   ]
 }
