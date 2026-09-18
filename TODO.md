@@ -64,6 +64,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-044 | Przeglądarka dowodów i rozpoznawanie tych samych publikacji | Data aggregation | Zrobione | P1 | KSE-043 |
 | KSE-045 | Kolejka weryfikacji dowodów powiązana z rejestrem potrzeb | Data quality | Zrobione | P1 | KSE-044 |
 | KSE-046 | Weryfikacja etapów modernizacji Radkowic na portalu PSE | Research | Zrobione | P1 | KSE-045 |
+| KSE-047 | Etapy modernizacji PSE w aplikacji i eksporcie | Application | Zrobione | P1 | KSE-046 |
 
 ## Kryteria zakończenia i dowody
 
@@ -572,3 +573,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-18.
 - Dowody/kontekst: [docs/01_data_research.md](docs/01_data_research.md), [data/reference/radkowice_portal_stages_2026-09-18_v1.json](data/reference/radkowice_portal_stages_2026-09-18_v1.json), [tests/test_investment_stages.py](tests/test_investment_stages.py).
+
+### KSE-047 — Etapy modernizacji PSE w aplikacji i eksporcie
+
+- Odpowiedzialność: Codex.
+- Następny krok: Kontynuować NEED-017; po uzyskaniu identyfikatorów przygotować jawne relacje między etapami i zadaniami zamiast scalania po nazwie.
+- Kryterium: Dwa etapy widoczne osobno od PRSP, ze źródłem i nieznaną datą stanu; wersja danych zachowana w eksporcie; test API i przeglądarki.
+- Nieukończone zależności: brak.
+- Ryzyko: Brak podstaw do przenoszenia harmonogramów PRSP na etapy portalu..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-18.
+- Dowody/kontekst: [docs/17_local_application.md](docs/17_local_application.md), [backend/local_app.py](backend/local_app.py), [tests/test_local_app.py](tests/test_local_app.py).

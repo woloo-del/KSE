@@ -61,3 +61,9 @@ Sprawdzono podgląd przy 1024 i 360 px, przełączanie napięcia, zachowanie nie
 ## Rejestr dowodów — 18.09.2026
 
 Siódma zakładka pozwala przeszukiwać publiczny rejestr i filtrować rodzaje wpisów. Szczegóły zawierają źródło, daty, lokalizator i zachowany rekord. `evidence_links` w API oraz eksporcie rozróżnia ten sam rekord publikacji od nierozstrzygniętej tożsamości; szczegóły w docs/20_station_data_aggregation.md. Backend po aktualizacji wymaga restartu.
+
+## Etapy modernizacji w aplikacji — 18.09.2026
+
+Zakładka Inwestycje sieciowe prezentuje oddzielnie dwa etapy opisane w portalu PSE i dwa zadania projektu PRSP. Brak mapowania do II.47 jest widoczny przed listą. Status portalu pozostaje raportowany, z nieznaną datą stanu i jawną datą pobrania; nie zastępuje statusu zadania PRSP. Nie liczymy tych czterech wpisów jako czterech inwestycji.
+
+`investment_stages` jest ósmym jawnym wejściem API i częścią `evidence_snapshot` w eksporcie JSON. Lista źródeł zawiera PSE_RADK_STAGES. Historyczny rejestr 76 dowodów nie jest nadpisywany ani automatycznie rozszerzany. Test API sprawdza zachowanie statusów, brak ID zadania i daty stanu oraz obecność źródła w eksporcie. W przeglądarce potwierdzono wyświetlenie obu etapów, ograniczeń i harmonogramów.

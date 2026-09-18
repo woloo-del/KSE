@@ -900,6 +900,27 @@
       "started_at": "2026-09-18",
       "completed_at": "2026-09-18",
       "risk": "Niedatowane statusy publikacji nie potwierdzają aktualnego postępu ani odbioru."
+    },
+    {
+      "id": "KSE-047",
+      "title": "Etapy modernizacji PSE w aplikacji i eksporcie",
+      "stage": "Application",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-046"
+      ],
+      "next_action": "Kontynuować NEED-017; po uzyskaniu identyfikatorów przygotować jawne relacje między etapami i zadaniami zamiast scalania po nazwie.",
+      "acceptance": "Dwa etapy widoczne osobno od PRSP, ze źródłem i nieznaną datą stanu; wersja danych zachowana w eksporcie; test API i przeglądarki.",
+      "evidence": [
+        "docs/17_local_application.md",
+        "backend/local_app.py",
+        "tests/test_local_app.py"
+      ],
+      "started_at": "2026-09-18",
+      "completed_at": "2026-09-18",
+      "risk": "Brak podstaw do przenoszenia harmonogramów PRSP na etapy portalu."
     }
   ]
 }

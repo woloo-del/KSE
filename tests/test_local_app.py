@@ -81,7 +81,7 @@ class LocalApiTests(unittest.TestCase):
             result=json.load(response)
         self.assertEqual(result['method'],'documentary_screening_v2')
         self.assertEqual(len(result['method_code_sha256']),64)
-        self.assertEqual(len(result['input_sha256']),7)
+        self.assertEqual(len(result['input_sha256']),8)
         ledger = result['evidence_snapshot']['aggregated_evidence']
         self.assertEqual(ledger['source_record_count'], 76)
         self.assertIsNone(ledger['unique_project_count'])
@@ -94,6 +94,11 @@ class LocalApiTests(unittest.TestCase):
         self.assertEqual(len(plan['records']), 2)
         self.assertEqual(plan['document_status'], 'POST_CONSULTATION_DRAFT')
         self.assertTrue(all(r['additional_available_capacity_MW'] is None for r in plan['records']))
+        stages = result['evidence_snapshot']['investment_stages']
+        self.assertEqual([r['stage'] for r in stages['records']], ['I', 'II'])
+        self.assertEqual([r['status_reported'] for r in stages['records']], ['w budowie', 'w przygotowaniu'])
+        self.assertTrue(all(r['operator_task_id'] is None and r['source_date'] is None for r in stages['records']))
+        self.assertIn('PSE_RADK_STAGES', {r['source_id'] for r in result['evidence_snapshot']['sources']})
         self.assertIn('evaluated_at',result)
 
     def test_bad_payload_is_a_readable_error(self):
