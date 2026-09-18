@@ -37,6 +37,22 @@ Wynik: `data/reference/pse_investment_heading_index_2026-09-18_v1.json`. Każdy 
 
 Sprawdzono testami powtarzające się nagłówki, brak nagłówków, złożone statusy, granice nazw, brak automatycznej zamiany aliasów i brak promocji do kanonicznej tożsamości. Test rzeczywistego snapshotu obejmuje 50 profili i złożony nagłówek etapów Baczyny. Indeks nie jest jeszcze wystawiony w aplikacji; wymaga kontroli znaczenia relacji przed prezentacją przy stacji.
 
-## Dostęp do słownika API
+## Uzupełnienie: kontekst każdej wzmianki
+
+Przebieg `python scripts/build_pse_mention_context.py` dodaje odrębną wersjonowaną warstwę interpretacji, bez zmiany indeksu v1. Wynik: `data/reference/pse_mention_context_2026-09-18_v1.json`.
+
+- 196 par profil–nagłówek; to nie liczba inwestycji.
+- 215 wystąpień nazw w tych parach: 85 bezpośrednio w etykiecie stacji, 1 w etykiecie farmy i 129 innych lub nierozstrzygniętych.
+- 38 profili ma co najmniej jedną bezpośrednią etykietę stacji; wszystkie wymagają nadal sprawdzenia tożsamości, zakresu czasowego i własności.
+
+Liczniki uwzględniają osobne profile napięciowe, więc ta sama fraza w nagłówku może być liczona przy kilku profilach. Nie dodajemy tych wyników do liczników GIS. Nie zmierzono trafności na niezależnej próbie ani spadku czasu pracy ręcznej.
+
+Reguła rozpoznaje wyłącznie bezpośredni zapis „stacji [elektroenergetycznej] [napięcia kV] nazwa”. Dłuższe nazwy, np. „Test Systemowa” przy profilu „Test”, nie otrzymują tej kategorii. Aliasów nie uzupełniono. Kontekst farmy rozpoznawany jest po jawnym FW lub określeniu farmy; pozostałe wystąpienia, w tym końce linii i nieobsługiwane konstrukcje językowe, pozostają do przeglądu.
+
+Napięcia są przypisane tylko do tekstowej etykiety stacji, nie do aktualnej infrastruktury. Złożony zapis `400(220)/110 kV` pozostaje nierozstrzygnięty. Wystąpienie 400 kV przy opisie linii nie potwierdza tego poziomu na stacji. Brak napięcia profilu w etykiecie oznacza NOT_LISTED, nie sprzeczność techniczną. Każde wystąpienie ma zakres znaków pozwalający odtworzyć kontekst; wszystkie tożsamości kanoniczne i obecne napięcia stacji pozostają null.
+
+Sprawdzono testami odróżnianie farmy od stacji, lokalność napięć, dłuższe nazwy, wielokrotne wystąpienia, nieznane zapisy i uszkodzone odwołania. Jest to pomoc dla audytu KSE-049, nie jego zakończenie ani nowy werdykt inwestycyjny.
+
+### Stan próby API
 
 18.09.2026 anonimowe zapytanie do `specwezlow` z filtrem business_date równym 2026-09-17 i limitem 5 zwróciło HTTP 200 oraz pustą listę. Jest to obserwacja próby, nie zarchiwizowany snapshot słownika ani dowód braku węzłów. Następnego zapytania, o najnowszą datę, nie wykonano z powodu niedostępności kontroli uprawnień. Nie ustalono najnowszej dostępnej daty; brak aktualnego słownika pozostaje otwarty.

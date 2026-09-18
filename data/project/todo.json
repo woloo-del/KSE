@@ -953,12 +953,14 @@
       "depends_on": [
         "KSE-048"
       ],
-      "next_action": "Przejrzeć znaczenie 105 nagłówków operatora dla 40 profili; rozstrzygnąć aliasy, zakres napięć i daty, pozyskać aktualny słownik API. Nie utożsamiać wzmianki z potwierdzeniem tożsamości.",
+      "next_action": "Zweryfikować tożsamość i zakres czasowy 38 profili z bezpośrednią etykietą stacji w portalu PSE; pozostałe konteksty oraz aliasy rozstrzygnąć osobno. Warstwa kontekstu nie zatwierdza tożsamości ani napięcia aktualnej infrastruktury.",
       "acceptance": "Audyt dopasowań do rzeczywistych stacji, rozdział planowanych/istniejących, rzeczywista miara błędów i nakładu pracy.",
       "evidence": [
         "docs/21_scalability_benchmark.md",
         "docs/23_pse_identity_audit.md",
-        "docs/24_pse_bulk_investment_index.md"
+        "docs/24_pse_bulk_investment_index.md",
+        "tests/test_pse_mention_context.py",
+        "data/reference/pse_mention_context_2026-09-18_v1.json"
       ],
       "risk": "Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych.",
       "started_at": "2026-09-18"
