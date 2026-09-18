@@ -22,3 +22,7 @@ data/archives/**
 !data/raw/.gitkeep
 !data/staging/.gitkeep
 !data/processed/.gitkeep
+
+# Separate Sites source checkout and deployment archives
+/sites/evidence-workspace/
+/sites/evidence-workspace-deploy*.tar.gz
