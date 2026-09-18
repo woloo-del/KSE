@@ -1,0 +1,26 @@
+{
+  "archive_path": "data/archives/tauron_dictionary_discovery_2026-09-18.zip",
+  "archive_sha256": "b98dc8ec8de4f5951012076c5dc9f3da564d847345cd2ca49a2d587a4688f850",
+  "files": [
+    {
+      "path": "data/raw/research/2026-09-18/tauron_map_home.html",
+      "sha256": "f994f6003c55f7b57a7b6a8efaed1aae59ff2ec3207647d0a4f63e9e0bb37e77",
+      "bytes": 109006
+    },
+    {
+      "path": "data/raw/research/2026-09-18/tauron_pending_map.html",
+      "sha256": "aae4c671374e778cfe7842e708114d586cc5c7637b1823c3fde735a3b79c6992",
+      "bytes": 561314
+    },
+    {
+      "path": "data/raw/research/2026-09-18/tauron_mapy.js",
+      "sha256": "9de87abdf6ec64757b97753039a89203bad1d4d551f84e2b07c688e1d2d97639",
+      "bytes": 162248
+    },
+    {
+      "path": "data/raw/research/2026-09-18/tauron_gpz_lodzkie.html",
+      "sha256": "330376074cb322d0f93052561329f1998d5911efdfcda07a7a847fd8c03daaff",
+      "bytes": 321357
+    }
+  ]
+}

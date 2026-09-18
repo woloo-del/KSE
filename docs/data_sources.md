@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-18**. Źródła: **74**.
+Stan badania: **2026-09-18**. Źródła: **78**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -84,6 +84,10 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | OSM_RADK_STATION_OBJECT | [OSM — obiekt stacji Radkowice, way 199098055](https://www.openstreetmap.org/api/0.6/way/199098055/full) | SAMPLE_VERIFIED | P0 | CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate |
 | OSM_RADK_STATION_AREA | [OSM — próbka obszaru stacji Radkowice](https://www.openstreetmap.org/api/0.6/map?bbox=20.516927,50.783155,20.527321,50.792370) | SAMPLE_VERIFIED | P0 | CONDITIONAL — ODbL attribution and applicable database obligations; service terms separate |
 | PSE_RADK_STAGES | [Portal inwestycji PSE — etapy modernizacji Radkowic](https://inwestycje.pse.pl/) | SAMPLE_VERIFIED | P0 | UNKNOWN |
+| TAURON_MAP_HOME | [TAURON — portal biznesowy z mapą](https://dostepnemoce.tauron-dystrybucja.pl/) | CONTENT_REVIEWED | P0 | NOT_CLEARED |
+| TAURON_MAP_SCRIPT | [TAURON — interfejs i zastrzeżenia mapy](https://dostepnemoce.tauron-dystrybucja.pl/wp-content/plugins/tauron-maps/mapy.js?ver=1788435768) | CONTENT_REVIEWED | P0 | NOT_CLEARED |
+| TAURON_PENDING_MAP | [TAURON — regionalny wykaz obiektów planowanych](https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace) | CONTENT_REVIEWED | P0 | NOT_CLEARED |
+| TAURON_GPZ_LODZKIE | [TAURON — publikacja GPZ województwa łódzkiego](https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace/gpz-lodzkie) | CONTENT_REVIEWED | P0 | NOT_CLEARED |
 
 ## Karty źródeł
 
@@ -2770,5 +2774,149 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Klasyfikacja wejścia:** REPORTED
 - **Automatyzacja:** Jednorazowe pobranie HTML; parser h4 z kontrolą nagłówków. Brak potwierdzonego API i warunków stałego pobierania.
 - **Próba PSE_RADK_STAGES:** HTTP 200; 2026-09-18T06:33:11.170759+00:00; `data/catalog/probe_results_radkowice_stages_2026-09-18.json`; próbka `data/raw/research/2026-09-18/pse_investments_home.html`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### TAURON_MAP_HOME — TAURON — portal biznesowy z mapą
+
+[Źródło](https://dostepnemoce.tauron-dystrybucja.pl/)
+
+- **Operator:** TAURON Dystrybucja
+- **Właściciel:** TAURON Dystrybucja S.A.
+- **Kraj:** PL
+- **Kategoria:** station_dictionary_discovery
+- **Napięcie:** SN; 110 kV
+- **Zasięg:** Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.
+- **Format:** HTML
+- **API:** UNKNOWN
+- **GIS:** VIEWER_ONLY
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Public page; REST client uses timestamp/signature, not tested
+- **Licencja:** Map database bulk extraction/reuse restricted by displayed operator terms; no permission established
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** B
+- **Odczyt maszynowy:** HTML/JS; no validated dictionary export
+- **Scraping:** UNKNOWN
+- **Pola:** point code/name discovery; source limitations
+- **Zastosowanie:** Ocena możliwości zbiorczej identyfikacji stacji
+- **Ograniczenia:** Publiczna strona ładuje mapę; nie stanowi kompletnego eksportu stacji.; Brak zgody na komercyjny import bazy; nie potwierdzono zgodności kodów z wykazem PDF.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-18
+- **Udany odczyt:** 2026-09-18
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba TAURON_MAP_HOME:** HTTP 200; 2026-09-18T12:02:53.943948+00:00; `data/catalog/probe_results_tauron_dictionary_2026-09-18.json`; próbka `data/raw/research/2026-09-18/tauron_map_home.html`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### TAURON_MAP_SCRIPT — TAURON — interfejs i zastrzeżenia mapy
+
+[Źródło](https://dostepnemoce.tauron-dystrybucja.pl/wp-content/plugins/tauron-maps/mapy.js?ver=1788435768)
+
+- **Operator:** TAURON Dystrybucja
+- **Właściciel:** TAURON Dystrybucja S.A.
+- **Kraj:** PL
+- **Kategoria:** station_dictionary_discovery
+- **Napięcie:** SN; 110 kV
+- **Zasięg:** Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.
+- **Format:** JavaScript
+- **API:** DISCOVERED_IN_CLIENT_CODE_NOT_TESTED
+- **GIS:** VIEWER_ONLY
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Public page; REST client uses timestamp/signature, not tested
+- **Licencja:** Map database bulk extraction/reuse restricted by displayed operator terms; no permission established
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** B
+- **Odczyt maszynowy:** HTML/JS; no validated dictionary export
+- **Scraping:** UNKNOWN
+- **Pola:** point code/name discovery; source limitations
+- **Zastosowanie:** Ocena możliwości zbiorczej identyfikacji stacji
+- **Ograniczenia:** Kod wskazuje podpisywany REST oraz losowe przesuwanie znaczników GPZ; nie pobrano bazy endpointów.; Brak zgody na komercyjny import bazy; nie potwierdzono zgodności kodów z wykazem PDF.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-18
+- **Udany odczyt:** 2026-09-18
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba TAURON_MAP_SCRIPT:** HTTP 200; 2026-09-18T12:03:25.080362+00:00; `data/catalog/probe_results_tauron_dictionary_2026-09-18.json`; próbka `data/raw/research/2026-09-18/tauron_mapy.js`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### TAURON_PENDING_MAP — TAURON — regionalny wykaz obiektów planowanych
+
+[Źródło](https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace)
+
+- **Operator:** TAURON Dystrybucja
+- **Właściciel:** TAURON Dystrybucja S.A.
+- **Kraj:** PL
+- **Kategoria:** station_dictionary_discovery
+- **Napięcie:** SN; 110 kV
+- **Zasięg:** Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.
+- **Format:** HTML
+- **API:** UNKNOWN
+- **GIS:** VIEWER_ONLY
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Public page; REST client uses timestamp/signature, not tested
+- **Licencja:** UNKNOWN
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** B
+- **Odczyt maszynowy:** HTML/JS; no validated dictionary export
+- **Scraping:** UNKNOWN
+- **Pola:** point code/name discovery; source limitations
+- **Zastosowanie:** Ocena możliwości zbiorczej identyfikacji stacji
+- **Ograniczenia:** Nawigacja do publikacji regionalnych, nie potwierdzony słownik kodów.; Brak zgody na komercyjny import bazy; nie potwierdzono zgodności kodów z wykazem PDF.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-18
+- **Udany odczyt:** 2026-09-18
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba TAURON_PENDING_MAP:** HTTP 200; 2026-09-18T12:02:54.504596+00:00; `data/catalog/probe_results_tauron_dictionary_2026-09-18.json`; próbka `data/raw/research/2026-09-18/tauron_pending_map.html`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### TAURON_GPZ_LODZKIE — TAURON — publikacja GPZ województwa łódzkiego
+
+[Źródło](https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace/gpz-lodzkie)
+
+- **Operator:** TAURON Dystrybucja
+- **Właściciel:** TAURON Dystrybucja S.A.
+- **Kraj:** PL
+- **Kategoria:** station_dictionary_discovery
+- **Napięcie:** SN; 110 kV
+- **Zasięg:** Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.
+- **Format:** HTML
+- **API:** UNKNOWN
+- **GIS:** VIEWER_ONLY
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Public page; REST client uses timestamp/signature, not tested
+- **Licencja:** UNKNOWN
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** B
+- **Odczyt maszynowy:** HTML/JS; no validated dictionary export
+- **Scraping:** UNKNOWN
+- **Pola:** point code/name discovery; source limitations
+- **Zastosowanie:** Ocena możliwości zbiorczej identyfikacji stacji
+- **Ograniczenia:** W próbce nazwa Dworszowice i podział wnioski/planowane; brak potwierdzonego powiązania nazwa–kod wykazu PDF.; Brak zgody na komercyjny import bazy; nie potwierdzono zgodności kodów z wykazem PDF.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-18
+- **Udany odczyt:** 2026-09-18
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba TAURON_GPZ_LODZKIE:** HTTP 200; 2026-09-18T12:04:34.556557+00:00; `data/catalog/probe_results_tauron_dictionary_2026-09-18.json`; próbka `data/raw/research/2026-09-18/tauron_gpz_lodzkie.html`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

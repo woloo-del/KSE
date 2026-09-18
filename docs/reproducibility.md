@@ -104,3 +104,5 @@ Generatory katalogu i kontroli źródeł zapisują końce linii LF także w Wind
 `data/archives/oze_discovery_2026-09-17.zip`, 12 plików. Manifest: `data/catalog/oze_archive_2026-09-17.json`. Pliki obejmują raport, konfiguracje i próbki API; nie są publiczną paczką do redystrybucji. NEED-010 obejmuje osobną kopię zapasową.
 
 18.09.2026: dodatkowe archiwum `data/archives/radkowice_stages_2026-09-18.zip`, manifest `data/catalog/radkowice_stages_archive_2026-09-18.json`. Odtworzenie wyniku: `python scripts/build_radkowice_stages.py`. Archiwum wymaga niezależnej prywatnej kopii, jak pozostałe.
+
+18.09.2026: `data/archives/tauron_dictionary_discovery_2026-09-18.zip` z manifestem `data/catalog/tauron_dictionary_archive_2026-09-18.json` zachowuje cztery strony/skrypt. Nie zawiera pobranej bazy mapy. Wymaga odrębnej kopii prywatnej.

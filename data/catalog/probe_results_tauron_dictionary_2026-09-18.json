@@ -1,0 +1,38 @@
+[
+  {
+    "source_id": "TAURON_MAP_HOME",
+    "url": "https://dostepnemoce.tauron-dystrybucja.pl/",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-09-18/tauron_map_home.html",
+    "sha256": "f994f6003c55f7b57a7b6a8efaed1aae59ff2ec3207647d0a4f63e9e0bb37e77",
+    "bytes": 109006,
+    "retrieval_date": "2026-09-18T12:02:53.943948+00:00"
+  },
+  {
+    "source_id": "TAURON_PENDING_MAP",
+    "url": "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-09-18/tauron_pending_map.html",
+    "sha256": "aae4c671374e778cfe7842e708114d586cc5c7637b1823c3fde735a3b79c6992",
+    "bytes": 561314,
+    "retrieval_date": "2026-09-18T12:02:54.504596+00:00"
+  },
+  {
+    "source_id": "TAURON_MAP_SCRIPT",
+    "url": "https://dostepnemoce.tauron-dystrybucja.pl/wp-content/plugins/tauron-maps/mapy.js?ver=1788435768",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-09-18/tauron_mapy.js",
+    "sha256": "9de87abdf6ec64757b97753039a89203bad1d4d551f84e2b07c688e1d2d97639",
+    "bytes": 162248,
+    "retrieval_date": "2026-09-18T12:03:25.080362+00:00"
+  },
+  {
+    "source_id": "TAURON_GPZ_LODZKIE",
+    "url": "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace/gpz-lodzkie",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-09-18/tauron_gpz_lodzkie.html",
+    "sha256": "330376074cb322d0f93052561329f1998d5911efdfcda07a7a847fd8c03daaff",
+    "bytes": 321357,
+    "retrieval_date": "2026-09-18T12:04:34.556557+00:00"
+  }
+]

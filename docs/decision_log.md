@@ -319,3 +319,13 @@ Consequences: stabilne ID dowodów, cztery snapshoty, jawne OSM G i publikacje B
 - Reason: ograniczyć pracę ręczną do wyjątków, zmierzyć problemy całego źródła i uniknąć fałszywej deklaracji pokrycia.
 - Trade-offs: 166 grup nie stanowi katalogu unikalnych stacji; walidacja tożsamości i OSD to kolejne zadania.
 - Consequences: brak dalszego ręcznego rozszerzania Radkowic jako domyślnej ścieżki; brak score i estymacji MW. Wyniki i bramki opisane w docs/21_scalability_benchmark.md.
+
+## 2026-09-18 — Słownik TAURON: oddzielenie odkrycia interfejsu od importu
+
+- Decision: nie traktować przesuniętych znaczników mapy jako dokładnych współrzędnych stacji; przed zbiorczym pobraniem bazy wyjaśnić warunki operatora.
+- Context: publiczny skrypt mapy wskazuje interfejs danych i maskowanie położenia znaczników o 250–600 m; zawiera również zastrzeżenia dotyczące pobierania i ponownego wykorzystania bazy.
+- Options considered: import danych z interfejsu; ręczne odczytywanie znaczników; udokumentowanie interfejsu i pozyskanie oficjalnego słownika z jasnymi zasadami wykorzystania.
+- Selected option: udokumentowane rozpoznanie, bez pobrania bazy przez odkryty interfejs.
+- Reason: schemat klienta nie potwierdza zawartości odpowiedzi API, a geometria prezentacji nie jest dokładną lokalizacją infrastruktury.
+- Trade-offs: 624 grupy kod+napięcie pozostają grupami źródłowymi bez potwierdzonej tożsamości stacji.
+- Consequences: NEED-019/020 obejmują słownik i zasady użycia; niezależny audyt PSE może postępować dalej. Szczegóły i snapshoty: docs/22_tauron_dictionary_discovery.md.

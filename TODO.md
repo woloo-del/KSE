@@ -69,6 +69,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-048 | Zbiorczy import PSE i próba 50 profili źródłowych | Scaling | Zrobione | P0 | KSE-047 |
 | KSE-049 | Niezależna walidacja tożsamości profili i kosztu wyjątków | Scaling | Do zrobienia | P0 | KSE-048 |
 | KSE-050 | Test zbiorczego importu drugiego operatora | Scaling | Zrobione | P0 | KSE-048 |
+| KSE-051 | Odkrycie interfejsu słownika TAURON i warunków użycia | Research | Zrobione | P0 | KSE-050 |
 
 ## Kryteria zakończenia i dowody
 
@@ -621,3 +622,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-18.
 - Dowody/kontekst: [docs/21_scalability_benchmark.md](docs/21_scalability_benchmark.md), [tests/test_tauron_bulk.py](tests/test_tauron_bulk.py), [data/reference/tauron_scale_benchmark_2026-09-10_v1.json](data/reference/tauron_scale_benchmark_2026-09-10_v1.json).
+
+### KSE-051 — Odkrycie interfejsu słownika TAURON i warunków użycia
+
+- Odpowiedzialność: Codex.
+- Następny krok: Rozstrzygnąć NEED-019/020; niezależnie kontynuować KSE-049 dla PSE.
+- Kryterium: Zweryfikowane publiczne HTML/JS, zapisane pola interfejsu, ograniczenia geometrii i praw; brak niepotwierdzonego mapowania kodów.
+- Nieukończone zależności: brak.
+- Ryzyko: Słownik nie został pozyskany; podpisywany endpoint nie jest otwartą licencją..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-18.
+- Dowody/kontekst: [docs/22_tauron_dictionary_discovery.md](docs/22_tauron_dictionary_discovery.md), [data/catalog/probe_results_tauron_dictionary_2026-09-18.json](data/catalog/probe_results_tauron_dictionary_2026-09-18.json).

@@ -980,6 +980,26 @@
       "risk": "Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych.",
       "started_at": "2026-09-18",
       "completed_at": "2026-09-18"
+    },
+    {
+      "id": "KSE-051",
+      "title": "Odkrycie interfejsu słownika TAURON i warunków użycia",
+      "stage": "Research",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-050"
+      ],
+      "next_action": "Rozstrzygnąć NEED-019/020; niezależnie kontynuować KSE-049 dla PSE.",
+      "acceptance": "Zweryfikowane publiczne HTML/JS, zapisane pola interfejsu, ograniczenia geometrii i praw; brak niepotwierdzonego mapowania kodów.",
+      "evidence": [
+        "docs/22_tauron_dictionary_discovery.md",
+        "data/catalog/probe_results_tauron_dictionary_2026-09-18.json"
+      ],
+      "started_at": "2026-09-18",
+      "completed_at": "2026-09-18",
+      "risk": "Słownik nie został pozyskany; podpisywany endpoint nie jest otwartą licencją."
     }
   ]
 }

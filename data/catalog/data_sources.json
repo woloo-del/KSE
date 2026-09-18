@@ -5254,6 +5254,290 @@
       "retrieval_date": [
         "2026-09-18T06:33:11.170759+00:00"
       ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "VIEWER_ONLY",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Public page; REST client uses timestamp/signature, not tested",
+      "license": "Map database bulk extraction/reuse restricted by displayed operator terms; no permission established",
+      "license_url": null,
+      "commercial_use": "NOT_CLEARED",
+      "machine_readable": "HTML/JS; no validated dictionary export",
+      "scraping_required": "UNKNOWN",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-18",
+      "last_successful_verification": "2026-09-18",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "TAURON_MAP_HOME"
+      ],
+      "related_urls": [],
+      "source_id": "TAURON_MAP_HOME",
+      "operator": "TAURON Dystrybucja",
+      "source_name": "TAURON — portal biznesowy z mapą",
+      "url": "https://dostepnemoce.tauron-dystrybucja.pl/",
+      "data_owner": "TAURON Dystrybucja S.A.",
+      "data_category": "station_dictionary_discovery",
+      "data_format": [
+        "HTML"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "point code/name discovery",
+        "source limitations"
+      ],
+      "potential_application": "Ocena możliwości zbiorczej identyfikacji stacji",
+      "known_limitations": [
+        "Publiczna strona ładuje mapę; nie stanowi kompletnego eksportu stacji.",
+        "Brak zgody na komercyjny import bazy; nie potwierdzono zgodności kodów z wykazem PDF."
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "TAURON_MAP_HOME",
+          "url": "https://dostepnemoce.tauron-dystrybucja.pl/",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-18/tauron_map_home.html",
+          "sha256": "f994f6003c55f7b57a7b6a8efaed1aae59ff2ec3207647d0a4f63e9e0bb37e77",
+          "bytes": 109006,
+          "retrieval_date": "2026-09-18T12:02:53.943948+00:00",
+          "manifest": "data/catalog/probe_results_tauron_dictionary_2026-09-18.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-18T12:02:53.943948+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "api_available": "DISCOVERED_IN_CLIENT_CODE_NOT_TESTED",
+      "gis_available": "VIEWER_ONLY",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Public page; REST client uses timestamp/signature, not tested",
+      "license": "Map database bulk extraction/reuse restricted by displayed operator terms; no permission established",
+      "license_url": null,
+      "commercial_use": "NOT_CLEARED",
+      "machine_readable": "HTML/JS; no validated dictionary export",
+      "scraping_required": "UNKNOWN",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-18",
+      "last_successful_verification": "2026-09-18",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "TAURON_MAP_SCRIPT"
+      ],
+      "related_urls": [],
+      "source_id": "TAURON_MAP_SCRIPT",
+      "operator": "TAURON Dystrybucja",
+      "source_name": "TAURON — interfejs i zastrzeżenia mapy",
+      "url": "https://dostepnemoce.tauron-dystrybucja.pl/wp-content/plugins/tauron-maps/mapy.js?ver=1788435768",
+      "data_owner": "TAURON Dystrybucja S.A.",
+      "data_category": "station_dictionary_discovery",
+      "data_format": [
+        "JavaScript"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "point code/name discovery",
+        "source limitations"
+      ],
+      "potential_application": "Ocena możliwości zbiorczej identyfikacji stacji",
+      "known_limitations": [
+        "Kod wskazuje podpisywany REST oraz losowe przesuwanie znaczników GPZ; nie pobrano bazy endpointów.",
+        "Brak zgody na komercyjny import bazy; nie potwierdzono zgodności kodów z wykazem PDF."
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "TAURON_MAP_SCRIPT",
+          "url": "https://dostepnemoce.tauron-dystrybucja.pl/wp-content/plugins/tauron-maps/mapy.js?ver=1788435768",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-18/tauron_mapy.js",
+          "sha256": "9de87abdf6ec64757b97753039a89203bad1d4d551f84e2b07c688e1d2d97639",
+          "bytes": 162248,
+          "retrieval_date": "2026-09-18T12:03:25.080362+00:00",
+          "manifest": "data/catalog/probe_results_tauron_dictionary_2026-09-18.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-18T12:03:25.080362+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "VIEWER_ONLY",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Public page; REST client uses timestamp/signature, not tested",
+      "license": "UNKNOWN",
+      "license_url": null,
+      "commercial_use": "NOT_CLEARED",
+      "machine_readable": "HTML/JS; no validated dictionary export",
+      "scraping_required": "UNKNOWN",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-18",
+      "last_successful_verification": "2026-09-18",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "TAURON_PENDING_MAP"
+      ],
+      "related_urls": [],
+      "source_id": "TAURON_PENDING_MAP",
+      "operator": "TAURON Dystrybucja",
+      "source_name": "TAURON — regionalny wykaz obiektów planowanych",
+      "url": "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace",
+      "data_owner": "TAURON Dystrybucja S.A.",
+      "data_category": "station_dictionary_discovery",
+      "data_format": [
+        "HTML"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "point code/name discovery",
+        "source limitations"
+      ],
+      "potential_application": "Ocena możliwości zbiorczej identyfikacji stacji",
+      "known_limitations": [
+        "Nawigacja do publikacji regionalnych, nie potwierdzony słownik kodów.",
+        "Brak zgody na komercyjny import bazy; nie potwierdzono zgodności kodów z wykazem PDF."
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "TAURON_PENDING_MAP",
+          "url": "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-18/tauron_pending_map.html",
+          "sha256": "aae4c671374e778cfe7842e708114d586cc5c7637b1823c3fde735a3b79c6992",
+          "bytes": 561314,
+          "retrieval_date": "2026-09-18T12:02:54.504596+00:00",
+          "manifest": "data/catalog/probe_results_tauron_dictionary_2026-09-18.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-18T12:02:54.504596+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Zakres publikacji danego operatora/instytucji; nie założono pełnego pokrycia kraju.",
+      "grid_voltage": [
+        "SN",
+        "110 kV"
+      ],
+      "api_available": "UNKNOWN",
+      "gis_available": "VIEWER_ONLY",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Public page; REST client uses timestamp/signature, not tested",
+      "license": "UNKNOWN",
+      "license_url": null,
+      "commercial_use": "NOT_CLEARED",
+      "machine_readable": "HTML/JS; no validated dictionary export",
+      "scraping_required": "UNKNOWN",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-18",
+      "last_successful_verification": "2026-09-18",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "TAURON_GPZ_LODZKIE"
+      ],
+      "related_urls": [],
+      "source_id": "TAURON_GPZ_LODZKIE",
+      "operator": "TAURON Dystrybucja",
+      "source_name": "TAURON — publikacja GPZ województwa łódzkiego",
+      "url": "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace/gpz-lodzkie",
+      "data_owner": "TAURON Dystrybucja S.A.",
+      "data_category": "station_dictionary_discovery",
+      "data_format": [
+        "HTML"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "B",
+      "key_fields": [
+        "point code/name discovery",
+        "source limitations"
+      ],
+      "potential_application": "Ocena możliwości zbiorczej identyfikacji stacji",
+      "known_limitations": [
+        "W próbce nazwa Dworszowice i podział wnioski/planowane; brak potwierdzonego powiązania nazwa–kod wykazu PDF.",
+        "Brak zgody na komercyjny import bazy; nie potwierdzono zgodności kodów z wykazem PDF."
+      ],
+      "priority": "P0",
+      "evidence": [
+        {
+          "source_id": "TAURON_GPZ_LODZKIE",
+          "url": "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace/gpz-lodzkie",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-18/tauron_gpz_lodzkie.html",
+          "sha256": "330376074cb322d0f93052561329f1998d5911efdfcda07a7a847fd8c03daaff",
+          "bytes": 321357,
+          "retrieval_date": "2026-09-18T12:04:34.556557+00:00",
+          "manifest": "data/catalog/probe_results_tauron_dictionary_2026-09-18.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-18T12:04:34.556557+00:00"
+      ]
     }
   ]
 }

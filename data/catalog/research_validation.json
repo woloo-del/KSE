@@ -1,27 +1,27 @@
 {
-  "checked_at_utc": "2026-09-18T06:35:47.105386+00:00",
+  "checked_at_utc": "2026-09-18T12:10:30.079678+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 74,
+  "source_count": 78,
   "source_status_counts": {
     "SAMPLE_VERIFIED": 18,
-    "CONTENT_REVIEWED": 36,
+    "CONTENT_REVIEWED": 40,
     "DISCOVERED": 4,
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 11
   },
-  "probe_count": 59,
+  "probe_count": 63,
   "http_status_counts": {
-    "200": 58,
+    "200": 62,
     "404": 1
   },
-  "raw_file_count": 58,
+  "raw_file_count": 62,
   "format_counts": {
-    ".html": 18,
+    ".html": 21,
     ".pdf": 16,
     ".json": 15,
     ".xml": 4,
-    ".js": 4,
+    ".js": 5,
     ".xlsx": 1
   },
   "pdf_details": [
@@ -106,13 +106,13 @@
       "first_page_text_chars": 206
     }
   ],
-  "local_links_checked": 57,
+  "local_links_checked": 61,
   "dependencies": {
     "python": "3.12.14",
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 883,
+  "checks_passed": 933,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -2131,6 +2131,106 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:TAURON_MAP_HOME",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:TAURON_MAP_HOME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:TAURON_MAP_HOME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:TAURON_MAP_HOME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:TAURON_MAP_HOME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:TAURON_MAP_SCRIPT",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:TAURON_MAP_SCRIPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:TAURON_MAP_SCRIPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:TAURON_MAP_SCRIPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:TAURON_MAP_SCRIPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:TAURON_PENDING_MAP",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:TAURON_PENDING_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:TAURON_PENDING_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:TAURON_PENDING_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:TAURON_PENDING_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:TAURON_GPZ_LODZKIE",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:TAURON_GPZ_LODZKIE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:TAURON_GPZ_LODZKIE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:TAURON_GPZ_LODZKIE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:TAURON_GPZ_LODZKIE",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
@@ -2502,6 +2602,26 @@
     },
     {
       "name": "probe_references:PSE_RADK_STAGES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:TAURON_MAP_HOME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:TAURON_MAP_SCRIPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:TAURON_PENDING_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:TAURON_GPZ_LODZKIE",
       "passed": true,
       "detail": null
     },
@@ -3606,6 +3726,86 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:TAURON_MAP_HOME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:TAURON_MAP_HOME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:TAURON_MAP_HOME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:TAURON_MAP_HOME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:TAURON_PENDING_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:TAURON_PENDING_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:TAURON_PENDING_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:TAURON_PENDING_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:TAURON_MAP_SCRIPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:TAURON_MAP_SCRIPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:TAURON_MAP_SCRIPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:TAURON_MAP_SCRIPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:TAURON_GPZ_LODZKIE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:TAURON_GPZ_LODZKIE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:TAURON_GPZ_LODZKIE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:TAURON_GPZ_LODZKIE",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "snapshot_within_raw:PSE_INVESTMENTS_RADK",
       "passed": true,
       "detail": null
@@ -4086,6 +4286,26 @@
       "detail": null
     },
     {
+      "name": "format_readable:tauron_gpz_lodzkie.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:tauron_map_home.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:tauron_mapy.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:tauron_pending_map.html",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "pge_block_body_identified",
       "passed": true,
       "detail": null
@@ -4266,6 +4486,11 @@
       "detail": null
     },
     {
+      "name": "local_link:README.md:docs/21_scalability_benchmark.md",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "local_link:01_data_research.md:data_sources.md",
       "passed": true,
       "detail": null
@@ -4302,6 +4527,16 @@
     },
     {
       "name": "local_link:01_data_research.md:19_oze_sources_review.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:01_data_research.md:21_scalability_benchmark.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:01_data_research.md:22_tauron_dictionary_discovery.md",
       "passed": true,
       "detail": null
     },
@@ -4362,6 +4597,11 @@
     },
     {
       "name": "local_link:08_roadmap.md:gpz_pipeline.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:08_roadmap.md:21_scalability_benchmark.md",
       "passed": true,
       "detail": null
     },
@@ -4457,6 +4697,16 @@
     },
     {
       "name": "python_syntax:audit_pse_pipeline_statuses.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:benchmark_pipeline_scale.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:benchmark_tauron_scale.py",
       "passed": true,
       "detail": null
     },
