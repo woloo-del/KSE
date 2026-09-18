@@ -24,6 +24,7 @@ export const DOCUMENTS = [
   'docs/20_station_data_aggregation.md',
   'docs/21_scalability_benchmark.md',
   'docs/22_tauron_dictionary_discovery.md',
+  'docs/23_pse_identity_audit.md',
   'docs/private_sources.md',
 ];
 export const sha = b => crypto.createHash('sha256').update(b).digest('hex');

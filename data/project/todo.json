@@ -947,18 +947,20 @@
       "id": "KSE-049",
       "title": "Niezależna walidacja tożsamości profili i kosztu wyjątków",
       "stage": "Scaling",
-      "status": "Not Started",
+      "status": "In Progress",
       "priority": "P0",
       "owner": "Codex",
       "depends_on": [
         "KSE-048"
       ],
-      "next_action": "Wybrać niezależny słownik i zweryfikować 50 grup; zachować wyniki trafne, niejednoznaczne i błędne oraz czas ręcznej pracy.",
+      "next_action": "Zweryfikować kandydatów w pierwotnych źródłach operatora: 36 zgodnych nazw i napięć, 12 bez dokładnej nazwy, 2 z napięciem niewymienionym. Nie utożsamiać porównania GIS z niezależnym audytem; dopiero potem zmierzyć błędy i czas ręcznej pracy.",
       "acceptance": "Audyt dopasowań do rzeczywistych stacji, rozdział planowanych/istniejących, rzeczywista miara błędów i nakładu pracy.",
       "evidence": [
-        "docs/21_scalability_benchmark.md"
+        "docs/21_scalability_benchmark.md",
+        "docs/23_pse_identity_audit.md"
       ],
-      "risk": "Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych."
+      "risk": "Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych.",
+      "started_at": "2026-09-18"
     },
     {
       "id": "KSE-050",
