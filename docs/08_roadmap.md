@@ -68,3 +68,7 @@ Dla SN można rozwijać rozpoznanie stacji i otoczenia; relacja feeder–projekt
 Rejestr potrzeb `data/project/information_requests.json` pozostaje źródłem prawdy. Przydatne są aktualny schemat z oznaczeniami pól i granicami własności, jednoznaczna rewizja dokumentacji mostu, potwierdzenia odbioru inwestycji i aktualne publikacje PGE. Nie ponawiamy oczekiwania na niedostępną analizę wpływu. Braki nie blokują mapy dowodów, ale ograniczają wnioski techniczne.
 
 Podstawa: [audyt GIS i OSM](18_gis_osm_integration.md), [działająca aplikacja](17_local_application.md), [wykonalność](02_feasibility_matrix.md), [pipeline GPZ](gpz_pipeline.md). Dokument nie zmienia metodologii scoringu i nie deklaruje wdrożenia nowych funkcji. Jest wejściem kolejnej wersji automatycznego raportu Excel; wcześniejszy Excel pozostaje historycznym snapshotem.
+
+## Priorytet od 18.09.2026 — skalowanie źródłami
+
+Pierwszy zbiorczy import PSE i 50 profili źródłowych wykonano; szczegóły w [teście skalowania](21_scalability_benchmark.md). Następne kroki: niezależna walidacja tożsamości i czasu obsługi wyjątków, drugi operator, dopiero potem wybór wielu potwierdzonych stacji w aplikacji. Nie rozszerzamy ręcznie każdej stacji do poziomu dokumentacji Radkowic.

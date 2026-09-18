@@ -1,0 +1,1551 @@
+{
+  "method": "pse_bulk_profiles_v1",
+  "source_date": "2026-07-31",
+  "selection": "Round-robin 110/220/400 kV; alphabetical source labels within each bucket.",
+  "metrics": {
+    "source_records": 892,
+    "source_label_voltage_groups": 166,
+    "grouped_records": 862,
+    "ungrouped_records": 30,
+    "records_requiring_any_review": 65,
+    "reason_counts": {
+      "MULTIPLE_POINTS_OR_UNKNOWN_FLAG": 28,
+      "VOLTAGE_REQUIRES_REVIEW": 28,
+      "POINT_LABEL_REQUIRES_REVIEW": 11,
+      "EXPORT_POWER_ANNOTATION_OR_INVALID": 36,
+      "IMPORT_POWER_ANNOTATION_OR_INVALID": 4
+    },
+    "selected_profiles": 50,
+    "validated_canonical_stations": 0,
+    "matching_error_rate": null,
+    "manual_review_minutes": null
+  },
+  "profiles": [
+    {
+      "profile_id": "7820d5aee659ad05d27ab61ade74404284e2d0ad38c5219838b03c25c3700f84",
+      "name_reported": "Adamów",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_42",
+        "pse_pipeline_row_732",
+        "pse_pipeline_row_737",
+        "pse_pipeline_row_738"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 1,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 3
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "74f8dcaec0630509109fb4e8b9a1e24a13bcb368da5823ad2ed786b0bc29fd76",
+      "name_reported": "Abramowice",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_56",
+        "pse_pipeline_row_334",
+        "pse_pipeline_row_483",
+        "pse_pipeline_row_589",
+        "pse_pipeline_row_607"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 4
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "d458b8d851578e572e079c682c4d9864a5032738301a2d0d51e52f8790a154e2",
+      "name_reported": "Baczyna Systemowa",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_176",
+        "pse_pipeline_row_220",
+        "pse_pipeline_row_235",
+        "pse_pipeline_row_240",
+        "pse_pipeline_row_252",
+        "pse_pipeline_row_258",
+        "pse_pipeline_row_330",
+        "pse_pipeline_row_335",
+        "pse_pipeline_row_376",
+        "pse_pipeline_row_381",
+        "pse_pipeline_row_400",
+        "pse_pipeline_row_437",
+        "pse_pipeline_row_452",
+        "pse_pipeline_row_455",
+        "pse_pipeline_row_469",
+        "pse_pipeline_row_481",
+        "pse_pipeline_row_498",
+        "pse_pipeline_row_521",
+        "pse_pipeline_row_694",
+        "pse_pipeline_row_698",
+        "pse_pipeline_row_891"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 20,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "703ca336128c61db5267fe38525a049c5c32f27ba305912cc2c89b1a0bf8bb72",
+      "name_reported": "Baczyna Systemowa",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_174",
+        "pse_pipeline_row_470",
+        "pse_pipeline_row_477",
+        "pse_pipeline_row_510",
+        "pse_pipeline_row_742",
+        "pse_pipeline_row_788",
+        "pse_pipeline_row_793",
+        "pse_pipeline_row_814",
+        "pse_pipeline_row_879"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 4,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 5
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "3b140ab256575704d1e040215b1e6f641e3239fd7eaaaecff85f5b379b1bbfa0",
+      "name_reported": "Adamów",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_224",
+        "pse_pipeline_row_307",
+        "pse_pipeline_row_747",
+        "pse_pipeline_row_839"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 2,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 2
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "c844a59141487321050339b00280ba2b2b879acf14e662ff6177898d0cf2a595",
+      "name_reported": "Byczyna",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_715"
+      ],
+      "status_counts": {
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "f6165b234bd6528eed38794bac9368ecf18a5fd69608e487811f4ad1aae5439f",
+      "name_reported": "Baczyna Systemowa (planowana)",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_28",
+        "pse_pipeline_row_69",
+        "pse_pipeline_row_86",
+        "pse_pipeline_row_94"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 4
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "11e577f758f5c4c034210a7ab9454ff33043c20133552ec0125a93e467280456",
+      "name_reported": "Blachownia",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_19",
+        "pse_pipeline_row_315",
+        "pse_pipeline_row_351",
+        "pse_pipeline_row_559",
+        "pse_pipeline_row_777",
+        "pse_pipeline_row_781",
+        "pse_pipeline_row_821"
+      ],
+      "status_counts": {
+        "WNIOSEK w weryfikacji": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 3,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 3
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "6e04e8f82a0efc26a0f0f0abe50d9924348ca4e58a090fc781acc490f6790ac3",
+      "name_reported": "Bydgoszcz Zachód",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_336",
+        "pse_pipeline_row_384",
+        "pse_pipeline_row_385",
+        "pse_pipeline_row_443",
+        "pse_pipeline_row_494"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 5
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "e97f9afe2c9fa0bc434172b3cee63b642be75a5deefc0c09311d88d1c77c63d6",
+      "name_reported": "CPKK",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_265",
+        "pse_pipeline_row_500",
+        "pse_pipeline_row_680",
+        "pse_pipeline_row_803"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 3,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": [
+        "pse_pipeline_row_680",
+        "pse_pipeline_row_803"
+      ]
+    },
+    {
+      "profile_id": "131b01575f71aa1c90215f092e6bb5cd7eed7bc4a164f9e3ccc8f23d5607974c",
+      "name_reported": "Boguszów",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_251",
+        "pse_pipeline_row_456"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 2
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "ac347530dde8a38d8c33364b98562c35e4ab7663fdb840b06eb92e03865348f0",
+      "name_reported": "CPKK",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_520"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "2f5ed3df48f99c479ac3fa7da20978e52ffdd66972e83fc0da5963ad8db0cd4e",
+      "name_reported": "Chmielów",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_516",
+        "pse_pipeline_row_612",
+        "pse_pipeline_row_772"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 2,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "70b282041fc75bf537b916a2441625d4f5195241263cbfb0c6bf51b574347c00",
+      "name_reported": "Bujaków",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_157",
+        "pse_pipeline_row_785"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": [
+        "pse_pipeline_row_157",
+        "pse_pipeline_row_785"
+      ]
+    },
+    {
+      "profile_id": "ab6302b21ee67af03984bfb7d2aec900c7fb5b6ea9a875ca0d8c0c7e4017080e",
+      "name_reported": "Choczewo",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_6",
+        "pse_pipeline_row_84",
+        "pse_pipeline_row_567",
+        "pse_pipeline_row_573",
+        "pse_pipeline_row_595",
+        "pse_pipeline_row_620",
+        "pse_pipeline_row_621",
+        "pse_pipeline_row_623",
+        "pse_pipeline_row_624",
+        "pse_pipeline_row_657",
+        "pse_pipeline_row_662",
+        "pse_pipeline_row_690",
+        "pse_pipeline_row_722",
+        "pse_pipeline_row_725",
+        "pse_pipeline_row_726",
+        "pse_pipeline_row_740",
+        "pse_pipeline_row_745",
+        "pse_pipeline_row_894"
+      ],
+      "status_counts": {
+        "WNIOSEK w weryfikacji": 1,
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 10,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 6
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "417dbe0906cb10c24c257eccd3919563453ddf0b1ed75f4bdb77d6911297b3fb",
+      "name_reported": "Dobrzeń",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_257",
+        "pse_pipeline_row_388",
+        "pse_pipeline_row_426",
+        "pse_pipeline_row_454",
+        "pse_pipeline_row_563",
+        "pse_pipeline_row_614",
+        "pse_pipeline_row_678",
+        "pse_pipeline_row_778"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 7,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "bfe744bd0cf8cc155456de19b40eeb901e7c171f3c01460f7507d739110770c8",
+      "name_reported": "Byczyna",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_445",
+        "pse_pipeline_row_446",
+        "pse_pipeline_row_447",
+        "pse_pipeline_row_450",
+        "pse_pipeline_row_451",
+        "pse_pipeline_row_629"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 6
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "3d2cb2d4f88029fcae8bba91ddc1b997c7b2ded729b4a5cfd78152195d780047",
+      "name_reported": "Czarna",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_109",
+        "pse_pipeline_row_173",
+        "pse_pipeline_row_218",
+        "pse_pipeline_row_273",
+        "pse_pipeline_row_323",
+        "pse_pipeline_row_368",
+        "pse_pipeline_row_377",
+        "pse_pipeline_row_533",
+        "pse_pipeline_row_537",
+        "pse_pipeline_row_549",
+        "pse_pipeline_row_655",
+        "pse_pipeline_row_812",
+        "pse_pipeline_row_872"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 10,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 2
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "f414bdcb08dbcd623969b014afc524522cf2a2d086cc73391901307362d980af",
+      "name_reported": "Dunowo",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_677",
+        "pse_pipeline_row_710"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": [
+        "pse_pipeline_row_677"
+      ]
+    },
+    {
+      "profile_id": "f676ee7de0d91a1208b1c3126ae282acd454c62934c5ec7b6a1408531c60c3fc",
+      "name_reported": "Chełm",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_165",
+        "pse_pipeline_row_294",
+        "pse_pipeline_row_488",
+        "pse_pipeline_row_831"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 3,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "a24edf3d732e4dcaf09f6bb8cc8c7910dcffaa9c843d5b26c34c6d5efc6ac3e1",
+      "name_reported": "Dobrzeń",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_58",
+        "pse_pipeline_row_170",
+        "pse_pipeline_row_302",
+        "pse_pipeline_row_332",
+        "pse_pipeline_row_438",
+        "pse_pipeline_row_585",
+        "pse_pipeline_row_776"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 5,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "4b8e22947f8217aa2eed9aba7f0010c03a5bbb9edfe61605a8c9b50d0c828cea",
+      "name_reported": "Ełk Bis",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_21",
+        "pse_pipeline_row_471",
+        "pse_pipeline_row_485",
+        "pse_pipeline_row_766",
+        "pse_pipeline_row_771",
+        "pse_pipeline_row_782",
+        "pse_pipeline_row_876",
+        "pse_pipeline_row_888"
+      ],
+      "status_counts": {
+        "WNIOSEK w weryfikacji": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 2,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 5
+      },
+      "review_record_ids": [
+        "pse_pipeline_row_485",
+        "pse_pipeline_row_771"
+      ]
+    },
+    {
+      "profile_id": "7be686725203b12711f25a16ed0f72ff887f26a46c2a0e3dccd62d74b87e999d",
+      "name_reported": "Chełm Systemowa",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_71"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "0d296b77a8e8f6d4a5d95aeeedb18d67cee775042d0f6c1fd1a0d1de6c44f5ba",
+      "name_reported": "Dunowo",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_80",
+        "pse_pipeline_row_93",
+        "pse_pipeline_row_110",
+        "pse_pipeline_row_254",
+        "pse_pipeline_row_267",
+        "pse_pipeline_row_313",
+        "pse_pipeline_row_319",
+        "pse_pipeline_row_404",
+        "pse_pipeline_row_410",
+        "pse_pipeline_row_544",
+        "pse_pipeline_row_578",
+        "pse_pipeline_row_628",
+        "pse_pipeline_row_647",
+        "pse_pipeline_row_661",
+        "pse_pipeline_row_674",
+        "pse_pipeline_row_688",
+        "pse_pipeline_row_848"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 3,
+        "WARUNKI PRZYŁĄCZENIA wydane": 13,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": [
+        "pse_pipeline_row_544",
+        "pse_pipeline_row_848"
+      ]
+    },
+    {
+      "profile_id": "c68a0cc7910a52987d15fe84ba3c76001d0ff49bd2c983b564192247909f49ae",
+      "name_reported": "Gdańsk Błonia",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_205",
+        "pse_pipeline_row_632",
+        "pse_pipeline_row_797",
+        "pse_pipeline_row_829"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 2,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 2
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "a258a2b07accbf599343891677f39a21ce3c8a99815d8d47060d87119886a134",
+      "name_reported": "Chmielów",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_584",
+        "pse_pipeline_row_659"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 2
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "7063e98accb80b65cbc03a50bdde453975e1d64431e43dec66d7073423866991",
+      "name_reported": "Ełk Bis",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_100",
+        "pse_pipeline_row_216",
+        "pse_pipeline_row_217",
+        "pse_pipeline_row_253",
+        "pse_pipeline_row_264",
+        "pse_pipeline_row_310",
+        "pse_pipeline_row_314",
+        "pse_pipeline_row_466",
+        "pse_pipeline_row_492",
+        "pse_pipeline_row_505",
+        "pse_pipeline_row_508",
+        "pse_pipeline_row_582",
+        "pse_pipeline_row_692",
+        "pse_pipeline_row_733"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 12,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "7b265b8f20a36acc29680db1dfd2d8c004d5575e7c6f75af12bb598440507596",
+      "name_reported": "Gdańsk Przyjaźń",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_280",
+        "pse_pipeline_row_886"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "ee56d9b93486cf6a43ada31e7a22a7a4c1f4df60102203e8a7d176989db1a579",
+      "name_reported": "Cieplice",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_180",
+        "pse_pipeline_row_555",
+        "pse_pipeline_row_667"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 3
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "a462f5fc8c92395d78f604054b2e3fd309e0c485448d760885b90a9d987f29aa",
+      "name_reported": "Gdańsk Błonia",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_318",
+        "pse_pipeline_row_340",
+        "pse_pipeline_row_369",
+        "pse_pipeline_row_502",
+        "pse_pipeline_row_720"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 4,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "14e01bf53f3a2ea6d8fed4fc2d0439bea15a518302b054e6af46ea0e356a3fb9",
+      "name_reported": "Gorzów",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_263"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      },
+      "review_record_ids": [
+        "pse_pipeline_row_263"
+      ]
+    },
+    {
+      "profile_id": "ce8f53fa103992c4e9c998e1467476e82211fd7f116f331984437756634ddf86",
+      "name_reported": "Dunowo",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_391"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "b5cd6d732563905bced44c08d06df674f60b7626c224db3fc5e8c9a4b8d1ce5d",
+      "name_reported": "Gdańsk Przyjaźń",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_132",
+        "pse_pipeline_row_622"
+      ],
+      "status_counts": {
+        "ODMOWA PRZYŁĄCZENIA": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "b7c22c61af1bb53d273845c2abe5837e3794783129b12fb02ece03c3b15e2807",
+      "name_reported": "Jarosław (planowana)",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_26",
+        "pse_pipeline_row_31",
+        "pse_pipeline_row_66",
+        "pse_pipeline_row_141",
+        "pse_pipeline_row_159",
+        "pse_pipeline_row_223",
+        "pse_pipeline_row_276",
+        "pse_pipeline_row_868"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 3,
+        "ODMOWA PRZYŁĄCZENIA": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 3,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "dc19b8004f5a45fa0b1a3ea18f85663726811126e99072d83b27f80ff27b918d",
+      "name_reported": "Glinki",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_636"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "dd2591196d8b6eab4cedc000a2f1f98427acf0ee96d4d2a936cc0f5715ce38f9",
+      "name_reported": "Grudziądz Węgrowo",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_201",
+        "pse_pipeline_row_231",
+        "pse_pipeline_row_232",
+        "pse_pipeline_row_514",
+        "pse_pipeline_row_523",
+        "pse_pipeline_row_534",
+        "pse_pipeline_row_557",
+        "pse_pipeline_row_644",
+        "pse_pipeline_row_651",
+        "pse_pipeline_row_665",
+        "pse_pipeline_row_718"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 10,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "74154abfb10a3f25ace0e9db86d0021a09c8830f20a93d1504b803e42e92d72f",
+      "name_reported": "Konin",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_239",
+        "pse_pipeline_row_527",
+        "pse_pipeline_row_660",
+        "pse_pipeline_row_729"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 3,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "b37ac5fa9c6ae84c1ee1c6f11ebc1b4d589821aa33b1ab1020aebc2366e16b85",
+      "name_reported": "Groszowice",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_321",
+        "pse_pipeline_row_672",
+        "pse_pipeline_row_761"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 2,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "30b9b5f83e1121685d2f11ddb5c8fc174b65e8811fc6e03a828105b804f6e814",
+      "name_reported": "Jarosław (planowana)",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_20",
+        "pse_pipeline_row_142",
+        "pse_pipeline_row_171",
+        "pse_pipeline_row_373",
+        "pse_pipeline_row_398"
+      ],
+      "status_counts": {
+        "WNIOSEK w weryfikacji": 1,
+        "ODMOWA PRZYŁĄCZENIA": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 3
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "0fd4687f3507f786a61a72c1ed8bd840f96b6fcf0820702c45b5af46dddaa31c",
+      "name_reported": "Kopanina",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_448",
+        "pse_pipeline_row_845"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "ee4c48c40ee9415cb519164d107c47a37f88e69a070cd31af8b6808603443304",
+      "name_reported": "Grudziądz Węgrowo",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_118",
+        "pse_pipeline_row_166",
+        "pse_pipeline_row_333",
+        "pse_pipeline_row_416",
+        "pse_pipeline_row_826"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 3,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "40ffb5e7ad42235488efb99a3bd8fef17e2f2922ab0b9ef5cc05e8d29ca82e92",
+      "name_reported": "Kozienice",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_137",
+        "pse_pipeline_row_138",
+        "pse_pipeline_row_344",
+        "pse_pipeline_row_387",
+        "pse_pipeline_row_482",
+        "pse_pipeline_row_593",
+        "pse_pipeline_row_705",
+        "pse_pipeline_row_890"
+      ],
+      "status_counts": {
+        "ODMOWA PRZYŁĄCZENIA": 2,
+        "WARUNKI PRZYŁĄCZENIA wydane": 4,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 2
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "6ce7eaf0a6fbe133c87324df461281a66dd114dcae31ced99ff3d9ffb3d16b18",
+      "name_reported": "Krajnik",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_389"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 1
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "89a222e2bf5ec101273c2024b50452a74438c0f4a11ac98390e7dcb4c3135c7b",
+      "name_reported": "Janów",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_259",
+        "pse_pipeline_row_434"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 2
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "b2250a86518bc350405f94c702a319c5f5c3ceca4ce45346c28c0db1ffbe1b1f",
+      "name_reported": "Krajnik",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_375",
+        "pse_pipeline_row_396",
+        "pse_pipeline_row_736",
+        "pse_pipeline_row_825",
+        "pse_pipeline_row_867"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 2,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 3
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "202dfa41771ca0f348224d40aee28e7dd7b2ca0950f279e8426954dcda3fa0e8",
+      "name_reported": "Kromolice",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_40",
+        "pse_pipeline_row_114",
+        "pse_pipeline_row_115",
+        "pse_pipeline_row_198",
+        "pse_pipeline_row_200",
+        "pse_pipeline_row_277",
+        "pse_pipeline_row_405",
+        "pse_pipeline_row_627",
+        "pse_pipeline_row_717",
+        "pse_pipeline_row_758",
+        "pse_pipeline_row_796",
+        "pse_pipeline_row_827"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 3,
+        "WARUNKI PRZYŁĄCZENIA wydane": 5,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 4
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "7358fa276c6e99512c3074e66c04e4326e41187ca9c7ace93a3b4ae1b1e67d52",
+      "name_reported": "Joachimów",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_192",
+        "pse_pipeline_row_342",
+        "pse_pipeline_row_355",
+        "pse_pipeline_row_364",
+        "pse_pipeline_row_425",
+        "pse_pipeline_row_641",
+        "pse_pipeline_row_792",
+        "pse_pipeline_row_811"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 6,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 2
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "354d01685a4fe6dc21430dba29f99ca7643c5980274e0cc10def14fd951afca6",
+      "name_reported": "Kromolice",
+      "voltage_kV": 400,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_287",
+        "pse_pipeline_row_327",
+        "pse_pipeline_row_356",
+        "pse_pipeline_row_442",
+        "pse_pipeline_row_535"
+      ],
+      "status_counts": {
+        "WARUNKI PRZYŁĄCZENIA wydane": 5
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "18b8eddc4a45a1ffa9eaf5a5e20705dc85811667dd36e4e87ce8ef85bdc23f38",
+      "name_reported": "Krosno Iskrzynia",
+      "voltage_kV": 110,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_63",
+        "pse_pipeline_row_98",
+        "pse_pipeline_row_509",
+        "pse_pipeline_row_663"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 2,
+        "WARUNKI PRZYŁĄCZENIA wydane": 2
+      },
+      "review_record_ids": []
+    },
+    {
+      "profile_id": "63fc166ff74e009d0019fb9fe1c5fb1caf86f066abb722b861a6b0017f1a2705",
+      "name_reported": "Kielce",
+      "voltage_kV": 220,
+      "canonical_station_id": null,
+      "record_ids": [
+        "pse_pipeline_row_82",
+        "pse_pipeline_row_178",
+        "pse_pipeline_row_241",
+        "pse_pipeline_row_285",
+        "pse_pipeline_row_297",
+        "pse_pipeline_row_774",
+        "pse_pipeline_row_780",
+        "pse_pipeline_row_794"
+      ],
+      "status_counts": {
+        "WNIOSEK kompletny - w trakcie analizy technicznej i ekonomicznej": 1,
+        "WARUNKI PRZYŁĄCZENIA wydane": 4,
+        "UMOWA O PRZYŁĄCZENIE obowiązująca": 3
+      },
+      "review_record_ids": []
+    }
+  ],
+  "review_queue": [
+    {
+      "record_id": "pse_pipeline_row_10",
+      "row": 10,
+      "point_reported": "Morzyczyn",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_13",
+      "row": 13,
+      "point_reported": "CPKK",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_16",
+      "row": 16,
+      "point_reported": "Mikułowa\nŚwiebodzice",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW",
+        "POINT_LABEL_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_17",
+      "row": 17,
+      "point_reported": "WYPM",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_22",
+      "row": 22,
+      "point_reported": "Wielopole",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_38",
+      "row": 38,
+      "point_reported": "Kromolice\nKromolice",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW",
+        "POINT_LABEL_REQUIRES_REVIEW",
+        "EXPORT_POWER_ANNOTATION_OR_INVALID",
+        "IMPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_48",
+      "row": 48,
+      "point_reported": "WYPM",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_59",
+      "row": 59,
+      "point_reported": "Olsztyn Mątki",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_60",
+      "row": 60,
+      "point_reported": "Piła Krzewina",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_75",
+      "row": 75,
+      "point_reported": "Żydowo Kierzkowo\nPiła Krzewina",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW",
+        "POINT_LABEL_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_77",
+      "row": 77,
+      "point_reported": "Stanisławów",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_83",
+      "row": 83,
+      "point_reported": "Leśniów\nnowa SE RS \"Wcinka\"",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW",
+        "POINT_LABEL_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_99",
+      "row": 99,
+      "point_reported": "Skawina",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_101",
+      "row": 101,
+      "point_reported": "Krajnik\nPomorzany",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW",
+        "POINT_LABEL_REQUIRES_REVIEW",
+        "IMPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_116",
+      "row": 116,
+      "point_reported": "Recław",
+      "reasons": [
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_120",
+      "row": 120,
+      "point_reported": "Żydowo \nPiła  Krzewina",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW",
+        "POINT_LABEL_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_126",
+      "row": 126,
+      "point_reported": "Rogowiec",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_129",
+      "row": 129,
+      "point_reported": "Cieplice; Boguszów",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW",
+        "POINT_LABEL_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_133",
+      "row": 133,
+      "point_reported": "Żagań (Marszów); Polkowice",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW",
+        "POINT_LABEL_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_140",
+      "row": 140,
+      "point_reported": "Nysa",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_143",
+      "row": 143,
+      "point_reported": "Ołtarzew",
+      "reasons": [
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_145",
+      "row": 145,
+      "point_reported": "Blachownia",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_155",
+      "row": 155,
+      "point_reported": "Żagań (Marszów)",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_156",
+      "row": 156,
+      "point_reported": "Recław",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_157",
+      "row": 157,
+      "point_reported": "Bujaków",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_215",
+      "row": 215,
+      "point_reported": "Byczyna\nPoręba",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW",
+        "POINT_LABEL_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_249",
+      "row": 249,
+      "point_reported": "Pelplin",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_263",
+      "row": 263,
+      "point_reported": "Gorzów",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_418",
+      "row": 418,
+      "point_reported": "Nysa",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_422",
+      "row": 422,
+      "point_reported": "Mikułowa",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_424",
+      "row": 424,
+      "point_reported": "Rogowiec",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_435",
+      "row": 435,
+      "point_reported": "Pasikurowice",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_459",
+      "row": 459,
+      "point_reported": "Recław",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_484",
+      "row": 484,
+      "point_reported": "Połaniec",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_485",
+      "row": 485,
+      "point_reported": "Ełk Bis",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_539",
+      "row": 539,
+      "point_reported": "Polkowice",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_544",
+      "row": 544,
+      "point_reported": "Dunowo",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_634",
+      "row": 634,
+      "point_reported": "Konin",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_635",
+      "row": 635,
+      "point_reported": "Słupsk Wierzbięcino",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_677",
+      "row": 677,
+      "point_reported": "Dunowo",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_680",
+      "row": 680,
+      "point_reported": "CPKK",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_681",
+      "row": 681,
+      "point_reported": "Pabianice",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_708",
+      "row": 708,
+      "point_reported": "Ostrołęka",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_739",
+      "row": 739,
+      "point_reported": "Krajnik",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_744",
+      "row": 744,
+      "point_reported": "Piła Krzewina",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_746",
+      "row": 746,
+      "point_reported": "Pątnów",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_749",
+      "row": 749,
+      "point_reported": "Łagisza",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_750",
+      "row": 750,
+      "point_reported": "Łagisza",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_751",
+      "row": 751,
+      "point_reported": "Stanisławów",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_757",
+      "row": 757,
+      "point_reported": "Adamów",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_762",
+      "row": 762,
+      "point_reported": "Kozienice",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_763",
+      "row": 763,
+      "point_reported": "Wielopole",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_770",
+      "row": 770,
+      "point_reported": "Pasikurowice",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_771",
+      "row": 771,
+      "point_reported": "Ełk Bis",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_775",
+      "row": 775,
+      "point_reported": "Polkowice",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_785",
+      "row": 785,
+      "point_reported": "Bujaków",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_795",
+      "row": 795,
+      "point_reported": "Recław",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_803",
+      "row": 803,
+      "point_reported": "CPKK",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_805",
+      "row": 805,
+      "point_reported": "Konin",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_824",
+      "row": 824,
+      "point_reported": "Skawina",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_848",
+      "row": 848,
+      "point_reported": "Dunowo",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_853",
+      "row": 853,
+      "point_reported": "CPKK\nStryków (Dmosin)",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW",
+        "POINT_LABEL_REQUIRES_REVIEW",
+        "IMPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_854",
+      "row": 854,
+      "point_reported": "Pasikurowice\nKuźnicaŁ\nPabianice",
+      "reasons": [
+        "MULTIPLE_POINTS_OR_UNKNOWN_FLAG",
+        "VOLTAGE_REQUIRES_REVIEW",
+        "POINT_LABEL_REQUIRES_REVIEW",
+        "IMPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_877",
+      "row": 877,
+      "point_reported": "Recław",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    },
+    {
+      "record_id": "pse_pipeline_row_893",
+      "row": 893,
+      "point_reported": "Płock",
+      "reasons": [
+        "EXPORT_POWER_ANNOTATION_OR_INVALID"
+      ]
+    }
+  ],
+  "limitations": [
+    "Source label/voltage groups, not verified unique physical stations.",
+    "Single PSE publication; no complete DSO or nationwide station coverage.",
+    "Row counts are not unique projects, MW reservations, loading or adverse factors.",
+    "No inference of operational status from agreements; annotated powers remain null.",
+    "No manual ground-truth audit yet; error rate and manual effort unknown."
+  ],
+  "provenance": {
+    "url": "https://www.pse.pl/documents/20182/51490/Informacje_publikowane_zgodnie_z_Art_7_ust_8l_ustawy_PE_stan_na_31_07_2026.xlsx",
+    "sha256": "21dff45875f6fe7d943fd3df98a2290c1e3f04e999389538bdc1c00fe54b86dc",
+    "retrieval_date": "2026-09-10T11:21:03.1201767Z",
+    "local_path": "data/raw/research/2026-09-10/pse_pipeline_url_2026-07-31.xlsx"
+  },
+  "method_code_sha256": "72b666f671394840a5c702ecd2eaa7b6661b15cb81c15ac568323494a80163cb"
+}

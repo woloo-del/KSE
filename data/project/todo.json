@@ -921,6 +921,61 @@
       "started_at": "2026-09-18",
       "completed_at": "2026-09-18",
       "risk": "Brak podstaw do przenoszenia harmonogramów PRSP na etapy portalu."
+    },
+    {
+      "id": "KSE-048",
+      "title": "Zbiorczy import PSE i próba 50 profili źródłowych",
+      "stage": "Scaling",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-047"
+      ],
+      "next_action": "Przejść do KSE-049 i KSE-050; nie traktować grup nazw jako potwierdzonych stacji.",
+      "acceptance": "892 wpisy rozliczone, 50 profili, kolejka wyjątków, powtarzalność i testy bez ręcznego scalania aliasów.",
+      "evidence": [
+        "docs/21_scalability_benchmark.md",
+        "tests/test_bulk_pipeline.py",
+        "data/reference/pse_scale_benchmark_2026-07-31_v1.json"
+      ],
+      "risk": "Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych.",
+      "started_at": "2026-09-18",
+      "completed_at": "2026-09-18"
+    },
+    {
+      "id": "KSE-049",
+      "title": "Niezależna walidacja tożsamości profili i kosztu wyjątków",
+      "stage": "Scaling",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-048"
+      ],
+      "next_action": "Wybrać niezależny słownik i zweryfikować 50 grup; zachować wyniki trafne, niejednoznaczne i błędne oraz czas ręcznej pracy.",
+      "acceptance": "Audyt dopasowań do rzeczywistych stacji, rozdział planowanych/istniejących, rzeczywista miara błędów i nakładu pracy.",
+      "evidence": [
+        "docs/21_scalability_benchmark.md"
+      ],
+      "risk": "Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych."
+    },
+    {
+      "id": "KSE-050",
+      "title": "Test zbiorczego importu drugiego operatora",
+      "stage": "Scaling",
+      "status": "Not Started",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-048"
+      ],
+      "next_action": "Wybrać już zweryfikowany wykaz OSD z katalogu i porównać semantykę pól oraz zakres pokrycia.",
+      "acceptance": "Co najmniej drugi operator obsłużony zbiorczo, sprawdzona przenośność zasad i udokumentowane różnice źródeł.",
+      "evidence": [
+        "docs/21_scalability_benchmark.md"
+      ],
+      "risk": "Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych."
     }
   ]
 }

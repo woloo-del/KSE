@@ -10,6 +10,8 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-010 — Ustalić prawa źródeł wybranych do pilota** (P0, Do zrobienia). Sprawdzić podstawę wykorzystania XLSX PSE, portalu inwestycji i BIP Chęcin dla pilota Radkowic.
 - **KSE-030 — Potwierdzić zewnętrzną kopię archiwum** (P0, Do zrobienia). Zachować sześć ZIP wymienionych w docs/reproducibility.md na niezależnym prywatnym nośniku i sprawdzić je z właściwymi manifestami przez --verify-only. Potwierdzić datę kopii.
 - **KSE-033 — Prywatne obserwacje i wspólna infrastruktura przyłączeniowa** (P0, W toku). Uwzględnić prywatny przegląd schematów i etapów, rozstrzygnąć rewizje oraz przypisania pól (NEED-013). Nie przenosić relacji projektowych do bieżącego modelu bez dowodu wykonania.
+- **KSE-049 — Niezależna walidacja tożsamości profili i kosztu wyjątków** (P0, Do zrobienia). Wybrać niezależny słownik i zweryfikować 50 grup; zachować wyniki trafne, niejednoznaczne i błędne oraz czas ręcznej pracy.
+- **KSE-050 — Test zbiorczego importu drugiego operatora** (P0, Do zrobienia). Wybrać już zweryfikowany wykaz OSD z katalogu i porównać semantykę pól oraz zakres pokrycia.
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
@@ -65,6 +67,9 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-045 | Kolejka weryfikacji dowodów powiązana z rejestrem potrzeb | Data quality | Zrobione | P1 | KSE-044 |
 | KSE-046 | Weryfikacja etapów modernizacji Radkowic na portalu PSE | Research | Zrobione | P1 | KSE-045 |
 | KSE-047 | Etapy modernizacji PSE w aplikacji i eksporcie | Application | Zrobione | P1 | KSE-046 |
+| KSE-048 | Zbiorczy import PSE i próba 50 profili źródłowych | Scaling | Zrobione | P0 | KSE-047 |
+| KSE-049 | Niezależna walidacja tożsamości profili i kosztu wyjątków | Scaling | Do zrobienia | P0 | KSE-048 |
+| KSE-050 | Test zbiorczego importu drugiego operatora | Scaling | Do zrobienia | P0 | KSE-048 |
 
 ## Kryteria zakończenia i dowody
 
@@ -584,3 +589,36 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-18.
 - Dowody/kontekst: [docs/17_local_application.md](docs/17_local_application.md), [backend/local_app.py](backend/local_app.py), [tests/test_local_app.py](tests/test_local_app.py).
+
+### KSE-048 — Zbiorczy import PSE i próba 50 profili źródłowych
+
+- Odpowiedzialność: Codex.
+- Następny krok: Przejść do KSE-049 i KSE-050; nie traktować grup nazw jako potwierdzonych stacji.
+- Kryterium: 892 wpisy rozliczone, 50 profili, kolejka wyjątków, powtarzalność i testy bez ręcznego scalania aliasów.
+- Nieukończone zależności: brak.
+- Ryzyko: Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych..
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-18.
+- Dowody/kontekst: [docs/21_scalability_benchmark.md](docs/21_scalability_benchmark.md), [tests/test_bulk_pipeline.py](tests/test_bulk_pipeline.py), [data/reference/pse_scale_benchmark_2026-07-31_v1.json](data/reference/pse_scale_benchmark_2026-07-31_v1.json).
+
+### KSE-049 — Niezależna walidacja tożsamości profili i kosztu wyjątków
+
+- Odpowiedzialność: Codex.
+- Następny krok: Wybrać niezależny słownik i zweryfikować 50 grup; zachować wyniki trafne, niejednoznaczne i błędne oraz czas ręcznej pracy.
+- Kryterium: Audyt dopasowań do rzeczywistych stacji, rozdział planowanych/istniejących, rzeczywista miara błędów i nakładu pracy.
+- Nieukończone zależności: brak.
+- Ryzyko: Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych..
+- Termin docelowy: nie ustalono.
+- Zakończono: nie zakończono.
+- Dowody/kontekst: [docs/21_scalability_benchmark.md](docs/21_scalability_benchmark.md).
+
+### KSE-050 — Test zbiorczego importu drugiego operatora
+
+- Odpowiedzialność: Codex.
+- Następny krok: Wybrać już zweryfikowany wykaz OSD z katalogu i porównać semantykę pól oraz zakres pokrycia.
+- Kryterium: Co najmniej drugi operator obsłużony zbiorczo, sprawdzona przenośność zasad i udokumentowane różnice źródeł.
+- Nieukończone zależności: brak.
+- Ryzyko: Grupowanie nazw nie potwierdza tożsamości stacji ani kompletności danych..
+- Termin docelowy: nie ustalono.
+- Zakończono: nie zakończono.
+- Dowody/kontekst: [docs/21_scalability_benchmark.md](docs/21_scalability_benchmark.md).

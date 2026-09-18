@@ -69,3 +69,5 @@ Widok pipeline dotyczy stanu dokumentu na 31.07.2026: trzech wpisów z obowiązu
 Próbki źródłowe są lokalnym materiałem audytowym i nie są przeznaczone do publikacji w Git. Dostęp techniczny nie stanowi potwierdzenia praw do komercyjnego ponownego wykorzystania. Radkowice są obszarem eksperymentu; kwestie licencyjne, pełna architektura produkcyjna i metodologia scoringu pozostają otwarte. Nie wyznaczamy Grid Connection Score ani prawdopodobieństwa uzyskania WP. Zewnętrzna kopia archiwów wymaga potwierdzenia (NEED-010); sam push nie obejmuje surowych źródeł.
 
 Folder `_secrets/` jest lokalny i wykluczony z Git, także w podkatalogach. Nie dodawać go przez `git add -f` ani do archiwów źródeł; poświadczenia nie są danymi badawczymi.
+
+Zbiorczy import wykazu PSE: `python scripts/benchmark_pipeline_scale.py`. [Wynik próby 50 profili i ograniczenia](docs/21_scalability_benchmark.md). Profile źródłowe wymagają weryfikacji tożsamości przed prezentowaniem ich jako katalogu stacji.

@@ -310,3 +310,12 @@ Consequences: stabilne ID dowodów, cztery snapshoty, jawne OSM G i publikacje B
 - Reason: nie zwiększać pozornie liczby potwierdzeń przez dwa widoki tej samej publikacji.
 - Trade-offs: wiele wpisów pozostaje nierozstrzygniętych; potrzebny dalszy przegląd dokumentacyjny.
 - Consequences: trzy powiązania SAME_SOURCE_RECORD; bez nowych relacji fizycznych, ocen wpływu ani automatycznego scalania OSM.
+
+## 2026-09-18 — Import źródłami zamiast researchu każdej stacji
+
+- Decision: przejść do testu zbiorczego; oddzielić profil źródłowy od potwierdzonej stacji.
+- Options considered: powielanie szczegółowego pilota; automatyczne scalanie nazw; zbiorczy import z kolejką wyjątków.
+- Selected option: zbiorczy import PSE i 50 deterministycznie wybranych grup nazwa+napięcie, bez scalania aliasów.
+- Reason: ograniczyć pracę ręczną do wyjątków, zmierzyć problemy całego źródła i uniknąć fałszywej deklaracji pokrycia.
+- Trade-offs: 166 grup nie stanowi katalogu unikalnych stacji; walidacja tożsamości i OSD to kolejne zadania.
+- Consequences: brak dalszego ręcznego rozszerzania Radkowic jako domyślnej ścieżki; brak score i estymacji MW. Wyniki i bramki opisane w docs/21_scalability_benchmark.md.
