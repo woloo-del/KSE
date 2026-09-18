@@ -348,3 +348,6 @@ Technicznie: publiczny HTML pobrany raz, zachowany i zahashowany; parser h4 odrz
 18.09.2026: przetworzono cały zachowany wykaz TAURON — 10955 wierszy, bez odczytu mocy z tekstu spłaszczonego PDF. Nagłówek wskazuje stan 30.06.2026. To ponowna analiza snapshotu z 10.09.2026, nie nowe pobranie. Szczegóły, źródło, ograniczenia i wyniki w [teście skalowania](21_scalability_benchmark.md). Kody stacji nadal wymagają słownika, a powtarzające się ID obiektów nie są automatycznie usuwane.
 
 18.09.2026: [przegląd słownika TAURON i ograniczeń mapy](22_tauron_dictionary_discovery.md) identyfikuje podpisywany REST w kodzie klienta, pola kod/nazwa, przesuwanie markerów i ograniczenia ponownego użycia bazy. Nie wykonano importu endpointów i nie potwierdzono słownika. Cztery źródła mają osobne rekordy katalogu i snapshoty.
+
+
+18.09.2026: rozpoczęto rozpoznanie mapy grup rejestrowych GUGiK dla struktury własności gruntów w promieniu 1 km od stacji. Źródło GUGIK_OWNERSHIP_GROUPS ma status DISCOVERED; brak potwierdzenia automatycznego dostępu do kategorii własności. Szczegóły: [moduł gruntów](25_land_ownership_discovery.md).

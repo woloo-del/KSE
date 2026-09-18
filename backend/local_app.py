@@ -14,6 +14,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from grid_engine.screening_opinion import assess
 from grid_engine.evidence_links import link_records, review_queue
+from backend.profile_browser import browser_data
 
 INPUTS = {
     'pipeline': 'data/reference/radkowice_pipeline_view_2026-07-31_v1.json',
@@ -26,6 +27,9 @@ INPUTS = {
     'aggregated_evidence': 'data/reference/radkowice_aggregated_evidence_2026-09-17_v1.json',
 }
 ASSETS = {'/': ('index.html', 'text/html; charset=utf-8'),
+          '/profiles': ('profiles.html', 'text/html; charset=utf-8'),
+          '/profiles.js': ('profiles.js', 'text/javascript; charset=utf-8'),
+          '/profiles.css': ('profiles.css', 'text/css; charset=utf-8'),
           '/app.js': ('app.js', 'text/javascript; charset=utf-8'),
           '/style.css': ('style.css', 'text/css; charset=utf-8')}
 
@@ -75,6 +79,8 @@ class Handler(BaseHTTPRequestHandler):
         try:
             if route == '/api/station':
                 self.json_reply(200, snapshot())
+            elif route == '/api/profiles':
+                self.json_reply(200, browser_data())
             elif route in ASSETS:
                 name, kind = ASSETS[route]
                 self.reply(200, (ROOT / 'frontend' / name).read_bytes(), kind)

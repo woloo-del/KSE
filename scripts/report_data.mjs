@@ -26,6 +26,7 @@ export const DOCUMENTS = [
   'docs/22_tauron_dictionary_discovery.md',
   'docs/23_pse_identity_audit.md',
   'docs/24_pse_bulk_investment_index.md',
+  'docs/25_land_ownership_discovery.md',
   'docs/private_sources.md',
 ];
 export const sha = b => crypto.createHash('sha256').update(b).digest('hex');

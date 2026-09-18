@@ -14,6 +14,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
+- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Zweryfikować API/WMS/WFS mapy grup rejestrowych, schemat, licencję i pokrycie; zbadać próbkę dla jednej stacji przed implementacją udziałów.
 
 ## Pełny rejestr
 
@@ -71,6 +72,8 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-050 | Test zbiorczego importu drugiego operatora | Scaling | Zrobione | P0 | KSE-048 |
 | KSE-051 | Odkrycie interfejsu słownika TAURON i warunków użycia | Research | Zrobione | P0 | KSE-050 |
 | KSE-052 | Zbiorczy indeks nagłówków inwestycji PSE dla profili stacji | Scaling | Zrobione | P0 | KSE-048 |
+| KSE-053 | Lokalny przegląd 50 profili źródłowych PSE | MVP | Zrobione | P1 | — |
+| KSE-054 | Struktura własności gruntów w promieniu 1 km od stacji | Research | W toku | P1 | — |
 
 ## Kryteria zakończenia i dowody
 
@@ -645,3 +648,25 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-18.
 - Dowody/kontekst: [docs/24_pse_bulk_investment_index.md](docs/24_pse_bulk_investment_index.md), [tests/test_pse_investment_index.py](tests/test_pse_investment_index.py), [data/reference/pse_investment_heading_index_2026-09-18_v1.json](data/reference/pse_investment_heading_index_2026-09-18_v1.json).
+
+### KSE-053 — Lokalny przegląd 50 profili źródłowych PSE
+
+- Odpowiedzialność: Codex.
+- Następny krok: Zweryfikować kandydatów w KSE-049; profil źródłowy nie jest potwierdzoną stacją.
+- Kryterium: Działający lokalny widok i API, ścisła kontrola zgodności trzech snapshotów, zachowane ograniczenia i źródła.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-18.
+- Dowody/kontekst: [backend/profile_browser.py](backend/profile_browser.py), [tests/test_profile_browser.py](tests/test_profile_browser.py), [tests/test_local_app.py](tests/test_local_app.py).
+
+### KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji
+
+- Odpowiedzialność: Codex.
+- Następny krok: Zweryfikować API/WMS/WFS mapy grup rejestrowych, schemat, licencję i pokrycie; zbadać próbkę dla jednej stacji przed implementacją udziałów.
+- Kryterium: Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: nie zakończono.
+- Dowody/kontekst: [docs/25_land_ownership_discovery.md](docs/25_land_ownership_discovery.md).

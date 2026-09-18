@@ -755,6 +755,40 @@
       "probe_ids": [
         "TAURON_GPZ_LODZKIE"
       ]
+    },
+    {
+      "source_id": "GUGIK_OWNERSHIP_GROUPS",
+      "operator": "GUGiK",
+      "source_name": "Mapa własności — grupy rejestrowe",
+      "url": "https://www.gov.pl/web/gugik/nowa-usluga-mapa-wlasnosci---grupy-rejestrowe-dostepna-w-modulach-geoportal-krajowy-i-geodezja-i-kartografia-w-serwisie-wwwgeoportalgovpl",
+      "data_owner": "GUGiK / organy prowadzące EGiB",
+      "country": "PL",
+      "data_category": "land_ownership",
+      "grid_voltage": [],
+      "geographical_scope": "Polska; pokrycie nieweryfikowane",
+      "data_format": [
+        "HTML"
+      ],
+      "verification_status": "DISCOVERED",
+      "last_verified": "2026-09-18",
+      "api_available": "UNKNOWN",
+      "gis_available": "DISCOVERED_NOT_TESTED",
+      "machine_readable": "UNKNOWN",
+      "scraping_required": "UNKNOWN",
+      "license": "UNKNOWN",
+      "commercial_use": "NOT_CLEARED",
+      "reliability": "C",
+      "key_fields": [
+        "grupa rejestrowa działki — do weryfikacji"
+      ],
+      "potential_application": "Struktura własności powierzchni w buforze 1 km od stacji",
+      "known_limitations": [
+        "Oficjalny komunikat znaleziony w wyszukiwaniu; pełne otwarcie strony zakończyło się timeoutem.",
+        "Brak zweryfikowanego endpointu i dostępu do kategorii w postaci wektorowej.",
+        "Nie ustalono mapowania grup na własność, pokrycia, aktualności ani warunków automatyzacji."
+      ],
+      "priority": "P1",
+      "probe_ids": []
     }
   ]
 }

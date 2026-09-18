@@ -1,12 +1,12 @@
 {
-  "checked_at_utc": "2026-09-18T12:10:30.079678+00:00",
+  "checked_at_utc": "2026-09-18T18:11:27.886248+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 78,
+  "source_count": 79,
   "source_status_counts": {
     "SAMPLE_VERIFIED": 18,
     "CONTENT_REVIEWED": 40,
-    "DISCOVERED": 4,
+    "DISCOVERED": 5,
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 11
   },
@@ -106,13 +106,13 @@
       "first_page_text_chars": 206
     }
   ],
-  "local_links_checked": 61,
+  "local_links_checked": 63,
   "dependencies": {
     "python": "3.12.14",
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 933,
+  "checks_passed": 946,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -2231,6 +2231,36 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:GUGIK_OWNERSHIP_GROUPS",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GUGIK_OWNERSHIP_GROUPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GUGIK_OWNERSHIP_GROUPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GUGIK_OWNERSHIP_GROUPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GUGIK_OWNERSHIP_GROUPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unverified_not_successful:GUGIK_OWNERSHIP_GROUPS",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
@@ -2622,6 +2652,11 @@
     },
     {
       "name": "probe_references:TAURON_GPZ_LODZKIE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GUGIK_OWNERSHIP_GROUPS",
       "passed": true,
       "detail": null
     },
@@ -4541,6 +4576,11 @@
       "detail": null
     },
     {
+      "name": "local_link:01_data_research.md:25_land_ownership_discovery.md",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "local_link:02_feasibility_matrix.md:01_data_research.md",
       "passed": true,
       "detail": null
@@ -4626,6 +4666,11 @@
       "detail": null
     },
     {
+      "name": "local_link:23_pse_identity_audit.md:24_pse_bulk_investment_index.md",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "local_link:data_sources.md:01_data_research.md",
       "passed": true,
       "detail": null
@@ -4696,6 +4741,11 @@
       "detail": null
     },
     {
+      "name": "python_syntax:audit_pse_gis_candidates.py",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "python_syntax:audit_pse_pipeline_statuses.py",
       "passed": true,
       "detail": null
@@ -4711,12 +4761,27 @@
       "detail": null
     },
     {
+      "name": "python_syntax:build_evidence_preview.py",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "python_syntax:build_platform_concept.py",
       "passed": true,
       "detail": null
     },
     {
       "name": "python_syntax:build_private_gis_usefulness.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:build_pse_investment_index.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:build_pse_mention_context.py",
       "passed": true,
       "detail": null
     },

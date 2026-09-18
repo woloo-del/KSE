@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-18**. Źródła: **78**.
+Stan badania: **2026-09-18**. Źródła: **79**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -88,6 +88,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | TAURON_MAP_SCRIPT | [TAURON — interfejs i zastrzeżenia mapy](https://dostepnemoce.tauron-dystrybucja.pl/wp-content/plugins/tauron-maps/mapy.js?ver=1788435768) | CONTENT_REVIEWED | P0 | NOT_CLEARED |
 | TAURON_PENDING_MAP | [TAURON — regionalny wykaz obiektów planowanych](https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace) | CONTENT_REVIEWED | P0 | NOT_CLEARED |
 | TAURON_GPZ_LODZKIE | [TAURON — publikacja GPZ województwa łódzkiego](https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace/gpz-lodzkie) | CONTENT_REVIEWED | P0 | NOT_CLEARED |
+| GUGIK_OWNERSHIP_GROUPS | [Mapa własności — grupy rejestrowe](https://www.gov.pl/web/gugik/nowa-usluga-mapa-wlasnosci---grupy-rejestrowe-dostepna-w-modulach-geoportal-krajowy-i-geodezja-i-kartografia-w-serwisie-wwwgeoportalgovpl) | DISCOVERED | P1 | NOT_CLEARED |
 
 ## Karty źródeł
 
@@ -2918,5 +2919,40 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Klasyfikacja wejścia:** REPORTED
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 - **Próba TAURON_GPZ_LODZKIE:** HTTP 200; 2026-09-18T12:04:34.556557+00:00; `data/catalog/probe_results_tauron_dictionary_2026-09-18.json`; próbka `data/raw/research/2026-09-18/tauron_gpz_lodzkie.html`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### GUGIK_OWNERSHIP_GROUPS — Mapa własności — grupy rejestrowe
+
+[Źródło](https://www.gov.pl/web/gugik/nowa-usluga-mapa-wlasnosci---grupy-rejestrowe-dostepna-w-modulach-geoportal-krajowy-i-geodezja-i-kartografia-w-serwisie-wwwgeoportalgovpl)
+
+- **Operator:** GUGiK
+- **Właściciel:** GUGiK / organy prowadzące EGiB
+- **Kraj:** PL
+- **Kategoria:** land_ownership
+- **Napięcie:** 
+- **Zasięg:** Polska; pokrycie nieweryfikowane
+- **Format:** HTML
+- **API:** UNKNOWN
+- **GIS:** DISCOVERED_NOT_TESTED
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** UNKNOWN — pełna treść nie została zweryfikowana.
+- **Licencja:** UNKNOWN
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** UNKNOWN
+- **Scraping:** UNKNOWN
+- **Pola:** grupa rejestrowa działki — do weryfikacji
+- **Zastosowanie:** Struktura własności powierzchni w buforze 1 km od stacji
+- **Ograniczenia:** Oficjalny komunikat znaleziony w wyszukiwaniu; pełne otwarcie strony zakończyło się timeoutem.; Brak zweryfikowanego endpointu i dostępu do kategorii w postaci wektorowej.; Nie ustalono mapowania grup na własność, pokrycia, aktualności ani warunków automatyzacji.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-18
+- **Udany odczyt:** UNKNOWN / nie dotyczy
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

@@ -67,3 +67,8 @@ Siódma zakładka pozwala przeszukiwać publiczny rejestr i filtrować rodzaje w
 Zakładka Inwestycje sieciowe prezentuje oddzielnie dwa etapy opisane w portalu PSE i dwa zadania projektu PRSP. Brak mapowania do II.47 jest widoczny przed listą. Status portalu pozostaje raportowany, z nieznaną datą stanu i jawną datą pobrania; nie zastępuje statusu zadania PRSP. Nie liczymy tych czterech wpisów jako czterech inwestycji.
 
 `investment_stages` jest ósmym jawnym wejściem API i częścią `evidence_snapshot` w eksporcie JSON. Lista źródeł zawiera PSE_RADK_STAGES. Historyczny rejestr 76 dowodów nie jest nadpisywany ani automatycznie rozszerzany. Test API sprawdza zachowanie statusów, brak ID zadania i daty stanu oraz obecność źródła w eksporcie. W przeglądarce potwierdzono wyświetlenie obu etapów, ograniczeń i harmonogramów.
+
+
+## Przegląd profili PSE — 18.09.2026
+
+Widok `/profiles` i API `/api/profiles` udostępniają 50 profili źródłowych obok pilota Radkowic. Używają trzech jawnych publicznych snapshotów; nie pobierają prywatnego GIS. Zgodność hashów między indeksami jest sprawdzana przed podaniem wyniku; niespójny zestaw zwraca błąd. Widok zachowuje niepotwierdzoną tożsamość i statusy projektów. Skrypty oraz style są osobnymi zasobami zgodnymi z dotychczasowym CSP. To aktualizacja lokalnej aplikacji; wcześniej opublikowany plik Sites pozostaje bez zmian.

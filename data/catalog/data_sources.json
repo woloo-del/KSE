@@ -5538,6 +5538,59 @@
       "retrieval_date": [
         "2026-09-18T12:04:34.556557+00:00"
       ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Polska; pokrycie nieweryfikowane",
+      "grid_voltage": [],
+      "api_available": "UNKNOWN",
+      "gis_available": "DISCOVERED_NOT_TESTED",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "UNKNOWN — pełna treść nie została zweryfikowana.",
+      "license": "UNKNOWN",
+      "license_url": null,
+      "commercial_use": "NOT_CLEARED",
+      "machine_readable": "UNKNOWN",
+      "scraping_required": "UNKNOWN",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-18",
+      "last_successful_verification": null,
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [],
+      "related_urls": [],
+      "source_id": "GUGIK_OWNERSHIP_GROUPS",
+      "operator": "GUGiK",
+      "source_name": "Mapa własności — grupy rejestrowe",
+      "url": "https://www.gov.pl/web/gugik/nowa-usluga-mapa-wlasnosci---grupy-rejestrowe-dostepna-w-modulach-geoportal-krajowy-i-geodezja-i-kartografia-w-serwisie-wwwgeoportalgovpl",
+      "data_owner": "GUGiK / organy prowadzące EGiB",
+      "data_category": "land_ownership",
+      "data_format": [
+        "HTML"
+      ],
+      "verification_status": "DISCOVERED",
+      "reliability": "C",
+      "key_fields": [
+        "grupa rejestrowa działki — do weryfikacji"
+      ],
+      "potential_application": "Struktura własności powierzchni w buforze 1 km od stacji",
+      "known_limitations": [
+        "Oficjalny komunikat znaleziony w wyszukiwaniu; pełne otwarcie strony zakończyło się timeoutem.",
+        "Brak zweryfikowanego endpointu i dostępu do kategorii w postaci wektorowej.",
+        "Nie ustalono mapowania grup na własność, pokrycia, aktualności ani warunków automatyzacji."
+      ],
+      "priority": "P1",
+      "evidence": [],
+      "retrieval_date": []
     }
   ]
 }

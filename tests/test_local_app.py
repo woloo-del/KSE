@@ -75,6 +75,20 @@ class LocalApiTests(unittest.TestCase):
                 urlopen(self.url+route)
             self.assertEqual(result.exception.code,404)
 
+    def test_profile_browser_preserves_scope_and_provenance(self):
+        with urlopen(self.url+'/api/profiles') as response:
+            data = json.load(response)
+        self.assertEqual(len(data['profiles']), 50)
+        self.assertEqual(data['scope'], 'SOURCE_PROFILES_NOT_CANONICAL_STATIONS')
+        self.assertEqual(len(data['provenance']['input_sha256']), 3)
+        for profile in data['profiles']:
+            self.assertEqual(profile['count'], sum(profile['statuses'].values()))
+            self.assertTrue(all(link['id'] in data['headings'] for link in profile['links']))
+        for route in ['/profiles','/profiles.js','/profiles.css']:
+            with urlopen(self.url+route) as response:
+                self.assertEqual(response.status, 200)
+                self.assertNotIn('unsafe-inline', response.headers['Content-Security-Policy'])
+
     def test_post_assessment_records_method_and_input_versions(self):
         request = Request(self.url+'/api/assessment', data=json.dumps({'technology':'BESS','voltage_kV':220,'export_MW':'50','import_MW':'50'}).encode(),headers={'Content-Type':'application/json'})
         with urlopen(request) as response:

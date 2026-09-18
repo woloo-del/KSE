@@ -1026,6 +1026,39 @@
       "started_at": "2026-09-18",
       "completed_at": "2026-09-18",
       "risk": "Wzmianka o nazwie może dotyczyć linii lub farmy; nagłówek nie ustala bieżącego układu stacji."
+    },
+    {
+      "id": "KSE-053",
+      "title": "Lokalny przegląd 50 profili źródłowych PSE",
+      "stage": "MVP",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [],
+      "next_action": "Zweryfikować kandydatów w KSE-049; profil źródłowy nie jest potwierdzoną stacją.",
+      "acceptance": "Działający lokalny widok i API, ścisła kontrola zgodności trzech snapshotów, zachowane ograniczenia i źródła.",
+      "evidence": [
+        "backend/profile_browser.py",
+        "tests/test_profile_browser.py",
+        "tests/test_local_app.py"
+      ],
+      "started_at": "2026-09-18",
+      "completed_at": "2026-09-18"
+    },
+    {
+      "id": "KSE-054",
+      "title": "Struktura własności gruntów w promieniu 1 km od stacji",
+      "stage": "Research",
+      "status": "In Progress",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [],
+      "next_action": "Zweryfikować API/WMS/WFS mapy grup rejestrowych, schemat, licencję i pokrycie; zbadać próbkę dla jednej stacji przed implementacją udziałów.",
+      "acceptance": "Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.",
+      "evidence": [
+        "docs/25_land_ownership_discovery.md"
+      ],
+      "started_at": "2026-09-18"
     }
   ]
 }
