@@ -5729,7 +5729,7 @@
     },
     {
       "country": "PL",
-      "geographical_scope": "Próbki: Radkowice i Brzeziny, powiat kielecki",
+      "geographical_scope": "Ograniczone próbki: Radkowice, Brzeziny i Grudziądz",
       "grid_voltage": [],
       "api_available": "WFS 2.0.0",
       "gis_available": "WFS_SCHEMA_VERIFIED",
@@ -5757,7 +5757,8 @@
       "probe_ids": [
         "GUGIK_EGIB_SCHEMA",
         "GUGIK_EGIB_RADK_SAMPLE",
-        "GUGIK_EGIB_RADK_STATION_SAMPLE"
+        "GUGIK_EGIB_RADK_STATION_SAMPLE",
+        "GUGIK_OWNERSHIP_GRUDZIADZ_WFS"
       ],
       "related_urls": [],
       "source_id": "GUGIK_EGIB_OWNERSHIP_PROBE",
@@ -5776,12 +5777,12 @@
       "key_fields": [
         "ID_DZIALKI",
         "geometria",
-        "GRUPA_REJESTROWA — tylko usługa zbiorcza, puste w próbce"
+        "GRUPA_REJESTROWA — uzupełniona w próbce Grudziądza, pusta w otoczeniu Radkowic"
       ],
       "potential_application": "Ocena dostępności własności gruntów w otoczeniu stacji",
       "known_limitations": [
-        "Pole GRUPA_REJESTROWA jest opcjonalne. W obu próbkach puste.",
-        "Próbki prostokątne z COUNT=3, nie pełny bufor 1 km; brak podstaw do procentowego podziału własności.",
+        "Pole GRUPA_REJESTROWA opcjonalne: cztery rekordy z otoczenia Radkowic puste; dwa rekordy z Grudziądza z grupami 9 i 7. DATA puste we wszystkich tych próbkach.",
+        "Próbki prostokątne z COUNT=3, nie pełny bufor 1 km; brak podstaw do procentowego podziału własności. Zgodność WMS/WFS dla jednego ID nie jest niezależnym potwierdzeniem.",
         "Brak interpretacji grup rejestrowych i brak potwierdzenia warunków regularnego komercyjnego importu."
       ],
       "priority": "P1",
@@ -5815,17 +5816,28 @@
           "bytes": 2701,
           "retrieval_date": "2026-09-19T05:01:28.986980+00:00",
           "manifest": "data/catalog/probe_results_land_ownership_2026-09-19.json"
+        },
+        {
+          "source_id": "GUGIK_OWNERSHIP_GRUDZIADZ_WFS",
+          "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=3&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=53.47995%2C18.75995%2C53.48005%2C18.76005%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-19/ownership_grudziadz_wfs.gml",
+          "sha256": "7ea01e4fa767c6b6ec1c07d116310ed6f6a5ec6f4a5329aa4529d42aea8544b1",
+          "bytes": 3697,
+          "retrieval_date": "2026-09-19T05:30:54.546684+00:00",
+          "manifest": "data/catalog/probe_results_ownership_comparison_2026-09-19.json"
         }
       ],
       "retrieval_date": [
         "2026-09-19T05:00:11.241775+00:00",
         "2026-09-19T05:00:48.830247+00:00",
-        "2026-09-19T05:01:28.986980+00:00"
+        "2026-09-19T05:01:28.986980+00:00",
+        "2026-09-19T05:30:54.546684+00:00"
       ]
     },
     {
       "country": "PL",
-      "geographical_scope": "Polska; zweryfikowana próbka powiat kielecki / Radkowice",
+      "geographical_scope": "Polska; próbki: powiat kielecki oraz miasta na prawach powiatu Poznań, Grudziądz, Warszawa",
       "grid_voltage": [],
       "api_available": "WMS 1.3.0",
       "gis_available": "WMS_SAMPLE_VERIFIED",
@@ -5856,7 +5868,11 @@
         "GUGIK_OWNERSHIP_MAP_COUNTY",
         "GUGIK_OWNERSHIP_MAP_PARCEL_HTML",
         "GUGIK_OWNERSHIP_MAP_COUNTY_HTML",
-        "GUGIK_OWNERSHIP_MAP_PARCEL_VECTOR"
+        "GUGIK_OWNERSHIP_MAP_PARCEL_VECTOR",
+        "GUGIK_OWNERSHIP_POZNAN_AREA",
+        "GUGIK_OWNERSHIP_GRUDZIADZ_AREA",
+        "GUGIK_OWNERSHIP_WARSAW_AREA",
+        "GUGIK_OWNERSHIP_GRUDZIADZ_PARCEL"
       ],
       "related_urls": [],
       "source_id": "GUGIK_OWNERSHIP_MAP",
@@ -5883,10 +5899,51 @@
       "known_limitations": [
         "Stan usługi, nie pełny stan EGiB: powiat kielecki 264634 działki bez grupy; aktualizacja ostatniego podzbioru 17.09.2026 00:07.",
         "GetFeatureInfo text/plain bez atrybutów, HTML zawiera wartości; GetMap application/json zwraca siatkę UTFGrid z pustym data, nie geometrię działek.",
-        "Fees NONE i AccessConstraints NONE w capabilities nie rozstrzygają pełnych praw komercyjnych. Statystyki liczbowe powiatu nie są udziałami powierzchni bufora."
+        "Fees NONE i AccessConstraints NONE w capabilities nie rozstrzygają pełnych praw komercyjnych. Statystyki liczbowe powiatu nie są udziałami powierzchni bufora.",
+        "Porównanie 19.09.2026: Poznań 120070 i Grudziądz 24217 działek, po 0 bez grupy; Warszawa 287525 bez grupy. To kompletność kategorii w zbiorze usługi, nie powierzchnia ani kompletność EGiB."
       ],
       "priority": "P1",
       "evidence": [
+        {
+          "source_id": "GUGIK_OWNERSHIP_POZNAN_AREA",
+          "url": "https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci?SERVICE=WMS&VERSION=1.3.0&CRS=EPSG%3A4326&BBOX=52.399%2C16.999%2C52.400999999999996%2C17.001&WIDTH=256&HEIGHT=256&STYLES=&REQUEST=GetFeatureInfo&LAYERS=dzialki_stats_pow_polygon&QUERY_LAYERS=dzialki_stats_pow_polygon&INFO_FORMAT=text%2Fhtml&FORMAT=image%2Fpng&I=128&J=128&FEATURE_COUNT=1",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-19/ownership_poznan_area.html",
+          "sha256": "33771e6801d466d0d39f1367f7524c332ce395b873737bb5d90679767521e4d3",
+          "bytes": 13190,
+          "retrieval_date": "2026-09-19T05:30:20.650306+00:00",
+          "manifest": "data/catalog/probe_results_ownership_comparison_2026-09-19.json"
+        },
+        {
+          "source_id": "GUGIK_OWNERSHIP_GRUDZIADZ_AREA",
+          "url": "https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci?SERVICE=WMS&VERSION=1.3.0&CRS=EPSG%3A4326&BBOX=53.479%2C18.759%2C53.480999999999995%2C18.761000000000003&WIDTH=256&HEIGHT=256&STYLES=&REQUEST=GetFeatureInfo&LAYERS=dzialki_stats_pow_polygon&QUERY_LAYERS=dzialki_stats_pow_polygon&INFO_FORMAT=text%2Fhtml&FORMAT=image%2Fpng&I=128&J=128&FEATURE_COUNT=1",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-19/ownership_grudziadz_area.html",
+          "sha256": "6c83c4e534e665ff0504eb50dae97cd86f18c079a88a940c1dec595234748f06",
+          "bytes": 13181,
+          "retrieval_date": "2026-09-19T05:30:21.192920+00:00",
+          "manifest": "data/catalog/probe_results_ownership_comparison_2026-09-19.json"
+        },
+        {
+          "source_id": "GUGIK_OWNERSHIP_WARSAW_AREA",
+          "url": "https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci?SERVICE=WMS&VERSION=1.3.0&CRS=EPSG%3A4326&BBOX=52.229%2C21.009%2C52.230999999999995%2C21.011000000000003&WIDTH=256&HEIGHT=256&STYLES=&REQUEST=GetFeatureInfo&LAYERS=dzialki_stats_pow_polygon&QUERY_LAYERS=dzialki_stats_pow_polygon&INFO_FORMAT=text%2Fhtml&FORMAT=image%2Fpng&I=128&J=128&FEATURE_COUNT=1",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-19/ownership_warsaw_area.html",
+          "sha256": "d29d5a3478d91c77b1c9c91ec7bfedf77f9bcd056ce96fcf008746b9117c8679",
+          "bytes": 13134,
+          "retrieval_date": "2026-09-19T05:30:21.876213+00:00",
+          "manifest": "data/catalog/probe_results_ownership_comparison_2026-09-19.json"
+        },
+        {
+          "source_id": "GUGIK_OWNERSHIP_GRUDZIADZ_PARCEL",
+          "url": "https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci?SERVICE=WMS&VERSION=1.3.0&CRS=EPSG%3A4326&BBOX=53.479%2C18.759%2C53.481%2C18.761&WIDTH=256&HEIGHT=256&STYLES=&REQUEST=GetFeatureInfo&LAYERS=dzialki_polygon&QUERY_LAYERS=dzialki_polygon&INFO_FORMAT=text%2Fhtml&FORMAT=image%2Fpng&I=128&J=128&FEATURE_COUNT=1",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-19/ownership_grudziadz_parcel.html",
+          "sha256": "a3e112ff45f3b1e0635393ffc6647dd3133a1465ba20573be31bc7d82bb93882",
+          "bytes": 13664,
+          "retrieval_date": "2026-09-19T05:30:51.949828+00:00",
+          "manifest": "data/catalog/probe_results_ownership_comparison_2026-09-19.json"
+        },
         {
           "source_id": "GUGIK_OWNERSHIP_MAP_CAPS",
           "url": "https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci?SERVICE=WMS&REQUEST=GetCapabilities",
@@ -5949,6 +6006,10 @@
         }
       ],
       "retrieval_date": [
+        "2026-09-19T05:30:20.650306+00:00",
+        "2026-09-19T05:30:21.192920+00:00",
+        "2026-09-19T05:30:21.876213+00:00",
+        "2026-09-19T05:30:51.949828+00:00",
         "2026-09-19T05:16:48.679521+00:00",
         "2026-09-19T05:20:06.249967+00:00",
         "2026-09-19T05:20:07.040822+00:00",

@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-19T05:23:58.890484+00:00",
+  "checked_at_utc": "2026-09-19T05:35:12.786333+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
   "source_count": 82,
@@ -10,20 +10,20 @@
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 11
   },
-  "probe_count": 78,
+  "probe_count": 83,
   "http_status_counts": {
-    "200": 77,
+    "200": 82,
     "404": 1
   },
-  "raw_file_count": 77,
+  "raw_file_count": 82,
   "format_counts": {
-    ".html": 25,
+    ".html": 29,
     ".pdf": 16,
     ".json": 15,
     ".xml": 10,
     ".js": 5,
     ".xlsx": 1,
-    ".gml": 2,
+    ".gml": 3,
     ".txt": 3
   },
   "pdf_details": [
@@ -114,7 +114,7 @@
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 1049,
+  "checks_passed": 1076,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -3618,6 +3618,106 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:GUGIK_OWNERSHIP_POZNAN_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_OWNERSHIP_POZNAN_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_OWNERSHIP_POZNAN_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_OWNERSHIP_POZNAN_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GUGIK_OWNERSHIP_GRUDZIADZ_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_OWNERSHIP_GRUDZIADZ_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_OWNERSHIP_GRUDZIADZ_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_OWNERSHIP_GRUDZIADZ_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GUGIK_OWNERSHIP_WARSAW_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_OWNERSHIP_WARSAW_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_OWNERSHIP_WARSAW_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_OWNERSHIP_WARSAW_AREA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GUGIK_OWNERSHIP_GRUDZIADZ_PARCEL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_OWNERSHIP_GRUDZIADZ_PARCEL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_OWNERSHIP_GRUDZIADZ_PARCEL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_OWNERSHIP_GRUDZIADZ_PARCEL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GUGIK_OWNERSHIP_GRUDZIADZ_WFS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_OWNERSHIP_GRUDZIADZ_WFS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_OWNERSHIP_GRUDZIADZ_WFS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_OWNERSHIP_GRUDZIADZ_WFS",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "snapshot_within_raw:GUGIK_OWNERSHIP_MAP_CAPS",
       "passed": true,
       "detail": null
@@ -4818,6 +4918,26 @@
       "detail": null
     },
     {
+      "name": "format_readable:ownership_grudziadz_area.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:ownership_grudziadz_parcel.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_returned_count:ownership_grudziadz_wfs.gml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:ownership_grudziadz_wfs.gml",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "wms_capabilities:ownership_map_capabilities.xml",
       "passed": true,
       "detail": null
@@ -4849,6 +4969,16 @@
     },
     {
       "name": "format_readable:ownership_map_parcel_vector.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:ownership_poznan_area.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:ownership_warsaw_area.html",
       "passed": true,
       "detail": null
     },
@@ -5274,6 +5404,11 @@
     },
     {
       "name": "python_syntax:build_evidence_preview.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:build_ownership_comparison.py",
       "passed": true,
       "detail": null
     },

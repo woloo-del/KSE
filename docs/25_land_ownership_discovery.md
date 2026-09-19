@@ -53,3 +53,25 @@ Technicznie wykonano sześć małych zapytań łącznie z capabilities, bez uwie
 Odtwarzalność: `scripts/build_ownership_map_probe.py` sprawdza hash HTML i odtwarza `data/reference/ownership_map_probe_2026-09-19.json`. Inspektor kontroluje identyfikator powiatu, obecność 16 grup i zgodność sum; nie wykonuje JavaScript. Surowe sześć odpowiedzi zapisano w `data/archives/ownership_map_discovery_2026-09-19.zip`, manifest w `data/catalog/ownership_map_archive_2026-09-19.json`. Archiwum wymaga osobnej prywatnej kopii zapasowej.
 
 Dalszy kierunek KSE-054: kontrola kompletności powiatu przed pobieraniem działek, następnie lokalna kontrola pokrycia bufora. Powiat z choćby częściowo wypełnionymi grupami może posłużyć do testu metody; nie przeniesiemy jego danych do Radkowic. NEED-021 doprecyzowano jako eksport z EGiB z kategorią, datą i zasadami użycia, bez danych osobowych. Rejestry zasilą następny raport Excel; pliku XLSX w tym kroku nie regenerowano.
+
+## Porównanie lokalizacji i pozytywna próbka — 19.09.2026
+
+Pięć kolejnych ograniczonych zapytań do powyższego WMS oraz [zbiorczego WFS GUGiK](https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza) potwierdziło zróżnicowanie dostępności. Punkty zostały wybrane wyłącznie do rozpoznania usługi — **nie są zweryfikowanymi punktami stacji**. Dokładne URL, prostokąty, daty i hashe: `data/catalog/probe_results_ownership_comparison_2026-09-19.json`.
+
+| Jednostka według odpowiedzi WMS | TERYT | Działki w usłudze | Bez grupy | Ostatni pozyskany podzbiór wg usługi |
+|---|---|---:|---:|---|
+| Poznań, miasto na prawach powiatu | 3064 | 120070 | 0 | 17.09.2026 00:30 |
+| Grudziądz, miasto na prawach powiatu | 0462 | 24217 | 0 | 16.09.2026 23:07 |
+| Warszawa, miasto na prawach powiatu | 1465 | 287525 | 287525 | 16.09.2026 23:43 |
+
+Liczby są REPORTED, dotyczą kategorii rekordów w usłudze. Nie oznaczają udziałów powierzchni, kompletności całej EGiB ani aktualnego stanu prawnego. Żadne z tych zestawień nie potwierdza zasięgu danych dla stacji Grudziądz Węgrowo. Wybór trzech miast nie stanowi reprezentatywnej próby kraju.
+
+W Grudziądzu mały prostokąt WFS (53.47995–53.48005 N, 18.75995–18.76005 E; COUNT=3) zwrócił dwie działki z geometrią Polygon: **046201_1.0090.5/5, grupa 9**, oraz **046201_1.0090.5/8, grupa 7**. Pole DATA w obu jest puste. Punktowe GetFeatureInfo WMS zwróciło drugą działkę z grupą 7 i czasem pozyskania 2026-09-16 23:07:20.315094. Identyfikator i grupa są zgodne, ale oba interfejsy mogą korzystać z tego samego powiatowego źródła — nie jest to niezależne potwierdzenie własności.
+
+Rozszerzono istniejący parser o kontrolowaną normalizację tej postaci GML do GeoJSON: jawna zamiana osi lat/lon na lon/lat, kontrola zamknięcia pierścieni, poprawności geometrii, zakresu grup, duplikatów i formatu. Nieobsługiwany CRS/geometria powodują błąd; parser nie naprawia geometrii po cichu. Nie oblicza udziałów i nie upraszcza grup do prywatne/publiczne. To parser ograniczonej próbki, nie krajowy connector z paginacją.
+
+Odtworzenie: `scripts/build_ownership_comparison.py`; wejścia sprawdzane SHA-256, wynik `data/reference/ownership_comparison_2026-09-19.json`, lokalny GeoJSON w ignorowanym `data/staging/research/ownership_grudziadz_sample_2026-09-19.geojson`. Geometrie nie trafiają do publicznej aplikacji ani Git. Archiwum pięciu odpowiedzi `data/archives/ownership_comparison_2026-09-19.zip` ma manifest `data/catalog/ownership_comparison_archive_2026-09-19.json`; wymaga prywatnej kopii zapasowej.
+
+**Wniosek:** powiązanie geometria–grupa rejestrowa jest technicznie dostępne przynajmniej w zweryfikowanej próbce Grudziądza. Lokalny brak w Radkowicach nie przekreśla modułu. Przed wynikiem 1 km potrzebne są: potwierdzony punkt stacji, pełny eksport z kontrolą paginacji i pokrycia, warunki użycia oraz zweryfikowane mapowanie kategorii. Brak procentów pozostaje prawidłowym wynikiem do czasu spełnienia tych warunków. Rejestr TODO zaktualizowano; Excel nie był regenerowany w tym kroku.
+
+Normalizacja geometrii używa istniejącej zależności Shapely z `requirements-gis.txt`; sam inspektor kompletności WFS nie wymaga jej instalacji.

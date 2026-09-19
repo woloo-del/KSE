@@ -14,7 +14,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
-- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Mapa WMS potwierdza brak grup dla 264634 działek w powiecie kieleckim. Sprawdzić powiat z wypełnionymi grupami jako test metody, Radkowice uzupełnić przez NEED-021. Nie pobierać masowo pustych rekordów.
+- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Potwierdzono geometrię i grupy 7/9 w próbce Grudziądza oraz zgodność jednej działki WMS/WFS. Następnie ustalić warunki regularnego wykorzystania, kompletny eksport geometrii i pokrycie rzeczywistego bufora stacji. Radkowice nadal NEED-021.
 
 ## Pełny rejestr
 
@@ -663,10 +663,10 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji
 
 - Odpowiedzialność: Codex.
-- Następny krok: Mapa WMS potwierdza brak grup dla 264634 działek w powiecie kieleckim. Sprawdzić powiat z wypełnionymi grupami jako test metody, Radkowice uzupełnić przez NEED-021. Nie pobierać masowo pustych rekordów.
+- Następny krok: Potwierdzono geometrię i grupy 7/9 w próbce Grudziądza oraz zgodność jednej działki WMS/WFS. Następnie ustalić warunki regularnego wykorzystania, kompletny eksport geometrii i pokrycie rzeczywistego bufora stacji. Radkowice nadal NEED-021.
 - Kryterium: Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.
 - Nieukończone zależności: brak.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/25_land_ownership_discovery.md](docs/25_land_ownership_discovery.md), [data/reference/land_ownership_probe_2026-09-19.json](data/reference/land_ownership_probe_2026-09-19.json), [tests/test_ownership_probe.py](tests/test_ownership_probe.py), [data/reference/ownership_map_probe_2026-09-19.json](data/reference/ownership_map_probe_2026-09-19.json), [tests/test_ownership_map.py](tests/test_ownership_map.py).
+- Dowody/kontekst: [docs/25_land_ownership_discovery.md](docs/25_land_ownership_discovery.md), [data/reference/land_ownership_probe_2026-09-19.json](data/reference/land_ownership_probe_2026-09-19.json), [tests/test_ownership_probe.py](tests/test_ownership_probe.py), [data/reference/ownership_map_probe_2026-09-19.json](data/reference/ownership_map_probe_2026-09-19.json), [tests/test_ownership_map.py](tests/test_ownership_map.py), [data/reference/ownership_comparison_2026-09-19.json](data/reference/ownership_comparison_2026-09-19.json), [tests/test_ownership_normalization.py](tests/test_ownership_normalization.py).

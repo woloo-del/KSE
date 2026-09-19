@@ -3010,7 +3010,7 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Kraj:** PL
 - **Kategoria:** land_ownership_discovery
 - **Napięcie:** 
-- **Zasięg:** Próbki: Radkowice i Brzeziny, powiat kielecki
+- **Zasięg:** Ograniczone próbki: Radkowice, Brzeziny i Grudziądz
 - **Format:** WFS; XML; GML
 - **API:** WFS 2.0.0
 - **GIS:** WFS_SCHEMA_VERIFIED
@@ -3022,9 +3022,9 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Autorytet źródła:** C
 - **Odczyt maszynowy:** YES
 - **Scraping:** NO
-- **Pola:** ID_DZIALKI; geometria; GRUPA_REJESTROWA — tylko usługa zbiorcza, puste w próbce
+- **Pola:** ID_DZIALKI; geometria; GRUPA_REJESTROWA — uzupełniona w próbce Grudziądza, pusta w otoczeniu Radkowic
 - **Zastosowanie:** Ocena dostępności własności gruntów w otoczeniu stacji
-- **Ograniczenia:** Pole GRUPA_REJESTROWA jest opcjonalne. W obu próbkach puste.; Próbki prostokątne z COUNT=3, nie pełny bufor 1 km; brak podstaw do procentowego podziału własności.; Brak interpretacji grup rejestrowych i brak potwierdzenia warunków regularnego komercyjnego importu.
+- **Ograniczenia:** Pole GRUPA_REJESTROWA opcjonalne: cztery rekordy z otoczenia Radkowic puste; dwa rekordy z Grudziądza z grupami 9 i 7. DATA puste we wszystkich tych próbkach.; Próbki prostokątne z COUNT=3, nie pełny bufor 1 km; brak podstaw do procentowego podziału własności. Zgodność WMS/WFS dla jednego ID nie jest niezależnym potwierdzeniem.; Brak interpretacji grup rejestrowych i brak potwierdzenia warunków regularnego komercyjnego importu.
 - **Data stanu źródła:** UNKNOWN / nie dotyczy
 - **Publikacja:** UNKNOWN / nie dotyczy
 - **Wersja:** UNKNOWN / nie dotyczy
@@ -3036,6 +3036,7 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Próba GUGIK_EGIB_SCHEMA:** HTTP 200; 2026-09-19T05:00:11.241775+00:00; `data/catalog/probe_results_land_ownership_2026-09-19.json`; próbka `data/raw/research/2026-09-19/gugik_egib_schema.xml`.
 - **Próba GUGIK_EGIB_RADK_SAMPLE:** HTTP 200; 2026-09-19T05:00:48.830247+00:00; `data/catalog/probe_results_land_ownership_2026-09-19.json`; próbka `data/raw/research/2026-09-19/gugik_radkowice_parcels_sample.gml`.
 - **Próba GUGIK_EGIB_RADK_STATION_SAMPLE:** HTTP 200; 2026-09-19T05:01:28.986980+00:00; `data/catalog/probe_results_land_ownership_2026-09-19.json`; próbka `data/raw/research/2026-09-19/gugik_radkowice_station_sample.gml`.
+- **Próba GUGIK_OWNERSHIP_GRUDZIADZ_WFS:** HTTP 200; 2026-09-19T05:30:54.546684+00:00; `data/catalog/probe_results_ownership_comparison_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_grudziadz_wfs.gml`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
 
@@ -3048,7 +3049,7 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Kraj:** PL
 - **Kategoria:** land_ownership_discovery
 - **Napięcie:** 
-- **Zasięg:** Polska; zweryfikowana próbka powiat kielecki / Radkowice
+- **Zasięg:** Polska; próbki: powiat kielecki oraz miasta na prawach powiatu Poznań, Grudziądz, Warszawa
 - **Format:** WMS; XML; HTML; JSON
 - **API:** WMS 1.3.0
 - **GIS:** WMS_SAMPLE_VERIFIED
@@ -3062,7 +3063,7 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Scraping:** NO
 - **Pola:** grupa rejestrowa; identyfikator działki; czas pozyskania; statystyki powiatowe
 - **Zastosowanie:** Ocena dostępności własności gruntów w otoczeniu stacji
-- **Ograniczenia:** Stan usługi, nie pełny stan EGiB: powiat kielecki 264634 działki bez grupy; aktualizacja ostatniego podzbioru 17.09.2026 00:07.; GetFeatureInfo text/plain bez atrybutów, HTML zawiera wartości; GetMap application/json zwraca siatkę UTFGrid z pustym data, nie geometrię działek.; Fees NONE i AccessConstraints NONE w capabilities nie rozstrzygają pełnych praw komercyjnych. Statystyki liczbowe powiatu nie są udziałami powierzchni bufora.
+- **Ograniczenia:** Stan usługi, nie pełny stan EGiB: powiat kielecki 264634 działki bez grupy; aktualizacja ostatniego podzbioru 17.09.2026 00:07.; GetFeatureInfo text/plain bez atrybutów, HTML zawiera wartości; GetMap application/json zwraca siatkę UTFGrid z pustym data, nie geometrię działek.; Fees NONE i AccessConstraints NONE w capabilities nie rozstrzygają pełnych praw komercyjnych. Statystyki liczbowe powiatu nie są udziałami powierzchni bufora.; Porównanie 19.09.2026: Poznań 120070 i Grudziądz 24217 działek, po 0 bez grupy; Warszawa 287525 bez grupy. To kompletność kategorii w zbiorze usługi, nie powierzchnia ani kompletność EGiB.
 - **Data stanu źródła:** UNKNOWN / nie dotyczy
 - **Publikacja:** UNKNOWN / nie dotyczy
 - **Wersja:** UNKNOWN / nie dotyczy
@@ -3071,6 +3072,10 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Udany odczyt:** 2026-09-19
 - **Klasyfikacja wejścia:** REPORTED
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba GUGIK_OWNERSHIP_POZNAN_AREA:** HTTP 200; 2026-09-19T05:30:20.650306+00:00; `data/catalog/probe_results_ownership_comparison_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_poznan_area.html`.
+- **Próba GUGIK_OWNERSHIP_GRUDZIADZ_AREA:** HTTP 200; 2026-09-19T05:30:21.192920+00:00; `data/catalog/probe_results_ownership_comparison_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_grudziadz_area.html`.
+- **Próba GUGIK_OWNERSHIP_WARSAW_AREA:** HTTP 200; 2026-09-19T05:30:21.876213+00:00; `data/catalog/probe_results_ownership_comparison_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_warsaw_area.html`.
+- **Próba GUGIK_OWNERSHIP_GRUDZIADZ_PARCEL:** HTTP 200; 2026-09-19T05:30:51.949828+00:00; `data/catalog/probe_results_ownership_comparison_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_grudziadz_parcel.html`.
 - **Próba GUGIK_OWNERSHIP_MAP_CAPS:** HTTP 200; 2026-09-19T05:16:48.679521+00:00; `data/catalog/probe_results_ownership_map_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_map_capabilities.xml`.
 - **Próba GUGIK_OWNERSHIP_MAP_PARCEL:** HTTP 200; 2026-09-19T05:20:06.249967+00:00; `data/catalog/probe_results_ownership_map_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_map_parcel_info.txt`.
 - **Próba GUGIK_OWNERSHIP_MAP_COUNTY:** HTTP 200; 2026-09-19T05:20:07.040822+00:00; `data/catalog/probe_results_ownership_map_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_map_county_info.txt`.

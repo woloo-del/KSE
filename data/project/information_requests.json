@@ -289,7 +289,7 @@
       "status": "Do sprawdzenia",
       "requested_scope": "Oficjalny eksport identyfikator działki + grupa rejestrowa + data stanu dla otoczenia stacji, najlepiej z geometrią i opisem znaczenia kategorii oraz warunkami wykorzystania; bez nazwisk, PESEL i adresów właścicieli.",
       "unlocks": "Wiarygodny podział powierzchni bufora 1 km według kategorii własności.",
-      "next_action": "Opcjonalna pomoc użytkownika: eksport z powiatowej EGiB zawierający identyfikator działki, grupę rejestrową, datę i warunki użycia dla otoczenia Radkowic, bez danych osobowych. Mapa GUGiK nie uzupełnia obecnie tego braku. Codex może niezależnie testować metodę w innym powiecie.",
+      "next_action": "Opcjonalna pomoc użytkownika: eksport z powiatowej EGiB zawierający identyfikator działki, grupę rejestrową, datę i warunki użycia dla otoczenia Radkowic, bez danych osobowych. Mapa GUGiK nie uzupełnia obecnie tego braku. Próba Grudziądza potwierdziła techniczną dostępność grup i geometrii gdzie indziej; nie zastępuje danych Radkowic.",
       "without_it": "Zachować brak danych; nie przypisywać działek do prywatnych ani nie generować procentów.",
       "owner": "Codex — źródła; użytkownik — pomoc opcjonalna",
       "basis": "docs/25_land_ownership_discovery.md; Mapa własności GUGiK: 264634 działki w powiecie kieleckim bez grupy, ostatni podzbiór 17.09.2026 00:07.",

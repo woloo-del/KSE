@@ -1053,14 +1053,16 @@
       "priority": "P1",
       "owner": "Codex",
       "depends_on": [],
-      "next_action": "Mapa WMS potwierdza brak grup dla 264634 działek w powiecie kieleckim. Sprawdzić powiat z wypełnionymi grupami jako test metody, Radkowice uzupełnić przez NEED-021. Nie pobierać masowo pustych rekordów.",
+      "next_action": "Potwierdzono geometrię i grupy 7/9 w próbce Grudziądza oraz zgodność jednej działki WMS/WFS. Następnie ustalić warunki regularnego wykorzystania, kompletny eksport geometrii i pokrycie rzeczywistego bufora stacji. Radkowice nadal NEED-021.",
       "acceptance": "Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.",
       "evidence": [
         "docs/25_land_ownership_discovery.md",
         "data/reference/land_ownership_probe_2026-09-19.json",
         "tests/test_ownership_probe.py",
         "data/reference/ownership_map_probe_2026-09-19.json",
-        "tests/test_ownership_map.py"
+        "tests/test_ownership_map.py",
+        "data/reference/ownership_comparison_2026-09-19.json",
+        "tests/test_ownership_normalization.py"
       ],
       "started_at": "2026-09-18"
     }

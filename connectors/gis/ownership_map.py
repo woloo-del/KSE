@@ -3,6 +3,22 @@ import html
 import re
 
 
+def inspect_parcel(raw: bytes) -> dict:
+    """Read exactly one known template as text; never execute source JavaScript."""
+    text = raw.decode('utf-8')
+    identifiers = set(re.findall(r'\b\d{6}_\d\.\d{4}\.[\d/]+', text))
+    groups = re.findall(r'const\s+groupid\s*=\s*(\d+)\s*;', text)
+    dates = re.findall(r'const\s+fetchdt\s*=\s*new Date\("([^"\r\n]+)"\);', text)
+    if len(identifiers) != 1 or len(groups) != 1 or len(dates) != 1:
+        raise ValueError('UNSUPPORTED_PARCEL_TEMPLATE')
+    group = int(groups[0])
+    if group not in range(17):
+        raise ValueError('INVALID_GROUP')
+    return {'parcel_id': identifiers.pop(), 'registration_group': group or None,
+            'source_group_code': group, 'source_wfs_retrieval_raw': dates[0],
+            'classification': 'REPORTED', 'ownership_category': None}
+
+
 def inspect_county(raw: bytes) -> dict:
     text = raw.decode('utf-8')
     fields = {}

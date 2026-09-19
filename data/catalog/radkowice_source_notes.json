@@ -847,7 +847,7 @@
       "country": "PL",
       "data_category": "land_ownership_discovery",
       "grid_voltage": [],
-      "geographical_scope": "Próbki: Radkowice i Brzeziny, powiat kielecki",
+      "geographical_scope": "Ograniczone próbki: Radkowice, Brzeziny i Grudziądz",
       "data_format": [
         "WFS",
         "XML",
@@ -866,19 +866,20 @@
       "key_fields": [
         "ID_DZIALKI",
         "geometria",
-        "GRUPA_REJESTROWA — tylko usługa zbiorcza, puste w próbce"
+        "GRUPA_REJESTROWA — uzupełniona w próbce Grudziądza, pusta w otoczeniu Radkowic"
       ],
       "potential_application": "Ocena dostępności własności gruntów w otoczeniu stacji",
       "known_limitations": [
-        "Pole GRUPA_REJESTROWA jest opcjonalne. W obu próbkach puste.",
-        "Próbki prostokątne z COUNT=3, nie pełny bufor 1 km; brak podstaw do procentowego podziału własności.",
+        "Pole GRUPA_REJESTROWA opcjonalne: cztery rekordy z otoczenia Radkowic puste; dwa rekordy z Grudziądza z grupami 9 i 7. DATA puste we wszystkich tych próbkach.",
+        "Próbki prostokątne z COUNT=3, nie pełny bufor 1 km; brak podstaw do procentowego podziału własności. Zgodność WMS/WFS dla jednego ID nie jest niezależnym potwierdzeniem.",
         "Brak interpretacji grup rejestrowych i brak potwierdzenia warunków regularnego komercyjnego importu."
       ],
       "priority": "P1",
       "probe_ids": [
         "GUGIK_EGIB_SCHEMA",
         "GUGIK_EGIB_RADK_SAMPLE",
-        "GUGIK_EGIB_RADK_STATION_SAMPLE"
+        "GUGIK_EGIB_RADK_STATION_SAMPLE",
+        "GUGIK_OWNERSHIP_GRUDZIADZ_WFS"
       ]
     },
     {
@@ -890,7 +891,7 @@
       "country": "PL",
       "data_category": "land_ownership_discovery",
       "grid_voltage": [],
-      "geographical_scope": "Polska; zweryfikowana próbka powiat kielecki / Radkowice",
+      "geographical_scope": "Polska; próbki: powiat kielecki oraz miasta na prawach powiatu Poznań, Grudziądz, Warszawa",
       "data_format": [
         "WMS",
         "XML",
@@ -917,7 +918,8 @@
       "known_limitations": [
         "Stan usługi, nie pełny stan EGiB: powiat kielecki 264634 działki bez grupy; aktualizacja ostatniego podzbioru 17.09.2026 00:07.",
         "GetFeatureInfo text/plain bez atrybutów, HTML zawiera wartości; GetMap application/json zwraca siatkę UTFGrid z pustym data, nie geometrię działek.",
-        "Fees NONE i AccessConstraints NONE w capabilities nie rozstrzygają pełnych praw komercyjnych. Statystyki liczbowe powiatu nie są udziałami powierzchni bufora."
+        "Fees NONE i AccessConstraints NONE w capabilities nie rozstrzygają pełnych praw komercyjnych. Statystyki liczbowe powiatu nie są udziałami powierzchni bufora.",
+        "Porównanie 19.09.2026: Poznań 120070 i Grudziądz 24217 działek, po 0 bez grupy; Warszawa 287525 bez grupy. To kompletność kategorii w zbiorze usługi, nie powierzchnia ani kompletność EGiB."
       ],
       "priority": "P1",
       "probe_ids": [
@@ -926,7 +928,11 @@
         "GUGIK_OWNERSHIP_MAP_COUNTY",
         "GUGIK_OWNERSHIP_MAP_PARCEL_HTML",
         "GUGIK_OWNERSHIP_MAP_COUNTY_HTML",
-        "GUGIK_OWNERSHIP_MAP_PARCEL_VECTOR"
+        "GUGIK_OWNERSHIP_MAP_PARCEL_VECTOR",
+        "GUGIK_OWNERSHIP_POZNAN_AREA",
+        "GUGIK_OWNERSHIP_GRUDZIADZ_AREA",
+        "GUGIK_OWNERSHIP_WARSAW_AREA",
+        "GUGIK_OWNERSHIP_GRUDZIADZ_PARCEL"
       ]
     }
   ]

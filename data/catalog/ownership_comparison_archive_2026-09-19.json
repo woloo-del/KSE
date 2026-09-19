@@ -1,0 +1,31 @@
+{
+  "archive_path": "data/archives/ownership_comparison_2026-09-19.zip",
+  "archive_sha256": "c4a05a0e5645bcf89e4131020115da4d5983ba2ef9fbc0c64ee0e9df4450bd3e",
+  "files": [
+    {
+      "path": "data/raw/research/2026-09-19/ownership_poznan_area.html",
+      "sha256": "33771e6801d466d0d39f1367f7524c332ce395b873737bb5d90679767521e4d3",
+      "bytes": 13190
+    },
+    {
+      "path": "data/raw/research/2026-09-19/ownership_grudziadz_area.html",
+      "sha256": "6c83c4e534e665ff0504eb50dae97cd86f18c079a88a940c1dec595234748f06",
+      "bytes": 13181
+    },
+    {
+      "path": "data/raw/research/2026-09-19/ownership_warsaw_area.html",
+      "sha256": "d29d5a3478d91c77b1c9c91ec7bfedf77f9bcd056ce96fcf008746b9117c8679",
+      "bytes": 13134
+    },
+    {
+      "path": "data/raw/research/2026-09-19/ownership_grudziadz_parcel.html",
+      "sha256": "a3e112ff45f3b1e0635393ffc6647dd3133a1465ba20573be31bc7d82bb93882",
+      "bytes": 13664
+    },
+    {
+      "path": "data/raw/research/2026-09-19/ownership_grudziadz_wfs.gml",
+      "sha256": "7ea01e4fa767c6b6ec1c07d116310ed6f6a5ec6f4a5329aa4529d42aea8544b1",
+      "bytes": 3697
+    }
+  ]
+}

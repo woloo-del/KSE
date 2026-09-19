@@ -1,0 +1,175 @@
+{
+  "method_version": "ownership_comparison_v1",
+  "scope": "DISCOVERY_POINTS_NOT_STATIONS_OR_1KM_BUFFERS",
+  "sources": [
+    {
+      "source_id": "GUGIK_OWNERSHIP_POZNAN_AREA",
+      "url": "https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci?SERVICE=WMS&VERSION=1.3.0&CRS=EPSG%3A4326&BBOX=52.399%2C16.999%2C52.400999999999996%2C17.001&WIDTH=256&HEIGHT=256&STYLES=&REQUEST=GetFeatureInfo&LAYERS=dzialki_stats_pow_polygon&QUERY_LAYERS=dzialki_stats_pow_polygon&INFO_FORMAT=text%2Fhtml&FORMAT=image%2Fpng&I=128&J=128&FEATURE_COUNT=1",
+      "http_status": 200,
+      "local_path": "data/raw/research/2026-09-19/ownership_poznan_area.html",
+      "sha256": "33771e6801d466d0d39f1367f7524c332ce395b873737bb5d90679767521e4d3",
+      "bytes": 13190,
+      "retrieval_date": "2026-09-19T05:30:20.650306+00:00"
+    },
+    {
+      "source_id": "GUGIK_OWNERSHIP_GRUDZIADZ_AREA",
+      "url": "https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci?SERVICE=WMS&VERSION=1.3.0&CRS=EPSG%3A4326&BBOX=53.479%2C18.759%2C53.480999999999995%2C18.761000000000003&WIDTH=256&HEIGHT=256&STYLES=&REQUEST=GetFeatureInfo&LAYERS=dzialki_stats_pow_polygon&QUERY_LAYERS=dzialki_stats_pow_polygon&INFO_FORMAT=text%2Fhtml&FORMAT=image%2Fpng&I=128&J=128&FEATURE_COUNT=1",
+      "http_status": 200,
+      "local_path": "data/raw/research/2026-09-19/ownership_grudziadz_area.html",
+      "sha256": "6c83c4e534e665ff0504eb50dae97cd86f18c079a88a940c1dec595234748f06",
+      "bytes": 13181,
+      "retrieval_date": "2026-09-19T05:30:21.192920+00:00"
+    },
+    {
+      "source_id": "GUGIK_OWNERSHIP_WARSAW_AREA",
+      "url": "https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci?SERVICE=WMS&VERSION=1.3.0&CRS=EPSG%3A4326&BBOX=52.229%2C21.009%2C52.230999999999995%2C21.011000000000003&WIDTH=256&HEIGHT=256&STYLES=&REQUEST=GetFeatureInfo&LAYERS=dzialki_stats_pow_polygon&QUERY_LAYERS=dzialki_stats_pow_polygon&INFO_FORMAT=text%2Fhtml&FORMAT=image%2Fpng&I=128&J=128&FEATURE_COUNT=1",
+      "http_status": 200,
+      "local_path": "data/raw/research/2026-09-19/ownership_warsaw_area.html",
+      "sha256": "d29d5a3478d91c77b1c9c91ec7bfedf77f9bcd056ce96fcf008746b9117c8679",
+      "bytes": 13134,
+      "retrieval_date": "2026-09-19T05:30:21.876213+00:00"
+    },
+    {
+      "source_id": "GUGIK_OWNERSHIP_GRUDZIADZ_PARCEL",
+      "url": "https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci?SERVICE=WMS&VERSION=1.3.0&CRS=EPSG%3A4326&BBOX=53.479%2C18.759%2C53.481%2C18.761&WIDTH=256&HEIGHT=256&STYLES=&REQUEST=GetFeatureInfo&LAYERS=dzialki_polygon&QUERY_LAYERS=dzialki_polygon&INFO_FORMAT=text%2Fhtml&FORMAT=image%2Fpng&I=128&J=128&FEATURE_COUNT=1",
+      "http_status": 200,
+      "local_path": "data/raw/research/2026-09-19/ownership_grudziadz_parcel.html",
+      "sha256": "a3e112ff45f3b1e0635393ffc6647dd3133a1465ba20573be31bc7d82bb93882",
+      "bytes": 13664,
+      "retrieval_date": "2026-09-19T05:30:51.949828+00:00"
+    },
+    {
+      "source_id": "GUGIK_OWNERSHIP_GRUDZIADZ_WFS",
+      "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=3&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=53.47995%2C18.75995%2C53.48005%2C18.76005%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+      "http_status": 200,
+      "local_path": "data/raw/research/2026-09-19/ownership_grudziadz_wfs.gml",
+      "sha256": "7ea01e4fa767c6b6ec1c07d116310ed6f6a5ec6f4a5329aa4529d42aea8544b1",
+      "bytes": 3697,
+      "retrieval_date": "2026-09-19T05:30:54.546684+00:00"
+    }
+  ],
+  "counties": [
+    {
+      "source_id": "GUGIK_OWNERSHIP_POZNAN_AREA",
+      "classification": "REPORTED",
+      "scope": "COUNTY_SERVICE_SNAPSHOT_NOT_STATION_BUFFER",
+      "teryt": "3064",
+      "county_name": "Poznań",
+      "parcel_count": 120070,
+      "missing_group_count": 0,
+      "group_counts": {
+        "1": 4816,
+        "2": 5056,
+        "3": 656,
+        "4": 30644,
+        "5": 5072,
+        "6": 47,
+        "7": 65622,
+        "8": 1530,
+        "9": 651,
+        "10": 0,
+        "11": 42,
+        "12": 0,
+        "13": 264,
+        "14": 12,
+        "15": 5339,
+        "16": 319
+      },
+      "duplicate_count": 0,
+      "source_last_subset_retrieval_label": "17.09.2026, 00:30",
+      "ownership_area_percent": null,
+      "availability": "REQUIRES_LOCAL_COVERAGE_CHECK"
+    },
+    {
+      "source_id": "GUGIK_OWNERSHIP_GRUDZIADZ_AREA",
+      "classification": "REPORTED",
+      "scope": "COUNTY_SERVICE_SNAPSHOT_NOT_STATION_BUFFER",
+      "teryt": "0462",
+      "county_name": "Grudziądz",
+      "parcel_count": 24217,
+      "missing_group_count": 0,
+      "group_counts": {
+        "1": 982,
+        "2": 845,
+        "3": 36,
+        "4": 5475,
+        "5": 2033,
+        "6": 429,
+        "7": 12895,
+        "8": 303,
+        "9": 77,
+        "10": 0,
+        "11": 242,
+        "12": 0,
+        "13": 23,
+        "14": 4,
+        "15": 764,
+        "16": 109
+      },
+      "duplicate_count": 0,
+      "source_last_subset_retrieval_label": "16.09.2026, 23:07",
+      "ownership_area_percent": null,
+      "availability": "REQUIRES_LOCAL_COVERAGE_CHECK"
+    },
+    {
+      "source_id": "GUGIK_OWNERSHIP_WARSAW_AREA",
+      "classification": "REPORTED",
+      "scope": "COUNTY_SERVICE_SNAPSHOT_NOT_STATION_BUFFER",
+      "teryt": "1465",
+      "county_name": "Warszawa",
+      "parcel_count": 287525,
+      "missing_group_count": 287525,
+      "group_counts": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0,
+        "16": 0
+      },
+      "duplicate_count": 0,
+      "source_last_subset_retrieval_label": "16.09.2026, 23:43",
+      "ownership_area_percent": null,
+      "availability": "NO_GROUP_VALUES_IN_SNAPSHOT"
+    }
+  ],
+  "wms_parcel": {
+    "parcel_id": "046201_1.0090.5/8",
+    "registration_group": 7,
+    "source_group_code": 7,
+    "source_wfs_retrieval_raw": "2026-09-16 23:07:20.315094",
+    "classification": "REPORTED",
+    "ownership_category": null
+  },
+  "wfs_summary": {
+    "returned_parcels": 2,
+    "number_matched_reported": "2",
+    "registration_group_field": {
+      "missing": 0,
+      "empty": 0,
+      "populated": 2
+    },
+    "ownership_area_percent": null,
+    "scope": "BOUNDED_SAMPLE_NOT_1KM_COVERAGE",
+    "ownership_classification": "NOT_PERFORMED"
+  },
+  "exact_id_group_agreement": true,
+  "independent_confirmation": false,
+  "limitations": [
+    "WMS and WFS may share the same county source.",
+    "WFS DATA empty; WMS retrieval time is not ownership validity.",
+    "Small selected sample, no nationwide or station-buffer completeness.",
+    "Commercial reuse not cleared."
+  ],
+  "ownership_area_percent": null
+}
