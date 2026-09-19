@@ -329,3 +329,13 @@ Consequences: stabilne ID dowodów, cztery snapshoty, jawne OSM G i publikacje B
 - Reason: schemat klienta nie potwierdza zawartości odpowiedzi API, a geometria prezentacji nie jest dokładną lokalizacją infrastruktury.
 - Trade-offs: 624 grupy kod+napięcie pozostają grupami źródłowymi bez potwierdzonej tożsamości stacji.
 - Consequences: NEED-019/020 obejmują słownik i zasady użycia; niezależny audyt PSE może postępować dalej. Szczegóły i snapshoty: docs/22_tauron_dictionary_discovery.md.
+
+## 2026-09-19 — Oddzielna warstwa powierzchni gruntów i jawne konflikty
+
+- Decision: obliczenia powierzchni działek umieszczamy w `gis/`, niezależnie od connectorów i oceny przesłanek sieciowych.
+- Context: próbki GUGiK potwierdziły dostępność geometrii i grup w części kraju, ale nie pełny bufor stacji ani zatwierdzony podział publiczne/prywatne.
+- Options considered: sumowanie powierzchni całych działek; sumowanie przyciętych rekordów; rozłączny podział bufora z wyłączeniem nakładania.
+- Selected option: rozłączny podział według surowych grup, z oddzielnym brakiem geometrii, kategorii i konfliktami.
+- Reason: pełny mianownik i wyłączenie nakładania zapobiegają zawyżaniu udziałów oraz ukrywaniu braków.
+- Trade-offs: każde nakładanie o dodatniej powierzchni, również w tej samej grupie, wymaga wyjaśnienia. Rdzeń przyjmuje wyłącznie jawnie przekształcone EPSG:2180; adapter nie jest jeszcze gotowy.
+- Consequences: brak nowych zależności; używamy istniejącego Shapely. Metoda registration_group_buffer_v1 i odcisk wejść. Nie powstał rzeczywisty raport 1 km ani ocena możliwości przyłączenia. Szczegóły: docs/26_land_ownership_area_method.md.

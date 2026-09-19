@@ -1,6 +1,6 @@
 {
   "schema_version": "todo_v1",
-  "updated_at": "2026-09-18",
+  "updated_at": "2026-09-19",
   "project": "Grid Connection Intelligence — Polska",
   "tasks": [
     {
@@ -1053,7 +1053,7 @@
       "priority": "P1",
       "owner": "Codex",
       "depends_on": [],
-      "next_action": "Potwierdzono geometrię i grupy 7/9 w próbce Grudziądza oraz zgodność jednej działki WMS/WFS. Następnie ustalić warunki regularnego wykorzystania, kompletny eksport geometrii i pokrycie rzeczywistego bufora stacji. Radkowice nadal NEED-021.",
+      "next_action": "Gotowy rdzeń powierzchni KSE-055. Potrzebny adapter EPSG:4326 do 2180, kompletny import bufora zweryfikowanej stacji z kontrolą pokrycia i paginacji oraz zasady użycia. Radkowice nadal NEED-021. Nie publikować procentów z ograniczonej próbki.",
       "acceptance": "Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.",
       "evidence": [
         "docs/25_land_ownership_discovery.md",
@@ -1062,9 +1062,28 @@
         "data/reference/ownership_map_probe_2026-09-19.json",
         "tests/test_ownership_map.py",
         "data/reference/ownership_comparison_2026-09-19.json",
-        "tests/test_ownership_normalization.py"
+        "tests/test_ownership_normalization.py",
+        "docs/26_land_ownership_area_method.md"
       ],
       "started_at": "2026-09-18"
+    },
+    {
+      "id": "KSE-055",
+      "title": "Rdzeń obliczania powierzchni grup rejestrowych w buforze",
+      "stage": "GIS",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [],
+      "next_action": "Włączyć do KSE-054 dopiero po poprawnej transformacji CRS i pozyskaniu zweryfikowanych wejść; nie jest to gotowy moduł użytkownika.",
+      "acceptance": "Przycinanie działek do metrycznego bufora, osobne braki i konflikty, pełny mianownik, pochodzenie i odtwarzalność, testy bez fikcyjnych danych produkcyjnych.",
+      "evidence": [
+        "gis/ownership_area.py",
+        "tests/test_ownership_area.py",
+        "docs/26_land_ownership_area_method.md"
+      ],
+      "started_at": "2026-09-19",
+      "completed_at": "2026-09-19"
     }
   ]
 }

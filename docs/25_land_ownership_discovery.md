@@ -75,3 +75,5 @@ Odtworzenie: `scripts/build_ownership_comparison.py`; wejścia sprawdzane SHA-25
 **Wniosek:** powiązanie geometria–grupa rejestrowa jest technicznie dostępne przynajmniej w zweryfikowanej próbce Grudziądza. Lokalny brak w Radkowicach nie przekreśla modułu. Przed wynikiem 1 km potrzebne są: potwierdzony punkt stacji, pełny eksport z kontrolą paginacji i pokrycia, warunki użycia oraz zweryfikowane mapowanie kategorii. Brak procentów pozostaje prawidłowym wynikiem do czasu spełnienia tych warunków. Rejestr TODO zaktualizowano; Excel nie był regenerowany w tym kroku.
 
 Normalizacja geometrii używa istniejącej zależności Shapely z `requirements-gis.txt`; sam inspektor kompletności WFS nie wymaga jej instalacji.
+
+Rdzeń obliczeń powierzchni, ukończony 19.09.2026 jako KSE-055, opisano w [metodzie bufora](26_land_ownership_area_method.md). To gotowe obliczenia dla właściwych wejść, nie ukończony import i raport stacji.

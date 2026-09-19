@@ -1,6 +1,6 @@
 # TODO — Grid Connection Intelligence
 
-Aktualizacja rejestru: **2026-09-18**. Źródło edytowalne: [todo.json](data/project/todo.json).
+Aktualizacja rejestru: **2026-09-19**. Źródło edytowalne: [todo.json](data/project/todo.json).
 
 Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zakończenia. Nie ustalono terminów dla niezaplanowanych zadań. P0 = warunek najbliższego etapu, P1 = rozwój po fundamentach, P2 = dalszy rozwój. Priorytety są kolejnością organizacji pracy, nie scoringiem sieci.
 
@@ -14,7 +14,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
-- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Potwierdzono geometrię i grupy 7/9 w próbce Grudziądza oraz zgodność jednej działki WMS/WFS. Następnie ustalić warunki regularnego wykorzystania, kompletny eksport geometrii i pokrycie rzeczywistego bufora stacji. Radkowice nadal NEED-021.
+- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Gotowy rdzeń powierzchni KSE-055. Potrzebny adapter EPSG:4326 do 2180, kompletny import bufora zweryfikowanej stacji z kontrolą pokrycia i paginacji oraz zasady użycia. Radkowice nadal NEED-021. Nie publikować procentów z ograniczonej próbki.
 
 ## Pełny rejestr
 
@@ -74,6 +74,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-052 | Zbiorczy indeks nagłówków inwestycji PSE dla profili stacji | Scaling | Zrobione | P0 | KSE-048 |
 | KSE-053 | Lokalny przegląd 50 profili źródłowych PSE | MVP | Zrobione | P1 | — |
 | KSE-054 | Struktura własności gruntów w promieniu 1 km od stacji | Research | W toku | P1 | — |
+| KSE-055 | Rdzeń obliczania powierzchni grup rejestrowych w buforze | GIS | Zrobione | P1 | — |
 
 ## Kryteria zakończenia i dowody
 
@@ -663,10 +664,21 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji
 
 - Odpowiedzialność: Codex.
-- Następny krok: Potwierdzono geometrię i grupy 7/9 w próbce Grudziądza oraz zgodność jednej działki WMS/WFS. Następnie ustalić warunki regularnego wykorzystania, kompletny eksport geometrii i pokrycie rzeczywistego bufora stacji. Radkowice nadal NEED-021.
+- Następny krok: Gotowy rdzeń powierzchni KSE-055. Potrzebny adapter EPSG:4326 do 2180, kompletny import bufora zweryfikowanej stacji z kontrolą pokrycia i paginacji oraz zasady użycia. Radkowice nadal NEED-021. Nie publikować procentów z ograniczonej próbki.
 - Kryterium: Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.
 - Nieukończone zależności: brak.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/25_land_ownership_discovery.md](docs/25_land_ownership_discovery.md), [data/reference/land_ownership_probe_2026-09-19.json](data/reference/land_ownership_probe_2026-09-19.json), [tests/test_ownership_probe.py](tests/test_ownership_probe.py), [data/reference/ownership_map_probe_2026-09-19.json](data/reference/ownership_map_probe_2026-09-19.json), [tests/test_ownership_map.py](tests/test_ownership_map.py), [data/reference/ownership_comparison_2026-09-19.json](data/reference/ownership_comparison_2026-09-19.json), [tests/test_ownership_normalization.py](tests/test_ownership_normalization.py).
+- Dowody/kontekst: [docs/25_land_ownership_discovery.md](docs/25_land_ownership_discovery.md), [data/reference/land_ownership_probe_2026-09-19.json](data/reference/land_ownership_probe_2026-09-19.json), [tests/test_ownership_probe.py](tests/test_ownership_probe.py), [data/reference/ownership_map_probe_2026-09-19.json](data/reference/ownership_map_probe_2026-09-19.json), [tests/test_ownership_map.py](tests/test_ownership_map.py), [data/reference/ownership_comparison_2026-09-19.json](data/reference/ownership_comparison_2026-09-19.json), [tests/test_ownership_normalization.py](tests/test_ownership_normalization.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md).
+
+### KSE-055 — Rdzeń obliczania powierzchni grup rejestrowych w buforze
+
+- Odpowiedzialność: Codex.
+- Następny krok: Włączyć do KSE-054 dopiero po poprawnej transformacji CRS i pozyskaniu zweryfikowanych wejść; nie jest to gotowy moduł użytkownika.
+- Kryterium: Przycinanie działek do metrycznego bufora, osobne braki i konflikty, pełny mianownik, pochodzenie i odtwarzalność, testy bez fikcyjnych danych produkcyjnych.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-19.
+- Dowody/kontekst: [gis/ownership_area.py](gis/ownership_area.py), [tests/test_ownership_area.py](tests/test_ownership_area.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md).

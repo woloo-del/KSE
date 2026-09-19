@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-19T05:35:12.786333+00:00",
+  "checked_at_utc": "2026-09-19T05:56:16.049421+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
   "source_count": 82,
@@ -108,13 +108,13 @@
       "first_page_text_chars": 206
     }
   ],
-  "local_links_checked": 63,
+  "local_links_checked": 65,
   "dependencies": {
     "python": "3.12.14",
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 1076,
+  "checks_passed": 1078,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -5309,6 +5309,16 @@
     },
     {
       "name": "local_link:23_pse_identity_audit.md:24_pse_bulk_investment_index.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:25_land_ownership_discovery.md:26_land_ownership_area_method.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:26_land_ownership_area_method.md:25_land_ownership_discovery.md",
       "passed": true,
       "detail": null
     },
