@@ -1,0 +1,37 @@
+{
+  "method": "bounded_wfs_ownership_probe_v1",
+  "samples": [
+    {
+      "source_id": "GUGIK_EGIB_RADK_SAMPLE",
+      "source_url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=3&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=50.78%2C20.51%2C50.795%2C20.535%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+      "retrieval_date": "2026-09-19T05:00:48.830247+00:00",
+      "sha256": "e0622229ef79ae75bfe57d2e70a7df70ef7ea1f7a988cf0c245655758c764181",
+      "returned_parcels": 3,
+      "number_matched_reported": "unknown",
+      "registration_group_field": {
+        "missing": 0,
+        "empty": 3,
+        "populated": 0
+      },
+      "ownership_area_percent": null,
+      "scope": "BOUNDED_SAMPLE_NOT_1KM_COVERAGE",
+      "ownership_classification": "NOT_PERFORMED"
+    },
+    {
+      "source_id": "GUGIK_EGIB_RADK_STATION_SAMPLE",
+      "source_url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=3&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=50.7877%2C20.5221%2C50.7882%2C20.5227%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+      "retrieval_date": "2026-09-19T05:01:28.986980+00:00",
+      "sha256": "d4a2218225c4217328365dd90da656c6e4adf9f9dd85f6754ae6a41ca6863db3",
+      "returned_parcels": 1,
+      "number_matched_reported": "1",
+      "registration_group_field": {
+        "missing": 0,
+        "empty": 1,
+        "populated": 0
+      },
+      "ownership_area_percent": null,
+      "scope": "BOUNDED_SAMPLE_NOT_1KM_COVERAGE",
+      "ownership_classification": "NOT_PERFORMED"
+    }
+  ]
+}

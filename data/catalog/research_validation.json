@@ -1,28 +1,29 @@
 {
-  "checked_at_utc": "2026-09-18T18:11:27.886248+00:00",
+  "checked_at_utc": "2026-09-19T05:05:14.924969+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 79,
+  "source_count": 81,
   "source_status_counts": {
-    "SAMPLE_VERIFIED": 18,
-    "CONTENT_REVIEWED": 40,
-    "DISCOVERED": 5,
+    "SAMPLE_VERIFIED": 19,
+    "CONTENT_REVIEWED": 42,
+    "DISCOVERED": 4,
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 11
   },
-  "probe_count": 63,
+  "probe_count": 72,
   "http_status_counts": {
-    "200": 62,
+    "200": 71,
     "404": 1
   },
-  "raw_file_count": 62,
+  "raw_file_count": 71,
   "format_counts": {
-    ".html": 21,
+    ".html": 23,
     ".pdf": 16,
     ".json": 15,
-    ".xml": 4,
+    ".xml": 9,
     ".js": 5,
-    ".xlsx": 1
+    ".xlsx": 1,
+    ".gml": 2
   },
   "pdf_details": [
     {
@@ -112,7 +113,7 @@
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 946,
+  "checks_passed": 1010,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -2256,7 +2257,57 @@
       "detail": null
     },
     {
-      "name": "unverified_not_successful:GUGIK_OWNERSHIP_GROUPS",
+      "name": "catalog_fields:KIELCE_EGIB_OWNERSHIP_DISCOVERY",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:KIELCE_EGIB_OWNERSHIP_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:KIELCE_EGIB_OWNERSHIP_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:KIELCE_EGIB_OWNERSHIP_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:KIELCE_EGIB_OWNERSHIP_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:GUGIK_EGIB_OWNERSHIP_PROBE",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GUGIK_EGIB_OWNERSHIP_PROBE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GUGIK_EGIB_OWNERSHIP_PROBE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GUGIK_EGIB_OWNERSHIP_PROBE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GUGIK_EGIB_OWNERSHIP_PROBE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:GUGIK_EGIB_OWNERSHIP_PROBE",
       "passed": true,
       "detail": null
     },
@@ -2657,6 +2708,16 @@
     },
     {
       "name": "probe_references:GUGIK_OWNERSHIP_GROUPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:KIELCE_EGIB_OWNERSHIP_DISCOVERY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GUGIK_EGIB_OWNERSHIP_PROBE",
       "passed": true,
       "detail": null
     },
@@ -3217,6 +3278,186 @@
     },
     {
       "name": "snapshot_sha256:ENERGY_CHARTS_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:KIELCE_WFS_INFO",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:KIELCE_WFS_INFO",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:KIELCE_WFS_INFO",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:KIELCE_WFS_INFO",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:KIELCE_EGIB_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:KIELCE_EGIB_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:KIELCE_EGIB_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:KIELCE_EGIB_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:KIELCE_EGIB_SCHEMA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:KIELCE_EGIB_SCHEMA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:KIELCE_EGIB_SCHEMA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:KIELCE_EGIB_SCHEMA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:KIELCE_EGIB_FULL_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:KIELCE_EGIB_FULL_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:KIELCE_EGIB_FULL_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:KIELCE_EGIB_FULL_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GUGIK_OWNERSHIP_NEWS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_OWNERSHIP_NEWS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_OWNERSHIP_NEWS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_OWNERSHIP_NEWS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:KIELCE_EGIB_FULL_SCHEMA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:KIELCE_EGIB_FULL_SCHEMA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:KIELCE_EGIB_FULL_SCHEMA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:KIELCE_EGIB_FULL_SCHEMA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GUGIK_EGIB_SCHEMA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_EGIB_SCHEMA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_EGIB_SCHEMA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_EGIB_SCHEMA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GUGIK_EGIB_RADK_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_EGIB_RADK_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_EGIB_RADK_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_EGIB_RADK_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GUGIK_EGIB_RADK_STATION_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_EGIB_RADK_STATION_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_EGIB_RADK_STATION_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_EGIB_RADK_STATION_SAMPLE",
       "passed": true,
       "detail": null
     },
@@ -4316,6 +4557,46 @@
       "detail": null
     },
     {
+      "name": "format_readable:gugik_ownership_news.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_capabilities:kielce_egib_caps.xml",
+      "passed": true,
+      "detail": "2.0.0"
+    },
+    {
+      "name": "format_readable:kielce_egib_caps.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_capabilities:kielce_egib_full_caps.xml",
+      "passed": true,
+      "detail": "2.0.0"
+    },
+    {
+      "name": "format_readable:kielce_egib_full_caps.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_feature_schema:kielce_egib_schema.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:kielce_egib_schema.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:kielce_wfs_info.html",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "format_readable:pse_investments_home.html",
       "passed": true,
       "detail": null
@@ -4337,6 +4618,46 @@
     },
     {
       "name": "format_readable:tauron_pending_map.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_feature_schema:gugik_egib_schema.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:gugik_egib_schema.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_returned_count:gugik_radkowice_parcels_sample.gml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:gugik_radkowice_parcels_sample.gml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_returned_count:gugik_radkowice_station_sample.gml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:gugik_radkowice_station_sample.gml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_feature_schema:kielce_egib_full_schema.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:kielce_egib_full_schema.xml",
       "passed": true,
       "detail": null
     },

@@ -1,6 +1,6 @@
 {
   "schema_version": "research_catalog_v1",
-  "as_of": "2026-09-18",
+  "as_of": "2026-09-19",
   "scope": "STAGE_1_RESEARCH_ONLY",
   "source_of_truth": "data/catalog/source_notes.json + data/catalog/radkowice_source_notes.json when present; this file is generated",
   "classification_note": "REPORTED indicates attributed publication, not automatic truth or MEASURED telemetry. Community and model data remain separately classified.",
@@ -5547,7 +5547,7 @@
       "gis_available": "DISCOVERED_NOT_TESTED",
       "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
       "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
-      "authentication": "UNKNOWN — pełna treść nie została zweryfikowana.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
       "license": "UNKNOWN",
       "license_url": null,
       "commercial_use": "NOT_CLEARED",
@@ -5555,8 +5555,8 @@
       "scraping_required": "UNKNOWN",
       "data_quality_score": null,
       "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
-      "last_verified": "2026-09-18",
-      "last_successful_verification": null,
+      "last_verified": "2026-09-19",
+      "last_successful_verification": "2026-09-18",
       "source_date": null,
       "publication_date": null,
       "source_version": null,
@@ -5566,7 +5566,9 @@
       "current_future_scope": "SOURCE_DEPENDENT",
       "value_classification_default": "REPORTED",
       "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
-      "probe_ids": [],
+      "probe_ids": [
+        "GUGIK_OWNERSHIP_NEWS"
+      ],
       "related_urls": [],
       "source_id": "GUGIK_OWNERSHIP_GROUPS",
       "operator": "GUGiK",
@@ -5577,20 +5579,249 @@
       "data_format": [
         "HTML"
       ],
-      "verification_status": "DISCOVERED",
+      "verification_status": "CONTENT_REVIEWED",
       "reliability": "C",
       "key_fields": [
         "grupa rejestrowa działki — do weryfikacji"
       ],
       "potential_application": "Struktura własności powierzchni w buforze 1 km od stacji",
       "known_limitations": [
-        "Oficjalny komunikat znaleziony w wyszukiwaniu; pełne otwarcie strony zakończyło się timeoutem.",
-        "Brak zweryfikowanego endpointu i dostępu do kategorii w postaci wektorowej.",
-        "Nie ustalono mapowania grup na własność, pokrycia, aktualności ani warunków automatyzacji."
+        "Komunikat potwierdza zasilanie mapy danymi powiatowych WFS oraz różnice kompletności między powiatami.",
+        "Nie zweryfikowano samego endpointu mapy grup rejestrowych ani praw do komercyjnego wykorzystania.",
+        "Zbiorczy WFS EGiB deklaruje GRUPA_REJESTROWA, ale cztery odczytane działki koło Radkowic mają puste pole; próbka nie mierzy całego bufora."
       ],
       "priority": "P1",
-      "evidence": [],
-      "retrieval_date": []
+      "evidence": [
+        {
+          "source_id": "GUGIK_OWNERSHIP_NEWS",
+          "url": "https://www.geoportal.gov.pl/aktualnosci/nowa-usluga-mapa-wlasnosci-grupy-rejestrowe-dostepna-w-modulach-geoportal-krajowy-i-geodezja-i-kartografia-w-serwisie-www-geoportal-gov-pl/",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-18/gugik_ownership_news.html",
+          "sha256": "66439c6c023819ddd458cf09153ea944aa0ee604984504c2afdafe3cc5531867",
+          "bytes": 90353,
+          "retrieval_date": "2026-09-18T18:14:51.710807+00:00",
+          "manifest": "data/catalog/probe_results_land_ownership_2026-09-18.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-18T18:14:51.710807+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Próbki: Radkowice i Brzeziny, powiat kielecki",
+      "grid_voltage": [],
+      "api_available": "WFS 2.0.0",
+      "gis_available": "WFS_SCHEMA_VERIFIED",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "UNKNOWN",
+      "license_url": null,
+      "commercial_use": "NOT_CLEARED",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-19",
+      "last_successful_verification": "2026-09-19",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "KIELCE_WFS_INFO",
+        "KIELCE_EGIB_CAPS",
+        "KIELCE_EGIB_SCHEMA",
+        "KIELCE_EGIB_FULL_CAPS",
+        "KIELCE_EGIB_FULL_SCHEMA"
+      ],
+      "related_urls": [],
+      "source_id": "KIELCE_EGIB_OWNERSHIP_DISCOVERY",
+      "operator": "Powiat kielecki",
+      "source_name": "Powiat kielecki — schematy publicznych usług WFS",
+      "url": "https://geoportal.powiat.kielce.pl/map/geoportal/wfse.php",
+      "data_owner": "Starosta Kielecki",
+      "data_category": "land_ownership_discovery",
+      "data_format": [
+        "WFS",
+        "XML",
+        "GML"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "key_fields": [
+        "ID_DZIALKI",
+        "geometria",
+        "GRUPA_REJESTROWA — tylko usługa zbiorcza, puste w próbce"
+      ],
+      "potential_application": "Ocena dostępności własności gruntów w otoczeniu stacji",
+      "known_limitations": [
+        "Oba schematy działek zawierają identyfikatory, nazwy, datę i geometrię; nie deklarują grupy rejestrowej.",
+        "Brak pola w tych schematach nie oznacza braku informacji w EGiB lub innych usługach.",
+        "Portal zawiera ograniczenia kopiowania/publikacji; zakres praw do wykorzystania danych WFS pozostaje nierozstrzygnięty."
+      ],
+      "priority": "P1",
+      "evidence": [
+        {
+          "source_id": "KIELCE_WFS_INFO",
+          "url": "https://geoportal.powiat.kielce.pl/map/geoportal/wfs.php",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-18/kielce_wfs_info.html",
+          "sha256": "361eb18ff9f74335d86ab5e0636de2c63202cd6faf61b416e46da79176435596",
+          "bytes": 2682,
+          "retrieval_date": "2026-09-18T18:14:18.281463+00:00",
+          "manifest": "data/catalog/probe_results_land_ownership_2026-09-18.json"
+        },
+        {
+          "source_id": "KIELCE_EGIB_CAPS",
+          "url": "https://geoportal.powiat.kielce.pl/map/geoportal/wfs.php?SERVICE=WFS&REQUEST=GetCapabilities",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-18/kielce_egib_caps.xml",
+          "sha256": "180a23ef987ba705c24eb85fa16db4f3b8343c4c67a3b54c3dfde87221906890",
+          "bytes": 5953,
+          "retrieval_date": "2026-09-18T18:14:18.363976+00:00",
+          "manifest": "data/catalog/probe_results_land_ownership_2026-09-18.json"
+        },
+        {
+          "source_id": "KIELCE_EGIB_SCHEMA",
+          "url": "https://geoportal.powiat.kielce.pl/map/geoportal/wfs.php?SERVICE=WFS&VERSION=2.0.0&REQUEST=DescribeFeatureType&TYPENAMES=ewns:dzialki",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-18/kielce_egib_schema.xml",
+          "sha256": "e5606de7e6da3527b95371f05b27e0d236c15a4a4623621f764fa8a5c451ac9c",
+          "bytes": 1048,
+          "retrieval_date": "2026-09-18T18:14:18.443767+00:00",
+          "manifest": "data/catalog/probe_results_land_ownership_2026-09-18.json"
+        },
+        {
+          "source_id": "KIELCE_EGIB_FULL_CAPS",
+          "url": "https://geoportal.powiat.kielce.pl/map/geoportal/wfse.php?SERVICE=WFS&REQUEST=GetCapabilities",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-18/kielce_egib_full_caps.xml",
+          "sha256": "0947f2ac0c5fbc407bc468b2a612949cfd0956c54dd77797e158ccfdc6238b6a",
+          "bytes": 4773,
+          "retrieval_date": "2026-09-18T18:14:51.066511+00:00",
+          "manifest": "data/catalog/probe_results_land_ownership_2026-09-18.json"
+        },
+        {
+          "source_id": "KIELCE_EGIB_FULL_SCHEMA",
+          "url": "https://geoportal.powiat.kielce.pl/map/geoportal/wfse.php?SERVICE=WFS&VERSION=2.0.0&REQUEST=DescribeFeatureType&TYPENAMES=ewns:dzialki",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-19/kielce_egib_full_schema.xml",
+          "sha256": "e5606de7e6da3527b95371f05b27e0d236c15a4a4623621f764fa8a5c451ac9c",
+          "bytes": 1048,
+          "retrieval_date": "2026-09-19T04:59:30.351046+00:00",
+          "manifest": "data/catalog/probe_results_land_ownership_2026-09-19.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-18T18:14:18.281463+00:00",
+        "2026-09-18T18:14:18.363976+00:00",
+        "2026-09-18T18:14:18.443767+00:00",
+        "2026-09-18T18:14:51.066511+00:00",
+        "2026-09-19T04:59:30.351046+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Próbki: Radkowice i Brzeziny, powiat kielecki",
+      "grid_voltage": [],
+      "api_available": "WFS 2.0.0",
+      "gis_available": "WFS_SCHEMA_VERIFIED",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "UNKNOWN",
+      "license_url": null,
+      "commercial_use": "NOT_CLEARED",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-19",
+      "last_successful_verification": "2026-09-19",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "GUGIK_EGIB_SCHEMA",
+        "GUGIK_EGIB_RADK_SAMPLE",
+        "GUGIK_EGIB_RADK_STATION_SAMPLE"
+      ],
+      "related_urls": [],
+      "source_id": "GUGIK_EGIB_OWNERSHIP_PROBE",
+      "operator": "GUGiK",
+      "source_name": "GUGiK — próba grupy rejestrowej w zbiorczym WFS",
+      "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza",
+      "data_owner": "GUGiK / Starosta Kielecki",
+      "data_category": "land_ownership_discovery",
+      "data_format": [
+        "WFS",
+        "XML",
+        "GML"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "C",
+      "key_fields": [
+        "ID_DZIALKI",
+        "geometria",
+        "GRUPA_REJESTROWA — tylko usługa zbiorcza, puste w próbce"
+      ],
+      "potential_application": "Ocena dostępności własności gruntów w otoczeniu stacji",
+      "known_limitations": [
+        "Pole GRUPA_REJESTROWA jest opcjonalne. W obu próbkach puste.",
+        "Próbki prostokątne z COUNT=3, nie pełny bufor 1 km; brak podstaw do procentowego podziału własności.",
+        "Brak interpretacji grup rejestrowych i brak potwierdzenia warunków regularnego komercyjnego importu."
+      ],
+      "priority": "P1",
+      "evidence": [
+        {
+          "source_id": "GUGIK_EGIB_SCHEMA",
+          "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=DescribeFeatureType&TYPENAMES=ms:dzialki",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-19/gugik_egib_schema.xml",
+          "sha256": "12dbf6a4587f6874404d56b7c257b2a9856d150a3c48ded4d03ad2d69fb84182",
+          "bytes": 1596,
+          "retrieval_date": "2026-09-19T05:00:11.241775+00:00",
+          "manifest": "data/catalog/probe_results_land_ownership_2026-09-19.json"
+        },
+        {
+          "source_id": "GUGIK_EGIB_RADK_SAMPLE",
+          "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=3&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=50.78%2C20.51%2C50.795%2C20.535%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-19/gugik_radkowice_parcels_sample.gml",
+          "sha256": "e0622229ef79ae75bfe57d2e70a7df70ef7ea1f7a988cf0c245655758c764181",
+          "bytes": 12767,
+          "retrieval_date": "2026-09-19T05:00:48.830247+00:00",
+          "manifest": "data/catalog/probe_results_land_ownership_2026-09-19.json"
+        },
+        {
+          "source_id": "GUGIK_EGIB_RADK_STATION_SAMPLE",
+          "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=3&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=50.7877%2C20.5221%2C50.7882%2C20.5227%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-19/gugik_radkowice_station_sample.gml",
+          "sha256": "d4a2218225c4217328365dd90da656c6e4adf9f9dd85f6754ae6a41ca6863db3",
+          "bytes": 2701,
+          "retrieval_date": "2026-09-19T05:01:28.986980+00:00",
+          "manifest": "data/catalog/probe_results_land_ownership_2026-09-19.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-09-19T05:00:11.241775+00:00",
+        "2026-09-19T05:00:48.830247+00:00",
+        "2026-09-19T05:01:28.986980+00:00"
+      ]
     }
   ]
 }

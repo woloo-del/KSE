@@ -1053,10 +1053,12 @@
       "priority": "P1",
       "owner": "Codex",
       "depends_on": [],
-      "next_action": "Zweryfikować API/WMS/WFS mapy grup rejestrowych, schemat, licencję i pokrycie; zbadać próbkę dla jednej stacji przed implementacją udziałów.",
+      "next_action": "Sprawdzić inne źródła i zakres NEED-021. Dwa powiatowe schematy bez grupy; zbiorczy WFS ma pole, ale cztery próbki puste. Nie implementować procentów bez wejść i kontroli pokrycia.",
       "acceptance": "Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.",
       "evidence": [
-        "docs/25_land_ownership_discovery.md"
+        "docs/25_land_ownership_discovery.md",
+        "data/reference/land_ownership_probe_2026-09-19.json",
+        "tests/test_ownership_probe.py"
       ],
       "started_at": "2026-09-18"
     }

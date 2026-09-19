@@ -121,11 +121,16 @@ def validate() -> dict[str, Any]:
         try:
             if suffix == ".json":
                 load_json(path)
-            elif suffix == ".xml":
+            elif suffix in {".xml", ".gml"}:
                 root = ET.parse(path).getroot()
                 if root.tag == "osm":
                     check(f"osm_version:{path.name}", root.attrib.get("version") == "0.6")
                     check(f"osm_elements:{path.name}", any(e.tag in {"node", "way", "relation"} for e in root))
+                elif root.tag == "{http://www.w3.org/2001/XMLSchema}schema":
+                    check(f"wfs_feature_schema:{path.name}", bool(root.findall('.//{http://www.w3.org/2001/XMLSchema}complexType')))
+                elif root.tag == "{http://www.opengis.net/wfs/2.0}FeatureCollection":
+                    members = root.findall('{http://www.opengis.net/wfs/2.0}member')
+                    check(f"wfs_returned_count:{path.name}", root.get('numberReturned') == str(len(members)))
                 else:
                     check(f"wfs_capabilities:{path.name}", root.tag.endswith("WFS_Capabilities"), root.attrib.get("version"))
             elif suffix == ".pdf":

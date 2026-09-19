@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-18**. Źródła: **79**.
+Stan badania: **2026-09-19**. Źródła: **81**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -88,7 +88,9 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | TAURON_MAP_SCRIPT | [TAURON — interfejs i zastrzeżenia mapy](https://dostepnemoce.tauron-dystrybucja.pl/wp-content/plugins/tauron-maps/mapy.js?ver=1788435768) | CONTENT_REVIEWED | P0 | NOT_CLEARED |
 | TAURON_PENDING_MAP | [TAURON — regionalny wykaz obiektów planowanych](https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace) | CONTENT_REVIEWED | P0 | NOT_CLEARED |
 | TAURON_GPZ_LODZKIE | [TAURON — publikacja GPZ województwa łódzkiego](https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dostepne-moce/wnioski-wp-oczekujace/gpz-lodzkie) | CONTENT_REVIEWED | P0 | NOT_CLEARED |
-| GUGIK_OWNERSHIP_GROUPS | [Mapa własności — grupy rejestrowe](https://www.gov.pl/web/gugik/nowa-usluga-mapa-wlasnosci---grupy-rejestrowe-dostepna-w-modulach-geoportal-krajowy-i-geodezja-i-kartografia-w-serwisie-wwwgeoportalgovpl) | DISCOVERED | P1 | NOT_CLEARED |
+| GUGIK_OWNERSHIP_GROUPS | [Mapa własności — grupy rejestrowe](https://www.gov.pl/web/gugik/nowa-usluga-mapa-wlasnosci---grupy-rejestrowe-dostepna-w-modulach-geoportal-krajowy-i-geodezja-i-kartografia-w-serwisie-wwwgeoportalgovpl) | CONTENT_REVIEWED | P1 | NOT_CLEARED |
+| KIELCE_EGIB_OWNERSHIP_DISCOVERY | [Powiat kielecki — schematy publicznych usług WFS](https://geoportal.powiat.kielce.pl/map/geoportal/wfse.php) | CONTENT_REVIEWED | P1 | NOT_CLEARED |
+| GUGIK_EGIB_OWNERSHIP_PROBE | [GUGiK — próba grupy rejestrowej w zbiorczym WFS](https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza) | SAMPLE_VERIFIED | P1 | NOT_CLEARED |
 
 ## Karty źródeł
 
@@ -2937,7 +2939,7 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **GIS:** DISCOVERED_NOT_TESTED
 - **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
 - **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
-- **Uwierzytelnienie:** UNKNOWN — pełna treść nie została zweryfikowana.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
 - **Licencja:** UNKNOWN
 - **Użycie komercyjne:** NOT_CLEARED
 - **Autorytet źródła:** C
@@ -2945,14 +2947,93 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Scraping:** UNKNOWN
 - **Pola:** grupa rejestrowa działki — do weryfikacji
 - **Zastosowanie:** Struktura własności powierzchni w buforze 1 km od stacji
-- **Ograniczenia:** Oficjalny komunikat znaleziony w wyszukiwaniu; pełne otwarcie strony zakończyło się timeoutem.; Brak zweryfikowanego endpointu i dostępu do kategorii w postaci wektorowej.; Nie ustalono mapowania grup na własność, pokrycia, aktualności ani warunków automatyzacji.
+- **Ograniczenia:** Komunikat potwierdza zasilanie mapy danymi powiatowych WFS oraz różnice kompletności między powiatami.; Nie zweryfikowano samego endpointu mapy grup rejestrowych ani praw do komercyjnego wykorzystania.; Zbiorczy WFS EGiB deklaruje GRUPA_REJESTROWA, ale cztery odczytane działki koło Radkowic mają puste pole; próbka nie mierzy całego bufora.
 - **Data stanu źródła:** UNKNOWN / nie dotyczy
 - **Publikacja:** UNKNOWN / nie dotyczy
 - **Wersja:** UNKNOWN / nie dotyczy
 - **Strona źródła:** UNKNOWN / nie dotyczy
-- **Sprawdzono:** 2026-09-18
-- **Udany odczyt:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-19
+- **Udany odczyt:** 2026-09-18
 - **Klasyfikacja wejścia:** REPORTED
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba GUGIK_OWNERSHIP_NEWS:** HTTP 200; 2026-09-18T18:14:51.710807+00:00; `data/catalog/probe_results_land_ownership_2026-09-18.json`; próbka `data/raw/research/2026-09-18/gugik_ownership_news.html`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### KIELCE_EGIB_OWNERSHIP_DISCOVERY — Powiat kielecki — schematy publicznych usług WFS
+
+[Źródło](https://geoportal.powiat.kielce.pl/map/geoportal/wfse.php)
+
+- **Operator:** Powiat kielecki
+- **Właściciel:** Starosta Kielecki
+- **Kraj:** PL
+- **Kategoria:** land_ownership_discovery
+- **Napięcie:** 
+- **Zasięg:** Próbki: Radkowice i Brzeziny, powiat kielecki
+- **Format:** WFS; XML; GML
+- **API:** WFS 2.0.0
+- **GIS:** WFS_SCHEMA_VERIFIED
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO
+- **Pola:** ID_DZIALKI; geometria; GRUPA_REJESTROWA — tylko usługa zbiorcza, puste w próbce
+- **Zastosowanie:** Ocena dostępności własności gruntów w otoczeniu stacji
+- **Ograniczenia:** Oba schematy działek zawierają identyfikatory, nazwy, datę i geometrię; nie deklarują grupy rejestrowej.; Brak pola w tych schematach nie oznacza braku informacji w EGiB lub innych usługach.; Portal zawiera ograniczenia kopiowania/publikacji; zakres praw do wykorzystania danych WFS pozostaje nierozstrzygnięty.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-19
+- **Udany odczyt:** 2026-09-19
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba KIELCE_WFS_INFO:** HTTP 200; 2026-09-18T18:14:18.281463+00:00; `data/catalog/probe_results_land_ownership_2026-09-18.json`; próbka `data/raw/research/2026-09-18/kielce_wfs_info.html`.
+- **Próba KIELCE_EGIB_CAPS:** HTTP 200; 2026-09-18T18:14:18.363976+00:00; `data/catalog/probe_results_land_ownership_2026-09-18.json`; próbka `data/raw/research/2026-09-18/kielce_egib_caps.xml`.
+- **Próba KIELCE_EGIB_SCHEMA:** HTTP 200; 2026-09-18T18:14:18.443767+00:00; `data/catalog/probe_results_land_ownership_2026-09-18.json`; próbka `data/raw/research/2026-09-18/kielce_egib_schema.xml`.
+- **Próba KIELCE_EGIB_FULL_CAPS:** HTTP 200; 2026-09-18T18:14:51.066511+00:00; `data/catalog/probe_results_land_ownership_2026-09-18.json`; próbka `data/raw/research/2026-09-18/kielce_egib_full_caps.xml`.
+- **Próba KIELCE_EGIB_FULL_SCHEMA:** HTTP 200; 2026-09-19T04:59:30.351046+00:00; `data/catalog/probe_results_land_ownership_2026-09-19.json`; próbka `data/raw/research/2026-09-19/kielce_egib_full_schema.xml`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### GUGIK_EGIB_OWNERSHIP_PROBE — GUGiK — próba grupy rejestrowej w zbiorczym WFS
+
+[Źródło](https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza)
+
+- **Operator:** GUGiK
+- **Właściciel:** GUGiK / Starosta Kielecki
+- **Kraj:** PL
+- **Kategoria:** land_ownership_discovery
+- **Napięcie:** 
+- **Zasięg:** Próbki: Radkowice i Brzeziny, powiat kielecki
+- **Format:** WFS; XML; GML
+- **API:** WFS 2.0.0
+- **GIS:** WFS_SCHEMA_VERIFIED
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO
+- **Pola:** ID_DZIALKI; geometria; GRUPA_REJESTROWA — tylko usługa zbiorcza, puste w próbce
+- **Zastosowanie:** Ocena dostępności własności gruntów w otoczeniu stacji
+- **Ograniczenia:** Pole GRUPA_REJESTROWA jest opcjonalne. W obu próbkach puste.; Próbki prostokątne z COUNT=3, nie pełny bufor 1 km; brak podstaw do procentowego podziału własności.; Brak interpretacji grup rejestrowych i brak potwierdzenia warunków regularnego komercyjnego importu.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-19
+- **Udany odczyt:** 2026-09-19
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba GUGIK_EGIB_SCHEMA:** HTTP 200; 2026-09-19T05:00:11.241775+00:00; `data/catalog/probe_results_land_ownership_2026-09-19.json`; próbka `data/raw/research/2026-09-19/gugik_egib_schema.xml`.
+- **Próba GUGIK_EGIB_RADK_SAMPLE:** HTTP 200; 2026-09-19T05:00:48.830247+00:00; `data/catalog/probe_results_land_ownership_2026-09-19.json`; próbka `data/raw/research/2026-09-19/gugik_radkowice_parcels_sample.gml`.
+- **Próba GUGIK_EGIB_RADK_STATION_SAMPLE:** HTTP 200; 2026-09-19T05:01:28.986980+00:00; `data/catalog/probe_results_land_ownership_2026-09-19.json`; próbka `data/raw/research/2026-09-19/gugik_radkowice_station_sample.gml`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

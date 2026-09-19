@@ -1,0 +1,38 @@
+[
+  {
+    "source_id": "KIELCE_EGIB_FULL_SCHEMA",
+    "url": "https://geoportal.powiat.kielce.pl/map/geoportal/wfse.php?SERVICE=WFS&VERSION=2.0.0&REQUEST=DescribeFeatureType&TYPENAMES=ewns:dzialki",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-09-19/kielce_egib_full_schema.xml",
+    "sha256": "e5606de7e6da3527b95371f05b27e0d236c15a4a4623621f764fa8a5c451ac9c",
+    "bytes": 1048,
+    "retrieval_date": "2026-09-19T04:59:30.351046+00:00"
+  },
+  {
+    "source_id": "GUGIK_EGIB_SCHEMA",
+    "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=DescribeFeatureType&TYPENAMES=ms:dzialki",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-09-19/gugik_egib_schema.xml",
+    "sha256": "12dbf6a4587f6874404d56b7c257b2a9856d150a3c48ded4d03ad2d69fb84182",
+    "bytes": 1596,
+    "retrieval_date": "2026-09-19T05:00:11.241775+00:00"
+  },
+  {
+    "source_id": "GUGIK_EGIB_RADK_SAMPLE",
+    "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=3&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=50.78%2C20.51%2C50.795%2C20.535%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-09-19/gugik_radkowice_parcels_sample.gml",
+    "sha256": "e0622229ef79ae75bfe57d2e70a7df70ef7ea1f7a988cf0c245655758c764181",
+    "bytes": 12767,
+    "retrieval_date": "2026-09-19T05:00:48.830247+00:00"
+  },
+  {
+    "source_id": "GUGIK_EGIB_RADK_STATION_SAMPLE",
+    "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=3&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=50.7877%2C20.5221%2C50.7882%2C20.5227%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-09-19/gugik_radkowice_station_sample.gml",
+    "sha256": "d4a2218225c4217328365dd90da656c6e4adf9f9dd85f6754ae6a41ca6863db3",
+    "bytes": 2701,
+    "retrieval_date": "2026-09-19T05:01:28.986980+00:00"
+  }
+]

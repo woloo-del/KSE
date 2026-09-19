@@ -281,6 +281,20 @@
       "basis": "docs/22_tauron_dictionary_discovery.md; TAURON_MAP_SCRIPT — getLegalHtml punkt 9",
       "updated_at": "2026-09-18",
       "received_evidence": null
+    },
+    {
+      "id": "NEED-021",
+      "priority": "P1",
+      "title": "Kategorie własności działek w otoczeniu SE Radkowice",
+      "status": "Do sprawdzenia",
+      "requested_scope": "Oficjalny eksport identyfikator działki + grupa rejestrowa + data stanu dla otoczenia stacji, najlepiej z geometrią i opisem znaczenia kategorii oraz warunkami wykorzystania; bez nazwisk, PESEL i adresów właścicieli.",
+      "unlocks": "Wiarygodny podział powierzchni bufora 1 km według kategorii własności.",
+      "next_action": "Użytkownik może dostarczyć posiadany eksport lub informację o usłudze powiatu z wypełnioną grupą rejestrową. Codex sprawdzi dalsze źródła; nie wysłano wiadomości w imieniu użytkownika.",
+      "without_it": "Zachować brak danych; nie przypisywać działek do prywatnych ani nie generować procentów.",
+      "owner": "Codex — źródła; użytkownik — pomoc opcjonalna",
+      "basis": "docs/25_land_ownership_discovery.md; schematy WFS i cztery puste wartości w ograniczonych próbkach",
+      "updated_at": "2026-09-19",
+      "received_evidence": null
     }
   ]
 }
