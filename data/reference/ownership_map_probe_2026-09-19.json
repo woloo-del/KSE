@@ -1,0 +1,42 @@
+{
+  "method_version": "ownership_map_completeness_v1",
+  "source": {
+    "source_id": "GUGIK_OWNERSHIP_MAP_COUNTY_HTML",
+    "url": "https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci?SERVICE=WMS&VERSION=1.3.0&CRS=EPSG%3A4326&BBOX=50.78698%2C20.52138%2C50.78898%2C20.52338&WIDTH=256&HEIGHT=256&STYLES=&REQUEST=GetFeatureInfo&LAYERS=dzialki_stats_pow_polygon&QUERY_LAYERS=dzialki_stats_pow_polygon&INFO_FORMAT=text%2Fhtml&FORMAT=image%2Fpng&I=128&J=128&FEATURE_COUNT=3",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-09-19/ownership_map_county_html.html",
+    "sha256": "eb9f7f1841f2ddccbd264c5a24f7a94b905ebd0c5bf3a436a8e3374efdccdffb",
+    "bytes": 13134,
+    "retrieval_date": "2026-09-19T05:20:33.106000+00:00"
+  },
+  "observation": {
+    "classification": "REPORTED",
+    "scope": "COUNTY_SERVICE_SNAPSHOT_NOT_STATION_BUFFER",
+    "teryt": "2604",
+    "county_name": "kielecki",
+    "parcel_count": 264634,
+    "missing_group_count": 264634,
+    "group_counts": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0
+    },
+    "duplicate_count": 0,
+    "source_last_subset_retrieval_label": "17.09.2026, 00:07",
+    "ownership_area_percent": null,
+    "availability": "NO_GROUP_VALUES_IN_SNAPSHOT"
+  }
+}

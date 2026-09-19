@@ -880,6 +880,54 @@
         "GUGIK_EGIB_RADK_SAMPLE",
         "GUGIK_EGIB_RADK_STATION_SAMPLE"
       ]
+    },
+    {
+      "source_id": "GUGIK_OWNERSHIP_MAP",
+      "operator": "GUGiK",
+      "source_name": "GUGiK — WMS Mapa własności i kompletność powiatowa",
+      "url": "https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci",
+      "data_owner": "GUGiK / Starosta Kielecki",
+      "country": "PL",
+      "data_category": "land_ownership_discovery",
+      "grid_voltage": [],
+      "geographical_scope": "Polska; zweryfikowana próbka powiat kielecki / Radkowice",
+      "data_format": [
+        "WMS",
+        "XML",
+        "HTML",
+        "JSON"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "last_verified": "2026-09-19",
+      "last_successful_verification": "2026-09-19",
+      "api_available": "WMS 1.3.0",
+      "gis_available": "WMS_SAMPLE_VERIFIED",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "license": "UNKNOWN",
+      "commercial_use": "NOT_CLEARED",
+      "reliability": "C",
+      "key_fields": [
+        "grupa rejestrowa",
+        "identyfikator działki",
+        "czas pozyskania",
+        "statystyki powiatowe"
+      ],
+      "potential_application": "Ocena dostępności własności gruntów w otoczeniu stacji",
+      "known_limitations": [
+        "Stan usługi, nie pełny stan EGiB: powiat kielecki 264634 działki bez grupy; aktualizacja ostatniego podzbioru 17.09.2026 00:07.",
+        "GetFeatureInfo text/plain bez atrybutów, HTML zawiera wartości; GetMap application/json zwraca siatkę UTFGrid z pustym data, nie geometrię działek.",
+        "Fees NONE i AccessConstraints NONE w capabilities nie rozstrzygają pełnych praw komercyjnych. Statystyki liczbowe powiatu nie są udziałami powierzchni bufora."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "GUGIK_OWNERSHIP_MAP_CAPS",
+        "GUGIK_OWNERSHIP_MAP_PARCEL",
+        "GUGIK_OWNERSHIP_MAP_COUNTY",
+        "GUGIK_OWNERSHIP_MAP_PARCEL_HTML",
+        "GUGIK_OWNERSHIP_MAP_COUNTY_HTML",
+        "GUGIK_OWNERSHIP_MAP_PARCEL_VECTOR"
+      ]
     }
   ]
 }

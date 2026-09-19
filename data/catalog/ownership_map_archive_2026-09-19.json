@@ -1,0 +1,36 @@
+{
+  "archive_path": "data/archives/ownership_map_discovery_2026-09-19.zip",
+  "archive_sha256": "15eb0efe9601147dea5d82fd1a462a77904c0af34ad45ac73fdd52400475e524",
+  "files": [
+    {
+      "path": "data/raw/research/2026-09-19/ownership_map_capabilities.xml",
+      "sha256": "0aaf027f977a3234cbf311cd2e32233fe8c54378433a89e178890efc482cf152",
+      "bytes": 13951
+    },
+    {
+      "path": "data/raw/research/2026-09-19/ownership_map_parcel_info.txt",
+      "sha256": "458226feafebc812657688c33b0888295d825db9cd4cca0a8df67582e875ef67",
+      "bytes": 66
+    },
+    {
+      "path": "data/raw/research/2026-09-19/ownership_map_county_info.txt",
+      "sha256": "0587c5629c7004e4a59e518b4d283b5358b36b18dde518e3d2f7bd514211620b",
+      "bytes": 76
+    },
+    {
+      "path": "data/raw/research/2026-09-19/ownership_map_parcel_html.html",
+      "sha256": "41c55f27b45c752b50a5967ffdccfc64e08583ffb82c4fe51ca91b2800539c6c",
+      "bytes": 13762
+    },
+    {
+      "path": "data/raw/research/2026-09-19/ownership_map_county_html.html",
+      "sha256": "eb9f7f1841f2ddccbd264c5a24f7a94b905ebd0c5bf3a436a8e3374efdccdffb",
+      "bytes": 13134
+    },
+    {
+      "path": "data/raw/research/2026-09-19/ownership_map_parcel_vector.txt",
+      "sha256": "c9e9a8ecab18d69f87bc76855e66ddaf0f5e8ac3007d278558df3dacfb55df64",
+      "bytes": 4381
+    }
+  ]
+}

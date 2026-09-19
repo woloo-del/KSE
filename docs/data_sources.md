@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-19**. Źródła: **81**.
+Stan badania: **2026-09-19**. Źródła: **82**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -91,6 +91,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | GUGIK_OWNERSHIP_GROUPS | [Mapa własności — grupy rejestrowe](https://www.gov.pl/web/gugik/nowa-usluga-mapa-wlasnosci---grupy-rejestrowe-dostepna-w-modulach-geoportal-krajowy-i-geodezja-i-kartografia-w-serwisie-wwwgeoportalgovpl) | CONTENT_REVIEWED | P1 | NOT_CLEARED |
 | KIELCE_EGIB_OWNERSHIP_DISCOVERY | [Powiat kielecki — schematy publicznych usług WFS](https://geoportal.powiat.kielce.pl/map/geoportal/wfse.php) | CONTENT_REVIEWED | P1 | NOT_CLEARED |
 | GUGIK_EGIB_OWNERSHIP_PROBE | [GUGiK — próba grupy rejestrowej w zbiorczym WFS](https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza) | SAMPLE_VERIFIED | P1 | NOT_CLEARED |
+| GUGIK_OWNERSHIP_MAP | [GUGiK — WMS Mapa własności i kompletność powiatowa](https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci) | SAMPLE_VERIFIED | P1 | NOT_CLEARED |
 
 ## Karty źródeł
 
@@ -3035,5 +3036,46 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Próba GUGIK_EGIB_SCHEMA:** HTTP 200; 2026-09-19T05:00:11.241775+00:00; `data/catalog/probe_results_land_ownership_2026-09-19.json`; próbka `data/raw/research/2026-09-19/gugik_egib_schema.xml`.
 - **Próba GUGIK_EGIB_RADK_SAMPLE:** HTTP 200; 2026-09-19T05:00:48.830247+00:00; `data/catalog/probe_results_land_ownership_2026-09-19.json`; próbka `data/raw/research/2026-09-19/gugik_radkowice_parcels_sample.gml`.
 - **Próba GUGIK_EGIB_RADK_STATION_SAMPLE:** HTTP 200; 2026-09-19T05:01:28.986980+00:00; `data/catalog/probe_results_land_ownership_2026-09-19.json`; próbka `data/raw/research/2026-09-19/gugik_radkowice_station_sample.gml`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### GUGIK_OWNERSHIP_MAP — GUGiK — WMS Mapa własności i kompletność powiatowa
+
+[Źródło](https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci)
+
+- **Operator:** GUGiK
+- **Właściciel:** GUGiK / Starosta Kielecki
+- **Kraj:** PL
+- **Kategoria:** land_ownership_discovery
+- **Napięcie:** 
+- **Zasięg:** Polska; zweryfikowana próbka powiat kielecki / Radkowice
+- **Format:** WMS; XML; HTML; JSON
+- **API:** WMS 1.3.0
+- **GIS:** WMS_SAMPLE_VERIFIED
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO
+- **Pola:** grupa rejestrowa; identyfikator działki; czas pozyskania; statystyki powiatowe
+- **Zastosowanie:** Ocena dostępności własności gruntów w otoczeniu stacji
+- **Ograniczenia:** Stan usługi, nie pełny stan EGiB: powiat kielecki 264634 działki bez grupy; aktualizacja ostatniego podzbioru 17.09.2026 00:07.; GetFeatureInfo text/plain bez atrybutów, HTML zawiera wartości; GetMap application/json zwraca siatkę UTFGrid z pustym data, nie geometrię działek.; Fees NONE i AccessConstraints NONE w capabilities nie rozstrzygają pełnych praw komercyjnych. Statystyki liczbowe powiatu nie są udziałami powierzchni bufora.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-19
+- **Udany odczyt:** 2026-09-19
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba GUGIK_OWNERSHIP_MAP_CAPS:** HTTP 200; 2026-09-19T05:16:48.679521+00:00; `data/catalog/probe_results_ownership_map_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_map_capabilities.xml`.
+- **Próba GUGIK_OWNERSHIP_MAP_PARCEL:** HTTP 200; 2026-09-19T05:20:06.249967+00:00; `data/catalog/probe_results_ownership_map_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_map_parcel_info.txt`.
+- **Próba GUGIK_OWNERSHIP_MAP_COUNTY:** HTTP 200; 2026-09-19T05:20:07.040822+00:00; `data/catalog/probe_results_ownership_map_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_map_county_info.txt`.
+- **Próba GUGIK_OWNERSHIP_MAP_PARCEL_HTML:** HTTP 200; 2026-09-19T05:20:32.558262+00:00; `data/catalog/probe_results_ownership_map_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_map_parcel_html.html`.
+- **Próba GUGIK_OWNERSHIP_MAP_COUNTY_HTML:** HTTP 200; 2026-09-19T05:20:33.106000+00:00; `data/catalog/probe_results_ownership_map_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_map_county_html.html`.
+- **Próba GUGIK_OWNERSHIP_MAP_PARCEL_VECTOR:** HTTP 200; 2026-09-19T05:20:33.671004+00:00; `data/catalog/probe_results_ownership_map_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_map_parcel_vector.txt`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

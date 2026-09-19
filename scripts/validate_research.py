@@ -131,6 +131,8 @@ def validate() -> dict[str, Any]:
                 elif root.tag == "{http://www.opengis.net/wfs/2.0}FeatureCollection":
                     members = root.findall('{http://www.opengis.net/wfs/2.0}member')
                     check(f"wfs_returned_count:{path.name}", root.get('numberReturned') == str(len(members)))
+                elif root.tag == "{http://www.opengis.net/wms}WMS_Capabilities":
+                    check(f"wms_capabilities:{path.name}", root.get('version') == '1.3.0' and bool(root.findall('.//{http://www.opengis.net/wms}Layer')))
                 else:
                     check(f"wfs_capabilities:{path.name}", root.tag.endswith("WFS_Capabilities"), root.attrib.get("version"))
             elif suffix == ".pdf":
