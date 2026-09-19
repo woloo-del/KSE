@@ -295,6 +295,20 @@
       "basis": "docs/25_land_ownership_discovery.md; Mapa własności GUGiK: 264634 działki w powiecie kieleckim bez grupy, ostatni podzbiór 17.09.2026 00:07.",
       "updated_at": "2026-09-19",
       "received_evidence": null
+    },
+    {
+      "id": "NEED-022",
+      "priority": "P1",
+      "title": "Spójny datowany eksport działek i grup rejestrowych",
+      "status": "Do sprawdzenia",
+      "requested_scope": "Publiczna usługa z wersją migawki lub datowany plik geometrii działek i grup rejestrowych dla obszaru pilota; identyfikator działki, CRS, data stanu, zakres pokrycia i zasady ponownego wykorzystania. Bez danych osobowych właścicieli.",
+      "unlocks": "Odtwarzalny import pełnego bufora bez ryzyka zmian pomiędzy stronami odpowiedzi.",
+      "next_action": "Codex sprawdzi udostępniane pliki i usługi. Użytkownik może opcjonalnie wskazać posiadany eksport lub źródło gwarantujące wspólną wersję danych. Nie wysłano wiadomości.",
+      "without_it": "Można rejestrować strony i ich ograniczenia, ale nie przedstawiać niespójnej lub niekompletnej sesji jako kompletnego raportu powierzchni.",
+      "owner": "Codex — research; użytkownik — pomoc opcjonalna",
+      "basis": "Capabilities GUGiK 19.09.2026: PagingIsTransactionSafe FALSE; dwie strony z numberMatched unknown. docs/26_land_ownership_area_method.md.",
+      "updated_at": "2026-09-19",
+      "received_evidence": null
     }
   ]
 }

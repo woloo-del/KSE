@@ -3025,7 +3025,7 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Scraping:** NO
 - **Pola:** ID_DZIALKI; geometria; GRUPA_REJESTROWA — uzupełniona w próbce Grudziądza, pusta w otoczeniu Radkowic
 - **Zastosowanie:** Ocena dostępności własności gruntów w otoczeniu stacji
-- **Ograniczenia:** Pole GRUPA_REJESTROWA opcjonalne: cztery rekordy z otoczenia Radkowic puste; dwa rekordy z Grudziądza z grupami 9 i 7. DATA puste we wszystkich tych próbkach.; Próbki prostokątne z COUNT=3, nie pełny bufor 1 km; brak podstaw do procentowego podziału własności. Zgodność WMS/WFS dla jednego ID nie jest niezależnym potwierdzeniem.; Brak interpretacji grup rejestrowych i brak potwierdzenia warunków regularnego komercyjnego importu.
+- **Ograniczenia:** Pole GRUPA_REJESTROWA opcjonalne: cztery rekordy z otoczenia Radkowic puste; dwa rekordy z Grudziądza z grupami 9 i 7. DATA puste we wszystkich tych próbkach.; Próbki prostokątne z COUNT=3, nie pełny bufor 1 km; brak podstaw do procentowego podziału własności. Zgodność WMS/WFS dla jednego ID nie jest niezależnym potwierdzeniem.; Brak interpretacji grup rejestrowych i brak potwierdzenia warunków regularnego komercyjnego importu.; Paginacja potwierdzona na 2 stronach po 1 działce; numberMatched unknown. Capabilities: ImplementsResultPaging TRUE, PagingIsTransactionSafe FALSE, CountDefault 1000. Koniec stron nie dowodzi spójnego snapshotu.
 - **Data stanu źródła:** UNKNOWN / nie dotyczy
 - **Publikacja:** UNKNOWN / nie dotyczy
 - **Wersja:** UNKNOWN / nie dotyczy
@@ -3038,6 +3038,9 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Próba GUGIK_EGIB_RADK_SAMPLE:** HTTP 200; 2026-09-19T05:00:48.830247+00:00; `data/catalog/probe_results_land_ownership_2026-09-19.json`; próbka `data/raw/research/2026-09-19/gugik_radkowice_parcels_sample.gml`.
 - **Próba GUGIK_EGIB_RADK_STATION_SAMPLE:** HTTP 200; 2026-09-19T05:01:28.986980+00:00; `data/catalog/probe_results_land_ownership_2026-09-19.json`; próbka `data/raw/research/2026-09-19/gugik_radkowice_station_sample.gml`.
 - **Próba GUGIK_OWNERSHIP_GRUDZIADZ_WFS:** HTTP 200; 2026-09-19T05:30:54.546684+00:00; `data/catalog/probe_results_ownership_comparison_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_grudziadz_wfs.gml`.
+- **Próba GUGIK_OWNERSHIP_PAGING_CAPS:** HTTP 200; 2026-09-19T10:39:51.250945+00:00; `data/catalog/probe_results_ownership_paging_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_paging_caps.xml`.
+- **Próba GUGIK_OWNERSHIP_PAGING_PAGE_0:** HTTP 200; 2026-09-19T10:39:55.133171+00:00; `data/catalog/probe_results_ownership_paging_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_paging_page_0.xml`.
+- **Próba GUGIK_OWNERSHIP_PAGING_PAGE_1:** HTTP 200; 2026-09-19T10:39:58.634922+00:00; `data/catalog/probe_results_ownership_paging_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_paging_page_1.xml`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
 

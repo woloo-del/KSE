@@ -1053,7 +1053,7 @@
       "priority": "P1",
       "owner": "Codex",
       "depends_on": [],
-      "next_action": "KSE-056 łączy normalizację, transformację i kontrolę pojedynczej odpowiedzi. Pozyskać pełny zakres zweryfikowanej stacji, ustalić zasady użycia i obsłużyć strony bez utraty rekordów. Próbka Grudziądza zablokowana jako zbyt mała. Radkowice NEED-021.",
+      "next_action": "KSE-057 sprawdza łańcuch stron. GUGiK nie gwarantuje spójnej migawki, a próbka ma nieznaną liczbę całkowitą. Priorytet: datowany eksport lub wersjonowana usługa (NEED-022), następnie pełny bufor potwierdzonej stacji. Radkowice NEED-021.",
       "acceptance": "Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.",
       "evidence": [
         "docs/25_land_ownership_discovery.md",
@@ -1064,7 +1064,8 @@
         "data/reference/ownership_comparison_2026-09-19.json",
         "tests/test_ownership_normalization.py",
         "docs/26_land_ownership_area_method.md",
-        "data/reference/ownership_sample_readiness_2026-09-19.json"
+        "data/reference/ownership_sample_readiness_2026-09-19.json",
+        "data/reference/ownership_paging_audit_2026-09-19.json"
       ],
       "started_at": "2026-09-18"
     },
@@ -1103,6 +1104,26 @@
         "connectors/gis/ownership_snapshot.py",
         "tests/test_ownership_snapshot.py",
         "data/reference/ownership_sample_readiness_2026-09-19.json"
+      ],
+      "started_at": "2026-09-19",
+      "completed_at": "2026-09-19"
+    },
+    {
+      "id": "KSE-057",
+      "title": "Kontrola łańcucha stron WFS i ograniczone pobieranie",
+      "stage": "GIS",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-056"
+      ],
+      "next_action": "Uzyskać wersjonowany eksport lub gwarancję spójnej migawki; nie utożsamiać końca stron z gotowością raportu stacji.",
+      "acceptance": "Zgodność zapytań i offsetów, hashe, brak duplikatów, kontrola liczników i limitów, odtwarzalna próba rzeczywista oraz jawne ograniczenie transakcyjności.",
+      "evidence": [
+        "connectors/gis/ownership_paging.py",
+        "tests/test_ownership_paging.py",
+        "data/reference/ownership_paging_audit_2026-09-19.json"
       ],
       "started_at": "2026-09-19",
       "completed_at": "2026-09-19"

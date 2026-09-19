@@ -5758,7 +5758,10 @@
         "GUGIK_EGIB_SCHEMA",
         "GUGIK_EGIB_RADK_SAMPLE",
         "GUGIK_EGIB_RADK_STATION_SAMPLE",
-        "GUGIK_OWNERSHIP_GRUDZIADZ_WFS"
+        "GUGIK_OWNERSHIP_GRUDZIADZ_WFS",
+        "GUGIK_OWNERSHIP_PAGING_CAPS",
+        "GUGIK_OWNERSHIP_PAGING_PAGE_0",
+        "GUGIK_OWNERSHIP_PAGING_PAGE_1"
       ],
       "related_urls": [],
       "source_id": "GUGIK_EGIB_OWNERSHIP_PROBE",
@@ -5783,7 +5786,8 @@
       "known_limitations": [
         "Pole GRUPA_REJESTROWA opcjonalne: cztery rekordy z otoczenia Radkowic puste; dwa rekordy z Grudziądza z grupami 9 i 7. DATA puste we wszystkich tych próbkach.",
         "Próbki prostokątne z COUNT=3, nie pełny bufor 1 km; brak podstaw do procentowego podziału własności. Zgodność WMS/WFS dla jednego ID nie jest niezależnym potwierdzeniem.",
-        "Brak interpretacji grup rejestrowych i brak potwierdzenia warunków regularnego komercyjnego importu."
+        "Brak interpretacji grup rejestrowych i brak potwierdzenia warunków regularnego komercyjnego importu.",
+        "Paginacja potwierdzona na 2 stronach po 1 działce; numberMatched unknown. Capabilities: ImplementsResultPaging TRUE, PagingIsTransactionSafe FALSE, CountDefault 1000. Koniec stron nie dowodzi spójnego snapshotu."
       ],
       "priority": "P1",
       "evidence": [
@@ -5826,13 +5830,46 @@
           "bytes": 3697,
           "retrieval_date": "2026-09-19T05:30:54.546684+00:00",
           "manifest": "data/catalog/probe_results_ownership_comparison_2026-09-19.json"
+        },
+        {
+          "source_id": "GUGIK_OWNERSHIP_PAGING_CAPS",
+          "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-19/ownership_paging_caps.xml",
+          "sha256": "6609c18f6e3a268e383a9180037bd8bd8bfcf6ae190cae3be6f87e57a6c3b08c",
+          "bytes": 17111,
+          "retrieval_date": "2026-09-19T10:39:51.250945+00:00",
+          "manifest": "data/catalog/probe_results_ownership_paging_2026-09-19.json"
+        },
+        {
+          "source_id": "GUGIK_OWNERSHIP_PAGING_PAGE_0",
+          "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=1&STARTINDEX=0&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=53.47995%2C18.75995%2C53.48005%2C18.76005%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-19/ownership_paging_page_0.xml",
+          "sha256": "536b52fc1f465435128045667bc3a5145f4d79b0e11f5c4d67972b18c2f15051",
+          "bytes": 2723,
+          "retrieval_date": "2026-09-19T10:39:55.133171+00:00",
+          "manifest": "data/catalog/probe_results_ownership_paging_2026-09-19.json"
+        },
+        {
+          "source_id": "GUGIK_OWNERSHIP_PAGING_PAGE_1",
+          "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=1&STARTINDEX=1&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=53.47995%2C18.75995%2C53.48005%2C18.76005%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-09-19/ownership_paging_page_1.xml",
+          "sha256": "5fe11db83c1bb658a77ec2bcb947bc4c1e8d10a3026d542a7b9a69fa59a5e54b",
+          "bytes": 2689,
+          "retrieval_date": "2026-09-19T10:39:58.634922+00:00",
+          "manifest": "data/catalog/probe_results_ownership_paging_2026-09-19.json"
         }
       ],
       "retrieval_date": [
         "2026-09-19T05:00:11.241775+00:00",
         "2026-09-19T05:00:48.830247+00:00",
         "2026-09-19T05:01:28.986980+00:00",
-        "2026-09-19T05:30:54.546684+00:00"
+        "2026-09-19T05:30:54.546684+00:00",
+        "2026-09-19T10:39:51.250945+00:00",
+        "2026-09-19T10:39:55.133171+00:00",
+        "2026-09-19T10:39:58.634922+00:00"
       ]
     },
     {

@@ -14,7 +14,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
-- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). KSE-056 łączy normalizację, transformację i kontrolę pojedynczej odpowiedzi. Pozyskać pełny zakres zweryfikowanej stacji, ustalić zasady użycia i obsłużyć strony bez utraty rekordów. Próbka Grudziądza zablokowana jako zbyt mała. Radkowice NEED-021.
+- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). KSE-057 sprawdza łańcuch stron. GUGiK nie gwarantuje spójnej migawki, a próbka ma nieznaną liczbę całkowitą. Priorytet: datowany eksport lub wersjonowana usługa (NEED-022), następnie pełny bufor potwierdzonej stacji. Radkowice NEED-021.
 
 ## Pełny rejestr
 
@@ -76,6 +76,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-054 | Struktura własności gruntów w promieniu 1 km od stacji | Research | W toku | P1 | — |
 | KSE-055 | Rdzeń obliczania powierzchni grup rejestrowych w buforze | GIS | Zrobione | P1 | — |
 | KSE-056 | Transformacja CRS i kontrola kompletności pojedynczej odpowiedzi działek | GIS | Zrobione | P1 | KSE-055 |
+| KSE-057 | Kontrola łańcucha stron WFS i ograniczone pobieranie | GIS | Zrobione | P1 | KSE-056 |
 
 ## Kryteria zakończenia i dowody
 
@@ -665,13 +666,13 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji
 
 - Odpowiedzialność: Codex.
-- Następny krok: KSE-056 łączy normalizację, transformację i kontrolę pojedynczej odpowiedzi. Pozyskać pełny zakres zweryfikowanej stacji, ustalić zasady użycia i obsłużyć strony bez utraty rekordów. Próbka Grudziądza zablokowana jako zbyt mała. Radkowice NEED-021.
+- Następny krok: KSE-057 sprawdza łańcuch stron. GUGiK nie gwarantuje spójnej migawki, a próbka ma nieznaną liczbę całkowitą. Priorytet: datowany eksport lub wersjonowana usługa (NEED-022), następnie pełny bufor potwierdzonej stacji. Radkowice NEED-021.
 - Kryterium: Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.
 - Nieukończone zależności: brak.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/25_land_ownership_discovery.md](docs/25_land_ownership_discovery.md), [data/reference/land_ownership_probe_2026-09-19.json](data/reference/land_ownership_probe_2026-09-19.json), [tests/test_ownership_probe.py](tests/test_ownership_probe.py), [data/reference/ownership_map_probe_2026-09-19.json](data/reference/ownership_map_probe_2026-09-19.json), [tests/test_ownership_map.py](tests/test_ownership_map.py), [data/reference/ownership_comparison_2026-09-19.json](data/reference/ownership_comparison_2026-09-19.json), [tests/test_ownership_normalization.py](tests/test_ownership_normalization.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md), [data/reference/ownership_sample_readiness_2026-09-19.json](data/reference/ownership_sample_readiness_2026-09-19.json).
+- Dowody/kontekst: [docs/25_land_ownership_discovery.md](docs/25_land_ownership_discovery.md), [data/reference/land_ownership_probe_2026-09-19.json](data/reference/land_ownership_probe_2026-09-19.json), [tests/test_ownership_probe.py](tests/test_ownership_probe.py), [data/reference/ownership_map_probe_2026-09-19.json](data/reference/ownership_map_probe_2026-09-19.json), [tests/test_ownership_map.py](tests/test_ownership_map.py), [data/reference/ownership_comparison_2026-09-19.json](data/reference/ownership_comparison_2026-09-19.json), [tests/test_ownership_normalization.py](tests/test_ownership_normalization.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md), [data/reference/ownership_sample_readiness_2026-09-19.json](data/reference/ownership_sample_readiness_2026-09-19.json), [data/reference/ownership_paging_audit_2026-09-19.json](data/reference/ownership_paging_audit_2026-09-19.json).
 
 ### KSE-055 — Rdzeń obliczania powierzchni grup rejestrowych w buforze
 
@@ -694,3 +695,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-19.
 - Dowody/kontekst: [gis/coordinates.py](gis/coordinates.py), [connectors/gis/ownership_snapshot.py](connectors/gis/ownership_snapshot.py), [tests/test_ownership_snapshot.py](tests/test_ownership_snapshot.py), [data/reference/ownership_sample_readiness_2026-09-19.json](data/reference/ownership_sample_readiness_2026-09-19.json).
+
+### KSE-057 — Kontrola łańcucha stron WFS i ograniczone pobieranie
+
+- Odpowiedzialność: Codex.
+- Następny krok: Uzyskać wersjonowany eksport lub gwarancję spójnej migawki; nie utożsamiać końca stron z gotowością raportu stacji.
+- Kryterium: Zgodność zapytań i offsetów, hashe, brak duplikatów, kontrola liczników i limitów, odtwarzalna próba rzeczywista oraz jawne ograniczenie transakcyjności.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-09-19.
+- Dowody/kontekst: [connectors/gis/ownership_paging.py](connectors/gis/ownership_paging.py), [tests/test_ownership_paging.py](tests/test_ownership_paging.py), [data/reference/ownership_paging_audit_2026-09-19.json](data/reference/ownership_paging_audit_2026-09-19.json).

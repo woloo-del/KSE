@@ -1,0 +1,69 @@
+{
+  "method_version": "ownership_page_audit_v1",
+  "sources": [
+    {
+      "source_id": "GUGIK_OWNERSHIP_PAGING_PAGE_0",
+      "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=1&STARTINDEX=0&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=53.47995%2C18.75995%2C53.48005%2C18.76005%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+      "http_status": 200,
+      "local_path": "data/raw/research/2026-09-19/ownership_paging_page_0.xml",
+      "sha256": "536b52fc1f465435128045667bc3a5145f4d79b0e11f5c4d67972b18c2f15051",
+      "bytes": 2723,
+      "retrieval_date": "2026-09-19T10:39:55.133171+00:00"
+    },
+    {
+      "source_id": "GUGIK_OWNERSHIP_PAGING_PAGE_1",
+      "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=1&STARTINDEX=1&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=53.47995%2C18.75995%2C53.48005%2C18.76005%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+      "http_status": 200,
+      "local_path": "data/raw/research/2026-09-19/ownership_paging_page_1.xml",
+      "sha256": "5fe11db83c1bb658a77ec2bcb947bc4c1e8d10a3026d542a7b9a69fa59a5e54b",
+      "bytes": 2689,
+      "retrieval_date": "2026-09-19T10:39:58.634922+00:00"
+    }
+  ],
+  "page_count": 2,
+  "unique_parcel_count": 2,
+  "number_matched_per_page": [
+    null,
+    null
+  ],
+  "server_sequence_exhausted": true,
+  "next_url": null,
+  "transaction_safe_declared": false,
+  "blocking_reasons": [
+    "MATCHED_COUNT_UNKNOWN",
+    "TRANSACTIONAL_SNAPSHOT_NOT_GUARANTEED"
+  ],
+  "area_result": null,
+  "observations": [
+    {
+      "parcel_id": "046201_1.0090.5/5",
+      "source_id": "GUGIK_OWNERSHIP_PAGING_PAGE_0",
+      "registration_group": 9
+    },
+    {
+      "parcel_id": "046201_1.0090.5/8",
+      "source_id": "GUGIK_OWNERSHIP_PAGING_PAGE_1",
+      "registration_group": 7
+    }
+  ],
+  "status": "BLOCKED_FOR_AREA_ANALYSIS",
+  "limitations": [
+    "Exhausted pages do not prove cadastral or spatial completeness.",
+    "Stable counts and unique IDs alone cannot detect every live update."
+  ],
+  "capabilities_source": {
+    "source_id": "GUGIK_OWNERSHIP_PAGING_CAPS",
+    "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-09-19/ownership_paging_caps.xml",
+    "sha256": "6609c18f6e3a268e383a9180037bd8bd8bfcf6ae190cae3be6f87e57a6c3b08c",
+    "bytes": 17111,
+    "retrieval_date": "2026-09-19T10:39:51.250945+00:00"
+  },
+  "paging_constraints": {
+    "ImplementsResultPaging": "TRUE",
+    "PagingIsTransactionSafe": "FALSE",
+    "CountDefault": "1000"
+  },
+  "scope": "TWO_RECORD_RESEARCH_QUERY_NOT_STATION_BUFFER"
+}

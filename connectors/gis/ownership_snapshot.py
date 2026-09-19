@@ -15,16 +15,17 @@ from gis.coordinates import PolishMetricProjection
 from gis.ownership_area import BUFFER_QUAD_SEGS, Parcel, summarize_buffer
 
 
-def _request_bbox(url: str) -> tuple[float, ...]:
+def _request_bbox(url: str, *, allow_paging: bool = False) -> tuple[float, ...]:
     parsed = urlparse(url)
-    pairs = [(k.lower(), v) for k, v in parse_qsl(parsed.query)]
+    pairs = [(k.lower(), v) for k, v in parse_qsl(parsed.query, keep_blank_values=True)]
     params = dict(pairs)
     allowed = {'service', 'version', 'request', 'typenames', 'count', 'srsname', 'bbox', 'startindex'}
     if len(params) != len(pairs) or set(params) - allowed:
         raise ValueError('AMBIGUOUS_OR_FILTERED_REQUEST')
     expected = {'service': 'WFS', 'version': '2.0.0', 'request': 'GetFeature',
                 'typenames': 'ms:dzialki', 'srsname': 'urn:ogc:def:crs:EPSG::4326'}
-    if any(params.get(k) != v for k, v in expected.items()) or params.get('startindex', '0') != '0':
+    start = params.get('startindex', '0')
+    if any(params.get(k) != v for k, v in expected.items()) or not start.isascii() or not start.isdecimal() or (not allow_paging and start != '0'):
         raise ValueError('UNSUPPORTED_REQUEST')
     parts = params.get('bbox', '').split(',')
     if len(parts) != 5 or parts[-1] != expected['srsname']:

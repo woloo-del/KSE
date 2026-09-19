@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-19T10:37:46.807023+00:00",
+  "checked_at_utc": "2026-09-19T10:44:56.845906+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
   "source_count": 83,
@@ -10,17 +10,17 @@
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 12
   },
-  "probe_count": 83,
+  "probe_count": 86,
   "http_status_counts": {
-    "200": 82,
+    "200": 85,
     "404": 1
   },
-  "raw_file_count": 82,
+  "raw_file_count": 85,
   "format_counts": {
     ".html": 29,
     ".pdf": 16,
     ".json": 15,
-    ".xml": 10,
+    ".xml": 13,
     ".js": 5,
     ".xlsx": 1,
     ".gml": 3,
@@ -114,7 +114,7 @@
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 1085,
+  "checks_passed": 1104,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -3868,6 +3868,66 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:GUGIK_OWNERSHIP_PAGING_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_OWNERSHIP_PAGING_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_OWNERSHIP_PAGING_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_OWNERSHIP_PAGING_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GUGIK_OWNERSHIP_PAGING_PAGE_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_OWNERSHIP_PAGING_PAGE_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_OWNERSHIP_PAGING_PAGE_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_OWNERSHIP_PAGING_PAGE_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GUGIK_OWNERSHIP_PAGING_PAGE_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GUGIK_OWNERSHIP_PAGING_PAGE_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GUGIK_OWNERSHIP_PAGING_PAGE_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GUGIK_OWNERSHIP_PAGING_PAGE_1",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "snapshot_within_raw:GRID_OZE_PORTAL",
       "passed": true,
       "detail": null
@@ -5003,6 +5063,36 @@
       "detail": null
     },
     {
+      "name": "wfs_capabilities:ownership_paging_caps.xml",
+      "passed": true,
+      "detail": "2.0.0"
+    },
+    {
+      "name": "format_readable:ownership_paging_caps.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_returned_count:ownership_paging_page_0.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:ownership_paging_page_0.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_returned_count:ownership_paging_page_1.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:ownership_paging_page_1.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "format_readable:ownership_poznan_area.html",
       "passed": true,
       "detail": null
@@ -5514,6 +5604,11 @@
     },
     {
       "name": "python_syntax:build_station_evidence.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:check_ownership_page_chain.py",
       "passed": true,
       "detail": null
     },

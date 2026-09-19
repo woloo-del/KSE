@@ -872,14 +872,18 @@
       "known_limitations": [
         "Pole GRUPA_REJESTROWA opcjonalne: cztery rekordy z otoczenia Radkowic puste; dwa rekordy z Grudziądza z grupami 9 i 7. DATA puste we wszystkich tych próbkach.",
         "Próbki prostokątne z COUNT=3, nie pełny bufor 1 km; brak podstaw do procentowego podziału własności. Zgodność WMS/WFS dla jednego ID nie jest niezależnym potwierdzeniem.",
-        "Brak interpretacji grup rejestrowych i brak potwierdzenia warunków regularnego komercyjnego importu."
+        "Brak interpretacji grup rejestrowych i brak potwierdzenia warunków regularnego komercyjnego importu.",
+        "Paginacja potwierdzona na 2 stronach po 1 działce; numberMatched unknown. Capabilities: ImplementsResultPaging TRUE, PagingIsTransactionSafe FALSE, CountDefault 1000. Koniec stron nie dowodzi spójnego snapshotu."
       ],
       "priority": "P1",
       "probe_ids": [
         "GUGIK_EGIB_SCHEMA",
         "GUGIK_EGIB_RADK_SAMPLE",
         "GUGIK_EGIB_RADK_STATION_SAMPLE",
-        "GUGIK_OWNERSHIP_GRUDZIADZ_WFS"
+        "GUGIK_OWNERSHIP_GRUDZIADZ_WFS",
+        "GUGIK_OWNERSHIP_PAGING_CAPS",
+        "GUGIK_OWNERSHIP_PAGING_PAGE_0",
+        "GUGIK_OWNERSHIP_PAGING_PAGE_1"
       ]
     },
     {

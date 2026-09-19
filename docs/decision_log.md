@@ -349,3 +349,13 @@ Consequences: stabilne ID dowodów, cztery snapshoty, jawne OSM G i publikacje B
 - Reason: unikamy własnej implementacji projekcji i mylenia pełnej odpowiedzi z pełnym buforem.
 - Trade-offs: dodatkowa przypięta zależność GIS; na razie brak agregowania stron, takie wejścia są blokowane.
 - Consequences: prawdziwa próbka Grudziądza poprawnie zatrzymana jako zbyt mała dla 1 km. Nadal brak raportu stacji, klasyfikacji prawnej i potwierdzenia kompletności EGiB. Szczegóły docs/26_land_ownership_area_method.md.
+
+## 2026-09-19 — Koniec stron nie oznacza spójnego zestawu działek
+
+- Decision: oddzielić wyczerpanie łańcucha stron od gotowości danych do analizy bufora.
+- Context: realna próba GUGiK zwróciła dwie strony z numberMatched unknown, a capabilities deklaruje PagingIsTransactionSafe FALSE.
+- Options considered: uznać ostatnią stronę za komplet; deduplikować i przyjąć aktualność; zachować audyt stron i blokady, szukać datowanego eksportu.
+- Selected option: audyt bez publikowania wyniku powierzchni i bez automatycznej deduplikacji.
+- Reason: stały licznik lub brak powtórzeń nie wykrywają wszystkich zmian danych pomiędzy żądaniami.
+- Trade-offs: paginacja jest technicznie obsłużona, ale nie stanowi jeszcze niezawodnego źródła pełnego bufora.
+- Consequences: NEED-022 i priorytet datowanego eksportu; brak wyników procentowych dla stacji. Metoda ownership_page_audit_v1, zachowane odpowiedzi i wersjonowane manifesty.
