@@ -1,14 +1,14 @@
 {
-  "checked_at_utc": "2026-09-19T05:56:16.049421+00:00",
+  "checked_at_utc": "2026-09-19T10:37:46.807023+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 82,
+  "source_count": 83,
   "source_status_counts": {
     "SAMPLE_VERIFIED": 20,
     "CONTENT_REVIEWED": 42,
     "DISCOVERED": 4,
     "BLOCKED": 5,
-    "DOCUMENTATION_REVIEWED": 11
+    "DOCUMENTATION_REVIEWED": 12
   },
   "probe_count": 83,
   "http_status_counts": {
@@ -114,7 +114,7 @@
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 1078,
+  "checks_passed": 1085,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -2343,6 +2343,31 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:PYPROJ_TRANSFORMER",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:PYPROJ_TRANSFORMER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:PYPROJ_TRANSFORMER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:PYPROJ_TRANSFORMER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:PYPROJ_TRANSFORMER",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
@@ -2754,6 +2779,11 @@
     },
     {
       "name": "probe_references:GUGIK_OWNERSHIP_MAP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:PYPROJ_TRANSFORMER",
       "passed": true,
       "detail": null
     },
@@ -5484,6 +5514,11 @@
     },
     {
       "name": "python_syntax:build_station_evidence.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:check_ownership_sample_readiness.py",
       "passed": true,
       "detail": null
     },

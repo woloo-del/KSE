@@ -1053,7 +1053,7 @@
       "priority": "P1",
       "owner": "Codex",
       "depends_on": [],
-      "next_action": "Gotowy rdzeń powierzchni KSE-055. Potrzebny adapter EPSG:4326 do 2180, kompletny import bufora zweryfikowanej stacji z kontrolą pokrycia i paginacji oraz zasady użycia. Radkowice nadal NEED-021. Nie publikować procentów z ograniczonej próbki.",
+      "next_action": "KSE-056 łączy normalizację, transformację i kontrolę pojedynczej odpowiedzi. Pozyskać pełny zakres zweryfikowanej stacji, ustalić zasady użycia i obsłużyć strony bez utraty rekordów. Próbka Grudziądza zablokowana jako zbyt mała. Radkowice NEED-021.",
       "acceptance": "Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.",
       "evidence": [
         "docs/25_land_ownership_discovery.md",
@@ -1063,7 +1063,8 @@
         "tests/test_ownership_map.py",
         "data/reference/ownership_comparison_2026-09-19.json",
         "tests/test_ownership_normalization.py",
-        "docs/26_land_ownership_area_method.md"
+        "docs/26_land_ownership_area_method.md",
+        "data/reference/ownership_sample_readiness_2026-09-19.json"
       ],
       "started_at": "2026-09-18"
     },
@@ -1081,6 +1082,27 @@
         "gis/ownership_area.py",
         "tests/test_ownership_area.py",
         "docs/26_land_ownership_area_method.md"
+      ],
+      "started_at": "2026-09-19",
+      "completed_at": "2026-09-19"
+    },
+    {
+      "id": "KSE-056",
+      "title": "Transformacja CRS i kontrola kompletności pojedynczej odpowiedzi działek",
+      "stage": "GIS",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-055"
+      ],
+      "next_action": "Rozszerzyć o kontrolowany import pełnego bufora; status gotowej odpowiedzi nie zatwierdza stacji ani praw do danych.",
+      "acceptance": "Jawne osie i CRS, hash źródła, kontrola BBOX względem bufora, liczby dopasowań i kolejnej strony; brak wyniku przy ograniczonej próbce.",
+      "evidence": [
+        "gis/coordinates.py",
+        "connectors/gis/ownership_snapshot.py",
+        "tests/test_ownership_snapshot.py",
+        "data/reference/ownership_sample_readiness_2026-09-19.json"
       ],
       "started_at": "2026-09-19",
       "completed_at": "2026-09-19"

@@ -4,7 +4,7 @@ Stan: 19.09.2026. Implementacja obliczeń: `gis/ownership_area.py`, metoda `regi
 
 ## Wejście
 
-Punkt odniesienia oraz wielokąty działek muszą być wcześniej jawnie przekształcone do EPSG:2180, kolejność x=easting, y=northing, jednostka metr. Moduł odrzuca inny deklarowany CRS. Nie wykonuje transformacji i nie potrafi wykryć każdego błędnego przypisania etykiety CRS. **GeoJSON próbki Grudziądza jest w EPSG:4326 i nie jest bezpośrednim wejściem tej funkcji.** Adapter transformacji pozostaje do wykonania wraz z pozyskaniem kompletnego zestawu.
+Punkt odniesienia oraz wielokąty działek muszą być wcześniej jawnie przekształcone do EPSG:2180, kolejność x=easting, y=northing, jednostka metr. Moduł odrzuca inny deklarowany CRS. Nie wykonuje transformacji i nie potrafi wykryć każdego błędnego przypisania etykiety CRS. **GeoJSON próbki Grudziądza jest w EPSG:4326 i nie jest bezpośrednim wejściem tej funkcji.** Adapter opisany poniżej wykonuje transformację przed wywołaniem rdzenia; sam rdzeń nadal przyjmuje tylko EPSG:2180.
 
 Każda działka ma ID, geometrię Polygon/MultiPolygon, oryginalną grupę 1–16 albo null, identyfikator źródła i datę źródłową (może być null). Punkt ma osobne źródło. Wymagana metryka źródeł: lokalizator dokumentu/URL, data pobrania i SHA-256. Importujący musi wcześniej sprawdzić hash oryginalnych bajtów; rdzeń sprawdza obecność metadanych i format hasha, nie pobiera plików. Odrzucane są powtórzone ID, nieprawidłowe geometrie, grupy poza zakresem oraz brak pochodzenia.
 
@@ -34,4 +34,22 @@ Wynik zawiera wersję metody, CRS, promień, aproksymację bufora, punkt, źród
 
 Testy `tests/test_ownership_area.py` używają wyłącznie syntetycznych geometrii: puste wejście, przycinanie, połowa koła, brak kategorii, styk granic, konflikty dwóch/trzech działek, otwory, obiekty poza buforem, nieprawidłowe wejścia i odtwarzalność.
 
-Nie dodano endpointu ani wyniku w UI. Nie uproszczono grup do państwowe/prywatne. Następny krok: adapter CRS i zweryfikowany import całego bufora z kontrolą paginacji, pokrycia, dat i praw do użycia. Radkowice nadal wymagają danych wskazanych w NEED-021; próbka Grudziądza nie zastępuje tego wejścia.
+Nie dodano endpointu ani wyniku w UI. Nie uproszczono grup do państwowe/prywatne. Następny krok: zweryfikowany import całego bufora z kontrolą paginacji, pokrycia, dat i praw do użycia. Adapter CRS i kontrola pojedynczej odpowiedzi są już dostępne (poniżej). Radkowice nadal wymagają danych wskazanych w NEED-021; próbka Grudziądza nie zastępuje tego wejścia.
+
+## Adapter CRS i kontrola zakresu odpowiedzi — 19.09.2026
+
+`gis/coordinates.py` wykorzystuje pyproj 3.7.2 / PROJ do jawnej transformacji EPSG:4326 → EPSG:2180. Wejście longitude/latitude, wyjście easting/northing (`always_xy=True`). Parser GML już zamienia źródłowe lat/lon na GeoJSON lon/lat; adapter nie zamienia ich ponownie. Kontrolujemy zakres zastosowania CRS z bazy PROJ, co wykrywa m.in. odwrócone osie polskich współrzędnych. Ten prostokąt nie jest dokładną granicą Polski. Niedopuszczone są transformacje ballpark, geometrie 3D i działanie z aktywnym pobieraniem siatek PROJ z sieci. Wynik zapisuje wersję biblioteki, PROJ, pipeline i deklarowaną dokładność transformacji — ta ostatnia nie określa dokładności działek.
+
+Zależność dodano do `requirements-gis.txt`, ponieważ dotychczasowe Shapely nie wykonuje transformacji układów odniesienia. Oficjalna [dokumentacja Transformer](https://pyproj4.github.io/pyproj/stable/api/transformer.html) i [licencja pyproj 3.7.2](https://github.com/pyproj4/pyproj/blob/3.7.2/LICENSE), zweryfikowane 19.09.2026. Licencja pyproj dopuszcza użycie komercyjne z zachowaniem noty; nie nadaje praw do danych EGiB. Transytywne certifi przypięto w wersji 2026.7.22. Nie instalowano usługi sieciowej ani nowego silnika bazy danych.
+
+`connectors/gis/ownership_snapshot.py` łączy sprawdzenie SHA-256 oryginalnej odpowiedzi, odczyt GML, transformację geometrii i rdzeń powierzchni. Przyjmuje tylko pojedynczą odpowiedź GetFeature WFS 2.0.0 z rozpoznanym CRS, typem działki, BBOX i początkiem od zera; dodatkowe filtry/nieznane parametry są odrzucane. Wynik pola `area_result` pozostaje null, gdy:
+
+- prostokąt zapytania nie obejmuje całego obliczanego bufora;
+- `numberMatched` jest nieznane albo różni się od liczby odczytanych rekordów;
+- odpowiedź wskazuje następną stronę.
+
+Odróżniamy braki zakresu zapytania od dziur w dostarczonych geometriach. Gdy odpowiedź przejdzie kontrolę, rdzeń nadal pokazuje dziury i konflikty. Status `SINGLE_RESPONSE_READY_FOR_REVIEW` oznacza gotowość pojedynczej odpowiedzi do przeglądu, **nie** kompletność rejestru, zatwierdzenie punktu jako stacji lub zgodę na publikację. Punkt wejściowy jest oznaczony `RESEARCH_POINT_NOT_VERIFIED_STATION`. Nie zaimplementowano pobierania kolejnych stron; taki wynik zatrzymuje analizę zamiast pomijać rekordy.
+
+Odtworzenie kontroli rzeczywistej próbki: `.venv/Scripts/python.exe -X utf8 scripts/check_ownership_sample_readiness.py`. Wynik `data/reference/ownership_sample_readiness_2026-09-19.json`: dwie działki odczytane i przekształcone, liczba pasujących rekordów 2, ale **REQUEST_BBOX_DOES_NOT_COVER_BUFFER**, bez raportu powierzchni. Środek jest wyprowadzony z zachowanego prostokąta zapytania, nie z lokalizacji stacji. Używa istniejącego archiwum porównania; nie pobrano nowych działek.
+
+Testy kontrolują południk centralny CRS, powrót do współrzędnych geograficznych, zamianę osi, pełną odpowiedź syntetyczną, zbyt mały BBOX, ucięcie, nieznaną liczbę, następną stronę, dodatkowy filtr, hash i rzeczywistą ograniczoną próbkę. Nie wygenerowano procentów dla stacji ani nie zmieniono publicznej aplikacji. Rejestry i dokumentacja zasilają kolejny raport; XLSX w tym kroku nie regenerowano.

@@ -339,3 +339,13 @@ Consequences: stabilne ID dowodów, cztery snapshoty, jawne OSM G i publikacje B
 - Reason: pełny mianownik i wyłączenie nakładania zapobiegają zawyżaniu udziałów oraz ukrywaniu braków.
 - Trade-offs: każde nakładanie o dodatniej powierzchni, również w tej samej grupie, wymaga wyjaśnienia. Rdzeń przyjmuje wyłącznie jawnie przekształcone EPSG:2180; adapter nie jest jeszcze gotowy.
 - Consequences: brak nowych zależności; używamy istniejącego Shapely. Metoda registration_group_buffer_v1 i odcisk wejść. Nie powstał rzeczywisty raport 1 km ani ocena możliwości przyłączenia. Szczegóły: docs/26_land_ownership_area_method.md.
+
+## 2026-09-19 — Jawna transformacja CRS i kontrola odpowiedzi WFS
+
+- Decision: pyproj 3.7.2 w opcjonalnym środowisku GIS; przed powierzchnią kontrola zakresu zapytania i liczby zwróconych rekordów.
+- Context: próbka WFS w EPSG:4326 nie może być liczona jak metry; liczba zwróconych rekordów równa pasującym dotyczy tylko BBOX zapytania.
+- Options considered: ręczne wzory transformacji; pyproj; wymaganie wyłącznie wejść metrycznych.
+- Selected option: pyproj z jawnym porządkiem osi i zapisem pipeline; pojedyncza odpowiedź musi obejmować bufor i wszystkie zadeklarowane dopasowania.
+- Reason: unikamy własnej implementacji projekcji i mylenia pełnej odpowiedzi z pełnym buforem.
+- Trade-offs: dodatkowa przypięta zależność GIS; na razie brak agregowania stron, takie wejścia są blokowane.
+- Consequences: prawdziwa próbka Grudziądza poprawnie zatrzymana jako zbyt mała dla 1 km. Nadal brak raportu stacji, klasyfikacji prawnej i potwierdzenia kompletności EGiB. Szczegóły docs/26_land_ownership_area_method.md.

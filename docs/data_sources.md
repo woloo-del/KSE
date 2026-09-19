@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-19**. Źródła: **82**.
+Stan badania: **2026-09-19**. Źródła: **83**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -92,6 +92,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | KIELCE_EGIB_OWNERSHIP_DISCOVERY | [Powiat kielecki — schematy publicznych usług WFS](https://geoportal.powiat.kielce.pl/map/geoportal/wfse.php) | CONTENT_REVIEWED | P1 | NOT_CLEARED |
 | GUGIK_EGIB_OWNERSHIP_PROBE | [GUGiK — próba grupy rejestrowej w zbiorczym WFS](https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza) | SAMPLE_VERIFIED | P1 | NOT_CLEARED |
 | GUGIK_OWNERSHIP_MAP | [GUGiK — WMS Mapa własności i kompletność powiatowa](https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci) | SAMPLE_VERIFIED | P1 | NOT_CLEARED |
+| PYPROJ_TRANSFORMER | [pyproj 3.7.2 — Transformer i licencja](https://pyproj4.github.io/pyproj/stable/api/transformer.html) | DOCUMENTATION_REVIEWED | P1 | YES_UNDER_LICENSE |
 
 ## Karty źródeł
 
@@ -3082,5 +3083,41 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Próba GUGIK_OWNERSHIP_MAP_PARCEL_HTML:** HTTP 200; 2026-09-19T05:20:32.558262+00:00; `data/catalog/probe_results_ownership_map_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_map_parcel_html.html`.
 - **Próba GUGIK_OWNERSHIP_MAP_COUNTY_HTML:** HTTP 200; 2026-09-19T05:20:33.106000+00:00; `data/catalog/probe_results_ownership_map_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_map_county_html.html`.
 - **Próba GUGIK_OWNERSHIP_MAP_PARCEL_VECTOR:** HTTP 200; 2026-09-19T05:20:33.671004+00:00; `data/catalog/probe_results_ownership_map_2026-09-19.json`; próbka `data/raw/research/2026-09-19/ownership_map_parcel_vector.txt`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### PYPROJ_TRANSFORMER — pyproj 3.7.2 — Transformer i licencja
+
+[Źródło](https://pyproj4.github.io/pyproj/stable/api/transformer.html)
+
+- **Operator:** Open source
+- **Właściciel:** pyproj contributors
+- **Kraj:** International
+- **Kategoria:** software_library
+- **Napięcie:** 
+- **Zasięg:** Transformacje CRS; w projekcie Polska EPSG:4326/2180
+- **Format:** HTML; Python
+- **API:** Python Transformer
+- **GIS:** CRS_TRANSFORMATION_LIBRARY
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** MIT — zachowanie noty praw autorskich i licencji
+- **Użycie komercyjne:** YES_UNDER_LICENSE
+- **Autorytet źródła:** G
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO
+- **Pola:** always_xy; allow_ballpark; only_best; pipeline; accuracy
+- **Zastosowanie:** Transformacja geometrii do metrycznego CRS przed obliczeniami powierzchni
+- **Ograniczenia:** Licencja biblioteki nie dotyczy danych EGiB.; Dokładność transformacji nie jest dokładnością danych źródłowych.; W projekcie tryb offline; wersje pyproj i zależności przypięte w requirements-gis.txt.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-09-19
+- **Udany odczyt:** 2026-09-19
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Warunki:** [źródło prawne](https://github.com/pyproj4/pyproj/blob/3.7.2/LICENSE)
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

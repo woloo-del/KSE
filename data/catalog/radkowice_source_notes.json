@@ -934,6 +934,47 @@
         "GUGIK_OWNERSHIP_WARSAW_AREA",
         "GUGIK_OWNERSHIP_GRUDZIADZ_PARCEL"
       ]
+    },
+    {
+      "source_id": "PYPROJ_TRANSFORMER",
+      "operator": "Open source",
+      "source_name": "pyproj 3.7.2 — Transformer i licencja",
+      "url": "https://pyproj4.github.io/pyproj/stable/api/transformer.html",
+      "data_owner": "pyproj contributors",
+      "country": "International",
+      "data_category": "software_library",
+      "grid_voltage": [],
+      "geographical_scope": "Transformacje CRS; w projekcie Polska EPSG:4326/2180",
+      "data_format": [
+        "HTML",
+        "Python"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "last_verified": "2026-09-19",
+      "last_successful_verification": "2026-09-19",
+      "api_available": "Python Transformer",
+      "gis_available": "CRS_TRANSFORMATION_LIBRARY",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "license": "MIT — zachowanie noty praw autorskich i licencji",
+      "license_url": "https://github.com/pyproj4/pyproj/blob/3.7.2/LICENSE",
+      "commercial_use": "YES_UNDER_LICENSE",
+      "reliability": "G",
+      "key_fields": [
+        "always_xy",
+        "allow_ballpark",
+        "only_best",
+        "pipeline",
+        "accuracy"
+      ],
+      "potential_application": "Transformacja geometrii do metrycznego CRS przed obliczeniami powierzchni",
+      "known_limitations": [
+        "Licencja biblioteki nie dotyczy danych EGiB.",
+        "Dokładność transformacji nie jest dokładnością danych źródłowych.",
+        "W projekcie tryb offline; wersje pyproj i zależności przypięte w requirements-gis.txt."
+      ],
+      "priority": "P1",
+      "probe_ids": []
     }
   ]
 }

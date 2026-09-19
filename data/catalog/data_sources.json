@@ -6017,6 +6017,64 @@
         "2026-09-19T05:20:33.106000+00:00",
         "2026-09-19T05:20:33.671004+00:00"
       ]
+    },
+    {
+      "country": "International",
+      "geographical_scope": "Transformacje CRS; w projekcie Polska EPSG:4326/2180",
+      "grid_voltage": [],
+      "api_available": "Python Transformer",
+      "gis_available": "CRS_TRANSFORMATION_LIBRARY",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "MIT — zachowanie noty praw autorskich i licencji",
+      "license_url": "https://github.com/pyproj4/pyproj/blob/3.7.2/LICENSE",
+      "commercial_use": "YES_UNDER_LICENSE",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-09-19",
+      "last_successful_verification": "2026-09-19",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [],
+      "related_urls": [],
+      "source_id": "PYPROJ_TRANSFORMER",
+      "operator": "Open source",
+      "source_name": "pyproj 3.7.2 — Transformer i licencja",
+      "url": "https://pyproj4.github.io/pyproj/stable/api/transformer.html",
+      "data_owner": "pyproj contributors",
+      "data_category": "software_library",
+      "data_format": [
+        "HTML",
+        "Python"
+      ],
+      "verification_status": "DOCUMENTATION_REVIEWED",
+      "reliability": "G",
+      "key_fields": [
+        "always_xy",
+        "allow_ballpark",
+        "only_best",
+        "pipeline",
+        "accuracy"
+      ],
+      "potential_application": "Transformacja geometrii do metrycznego CRS przed obliczeniami powierzchni",
+      "known_limitations": [
+        "Licencja biblioteki nie dotyczy danych EGiB.",
+        "Dokładność transformacji nie jest dokładnością danych źródłowych.",
+        "W projekcie tryb offline; wersje pyproj i zależności przypięte w requirements-gis.txt."
+      ],
+      "priority": "P1",
+      "evidence": [],
+      "retrieval_date": []
     }
   ]
 }

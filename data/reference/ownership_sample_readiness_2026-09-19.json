@@ -1,0 +1,54 @@
+{
+  "method_version": "ownership_snapshot_gate_v1",
+  "source": {
+    "source_id": "GUGIK_OWNERSHIP_GRUDZIADZ_WFS",
+    "url": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=3&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=53.47995%2C18.75995%2C53.48005%2C18.76005%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-09-19/ownership_grudziadz_wfs.gml",
+    "sha256": "7ea01e4fa767c6b6ec1c07d116310ed6f6a5ec6f4a5329aa4529d42aea8544b1",
+    "bytes": 3697,
+    "retrieval_date": "2026-09-19T05:30:54.546684+00:00"
+  },
+  "center": {
+    "longitude": 18.759999999999998,
+    "latitude": 53.480000000000004,
+    "source_id": "GRUDZIADZ_RESEARCH_QUERY_MIDPOINT",
+    "source": {
+      "locator": "https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Adzialki&COUNT=3&SRSNAME=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&BBOX=53.47995%2C18.75995%2C53.48005%2C18.76005%2Curn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326",
+      "sha256": "7ea01e4fa767c6b6ec1c07d116310ed6f6a5ec6f4a5329aa4529d42aea8544b1",
+      "retrieval_date": "2026-09-19T05:30:54.546684+00:00",
+      "method": "Midpoint of archived query bbox; not station identity."
+    },
+    "role": "RESEARCH_POINT_NOT_VERIFIED_STATION"
+  },
+  "radius_m": 1000,
+  "request_bbox_lon_lat": [
+    18.75995,
+    53.47995,
+    18.76005,
+    53.48005
+  ],
+  "transformation": {
+    "source_crs": "EPSG:4326",
+    "target_crs": "EPSG:2180",
+    "always_xy": true,
+    "allow_ballpark": false,
+    "network_enabled": false,
+    "pyproj": "3.7.2",
+    "proj": "9.5.1",
+    "pipeline": "proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=tmerc lat_0=0 lon_0=19 k=0.9993 x_0=500000 y_0=-5300000 ellps=GRS80",
+    "accuracy_m_reported_by_proj": 1.0,
+    "note": "Transformation accuracy is not source geometry accuracy."
+  },
+  "returned_parcels": 2,
+  "number_matched_reported": 2,
+  "blocking_reasons": [
+    "REQUEST_BBOX_DOES_NOT_COVER_BUFFER"
+  ],
+  "status": "BLOCKED_INCOMPLETE_INPUT",
+  "area_result": null,
+  "limitations": [
+    "Known matching count only verifies this response, not source cadastral completeness.",
+    "No station identity, ownership validity, reuse permission or legal classification established."
+  ]
+}
