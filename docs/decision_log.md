@@ -359,3 +359,13 @@ Consequences: stabilne ID dowodów, cztery snapshoty, jawne OSM G i publikacje B
 - Reason: stały licznik lub brak powtórzeń nie wykrywają wszystkich zmian danych pomiędzy żądaniami.
 - Trade-offs: paginacja jest technicznie obsłużona, ale nie stanowi jeszcze niezawodnego źródła pełnego bufora.
 - Consequences: NEED-022 i priorytet datowanego eksportu; brak wyników procentowych dla stacji. Metoda ownership_page_audit_v1, zachowane odpowiedzi i wersjonowane manifesty.
+
+
+## 2026-10-06 — łączenie paczek działek przy granicy powiatów
+
+Decision: obliczać wspólny bufor z obu zachowanych paczek.
+Options considered: pozostawić wynik miejski; połączyć miasto i powiat.
+Selected option: wspólna analiza z osobną proweniencją i audytem każdej paczki.
+Reason: miasto pokrywało jedynie 52,76% bufora kandydata Węgrowo.
+Trade-offs: daty pakietów nie stanowią wspólnego stanu prawnego; nakładania graniczne wymagają jawnego wyłączenia.
+Consequences: wcześniejszy wynik zachowany; nowy prywatny wynik nie awansuje lokalizacji stacji ani interpretacji własności do potwierdzonych.

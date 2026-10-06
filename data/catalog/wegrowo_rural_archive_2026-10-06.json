@@ -1,0 +1,16 @@
+{
+  "archive_path": "data/archives/wegrowo_rural_2026-10-06.zip",
+  "archive_sha256": "746d9165aa8d7a12ad339da9ab1d05a18d3e3454b3c714d61831f425dab3617d",
+  "files": [
+    {
+      "path": "data/raw/research/2026-10-06/wegrowo_rural_export.html",
+      "sha256": "42ced3eec875ebb7e867eceb110277c5553b21ab2c476634003252d046012138",
+      "bytes": 8170
+    },
+    {
+      "path": "data/raw/research/2026-10-06/grudziadz_rural_parcels.gpkg.zip",
+      "sha256": "b66773867a1f3b9e3f907fd3e2dbd680eb736dc48256ab345f85aec42a92a7f0",
+      "bytes": 16416744
+    }
+  ]
+}

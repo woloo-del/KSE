@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-06T09:49:43.726903+00:00",
+  "checked_at_utc": "2026-10-06T10:12:57.183774+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
   "source_count": 85,
@@ -10,14 +10,14 @@
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 12
   },
-  "probe_count": 91,
+  "probe_count": 93,
   "http_status_counts": {
-    "200": 90,
+    "200": 92,
     "404": 1
   },
-  "raw_file_count": 90,
+  "raw_file_count": 92,
   "format_counts": {
-    ".html": 32,
+    ".html": 33,
     ".pdf": 16,
     ".json": 15,
     ".xml": 14,
@@ -25,7 +25,7 @@
     ".xlsx": 1,
     ".gml": 3,
     ".txt": 3,
-    ".zip": 1
+    ".zip": 2
   },
   "pdf_details": [
     {
@@ -115,7 +115,7 @@
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 1146,
+  "checks_passed": 1156,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -4594,6 +4594,46 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:WEGROWO_RURAL_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:WEGROWO_RURAL_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:WEGROWO_RURAL_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:WEGROWO_RURAL_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:COUNTY_EXPORT_GRUDZIADZ_RURAL_GPKG",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:COUNTY_EXPORT_GRUDZIADZ_RURAL_GPKG",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:COUNTY_EXPORT_GRUDZIADZ_RURAL_GPKG",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:COUNTY_EXPORT_GRUDZIADZ_RURAL_GPKG",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "snapshot_within_raw:PSE_INVESTMENTS_RADK",
       "passed": true,
       "detail": null
@@ -5295,6 +5335,16 @@
     },
     {
       "name": "format_readable:grudziadz_parcels.gpkg.zip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:grudziadz_rural_parcels.gpkg.zip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:wegrowo_rural_export.html",
       "passed": true,
       "detail": null
     },

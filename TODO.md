@@ -14,7 +14,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
-- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Wykonana prywatna diagnostyka punktu Węgrowo z GIS 2024: 278 działek, pokrycie geometryczne paczki miasta 52,76%. Uzupełnić sąsiedni powiat i potwierdzić położenie; źródła online w próbie odrzucają zapytania/timeout. Nie interpretować braków jako prywatnych.
+- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Dwie paczki obejmują praktycznie cały bufor historycznego punktu Węgrowa: 520 działek; 36 m² nakładania wyłączone z grup. Potwierdzić punkt stacji, interpretację grup i zasady wykorzystania przed raportem użytkowym.
 
 ## Pełny rejestr
 
@@ -79,6 +79,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-057 | Kontrola łańcucha stron WFS i ograniczone pobieranie | GIS | Zrobione | P1 | KSE-056 |
 | KSE-058 | Odkrycie i audyt plikowej paczki działek GUGiK | GIS | Zrobione | P1 | — |
 | KSE-059 | Adapter paczki działek i prywatna kontrola pokrycia Węgrowa | GIS | Zrobione | P1 | KSE-058, KSE-055 |
+| KSE-060 | Uzupełnienie bufora Węgrowa paczką sąsiedniego powiatu | GIS | Zrobione | P1 | KSE-059 |
 
 ## Kryteria zakończenia i dowody
 
@@ -668,7 +669,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji
 
 - Odpowiedzialność: Codex.
-- Następny krok: Wykonana prywatna diagnostyka punktu Węgrowo z GIS 2024: 278 działek, pokrycie geometryczne paczki miasta 52,76%. Uzupełnić sąsiedni powiat i potwierdzić położenie; źródła online w próbie odrzucają zapytania/timeout. Nie interpretować braków jako prywatnych.
+- Następny krok: Dwie paczki obejmują praktycznie cały bufor historycznego punktu Węgrowa: 520 działek; 36 m² nakładania wyłączone z grup. Potwierdzić punkt stacji, interpretację grup i zasady wykorzystania przed raportem użytkowym.
 - Kryterium: Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.
 - Nieukończone zależności: brak.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
@@ -730,3 +731,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-10-06.
 - Dowody/kontekst: [connectors/gis/county_package.py](connectors/gis/county_package.py), [tests/test_county_package.py](tests/test_county_package.py), [scripts/analyze_private_wegrowo_land.py](scripts/analyze_private_wegrowo_land.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md).
+
+### KSE-060 — Uzupełnienie bufora Węgrowa paczką sąsiedniego powiatu
+
+- Odpowiedzialność: Codex.
+- Następny krok: Potwierdzić lokalizację stacji i interpretację kategorii własności.
+- Kryterium: Zachowana paczka 0406, audyt, wspólny bufor bez podwójnego liczenia i zachowany wcześniejszy wynik.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-10-06.
+- Dowody/kontekst: [data/reference/county_rural_export_audit_2026-10-06.json](data/reference/county_rural_export_audit_2026-10-06.json), [scripts/analyze_private_wegrowo_land.py](scripts/analyze_private_wegrowo_land.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md).

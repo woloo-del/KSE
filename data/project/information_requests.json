@@ -303,12 +303,12 @@
       "status": "Otrzymano — do oceny zakresu",
       "requested_scope": "Publiczna usługa z wersją migawki lub datowany plik geometrii działek i grup rejestrowych dla obszaru pilota; identyfikator działki, CRS, data stanu, zakres pokrycia i zasady ponownego wykorzystania. Bez danych osobowych właścicieli.",
       "unlocks": "Odtwarzalny import pełnego bufora bez ryzyka zmian pomiędzy stronami odpowiedzi.",
-      "next_action": "Paczka miasta Grudziądz dostępna. Kontrola przy historycznym punkcie GIS daje pokrycie 52,76% bufora; potrzebna paczka sąsiedniego powiatu i potwierdzenie lokalizacji. Użytkownik może opcjonalnie wskazać oficjalny punkt stacji lub posiadaną paczkę powiatu grudziądzkiego z grupami. Codex kontynuuje pozyskiwanie.",
+      "next_action": "Pobrano obie paczki: miasto 0462 i powiat 0406. Bufor historycznego punktu Węgrowa obejmuje 520 działek i praktycznie pełne pokrycie geometryczne. Pozostaje potwierdzenie lokalizacji, znaczenia grup i praw wykorzystania. Opcjonalna pomoc użytkownika: oficjalny dokument lokalizujący stację; paczki powiatu nie trzeba już dostarczać.",
       "without_it": "Można rejestrować strony i ich ograniczenia, ale nie przedstawiać niespójnej lub niekompletnej sesji jako kompletnego raportu powierzchni.",
       "owner": "Codex — research; użytkownik — pomoc opcjonalna",
       "basis": "Capabilities GUGiK 19.09.2026: PagingIsTransactionSafe FALSE; dwie strony z numberMatched unknown. docs/26_land_ownership_area_method.md.",
       "updated_at": "2026-10-06",
-      "received_evidence": "data/reference/county_export_audit_2026-10-06.json"
+      "received_evidence": "data/reference/county_export_audit_2026-10-06.json; data/reference/county_rural_export_audit_2026-10-06.json"
     }
   ]
 }

@@ -1,0 +1,21 @@
+[
+  {
+    "source_id": "WEGROWO_RURAL_EXPORT",
+    "url": "https://mapy.geoportal.gov.pl/wss/ext/DanePowiatowe?SERVICE=WMS&VERSION=1.3.0&CRS=EPSG%3A4326&BBOX=53.438%2C18.818%2C53.440%2C18.820&WIDTH=256&HEIGHT=256&STYLES=&REQUEST=GetFeatureInfo&LAYERS=dzialki_pow&QUERY_LAYERS=dzialki_pow&INFO_FORMAT=text%2Fhtml&FORMAT=image%2Fpng&I=128&J=128&FEATURE_COUNT=1",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-10-06/wegrowo_rural_export.html",
+    "sha256": "42ced3eec875ebb7e867eceb110277c5553b21ab2c476634003252d046012138",
+    "bytes": 8170,
+    "retrieval_date": "2026-10-06T10:07:25.658312+00:00"
+  },
+  {
+    "source_id": "COUNTY_EXPORT_GRUDZIADZ_RURAL_GPKG",
+    "url": "https://opendata.geoportal.gov.pl/InneDane/latest_exports/eziudp_wfs/GPKG/0406.gpkg.zip",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-10-06/grudziadz_rural_parcels.gpkg.zip",
+    "sha256": "b66773867a1f3b9e3f907fd3e2dbd680eb736dc48256ab345f85aec42a92a7f0",
+    "bytes": 16416744,
+    "retrieval_date": "2026-10-06T10:10:41.602343+00:00",
+    "response_last_modified": null
+  }
+]

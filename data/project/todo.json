@@ -1053,7 +1053,7 @@
       "priority": "P1",
       "owner": "Codex",
       "depends_on": [],
-      "next_action": "Wykonana prywatna diagnostyka punktu Węgrowo z GIS 2024: 278 działek, pokrycie geometryczne paczki miasta 52,76%. Uzupełnić sąsiedni powiat i potwierdzić położenie; źródła online w próbie odrzucają zapytania/timeout. Nie interpretować braków jako prywatnych.",
+      "next_action": "Dwie paczki obejmują praktycznie cały bufor historycznego punktu Węgrowa: 520 działek; 36 m² nakładania wyłączone z grup. Potwierdzić punkt stacji, interpretację grup i zasady wykorzystania przed raportem użytkowym.",
       "acceptance": "Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.",
       "evidence": [
         "docs/25_land_ownership_discovery.md",
@@ -1164,6 +1164,26 @@
       "evidence": [
         "connectors/gis/county_package.py",
         "tests/test_county_package.py",
+        "scripts/analyze_private_wegrowo_land.py",
+        "docs/26_land_ownership_area_method.md"
+      ],
+      "started_at": "2026-10-06",
+      "completed_at": "2026-10-06"
+    },
+    {
+      "id": "KSE-060",
+      "title": "Uzupełnienie bufora Węgrowa paczką sąsiedniego powiatu",
+      "stage": "GIS",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-059"
+      ],
+      "next_action": "Potwierdzić lokalizację stacji i interpretację kategorii własności.",
+      "acceptance": "Zachowana paczka 0406, audyt, wspólny bufor bez podwójnego liczenia i zachowany wcześniejszy wynik.",
+      "evidence": [
+        "data/reference/county_rural_export_audit_2026-10-06.json",
         "scripts/analyze_private_wegrowo_land.py",
         "docs/26_land_ownership_area_method.md"
       ],

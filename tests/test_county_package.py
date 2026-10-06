@@ -60,3 +60,13 @@ class CountyPackageTests(unittest.TestCase):
         self.assertEqual(result['unique_nonempty_ids'],24230)
         self.assertEqual(result['errors'],{})
         self.assertEqual(sum(result['registration_group_counts'].values()),24230)
+
+    def test_preserved_rural_source(self):
+        path = Path('data/staging/research/grudziadz_rural_parcels_2026-10-06.gpkg')
+        if not path.exists(): self.skipTest('Restore rural archive and run audit --county 0406')
+        result = inspect_parcels(path)
+        self.assertEqual(result['record_count'], 43791)
+        self.assertEqual(result['unique_nonempty_ids'], 43791)
+        self.assertEqual(result['duplicate_id_count'], 0)
+        self.assertEqual(result['errors'], {})
+        self.assertNotIn('UNKNOWN', result['registration_group_counts'])
