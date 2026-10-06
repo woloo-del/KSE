@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-10-06**. Źródła: **87**.
+Stan badania: **2026-10-06**. Źródła: **88**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -97,6 +97,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | BIP_WEGROWO_LOCATION | [BIP Grudziądz — decyzja środowiskowa rozbudowy stacji, 2016](https://bip.grudziadz.pl/artykul/obwieszczenie-informacja-prezydenta-grudziadza-z-dnia-03-lutego-2016-r-o-wydaniu-decyzji-o-srod) | CONTENT_REVIEWED | P1 | NOT_CLEARED |
 | EGIB_GROUP_RULES | [EGiB — grupy rejestrowe i zasady współwłasności](https://eli.gov.pl/eli/DU/2024/219/ogl) | CONTENT_REVIEWED | P1 | NOT_CLEARED |
 | WEGROWO_MPZP_2013 | [MPZP XXXIII/14/13 — teren 14E stacji Węgrowo](https://bip.grudziadz.pl/pliki/grudziadz/zalaczniki/17200/mpzp_jaskolcza_rydygiera-podpisany.pdf) | CONTENT_REVIEWED | P1 | NOT_CLEARED |
+| GRUDZIADZ_APP_EXTENTS | [BIP Grudziądz — granice APP planów 97 i 79](https://bip.grudziadz.pl/artykul/miejscowe-plany-zagospodarowania-przestrzennego) | SAMPLE_VERIFIED | P1 | NOT_CLEARED |
 
 ## Karty źródeł
 
@@ -3278,5 +3279,44 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Klasyfikacja wejścia:** REPORTED
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 - **Próba WEGROWO_MPZP_2013:** HTTP 200; 2026-10-06T10:21:45.307733+00:00; `data/catalog/probe_results_land_interpretation_2026-10-06.json`; próbka `data/raw/research/2026-10-06/wegrowo_mpzp_2013.pdf`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### GRUDZIADZ_APP_EXTENTS — BIP Grudziądz — granice APP planów 97 i 79
+
+[Źródło](https://bip.grudziadz.pl/artykul/miejscowe-plany-zagospodarowania-przestrzennego)
+
+- **Operator:** Miasto Grudziądz
+- **Właściciel:** Urząd Miejski Grudziądz
+- **Kraj:** PL
+- **Kategoria:** spatial_planning
+- **Napięcie:** 
+- **Zasięg:** Miasto Grudziądz (046201), nie gmina wiejska 040601
+- **Format:** GML; HTML
+- **API:** NO
+- **GIS:** YES
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO
+- **Pola:** plan_id; zasiegPrzestrzenny; obowiazujeOd; status
+- **Zastosowanie:** Automatyczne sprawdzenie położenia punktu w historycznym zasięgu planu.
+- **Ograniczenia:** GML obejmuje granicę całego planu, nie strefę 14E.; Pliki opublikowane 2022; daty aktów 2013 i 2008. Status zapisany w pliku nie potwierdza aktualnego obowiązywania.; Podpisu XML nie zweryfikowano kryptograficznie.; Próba GetCapabilities miejskiego WMS zakończyła się błędem HTTP; nie pobrano warstw.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-10-06
+- **Udany odczyt:** 2026-10-06
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba GRUDZIADZ_GSIP:** HTTP 200; 2026-10-06T10:42:17.720056+00:00; `data/catalog/probe_results_wegrowo_plan_followup_2026-10-06.json`; próbka `data/raw/research/2026-10-06/grudziadz_gsip.html`.
+- **Próba GRUDZIADZ_PLANS_INDEX:** HTTP 200; 2026-10-06T10:42:18.516329+00:00; `data/catalog/probe_results_wegrowo_plan_followup_2026-10-06.json`; próbka `data/raw/research/2026-10-06/grudziadz_plans_index.html`.
+- **Próba GRUDZIADZ_PLAN97_GML:** HTTP 200; 2026-10-06T10:42:55.210395+00:00; `data/catalog/probe_results_wegrowo_plan_followup_2026-10-06.json`; próbka `data/raw/research/2026-10-06/plan97.gml`.
+- **Próba GRUDZIADZ_PLAN79_GML:** HTTP 200; 2026-10-06T10:42:55.421557+00:00; `data/catalog/probe_results_wegrowo_plan_followup_2026-10-06.json`; próbka `data/raw/research/2026-10-06/plan79.gml`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

@@ -1,0 +1,26 @@
+{
+  "archive_path": "data/archives/wegrowo_plan_followup_2026-10-06.zip",
+  "archive_sha256": "38f7742247551f8aa76e4c8b3ec40f78e8b2a6048fd1bbbed622299614d93828",
+  "files": [
+    {
+      "path": "data/raw/research/2026-10-06/grudziadz_gsip.html",
+      "sha256": "575aec77409298b7a1e3d160c409afe76f3d4e239283067b5495f433d7b23ad0",
+      "bytes": 90068
+    },
+    {
+      "path": "data/raw/research/2026-10-06/grudziadz_plans_index.html",
+      "sha256": "cfb296ce48bea3cc4f61baec25cc5b5e5f236303e395746e5eafce88468fb841",
+      "bytes": 923908
+    },
+    {
+      "path": "data/raw/research/2026-10-06/plan97.gml",
+      "sha256": "fe000d8e134e025d0857bac8b7e4908b07651285f4fff56607ec2f8959924e83",
+      "bytes": 19134
+    },
+    {
+      "path": "data/raw/research/2026-10-06/plan79.gml",
+      "sha256": "1a96bc4906e381e38d8b8e78eedd5d4195722b3b5a9862e9bd190ac860bda9fa",
+      "bytes": 15726
+    }
+  ]
+}

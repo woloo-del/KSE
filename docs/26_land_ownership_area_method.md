@@ -111,3 +111,27 @@ Słownik skróconych etykiet z datą i źródłami: `data/reference/registration
 Dodatkowo odczytano [MPZP XXXIII/14/13 z 27.02.2013](https://bip.grudziadz.pl/pliki/grudziadz/zalaczniki/17200/mpzp_jaskolcza_rydygiera-podpisany.pdf). §22 na stronie 19 wskazuje stację 400/220/110 kV Grudziądz-Węgrowo w terenie 14E; rysunek na stronie 31 został obejrzany. Nie wykonano georeferencji ani kontroli późniejszych zmian planu. To historyczny dowód obszaru, nie potwierdzenie współrzędnych prywatnego GIS, statusu modernizacji lub własności. Pierwsza próba przekroczyła limit 15 MB; ponowiono z limitem 60 MB, plik ma 16 063 376 bajtów. Renderer zgłosił brak tablicy Fields, ale rysunek został poprawnie wyświetlony; dokumentu nie modyfikowano.
 
 Siedem zachowanych odpowiedzi: `data/catalog/probe_results_land_interpretation_2026-10-06.json`; archiwum `data/archives/land_interpretation_2026-10-06.zip` i manifest w katalogu. Oddzielna kopia zapasowa archiwum nadal wymagana. Praw do redystrybucji powiatowych grup nie wywodzimy z dostępności dokumentów prawnych.
+
+
+## 2026-10-06 — automatyczna kontrola granic planów APP
+
+W [oficjalnym indeksie miasta](https://bip.grudziadz.pl/artykul/miejscowe-plany-zagospodarowania-przestrzennego) znaleziono pliki [planu 97](https://bip.grudziadz.pl/pliki/grudziadz/zalaczniki/3697/06_09_2022_15_49_09_786.gml) i [planu 79](https://bip.grudziadz.pl/pliki/grudziadz/zalaczniki/3678/20_06_2022_15_01_09_735.gml). Weryfikacja 06.10.2026. To miasto 046201, nie sąsiednia gmina wiejska 040601. Pliki opublikowano w 2022 r.; raportowane początki obowiązywania to odpowiednio 27.03.2013 i 13.12.2008. Kolejność numerów planów nie jest chronologią uchwał. Nie ustalono pełnego ciągu późniejszych zmian ani obecnego stanu prawnego.
+
+GML APP 1.0 zawiera zasięg całego aktu, opis dokumentu i odsyłacz rysunku, nie osobny wektor terenu 14E. `connectors/gis/planning_app.py` obsługuje ściśle EPSG:2177, dwuwymiarowe pierścienie Polygon w MultiSurface. Jawnie interpretuje osie GML jako northing/easting i normalizuje do x/y EPSG:2180. Odrzuca obcy CRS, sprzeczny wymiar, niezamknięte lub nieprawidłowe geometrie, DTD i encje. Nie pobiera zewnętrznych zasobów XML, nie wykonuje instrukcji ze źródła i nie weryfikuje podpisu kryptograficznie. Zakresy innych formatów wymagają rozszerzenia i testów.
+
+`python scripts/check_private_wegrowo_plans.py` sprawdza hashe GML i zapisuje prywatny `plan_extent_checks_v1.json`. Wynik CALCULATED: kandydat GIS wewnątrz planu 97, poza planem 79. **Nie oznacza to trafienia do strefy 14E ani potwierdzenia punktu/obrysu stacji.** Status historycznego kandydata pozostaje niezmieniony.
+
+Miejski geoportal odpowiedział pod `https://geoportal.grudziadz.pl/geoportal/f?p=MAPA:113`; w HTML wskazuje `/geoserver/wms`. Próba GetCapabilities zakończyła się błędem HTTP, bez pobrania warstw. Nie omijano kontroli dostępu. Cztery udane odpowiedzi zachowano w `data/archives/wegrowo_plan_followup_2026-10-06.zip`; manifest i hashe w katalogu. Archiwum wymaga prywatnej kopii zapasowej.
+
+### Gotowość modułu gruntów
+
+| Element | Stan | Co można obecnie przedstawić |
+|---|---|---|
+| Powierzchnie grup | Obliczone dla historycznego punktu | Prywatny raport z pełnym mianownikiem, konfliktami i źródłami |
+| Znaczenie kategorii | Zweryfikowany słownik | 16 grup; bez zamiany na dokładne udziały własności |
+| Lokalizacja stacji | Częściowo wsparta historycznym planem | Kandydat, nie potwierdzona geometria stacji |
+| Aktualność praw i planu | Niepotwierdzona | Daty raportowane osobno od dat pobrania |
+| Redystrybucja kategorii działek | Nierozstrzygnięta | Brak publicznego eksportu danych |
+| Wdrożenie UI | Jeszcze nie wdrożono modułu | Raport roboczy dostępny lokalnie |
+
+Skalowanie: najpierw maszynowa kontrola formatu, CRS, zasięgu i dat dla publikowanych plików; ręczna kolejka dla wyjątków. Sama obecność punktu w planie nie daje automatycznej identyfikacji stacji. Następna potrzebna informacja: georeferencjonowany teren 14E albo aktualna geometria stacji z oficjalnym pochodzeniem; zapisano w NEED-022. Nie jest potrzebna kolejna kopia już pobranych paczek działek. XLSX w tym kroku nie odświeżono.

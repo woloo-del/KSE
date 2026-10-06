@@ -379,3 +379,13 @@ Selected option: pełny słownik i jawne ograniczenia.
 Reason: załącznik 2 pkt 17 EGiB kwalifikuje współwłasność do jednej grupy; nie daje pełnej struktury udziałów.
 Trade-offs: więcej kategorii do przeczytania, brak pozornego uproszczenia.
 Consequences: nie obliczamy dokładnych udziałów praw na podstawie samych grup; nie zmieniamy zakresu produktu.
+
+
+## 2026-10-06 — oddzielny zasięg APP od tożsamości stacji
+
+Decision: stosować kontrolę punkt–plan jako dowód przestrzenny o ograniczonym zakresie.
+Options considered: automatyczne potwierdzenie stacji po trafieniu w plan; zachowanie rozdzielności zakresów.
+Selected option: granica całego aktu nie identyfikuje terenu 14E.
+Reason: GML nie zawiera wektora tej strefy.
+Trade-offs: pozostaje kontrola konkretnego obiektu, mimo automatyzacji granic APP.
+Consequences: parser nadaje zakres WHOLE_PLAN_EXTENT_NOT_LAND_USE_ZONE, a aktualnego statusu prawnego i podpisu nie uznaje za zweryfikowane.

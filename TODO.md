@@ -81,6 +81,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-059 | Adapter paczki działek i prywatna kontrola pokrycia Węgrowa | GIS | Zrobione | P1 | KSE-058, KSE-055 |
 | KSE-060 | Uzupełnienie bufora Węgrowa paczką sąsiedniego powiatu | GIS | Zrobione | P1 | KSE-059 |
 | KSE-061 | Wyjaśnienie grup rejestrowych i prywatny raport Węgrowa | GIS | Zrobione | P1 | KSE-060 |
+| KSE-062 | Odtwarzalna kontrola historycznych zasięgów APP przy Węgrowie | GIS | Zrobione | P1 | KSE-061 |
 
 ## Kryteria zakończenia i dowody
 
@@ -754,3 +755,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-10-06.
 - Dowody/kontekst: [data/reference/registration_group_labels.json](data/reference/registration_group_labels.json), [scripts/describe_private_wegrowo_land.py](scripts/describe_private_wegrowo_land.py), [tests/test_land_group_review.py](tests/test_land_group_review.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md).
+
+### KSE-062 — Odtwarzalna kontrola historycznych zasięgów APP przy Węgrowie
+
+- Odpowiedzialność: Codex.
+- Następny krok: Pozyskać georeferencjonowany teren 14E lub aktualną oficjalną geometrię stacji; nie promować samego trafienia w plan.
+- Kryterium: Zachowane GML, kontrola CRS i osi, testy parsera, prywatny wynik z ograniczeniami.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-10-06.
+- Dowody/kontekst: [connectors/gis/planning_app.py](connectors/gis/planning_app.py), [tests/test_planning_app.py](tests/test_planning_app.py), [scripts/check_private_wegrowo_plans.py](scripts/check_private_wegrowo_plans.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md).

@@ -1,29 +1,29 @@
 {
-  "checked_at_utc": "2026-10-06T10:23:59.690227+00:00",
+  "checked_at_utc": "2026-10-06T10:46:35.905709+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 87,
+  "source_count": 88,
   "source_status_counts": {
-    "SAMPLE_VERIFIED": 21,
+    "SAMPLE_VERIFIED": 22,
     "CONTENT_REVIEWED": 45,
     "DISCOVERED": 4,
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 12
   },
-  "probe_count": 100,
+  "probe_count": 104,
   "http_status_counts": {
-    "200": 99,
+    "200": 103,
     "404": 1
   },
-  "raw_file_count": 99,
+  "raw_file_count": 103,
   "format_counts": {
-    ".html": 35,
+    ".html": 37,
     ".pdf": 19,
     ".json": 17,
     ".xml": 14,
     ".js": 5,
     ".xlsx": 1,
-    ".gml": 3,
+    ".gml": 5,
     ".txt": 3,
     ".zip": 2
   },
@@ -124,13 +124,13 @@
       "first_page_text_chars": 2784
     }
   ],
-  "local_links_checked": 67,
+  "local_links_checked": 68,
   "dependencies": {
     "python": "3.12.14",
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 1208,
+  "checks_passed": 1239,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -2489,6 +2489,36 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:GRUDZIADZ_APP_EXTENTS",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GRUDZIADZ_APP_EXTENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GRUDZIADZ_APP_EXTENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GRUDZIADZ_APP_EXTENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GRUDZIADZ_APP_EXTENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:GRUDZIADZ_APP_EXTENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
@@ -2925,6 +2955,11 @@
     },
     {
       "name": "probe_references:WEGROWO_MPZP_2013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GRUDZIADZ_APP_EXTENTS",
       "passed": true,
       "detail": null
     },
@@ -4809,6 +4844,86 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:GRUDZIADZ_GSIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRUDZIADZ_GSIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRUDZIADZ_GSIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRUDZIADZ_GSIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GRUDZIADZ_PLANS_INDEX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRUDZIADZ_PLANS_INDEX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRUDZIADZ_PLANS_INDEX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRUDZIADZ_PLANS_INDEX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GRUDZIADZ_PLAN97_GML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRUDZIADZ_PLAN97_GML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRUDZIADZ_PLAN97_GML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRUDZIADZ_PLAN97_GML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:GRUDZIADZ_PLAN79_GML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:GRUDZIADZ_PLAN79_GML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:GRUDZIADZ_PLAN79_GML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:GRUDZIADZ_PLAN79_GML",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "snapshot_within_raw:WEGROWO_RURAL_EXPORT",
       "passed": true,
       "detail": null
@@ -5589,12 +5704,42 @@
       "detail": null
     },
     {
+      "name": "format_readable:grudziadz_gsip.html",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "format_readable:grudziadz_parcels.gpkg.zip",
       "passed": true,
       "detail": null
     },
     {
+      "name": "format_readable:grudziadz_plans_index.html",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "format_readable:grudziadz_rural_parcels.gpkg.zip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_returned_count:plan79.gml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:plan79.gml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wfs_returned_count:plan97.gml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:plan97.gml",
       "passed": true,
       "detail": null
     },
@@ -5850,6 +5995,11 @@
     },
     {
       "name": "local_link:01_data_research.md:25_land_ownership_discovery.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:01_data_research.md:26_land_ownership_area_method.md",
       "passed": true,
       "detail": null
     },
@@ -6145,6 +6295,11 @@
     },
     {
       "name": "python_syntax:check_ownership_sample_readiness.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:check_private_wegrowo_plans.py",
       "passed": true,
       "detail": null
     },

@@ -1148,6 +1148,51 @@
       "probe_ids": [
         "WEGROWO_MPZP_2013"
       ]
+    },
+    {
+      "source_id": "GRUDZIADZ_APP_EXTENTS",
+      "operator": "Miasto Grudziądz",
+      "source_name": "BIP Grudziądz — granice APP planów 97 i 79",
+      "url": "https://bip.grudziadz.pl/artykul/miejscowe-plany-zagospodarowania-przestrzennego",
+      "data_owner": "Urząd Miejski Grudziądz",
+      "country": "PL",
+      "data_category": "spatial_planning",
+      "grid_voltage": [],
+      "geographical_scope": "Miasto Grudziądz (046201), nie gmina wiejska 040601",
+      "data_format": [
+        "GML",
+        "HTML"
+      ],
+      "last_verified": "2026-10-06",
+      "last_successful_verification": "2026-10-06",
+      "verification_status": "SAMPLE_VERIFIED",
+      "api_available": "NO",
+      "gis_available": "YES",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "license": "UNKNOWN",
+      "commercial_use": "NOT_CLEARED",
+      "reliability": "C",
+      "key_fields": [
+        "plan_id",
+        "zasiegPrzestrzenny",
+        "obowiazujeOd",
+        "status"
+      ],
+      "potential_application": "Automatyczne sprawdzenie położenia punktu w historycznym zasięgu planu.",
+      "known_limitations": [
+        "GML obejmuje granicę całego planu, nie strefę 14E.",
+        "Pliki opublikowane 2022; daty aktów 2013 i 2008. Status zapisany w pliku nie potwierdza aktualnego obowiązywania.",
+        "Podpisu XML nie zweryfikowano kryptograficznie.",
+        "Próba GetCapabilities miejskiego WMS zakończyła się błędem HTTP; nie pobrano warstw."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "GRUDZIADZ_GSIP",
+        "GRUDZIADZ_PLANS_INDEX",
+        "GRUDZIADZ_PLAN97_GML",
+        "GRUDZIADZ_PLAN79_GML"
+      ]
     }
   ]
 }

@@ -303,7 +303,7 @@
       "status": "Otrzymano — do oceny zakresu",
       "requested_scope": "Publiczna usługa z wersją migawki lub datowany plik geometrii działek i grup rejestrowych dla obszaru pilota; identyfikator działki, CRS, data stanu, zakres pokrycia i zasady ponownego wykorzystania. Bez danych osobowych właścicieli.",
       "unlocks": "Odtwarzalny import pełnego bufora bez ryzyka zmian pomiędzy stronami odpowiedzi.",
-      "next_action": "Pobrano obie paczki powiatowe i sprawdzono znaczenie grup. Pozostaje potwierdzenie punktu stacji oraz warunków ponownego wykorzystania grup. MPZP 2013 teren 14E daje dowód historyczny, ale rysunku nie georeferencjonowano. Opcjonalna pomoc: aktualny plan sytuacyjny lub oficjalna geometria stacji, bez danych osobowych; nie trzeba ponownie przekazywać paczek działek.",
+      "next_action": "Paczki działek i interpretacja grup są dostępne. Kandydat Węgrowo leży wewnątrz zachowanej granicy planu nr 97, lecz brak osobnej geometrii strefy 14E; to nie potwierdzenie punktu stacji. Opcjonalnie pomocny aktualny plan sytuacyjny z odniesieniem przestrzennym albo oficjalna geometria stacji. Pozostają prawa wykorzystania grup; nie potrzeba ponownie paczek działek.",
       "without_it": "Można rejestrować strony i ich ograniczenia, ale nie przedstawiać niespójnej lub niekompletnej sesji jako kompletnego raportu powierzchni.",
       "owner": "Codex — research; użytkownik — pomoc opcjonalna",
       "basis": "Capabilities GUGiK 19.09.2026: PagingIsTransactionSafe FALSE; dwie strony z numberMatched unknown. docs/26_land_ownership_area_method.md.",

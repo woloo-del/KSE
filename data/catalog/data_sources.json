@@ -6494,6 +6494,117 @@
       "retrieval_date": [
         "2026-10-06T10:21:45.307733+00:00"
       ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Miasto Grudziądz (046201), nie gmina wiejska 040601",
+      "grid_voltage": [],
+      "api_available": "NO",
+      "gis_available": "YES",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "UNKNOWN",
+      "license_url": null,
+      "commercial_use": "NOT_CLEARED",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-10-06",
+      "last_successful_verification": "2026-10-06",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "GRUDZIADZ_GSIP",
+        "GRUDZIADZ_PLANS_INDEX",
+        "GRUDZIADZ_PLAN97_GML",
+        "GRUDZIADZ_PLAN79_GML"
+      ],
+      "related_urls": [],
+      "source_id": "GRUDZIADZ_APP_EXTENTS",
+      "operator": "Miasto Grudziądz",
+      "source_name": "BIP Grudziądz — granice APP planów 97 i 79",
+      "url": "https://bip.grudziadz.pl/artykul/miejscowe-plany-zagospodarowania-przestrzennego",
+      "data_owner": "Urząd Miejski Grudziądz",
+      "data_category": "spatial_planning",
+      "data_format": [
+        "GML",
+        "HTML"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "reliability": "C",
+      "key_fields": [
+        "plan_id",
+        "zasiegPrzestrzenny",
+        "obowiazujeOd",
+        "status"
+      ],
+      "potential_application": "Automatyczne sprawdzenie położenia punktu w historycznym zasięgu planu.",
+      "known_limitations": [
+        "GML obejmuje granicę całego planu, nie strefę 14E.",
+        "Pliki opublikowane 2022; daty aktów 2013 i 2008. Status zapisany w pliku nie potwierdza aktualnego obowiązywania.",
+        "Podpisu XML nie zweryfikowano kryptograficznie.",
+        "Próba GetCapabilities miejskiego WMS zakończyła się błędem HTTP; nie pobrano warstw."
+      ],
+      "priority": "P1",
+      "evidence": [
+        {
+          "source_id": "GRUDZIADZ_GSIP",
+          "url": "https://geoportal.grudziadz.pl",
+          "final_url": "https://geoportal.grudziadz.pl/geoportal/f?p=MAPA:113",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-10-06/grudziadz_gsip.html",
+          "sha256": "575aec77409298b7a1e3d160c409afe76f3d4e239283067b5495f433d7b23ad0",
+          "bytes": 90068,
+          "retrieval_date": "2026-10-06T10:42:17.720056+00:00",
+          "manifest": "data/catalog/probe_results_wegrowo_plan_followup_2026-10-06.json"
+        },
+        {
+          "source_id": "GRUDZIADZ_PLANS_INDEX",
+          "url": "https://bip.grudziadz.pl/artykul/miejscowe-plany-zagospodarowania-przestrzennego",
+          "final_url": "https://bip.grudziadz.pl/artykul/miejscowe-plany-zagospodarowania-przestrzennego",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-10-06/grudziadz_plans_index.html",
+          "sha256": "cfb296ce48bea3cc4f61baec25cc5b5e5f236303e395746e5eafce88468fb841",
+          "bytes": 923908,
+          "retrieval_date": "2026-10-06T10:42:18.516329+00:00",
+          "manifest": "data/catalog/probe_results_wegrowo_plan_followup_2026-10-06.json"
+        },
+        {
+          "source_id": "GRUDZIADZ_PLAN97_GML",
+          "url": "https://bip.grudziadz.pl/pliki/grudziadz/zalaczniki/3697/06_09_2022_15_49_09_786.gml",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-10-06/plan97.gml",
+          "sha256": "fe000d8e134e025d0857bac8b7e4908b07651285f4fff56607ec2f8959924e83",
+          "bytes": 19134,
+          "retrieval_date": "2026-10-06T10:42:55.210395+00:00",
+          "manifest": "data/catalog/probe_results_wegrowo_plan_followup_2026-10-06.json"
+        },
+        {
+          "source_id": "GRUDZIADZ_PLAN79_GML",
+          "url": "https://bip.grudziadz.pl/pliki/grudziadz/zalaczniki/3678/20_06_2022_15_01_09_735.gml",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-10-06/plan79.gml",
+          "sha256": "1a96bc4906e381e38d8b8e78eedd5d4195722b3b5a9862e9bd190ac860bda9fa",
+          "bytes": 15726,
+          "retrieval_date": "2026-10-06T10:42:55.421557+00:00",
+          "manifest": "data/catalog/probe_results_wegrowo_plan_followup_2026-10-06.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-10-06T10:42:17.720056+00:00",
+        "2026-10-06T10:42:18.516329+00:00",
+        "2026-10-06T10:42:55.210395+00:00",
+        "2026-10-06T10:42:55.421557+00:00"
+      ]
     }
   ]
 }
