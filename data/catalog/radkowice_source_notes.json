@@ -1065,6 +1065,89 @@
       "probe_ids": [
         "BIP_WEGROWO_LOCATION"
       ]
+    },
+    {
+      "country": "PL",
+      "grid_voltage": [],
+      "last_verified": "2026-10-06",
+      "last_successful_verification": "2026-10-06",
+      "verification_status": "CONTENT_REVIEWED",
+      "api_available": "YES",
+      "gis_available": "NO",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "reliability": "C",
+      "priority": "P1",
+      "commercial_use": "NOT_CLEARED",
+      "license": "Dokument urzędowy; nie nadaje praw do odrębnych danych działek.",
+      "source_id": "EGIB_GROUP_RULES",
+      "operator": "MRiT / MFiG",
+      "source_name": "EGiB — grupy rejestrowe i zasady współwłasności",
+      "url": "https://eli.gov.pl/eli/DU/2024/219/ogl",
+      "data_owner": "Dziennik Ustaw / ELI",
+      "data_category": "registration_group_semantics",
+      "data_format": [
+        "HTML",
+        "PDF",
+        "JSON"
+      ],
+      "geographical_scope": "Polska",
+      "key_fields": [
+        "§14",
+        "załącznik 2 pkt 17",
+        "nowelizacje"
+      ],
+      "potential_application": "Opisy grup bez konwersji na dokładne udziały własności.",
+      "known_limitations": [
+        "Sprawdzono nowelizacje 2024/1954 i 2026/1094; brak zmian §14 i załącznika 2.",
+        "Nie weryfikuje poprawności konkretnych wpisów powiatowych ani praw do ich redystrybucji."
+      ],
+      "probe_ids": [
+        "EGIB_RULES_2024",
+        "EGIB_RULES_METADATA",
+        "EGIB_AMENDMENT_2024",
+        "EGIB_AMENDMENT_2026_META",
+        "EGIB_RULES_2024_PDF",
+        "EGIB_AMENDMENT_2026_PDF"
+      ]
+    },
+    {
+      "country": "PL",
+      "grid_voltage": [],
+      "last_verified": "2026-10-06",
+      "last_successful_verification": "2026-10-06",
+      "verification_status": "CONTENT_REVIEWED",
+      "api_available": "YES",
+      "gis_available": "NO",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "reliability": "C",
+      "priority": "P1",
+      "commercial_use": "NOT_CLEARED",
+      "license": "Dokument urzędowy; nie nadaje praw do odrębnych danych działek.",
+      "source_id": "WEGROWO_MPZP_2013",
+      "operator": "Miasto Grudziądz",
+      "source_name": "MPZP XXXIII/14/13 — teren 14E stacji Węgrowo",
+      "url": "https://bip.grudziadz.pl/pliki/grudziadz/zalaczniki/17200/mpzp_jaskolcza_rydygiera-podpisany.pdf",
+      "data_owner": "Rada Miejska Grudziądza",
+      "data_category": "historical_station_spatial_evidence",
+      "data_format": [
+        "PDF"
+      ],
+      "geographical_scope": "Grudziądz",
+      "key_fields": [
+        "§22",
+        "14E",
+        "rysunek planu str.31"
+      ],
+      "potential_application": "Historyczne potwierdzenie obszaru stacji; kandydat do georeferencji.",
+      "known_limitations": [
+        "Plan z 2013 r.; nie sprawdzono późniejszych zmian i obecnego obowiązywania.",
+        "Rysunek bez wykonanej georeferencji; nie potwierdza współrzędnych punktu GIS ani własności."
+      ],
+      "probe_ids": [
+        "WEGROWO_MPZP_2013"
+      ]
     }
   ]
 }

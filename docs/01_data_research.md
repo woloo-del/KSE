@@ -351,3 +351,8 @@ Technicznie: publiczny HTML pobrany raz, zachowany i zahashowany; parser h4 odrz
 
 
 18.09.2026: rozpoczęto rozpoznanie mapy grup rejestrowych GUGiK dla struktury własności gruntów w promieniu 1 km od stacji. Źródło GUGIK_OWNERSHIP_GROUPS ma status DISCOVERED; brak potwierdzenia automatycznego dostępu do kategorii własności. Szczegóły: [moduł gruntów](25_land_ownership_discovery.md).
+
+
+### Aktualizacja 06.10.2026 — semantyka EGiB i lokalizacja Węgrowa
+
+Dodano źródła EGIB_GROUP_RULES oraz WEGROWO_MPZP_2013 do katalogu: przepisy grup rejestrowych wraz z nowelizacjami i historyczny plan terenu 14E. Grupa działki nie odtwarza pełnych udziałów współwłaścicieli. Szczegóły, linki, daty i ograniczenia: [metoda powierzchni](26_land_ownership_area_method.md).

@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-10-06**. Źródła: **85**.
+Stan badania: **2026-10-06**. Źródła: **87**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -95,6 +95,8 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | PYPROJ_TRANSFORMER | [pyproj 3.7.2 — Transformer i licencja](https://pyproj4.github.io/pyproj/stable/api/transformer.html) | DOCUMENTATION_REVIEWED | P1 | YES_UNDER_LICENSE |
 | GUGIK_COUNTY_EXPORT | [GUGiK — Dane powiatowe, paczka GPKG Grudziądz](https://mapy.geoportal.gov.pl/wss/ext/DanePowiatowe) | SAMPLE_VERIFIED | P1 | NOT_CLEARED |
 | BIP_WEGROWO_LOCATION | [BIP Grudziądz — decyzja środowiskowa rozbudowy stacji, 2016](https://bip.grudziadz.pl/artykul/obwieszczenie-informacja-prezydenta-grudziadza-z-dnia-03-lutego-2016-r-o-wydaniu-decyzji-o-srod) | CONTENT_REVIEWED | P1 | NOT_CLEARED |
+| EGIB_GROUP_RULES | [EGiB — grupy rejestrowe i zasady współwłasności](https://eli.gov.pl/eli/DU/2024/219/ogl) | CONTENT_REVIEWED | P1 | NOT_CLEARED |
+| WEGROWO_MPZP_2013 | [MPZP XXXIII/14/13 — teren 14E stacji Węgrowo](https://bip.grudziadz.pl/pliki/grudziadz/zalaczniki/17200/mpzp_jaskolcza_rydygiera-podpisany.pdf) | CONTENT_REVIEWED | P1 | NOT_CLEARED |
 
 ## Karty źródeł
 
@@ -3199,5 +3201,82 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Klasyfikacja wejścia:** REPORTED
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 - **Próba BIP_WEGROWO_LOCATION:** HTTP 200; 2026-10-06T09:44:40.916181+00:00; `data/catalog/probe_results_wegrowo_location_2026-10-06.json`; próbka `data/raw/research/2026-10-06/bip_wegrowo_location.html`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### EGIB_GROUP_RULES — EGiB — grupy rejestrowe i zasady współwłasności
+
+[Źródło](https://eli.gov.pl/eli/DU/2024/219/ogl)
+
+- **Operator:** MRiT / MFiG
+- **Właściciel:** Dziennik Ustaw / ELI
+- **Kraj:** PL
+- **Kategoria:** registration_group_semantics
+- **Napięcie:** 
+- **Zasięg:** Polska
+- **Format:** HTML; PDF; JSON
+- **API:** YES
+- **GIS:** NO
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** Dokument urzędowy; nie nadaje praw do odrębnych danych działek.
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO
+- **Pola:** §14; załącznik 2 pkt 17; nowelizacje
+- **Zastosowanie:** Opisy grup bez konwersji na dokładne udziały własności.
+- **Ograniczenia:** Sprawdzono nowelizacje 2024/1954 i 2026/1094; brak zmian §14 i załącznika 2.; Nie weryfikuje poprawności konkretnych wpisów powiatowych ani praw do ich redystrybucji.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-10-06
+- **Udany odczyt:** 2026-10-06
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba EGIB_RULES_2024:** HTTP 200; 2026-10-06T10:19:09.928130+00:00; `data/catalog/probe_results_land_interpretation_2026-10-06.json`; próbka `data/raw/research/2026-10-06/egib_rules_2024.html`.
+- **Próba EGIB_RULES_METADATA:** HTTP 200; 2026-10-06T10:19:10.024194+00:00; `data/catalog/probe_results_land_interpretation_2026-10-06.json`; próbka `data/raw/research/2026-10-06/egib_rules_metadata.json`.
+- **Próba EGIB_AMENDMENT_2024:** HTTP 200; 2026-10-06T10:19:57.643228+00:00; `data/catalog/probe_results_land_interpretation_2026-10-06.json`; próbka `data/raw/research/2026-10-06/egib_amendment_2024.html`.
+- **Próba EGIB_AMENDMENT_2026_META:** HTTP 200; 2026-10-06T10:19:57.997345+00:00; `data/catalog/probe_results_land_interpretation_2026-10-06.json`; próbka `data/raw/research/2026-10-06/egib_amendment_2026_meta.json`.
+- **Próba EGIB_RULES_2024_PDF:** HTTP 200; 2026-10-06T10:20:05.436423+00:00; `data/catalog/probe_results_land_interpretation_2026-10-06.json`; próbka `data/raw/research/2026-10-06/egib_rules_2024.pdf`.
+- **Próba EGIB_AMENDMENT_2026_PDF:** HTTP 200; 2026-10-06T10:20:06.281951+00:00; `data/catalog/probe_results_land_interpretation_2026-10-06.json`; próbka `data/raw/research/2026-10-06/egib_amendment_2026.pdf`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### WEGROWO_MPZP_2013 — MPZP XXXIII/14/13 — teren 14E stacji Węgrowo
+
+[Źródło](https://bip.grudziadz.pl/pliki/grudziadz/zalaczniki/17200/mpzp_jaskolcza_rydygiera-podpisany.pdf)
+
+- **Operator:** Miasto Grudziądz
+- **Właściciel:** Rada Miejska Grudziądza
+- **Kraj:** PL
+- **Kategoria:** historical_station_spatial_evidence
+- **Napięcie:** 
+- **Zasięg:** Grudziądz
+- **Format:** PDF
+- **API:** YES
+- **GIS:** NO
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** Dokument urzędowy; nie nadaje praw do odrębnych danych działek.
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO
+- **Pola:** §22; 14E; rysunek planu str.31
+- **Zastosowanie:** Historyczne potwierdzenie obszaru stacji; kandydat do georeferencji.
+- **Ograniczenia:** Plan z 2013 r.; nie sprawdzono późniejszych zmian i obecnego obowiązywania.; Rysunek bez wykonanej georeferencji; nie potwierdza współrzędnych punktu GIS ani własności.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-10-06
+- **Udany odczyt:** 2026-10-06
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba WEGROWO_MPZP_2013:** HTTP 200; 2026-10-06T10:21:45.307733+00:00; `data/catalog/probe_results_land_interpretation_2026-10-06.json`; próbka `data/raw/research/2026-10-06/wegrowo_mpzp_2013.pdf`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

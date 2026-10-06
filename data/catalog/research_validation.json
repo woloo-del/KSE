@@ -1,25 +1,25 @@
 {
-  "checked_at_utc": "2026-10-06T10:12:57.183774+00:00",
+  "checked_at_utc": "2026-10-06T10:23:59.690227+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 85,
+  "source_count": 87,
   "source_status_counts": {
     "SAMPLE_VERIFIED": 21,
-    "CONTENT_REVIEWED": 43,
+    "CONTENT_REVIEWED": 45,
     "DISCOVERED": 4,
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 12
   },
-  "probe_count": 93,
+  "probe_count": 100,
   "http_status_counts": {
-    "200": 92,
+    "200": 99,
     "404": 1
   },
-  "raw_file_count": 92,
+  "raw_file_count": 99,
   "format_counts": {
-    ".html": 33,
-    ".pdf": 16,
-    ".json": 15,
+    ".html": 35,
+    ".pdf": 19,
+    ".json": 17,
     ".xml": 14,
     ".js": 5,
     ".xlsx": 1,
@@ -107,15 +107,30 @@
       "file": "data/raw/research/2026-09-17/pse_prsp_2027_2036_post_consultation.pdf",
       "pages": 120,
       "first_page_text_chars": 206
+    },
+    {
+      "file": "data/raw/research/2026-10-06/egib_amendment_2026.pdf",
+      "pages": 11,
+      "first_page_text_chars": 1973
+    },
+    {
+      "file": "data/raw/research/2026-10-06/egib_rules_2024.pdf",
+      "pages": 62,
+      "first_page_text_chars": 2914
+    },
+    {
+      "file": "data/raw/research/2026-10-06/wegrowo_mpzp_2013.pdf",
+      "pages": 35,
+      "first_page_text_chars": 2784
     }
   ],
-  "local_links_checked": 66,
+  "local_links_checked": 67,
   "dependencies": {
     "python": "3.12.14",
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 1156,
+  "checks_passed": 1208,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -2424,6 +2439,56 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:EGIB_GROUP_RULES",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:EGIB_GROUP_RULES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:EGIB_GROUP_RULES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:EGIB_GROUP_RULES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:EGIB_GROUP_RULES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_fields:WEGROWO_MPZP_2013",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:WEGROWO_MPZP_2013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:WEGROWO_MPZP_2013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:WEGROWO_MPZP_2013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:WEGROWO_MPZP_2013",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
@@ -2850,6 +2915,16 @@
     },
     {
       "name": "probe_references:BIP_WEGROWO_LOCATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:EGIB_GROUP_RULES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:WEGROWO_MPZP_2013",
       "passed": true,
       "detail": null
     },
@@ -3490,6 +3565,146 @@
     },
     {
       "name": "snapshot_sha256:COUNTY_EXPORT_GRUDZIADZ_GPKG",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:EGIB_RULES_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EGIB_RULES_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EGIB_RULES_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EGIB_RULES_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:EGIB_RULES_METADATA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EGIB_RULES_METADATA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EGIB_RULES_METADATA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EGIB_RULES_METADATA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:EGIB_AMENDMENT_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EGIB_AMENDMENT_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EGIB_AMENDMENT_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EGIB_AMENDMENT_2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:EGIB_AMENDMENT_2026_META",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EGIB_AMENDMENT_2026_META",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EGIB_AMENDMENT_2026_META",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EGIB_AMENDMENT_2026_META",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:EGIB_RULES_2024_PDF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EGIB_RULES_2024_PDF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EGIB_RULES_2024_PDF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EGIB_RULES_2024_PDF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:EGIB_AMENDMENT_2026_PDF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:EGIB_AMENDMENT_2026_PDF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:EGIB_AMENDMENT_2026_PDF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:EGIB_AMENDMENT_2026_PDF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:WEGROWO_MPZP_2013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:WEGROWO_MPZP_2013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:WEGROWO_MPZP_2013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:WEGROWO_MPZP_2013",
       "passed": true,
       "detail": null
     },
@@ -5334,12 +5549,62 @@
       "detail": null
     },
     {
+      "name": "format_readable:egib_amendment_2024.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:egib_amendment_2026.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:egib_amendment_2026.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:egib_amendment_2026_meta.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:egib_rules_2024.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:egib_rules_2024.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:egib_rules_2024.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:egib_rules_metadata.json",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "format_readable:grudziadz_parcels.gpkg.zip",
       "passed": true,
       "detail": null
     },
     {
       "name": "format_readable:grudziadz_rural_parcels.gpkg.zip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_text_layer:wegrowo_mpzp_2013.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:wegrowo_mpzp_2013.pdf",
       "passed": true,
       "detail": null
     },
@@ -5585,6 +5850,11 @@
     },
     {
       "name": "local_link:01_data_research.md:25_land_ownership_discovery.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:01_data_research.md:26_land_ownership_area_method.md",
       "passed": true,
       "detail": null
     },
@@ -5880,6 +6150,11 @@
     },
     {
       "name": "python_syntax:compare_private_gis_tables.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:describe_private_wegrowo_land.py",
       "passed": true,
       "detail": null
     },

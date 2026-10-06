@@ -6294,6 +6294,206 @@
       "retrieval_date": [
         "2026-10-06T09:44:40.916181+00:00"
       ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Polska",
+      "grid_voltage": [],
+      "api_available": "YES",
+      "gis_available": "NO",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "Dokument urzędowy; nie nadaje praw do odrębnych danych działek.",
+      "license_url": null,
+      "commercial_use": "NOT_CLEARED",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-10-06",
+      "last_successful_verification": "2026-10-06",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "EGIB_RULES_2024",
+        "EGIB_RULES_METADATA",
+        "EGIB_AMENDMENT_2024",
+        "EGIB_AMENDMENT_2026_META",
+        "EGIB_RULES_2024_PDF",
+        "EGIB_AMENDMENT_2026_PDF"
+      ],
+      "related_urls": [],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "priority": "P1",
+      "source_id": "EGIB_GROUP_RULES",
+      "operator": "MRiT / MFiG",
+      "source_name": "EGiB — grupy rejestrowe i zasady współwłasności",
+      "url": "https://eli.gov.pl/eli/DU/2024/219/ogl",
+      "data_owner": "Dziennik Ustaw / ELI",
+      "data_category": "registration_group_semantics",
+      "data_format": [
+        "HTML",
+        "PDF",
+        "JSON"
+      ],
+      "key_fields": [
+        "§14",
+        "załącznik 2 pkt 17",
+        "nowelizacje"
+      ],
+      "potential_application": "Opisy grup bez konwersji na dokładne udziały własności.",
+      "known_limitations": [
+        "Sprawdzono nowelizacje 2024/1954 i 2026/1094; brak zmian §14 i załącznika 2.",
+        "Nie weryfikuje poprawności konkretnych wpisów powiatowych ani praw do ich redystrybucji."
+      ],
+      "evidence": [
+        {
+          "source_id": "EGIB_RULES_2024",
+          "url": "https://eli.gov.pl/api/acts/DU/2024/219/text.html",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-10-06/egib_rules_2024.html",
+          "sha256": "00e25e10163a32c2071316323f8a09d8257e0c2f6e9404b4a8ff3d8bc16066e7",
+          "bytes": 426337,
+          "retrieval_date": "2026-10-06T10:19:09.928130+00:00",
+          "manifest": "data/catalog/probe_results_land_interpretation_2026-10-06.json"
+        },
+        {
+          "source_id": "EGIB_RULES_METADATA",
+          "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/219",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-10-06/egib_rules_metadata.json",
+          "sha256": "50273363a9f0e6ab292e4b6705a0d0eb4874376af74cdac250a78944c7dbd75d",
+          "bytes": 1190,
+          "retrieval_date": "2026-10-06T10:19:10.024194+00:00",
+          "manifest": "data/catalog/probe_results_land_interpretation_2026-10-06.json"
+        },
+        {
+          "source_id": "EGIB_AMENDMENT_2024",
+          "url": "https://eli.gov.pl/api/acts/DU/2024/1954/text.html",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-10-06/egib_amendment_2024.html",
+          "sha256": "bf174fce5ae044b6318fa1060d670c5a406e87823cba5f250ca8b05e37011b99",
+          "bytes": 63950,
+          "retrieval_date": "2026-10-06T10:19:57.643228+00:00",
+          "manifest": "data/catalog/probe_results_land_interpretation_2026-10-06.json"
+        },
+        {
+          "source_id": "EGIB_AMENDMENT_2026_META",
+          "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1094",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-10-06/egib_amendment_2026_meta.json",
+          "sha256": "f53a5b857b21d19c4a1aa13dfdb7d83e3b016363dd4090e5430195744cbfb5ba",
+          "bytes": 1051,
+          "retrieval_date": "2026-10-06T10:19:57.997345+00:00",
+          "manifest": "data/catalog/probe_results_land_interpretation_2026-10-06.json"
+        },
+        {
+          "source_id": "EGIB_RULES_2024_PDF",
+          "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/219/text.pdf",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-10-06/egib_rules_2024.pdf",
+          "sha256": "73cebb9f8678ec27a5cc8f060c9535d5d23ba33d50c0a3e158313ab393a16fdb",
+          "bytes": 3640476,
+          "retrieval_date": "2026-10-06T10:20:05.436423+00:00",
+          "manifest": "data/catalog/probe_results_land_interpretation_2026-10-06.json"
+        },
+        {
+          "source_id": "EGIB_AMENDMENT_2026_PDF",
+          "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1094/text.pdf",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-10-06/egib_amendment_2026.pdf",
+          "sha256": "841e70aba751396239ef6cf55e43674a6d9359b6fd022627a32e5c8a2e54833d",
+          "bytes": 1219965,
+          "retrieval_date": "2026-10-06T10:20:06.281951+00:00",
+          "manifest": "data/catalog/probe_results_land_interpretation_2026-10-06.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-10-06T10:19:09.928130+00:00",
+        "2026-10-06T10:19:10.024194+00:00",
+        "2026-10-06T10:19:57.643228+00:00",
+        "2026-10-06T10:19:57.997345+00:00",
+        "2026-10-06T10:20:05.436423+00:00",
+        "2026-10-06T10:20:06.281951+00:00"
+      ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Grudziądz",
+      "grid_voltage": [],
+      "api_available": "YES",
+      "gis_available": "NO",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "Dokument urzędowy; nie nadaje praw do odrębnych danych działek.",
+      "license_url": null,
+      "commercial_use": "NOT_CLEARED",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-10-06",
+      "last_successful_verification": "2026-10-06",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "WEGROWO_MPZP_2013"
+      ],
+      "related_urls": [],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "priority": "P1",
+      "source_id": "WEGROWO_MPZP_2013",
+      "operator": "Miasto Grudziądz",
+      "source_name": "MPZP XXXIII/14/13 — teren 14E stacji Węgrowo",
+      "url": "https://bip.grudziadz.pl/pliki/grudziadz/zalaczniki/17200/mpzp_jaskolcza_rydygiera-podpisany.pdf",
+      "data_owner": "Rada Miejska Grudziądza",
+      "data_category": "historical_station_spatial_evidence",
+      "data_format": [
+        "PDF"
+      ],
+      "key_fields": [
+        "§22",
+        "14E",
+        "rysunek planu str.31"
+      ],
+      "potential_application": "Historyczne potwierdzenie obszaru stacji; kandydat do georeferencji.",
+      "known_limitations": [
+        "Plan z 2013 r.; nie sprawdzono późniejszych zmian i obecnego obowiązywania.",
+        "Rysunek bez wykonanej georeferencji; nie potwierdza współrzędnych punktu GIS ani własności."
+      ],
+      "evidence": [
+        {
+          "source_id": "WEGROWO_MPZP_2013",
+          "url": "https://bip.grudziadz.pl/pliki/grudziadz/zalaczniki/17200/mpzp_jaskolcza_rydygiera-podpisany.pdf",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-10-06/wegrowo_mpzp_2013.pdf",
+          "sha256": "178214ad9c8b1fb5a3c731b369c4e7bb18b567400e117dc7714f6285e0dea59a",
+          "bytes": 16063376,
+          "retrieval_date": "2026-10-06T10:21:45.307733+00:00",
+          "manifest": "data/catalog/probe_results_land_interpretation_2026-10-06.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-10-06T10:21:45.307733+00:00"
+      ]
     }
   ]
 }

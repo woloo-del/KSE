@@ -1,0 +1,41 @@
+{
+  "archive_path": "data/archives/land_interpretation_2026-10-06.zip",
+  "archive_sha256": "e7d97e68ba06889083535a8cd31066f6e499c28978c89d444a38b765feec0b85",
+  "files": [
+    {
+      "path": "data/raw/research/2026-10-06/egib_rules_2024.html",
+      "sha256": "00e25e10163a32c2071316323f8a09d8257e0c2f6e9404b4a8ff3d8bc16066e7",
+      "bytes": 426337
+    },
+    {
+      "path": "data/raw/research/2026-10-06/egib_rules_metadata.json",
+      "sha256": "50273363a9f0e6ab292e4b6705a0d0eb4874376af74cdac250a78944c7dbd75d",
+      "bytes": 1190
+    },
+    {
+      "path": "data/raw/research/2026-10-06/egib_amendment_2024.html",
+      "sha256": "bf174fce5ae044b6318fa1060d670c5a406e87823cba5f250ca8b05e37011b99",
+      "bytes": 63950
+    },
+    {
+      "path": "data/raw/research/2026-10-06/egib_amendment_2026_meta.json",
+      "sha256": "f53a5b857b21d19c4a1aa13dfdb7d83e3b016363dd4090e5430195744cbfb5ba",
+      "bytes": 1051
+    },
+    {
+      "path": "data/raw/research/2026-10-06/egib_rules_2024.pdf",
+      "sha256": "73cebb9f8678ec27a5cc8f060c9535d5d23ba33d50c0a3e158313ab393a16fdb",
+      "bytes": 3640476
+    },
+    {
+      "path": "data/raw/research/2026-10-06/egib_amendment_2026.pdf",
+      "sha256": "841e70aba751396239ef6cf55e43674a6d9359b6fd022627a32e5c8a2e54833d",
+      "bytes": 1219965
+    },
+    {
+      "path": "data/raw/research/2026-10-06/wegrowo_mpzp_2013.pdf",
+      "sha256": "178214ad9c8b1fb5a3c731b369c4e7bb18b567400e117dc7714f6285e0dea59a",
+      "bytes": 16063376
+    }
+  ]
+}

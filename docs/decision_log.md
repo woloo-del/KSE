@@ -369,3 +369,13 @@ Selected option: wspólna analiza z osobną proweniencją i audytem każdej pacz
 Reason: miasto pokrywało jedynie 52,76% bufora kandydata Węgrowo.
 Trade-offs: daty pakietów nie stanowią wspólnego stanu prawnego; nakładania graniczne wymagają jawnego wyłączenia.
 Consequences: wcześniejszy wynik zachowany; nowy prywatny wynik nie awansuje lokalizacji stacji ani interpretacji własności do potwierdzonych.
+
+
+## 2026-10-06 — prezentacja grup zamiast udziałów własności
+
+Decision: zachować 16 grup i pokazywać powierzchnię geometrii przypisanej do grupy.
+Options considered: uproszczenie SP/prywatne; pełny słownik z objaśnieniami.
+Selected option: pełny słownik i jawne ograniczenia.
+Reason: załącznik 2 pkt 17 EGiB kwalifikuje współwłasność do jednej grupy; nie daje pełnej struktury udziałów.
+Trade-offs: więcej kategorii do przeczytania, brak pozornego uproszczenia.
+Consequences: nie obliczamy dokładnych udziałów praw na podstawie samych grup; nie zmieniamy zakresu produktu.

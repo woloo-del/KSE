@@ -1189,6 +1189,27 @@
       ],
       "started_at": "2026-10-06",
       "completed_at": "2026-10-06"
+    },
+    {
+      "id": "KSE-061",
+      "title": "Wyjaśnienie grup rejestrowych i prywatny raport Węgrowa",
+      "stage": "GIS",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-060"
+      ],
+      "next_action": "Zweryfikować przestrzennie punkt stacji oraz warunki ponownego wykorzystania danych.",
+      "acceptance": "Źródłowy słownik, kontrola nowelizacji, jawne ograniczenia współwłasności, raport prywatny i testy.",
+      "evidence": [
+        "data/reference/registration_group_labels.json",
+        "scripts/describe_private_wegrowo_land.py",
+        "tests/test_land_group_review.py",
+        "docs/26_land_ownership_area_method.md"
+      ],
+      "started_at": "2026-10-06",
+      "completed_at": "2026-10-06"
     }
   ]
 }

@@ -80,6 +80,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-058 | Odkrycie i audyt plikowej paczki działek GUGiK | GIS | Zrobione | P1 | — |
 | KSE-059 | Adapter paczki działek i prywatna kontrola pokrycia Węgrowa | GIS | Zrobione | P1 | KSE-058, KSE-055 |
 | KSE-060 | Uzupełnienie bufora Węgrowa paczką sąsiedniego powiatu | GIS | Zrobione | P1 | KSE-059 |
+| KSE-061 | Wyjaśnienie grup rejestrowych i prywatny raport Węgrowa | GIS | Zrobione | P1 | KSE-060 |
 
 ## Kryteria zakończenia i dowody
 
@@ -742,3 +743,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-10-06.
 - Dowody/kontekst: [data/reference/county_rural_export_audit_2026-10-06.json](data/reference/county_rural_export_audit_2026-10-06.json), [scripts/analyze_private_wegrowo_land.py](scripts/analyze_private_wegrowo_land.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md).
+
+### KSE-061 — Wyjaśnienie grup rejestrowych i prywatny raport Węgrowa
+
+- Odpowiedzialność: Codex.
+- Następny krok: Zweryfikować przestrzennie punkt stacji oraz warunki ponownego wykorzystania danych.
+- Kryterium: Źródłowy słownik, kontrola nowelizacji, jawne ograniczenia współwłasności, raport prywatny i testy.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-10-06.
+- Dowody/kontekst: [data/reference/registration_group_labels.json](data/reference/registration_group_labels.json), [scripts/describe_private_wegrowo_land.py](scripts/describe_private_wegrowo_land.py), [tests/test_land_group_review.py](tests/test_land_group_review.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md).
