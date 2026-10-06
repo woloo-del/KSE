@@ -1,0 +1,56 @@
+<div id="kse-land-progress">
+  <h2>Węgrowo · co zmieniło się w danych</h2>
+  <div class="text-muted">Bufor 1 km · historyczny punkt GIS · podgląd prywatny</div>
+  <div class="viz-grid" style="margin-block:20px">
+    <div>
+      <h3>Wcześniej · samo miasto</h3>
+      <div><span id="kse-before-count"></span> działek · <span id="kse-before-coverage"></span>% pokrycia geometrycznego</div>
+      <div class="progress" role="progressbar" aria-label="Wcześniejsze pokrycie geometryczne" aria-valuemin="0" aria-valuemax="100" id="kse-before-meter"><div class="progress-bar" id="kse-before-bar"></div></div>
+    </div>
+    <div>
+      <h3>Teraz · miasto i powiat</h3>
+      <div><span id="kse-now-count"></span> działek · niemal 100% pokrycia geometrycznego</div>
+      <div class="progress" role="progressbar" aria-label="Obecne pokrycie geometryczne" aria-valuemin="0" aria-valuemax="100" id="kse-now-meter"><div class="progress-bar" id="kse-now-bar"></div></div>
+    </div>
+  </div>
+  <div class="viz-row"><span>Nakładanie geometrii: <strong id="kse-overlap"></strong> m²</span><span>Brak geometrii: <strong id="kse-gap"></strong> m²</span></div>
+  <hr>
+  <label class="form-label" for="kse-group">Powierzchnia według grupy rejestrowej</label>
+  <select class="form-select" id="kse-group"></select>
+  <div class="viz-row" aria-live="polite" style="margin-block:16px"><strong id="kse-area"></strong><span id="kse-share"></span><span>całego bufora</span></div>
+  <div class="text-muted">Grupa działki ≠ pełna struktura udziałów właścicieli</div>
+  <hr>
+  <details><summary>Nowe dowody i pozostałe braki</summary>
+    <table class="table table-sm"><thead><tr><th>Element</th><th>Obecny stan</th></tr></thead><tbody>
+      <tr><td>Działki i grupy</td><td>Dwie zachowane paczki GUGiK, audyt geometrii i identyfikatorów</td></tr>
+      <tr><td>Opisy 16 grup</td><td>Sprawdzone przepisy i nowelizacje; bez automatycznego podziału SP/prywatne</td></tr>
+      <tr><td>Granice planów</td><td>Punkt wewnątrz planu 97; poza planem 79</td></tr>
+      <tr><td>Teren stacji 14E</td><td>Brak potwierdzonej geometrii; punkt stacji nadal kandydatem</td></tr>
+      <tr><td>Udostępnienie danych</td><td>Warunki redystrybucji grup wymagają ustalenia</td></tr>
+    </tbody></table>
+  </details>
+  <details style="margin-top:12px"><summary>Źródła i metoda</summary><ul id="kse-source-list"></ul><div class="text-muted">Powierzchnie obliczone w EPSG:2180. Nakładanie wyłączone z grup. Daty pobrania nie oznaczają dat zmiany własności. Stan przeglądu: 06.10.2026.</div></details>
+</div>
+<script type="application/json" id="kse-land-data">__LAND_DATA__</script>
+<script>
+(() => {
+ const root = document.getElementById('kse-land-progress');
+ const data = JSON.parse(document.getElementById('kse-land-data').textContent);
+ const get = id => root.querySelector('#'+id);
+ const fmt = (v,n=2) => v.toLocaleString('pl-PL',{minimumFractionDigits:n,maximumFractionDigits:n});
+ for (const key of ['before','now']) {
+   get('kse-'+key+'-count').textContent = data[key].count;
+   get('kse-'+key+'-meter').setAttribute('aria-valuenow',data[key].coverage);
+   get('kse-'+key+'-bar').style.width=data[key].coverage+'%';
+ }
+ get('kse-before-coverage').textContent=fmt(data.before.coverage,1);
+ get('kse-overlap').textContent=fmt(data.overlap,2);
+ get('kse-gap').textContent=fmt(data.gap,2);
+ const select=get('kse-group');
+ for (const row of data.groups) {const option=document.createElement('option');option.value=row.code;option.textContent=row.code+' · '+row.label;select.append(option);}
+ select.value='7';
+ function update(){const row=data.groups.find(x=>x.code===select.value);get('kse-area').textContent=fmt(row.ha)+' ha';get('kse-share').textContent=fmt(row.percent)+'%';}
+ select.addEventListener('change',update);update();
+ for (const source of data.sources) {const li=document.createElement('li');const a=document.createElement('a');a.href=source.url;a.textContent=source.label;a.target='_blank';a.rel='noopener noreferrer';li.append(a);get('kse-source-list').append(li);}
+})();
+</script>

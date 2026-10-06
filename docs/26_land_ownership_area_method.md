@@ -135,3 +135,8 @@ Miejski geoportal odpowiedział pod `https://geoportal.grudziadz.pl/geoportal/f?
 | Wdrożenie UI | Jeszcze nie wdrożono modułu | Raport roboczy dostępny lokalnie |
 
 Skalowanie: najpierw maszynowa kontrola formatu, CRS, zasięgu i dat dla publikowanych plików; ręczna kolejka dla wyjątków. Sama obecność punktu w planie nie daje automatycznej identyfikacji stacji. Następna potrzebna informacja: georeferencjonowany teren 14E albo aktualna geometria stacji z oficjalnym pochodzeniem; zapisano w NEED-022. Nie jest potrzebna kolejna kopia już pobranych paczek działek. XLSX w tym kroku nie odświeżono.
+
+
+## 2026-10-06 — porównanie dla użytkownika
+
+Dodano `scripts/build_private_land_progress.py` i wersjonowany szablon `scripts/templates/land_progress.html`. Generator czyta zachowane wyniki miasta i obu powiatów oraz słownik; sprawdza zgodność punktu i promienia. Pokazuje 278 → 520 działek, pokrycie, luki, nakładanie oraz wybór jednej z 16 grup. Wyjście pozostaje lokalne/prywatne i nie zawiera współrzędnych ani identyfikatorów działek. Liczby pochodzą z JSON, bez kopiowania danych do szablonu. Opis kontroli planów jest redakcyjnym podsumowaniem poprzedniego etapu. Nie zmieniono `/profiles` ani strony Sites. Sprawdzono powiązania elementów, zmianę wartości po wyborze kategorii i zgodność liczników w wykonaniu JavaScript z symulowanym DOM; nie wykonano przeglądu zrzutu ekranu w przeglądarce. Odtworzenie: `python scripts/build_private_land_progress.py --output data/private/reviews/wegrowo_land_2026-10-06/progress.html`.

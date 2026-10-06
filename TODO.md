@@ -754,7 +754,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-10-06.
-- Dowody/kontekst: [data/reference/registration_group_labels.json](data/reference/registration_group_labels.json), [scripts/describe_private_wegrowo_land.py](scripts/describe_private_wegrowo_land.py), [tests/test_land_group_review.py](tests/test_land_group_review.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md).
+- Dowody/kontekst: [data/reference/registration_group_labels.json](data/reference/registration_group_labels.json), [scripts/describe_private_wegrowo_land.py](scripts/describe_private_wegrowo_land.py), [tests/test_land_group_review.py](tests/test_land_group_review.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md), [scripts/build_private_land_progress.py](scripts/build_private_land_progress.py), [scripts/templates/land_progress.html](scripts/templates/land_progress.html).
 
 ### KSE-062 — Odtwarzalna kontrola historycznych zasięgów APP przy Węgrowie
 
