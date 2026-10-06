@@ -5,7 +5,7 @@ import unittest
 from contextlib import closing
 from pathlib import Path
 from shapely.geometry import box
-from connectors.gis.county_package import inspect_parcels
+from connectors.gis.county_package import inspect_parcels, select_parcels
 
 
 class CountyPackageTests(unittest.TestCase):
@@ -33,6 +33,24 @@ class CountyPackageTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             with self.assertRaisesRegex(ValueError,'CRS'):
                 inspect_parcels(self.fixture(directory, [],4326))
+
+    def test_selection_excludes_outside_and_boundary_touch(self):
+        def blob(geometry):
+            return b'GP\x00\x01' + struct.pack('<i',2180) + geometry.wkb
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.fixture(directory, [('inside',7,None,'test',blob(box(1,1,2,2))),
+                                            ('touch',7,None,'test',blob(box(3,1,4,2))),
+                                            ('outside',7,None,'test',blob(box(10,10,11,11)))])
+            selected, audit = select_parcels(path,buffer=box(0,0,3,3),source_id='synthetic')
+        self.assertEqual([p.parcel_id for p in selected],['inside'])
+        self.assertEqual(audit['record_count'],3)
+        self.assertEqual(selected[0].source_id,'synthetic')
+
+    def test_selection_rejects_bad_package_instead_of_partial_output(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.fixture(directory,[('bad',7,None,'test',b'bad')])
+            with self.assertRaisesRegex(ValueError,'PACKAGE_REQUIRES_REVIEW'):
+                select_parcels(path,buffer=box(0,0,3,3),source_id='synthetic')
 
     def test_preserved_source(self):
         path = Path('data/staging/research/grudziadz_parcels_2026-10-06.gpkg')

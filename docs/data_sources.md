@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-10-06**. Źródła: **84**.
+Stan badania: **2026-10-06**. Źródła: **85**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -94,6 +94,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | GUGIK_OWNERSHIP_MAP | [GUGiK — WMS Mapa własności i kompletność powiatowa](https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci) | SAMPLE_VERIFIED | P1 | NOT_CLEARED |
 | PYPROJ_TRANSFORMER | [pyproj 3.7.2 — Transformer i licencja](https://pyproj4.github.io/pyproj/stable/api/transformer.html) | DOCUMENTATION_REVIEWED | P1 | YES_UNDER_LICENSE |
 | GUGIK_COUNTY_EXPORT | [GUGiK — Dane powiatowe, paczka GPKG Grudziądz](https://mapy.geoportal.gov.pl/wss/ext/DanePowiatowe) | SAMPLE_VERIFIED | P1 | NOT_CLEARED |
+| BIP_WEGROWO_LOCATION | [BIP Grudziądz — decyzja środowiskowa rozbudowy stacji, 2016](https://bip.grudziadz.pl/artykul/obwieszczenie-informacja-prezydenta-grudziadza-z-dnia-03-lutego-2016-r-o-wydaniu-decyzji-o-srod) | CONTENT_REVIEWED | P1 | NOT_CLEARED |
 
 ## Karty źródeł
 
@@ -3162,5 +3163,41 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Próba COUNTY_EXPORT_CAPS:** HTTP 200; 2026-10-06T09:32:50.028595+00:00; `data/catalog/probe_results_county_export_2026-10-06.json`; próbka `data/raw/research/2026-10-06/county_export_caps.xml`.
 - **Próba COUNTY_EXPORT_GRUDZIADZ:** HTTP 200; 2026-10-06T09:33:13.717027+00:00; `data/catalog/probe_results_county_export_2026-10-06.json`; próbka `data/raw/research/2026-10-06/county_export_grudziadz.html`.
 - **Próba COUNTY_EXPORT_GRUDZIADZ_GPKG:** HTTP 200; 2026-10-06T09:33:51.996791+00:00; `data/catalog/probe_results_county_export_2026-10-06.json`; próbka `data/raw/research/2026-10-06/grudziadz_parcels.gpkg.zip`.
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### BIP_WEGROWO_LOCATION — BIP Grudziądz — decyzja środowiskowa rozbudowy stacji, 2016
+
+[Źródło](https://bip.grudziadz.pl/artykul/obwieszczenie-informacja-prezydenta-grudziadza-z-dnia-03-lutego-2016-r-o-wydaniu-decyzji-o-srod)
+
+- **Operator:** Miasto Grudziądz
+- **Właściciel:** Urząd Miejski w Grudziądzu
+- **Kraj:** PL
+- **Kategoria:** station_location_research
+- **Napięcie:** 
+- **Zasięg:** Grudziądz Węgrowo
+- **Format:** HTML
+- **API:** NO
+- **GIS:** NO
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO
+- **Pola:** nazwa stacji; 400/220/110 kV; decyzja środowiskowa
+- **Zastosowanie:** Ocena dostępności własności gruntów w otoczeniu stacji
+- **Ograniczenia:** Historyczne obwieszczenie 03.02.2016 potwierdza nazwę przedsięwzięcia i napięcia, nie podaje współrzędnych ani ID działek.; Nie potwierdza tożsamości punktu historycznego GIS ani obecnego statusu inwestycji.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-10-06
+- **Udany odczyt:** 2026-10-06
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba BIP_WEGROWO_LOCATION:** HTTP 200; 2026-10-06T09:44:40.916181+00:00; `data/catalog/probe_results_wegrowo_location_2026-10-06.json`; próbka `data/raw/research/2026-10-06/bip_wegrowo_location.html`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

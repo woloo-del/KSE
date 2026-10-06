@@ -1053,7 +1053,7 @@
       "priority": "P1",
       "owner": "Codex",
       "depends_on": [],
-      "next_action": "Znaleziono i sprawdzono paczkę 0462 GPKG: 24230 działek z grupą. Zweryfikować punkt stacji i cały bufor względem granicy powiatu, następnie adapter paczki do analizy. Ustalić znaczenie dat i prawa do grup. Radkowice nadal NEED-021.",
+      "next_action": "Wykonana prywatna diagnostyka punktu Węgrowo z GIS 2024: 278 działek, pokrycie geometryczne paczki miasta 52,76%. Uzupełnić sąsiedni powiat i potwierdzić położenie; źródła online w próbie odrzucają zapytania/timeout. Nie interpretować braków jako prywatnych.",
       "acceptance": "Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.",
       "evidence": [
         "docs/25_land_ownership_discovery.md",
@@ -1066,7 +1066,8 @@
         "docs/26_land_ownership_area_method.md",
         "data/reference/ownership_sample_readiness_2026-09-19.json",
         "data/reference/ownership_paging_audit_2026-09-19.json",
-        "data/reference/county_export_audit_2026-10-06.json"
+        "data/reference/county_export_audit_2026-10-06.json",
+        "scripts/analyze_private_wegrowo_land.py"
       ],
       "started_at": "2026-09-18"
     },
@@ -1143,6 +1144,28 @@
         "connectors/gis/county_package.py",
         "tests/test_county_package.py",
         "data/reference/county_export_audit_2026-10-06.json"
+      ],
+      "started_at": "2026-10-06",
+      "completed_at": "2026-10-06"
+    },
+    {
+      "id": "KSE-059",
+      "title": "Adapter paczki działek i prywatna kontrola pokrycia Węgrowa",
+      "stage": "GIS",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-058",
+        "KSE-055"
+      ],
+      "next_action": "Uzupełnić brak geometrii oraz zweryfikować lokalizację punktu przed raportem stacji.",
+      "acceptance": "Źródłowe wejścia i hashe, audyt paczki przed wyborem, jawny częściowy wynik dla historycznego kandydata; bez publikacji prywatnych danych.",
+      "evidence": [
+        "connectors/gis/county_package.py",
+        "tests/test_county_package.py",
+        "scripts/analyze_private_wegrowo_land.py",
+        "docs/26_land_ownership_area_method.md"
       ],
       "started_at": "2026-10-06",
       "completed_at": "2026-10-06"

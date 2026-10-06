@@ -14,7 +14,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
-- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Znaleziono i sprawdzono paczkę 0462 GPKG: 24230 działek z grupą. Zweryfikować punkt stacji i cały bufor względem granicy powiatu, następnie adapter paczki do analizy. Ustalić znaczenie dat i prawa do grup. Radkowice nadal NEED-021.
+- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Wykonana prywatna diagnostyka punktu Węgrowo z GIS 2024: 278 działek, pokrycie geometryczne paczki miasta 52,76%. Uzupełnić sąsiedni powiat i potwierdzić położenie; źródła online w próbie odrzucają zapytania/timeout. Nie interpretować braków jako prywatnych.
 
 ## Pełny rejestr
 
@@ -78,6 +78,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-056 | Transformacja CRS i kontrola kompletności pojedynczej odpowiedzi działek | GIS | Zrobione | P1 | KSE-055 |
 | KSE-057 | Kontrola łańcucha stron WFS i ograniczone pobieranie | GIS | Zrobione | P1 | KSE-056 |
 | KSE-058 | Odkrycie i audyt plikowej paczki działek GUGiK | GIS | Zrobione | P1 | — |
+| KSE-059 | Adapter paczki działek i prywatna kontrola pokrycia Węgrowa | GIS | Zrobione | P1 | KSE-058, KSE-055 |
 
 ## Kryteria zakończenia i dowody
 
@@ -667,13 +668,13 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji
 
 - Odpowiedzialność: Codex.
-- Następny krok: Znaleziono i sprawdzono paczkę 0462 GPKG: 24230 działek z grupą. Zweryfikować punkt stacji i cały bufor względem granicy powiatu, następnie adapter paczki do analizy. Ustalić znaczenie dat i prawa do grup. Radkowice nadal NEED-021.
+- Następny krok: Wykonana prywatna diagnostyka punktu Węgrowo z GIS 2024: 278 działek, pokrycie geometryczne paczki miasta 52,76%. Uzupełnić sąsiedni powiat i potwierdzić położenie; źródła online w próbie odrzucają zapytania/timeout. Nie interpretować braków jako prywatnych.
 - Kryterium: Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.
 - Nieukończone zależności: brak.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/25_land_ownership_discovery.md](docs/25_land_ownership_discovery.md), [data/reference/land_ownership_probe_2026-09-19.json](data/reference/land_ownership_probe_2026-09-19.json), [tests/test_ownership_probe.py](tests/test_ownership_probe.py), [data/reference/ownership_map_probe_2026-09-19.json](data/reference/ownership_map_probe_2026-09-19.json), [tests/test_ownership_map.py](tests/test_ownership_map.py), [data/reference/ownership_comparison_2026-09-19.json](data/reference/ownership_comparison_2026-09-19.json), [tests/test_ownership_normalization.py](tests/test_ownership_normalization.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md), [data/reference/ownership_sample_readiness_2026-09-19.json](data/reference/ownership_sample_readiness_2026-09-19.json), [data/reference/ownership_paging_audit_2026-09-19.json](data/reference/ownership_paging_audit_2026-09-19.json), [data/reference/county_export_audit_2026-10-06.json](data/reference/county_export_audit_2026-10-06.json).
+- Dowody/kontekst: [docs/25_land_ownership_discovery.md](docs/25_land_ownership_discovery.md), [data/reference/land_ownership_probe_2026-09-19.json](data/reference/land_ownership_probe_2026-09-19.json), [tests/test_ownership_probe.py](tests/test_ownership_probe.py), [data/reference/ownership_map_probe_2026-09-19.json](data/reference/ownership_map_probe_2026-09-19.json), [tests/test_ownership_map.py](tests/test_ownership_map.py), [data/reference/ownership_comparison_2026-09-19.json](data/reference/ownership_comparison_2026-09-19.json), [tests/test_ownership_normalization.py](tests/test_ownership_normalization.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md), [data/reference/ownership_sample_readiness_2026-09-19.json](data/reference/ownership_sample_readiness_2026-09-19.json), [data/reference/ownership_paging_audit_2026-09-19.json](data/reference/ownership_paging_audit_2026-09-19.json), [data/reference/county_export_audit_2026-10-06.json](data/reference/county_export_audit_2026-10-06.json), [scripts/analyze_private_wegrowo_land.py](scripts/analyze_private_wegrowo_land.py).
 
 ### KSE-055 — Rdzeń obliczania powierzchni grup rejestrowych w buforze
 
@@ -718,3 +719,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-10-06.
 - Dowody/kontekst: [connectors/gis/county_package.py](connectors/gis/county_package.py), [tests/test_county_package.py](tests/test_county_package.py), [data/reference/county_export_audit_2026-10-06.json](data/reference/county_export_audit_2026-10-06.json).
+
+### KSE-059 — Adapter paczki działek i prywatna kontrola pokrycia Węgrowa
+
+- Odpowiedzialność: Codex.
+- Następny krok: Uzupełnić brak geometrii oraz zweryfikować lokalizację punktu przed raportem stacji.
+- Kryterium: Źródłowe wejścia i hashe, audyt paczki przed wyborem, jawny częściowy wynik dla historycznego kandydata; bez publikacji prywatnych danych.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-10-06.
+- Dowody/kontekst: [connectors/gis/county_package.py](connectors/gis/county_package.py), [tests/test_county_package.py](tests/test_county_package.py), [scripts/analyze_private_wegrowo_land.py](scripts/analyze_private_wegrowo_land.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md).

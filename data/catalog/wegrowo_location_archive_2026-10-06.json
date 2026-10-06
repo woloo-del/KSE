@@ -1,0 +1,11 @@
+{
+  "archive_path": "data/archives/wegrowo_location_2026-10-06.zip",
+  "archive_sha256": "18eaad21f7402dce72a7001685d99b796b0ea15787373f98fee21e940a92cf26",
+  "files": [
+    {
+      "path": "data/raw/research/2026-10-06/bip_wegrowo_location.html",
+      "sha256": "c8861d3a51eab0f342d608b9b6323493cbf4b9508cf07a479a89b00b145a873a",
+      "bytes": 868469
+    }
+  ]
+}

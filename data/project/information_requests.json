@@ -303,7 +303,7 @@
       "status": "Otrzymano — do oceny zakresu",
       "requested_scope": "Publiczna usługa z wersją migawki lub datowany plik geometrii działek i grup rejestrowych dla obszaru pilota; identyfikator działki, CRS, data stanu, zakres pokrycia i zasady ponownego wykorzystania. Bez danych osobowych właścicieli.",
       "unlocks": "Odtwarzalny import pełnego bufora bez ryzyka zmian pomiędzy stronami odpowiedzi.",
-      "next_action": "Samodzielnie pozyskano oficjalną paczkę Grudziądza z 24230 działkami, grupami i datami. Sprawdzić zakres bufora, znaczenie dat oraz warunki użycia. Nie potrzeba dostarczać tej samej paczki przez użytkownika.",
+      "next_action": "Paczka miasta Grudziądz dostępna. Kontrola przy historycznym punkcie GIS daje pokrycie 52,76% bufora; potrzebna paczka sąsiedniego powiatu i potwierdzenie lokalizacji. Użytkownik może opcjonalnie wskazać oficjalny punkt stacji lub posiadaną paczkę powiatu grudziądzkiego z grupami. Codex kontynuuje pozyskiwanie.",
       "without_it": "Można rejestrować strony i ich ograniczenia, ale nie przedstawiać niespójnej lub niekompletnej sesji jako kompletnego raportu powierzchni.",
       "owner": "Codex — research; użytkownik — pomoc opcjonalna",
       "basis": "Capabilities GUGiK 19.09.2026: PagingIsTransactionSafe FALSE; dwie strony z numberMatched unknown. docs/26_land_ownership_area_method.md.",

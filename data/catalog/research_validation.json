@@ -1,23 +1,23 @@
 {
-  "checked_at_utc": "2026-10-06T09:36:42.984581+00:00",
+  "checked_at_utc": "2026-10-06T09:49:43.726903+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 84,
+  "source_count": 85,
   "source_status_counts": {
     "SAMPLE_VERIFIED": 21,
-    "CONTENT_REVIEWED": 42,
+    "CONTENT_REVIEWED": 43,
     "DISCOVERED": 4,
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 12
   },
-  "probe_count": 90,
+  "probe_count": 91,
   "http_status_counts": {
-    "200": 89,
+    "200": 90,
     "404": 1
   },
-  "raw_file_count": 89,
+  "raw_file_count": 90,
   "format_counts": {
-    ".html": 31,
+    ".html": 32,
     ".pdf": 16,
     ".json": 15,
     ".xml": 14,
@@ -115,7 +115,7 @@
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 1134,
+  "checks_passed": 1146,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -2399,6 +2399,31 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:BIP_WEGROWO_LOCATION",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:BIP_WEGROWO_LOCATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:BIP_WEGROWO_LOCATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:BIP_WEGROWO_LOCATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:BIP_WEGROWO_LOCATION",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
@@ -2820,6 +2845,11 @@
     },
     {
       "name": "probe_references:GUGIK_COUNTY_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:BIP_WEGROWO_LOCATION",
       "passed": true,
       "detail": null
     },
@@ -4544,6 +4574,26 @@
       "detail": null
     },
     {
+      "name": "snapshot_within_raw:BIP_WEGROWO_LOCATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:BIP_WEGROWO_LOCATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:BIP_WEGROWO_LOCATION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:BIP_WEGROWO_LOCATION",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "snapshot_within_raw:PSE_INVESTMENTS_RADK",
       "passed": true,
       "detail": null
@@ -5219,6 +5269,11 @@
       "detail": null
     },
     {
+      "name": "format_readable:bip_wegrowo_location.html",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "wms_capabilities:county_export_caps.xml",
       "passed": true,
       "detail": null
@@ -5640,6 +5695,11 @@
     },
     {
       "name": "python_syntax:analyze_historical_assignments.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:analyze_private_wegrowo_land.py",
       "passed": true,
       "detail": null
     },

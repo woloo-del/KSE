@@ -6,6 +6,8 @@ import sqlite3
 from shapely.errors import GEOSException
 
 from connectors.gis.geopackage import decode_geometry
+from gis.ownership_area import Parcel
+from shapely.geometry.base import BaseGeometry
 
 
 def inspect_parcels(path: Path) -> dict:
@@ -55,3 +57,20 @@ def inspect_parcels(path: Path) -> dict:
             'limitations': ['File consistency is not a single legal validity date for all parcels.',
                            'County package is not proof of coverage of a station buffer.',
                            'Only parcel geometry, ID, group and dates were inspected.']}
+
+
+def select_parcels(path: Path, *, buffer: BaseGeometry, source_id: str) -> tuple[list[Parcel], dict]:
+    """Read the audited EPSG:2180 layer and return only positive-area intersections."""
+    if not source_id or buffer.is_empty or not buffer.is_valid or buffer.geom_type not in ('Polygon', 'MultiPolygon'):
+        raise ValueError('INVALID_SELECTION_INPUT')
+    audit = inspect_parcels(path)
+    if audit['errors'] or audit['duplicate_id_count']:
+        raise ValueError('PACKAGE_REQUIRES_REVIEW')
+    selected = []
+    with closing(sqlite3.connect(path.resolve().as_uri() + '?mode=ro', uri=True)) as db:
+        db.execute('PRAGMA trusted_schema=OFF')
+        for identifier, group, date, blob in db.execute('SELECT id_dzialki,grupa_rejestrowa,data,geometry FROM dzialki'):
+            geometry = decode_geometry(blob, 2180)
+            if geometry.intersection(buffer).area > 0:
+                selected.append(Parcel(identifier, geometry, group if group else None, source_id, date or None))
+    return selected, audit

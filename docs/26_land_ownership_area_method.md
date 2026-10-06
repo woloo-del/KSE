@@ -75,3 +75,15 @@ Kolejny kierunek: **datowany eksport albo wersjonowana usługa**. NEED-022 rejes
 Znaleziono oficjalny ZIP/GPKG Grudziądza; [szczegóły audytu](25_land_ownership_discovery.md). Jeden zachowany plik usuwa problem zmieniających się odpowiedzi podczas lokalnego przetwarzania, ale nie dowodzi jednej daty obowiązywania wszystkich danych EGiB. `connectors/gis/county_package.py` ponownie wykorzystuje istniejący dekoder GeoPackage; czyta tylko warstwę działek w trybie read-only, sprawdza CRS, unikalność ID, grupy oraz geometrie. Zwraca liczniki błędów, nie maskuje ich jako braków danych. `scripts/audit_county_export.py` sprawdza hash ZIP, rozmiar i nazwę członu oraz odmawia nadpisania odmiennego rozpakowanego pliku. Daty pozostają surowymi wartościami źródła.
 
 Nie uruchomiono jeszcze bufora konkretnej stacji. Paczka obejmuje miasto Grudziądz (TERYT 0462), nie automatycznie sąsiedni powiat ani cały bufor stacji Grudziądz Węgrowo. Kolejny krok to zweryfikowana lokalizacja i wybór wszystkich potrzebnych paczek. Raport XLSX nie był regenerowany; rejestry zasilające go są zaktualizowane.
+
+## Prywatna kontrola kandydata Węgrowo — 06.10.2026
+
+Dodano `select_parcels` do istniejącego connectora paczki. Audyt całej warstwy poprzedza wybór działek przecinających bufor o dodatniej powierzchni; błędy paczki lub duplikaty blokują wynik. Adapter zwraca obiekty Parcel z grupą i pochodzeniem, używane przez istniejący rdzeń powierzchni. Nie dodano zależności.
+
+`scripts/analyze_private_wegrowo_land.py` wybiera jawnie jeden punkt z przekazanego historycznego GIS (stan wskazany przez użytkownika: 2024). Zachowuje źródło i hash, używa x/y punktu, a następnie przekształca do EPSG:2180. Nie awansuje tego rekordu do potwierdzonej stacji. Wynik zapisuje wyłącznie w ignorowanym `data/private/reviews/wegrowo_land_2026-10-06/land_diagnostic.json`.
+
+W tej diagnostyce **278 działek** paczki miasta przecina bufor; ich suma geometryczna pokrywa **około 52,76%** powierzchni bufora. Pozostała powierzchnia jest brakiem geometrii w zestawie wejściowym. Nie określono jej własności ani nie przypisano jej automatycznie do sąsiedniego powiatu — do tego potrzebna kontrola oficjalnej granicy. Wynik nie jest pełnym raportem stacji ani podziałem prawnym państwowe/prywatne.
+
+Odczytane [obwieszczenie BIP z 03.02.2016](https://bip.grudziadz.pl/artykul/obwieszczenie-informacja-prezydenta-grudziadza-z-dnia-03-lutego-2016-r-o-wydaniu-decyzji-o-srod) potwierdza nazwę rozbudowy stacji 400/220/110 kV, ale nie podaje współrzędnych lub identyfikatorów działek. Próba OSM zakończyła się HTTP 406, a drugi serwer timeoutem. Próba odczytu odnośnika do sąsiedniej paczki przez WMS zakończyła się zerwaniem połączenia; paczki nie pozyskano w tym kroku. Te nieudane zapytania nie stanowią dowodu braku źródła.
+
+Obwieszczenie zachowano w `data/archives/wegrowo_location_2026-10-06.zip`; manifest `data/catalog/wegrowo_location_archive_2026-10-06.json`. Prywatny GIS i diagnostyka wymagają oddzielnej prywatnej kopii; Git zawiera kod odtworzenia, dokumentację i metrykę publicznego źródła. NEED-022 doprecyzowano o sąsiednią paczkę i potwierdzenie punktu. Raport XLSX nie był regenerowany.

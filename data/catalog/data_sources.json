@@ -6225,6 +6225,75 @@
         "2026-10-06T09:33:13.717027+00:00",
         "2026-10-06T09:33:51.996791+00:00"
       ]
+    },
+    {
+      "country": "PL",
+      "geographical_scope": "Grudziądz Węgrowo",
+      "grid_voltage": [],
+      "api_available": "NO",
+      "gis_available": "NO",
+      "update_frequency": "UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.",
+      "historical_data": "UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.",
+      "authentication": "Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.",
+      "license": "UNKNOWN",
+      "license_url": null,
+      "commercial_use": "NOT_CLEARED",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "data_quality_score": null,
+      "quality_score_status": "NOT_CALIBRATED — autorytet źródła nie jest procentem kompletności lub trafności.",
+      "last_verified": "2026-10-06",
+      "last_successful_verification": "2026-10-06",
+      "source_date": null,
+      "publication_date": null,
+      "source_version": null,
+      "source_page": null,
+      "valid_from": null,
+      "valid_to": null,
+      "current_future_scope": "SOURCE_DEPENDENT",
+      "value_classification_default": "REPORTED",
+      "automation_notes": "Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.",
+      "probe_ids": [
+        "BIP_WEGROWO_LOCATION"
+      ],
+      "related_urls": [],
+      "source_id": "BIP_WEGROWO_LOCATION",
+      "operator": "Miasto Grudziądz",
+      "source_name": "BIP Grudziądz — decyzja środowiskowa rozbudowy stacji, 2016",
+      "url": "https://bip.grudziadz.pl/artykul/obwieszczenie-informacja-prezydenta-grudziadza-z-dnia-03-lutego-2016-r-o-wydaniu-decyzji-o-srod",
+      "data_owner": "Urząd Miejski w Grudziądzu",
+      "data_category": "station_location_research",
+      "data_format": [
+        "HTML"
+      ],
+      "verification_status": "CONTENT_REVIEWED",
+      "reliability": "C",
+      "key_fields": [
+        "nazwa stacji",
+        "400/220/110 kV",
+        "decyzja środowiskowa"
+      ],
+      "potential_application": "Ocena dostępności własności gruntów w otoczeniu stacji",
+      "known_limitations": [
+        "Historyczne obwieszczenie 03.02.2016 potwierdza nazwę przedsięwzięcia i napięcia, nie podaje współrzędnych ani ID działek.",
+        "Nie potwierdza tożsamości punktu historycznego GIS ani obecnego statusu inwestycji."
+      ],
+      "priority": "P1",
+      "evidence": [
+        {
+          "source_id": "BIP_WEGROWO_LOCATION",
+          "url": "https://bip.grudziadz.pl/artykul/obwieszczenie-informacja-prezydenta-grudziadza-z-dnia-03-lutego-2016-r-o-wydaniu-decyzji-o-srod",
+          "http_status": 200,
+          "local_path": "data/raw/research/2026-10-06/bip_wegrowo_location.html",
+          "sha256": "c8861d3a51eab0f342d608b9b6323493cbf4b9508cf07a479a89b00b145a873a",
+          "bytes": 868469,
+          "retrieval_date": "2026-10-06T09:44:40.916181+00:00",
+          "manifest": "data/catalog/probe_results_wegrowo_location_2026-10-06.json"
+        }
+      ],
+      "retrieval_date": [
+        "2026-10-06T09:44:40.916181+00:00"
+      ]
     }
   ]
 }
