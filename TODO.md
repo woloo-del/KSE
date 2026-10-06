@@ -1,6 +1,6 @@
 # TODO — Grid Connection Intelligence
 
-Aktualizacja rejestru: **2026-09-19**. Źródło edytowalne: [todo.json](data/project/todo.json).
+Aktualizacja rejestru: **2026-10-06**. Źródło edytowalne: [todo.json](data/project/todo.json).
 
 Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zakończenia. Nie ustalono terminów dla niezaplanowanych zadań. P0 = warunek najbliższego etapu, P1 = rozwój po fundamentach, P2 = dalszy rozwój. Priorytety są kolejnością organizacji pracy, nie scoringiem sieci.
 
@@ -14,7 +14,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
-- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). KSE-057 sprawdza łańcuch stron. GUGiK nie gwarantuje spójnej migawki, a próbka ma nieznaną liczbę całkowitą. Priorytet: datowany eksport lub wersjonowana usługa (NEED-022), następnie pełny bufor potwierdzonej stacji. Radkowice NEED-021.
+- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Znaleziono i sprawdzono paczkę 0462 GPKG: 24230 działek z grupą. Zweryfikować punkt stacji i cały bufor względem granicy powiatu, następnie adapter paczki do analizy. Ustalić znaczenie dat i prawa do grup. Radkowice nadal NEED-021.
 
 ## Pełny rejestr
 
@@ -77,6 +77,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-055 | Rdzeń obliczania powierzchni grup rejestrowych w buforze | GIS | Zrobione | P1 | — |
 | KSE-056 | Transformacja CRS i kontrola kompletności pojedynczej odpowiedzi działek | GIS | Zrobione | P1 | KSE-055 |
 | KSE-057 | Kontrola łańcucha stron WFS i ograniczone pobieranie | GIS | Zrobione | P1 | KSE-056 |
+| KSE-058 | Odkrycie i audyt plikowej paczki działek GUGiK | GIS | Zrobione | P1 | — |
 
 ## Kryteria zakończenia i dowody
 
@@ -666,13 +667,13 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji
 
 - Odpowiedzialność: Codex.
-- Następny krok: KSE-057 sprawdza łańcuch stron. GUGiK nie gwarantuje spójnej migawki, a próbka ma nieznaną liczbę całkowitą. Priorytet: datowany eksport lub wersjonowana usługa (NEED-022), następnie pełny bufor potwierdzonej stacji. Radkowice NEED-021.
+- Następny krok: Znaleziono i sprawdzono paczkę 0462 GPKG: 24230 działek z grupą. Zweryfikować punkt stacji i cały bufor względem granicy powiatu, następnie adapter paczki do analizy. Ustalić znaczenie dat i prawa do grup. Radkowice nadal NEED-021.
 - Kryterium: Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.
 - Nieukończone zależności: brak.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
 - Termin docelowy: nie ustalono.
 - Zakończono: nie zakończono.
-- Dowody/kontekst: [docs/25_land_ownership_discovery.md](docs/25_land_ownership_discovery.md), [data/reference/land_ownership_probe_2026-09-19.json](data/reference/land_ownership_probe_2026-09-19.json), [tests/test_ownership_probe.py](tests/test_ownership_probe.py), [data/reference/ownership_map_probe_2026-09-19.json](data/reference/ownership_map_probe_2026-09-19.json), [tests/test_ownership_map.py](tests/test_ownership_map.py), [data/reference/ownership_comparison_2026-09-19.json](data/reference/ownership_comparison_2026-09-19.json), [tests/test_ownership_normalization.py](tests/test_ownership_normalization.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md), [data/reference/ownership_sample_readiness_2026-09-19.json](data/reference/ownership_sample_readiness_2026-09-19.json), [data/reference/ownership_paging_audit_2026-09-19.json](data/reference/ownership_paging_audit_2026-09-19.json).
+- Dowody/kontekst: [docs/25_land_ownership_discovery.md](docs/25_land_ownership_discovery.md), [data/reference/land_ownership_probe_2026-09-19.json](data/reference/land_ownership_probe_2026-09-19.json), [tests/test_ownership_probe.py](tests/test_ownership_probe.py), [data/reference/ownership_map_probe_2026-09-19.json](data/reference/ownership_map_probe_2026-09-19.json), [tests/test_ownership_map.py](tests/test_ownership_map.py), [data/reference/ownership_comparison_2026-09-19.json](data/reference/ownership_comparison_2026-09-19.json), [tests/test_ownership_normalization.py](tests/test_ownership_normalization.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md), [data/reference/ownership_sample_readiness_2026-09-19.json](data/reference/ownership_sample_readiness_2026-09-19.json), [data/reference/ownership_paging_audit_2026-09-19.json](data/reference/ownership_paging_audit_2026-09-19.json), [data/reference/county_export_audit_2026-10-06.json](data/reference/county_export_audit_2026-10-06.json).
 
 ### KSE-055 — Rdzeń obliczania powierzchni grup rejestrowych w buforze
 
@@ -706,3 +707,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-09-19.
 - Dowody/kontekst: [connectors/gis/ownership_paging.py](connectors/gis/ownership_paging.py), [tests/test_ownership_paging.py](tests/test_ownership_paging.py), [data/reference/ownership_paging_audit_2026-09-19.json](data/reference/ownership_paging_audit_2026-09-19.json).
+
+### KSE-058 — Odkrycie i audyt plikowej paczki działek GUGiK
+
+- Odpowiedzialność: Codex.
+- Następny krok: Użyć paczki po weryfikacji zakresu całego bufora i zasad wykorzystania.
+- Kryterium: Oficjalny link, zachowane bajty i hash, kontrola warstwy działek, CRS, ID, grup, geometrii i dat.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-10-06.
+- Dowody/kontekst: [connectors/gis/county_package.py](connectors/gis/county_package.py), [tests/test_county_package.py](tests/test_county_package.py), [data/reference/county_export_audit_2026-10-06.json](data/reference/county_export_audit_2026-10-06.json).

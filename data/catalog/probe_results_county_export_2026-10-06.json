@@ -1,0 +1,39 @@
+[
+  {
+    "source_id": "COUNTY_EXPORT_NEWS",
+    "url": "https://www.geoportal.gov.pl/aktualnosci/nowa-usluga-dane-powiatowe-dostepna-w-serwisie-www-geoportal-gov-pl/",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-10-06/county_export_news.html",
+    "sha256": "c470ea821dc60758ed7eb7dc7e029cef1c657c25c67736d9a5823de0a307935d",
+    "bytes": 87421,
+    "retrieval_date": "2026-10-06T09:32:43.599171+00:00"
+  },
+  {
+    "source_id": "COUNTY_EXPORT_CAPS",
+    "url": "https://mapy.geoportal.gov.pl/wss/ext/DanePowiatowe?SERVICE=WMS&REQUEST=GetCapabilities",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-10-06/county_export_caps.xml",
+    "sha256": "20b2361e9dc28ac0cfeae6b66d85ef2558103fd387f9932528daa17113d278ab",
+    "bytes": 24832,
+    "retrieval_date": "2026-10-06T09:32:50.028595+00:00"
+  },
+  {
+    "source_id": "COUNTY_EXPORT_GRUDZIADZ",
+    "url": "https://mapy.geoportal.gov.pl/wss/ext/DanePowiatowe?SERVICE=WMS&VERSION=1.3.0&CRS=EPSG%3A4326&BBOX=53.479%2C18.759%2C53.481%2C18.761&WIDTH=256&HEIGHT=256&STYLES=&REQUEST=GetFeatureInfo&LAYERS=dzialki_pow&QUERY_LAYERS=dzialki_pow&INFO_FORMAT=text%2Fhtml&FORMAT=image%2Fpng&I=128&J=128&FEATURE_COUNT=1",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-10-06/county_export_grudziadz.html",
+    "sha256": "7b7fab030b0dc315b19bc264366a0058fd858263f0278757d99e180dc2487562",
+    "bytes": 8166,
+    "retrieval_date": "2026-10-06T09:33:13.717027+00:00"
+  },
+  {
+    "source_id": "COUNTY_EXPORT_GRUDZIADZ_GPKG",
+    "url": "https://opendata.geoportal.gov.pl/InneDane/latest_exports/eziudp_wfs/GPKG/0462.gpkg.zip",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-10-06/grudziadz_parcels.gpkg.zip",
+    "sha256": "cdaf6fe65a8a8b33cd0d3a160fddddd126265d2aa645b5f035cab10b1a1b7033",
+    "bytes": 8209496,
+    "retrieval_date": "2026-10-06T09:33:51.996791+00:00",
+    "response_last_modified": null
+  }
+]

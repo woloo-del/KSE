@@ -1,6 +1,6 @@
 # Rejestr źródeł danych
 
-Stan badania: **2026-09-19**. Źródła: **83**.
+Stan badania: **2026-10-06**. Źródła: **84**.
 
 Widok generowany z `data/catalog/source_notes.json`. Pełne pola i manifesty: `data/catalog/data_sources.json`. Raport: [01_data_research.md](01_data_research.md).
 
@@ -93,6 +93,7 @@ A–H opisuje autorytet/proweniencję według AGENTS.md; dla bibliotek i modeli 
 | GUGIK_EGIB_OWNERSHIP_PROBE | [GUGiK — próba grupy rejestrowej w zbiorczym WFS](https://mapy.geoportal.gov.pl/wss/service/PZGIK/EGIB/WFS/UslugaZbiorcza) | SAMPLE_VERIFIED | P1 | NOT_CLEARED |
 | GUGIK_OWNERSHIP_MAP | [GUGiK — WMS Mapa własności i kompletność powiatowa](https://mapy.geoportal.gov.pl/wss/ext/MapaWlasnosci) | SAMPLE_VERIFIED | P1 | NOT_CLEARED |
 | PYPROJ_TRANSFORMER | [pyproj 3.7.2 — Transformer i licencja](https://pyproj4.github.io/pyproj/stable/api/transformer.html) | DOCUMENTATION_REVIEWED | P1 | YES_UNDER_LICENSE |
+| GUGIK_COUNTY_EXPORT | [GUGiK — Dane powiatowe, paczka GPKG Grudziądz](https://mapy.geoportal.gov.pl/wss/ext/DanePowiatowe) | SAMPLE_VERIFIED | P1 | NOT_CLEARED |
 
 ## Karty źródeł
 
@@ -3122,5 +3123,44 @@ Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgo
 - **Klasyfikacja wejścia:** REPORTED
 - **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
 - **Warunki:** [źródło prawne](https://github.com/pyproj4/pyproj/blob/3.7.2/LICENSE)
+
+Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.
+
+### GUGIK_COUNTY_EXPORT — GUGiK — Dane powiatowe, paczka GPKG Grudziądz
+
+[Źródło](https://mapy.geoportal.gov.pl/wss/ext/DanePowiatowe)
+
+- **Operator:** GUGiK
+- **Właściciel:** GUGiK / powiatowe organy EGiB
+- **Kraj:** PL
+- **Kategoria:** land_ownership_discovery
+- **Napięcie:** 
+- **Zasięg:** Krajowy indeks; zweryfikowany plik 0462 — miasto Grudziądz
+- **Format:** WMS; HTML; GeoPackage; ZIP
+- **API:** WMS GetFeatureInfo z linkiem do pliku
+- **GIS:** GPKG EPSG:2180
+- **Aktualizacja:** UNKNOWN — nie ustalono gwarantowanego cyklu publikacji.
+- **Historia:** UNKNOWN — własne snapshoty od 10.09.2026, jeśli zapisano próbkę.
+- **Uwierzytelnienie:** Odczyt publicznej strony bez konta; nie dowodzi dostępu do wszystkich danych.
+- **Licencja:** UNKNOWN
+- **Użycie komercyjne:** NOT_CLEARED
+- **Autorytet źródła:** C
+- **Odczyt maszynowy:** YES
+- **Scraping:** NO
+- **Pola:** id_dzialki; geometry; grupa_rejestrowa; data; czas_pozyskania
+- **Zastosowanie:** Ocena dostępności własności gruntów w otoczeniu stacji
+- **Ograniczenia:** Adres latest_exports jest zmienny; odtwarzalność wymaga zachowania ZIP i SHA-256.; Pobrany plik ma 24230 działek z grupą; brak duplikatów ID i błędów geometrii w audycie. To nie dowód pełnego pokrycia bufora stacji.; Znaczenie pola data nie potwierdza daty obowiązywania własności; czas_pozyskania i gpkg last_change odrębne.; Paczka zawiera także transakcje i budynki; nie odczytywano ich rekordów. Warunki dalszego wykorzystania grup wymagają ustalenia.
+- **Data stanu źródła:** UNKNOWN / nie dotyczy
+- **Publikacja:** UNKNOWN / nie dotyczy
+- **Wersja:** UNKNOWN / nie dotyczy
+- **Strona źródła:** UNKNOWN / nie dotyczy
+- **Sprawdzono:** 2026-10-06
+- **Udany odczyt:** 2026-10-06
+- **Klasyfikacja wejścia:** REPORTED
+- **Automatyzacja:** Jednorazowy przegląd; brak zgody na stały scraper wynikającej z samego dostępu. Sprawdzić warunki, robots.txt i limity przed wdrożeniem.
+- **Próba COUNTY_EXPORT_NEWS:** HTTP 200; 2026-10-06T09:32:43.599171+00:00; `data/catalog/probe_results_county_export_2026-10-06.json`; próbka `data/raw/research/2026-10-06/county_export_news.html`.
+- **Próba COUNTY_EXPORT_CAPS:** HTTP 200; 2026-10-06T09:32:50.028595+00:00; `data/catalog/probe_results_county_export_2026-10-06.json`; próbka `data/raw/research/2026-10-06/county_export_caps.xml`.
+- **Próba COUNTY_EXPORT_GRUDZIADZ:** HTTP 200; 2026-10-06T09:33:13.717027+00:00; `data/catalog/probe_results_county_export_2026-10-06.json`; próbka `data/raw/research/2026-10-06/county_export_grudziadz.html`.
+- **Próba COUNTY_EXPORT_GRUDZIADZ_GPKG:** HTTP 200; 2026-10-06T09:33:51.996791+00:00; `data/catalog/probe_results_county_export_2026-10-06.json`; próbka `data/raw/research/2026-10-06/grudziadz_parcels.gpkg.zip`.
 
 Ocena liczbowa jakości: **nie ustalono**. Dostępność techniczna nie jest zgodą na ponowne wykorzystanie.

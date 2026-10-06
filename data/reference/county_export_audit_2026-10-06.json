@@ -1,0 +1,52 @@
+{
+  "source": {
+    "source_id": "COUNTY_EXPORT_GRUDZIADZ_GPKG",
+    "url": "https://opendata.geoportal.gov.pl/InneDane/latest_exports/eziudp_wfs/GPKG/0462.gpkg.zip",
+    "http_status": 200,
+    "local_path": "data/raw/research/2026-10-06/grudziadz_parcels.gpkg.zip",
+    "sha256": "cdaf6fe65a8a8b33cd0d3a160fddddd126265d2aa645b5f035cab10b1a1b7033",
+    "bytes": 8209496,
+    "retrieval_date": "2026-10-06T09:33:51.996791+00:00",
+    "response_last_modified": null
+  },
+  "package_sha256": "27ef0308710cb52d4f5a901d14c5db1c7265961948365142d456c38827149c4a",
+  "audit": {
+    "method_version": "county_parcel_audit_v1",
+    "classification": "CALCULATED",
+    "layer": "dzialki",
+    "crs": "EPSG:2180",
+    "record_count": 24230,
+    "unique_nonempty_ids": 24230,
+    "duplicate_id_count": 0,
+    "registration_group_counts": {
+      "1": 982,
+      "11": 242,
+      "13": 23,
+      "14": 4,
+      "15": 764,
+      "16": 110,
+      "2": 845,
+      "3": 36,
+      "4": 5475,
+      "5": 2032,
+      "6": 429,
+      "7": 12908,
+      "8": 303,
+      "9": 77
+    },
+    "source_date_values": {
+      "2026-10-03 22:01:37+00:00": 24230
+    },
+    "source_retrieval_values": {
+      "2026-10-04 23:10": 24230
+    },
+    "gpkg_last_change": "2026-10-04T23:37:05.409Z",
+    "errors": {},
+    "ownership_area_percent": null,
+    "limitations": [
+      "File consistency is not a single legal validity date for all parcels.",
+      "County package is not proof of coverage of a station buffer.",
+      "Only parcel geometry, ID, group and dates were inspected."
+    ]
+  }
+}

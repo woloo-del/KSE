@@ -77,3 +77,15 @@ Odtworzenie: `scripts/build_ownership_comparison.py`; wejścia sprawdzane SHA-25
 Normalizacja geometrii używa istniejącej zależności Shapely z `requirements-gis.txt`; sam inspektor kompletności WFS nie wymaga jej instalacji.
 
 Rdzeń obliczeń powierzchni, ukończony 19.09.2026 jako KSE-055, opisano w [metodzie bufora](26_land_ownership_area_method.md). To gotowe obliczenia dla właściwych wejść, nie ukończony import i raport stacji.
+
+## Plikowy eksport powiatowy — weryfikacja 06.10.2026
+
+Oficjalny [opis usługi Dane powiatowe](https://www.geoportal.gov.pl/aktualnosci/nowa-usluga-dane-powiatowe-dostepna-w-serwisie-www-geoportal-gov-pl/) z 19.09.2025 wskazuje paczki GPKG dla powiatów i województw oraz GeoParquet dla większych obszarów. Opis rozróżnia czas pozyskania działki od aktualizacji ostatniego podzbioru. Zweryfikowano 06.10.2026 przez odczyt publikacji, [GetCapabilities](https://mapy.geoportal.gov.pl/wss/ext/DanePowiatowe?SERVICE=WMS&REQUEST=GetCapabilities) i GetFeatureInfo warstwy dzialki_pow.
+
+Odpowiedź dla Grudziądza podała [plik 0462.gpkg.zip](https://opendata.geoportal.gov.pl/InneDane/latest_exports/eziudp_wfs/GPKG/0462.gpkg.zip). Pobrano 8209496 bajtów ZIP; w środku jeden GPKG 23482368 bajtów. Adres latest_exports nie jest historycznym identyfikatorem — zachowano bajty, hashe i nagłówek Last-Modified, jeśli występował.
+
+Audyt warstwy dzialki: **24230 rekordów, 24230 unikalnych ID, 0 powtórzonych ID, 0 braków grup, 0 błędów dekodowania/poprawności geometrii**. CRS EPSG:2180. Kategorie pozostają grupami 1–16, bez uproszczenia publiczne/prywatne. W całym badanym pliku pole data ma tekst `2026-10-03 22:01:37+00:00`, czas_pozyskania `2026-10-04 23:10`, a gpkg_contents.last_change dla działek `2026-10-04T23:37:05.409Z`. Nie ustalono, że data oznacza stan prawny własności; nie zamieniamy tych pól na valid_from.
+
+Paczka zawiera również warstwy transakcje i budynki. Odczytano ich nazwy i schemat podczas rozpoznania; audyt pobiera wyłącznie identyfikator, grupę, daty i geometrię działek. Nie odczytuje rekordów transakcji ani dodatkowych atrybutów. Surowy ZIP i rozpakowany plik pozostają poza Git i publiczną aplikacją.
+
+Wynik: `data/reference/county_export_audit_2026-10-06.json`; odtworzenie: `scripts/audit_county_export.py`. Archiwum czterech źródeł `data/archives/county_export_2026-10-06.zip`, manifest `data/catalog/county_export_archive_2026-10-06.json`; wymagane osobne prywatne zabezpieczenie archiwum. NEED-022 zmieniono na „Otrzymano — do oceny zakresu”. Nie potrzeba od użytkownika tej samej paczki. To alternatywa dla paginacji, ale nadal wymaga kontroli całego bufora stacji, zakresu terytorialnego, dat i zasad wykorzystania. Nie wykazuje dostępności grup dla Radkowic.

@@ -979,6 +979,54 @@
       ],
       "priority": "P1",
       "probe_ids": []
+    },
+    {
+      "source_id": "GUGIK_COUNTY_EXPORT",
+      "operator": "GUGiK",
+      "source_name": "GUGiK — Dane powiatowe, paczka GPKG Grudziądz",
+      "url": "https://mapy.geoportal.gov.pl/wss/ext/DanePowiatowe",
+      "data_owner": "GUGiK / powiatowe organy EGiB",
+      "country": "PL",
+      "data_category": "land_ownership_discovery",
+      "grid_voltage": [],
+      "geographical_scope": "Krajowy indeks; zweryfikowany plik 0462 — miasto Grudziądz",
+      "data_format": [
+        "WMS",
+        "HTML",
+        "GeoPackage",
+        "ZIP"
+      ],
+      "verification_status": "SAMPLE_VERIFIED",
+      "last_verified": "2026-10-06",
+      "last_successful_verification": "2026-10-06",
+      "api_available": "WMS GetFeatureInfo z linkiem do pliku",
+      "gis_available": "GPKG EPSG:2180",
+      "machine_readable": "YES",
+      "scraping_required": "NO",
+      "license": "UNKNOWN",
+      "commercial_use": "NOT_CLEARED",
+      "reliability": "C",
+      "key_fields": [
+        "id_dzialki",
+        "geometry",
+        "grupa_rejestrowa",
+        "data",
+        "czas_pozyskania"
+      ],
+      "potential_application": "Ocena dostępności własności gruntów w otoczeniu stacji",
+      "known_limitations": [
+        "Adres latest_exports jest zmienny; odtwarzalność wymaga zachowania ZIP i SHA-256.",
+        "Pobrany plik ma 24230 działek z grupą; brak duplikatów ID i błędów geometrii w audycie. To nie dowód pełnego pokrycia bufora stacji.",
+        "Znaczenie pola data nie potwierdza daty obowiązywania własności; czas_pozyskania i gpkg last_change odrębne.",
+        "Paczka zawiera także transakcje i budynki; nie odczytywano ich rekordów. Warunki dalszego wykorzystania grup wymagają ustalenia."
+      ],
+      "priority": "P1",
+      "probe_ids": [
+        "COUNTY_EXPORT_NEWS",
+        "COUNTY_EXPORT_CAPS",
+        "COUNTY_EXPORT_GRUDZIADZ",
+        "COUNTY_EXPORT_GRUDZIADZ_GPKG"
+      ]
     }
   ]
 }

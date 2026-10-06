@@ -1,6 +1,6 @@
 {
   "schema_version": "todo_v1",
-  "updated_at": "2026-09-19",
+  "updated_at": "2026-10-06",
   "project": "Grid Connection Intelligence — Polska",
   "tasks": [
     {
@@ -1053,7 +1053,7 @@
       "priority": "P1",
       "owner": "Codex",
       "depends_on": [],
-      "next_action": "KSE-057 sprawdza łańcuch stron. GUGiK nie gwarantuje spójnej migawki, a próbka ma nieznaną liczbę całkowitą. Priorytet: datowany eksport lub wersjonowana usługa (NEED-022), następnie pełny bufor potwierdzonej stacji. Radkowice NEED-021.",
+      "next_action": "Znaleziono i sprawdzono paczkę 0462 GPKG: 24230 działek z grupą. Zweryfikować punkt stacji i cały bufor względem granicy powiatu, następnie adapter paczki do analizy. Ustalić znaczenie dat i prawa do grup. Radkowice nadal NEED-021.",
       "acceptance": "Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.",
       "evidence": [
         "docs/25_land_ownership_discovery.md",
@@ -1065,7 +1065,8 @@
         "tests/test_ownership_normalization.py",
         "docs/26_land_ownership_area_method.md",
         "data/reference/ownership_sample_readiness_2026-09-19.json",
-        "data/reference/ownership_paging_audit_2026-09-19.json"
+        "data/reference/ownership_paging_audit_2026-09-19.json",
+        "data/reference/county_export_audit_2026-10-06.json"
       ],
       "started_at": "2026-09-18"
     },
@@ -1127,6 +1128,24 @@
       ],
       "started_at": "2026-09-19",
       "completed_at": "2026-09-19"
+    },
+    {
+      "id": "KSE-058",
+      "title": "Odkrycie i audyt plikowej paczki działek GUGiK",
+      "stage": "GIS",
+      "status": "Complete",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [],
+      "next_action": "Użyć paczki po weryfikacji zakresu całego bufora i zasad wykorzystania.",
+      "acceptance": "Oficjalny link, zachowane bajty i hash, kontrola warstwy działek, CRS, ID, grup, geometrii i dat.",
+      "evidence": [
+        "connectors/gis/county_package.py",
+        "tests/test_county_package.py",
+        "data/reference/county_export_audit_2026-10-06.json"
+      ],
+      "started_at": "2026-10-06",
+      "completed_at": "2026-10-06"
     }
   ]
 }

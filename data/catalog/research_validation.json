@@ -1,30 +1,31 @@
 {
-  "checked_at_utc": "2026-09-19T10:44:56.845906+00:00",
+  "checked_at_utc": "2026-10-06T09:36:42.984581+00:00",
   "scope": "Offline research catalog, raw integrity, format checks and selected semantic checks; not full operator parser validation",
   "status": "PASS_WITH_SOURCE_WARNINGS",
-  "source_count": 83,
+  "source_count": 84,
   "source_status_counts": {
-    "SAMPLE_VERIFIED": 20,
+    "SAMPLE_VERIFIED": 21,
     "CONTENT_REVIEWED": 42,
     "DISCOVERED": 4,
     "BLOCKED": 5,
     "DOCUMENTATION_REVIEWED": 12
   },
-  "probe_count": 86,
+  "probe_count": 90,
   "http_status_counts": {
-    "200": 85,
+    "200": 89,
     "404": 1
   },
-  "raw_file_count": 85,
+  "raw_file_count": 89,
   "format_counts": {
-    ".html": 29,
+    ".html": 31,
     ".pdf": 16,
     ".json": 15,
-    ".xml": 13,
+    ".xml": 14,
     ".js": 5,
     ".xlsx": 1,
     ".gml": 3,
-    ".txt": 3
+    ".txt": 3,
+    ".zip": 1
   },
   "pdf_details": [
     {
@@ -108,13 +109,13 @@
       "first_page_text_chars": 206
     }
   ],
-  "local_links_checked": 65,
+  "local_links_checked": 66,
   "dependencies": {
     "python": "3.12.14",
     "pypdf": "6.10.0",
     "openpyxl": "3.1.5"
   },
-  "checks_passed": 1104,
+  "checks_passed": 1134,
   "checks_failed": 0,
   "errors": [],
   "source_warnings": [
@@ -2368,6 +2369,36 @@
       "detail": null
     },
     {
+      "name": "catalog_fields:GUGIK_COUNTY_EXPORT",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "catalog_url:GUGIK_COUNTY_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_status:GUGIK_COUNTY_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_uncalibrated_numeric_quality:GUGIK_COUNTY_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_rank:GUGIK_COUNTY_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_has_local_evidence:GUGIK_COUNTY_EXPORT",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "probe_snapshot_identities_unique",
       "passed": true,
       "detail": null
@@ -2784,6 +2815,11 @@
     },
     {
       "name": "probe_references:PYPROJ_TRANSFORMER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_references:GUGIK_COUNTY_EXPORT",
       "passed": true,
       "detail": null
     },
@@ -3344,6 +3380,86 @@
     },
     {
       "name": "snapshot_sha256:ENERGY_CHARTS_SAMPLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:COUNTY_EXPORT_NEWS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:COUNTY_EXPORT_NEWS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:COUNTY_EXPORT_NEWS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:COUNTY_EXPORT_NEWS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:COUNTY_EXPORT_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:COUNTY_EXPORT_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:COUNTY_EXPORT_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:COUNTY_EXPORT_CAPS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:COUNTY_EXPORT_GRUDZIADZ",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:COUNTY_EXPORT_GRUDZIADZ",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:COUNTY_EXPORT_GRUDZIADZ",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:COUNTY_EXPORT_GRUDZIADZ",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_within_raw:COUNTY_EXPORT_GRUDZIADZ_GPKG",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_exists:COUNTY_EXPORT_GRUDZIADZ_GPKG",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_bytes:COUNTY_EXPORT_GRUDZIADZ_GPKG",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot_sha256:COUNTY_EXPORT_GRUDZIADZ_GPKG",
       "passed": true,
       "detail": null
     },
@@ -5103,6 +5219,31 @@
       "detail": null
     },
     {
+      "name": "wms_capabilities:county_export_caps.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:county_export_caps.xml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:county_export_grudziadz.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:county_export_news.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "format_readable:grudziadz_parcels.gpkg.zip",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "pge_block_body_identified",
       "passed": true,
       "detail": null
@@ -5443,6 +5584,11 @@
       "detail": null
     },
     {
+      "name": "local_link:26_land_ownership_area_method.md:25_land_ownership_discovery.md",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "local_link:data_sources.md:01_data_research.md",
       "passed": true,
       "detail": null
@@ -5499,6 +5645,11 @@
     },
     {
       "name": "python_syntax:analyze_shared_connection.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python_syntax:audit_county_export.py",
       "passed": true,
       "detail": null
     },

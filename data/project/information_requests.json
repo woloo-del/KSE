@@ -300,15 +300,15 @@
       "id": "NEED-022",
       "priority": "P1",
       "title": "Spójny datowany eksport działek i grup rejestrowych",
-      "status": "Do sprawdzenia",
+      "status": "Otrzymano — do oceny zakresu",
       "requested_scope": "Publiczna usługa z wersją migawki lub datowany plik geometrii działek i grup rejestrowych dla obszaru pilota; identyfikator działki, CRS, data stanu, zakres pokrycia i zasady ponownego wykorzystania. Bez danych osobowych właścicieli.",
       "unlocks": "Odtwarzalny import pełnego bufora bez ryzyka zmian pomiędzy stronami odpowiedzi.",
-      "next_action": "Codex sprawdzi udostępniane pliki i usługi. Użytkownik może opcjonalnie wskazać posiadany eksport lub źródło gwarantujące wspólną wersję danych. Nie wysłano wiadomości.",
+      "next_action": "Samodzielnie pozyskano oficjalną paczkę Grudziądza z 24230 działkami, grupami i datami. Sprawdzić zakres bufora, znaczenie dat oraz warunki użycia. Nie potrzeba dostarczać tej samej paczki przez użytkownika.",
       "without_it": "Można rejestrować strony i ich ograniczenia, ale nie przedstawiać niespójnej lub niekompletnej sesji jako kompletnego raportu powierzchni.",
       "owner": "Codex — research; użytkownik — pomoc opcjonalna",
       "basis": "Capabilities GUGiK 19.09.2026: PagingIsTransactionSafe FALSE; dwie strony z numberMatched unknown. docs/26_land_ownership_area_method.md.",
-      "updated_at": "2026-09-19",
-      "received_evidence": null
+      "updated_at": "2026-10-06",
+      "received_evidence": "data/reference/county_export_audit_2026-10-06.json"
     }
   ]
 }

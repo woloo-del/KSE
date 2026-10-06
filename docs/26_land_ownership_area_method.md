@@ -69,3 +69,9 @@ Odtworzenie rzeczywistej kontroli: `scripts/check_ownership_page_chain.py`. Wyni
 Trzy surowe odpowiedzi zachowano w `data/archives/ownership_paging_2026-09-19.zip`, manifest `data/catalog/ownership_paging_archive_2026-09-19.json`. Archiwum wymaga prywatnej kopii zapasowej. Źródła, URL i daty są w `probe_results_ownership_paging_2026-09-19.json`. Testy obejmują również zmianę liczników, brak strony, dodatkową stronę po deklarowanym końcu, obcy host, pętlę i limit pobierania.
 
 Kolejny kierunek: **datowany eksport albo wersjonowana usługa**. NEED-022 rejestruje brak takiego wejścia, oddzielnie od braku grup w Radkowicach (NEED-021). Rejestr zasilający raport jest zaktualizowany; XLSX nie był regenerowany w tym kroku.
+
+## Paczka jako niezmienne wejście lokalne — 06.10.2026
+
+Znaleziono oficjalny ZIP/GPKG Grudziądza; [szczegóły audytu](25_land_ownership_discovery.md). Jeden zachowany plik usuwa problem zmieniających się odpowiedzi podczas lokalnego przetwarzania, ale nie dowodzi jednej daty obowiązywania wszystkich danych EGiB. `connectors/gis/county_package.py` ponownie wykorzystuje istniejący dekoder GeoPackage; czyta tylko warstwę działek w trybie read-only, sprawdza CRS, unikalność ID, grupy oraz geometrie. Zwraca liczniki błędów, nie maskuje ich jako braków danych. `scripts/audit_county_export.py` sprawdza hash ZIP, rozmiar i nazwę członu oraz odmawia nadpisania odmiennego rozpakowanego pliku. Daty pozostają surowymi wartościami źródła.
+
+Nie uruchomiono jeszcze bufora konkretnej stacji. Paczka obejmuje miasto Grudziądz (TERYT 0462), nie automatycznie sąsiedni powiat ani cały bufor stacji Grudziądz Węgrowo. Kolejny krok to zweryfikowana lokalizacja i wybór wszystkich potrzebnych paczek. Raport XLSX nie był regenerowany; rejestry zasilające go są zaktualizowane.
