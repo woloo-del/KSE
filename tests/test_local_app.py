@@ -84,7 +84,7 @@ class LocalApiTests(unittest.TestCase):
         for profile in data['profiles']:
             self.assertEqual(profile['count'], sum(profile['statuses'].values()))
             self.assertTrue(all(link['id'] in data['headings'] for link in profile['links']))
-        for route in ['/profiles','/profiles.js','/profiles.css']:
+        for route in ['/profiles','/profiles.js','/profiles.css','/profile_report.js']:
             with urlopen(self.url+route) as response:
                 self.assertEqual(response.status, 200)
                 self.assertNotIn('unsafe-inline', response.headers['Content-Security-Policy'])

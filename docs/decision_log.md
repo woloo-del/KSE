@@ -389,3 +389,13 @@ Selected option: granica całego aktu nie identyfikuje terenu 14E.
 Reason: GML nie zawiera wektora tej strefy.
 Trade-offs: pozostaje kontrola konkretnego obiektu, mimo automatyzacji granic APP.
 Consequences: parser nadaje zakres WHOLE_PLAN_EXTENT_NOT_LAND_USE_ZONE, a aktualnego statusu prawnego i podpisu nie uznaje za zweryfikowane.
+
+
+## 2026-10-07 — notatki lokalne i eksport przeglądu
+
+Decision: rozpocząć spójny przepływ produktu w istniejącym /profiles.
+Options considered: czekać na pełne dane; budować nowy frontend; rozszerzyć aktualny widok.
+Selected option: rozszerzenie obecnego widoku, notatki localStorage + eksport MD/JSON.
+Reason: użytkownik zatwierdził rozwój produktu obok researchu; obecny kontrakt źródłowy wystarcza do przeglądu z niewiadomymi.
+Trade-offs: notatki nie synchronizują się między urządzeniami/portami; brak serwerowej historii notatek.
+Consequences: jawny lokalny zapis, sygnalizacja błędów, oddzielna notatka użytkownika i pełna proweniencja przeglądu; brak publicznego wdrożenia.

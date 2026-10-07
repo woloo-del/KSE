@@ -29,6 +29,7 @@ INPUTS = {
 ASSETS = {'/': ('index.html', 'text/html; charset=utf-8'),
           '/profiles': ('profiles.html', 'text/html; charset=utf-8'),
           '/profiles.js': ('profiles.js', 'text/javascript; charset=utf-8'),
+          '/profile_report.js': ('profile_report.js', 'text/javascript; charset=utf-8'),
           '/profiles.css': ('profiles.css', 'text/css; charset=utf-8'),
           '/app.js': ('app.js', 'text/javascript; charset=utf-8'),
           '/style.css': ('style.css', 'text/css; charset=utf-8')}

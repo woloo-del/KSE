@@ -14,7 +14,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-011 — Przetestować uwierzytelnione API ENTSO-E** (P1, Do zrobienia). W odrębnym kroku wykonać małe zapytanie z lokalnym poświadczeniem, bez logowania tokenu.
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
-- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Dwie paczki obejmują praktycznie cały bufor historycznego punktu Węgrowa: 520 działek; 36 m² nakładania wyłączone z grup. Potwierdzić punkt stacji, interpretację grup i zasady wykorzystania przed raportem użytkowym.
+- **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Moduł pomocniczy, nie blokuje MVP. Obliczenia i słownik gotowe lokalnie; nadal brak potwierdzonej geometrii stacji oraz zasad redystrybucji. Kontynuować przy dostępności nowych dowodów.
 
 ## Pełny rejestr
 
@@ -43,7 +43,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-021 | Zestawienie projektów A/B/C dla GPZ | Analityka | Do zrobienia | P0 | KSE-017, KSE-018 |
 | KSE-022 | Screening BESS i hybryd z PCC | Analityka | Do zrobienia | P0 | KSE-021 |
 | KSE-023 | Walidacja pilota na niezależnych dowodach | Walidacja | Do zrobienia | P0 | KSE-022 |
-| KSE-024 | Pierwszy interfejs i mapa dowodów | UI | Do zrobienia | P1 | KSE-023 |
+| KSE-024 | Pierwszy interfejs i mapa dowodów | UI | W toku | P1 | KSE-023 |
 | KSE-025 | Cykliczne aktualizacje i historia zmian | V1 | Do zrobienia | P1 | KSE-015, KSE-016, KSE-023 |
 | KSE-026 | Rozszerzenie pokrycia OSD i regionów | V1 | Do zrobienia | P2 | KSE-023, KSE-025 |
 | KSE-027 | Scenariusze przyszłej sieci i trasy | V2 | Do zrobienia | P2 | KSE-019, KSE-020, KSE-023 |
@@ -82,6 +82,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-060 | Uzupełnienie bufora Węgrowa paczką sąsiedniego powiatu | GIS | Zrobione | P1 | KSE-059 |
 | KSE-061 | Wyjaśnienie grup rejestrowych i prywatny raport Węgrowa | GIS | Zrobione | P1 | KSE-060 |
 | KSE-062 | Odtwarzalna kontrola historycznych zasięgów APP przy Węgrowie | GIS | Zrobione | P1 | KSE-061 |
+| KSE-063 | Pełny przegląd profilu: własna notatka i eksport karty | MVP | Zrobione | P0 | — |
 
 ## Kryteria zakończenia i dowody
 
@@ -341,7 +342,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-024 — Pierwszy interfejs i mapa dowodów
 
 - Odpowiedzialność: Codex.
-- Następny krok: Po walidacji geometrii dodać mapę dowodów do istniejącej aplikacji: źródła i status relacji, bez awansu przecięć do połączeń.
+- Następny krok: Priorytet produktu: rozwinąć istniejącą kartę /profiles o szczegóły projektów i kompletność sekcji. Notatki i eksport wdrożone w KSE-063; mapa pozostaje osobnym niezakończonym zakresem.
 - Kryterium: Mapa z tekstowymi dowodami, datami i niewiadomymi; testy podstawowej ścieżki użytkownika.
 - Nieukończone zależności: KSE-023.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
@@ -671,7 +672,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 ### KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji
 
 - Odpowiedzialność: Codex.
-- Następny krok: Dwie paczki obejmują praktycznie cały bufor historycznego punktu Węgrowa: 520 działek; 36 m² nakładania wyłączone z grup. Potwierdzić punkt stacji, interpretację grup i zasady wykorzystania przed raportem użytkowym.
+- Następny krok: Moduł pomocniczy, nie blokuje MVP. Obliczenia i słownik gotowe lokalnie; nadal brak potwierdzonej geometrii stacji oraz zasad redystrybucji. Kontynuować przy dostępności nowych dowodów.
 - Kryterium: Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.
 - Nieukończone zależności: brak.
 - Ryzyko: brak dodatkowej uwagi w rejestrze.
@@ -766,3 +767,14 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-10-06.
 - Dowody/kontekst: [connectors/gis/planning_app.py](connectors/gis/planning_app.py), [tests/test_planning_app.py](tests/test_planning_app.py), [scripts/check_private_wegrowo_plans.py](scripts/check_private_wegrowo_plans.py), [docs/26_land_ownership_area_method.md](docs/26_land_ownership_area_method.md).
+
+### KSE-063 — Pełny przegląd profilu: własna notatka i eksport karty
+
+- Odpowiedzialność: Codex.
+- Następny krok: Użytkownik testuje kartę; kolejne rozszerzenie: szczegóły projektów i jawne pokrycie sekcji.
+- Kryterium: Wybór profilu, zachowanie szkicu, zapis lokalny, raport MD/JSON z datami, źródłami, ograniczeniami i oddzielną notatką.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-10-07.
+- Dowody/kontekst: [frontend/profile_report.js](frontend/profile_report.js), [frontend/profiles.html](frontend/profiles.html), [tests/test_profile_report.cjs](tests/test_profile_report.cjs), [docs/17_local_application.md](docs/17_local_application.md).

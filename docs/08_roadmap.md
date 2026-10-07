@@ -72,3 +72,10 @@ Podstawa: [audyt GIS i OSM](18_gis_osm_integration.md), [działająca aplikacja]
 ## Priorytet od 18.09.2026 — skalowanie źródłami
 
 Pierwszy zbiorczy import PSE i 50 profili źródłowych wykonano; szczegóły w [teście skalowania](21_scalability_benchmark.md). Następne kroki: niezależna walidacja tożsamości i czasu obsługi wyjątków, drugi operator, dopiero potem wybór wielu potwierdzonych stacji w aplikacji. Nie rozszerzamy ręcznie każdej stacji do poziomu dokumentacji Radkowic.
+
+
+## Priorytet uzgodniony 07.10.2026 — użyteczny przepływ produktu
+
+Użytkownik zatwierdził rozwój aplikacji bez oczekiwania na zamknięcie wszystkich badań danych. Trzy strumienie: produkt (główny), powtarzalne przetwarzanie danych dla wielu profili oraz kontrola jakości i wyjątków. To podział pracy, nie deklaracja uruchomionych równoległych agentów. Moduł gruntów nie blokuje MVP.
+
+Pierwszy dostarczony krok KSE-063: /profiles, notatka lokalna i eksport karty MD/JSON. Kolejny krok produktu: szczegóły projektów i kompletność każdej sekcji, następnie spójne powiązanie pilota Radkowic z przeglądem profili. W strumieniu danych: odtwarzalne aktualizacje istniejącego źródła PSE zamiast ręcznego researchu kolejnej stacji. W kontroli jakości: oddzielić gotowe podzadania od dawnych szerokich zadań TODO; nie oznaczać całych zakresów jako zakończone na podstawie prototypu.

@@ -413,13 +413,13 @@
       "id": "KSE-024",
       "title": "Pierwszy interfejs i mapa dowodów",
       "stage": "UI",
-      "status": "Not Started",
+      "status": "In Progress",
       "priority": "P1",
       "owner": "Codex",
       "depends_on": [
         "KSE-023"
       ],
-      "next_action": "Po walidacji geometrii dodać mapę dowodów do istniejącej aplikacji: źródła i status relacji, bez awansu przecięć do połączeń.",
+      "next_action": "Priorytet produktu: rozwinąć istniejącą kartę /profiles o szczegóły projektów i kompletność sekcji. Notatki i eksport wdrożone w KSE-063; mapa pozostaje osobnym niezakończonym zakresem.",
       "acceptance": "Mapa z tekstowymi dowodami, datami i niewiadomymi; testy podstawowej ścieżki użytkownika.",
       "evidence": [
         "docs/08_roadmap.md"
@@ -1053,7 +1053,7 @@
       "priority": "P1",
       "owner": "Codex",
       "depends_on": [],
-      "next_action": "Dwie paczki obejmują praktycznie cały bufor historycznego punktu Węgrowa: 520 działek; 36 m² nakładania wyłączone z grup. Potwierdzić punkt stacji, interpretację grup i zasady wykorzystania przed raportem użytkowym.",
+      "next_action": "Moduł pomocniczy, nie blokuje MVP. Obliczenia i słownik gotowe lokalnie; nadal brak potwierdzonej geometrii stacji oraz zasad redystrybucji. Kontynuować przy dostępności nowych dowodów.",
       "acceptance": "Źródłowa kategoria własności, prawidłowa geometria bufora, rozdział SP/prywatne/pozostałe/nieznane, daty i udział powierzchni bez zgadywania.",
       "evidence": [
         "docs/25_land_ownership_discovery.md",
@@ -1233,6 +1233,25 @@
       ],
       "started_at": "2026-10-06",
       "completed_at": "2026-10-06"
+    },
+    {
+      "id": "KSE-063",
+      "title": "Pełny przegląd profilu: własna notatka i eksport karty",
+      "stage": "MVP",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [],
+      "next_action": "Użytkownik testuje kartę; kolejne rozszerzenie: szczegóły projektów i jawne pokrycie sekcji.",
+      "acceptance": "Wybór profilu, zachowanie szkicu, zapis lokalny, raport MD/JSON z datami, źródłami, ograniczeniami i oddzielną notatką.",
+      "evidence": [
+        "frontend/profile_report.js",
+        "frontend/profiles.html",
+        "tests/test_profile_report.cjs",
+        "docs/17_local_application.md"
+      ],
+      "started_at": "2026-10-07",
+      "completed_at": "2026-10-07"
     }
   ]
 }

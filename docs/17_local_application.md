@@ -72,3 +72,14 @@ Zakładka Inwestycje sieciowe prezentuje oddzielnie dwa etapy opisane w portalu 
 ## Przegląd profili PSE — 18.09.2026
 
 Widok `/profiles` i API `/api/profiles` udostępniają 50 profili źródłowych obok pilota Radkowic. Używają trzech jawnych publicznych snapshotów; nie pobierają prywatnego GIS. Zgodność hashów między indeksami jest sprawdzana przed podaniem wyniku; niespójny zestaw zwraca błąd. Widok zachowuje niepotwierdzoną tożsamość i statusy projektów. Skrypty oraz style są osobnymi zasobami zgodnymi z dotychczasowym CSP. To aktualizacja lokalnej aplikacji; wcześniej opublikowany plik Sites pozostaje bez zmian.
+
+
+## 07.10.2026 — notatka i karta przeglądu profilu
+
+Widok `/profiles` udostępnia pole notatki, jawny zapis lokalny, podgląd karty i eksport Markdown/JSON. Notatki mają osobne klucze stabilnego ID profilu (w tym poziomu napięcia), nie indeksu listy. Szkice przechowywane w pamięci strony nie znikają przy zmianie wyboru. Zapis localStorage dotyczy konkretnej przeglądarki i origin (zmiana portu daje inny magazyn); nie jest kopią zapasową. Aplikacja sygnalizuje błąd odczytu/zapisu, nie twierdzi wtedy, że notatka została zapisana. Niezapisane szkice wywołują ostrzeżenie przy opuszczaniu strony, jeśli przeglądarka je obsługuje.
+
+Eksport `profile_review_v1` zachowuje wybrany profil, statystyki wierszy wykazu, wszystkie powiązane nagłówki inwestycji, źródłowe daty i hashe wejść, niewiadome oraz osobno USER_INPUT_NOT_SOURCE_EVIDENCE. Nie eksportuje cudzych notatek ani prywatnego GIS. Raport nie jest pełną listą projektów: na tym etapie karta korzysta ze statystyk profilu. Brak projektów operacyjnych i oczekujących pozostaje UNKNOWN. Nie oblicza MW ani score. Własna notatka nigdy nie jest interpretacją operatora.
+
+Testy: 10 testów Python kontraktu i API oraz 4 testy Node eksportu/notatek. W przeglądarce sprawdzono szkic po przełączeniu profilu, zapis i odtworzenie po reload, podgląd karty z notatką. Kliknięcie pobrania wywołuje komunikat, ale zdarzenia zapisu pliku narzędzie nie potwierdziło; nie uznajemy pełnego pobrania za zweryfikowane. Dostępny tekst podglądu do ręcznego skopiowania. Nie testowano ponownie wariantu mobilnego.
+
+Uruchomiona sesja rozwojowa: http://127.0.0.1:8790/profiles. Standardowy launcher nadal pozwala wybrać port (`-Port 8790`). Strona Sites nie została zmieniona.

@@ -39,6 +39,7 @@ def browser_data(root: Path = ROOT) -> dict:
                          'links': [{'id': h, 'direct': direct[(p['profile_id'], h)]} for h in links[p['profile_id']]]} for p in profiles],
             'headings': headings,
             'provenance': {'pipeline_source_date': loaded['profiles']['source_date'],
+                           'pipeline_source': loaded['profiles']['provenance'],
                            'investment_source': index['source'],
                            'input_sha256': {FILES[k]: v for k, v in hashes.items()}},
             'scope': 'SOURCE_PROFILES_NOT_CANONICAL_STATIONS'}
