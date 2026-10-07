@@ -15,6 +15,7 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - **KSE-012 — Potwierdzić eksport ENEA i TAURON** (P1, Do zrobienia). Sprawdzić dokumentowane pliki/API portali i dopuszczalny sposób pobierania.
 - **KSE-036 — Weryfikacja i normalizacja historycznej warstwy GIS** (P1, W toku). Weryfikować pierwotne publikacje i legendy, w tym kolejkę linków z rejestru inwestycji; rozstrzygnąć powiązania, rozbieżności eksportów i prawa wykorzystania. Historyczne rekordy nie stanowią aktualnej bazy infrastruktury.
 - **KSE-054 — Struktura własności gruntów w promieniu 1 km od stacji** (P1, W toku). Moduł pomocniczy, nie blokuje MVP. Obliczenia i słownik gotowe lokalnie; nadal brak potwierdzonej geometrii stacji oraz zasad redystrybucji. Kontynuować przy dostępności nowych dowodów.
+- **KSE-065 — Identyfikacja inwestorów i powiązań SPV z grupami** (P1, Do zrobienia). Sprawdzić oficjalne źródła KRS i warunki automatyzacji; wybrać próbkę podmiotów z warunkami i umowami. Nazwa bez jednoznacznego identyfikatora nie uprawnia do łączenia.
 
 ## Pełny rejestr
 
@@ -83,6 +84,8 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 | KSE-061 | Wyjaśnienie grup rejestrowych i prywatny raport Węgrowa | GIS | Zrobione | P1 | KSE-060 |
 | KSE-062 | Odtwarzalna kontrola historycznych zasięgów APP przy Węgrowie | GIS | Zrobione | P1 | KSE-061 |
 | KSE-063 | Pełny przegląd profilu: własna notatka i eksport karty | MVP | Zrobione | P0 | — |
+| KSE-064 | Szczegóły projektów i podmiotów PSE oraz pokrycie danych w karcie | MVP | Zrobione | P0 | KSE-063 |
+| KSE-065 | Identyfikacja inwestorów i powiązań SPV z grupami | DATA DISCOVERY | Do zrobienia | P1 | KSE-064 |
 
 ## Kryteria zakończenia i dowody
 
@@ -778,3 +781,25 @@ Widok generowany. Aktualizujemy JSON, zachowując ID, historię Git i dowody zak
 - Termin docelowy: nie ustalono.
 - Zakończono: 2026-10-07.
 - Dowody/kontekst: [frontend/profile_report.js](frontend/profile_report.js), [frontend/profiles.html](frontend/profiles.html), [tests/test_profile_report.cjs](tests/test_profile_report.cjs), [docs/17_local_application.md](docs/17_local_application.md).
+
+### KSE-064 — Szczegóły projektów i podmiotów PSE oraz pokrycie danych w karcie
+
+- Odpowiedzialność: Codex.
+- Następny krok: Uzupełniać profile spółek o identyfikatory rejestrowe po jednoznacznym dopasowaniu; nie utożsamiać SPV z grupą.
+- Kryterium: 282 wpisy dla 50 profili, filtry warunków/umów/wniosków, wyszukiwanie podmiotu, kierunki mocy osobno, źródło i ostrzeżenia, pokrycie sekcji i eksport.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: 2026-10-07.
+- Dowody/kontekst: [backend/profile_projects.py](backend/profile_projects.py), [scripts/build_profile_projects_manifest.py](scripts/build_profile_projects_manifest.py), [frontend/profile_projects.js](frontend/profile_projects.js), [tests/test_profile_projects.cjs](tests/test_profile_projects.cjs), [tests/test_profile_browser.py](tests/test_profile_browser.py).
+
+### KSE-065 — Identyfikacja inwestorów i powiązań SPV z grupami
+
+- Odpowiedzialność: Codex.
+- Następny krok: Sprawdzić oficjalne źródła KRS i warunki automatyzacji; wybrać próbkę podmiotów z warunkami i umowami. Nazwa bez jednoznacznego identyfikatora nie uprawnia do łączenia.
+- Kryterium: KRS/NIP i dane spółki z datą oraz źródłem; osobne datowane relacje właścicielskie, jawne konflikty i nierozstrzygnięte dopasowania.
+- Nieukończone zależności: brak.
+- Ryzyko: brak dodatkowej uwagi w rejestrze.
+- Termin docelowy: nie ustalono.
+- Zakończono: nie zakończono.
+- Dowody/kontekst: .

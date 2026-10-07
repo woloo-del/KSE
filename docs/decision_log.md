@@ -399,3 +399,13 @@ Selected option: rozszerzenie obecnego widoku, notatki localStorage + eksport MD
 Reason: użytkownik zatwierdził rozwój produktu obok researchu; obecny kontrakt źródłowy wystarcza do przeglądu z niewiadomymi.
 Trade-offs: notatki nie synchronizują się między urządzeniami/portami; brak serwerowej historii notatek.
 Consequences: jawny lokalny zapis, sygnalizacja błędów, oddzielna notatka użytkownika i pełna proweniencja przeglądu; brak publicznego wdrożenia.
+
+
+Date: 2026-10-07
+Decision: Szczegóły podmiotów z istniejącego importu, osobno od tożsamości inwestora.
+Context: Użytkownik wymaga danych inwestorów przy warunkach i umowach; dostępny import zawiera nazwy podmiotów.
+Options considered: Ponowne ręczne opracowywanie stacji; zgadywanie grup z nazw SPV; użycie istniejących wierszy i jawnych braków.
+Selected option: Manifest importu, kontrola zgodności rekordów, lokalna prezentacja dokładnego podmiotu i osobne przyszłe relacje rejestrowe.
+Reason: Reużycie zbiorczego importu skaluje się na wszystkie profile bez utraty źródła.
+Trade-offs: Lokalny import wymaga archiwum poza Git; nie uzyskano jeszcze identyfikatorów KRS/NIP i grup.
+Consequences: KSE-064, KSE-065 i NEED-023; raport v2; brak agregacji mocy i automatycznego przypisywania grup.

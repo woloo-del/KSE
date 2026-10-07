@@ -80,11 +80,12 @@ class LocalApiTests(unittest.TestCase):
             data = json.load(response)
         self.assertEqual(len(data['profiles']), 50)
         self.assertEqual(data['scope'], 'SOURCE_PROFILES_NOT_CANONICAL_STATIONS')
-        self.assertEqual(len(data['provenance']['input_sha256']), 3)
+        self.assertEqual(len(data['provenance']['input_sha256']), 5)
         for profile in data['profiles']:
             self.assertEqual(profile['count'], sum(profile['statuses'].values()))
+            self.assertEqual(profile['count'], len(profile['projects']))
             self.assertTrue(all(link['id'] in data['headings'] for link in profile['links']))
-        for route in ['/profiles','/profiles.js','/profiles.css','/profile_report.js']:
+        for route in ['/profiles','/profiles.js','/profiles.css','/profile_report.js','/profile_projects.js']:
             with urlopen(self.url+route) as response:
                 self.assertEqual(response.status, 200)
                 self.assertNotIn('unsafe-inline', response.headers['Content-Security-Policy'])

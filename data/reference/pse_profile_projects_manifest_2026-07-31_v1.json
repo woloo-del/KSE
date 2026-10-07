@@ -1,0 +1,8 @@
+{
+  "method": "profile_projects_v1",
+  "profiles_sha256": "d7b9a1ca921dabf8d42511c5a861a530ac43c56a47ba1ff8ae62badaa8d3091f",
+  "projects_sha256": "7dbc932615279921f43ee99fcb08a66004ebe7b5169bfbfcdc448d4f7226572c",
+  "source_date": "2026-07-31",
+  "record_count": 282,
+  "parser_sha256": "72b666f671394840a5c702ecd2eaa7b6661b15cb81c15ac568323494a80163cb"
+}

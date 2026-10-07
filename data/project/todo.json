@@ -1252,6 +1252,42 @@
       ],
       "started_at": "2026-10-07",
       "completed_at": "2026-10-07"
+    },
+    {
+      "id": "KSE-064",
+      "title": "Szczegóły projektów i podmiotów PSE oraz pokrycie danych w karcie",
+      "stage": "MVP",
+      "status": "Complete",
+      "priority": "P0",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-063"
+      ],
+      "next_action": "Uzupełniać profile spółek o identyfikatory rejestrowe po jednoznacznym dopasowaniu; nie utożsamiać SPV z grupą.",
+      "acceptance": "282 wpisy dla 50 profili, filtry warunków/umów/wniosków, wyszukiwanie podmiotu, kierunki mocy osobno, źródło i ostrzeżenia, pokrycie sekcji i eksport.",
+      "evidence": [
+        "backend/profile_projects.py",
+        "scripts/build_profile_projects_manifest.py",
+        "frontend/profile_projects.js",
+        "tests/test_profile_projects.cjs",
+        "tests/test_profile_browser.py"
+      ],
+      "started_at": "2026-10-07",
+      "completed_at": "2026-10-07"
+    },
+    {
+      "id": "KSE-065",
+      "title": "Identyfikacja inwestorów i powiązań SPV z grupami",
+      "stage": "DATA DISCOVERY",
+      "status": "Not Started",
+      "priority": "P1",
+      "owner": "Codex",
+      "depends_on": [
+        "KSE-064"
+      ],
+      "next_action": "Sprawdzić oficjalne źródła KRS i warunki automatyzacji; wybrać próbkę podmiotów z warunkami i umowami. Nazwa bez jednoznacznego identyfikatora nie uprawnia do łączenia.",
+      "acceptance": "KRS/NIP i dane spółki z datą oraz źródłem; osobne datowane relacje właścicielskie, jawne konflikty i nierozstrzygnięte dopasowania.",
+      "evidence": []
     }
   ]
 }

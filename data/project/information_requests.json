@@ -309,6 +309,20 @@
       "basis": "Capabilities GUGiK 19.09.2026: PagingIsTransactionSafe FALSE; dwie strony z numberMatched unknown. docs/26_land_ownership_area_method.md.",
       "updated_at": "2026-10-06",
       "received_evidence": "data/reference/county_export_audit_2026-10-06.json; data/reference/county_rural_export_audit_2026-10-06.json"
+    },
+    {
+      "id": "NEED-023",
+      "priority": "P1",
+      "title": "Jednoznaczna tożsamość SPV i grup inwestorskich",
+      "status": "Do sprawdzenia",
+      "requested_scope": "KRS/NIP podmiotu z wykazu PSE i datowane publiczne źródło potwierdzające powiązanie SPV z grupą. Bez prywatnych kontaktów i danych osobowych.",
+      "unlocks": "Uzupełnienie kart inwestorów przy warunkach przyłączenia i umowach.",
+      "next_action": "Codex sprawdza oficjalne rejestry. Użytkownik opcjonalnie może dostarczyć identyfikatory znanych SPV lub publikacje grup; nie jest to warunek dalszej pracy.",
+      "without_it": "Pokazywać dokładną nazwę podmiotu wg PSE, bez przypisywania właściciela/grupy.",
+      "owner": "Codex — weryfikacja; użytkownik — pomoc opcjonalna",
+      "basis": "KSE-065; decyzja użytkownika 2026-10-07",
+      "updated_at": "2026-10-07",
+      "received_evidence": null
     }
   ]
 }

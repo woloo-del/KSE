@@ -83,3 +83,12 @@ Eksport `profile_review_v1` zachowuje wybrany profil, statystyki wierszy wykazu,
 Testy: 10 testów Python kontraktu i API oraz 4 testy Node eksportu/notatek. W przeglądarce sprawdzono szkic po przełączeniu profilu, zapis i odtworzenie po reload, podgląd karty z notatką. Kliknięcie pobrania wywołuje komunikat, ale zdarzenia zapisu pliku narzędzie nie potwierdziło; nie uznajemy pełnego pobrania za zweryfikowane. Dostępny tekst podglądu do ręcznego skopiowania. Nie testowano ponownie wariantu mobilnego.
 
 Uruchomiona sesja rozwojowa: http://127.0.0.1:8790/profiles. Standardowy launcher nadal pozwala wybrać port (`-Port 8790`). Strona Sites nie została zmieniona.
+
+
+## Projekty i inwestorzy — 07.10.2026
+
+Zakładka „Projekty i inwestorzy” pokazuje 282 wiersze zachowanego wykazu PSE przypisane do 50 profili źródłowych. Filtry rozdzielają wydane warunki, obowiązujące umowy, wnioski i odmowy; wyszukiwarka obejmuje nazwę podmiotu i obiektu. To dokumentacja źródłowa, nie 282 zweryfikowane unikalne inwestycje. Wnioskodawca/podmiot nie jest automatycznie właścicielem końcowym ani grupą. KRS/NIP i powiązania pozostają jawnie nieustalone (KSE-065, NEED-023).
+
+Wartości wprowadzane i pobierane prezentowane są osobno, bez agregacji jako rezerwa lub konkurencja. Null nie jest zerem; dopiski pozostają w zapisie źródłowym i mają ostrzeżenia. Dostępne są przypisy wykazu, arkusz i numer wiersza. Raport `profile_review_v2` zawiera wszystkie wpisy profilu niezależnie od filtrów ekranu oraz opis pokrycia danych. Nie deklaruje pełnego pokrycia wniosków ani źródeł operacyjnych.
+
+Odtworzenie szczegółów wymaga zachowanego XLSX z archiwum, `python scripts/benchmark_pipeline_scale.py`, a następnie `python scripts/build_profile_projects_manifest.py`. Drugi skrypt porównuje ponowny odczyt XLSX z importem i zapisuje niezmienny manifest. API sprawdza hash importu i powiązania rekordów z profilami, statusem, napięciem i źródłem. Brak lokalnego importu daje błąd dostępności zamiast wymyślonych szczegółów. Pełny import pozostaje ignorowany przez Git; manifest jest wersjonowany. Nie rozszerzono publicznego wdrożenia Sites ani praw redystrybucji danych PSE.

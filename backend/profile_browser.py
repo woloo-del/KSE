@@ -1,14 +1,17 @@
-"""Read-only profile browser contract, restricted to three public snapshots."""
+"""Read-only profile browser contract, restricted to named public snapshots."""
 from pathlib import Path
 import hashlib
 import json
+from backend.profile_projects import project_details
 
 ROOT = Path(__file__).resolve().parents[1]
 FILES = {
     'profiles': 'pse_scale_benchmark_2026-07-31_v1.json',
     'index': 'pse_investment_heading_index_2026-09-18_v1.json',
     'contexts': 'pse_mention_context_2026-09-18_v1.json',
+    'projects_manifest': 'pse_profile_projects_manifest_2026-07-31_v1.json',
 }
+PROJECTS_PATH = 'data/processed/pse_bulk_pipeline_2026-07-31_v1.json'
 
 
 def browser_data(root: Path = ROOT) -> dict:
@@ -19,6 +22,14 @@ def browser_data(root: Path = ROOT) -> dict:
     if index['profiles_sha256'] != hashes['profiles'] or context['input_sha256'] != hashes['index']:
         raise ValueError('PROFILE_SNAPSHOT_MISMATCH')
     profiles = loaded['profiles']['profiles']
+    manifest = loaded['projects_manifest']
+    project_raw = (root / PROJECTS_PATH).read_bytes()
+    project_hash = hashlib.sha256(project_raw).hexdigest()
+    if (manifest['profiles_sha256'] != hashes['profiles'] or
+            manifest['projects_sha256'] != project_hash):
+        raise ValueError('PROJECT_SNAPSHOT_MISMATCH')
+    imported = json.loads(project_raw)
+    details = project_details(imported, loaded['profiles'])
     direct = {(r['profile_id'], r['heading_id']): any(m['context_kind'] == 'EXPLICIT_STATION_LABEL' for m in r['mentions']) for r in context['records']}
     if len(direct) != len(context['records']):
         raise ValueError('DUPLICATE_CONTEXT')
@@ -36,10 +47,12 @@ def browser_data(root: Path = ROOT) -> dict:
     return {'profiles': [{'id': p['profile_id'], 'name': p['name_reported'], 'voltage': p['voltage_kV'],
                          'count': len(p['record_ids']), 'statuses': p['status_counts'],
                          'reviewCount': len(p['review_record_ids']),
+                         'projects': details[p['profile_id']],
                          'links': [{'id': h, 'direct': direct[(p['profile_id'], h)]} for h in links[p['profile_id']]]} for p in profiles],
             'headings': headings,
             'provenance': {'pipeline_source_date': loaded['profiles']['source_date'],
                            'pipeline_source': loaded['profiles']['provenance'],
                            'investment_source': index['source'],
-                           'input_sha256': {FILES[k]: v for k, v in hashes.items()}},
+                           'input_sha256': {**{FILES[k]: v for k, v in hashes.items()}, PROJECTS_PATH: project_hash}},
+            'pipeline_footnotes': imported['footnotes'],
             'scope': 'SOURCE_PROFILES_NOT_CANONICAL_STATIONS'}
